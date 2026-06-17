@@ -1,0 +1,18 @@
+server:
+  port: 8082
+
+mock:
+  citrix:
+    # Citrix Session Cookie (HttpOnly) -- ver context-SAML.md secc. 10
+    session-cookie-name: NSC_TMAA
+    # SSO endpoint del mock de PingAM (llamada 3, context-SAML.md secc. 4)
+    pingam-sso-url: http://localhost:8081/SSORedirect
+    # URL de retorno tras validar la SAML Response en NetScaler (llamada 6).
+    # Debe apuntar a la ruta de ResourcesComponent en el front.
+    return-url: http://localhost:4300/saml/resources
+  cors:
+    allowed-origin: http://localhost:*
+
+logging:
+  level:
+    com.mock.citrix: DEBUG

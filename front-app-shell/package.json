@@ -1,0 +1,67 @@
+{
+  "name": "@proteo/app-shell",
+  "version": "1.0.0",
+  "description": "Proteo4 App Shell",
+  "author": {
+    "name": "Proteo4 Architecture Team"
+  },
+  "license": "UNLICENSED",
+  "keywords": [
+    "proteo4",
+    "app",
+    "angular",
+    "shell"
+  ],
+  "engines": {
+    "node": ">=18.18.0",
+    "npm": ">=9.8.1"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "ng": "ng",
+    "clean": "rimraf dist coverage",
+    "clean:all": "npm run clean && rimraf node_modules package-lock.json",
+    "build": "ng build --configuration production --project=shell",
+    "start": "ng serve --project=shell --port 4300",
+    "start:ci": "ng serve --project=shell",
+    "test:spec": "ng test --watch=false --code-coverage",
+    "test:spec:watch": "ng test --code-coverage",
+    "package": "npm pack",
+    "lint": "eslint ."
+  },
+  "private": true,
+  "dependencies": {
+    "@angular-architects/module-federation": "^17.0.8",
+    "@angular/animations": "17.3.6",
+    "@angular/common": "17.3.6",
+    "@angular/compiler": "17.3.6",
+    "@angular/core": "17.3.6",
+    "@angular/forms": "17.3.6",
+    "@angular/platform-browser": "17.3.6",
+    "@angular/platform-browser-dynamic": "17.3.6",
+    "@angular/router": "17.3.6",
+    "@proteo/ng-bootstrap": "3.1.6-dev.1781195668306",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.6.2",
+    "zone.js": "~0.14.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "17.3.6",
+    "@angular/cli": "17.3.6",
+    "@angular/compiler-cli": "17.3.6",
+    "@proteo/eslint-config": "^2.0.1",
+    "@proteo/tsconfig": "^1.1.2",
+    "@types/node": "14.11.1",
+    "@typescript-eslint/eslint-plugin": "5.26.0",
+    "@typescript-eslint/parser": "5.26.0",
+    "eslint": "^8.8.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "3.1.1",
+    "ngx-build-plus": "^17.0.0",
+    "prettier": "^3.2.2",
+    "rimraf": "^5.0.5",
+    "typescript": "~5.3.2"
+  }
+}

@@ -1,0 +1,35 @@
+.landing {
+  display: grid;
+  min-height: calc(100vh - 64px - 48px - 64px);
+  place-items: center;
+}
+
+.landing__content {
+  display: grid;
+  justify-items: center;
+  gap: 28px;
+}
+
+h1 {
+  margin: 0;
+  color: #111827;
+  font-size: clamp(96px, 16vw, 220px);
+  line-height: 0.9;
+  font-weight: 800;
+}
+
+.landing__button {
+  min-width: 152px;
+  min-height: 48px;
+  padding: 0 28px;
+  color: #ffffff;
+  font-weight: 700;
+  background: #006dff;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.landing__button:hover {
+  background: #0054c7;
+}

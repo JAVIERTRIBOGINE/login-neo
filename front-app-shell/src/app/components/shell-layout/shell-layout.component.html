@@ -1,0 +1,35 @@
+<header class="shell-header">
+  <div class="shell-header__brand" routerLink="/" aria-label="NEO">
+    <span>NEO</span>
+  </div>
+  <nav class="shell-header__actions" aria-label="Acciones">
+    <bs-button variant="tertiary">Ayuda</bs-button>
+  </nav>
+</header>
+
+<div class="shell-body">
+  <aside class="shell-aside" aria-label="Recursos">
+    <div class="shell-aside__title">Recursos</div>
+
+    <ng-container *ngIf="menu$ | async as menu">
+      <p class="shell-aside__empty" *ngIf="menu.length === 0">Sin recursos</p>
+
+      <nav class="shell-menu" *ngIf="menu.length > 0">
+        <bs-nav-bar-menu>
+          <a class="shell-menu__item" *ngFor="let item of menu" [routerLink]="item.path">
+            <bs-icon [name]="item.icon"></bs-icon>
+            <span>{{ item.label }}</span>
+          </a>
+        </bs-nav-bar-menu>
+      </nav>
+    </ng-container>
+  </aside>
+
+  <main class="shell-main">
+    <router-outlet />
+  </main>
+</div>
+
+<bs-footer class="shell-footer">
+  <span>NEO Shell</span>
+</bs-footer>

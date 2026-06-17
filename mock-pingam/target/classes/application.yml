@@ -1,0 +1,15 @@
+server:
+  port: 8081
+
+mock:
+  pingam:
+    # Cookie SSO emitida tras /authenticate y /token (ver CONTEXT.md secc. 3 Fase 1)
+    sso-cookie-name: PA_SSO
+    # ACS URL de NEO (SamlResponseComponent) -- ver context-SAML.md secc. 9
+    acs-neo-url: http://localhost:4500/saml/acs
+  cors:
+    allowed-origin: http://localhost:4500
+
+logging:
+  level:
+    com.mock.pingam: DEBUG
