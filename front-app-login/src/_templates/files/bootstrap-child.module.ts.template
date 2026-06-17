@@ -1,0 +1,28 @@
+import { NgModule, inject } from '@angular/core';
+import { provideRouter } from '@angular/router';
+import { TranslateService } from '@proteo/ng-translate';
+import { ProteoBootstrapChildService } from '@proteo/ng-bootstrap';
+import { LoggerUtils } from '@proteo/logger-utils';
+import { APP_ROUTES } from '@app/app.routes';
+import AppMessages from '../assets/i18n';
+
+@NgModule({
+  providers: [
+    provideRouter(APP_ROUTES),
+    TranslateService,
+  ]
+})
+export class Application {
+  translateService = inject(TranslateService);
+  private bootstrapChild = inject(ProteoBootstrapChildService);
+  
+  constructor() {
+    this.bootstrapChild.bootstrap({
+      HOST: "{{{host}}}",
+      CONFIG_BASE_PATH: "{{{configBasePath}}}",
+    }).then((conf) => {
+        LoggerUtils.getInstance().debug(`[BootstrapChildModule] Configuration loaded: ${JSON.stringify(conf)}`);
+    });
+    this.translateService.addNamespace('login-light', AppMessages);
+  }
+}

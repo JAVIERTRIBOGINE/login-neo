@@ -1,0 +1,45 @@
+{
+  "example1": {
+    "appId": "movements-detail",
+    "type": "P4_MFE",
+    "routeConfig": {
+      "remoteEntry": "https://apps.cdn.int.aws.bancsabadell.com/app/movements-detail/v0/movement-detail",
+      "exposedModule": "./Mfemovements-detailApplication",
+      "nameModule": "Application",
+      "routePath": "movements-detail",
+      "isAuthenticate": true,
+      "isPiloting": true
+    },
+    "payload": {
+      "data": "This is example payload send in routing angular"
+    }
+  },
+  "example2": {
+    "appId": "mfe2App",
+    "type": "P4_MFE",
+    "routeConfig": {
+      "remoteEntry": "http://localhost:4243/remoteEntry.js",
+      "exposedModule": "./Mfe2Application",
+      "nameModule": "AppChildModule",
+      "routePath": "mfe2",
+      "isAuthenticate": true,
+      "isPiloting": true
+    },
+    "payload": {
+      "data": "This is example payload send in routing angular"
+    }
+  },
+  "example3": {
+    "appId": "HelloPortal",
+    "type": "P4_MFE_LEGACY",
+    "routeConfig": {
+      "url": "https://apps.cdn.int.aws.bancsabadell.com/portal/hello-portal/v1",
+      "routePath": "hello-portal",
+      "isAuthenticate": true,
+      "isPiloting": true
+    },
+    "payload": {
+      "data": "This is example payload send in routing angular"
+    }
+  }
+}

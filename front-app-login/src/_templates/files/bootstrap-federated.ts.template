@@ -1,0 +1,51 @@
+import { inject } from '@angular/core';
+import { LoggerUtils } from '@proteo/logger-utils';
+import { ProteoBootstrapChildService } from '@proteo/ng-bootstrap';
+import { BaseConfig } from '@proteo/types';
+import { Observable, ReplaySubject, Subject, from, switchMap } from 'rxjs';
+
+/**
+ * Represents a base component for federated components.
+ */
+export class FederatedBaseComponent {
+  protected bootstrapChild = inject(ProteoBootstrapChildService);
+  private _bootstrapFinish: Subject<boolean> = new ReplaySubject<boolean>(1);
+  protected bootstrapFinish$: Observable<boolean> = this._bootstrapFinish.asObservable();
+  protected config?: BaseConfig;
+
+  constructor() {
+    this.initBootstrap();
+  }
+  /**
+   * Initializes the bootstrap process.
+   * It loads the configuration and sets up the necessary subscriptions.
+   */
+  private initBootstrap() {
+    from(
+      this.bootstrapChild.bootstrap({
+        HOST: '{{{host}}}',
+        CONFIG_BASE_PATH: '{{{configBasePath}}}'
+      })
+    ).subscribe({
+      next: (conf: BaseConfig) => {
+        this.config = conf;
+        LoggerUtils.getInstance().debug(`[FederatedComponent] Configuration loaded from {{{host}}}{{{configBasePath}}}`);
+      },
+      error: (error) => {
+        LoggerUtils.getInstance().error(`[FederatedComponent] Configuration error loaded from {{{host}}}{{{configBasePath}}}: ${error}`);
+      },
+      complete: () => {
+        this._bootstrapFinish.next(true);
+      }
+    });
+  }
+  /**
+   * Returns an observable that emits values from the provided observable
+   * only after the bootstrap process has finished.
+   * @param obs The observable to be wrapped.
+   * @returns An observable that emits values after bootstrap finish.
+   */
+  protected bootstrapReady<T>(obs: Observable<T>): Observable<T> {
+    return this.bootstrapFinish$.pipe(switchMap(() => obs));
+  }
+}
