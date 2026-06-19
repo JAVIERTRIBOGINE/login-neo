@@ -5,6 +5,9 @@ export interface FlowConfirmationStep {
   description: string;
 }
 
+const NEO_FLOW_STEP_EVENT = 'neoFlowStep';
+const NEO_FLOW_STEP_NEXT_EVENT = 'neoFlowStepNext';
+
 @Injectable({ providedIn: 'root' })
 export class FlowConfirmationModalService {
   private queue = Promise.resolve();
@@ -18,68 +21,39 @@ export class FlowConfirmationModalService {
   private async openModal(step: FlowConfirmationStep): Promise<void> {
     if (!document?.body) return Promise.resolve();
 
-    return this.openFallbackModal(step);
+    return this.openTraceStep(step);
   }
 
-  private openFallbackModal(step: FlowConfirmationStep): Promise<void> {
+  private openTraceStep(step: FlowConfirmationStep): Promise<void> {
     return new Promise((resolve) => {
-      const overlay = document.createElement('div');
-      overlay.setAttribute('role', 'dialog');
-      overlay.setAttribute('aria-modal', 'true');
-      overlay.setAttribute('aria-label', step.title);
-      overlay.style.cssText = [
-        'position: fixed',
-        'inset: 0',
-        'z-index: 2147483647',
-        'display: grid',
-        'place-items: center',
-        'background: rgba(0, 0, 0, 0.35)',
-      ].join(';');
+      const id = `${Date.now()}-${Math.random().toString(36).slice(2)}`;
 
-      const dialog = document.createElement('div');
-      dialog.style.cssText = [
-        'width: min(560px, calc(100vw - 32px))',
-        'box-sizing: border-box',
-        'padding: 32px',
-        'border-radius: 8px',
-        'background: #ffffff',
-        'box-shadow: 0 16px 40px rgba(31, 41, 55, 0.24)',
-        'font-family: Arial, Helvetica, sans-serif',
-        'color: #111827',
-      ].join(';');
+      window.dispatchEvent(new CustomEvent(NEO_FLOW_STEP_EVENT, {
+        detail: {
+          id,
+          ...step,
+        },
+      }));
 
-      const title = document.createElement('h2');
-      title.textContent = step.title;
-      title.style.cssText = 'margin: 0 0 16px; font-size: 22px; line-height: 1.3; font-weight: 600;';
-
-      const description = document.createElement('p');
-      description.textContent = step.description;
-      description.style.cssText = 'margin: 0 0 28px; font-size: 16px; line-height: 1.5;';
-
-      const button = document.createElement('button');
-      button.type = 'button';
-      button.textContent = 'Confirmar';
-      button.style.cssText = [
-        'min-height: 44px',
-        'padding: 0 24px',
-        'border: 0',
-        'border-radius: 999px',
-        'background: #006dff',
-        'color: #ffffff',
-        'font: inherit',
-        'font-weight: 600',
-        'cursor: pointer',
-      ].join(';');
-
-      button.addEventListener('click', () => {
-        overlay.remove();
+      if (!(window as Window & { NEO_SHELL?: boolean }).NEO_SHELL) {
         resolve();
-      });
+        return;
+      }
 
-      dialog.append(title, description, button);
-      overlay.appendChild(dialog);
-      document.body.appendChild(overlay);
-      button.focus();
+      const handleNext = (event: Event): void => {
+        const detail = (event as CustomEvent<{ id?: string }>).detail;
+        if (detail?.id !== id) return;
+        window.removeEventListener(NEO_FLOW_STEP_NEXT_EVENT, handleNext);
+        resolve();
+      };
+
+      window.addEventListener(NEO_FLOW_STEP_NEXT_EVENT, handleNext);
+
+      /*
+       * Modal bloqueante desactivado para la POC:
+       * antes se creaba un overlay y un boton Confirmar aqui.
+       * Ahora el flujo avanza desde la tarjeta lateral con "Siguiente".
+       */
     });
   }
 }

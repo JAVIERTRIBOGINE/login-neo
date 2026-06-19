@@ -549,3 +549,40 @@ Las cookies NSC_TMAA y NSC_TMAS emitidas por Citrix NetScaler/ADC:
   - Si dominios distintos (cross-site): `None; Secure` — requiere aprobación de Seguridad
 
 **La Citrix Session Cookie es HttpOnly** — el front no puede leerla desde JavaScript. Su presencia/ausencia se infiere por las respuestas HTTP (200 vs 401 en GET /resources).
+
+---
+
+## 18. Segunda iteración POC — Shell NEO + MFE Login
+
+Durante la segunda iteración se consolidó una POC local con `front-app-shell` como host en `localhost:4300` y `front-app-login` como microfrontend remoto en `localhost:4500`.
+
+### Integración Module Federation
+
+- El shell carga `remoteEntry.js` de login desde `http://localhost:4500/remoteEntry.js`.
+- El host crea una única instancia cacheada del módulo remoto `Application` (`./loginApplication`) y la usa como `environmentInjector` al instanciar componentes remotos.
+- Esto evita perder providers entre rutas federadas como `/login`, `/authorize`, `/token` y `/saml/resources`.
+- Los tokens de inyección del flujo OAuth (`AUTHORIZE_FN`, `GET_TOKENS_FN`, `INITIALIZE_FN`, `END_SESSION_FN`, `REVOKE_FN`) se proveen en `bootstrap-child.module.ts`, no solo en `LoginPageComponent`, porque el shell puede crear componentes expuestos directamente.
+
+### Diferencias local standalone vs shell
+
+- Standalone login (`localhost:4500`) mantiene endpoints locales directos a los mocks.
+- Shell (`localhost:4300`) usa proxy `/digital` hacia `mock-pingam` (`localhost:8081`) para evitar CORS.
+- El proxy del shell reescribe `Origin` a `http://localhost:4500` porque el mock PingAM local solo admite ese origen.
+- El bootstrap federado carga config de login desde `http://localhost:4500/conf/` para evitar intentos a `localhost:4200`.
+
+### Trazabilidad visual para POC
+
+- Los modales de confirmación se sustituyeron en modo shell por una traza lateral acumulativa.
+- Cada paso emite un evento `neoFlowStep`; la shell lo muestra en el panel derecho con título, descripción, hora y mini-diagrama secuencial.
+- El flujo queda pausado hasta pulsar `Siguiente` en la tarjeta correspondiente (`neoFlowStepNext`).
+- Los loaders fullscreen del MFE no se renderizan cuando `window.NEO_SHELL` está activo, para no tapar la traza lateral.
+
+### Pendiente funcional principal
+
+El mock `mock-pingam` todavía simula directamente el caso de formulario (`NameCallback` + `PasswordCallback`). Para representar el árbol real de PingAM en la POC debe ampliarse a:
+
+1. `RedirectCallback` hacia Entra ID.
+2. Retorno/fallo controlado de Entra ID.
+3. `HttpCallback` para Kerberos.
+4. Fallo controlado de Kerberos.
+5. Formulario de credenciales.

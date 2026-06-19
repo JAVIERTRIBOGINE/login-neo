@@ -19,6 +19,8 @@ interface RemoteRouteData {
   exportName: string;
 }
 
+let loginRemoteModuleRef: ReturnType<typeof createNgModule> | undefined;
+
 @Component({
   selector: 'neo-remote-component-host',
   standalone: true,
@@ -43,7 +45,6 @@ export class RemoteComponentHostComponent implements OnInit, OnDestroy {
 
   private readonly route = inject(ActivatedRoute);
   private readonly environmentInjector = inject(EnvironmentInjector);
-  private remoteModuleRef?: ReturnType<typeof createNgModule>;
 
   loading = true;
 
@@ -60,18 +61,17 @@ export class RemoteComponentHostComponent implements OnInit, OnDestroy {
     const component = remote[data.exportName] as Type<unknown>;
     this.container.clear();
     this.container.createComponent(component, {
-      environmentInjector: this.environmentInjector,
+      environmentInjector: loginRemoteModuleRef ?? this.environmentInjector,
     });
     this.loading = false;
   }
 
   ngOnDestroy(): void {
     this.container.clear();
-    this.remoteModuleRef?.destroy();
   }
 
   private async bootstrapLoginChild(): Promise<void> {
-    if (this.remoteModuleRef) {
+    if (loginRemoteModuleRef) {
       return;
     }
 
@@ -81,6 +81,6 @@ export class RemoteComponentHostComponent implements OnInit, OnDestroy {
       exposedModule: './loginApplication',
     });
 
-    this.remoteModuleRef = createNgModule(remote.Application, this.environmentInjector);
+    loginRemoteModuleRef = createNgModule(remote.Application, this.environmentInjector);
   }
 }

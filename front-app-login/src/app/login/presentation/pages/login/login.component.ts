@@ -12,8 +12,8 @@ import { MessageService } from '@app/login/application/services/message.service'
 import { LoginDataService } from '@app/login/application/services/login-data.service';
 import { StorageManager } from '@proteo/storage-utils';
 import { Subscription } from 'rxjs';
-import { environment } from 'src/environments/environment';
 import { ISuccessOtpRespone } from '@app/login/domain/models/Tree-callback.model';
+import { getAuthenticateEndpoint } from '@app/login/application/services/oauth-endpoints';
 
 // ─── AuthManager (Proteo4) ───────────────────────────────────────────────────
 import { AuthManagerService, AUTH_MANAGER_EVENTS } from '@proteo/auth-manager';
@@ -179,9 +179,7 @@ export class LoginComponent implements OnInit, AfterViewInit, OnDestroy {
 
     this.authManager.authenticate({
       endpoints: {
-        authenticate: environment.name === 'local'
-          ? environment.endpoints.authenticate
-          : window.BsAuthorizationConfig?.url?.authenticate ?? environment.endpoints.authenticate,
+        authenticate: getAuthenticateEndpoint(),
       },
       resumeAuthId: this.route.snapshot.queryParamMap.get('authId') ?? undefined,
       procedence:   this.loginDataService.getProcedence(),
@@ -213,6 +211,7 @@ export class LoginComponent implements OnInit, AfterViewInit, OnDestroy {
         case AUTH_MANAGER_EVENTS.AUTH_SUCCESS:
           // SSO Cookie establecida — continuar con el OAuth flow
           this.loginDataService.setSuccessData(event.payload as ISuccessOtpRespone);
+          console.log("navegación a authorize");
           this.router.navigate([ROUTE_DATA.AUTHORIZE]);
           break;
 

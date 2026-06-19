@@ -191,7 +191,7 @@ export class AuthManagerService {
   private makeDriverCall(body: Record<string, unknown>) {
     const url     = this.config.endpoints.authenticate;
     const headers = this.buildHeaders();
-    const useLocalHttp = url.startsWith('http://localhost') || url.startsWith('http://127.0.0.1');
+    const useLocalHttp = url.startsWith('/') || url.startsWith('http://localhost') || url.startsWith('http://127.0.0.1');
     const driver  = !useLocalHttp && hasDriver(DRIVER) ? getDriver(DRIVER)! : null;
 
     if (!driver) {

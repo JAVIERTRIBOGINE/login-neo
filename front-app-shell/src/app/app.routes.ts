@@ -2,6 +2,9 @@ import { Routes } from '@angular/router';
 
 import { LandingComponent } from './components/landing/landing.component';
 import { RemoteComponentHostComponent } from './components/remote-component-host/remote-component-host.component';
+import { AplicacionesComponent } from './components/aplicaciones/aplicaciones.component';
+import { EscritoriosComponent } from './components/escritorios/escritorios.component';
+import { WorkspaceComponent } from './components/workspace/workspace.component';
 
 export const SHELL_ROUTES: Routes = [
   {
@@ -48,6 +51,18 @@ export const SHELL_ROUTES: Routes = [
       exposedModule: './GetTokensComponent',
       exportName: 'GetTokensComponent',
     },
+  },
+  {
+    path: 'workspace',
+    component: WorkspaceComponent,
+  },
+  {
+    path: 'aplicaciones',
+    component: AplicacionesComponent,
+  },
+  {
+    path: 'escritorios',
+    component: EscritoriosComponent,
   },
   {
     path: '**',

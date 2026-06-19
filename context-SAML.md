@@ -347,3 +347,47 @@ src/app/saml-flow/
 **Sobre las dos ACS URLs (recordatorio):** la ACS URL de NEO es donde PingAM manda la SAML Response al front (llamada 4). La ACS URL de NetScaler es donde el front manda la SAML Response al SP (llamada 5). Son distintas y deben estar correctamente configuradas en PingAM, NetScaler y la Shell de NEO.
 
 **Analogía con el flujo OAuth:** el mecanismo de "Angular abandona el contexto → el navegador navega a un dominio externo → vuelve a una ruta de NEO → Angular arranca de nuevo" es idéntico al del flujo OAuth con Entra ID. La diferencia es que en OAuth el retorno es un redirect a `/token?code=...` y en SAML es un formulario auto-enviado a la ACS URL de NEO.
+
+---
+
+## 16. POC local en Shell NEO
+
+La POC local ejecuta el flujo completo desde la shell:
+
+- Shell host: `http://localhost:4300`
+- Login MFE: `http://localhost:4500`
+- Mock PingAM: `http://localhost:8081`
+- Mock Citrix/NetScaler: `http://localhost:8082`
+
+### Routing local
+
+La shell expone rutas federadas para:
+
+- `/saml/resources` → `ResourcesComponent`
+- `/saml/acs` → `SamlResponseComponent`
+- `/login` → `LoginComponent`
+- `/authorize` → `AuthorizeComponent`
+- `/token` → `GetTokensComponent`
+
+Cuando `/resources` responde `200`, el payload `{ resources: [...] }` se publica mediante el EventBus y la shell actualiza el menú lateral. Las rutas mockeadas de recursos se normalizan visualmente a:
+
+- `/workspace`
+- `/aplicaciones`
+- `/escritorios`
+
+### Panel lateral de flujo
+
+Para demo y validación funcional se añadió un panel derecho en la shell:
+
+- Escucha eventos `neoFlowStep`.
+- Acumula los pasos de OAuth y SAML.
+- Cada tarjeta muestra un mini-diagrama secuencial con actores, request y response.
+- El flujo avanza manualmente con `Siguiente`, sin bloquear la pantalla con modales.
+
+### Consideración de UX
+
+Los modales originales siguen documentados conceptualmente como puntos de confirmación, pero para la POC se sustituyen por tarjetas accionables. Esto permite ver simultáneamente:
+
+- menú/recursos,
+- pantalla central,
+- evolución técnica del flujo en back.

@@ -37,6 +37,8 @@
     "setup:env": "node ./src/_templates/setup.js env",
     "package": "npm pack",
     "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "proteo:execute-cli": "proteo_cli.cmd",
     "install:proteo-cli": "npm i -g @proteo/cli",
     "update:p4": "p4 update",

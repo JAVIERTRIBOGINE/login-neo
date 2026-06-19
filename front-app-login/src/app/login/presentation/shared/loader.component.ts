@@ -9,18 +9,28 @@ import { TranslatePipe } from '@proteo/ng-translate';
   standalone: true,
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [CommonModule, RouterOutlet, TranslatePipe],
-  template: `<bs-loading></bs-loading>`,
+  template: `
+    @if (!isNeoShell()) {
+      <bs-loading></bs-loading>
+    }
+  `,
 })
 export class LoaderComponent implements AfterViewInit{
   er = inject(ElementRef);
   loginTranslation = inject(LoginTranslationService)
 
   ngAfterViewInit(): void {
+    if (this.isNeoShell()) return;
+
     const loading = this.er.nativeElement.querySelector('bs-loading');
     if( loading) {
       loading.loadingTitle =this.loginTranslation.translateFromKey('login:APP.STATIC_PAGE.LOADING.MAIN_TEXT');
       loading.loadingText = this.loginTranslation.translateFromKey('login:APP.STATIC_PAGE.LOADING.SECONDARY_TEXT')
     } 
     
+  }
+
+  isNeoShell(): boolean {
+    return Boolean((window as Window & { NEO_SHELL?: boolean }).NEO_SHELL);
   }
 }

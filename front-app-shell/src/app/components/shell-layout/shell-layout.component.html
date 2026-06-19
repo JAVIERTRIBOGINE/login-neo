@@ -13,14 +13,11 @@
 
     <ng-container *ngIf="menu$ | async as menu">
       <p class="shell-aside__empty" *ngIf="menu.length === 0">Sin recursos</p>
-
-      <nav class="shell-menu" *ngIf="menu.length > 0">
-        <bs-nav-bar-menu>
-          <a class="shell-menu__item" *ngFor="let item of menu" [routerLink]="item.path">
-            <bs-icon [name]="item.icon"></bs-icon>
-            <span>{{ item.label }}</span>
-          </a>
-        </bs-nav-bar-menu>
+      <nav class="shell-menu" *ngIf="menu.length > 0" aria-label="Recursos disponibles">
+        <button class="shell-menu__item" type="button" *ngFor="let item of menu" (click)="navigate(item.label)">
+          <bs-icon [name]="item.icon"></bs-icon>
+          <span>{{ item.label }}</span>
+        </button>
       </nav>
     </ng-container>
   </aside>
@@ -28,6 +25,56 @@
   <main class="shell-main">
     <router-outlet />
   </main>
+
+  <aside class="shell-flow" aria-label="Trazabilidad del flujo">
+    <div class="shell-flow__header">
+      <div>
+        <p class="shell-flow__eyebrow">Back flow</p>
+        <h2>Acciones</h2>
+      </div>
+      <button class="shell-flow__clear" type="button" (click)="clearFlowTrace()">Limpiar</button>
+    </div>
+
+    <ng-container *ngIf="flowSteps$ | async as steps">
+      <p class="shell-flow__empty" *ngIf="steps.length === 0">
+        El flujo se mostrará aquí conforme avance.
+      </p>
+
+      <ol class="shell-flow__list" *ngIf="steps.length > 0">
+        <li class="shell-flow__item" *ngFor="let step of steps; let index = index">
+          <div class="shell-flow__summary">
+            <div class="shell-flow__index">{{ index + 1 }}</div>
+            <div class="shell-flow__content">
+              <div class="shell-flow__meta">{{ step.timestamp }}</div>
+              <h3>{{ step.title }}</h3>
+              <p>{{ step.description }}</p>
+            </div>
+          </div>
+
+          <div class="shell-sequence" aria-hidden="true">
+            <div class="shell-sequence__actor shell-sequence__actor--left">{{ step.diagram.left }}</div>
+            <div class="shell-sequence__actor shell-sequence__actor--right">{{ step.diagram.right }}</div>
+            <div class="shell-sequence__lane shell-sequence__lane--left"></div>
+            <div class="shell-sequence__lane shell-sequence__lane--right"></div>
+            <div class="shell-sequence__arrow shell-sequence__arrow--request">
+              <span>{{ step.diagram.request }}</span>
+            </div>
+            <div class="shell-sequence__arrow shell-sequence__arrow--response">
+              <span>{{ step.diagram.response }}</span>
+            </div>
+          </div>
+
+          <button
+            class="shell-flow__next"
+            type="button"
+            *ngIf="!step.completed"
+            (click)="nextFlowStep(step)">
+            Siguiente
+          </button>
+        </li>
+      </ol>
+    </ng-container>
+  </aside>
 </div>
 
 <bs-footer class="shell-footer">

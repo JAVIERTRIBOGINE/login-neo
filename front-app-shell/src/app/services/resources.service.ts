@@ -18,6 +18,11 @@ export class ResourcesService {
     );
   }
 
+  setMenuFromResponse(response: unknown): void {
+    const resources = (response as Partial<ResourcesResponse> | undefined)?.resources;
+    this.menuSubject.next(Array.isArray(resources) ? resources : []);
+  }
+
   clearMenu(): void {
     this.menuSubject.next([]);
   }

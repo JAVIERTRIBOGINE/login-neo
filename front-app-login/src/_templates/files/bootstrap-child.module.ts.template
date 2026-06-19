@@ -23,6 +23,6 @@ export class Application {
     }).then((conf) => {
         LoggerUtils.getInstance().debug(`[BootstrapChildModule] Configuration loaded: ${JSON.stringify(conf)}`);
     });
-    this.translateService.addNamespace('login-light', AppMessages);
+    this.translateService.addNamespace('login', AppMessages);
   }
 }

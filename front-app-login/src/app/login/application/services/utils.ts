@@ -3,6 +3,7 @@ import { AuthorizeRequest, AuthorizeResponse, DataManagerResponse, TokensRequest
 import { base64UrlEncode, sha256 } from '@proteo/string-utils';
 import { environment } from "src/environments/environment";
 import { getDriver } from "@proteo/data-manager";
+import { getAuthorizeEndpoint } from "./oauth-endpoints";
 
 const DEFAULT_CONTENT_TYPE = 'application/x-www-form-urlencoded';
 const useLocalMockEndpoints = environment.name === 'local';
@@ -154,9 +155,7 @@ export async function generateCodeChallenge(codeVerifier: string): Promise<strin
 
 export const authorize = async (request: AuthorizeRequest): Promise<DataManagerResponse<AuthorizeResponse>> => {
 
-  const url = useLocalMockEndpoints
-    ? environment.endpoints.authorize
-    : window.BsAuthorizationConfig?.url?.authorize || environment.endpoints.authorize;
+  const url = getAuthorizeEndpoint();
   const state = generateRandomString();
   const codeVerifier = generateRandomString();
   const code_challenge = (await generateCodeChallenge(codeVerifier));

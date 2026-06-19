@@ -28,7 +28,15 @@ cd mock-citrix && mvn spring-boot:run   # puerto 8082
 | `/digital/party-authentication/v4/oauth2/token` | POST | Intercambia `code` por `{access_token, id_token}` (JWT falsos, sin firma). Refresca `PA_SSO`. |
 | `/SSORedirect` | GET | SSO endpoint SAML (llamada 3). Si `PA_SSO` es válida, devuelve HTML con form auto-enviado (`SAMLResponse`+`RelayState`) a la ACS URL de NEO. Si no, `401` HTML (sin form) — simula SSO Cookie inválida. |
 
-**Casos 1-3 (Entra ID / Kerberos) NO se simulan** — requieren infraestructura externa real. Solo Caso 4.
+**Casos 1-3 (Entra ID / Kerberos) NO se simulan todavía**. En la POC actual el mock salta directamente al Caso 4, devolviendo `NameCallback` + `PasswordCallback` en la primera llamada a `/authenticate`.
+
+Pendiente para una simulación más fiel del árbol PingAM:
+
+1. Primera llamada vacía a `/authenticate` → `RedirectCallback` (Entra ID).
+2. Retorno/fallo simulado de Entra ID → continuación con `authId`.
+3. POST con `{ authId }` → `HttpCallback` (Kerberos).
+4. POST con `{ authId, callbacks }` + credenciales de navegador → fallo controlado `401`.
+5. Caída final al formulario (`NameCallback` + `PasswordCallback`).
 
 ## mock-citrix (puerto 8082) — NetScaler/StoreFront
 
@@ -48,6 +56,8 @@ cd mock-citrix && mvn spring-boot:run   # puerto 8082
 Ajustar estos valores y los de `front-app-login/src/environments/environment.ts`
 (`endpoints.*` → `http://localhost:8081/...`, `saml.*` → `http://localhost:8082/...`)
 para que el front local hable con los mocks.
+
+Cuando el flujo se ejecuta desde la shell (`localhost:4300`), el proxy de `front-app-shell` reenvía `/digital` a `localhost:8081` y reescribe `Origin` a `http://localhost:4500`, porque el mock PingAM local acepta ese origen en CORS.
 
 ## Limitaciones del mock SAML
 

@@ -6,9 +6,9 @@ import { PublishService } from '@app/login/application/services/publish.service'
 import {  setAuthorization, storedTokens } from '@proteo/data-manager';
 import { LoginDataService } from '@app/login/application/services/login-data.service';
 import { LOGIN_EVENTS } from '@app/login/domain/constants/event.enum';
-import { environment } from 'src/environments/environment';
 import { END_SESSION_FN, GET_TOKENS_FN, REVOKE_FN } from '@app/login/domain/constants/global.constants';
 import { SAML_ROUTE_DATA } from '@app/saml-flow/domain/constants/path.constant';
+import { getTokensEndpoint } from '@app/login/application/services/oauth-endpoints';
 
 
 @Component({
@@ -69,9 +69,7 @@ export class GetTokensComponent implements OnInit{
       const redirectUri = window.BsAuthorizationConfig.redirectUri;
       const token_sso = this.loginDataService.successData().tokenId;
       const params: TokensRequest = {code, state, clientId, redirectUri};  
-      const url = environment.name === 'local'
-        ? environment.endpoints.tokens
-        : window.BsAuthorizationConfig.url.token ?? environment.endpoints.tokens;
+      const url = getTokensEndpoint();
      
       try {
         this.authorizeResponse =  (await this.getTokens(url, token_sso, params)).data as TokensResponse;
@@ -87,4 +85,3 @@ export class GetTokensComponent implements OnInit{
 
   
   }
-
