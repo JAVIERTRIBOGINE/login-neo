@@ -1,0 +1,43 @@
+# Verdaccio - configuración para desarrollo local
+# Registry: http://localhost:4873
+#
+# Copia este archivo como config.yml y añade tu token:
+#   cp dev/verdaccio/config.example.yml dev/verdaccio/config.yml
+# config.yml está en .gitignore y nunca se commiteará.
+
+storage: ./storage
+
+auth:
+  htpasswd:
+    file: ./htpasswd
+
+uplinks:
+  artifactory-sabadell:
+    url: https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/
+    cache: true
+    strict_ssl: false
+    auth:
+      type: bearer
+      token: 'cmVmdGtuOjAxOjE4MTI3MjAwODA6VmtDNzNJdURoeUZXWjZzcDVqczNZelVPZ3dX'
+
+packages:
+  # Paquetes @proteo: acceso y publicación libre (dev local)
+  '**':
+    access: $all
+    publish: $all
+    unpublish: $all
+    proxy: artifactory-sabadell
+
+server:
+  keepAliveTimeout: 60
+
+middlewares:
+  audit:
+    enabled: true
+
+log:
+  type: stdout
+  format: pretty
+  level: warn
+
+listen: http://0.0.0.0:4873

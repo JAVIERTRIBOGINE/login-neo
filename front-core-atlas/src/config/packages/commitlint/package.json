@@ -1,0 +1,24 @@
+{
+  "name": "@proteo/commitlint-config",
+  "version": "1.0.1",
+  "description": "Proteo4 Commitlint configuration",
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+    "directory": "config/commitlint"
+  },
+  "publishConfig": {
+    "registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-local/"
+  },
+  "main": "index.js",
+  "type": "commonjs",
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "@commitlint/config-conventional": "^19.2.2"
+  },
+  "peerDependencies": {
+    "@commitlint/cli": "^19.3.0"
+  }
+}

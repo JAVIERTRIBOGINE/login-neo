@@ -1,0 +1,31 @@
+{
+  "name": "@proteo/eslint-config",
+  "version": "2.0.1",
+  "description": "Proteo4 Prettier configuration",
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+    "directory": "config/eslint"
+  },
+  "publishConfig": {
+    "registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-local/"
+  },
+  "main": "index.js",
+  "type": "commonjs",
+  "files": [
+    "**/*.js"
+  ],
+  "dependencies": {
+    "@proteo/eslint-plugin-commitment": "workspace:*",
+    "@types/eslint": "^8.4.6",
+    "@typescript-eslint/eslint-plugin": "^8.35.1",
+    "@typescript-eslint/parser": "^8.35.1",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^4.4.4",
+    "eslint-plugin-boundaries": "^5.0.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "prettier": "^3.3.2"
+  }
+}

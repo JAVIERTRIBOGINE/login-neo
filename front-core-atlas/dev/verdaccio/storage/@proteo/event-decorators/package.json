@@ -1,0 +1,4562 @@
+{
+	"name": "@proteo/event-decorators",
+	"versions": {
+		"1.0.0-next.9": {
+			"name": "@proteo/event-decorators",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.0-next.9",
+			"repository": {
+				"type": "git",
+				"url": "http://repos.bancsabadell.com/bitbucket/scm/p4des/front-core.git",
+				"directory": "src/decorators/event-decorators"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@stencil/core": "^2.0.0"
+			},
+			"devDependencies": {
+				"@jest/globals": "^27.0.0",
+				"@proteo/internal-scripts": "1.0.0-next.8",
+				"@proteo/jest-config": "1.0.0-next.8",
+				"@proteo/rollup-config": "1.0.0-next.8",
+				"@proteo/tsconfig": "1.0.0-next.8",
+				"@proteo/types": "1.0.0-next.10",
+				"@types/jest": "^27.0.0",
+				"copyfiles": "^2.0.0",
+				"cross-env": "^7.0.0",
+				"jest": "^27.0.0",
+				"rimraf": "^3.0.0",
+				"rollup": "^2.0.0",
+				"ts-jest": "^27.0.0",
+				"typescript": "4.6.3"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test",
+				"!coverage",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"bootstrap": "yarn build",
+				"build": "npm run build:dev && npm run build:pro",
+				"build:watch": "yarn rollup-config-checker && npm run copy:dts && yarn rollup -c --watch",
+				"build:pro": "yarn rollup-config-checker && npm run copy:dts && yarn rollup -c",
+				"build:dev": "yarn tsc --build",
+				"build:dev:watch": "yarn tsc --build --watch",
+				"clean": "yarn rimraf ./*.{js,js.map,ts,d.ts,d.ts.map} types/ test/ coverage/ development/ *.tsbuildinfo",
+				"copy:dts": "yarn copyfiles -u 1 -e test './development/**/*.d.ts*' ./",
+				"test": "yarn node --experimental-vm-modules $(yarn bin jest) --coverage --runInBand --passWithNoTests",
+				"test:watch": "yarn node --experimental-vm-modules $(yarn bin jest) --watchAll --coverage"
+			},
+			"publishConfig": {
+				"registry": "http://172.22.193.80:16428/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1673442556936,
+			"_id": "@proteo/event-decorators@1.0.0-next.9",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.0-next.9.tgz",
+				"shasum": "eaf11a1431e8c3429a44bc2699997df331f23612"
+			},
+			"typings": "index.d.ts",
+			"exports": {
+				".": {
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"packageManager": "yarn@3.1.1",
+			"type": "module",
+			"contributors": []
+		},
+		"1.0.0-next.8": {
+			"name": "@proteo/event-decorators",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.0-next.8",
+			"repository": {
+				"type": "git",
+				"url": "http://repos.bancsabadell.com/bitbucket/scm/p4des/front-core.git",
+				"directory": "src/decorators/event-decorators"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@stencil/core": "^2.0.0"
+			},
+			"devDependencies": {
+				"@jest/globals": "^27.0.0",
+				"@proteo/internal-scripts": "1.0.0-next.8",
+				"@proteo/jest-config": "1.0.0-next.8",
+				"@proteo/rollup-config": "1.0.0-next.8",
+				"@proteo/tsconfig": "1.0.0-next.8",
+				"@proteo/types": "1.0.0-next.8",
+				"@types/jest": "^27.0.0",
+				"copyfiles": "^2.0.0",
+				"cross-env": "^7.0.0",
+				"jest": "^27.0.0",
+				"rimraf": "^3.0.0",
+				"rollup": "^2.0.0",
+				"ts-jest": "^27.0.0",
+				"typescript": "4.6.3"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test",
+				"!coverage",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"bootstrap": "yarn build",
+				"build": "npm run build:dev && npm run build:pro",
+				"build:watch": "yarn rollup-config-checker && npm run copy:dts && yarn rollup -c --watch",
+				"build:pro": "yarn rollup-config-checker && npm run copy:dts && yarn rollup -c",
+				"build:dev": "yarn tsc --build",
+				"build:dev:watch": "yarn tsc --build --watch",
+				"clean": "yarn rimraf ./*.{js,js.map,ts,d.ts,d.ts.map} types/ test/ coverage/ development/ *.tsbuildinfo",
+				"copy:dts": "yarn copyfiles -u 1 -e test './development/**/*.d.ts*' .",
+				"test": "yarn node --experimental-vm-modules $(yarn bin jest) --coverage --runInBand --passWithNoTests",
+				"test:watch": "yarn node --experimental-vm-modules $(yarn bin jest) --watchAll --coverage"
+			},
+			"publishConfig": {
+				"registry": "http://172.22.193.80:16428/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1673442556353,
+			"_id": "@proteo/event-decorators@1.0.0-next.8",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.0-next.8.tgz",
+				"shasum": "32164bc832338c7a4ffc0bb4ce13340765eb9044"
+			},
+			"typings": "index.d.ts",
+			"exports": {
+				".": {
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"packageManager": "yarn@3.1.1",
+			"type": "module",
+			"contributors": []
+		},
+		"1.0.0-rc.0": {
+			"name": "@proteo/event-decorators",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.0-rc.0",
+			"repository": {
+				"type": "git",
+				"url": "http://repos.bancsabadell.com/bitbucket/scm/p4des/front-core.git",
+				"directory": "src/decorators/event-decorators"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@stencil/core": "^2.0.0"
+			},
+			"devDependencies": {
+				"@jest/globals": "^28.0.0",
+				"@proteo/esbuild-config": "workspace:^",
+				"@proteo/jest-config": "workspace:^",
+				"@proteo/rollup-config": "workspace:^",
+				"@proteo/tsconfig": "workspace:^",
+				"@proteo/types": "workspace:^",
+				"@types/jest": "^28.0.0",
+				"cross-env": "^7.0.0",
+				"jest": "^28.0.0",
+				"jest-environment-jsdom": "^28.0.0",
+				"rimraf": "^3.0.0",
+				"ts-jest": "^28.0.0",
+				"typescript": "4.6.3",
+				"wireit": "^0.7.1"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test",
+				"!coverage",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "wireit",
+				"build:bundle": "wireit",
+				"build:ts": "wireit",
+				"format": "wireit",
+				"format:eslint": "wireit",
+				"format:prettier": "wireit",
+				"lint": "wireit",
+				"lint:eslint": "wireit",
+				"lint:prettier": "wireit",
+				"clean": "wireit",
+				"test": "wireit",
+				"test:debug": "yarn node --experimental-vm-modules $(yarn bin jest)"
+			},
+			"publishConfig": {
+				"registry": "http://172.22.193.80:16428/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1673442557503,
+			"_id": "@proteo/event-decorators@1.0.0-rc.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.0-rc.0.tgz",
+				"shasum": "d37df78571502e5847b7e125f56ee9f8445c6fef"
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"wireit": {
+				"build": {
+					"dependencies": [
+						"build:ts",
+						"build:bundle"
+					]
+				},
+				"build:bundle": {
+					"command": "proteo-esbuild",
+					"dependencies": [
+						"build:ts"
+					],
+					"files": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"esbuild.config.js"
+					],
+					"output": [
+						"index.js",
+						"index.js.map"
+					],
+					"packageLocks": [
+						"yarn.lock"
+					]
+				},
+				"build:ts": {
+					"command": "tsc --build --pretty",
+					"clean": "if-file-deleted",
+					"files": [
+						"src/**/*.ts",
+						"tsconfig.json"
+					],
+					"output": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"tsconfig.tsbuildinfo"
+					],
+					"dependencies": [
+						"../../types:build"
+					]
+				},
+				"format": {
+					"dependencies": [
+						"format:eslint",
+						"format:prettier"
+					]
+				},
+				"format:eslint": {
+					"command": "npm run lint:eslint -- --fix"
+				},
+				"format:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"lint": {
+					"dependencies": [
+						"lint:eslint",
+						"lint:prettier"
+					]
+				},
+				"lint:eslint": {
+					"command": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": [
+						".eslintcache"
+					]
+				},
+				"lint:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"clean": {
+					"command": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo .wireit/"
+				},
+				"test": {
+					"command": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --runInBand --passWithNoTests"
+				}
+			},
+			"contributors": []
+		},
+		"1.0.0-next.7": {
+			"name": "@proteo/event-decorators",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.0-next.7",
+			"repository": {
+				"type": "git",
+				"url": "http://repos.bancsabadell.com/bitbucket/scm/p4des/front-core.git",
+				"directory": "src/decorators/event-decorators"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@stencil/core": "^2.0.0"
+			},
+			"devDependencies": {
+				"@jest/globals": "^27.0.0",
+				"@proteo/internal-scripts": "1.0.0-next.7",
+				"@proteo/jest-config": "1.0.0-next.7",
+				"@proteo/rollup-config": "1.0.0-next.7",
+				"@proteo/tsconfig": "1.0.0-next.7",
+				"@proteo/types": "1.0.0-next.7",
+				"@types/jest": "^27.0.0",
+				"copyfiles": "^2.0.0",
+				"cross-env": "^7.0.0",
+				"jest": "^27.0.0",
+				"rimraf": "^3.0.0",
+				"rollup": "^2.0.0",
+				"ts-jest": "^27.0.0",
+				"typescript": "4.6.3"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test",
+				"!coverage",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"bootstrap": "yarn build",
+				"build": "npm run build:dev && npm run build:pro",
+				"build:watch": "yarn rollup-config-checker && npm run copy:dts && yarn rollup -c --watch",
+				"build:pro": "yarn rollup-config-checker && npm run copy:dts && yarn rollup -c",
+				"build:dev": "yarn tsc --build",
+				"build:dev:watch": "yarn tsc --build --watch",
+				"clean": "yarn rimraf ./*.{js,js.map,ts,d.ts,d.ts.map} types/ test/ coverage/ development/ *.tsbuildinfo",
+				"copy:dts": "yarn copyfiles -u 1 -e test './development/**/*.d.ts*' .",
+				"test": "yarn node --experimental-vm-modules $(yarn bin jest) --coverage --runInBand --passWithNoTests",
+				"test:watch": "yarn node --experimental-vm-modules $(yarn bin jest) --watchAll --coverage"
+			},
+			"publishConfig": {
+				"registry": "http://172.22.193.80:16428/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1673442555782,
+			"_id": "@proteo/event-decorators@1.0.0-next.7",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.0-next.7.tgz",
+				"shasum": "d5c9fdce208ca878d680c995c5a0f4184bb73fa8"
+			},
+			"typings": "index.d.ts",
+			"exports": {
+				".": {
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"packageManager": "yarn@3.1.1",
+			"type": "module",
+			"contributors": []
+		},
+		"1.0.0-next.6": {
+			"name": "@proteo/event-decorators",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.0-next.6",
+			"repository": {
+				"type": "git",
+				"url": "http://repos.bancsabadell.com/bitbucket/scm/p4des/front-core.git",
+				"directory": "src/decorators/event-decorators"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@stencil/core": "^2.0.0"
+			},
+			"devDependencies": {
+				"@jest/globals": "^27.0.0",
+				"@proteo/internal-scripts": "workspace:^",
+				"@proteo/jest-config": "workspace:^",
+				"@proteo/rollup-config": "workspace:^",
+				"@proteo/tsconfig": "workspace:^",
+				"@proteo/types": "workspace:^",
+				"@types/jest": "^27.0.0",
+				"copyfiles": "^2.0.0",
+				"cross-env": "^7.0.0",
+				"jest": "^27.0.0",
+				"rimraf": "^3.0.0",
+				"rollup": "^2.0.0",
+				"ts-jest": "^27.0.0",
+				"typescript": "4.6.3"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"bootstrap": "yarn build",
+				"build": "npm run build:dev && npm run build:pro",
+				"build:watch": "yarn rollup-config-checker && npm run copy:dts && yarn rollup -c --watch",
+				"build:pro": "yarn rollup-config-checker && npm run copy:dts && yarn rollup -c",
+				"build:dev": "yarn tsc --build",
+				"build:dev:watch": "yarn tsc --build --watch",
+				"clean": "yarn rimraf ./*.{js,js.map,ts,d.ts,d.ts.map} types/ test/ coverage/ development/ *.tsbuildinfo",
+				"copy:dts": "yarn copyfiles -u 1 -e test './development/**/*.d.ts*' .",
+				"test": "yarn node --experimental-vm-modules $(yarn bin jest) --coverage --runInBand --passWithNoTests",
+				"test:watch": "yarn node --experimental-vm-modules $(yarn bin jest) --watchAll --coverage"
+			},
+			"publishConfig": {
+				"registry": "http://172.22.193.80:16428/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1673442555229,
+			"_id": "@proteo/event-decorators@1.0.0-next.6",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.0-next.6.tgz",
+				"shasum": "da1a595824892df911391dc5ad0cc6cf5dfb060b"
+			},
+			"typings": "index.d.ts",
+			"exports": {
+				".": {
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"packageManager": "yarn@3.1.1",
+			"type": "module",
+			"contributors": []
+		},
+		"1.0.0-rc.2": {
+			"name": "@proteo/event-decorators",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.0-rc.2",
+			"repository": {
+				"type": "git",
+				"url": "http://repos.bancsabadell.com/bitbucket/scm/p4des/front-core.git",
+				"directory": "src/decorators/event-decorators"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@stencil/core": "^2.18.0"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.0.3",
+				"@proteo/esbuild-config": "^1.0.0-rc.2",
+				"@proteo/jest-config": "^1.0.0-rc.1",
+				"@proteo/rollup-config": "^1.0.0-rc.1",
+				"@proteo/tsconfig": "^1.0.0-rc.1",
+				"@proteo/types": "^1.0.0-rc.5",
+				"@types/jest": "^29.0.3",
+				"cross-env": "^7.0.3",
+				"jest": "^29.0.3",
+				"jest-environment-jsdom": "^29.0.3",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.0.1",
+				"typescript": "4.8.3",
+				"wireit": "^0.7.1"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"!.wireit/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "wireit",
+				"build:bundle": "wireit",
+				"build:ts": "wireit",
+				"format": "wireit",
+				"format:eslint": "wireit",
+				"format:prettier": "wireit",
+				"lint": "wireit",
+				"lint:eslint": "wireit",
+				"lint:prettier": "wireit",
+				"clean": "wireit",
+				"test": "wireit",
+				"test:debug": "yarn node --experimental-vm-modules $(yarn bin jest)"
+			},
+			"publishConfig": {
+				"registry": "http://172.22.193.80:16428/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1673442558730,
+			"_id": "@proteo/event-decorators@1.0.0-rc.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.0-rc.2.tgz",
+				"shasum": "075b841dbde016155350aaca7853a23cd5ef8c13"
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"wireit": {
+				"build": {
+					"dependencies": [
+						"build:ts",
+						"build:bundle"
+					]
+				},
+				"build:bundle": {
+					"command": "proteo-esbuild",
+					"dependencies": [
+						"build:ts"
+					],
+					"files": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"esbuild.config.js"
+					],
+					"output": [
+						"index.js",
+						"index.js.map"
+					],
+					"packageLocks": [
+						"yarn.lock"
+					]
+				},
+				"build:ts": {
+					"command": "tsc --build --pretty",
+					"clean": "if-file-deleted",
+					"files": [
+						"src/**/*.ts",
+						"tsconfig.json"
+					],
+					"output": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"tsconfig.tsbuildinfo"
+					],
+					"dependencies": [
+						"../../types:build"
+					]
+				},
+				"format": {
+					"dependencies": [
+						"format:eslint",
+						"format:prettier"
+					]
+				},
+				"format:eslint": {
+					"command": "npm run lint:eslint -- --fix"
+				},
+				"format:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"lint": {
+					"dependencies": [
+						"lint:eslint",
+						"lint:prettier"
+					]
+				},
+				"lint:eslint": {
+					"command": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": [
+						".eslintcache"
+					]
+				},
+				"lint:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"clean": {
+					"command": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo .wireit/"
+				},
+				"test": {
+					"command": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --runInBand --passWithNoTests"
+				}
+			},
+			"contributors": []
+		},
+		"1.0.0-rc.1": {
+			"name": "@proteo/event-decorators",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.0-rc.1",
+			"repository": {
+				"type": "git",
+				"url": "http://repos.bancsabadell.com/bitbucket/scm/p4des/front-core.git",
+				"directory": "src/decorators/event-decorators"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@stencil/core": "^2.18.0"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.0.3",
+				"@proteo/esbuild-config": "^1.0.0-rc.1",
+				"@proteo/jest-config": "^1.0.0-rc.1",
+				"@proteo/rollup-config": "^1.0.0-rc.1",
+				"@proteo/tsconfig": "^1.0.0-rc.1",
+				"@proteo/types": "^1.0.0-rc.1",
+				"@types/jest": "^29.0.3",
+				"cross-env": "^7.0.3",
+				"jest": "^29.0.3",
+				"jest-environment-jsdom": "^29.0.3",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.0.1",
+				"typescript": "4.8.3",
+				"wireit": "^0.7.1"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"!.wireit/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "wireit",
+				"build:bundle": "wireit",
+				"build:ts": "wireit",
+				"format": "wireit",
+				"format:eslint": "wireit",
+				"format:prettier": "wireit",
+				"lint": "wireit",
+				"lint:eslint": "wireit",
+				"lint:prettier": "wireit",
+				"clean": "wireit",
+				"test": "wireit",
+				"test:debug": "yarn node --experimental-vm-modules $(yarn bin jest)"
+			},
+			"publishConfig": {
+				"registry": "http://172.22.193.80:16428/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1673442558156,
+			"_id": "@proteo/event-decorators@1.0.0-rc.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.0-rc.1.tgz",
+				"shasum": "d9ec35bc1989ffac892494d10510a5fa76e43a5e"
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"wireit": {
+				"build": {
+					"dependencies": [
+						"build:ts",
+						"build:bundle"
+					]
+				},
+				"build:bundle": {
+					"command": "proteo-esbuild",
+					"dependencies": [
+						"build:ts"
+					],
+					"files": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"esbuild.config.js"
+					],
+					"output": [
+						"index.js",
+						"index.js.map"
+					],
+					"packageLocks": [
+						"yarn.lock"
+					]
+				},
+				"build:ts": {
+					"command": "tsc --build --pretty",
+					"clean": "if-file-deleted",
+					"files": [
+						"src/**/*.ts",
+						"tsconfig.json"
+					],
+					"output": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"tsconfig.tsbuildinfo"
+					],
+					"dependencies": [
+						"../../types:build"
+					]
+				},
+				"format": {
+					"dependencies": [
+						"format:eslint",
+						"format:prettier"
+					]
+				},
+				"format:eslint": {
+					"command": "npm run lint:eslint -- --fix"
+				},
+				"format:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"lint": {
+					"dependencies": [
+						"lint:eslint",
+						"lint:prettier"
+					]
+				},
+				"lint:eslint": {
+					"command": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": [
+						".eslintcache"
+					]
+				},
+				"lint:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"clean": {
+					"command": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo .wireit/"
+				},
+				"test": {
+					"command": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --runInBand --passWithNoTests"
+				}
+			},
+			"contributors": []
+		},
+		"1.0.0-next.5": {
+			"name": "@proteo/event-decorators",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.0-next.5",
+			"repository": {
+				"type": "git",
+				"url": "http://repos.bancsabadell.com/bitbucket/scm/p4des/front-core.git",
+				"directory": "src/decorators/event-decorators"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@stencil/core": "^2.0.0"
+			},
+			"devDependencies": {
+				"@jest/globals": "^27.0.0",
+				"@proteo/internal-scripts": "workspace:^",
+				"@proteo/jest-config": "workspace:^",
+				"@proteo/rollup-config": "workspace:^",
+				"@proteo/tsconfig": "workspace:^",
+				"@proteo/types": "workspace:^",
+				"@types/jest": "^27.0.0",
+				"copyfiles": "^2.0.0",
+				"cross-env": "^7.0.0",
+				"jest": "^27.0.0",
+				"rimraf": "^3.0.0",
+				"rollup": "^2.0.0",
+				"ts-jest": "^27.0.0",
+				"typescript": "4.6.3"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"bootstrap": "yarn build",
+				"build": "npm run build:dev && npm run build:pro",
+				"build:watch": "yarn rollup-config-checker && npm run copy:dts && yarn rollup -c --watch",
+				"build:pro": "yarn rollup-config-checker && npm run copy:dts && yarn rollup -c",
+				"build:dev": "yarn tsc --build",
+				"build:dev:watch": "yarn tsc --build --watch",
+				"clean": "yarn rimraf ./*.{js,js.map,ts,d.ts,d.ts.map} types/ test/ coverage/ development/ *.tsbuildinfo",
+				"copy:dts": "yarn copyfiles -u 1 -e test './development/**/*.d.ts*' .",
+				"test": "yarn node --experimental-vm-modules $(yarn bin jest) --coverage --runInBand --passWithNoTests",
+				"test:watch": "yarn node --experimental-vm-modules $(yarn bin jest) --watchAll --coverage"
+			},
+			"publishConfig": {
+				"registry": "http://172.22.193.80:16428/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1673442554707,
+			"_id": "@proteo/event-decorators@1.0.0-next.5",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.0-next.5.tgz",
+				"shasum": "6fca408c56f981105c11906963847a67ab90fc8f"
+			},
+			"typings": "index.d.ts",
+			"exports": {
+				".": {
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"packageManager": "yarn@3.1.1",
+			"type": "module",
+			"contributors": []
+		},
+		"1.0.0-next.4": {
+			"name": "@proteo/event-decorators",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.0-next.4",
+			"repository": {
+				"type": "git",
+				"url": "http://repos.bancsabadell.com/bitbucket/scm/p4des/front-core.git",
+				"directory": "src/decorators/event-decorators"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@stencil/core": "^2.0.0"
+			},
+			"devDependencies": {
+				"@jest/globals": "^27.0.0",
+				"@proteo/internal-scripts": "workspace:^",
+				"@proteo/jest-config": "workspace:^",
+				"@proteo/rollup-config": "workspace:^",
+				"@proteo/tsconfig": "workspace:^",
+				"@proteo/types": "workspace:^",
+				"@types/jest": "^27.0.0",
+				"copyfiles": "^2.0.0",
+				"cross-env": "^7.0.0",
+				"jest": "^27.0.0",
+				"rimraf": "^3.0.0",
+				"rollup": "^2.0.0",
+				"ts-jest": "^27.0.0",
+				"typescript": "4.6.3"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"bootstrap": "yarn build",
+				"build": "npm run build:dev && npm run build:pro",
+				"build:watch": "yarn rollup-config-checker && npm run copy:dts && yarn rollup -c --watch",
+				"build:pro": "yarn rollup-config-checker && npm run copy:dts && yarn rollup -c",
+				"build:dev": "yarn tsc --build",
+				"build:dev:watch": "yarn tsc --build --watch",
+				"clean": "yarn rimraf ./*.{js,js.map,ts,d.ts,d.ts.map} types/ test/ coverage/ development/ *.tsbuildinfo",
+				"copy:dts": "yarn copyfiles -u 1 -e test './development/**/*.d.ts*' .",
+				"test": "yarn node --experimental-vm-modules $(yarn bin jest) --coverage --runInBand --passWithNoTests",
+				"test:watch": "yarn node --experimental-vm-modules $(yarn bin jest) --watchAll --coverage"
+			},
+			"publishConfig": {
+				"registry": "http://172.22.193.80:16428/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1673442554170,
+			"_id": "@proteo/event-decorators@1.0.0-next.4",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.0-next.4.tgz",
+				"shasum": "78ca5e6d5629df6f6e11c027e897915929b31448"
+			},
+			"typings": "index.d.ts",
+			"exports": {
+				".": {
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"packageManager": "yarn@3.1.1",
+			"type": "module",
+			"contributors": []
+		},
+		"1.0.0-rc.4": {
+			"name": "@proteo/event-decorators",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.0-rc.4",
+			"repository": {
+				"type": "git",
+				"url": "http://repos.bancsabadell.com/bitbucket/scm/p4des/front-core.git",
+				"directory": "src/decorators/event-decorators"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@stencil/core": "^2.18.0"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.0.3",
+				"@proteo/esbuild-config": "1.0.0-rc.3",
+				"@proteo/jest-config": "1.0.0-rc.2",
+				"@proteo/rollup-config": "1.0.0-rc.2",
+				"@proteo/tsconfig": "1.0.0-rc.4",
+				"@proteo/types": "1.0.0-rc.7",
+				"@types/jest": "^29.0.3",
+				"cross-env": "^7.0.3",
+				"jest": "^29.0.3",
+				"jest-environment-jsdom": "^29.0.3",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.0.1",
+				"typescript": "^4.8.3",
+				"wireit": "^0.7.1"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"!.wireit/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "wireit",
+				"build:bundle": "wireit",
+				"build:ts": "wireit",
+				"format": "wireit",
+				"format:eslint": "wireit",
+				"format:prettier": "wireit",
+				"lint": "wireit",
+				"lint:eslint": "wireit",
+				"lint:prettier": "wireit",
+				"clean": "wireit",
+				"test": "wireit",
+				"test:debug": "yarn node --experimental-vm-modules $(yarn bin jest)"
+			},
+			"publishConfig": {
+				"registry": "http://172.22.193.80:16428/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1673442559864,
+			"_id": "@proteo/event-decorators@1.0.0-rc.4",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.0-rc.4.tgz",
+				"shasum": "c93c8fd1058df95b72cfae4ad327e799453145ba"
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"wireit": {
+				"build": {
+					"dependencies": [
+						"build:ts",
+						"build:bundle"
+					]
+				},
+				"build:bundle": {
+					"command": "proteo-esbuild",
+					"dependencies": [
+						"build:ts"
+					],
+					"files": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"esbuild.config.js"
+					],
+					"output": [
+						"index.js",
+						"index.js.map"
+					],
+					"packageLocks": [
+						"yarn.lock"
+					]
+				},
+				"build:ts": {
+					"command": "tsc --build --pretty",
+					"clean": "if-file-deleted",
+					"files": [
+						"src/**/*.ts",
+						"tsconfig.json"
+					],
+					"output": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"tsconfig.tsbuildinfo"
+					],
+					"dependencies": [
+						"../../types:build"
+					]
+				},
+				"format": {
+					"dependencies": [
+						"format:eslint",
+						"format:prettier"
+					]
+				},
+				"format:eslint": {
+					"command": "npm run lint:eslint -- --fix"
+				},
+				"format:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"lint": {
+					"dependencies": [
+						"lint:eslint",
+						"lint:prettier"
+					]
+				},
+				"lint:eslint": {
+					"command": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": [
+						".eslintcache"
+					]
+				},
+				"lint:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"clean": {
+					"command": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo .wireit/"
+				},
+				"test": {
+					"command": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --runInBand --passWithNoTests"
+				}
+			},
+			"contributors": []
+		},
+		"1.0.0-next.3": {
+			"name": "@proteo/event-decorators",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.0-next.3",
+			"repository": {
+				"type": "git",
+				"url": "http://repos.bancsabadell.com/bitbucket/scm/p4des/front-core.git",
+				"directory": "src/decorators/event-decorators"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@stencil/core": "^2.0.0"
+			},
+			"devDependencies": {
+				"@jest/globals": "^27.0.0",
+				"@proteo/internal-scripts": "1.0.0-next.3",
+				"@proteo/jest-config": "1.0.0-next.3",
+				"@proteo/rollup-config": "1.0.0-next.3",
+				"@proteo/tsconfig": "1.0.0-next.3",
+				"@proteo/types": "1.0.0-next.3",
+				"@types/jest": "^27.0.0",
+				"copyfiles": "^2.0.0",
+				"cross-env": "^7.0.0",
+				"jest": "^27.0.0",
+				"rimraf": "^3.0.0",
+				"rollup": "^2.0.0",
+				"ts-jest": "^27.0.0",
+				"typescript": "4.6.3"
+			},
+			"files": [
+				"*.{d.ts,d.ts.map,js,js.map}",
+				"!test",
+				"development",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"bootstrap": "yarn build",
+				"build": "npm run build:dev && npm run build:pro",
+				"build:watch": "yarn rollup-config-checker && npm run copy:dts && yarn rollup -c --watch",
+				"build:pro": "yarn rollup-config-checker && npm run copy:dts && yarn rollup -c",
+				"build:dev": "yarn tsc --build",
+				"build:dev:watch": "yarn tsc --build --watch",
+				"clean": "yarn rimraf ./*.{js,js.map,ts,d.ts,d.ts.map} types/ test/ coverage/ development/ *.tsbuildinfo",
+				"copy:dts": "yarn copyfiles -u 1 -e test './development/**/*.d.ts*' .",
+				"test": "yarn node --experimental-vm-modules $(yarn bin jest) --coverage --runInBand --passWithNoTests",
+				"test:watch": "yarn node --experimental-vm-modules $(yarn bin jest) --watchAll --coverage"
+			},
+			"publishConfig": {
+				"registry": "http://172.22.193.80:16428/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1673442553596,
+			"_id": "@proteo/event-decorators@1.0.0-next.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.0-next.3.tgz",
+				"shasum": "ff3ae140a7b235967d75971d46b2d35bf2db82f7"
+			},
+			"typings": "index.d.ts",
+			"exports": {
+				".": {
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"packageManager": "yarn@3.1.1",
+			"type": "module",
+			"contributors": []
+		},
+		"1.0.0-rc.3": {
+			"name": "@proteo/event-decorators",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.0-rc.3",
+			"repository": {
+				"type": "git",
+				"url": "http://repos.bancsabadell.com/bitbucket/scm/p4des/front-core.git",
+				"directory": "src/decorators/event-decorators"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@stencil/core": "^2.18.0"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.0.3",
+				"@proteo/esbuild-config": "1.0.0-rc.3",
+				"@proteo/jest-config": "1.0.0-rc.2",
+				"@proteo/rollup-config": "1.0.0-rc.2",
+				"@proteo/tsconfig": "1.0.0-rc.3",
+				"@proteo/types": "1.0.0-rc.6",
+				"@types/jest": "^29.0.3",
+				"cross-env": "^7.0.3",
+				"jest": "^29.0.3",
+				"jest-environment-jsdom": "^29.0.3",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.0.1",
+				"typescript": "^4.8.3",
+				"wireit": "^0.7.1"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"!.wireit/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "wireit",
+				"build:bundle": "wireit",
+				"build:ts": "wireit",
+				"format": "wireit",
+				"format:eslint": "wireit",
+				"format:prettier": "wireit",
+				"lint": "wireit",
+				"lint:eslint": "wireit",
+				"lint:prettier": "wireit",
+				"clean": "wireit",
+				"test": "wireit",
+				"test:debug": "yarn node --experimental-vm-modules $(yarn bin jest)"
+			},
+			"publishConfig": {
+				"registry": "http://172.22.193.80:16428/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1673442559290,
+			"_id": "@proteo/event-decorators@1.0.0-rc.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.0-rc.3.tgz",
+				"shasum": "5745d5c3547c86952024b5a70b407ad844b9adc4"
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"wireit": {
+				"build": {
+					"dependencies": [
+						"build:ts",
+						"build:bundle"
+					]
+				},
+				"build:bundle": {
+					"command": "proteo-esbuild",
+					"dependencies": [
+						"build:ts"
+					],
+					"files": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"esbuild.config.js"
+					],
+					"output": [
+						"index.js",
+						"index.js.map"
+					],
+					"packageLocks": [
+						"yarn.lock"
+					]
+				},
+				"build:ts": {
+					"command": "tsc --build --pretty",
+					"clean": "if-file-deleted",
+					"files": [
+						"src/**/*.ts",
+						"tsconfig.json"
+					],
+					"output": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"tsconfig.tsbuildinfo"
+					],
+					"dependencies": [
+						"../../types:build"
+					]
+				},
+				"format": {
+					"dependencies": [
+						"format:eslint",
+						"format:prettier"
+					]
+				},
+				"format:eslint": {
+					"command": "npm run lint:eslint -- --fix"
+				},
+				"format:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"lint": {
+					"dependencies": [
+						"lint:eslint",
+						"lint:prettier"
+					]
+				},
+				"lint:eslint": {
+					"command": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": [
+						".eslintcache"
+					]
+				},
+				"lint:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"clean": {
+					"command": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo .wireit/"
+				},
+				"test": {
+					"command": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --runInBand --passWithNoTests"
+				}
+			},
+			"contributors": []
+		},
+		"1.0.5-SNAPSHOT-83": {
+			"name": "@proteo/event-decorators",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.5-SNAPSHOT-83",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/decorators/event-decorators"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@stencil/core": "2.9.0"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/esbuild-config": "1.0.2",
+				"@proteo/jest-config": "1.0.2-SNAPSHOT-83",
+				"@proteo/rollup-config": "1.1.0",
+				"@proteo/tsconfig": "1.1.2-SNAPSHOT-83",
+				"@proteo/types": "1.1.88-SNAPSHOT-83"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts && pnpm run build:bundle",
+				"build:bundle": "proteo-esbuild",
+				"build:ts": "tsc --build --pretty",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1780388805156,
+			"_id": "@proteo/event-decorators@1.0.5-SNAPSHOT-83",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.5-SNAPSHOT-83.tgz",
+				"shasum": "23a80255fc67b9b2a6266c0c55e308018ffc550d",
+				"integrity": "sha512-yxy48e7z+vBdYIMx9znxLzFhIRrp3L48FKG1gwnSfjzD9/sXad5jM3h6i73i9Kji+VR/lgBHH75boDeL+ZDdgQ=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"1.0.5-SNAPSHOT-84": {
+			"name": "@proteo/event-decorators",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.5-SNAPSHOT-84",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/decorators/event-decorators"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@stencil/core": "2.9.0"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/esbuild-config": "1.0.2",
+				"@proteo/tsconfig": "1.1.2-SNAPSHOT-84",
+				"@proteo/rollup-config": "1.1.0",
+				"@proteo/jest-config": "1.0.2-SNAPSHOT-84",
+				"@proteo/types": "1.1.88-SNAPSHOT-84"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts && pnpm run build:bundle",
+				"build:bundle": "proteo-esbuild",
+				"build:ts": "tsc --build --pretty",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1780401191843,
+			"_id": "@proteo/event-decorators@1.0.5-SNAPSHOT-84",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.5-SNAPSHOT-84.tgz",
+				"shasum": "d13c53a4d8ced0bee14dc45e8ab61d05f2fbd25d",
+				"integrity": "sha512-R/61CEwkf1AJqdbfDrLIuCST+9MRiqtWxKI/7F+x3nCa2yq8tSxoS/wra+Y62fc7Hw7ko0Vl9Zx9xdFslYxr3A=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"1.0.5-SNAPSHOT-85": {
+			"name": "@proteo/event-decorators",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.5-SNAPSHOT-85",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/decorators/event-decorators"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@stencil/core": "2.9.0"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/esbuild-config": "1.0.2",
+				"@proteo/jest-config": "1.0.2-SNAPSHOT-85",
+				"@proteo/rollup-config": "1.1.0",
+				"@proteo/types": "1.1.88-SNAPSHOT-85",
+				"@proteo/tsconfig": "1.1.2-SNAPSHOT-85"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts && pnpm run build:bundle",
+				"build:bundle": "proteo-esbuild",
+				"build:ts": "tsc --build --pretty",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1780418613432,
+			"_id": "@proteo/event-decorators@1.0.5-SNAPSHOT-85",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.5-SNAPSHOT-85.tgz",
+				"shasum": "4ccf30596c4af5f1fd0ced617d2fd1b03cb33198",
+				"integrity": "sha512-f00hKq6Fvr81yPjXwPkXArzJUBP7/y+51rD+S3o5gmSa/vNyzaB4fGyAIr2eSKd+ccvx4I4PqREMBnMjJw5A3w=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"0.0.0": {
+			"name": "@proteo/event-decorators",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "0.0.0",
+			"repository": {
+				"type": "git",
+				"url": "http://repos.bancsabadell.com/bitbucket/scm/p4des/front-core.git",
+				"directory": "src/decorators/event-decorators"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@stencil/core": "^2.0.0"
+			},
+			"devDependencies": {
+				"@jest/globals": "^28.0.0",
+				"@proteo/esbuild-config": "workspace:^",
+				"@proteo/jest-config": "workspace:^",
+				"@proteo/rollup-config": "workspace:^",
+				"@proteo/tsconfig": "workspace:^",
+				"@proteo/types": "workspace:^",
+				"@types/jest": "^28.0.0",
+				"cross-env": "^7.0.0",
+				"jest": "^28.0.0",
+				"jest-environment-jsdom": "^28.0.0",
+				"rimraf": "^3.0.0",
+				"ts-jest": "^28.0.0",
+				"typescript": "4.6.3",
+				"wireit": "^0.7.1"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test",
+				"!coverage",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "wireit",
+				"build:bundle": "wireit",
+				"build:ts": "wireit",
+				"format": "wireit",
+				"format:eslint": "wireit",
+				"format:prettier": "wireit",
+				"lint": "wireit",
+				"lint:eslint": "wireit",
+				"lint:prettier": "wireit",
+				"clean": "wireit",
+				"test": "wireit",
+				"test:debug": "yarn node --experimental-vm-modules $(yarn bin jest)"
+			},
+			"publishConfig": {
+				"registry": "http://172.22.193.80:16428/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1673442548326,
+			"_id": "@proteo/event-decorators@0.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-0.0.0.tgz",
+				"shasum": "d34434e427ca064e69007c3fc01a6facbb830183"
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"wireit": {
+				"build": {
+					"dependencies": [
+						"build:ts",
+						"build:bundle"
+					]
+				},
+				"build:bundle": {
+					"command": "proteo-esbuild",
+					"dependencies": [
+						"build:ts"
+					],
+					"files": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"esbuild.config.js"
+					],
+					"output": [
+						"index.js",
+						"index.js.map"
+					],
+					"packageLocks": [
+						"yarn.lock"
+					]
+				},
+				"build:ts": {
+					"command": "tsc --build --pretty",
+					"clean": "if-file-deleted",
+					"files": [
+						"src/**/*.ts",
+						"tsconfig.json"
+					],
+					"output": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"tsconfig.tsbuildinfo"
+					],
+					"dependencies": [
+						"../../types:build"
+					]
+				},
+				"format": {
+					"dependencies": [
+						"format:eslint",
+						"format:prettier"
+					]
+				},
+				"format:eslint": {
+					"command": "npm run lint:eslint -- --fix"
+				},
+				"format:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"lint": {
+					"dependencies": [
+						"lint:eslint",
+						"lint:prettier"
+					]
+				},
+				"lint:eslint": {
+					"command": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": [
+						".eslintcache"
+					]
+				},
+				"lint:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"clean": {
+					"command": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo .wireit/"
+				},
+				"test": {
+					"command": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --runInBand --passWithNoTests"
+				}
+			},
+			"contributors": []
+		},
+		"1.1.0-dev-2": {
+			"name": "@proteo/event-decorators",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.1.0-dev-2",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-atlas.git",
+				"directory": "src/decorators/event-decorators"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@stencil/core": "2.9.0"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^5.0.5",
+				"ts-jest": "^29.1.5",
+				"typescript": "5.4.5",
+				"@proteo/esbuild-config": "1.1.0-dev-2",
+				"@proteo/jest-config": "1.1.0-dev-2",
+				"@proteo/rollup-config": "1.1.0-dev-2",
+				"@proteo/tsconfig": "1.2.0-dev-2",
+				"@proteo/types": "1.2.0-dev-2"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "pnpm exec rollup -c ./rollup.config.mjs",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo ",
+				"package": "pnpm run package:pack && pnpm run package:move",
+				"package:pack": "npm pack",
+				"package:move": "shx mkdir -p ../../../../dist && shx mv *.tgz ../../../../dist/",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"lastModified": 1779294591987,
+			"_id": "@proteo/event-decorators@1.1.0-dev-2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.1.0-dev-2.tgz",
+				"shasum": "90737c06d0c3066cd6008c577f409010c6390ab3",
+				"integrity": "sha512-8mGxRicDDM0ZInACkDx08/sStOCIcAxo1ixMVD/3kIETPJgV54jkkWBVwCgvpkj58LFc5FOcl2Ph2TceS8z+aQ=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"1.1.0-dev-1": {
+			"name": "@proteo/event-decorators",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.1.0-dev-1",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/decorators/event-decorators"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@stencil/core": "2.9.0"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^5.0.5",
+				"ts-jest": "^29.1.5",
+				"typescript": "5.4.5",
+				"@proteo/esbuild-config": "1.1.0-dev-1",
+				"@proteo/rollup-config": "1.1.0-dev-1",
+				"@proteo/jest-config": "1.1.0-dev-1",
+				"@proteo/tsconfig": "1.2.0-dev-1",
+				"@proteo/types": "1.2.0-dev-1"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "pnpm exec rollup -c ./rollup.config.mjs",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo ",
+				"package": "pnpm run package:pack && pnpm run package:move",
+				"package:pack": "npm pack",
+				"package:move": "shx mkdir -p ../../../../dist && shx mv *.tgz ../../../../dist/",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"lastModified": 1779289789614,
+			"_id": "@proteo/event-decorators@1.1.0-dev-1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.1.0-dev-1.tgz",
+				"shasum": "10da6572d5591e8cb80a7e4c2514d638c9fd3b80",
+				"integrity": "sha512-5GlkXnbOBWF3brvrvhME/fiwTp91jKNZrTfUT0iSt2qrY1WR4JV5AI/6au+FDlAt8GUCUteXHdgfpwKKY3TOVg=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"0.0.0-SNAPSHOT-20250902100438": {
+			"name": "@proteo/event-decorators",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "0.0.0-SNAPSHOT-20250902100438",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/decorators/event-decorators"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@stencil/core": "2.9.0"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@proteo/esbuild-config": "^1.0.2",
+				"@proteo/jest-config": "^1.0.2",
+				"@proteo/rollup-config": "^1.0.1",
+				"@proteo/tsconfig": "0.0.0-SNAPSHOT-20250902100438",
+				"@proteo/types": "0.0.0-SNAPSHOT-20250902100438",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"wireit": "^0.14.4"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"!.wireit/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "wireit",
+				"build:bundle": "wireit",
+				"build:ts": "wireit",
+				"link:dev": "npm link",
+				"format": "wireit",
+				"format:eslint": "wireit",
+				"format:prettier": "wireit",
+				"lint": "wireit",
+				"lint:eslint": "wireit",
+				"lint:prettier": "wireit",
+				"clean": "wireit",
+				"test": "wireit",
+				"test:full": "wireit",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1756809220230,
+			"_id": "@proteo/event-decorators@0.0.0-SNAPSHOT-20250902100438",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-0.0.0-SNAPSHOT-20250902100438.tgz",
+				"shasum": "39182369adbdf00edcfef673aaa58c80529a922f"
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"wireit": {
+				"build": {
+					"dependencies": [
+						"build:ts",
+						"build:bundle"
+					]
+				},
+				"build:bundle": {
+					"command": "proteo-esbuild",
+					"dependencies": [
+						"build:ts"
+					],
+					"files": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"esbuild.config.js"
+					],
+					"output": [
+						"index.js",
+						"index.js.map"
+					]
+				},
+				"build:ts": {
+					"command": "tsc --build --pretty",
+					"clean": "if-file-deleted",
+					"files": [
+						"src/**/*.ts",
+						"tsconfig.json"
+					],
+					"output": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"tsconfig.tsbuildinfo"
+					],
+					"dependencies": [
+						"../../types:build"
+					]
+				},
+				"format": {
+					"dependencies": [
+						"format:eslint",
+						"format:prettier"
+					]
+				},
+				"format:eslint": {
+					"command": "npm run lint:eslint -- --fix"
+				},
+				"format:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"lint": {
+					"dependencies": [
+						"lint:eslint",
+						"lint:prettier"
+					]
+				},
+				"lint:eslint": {
+					"command": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": [
+						".eslintcache"
+					]
+				},
+				"lint:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"clean": {
+					"command": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo .wireit/"
+				},
+				"test": {
+					"command": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent"
+				},
+				"test:full": {
+					"command": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%"
+				}
+			},
+			"contributors": []
+		},
+		"1.0.0-next.2": {
+			"name": "@proteo/event-decorators",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.0-next.2",
+			"repository": {
+				"type": "git",
+				"url": "http://repos.bancsabadell.com/bitbucket/scm/p4des/front-core.git",
+				"directory": "src/decorators/event-decorators"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@stencil/core": "^2.0.0"
+			},
+			"devDependencies": {
+				"@jest/globals": "^27.0.0",
+				"@proteo/internal-scripts": "1.0.0-next.2",
+				"@proteo/jest-config": "1.0.0-next.2",
+				"@proteo/rollup-config": "1.0.0-next.2",
+				"@proteo/tsconfig": "1.0.0-next.2",
+				"@proteo/types": "1.0.0-next.2",
+				"@types/jest": "^27.0.0",
+				"copyfiles": "^2.0.0",
+				"cross-env": "^7.0.0",
+				"jest": "^27.0.0",
+				"rimraf": "^3.0.0",
+				"rollup": "^2.0.0",
+				"ts-jest": "^27.0.0",
+				"typescript": "4.6.3"
+			},
+			"files": [
+				"*.{d.ts,d.ts.map,js,js.map}",
+				"!test",
+				"development",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"bootstrap": "yarn build",
+				"prepublishOnly": "npm run build",
+				"build": "npm run build:dev && npm run build:pro",
+				"build:watch": "yarn rollup-config-checker && npm run copy:dts && yarn rollup -c --watch",
+				"build:pro": "yarn rollup-config-checker && npm run copy:dts && yarn rollup -c",
+				"build:dev": "yarn tsc --build",
+				"build:dev:watch": "yarn tsc --build --watch",
+				"clean": "yarn rimraf ./*.{js,js.map,ts,d.ts,d.ts.map} types/ test/ coverage/ development/ *.tsbuildinfo",
+				"copy:dts": "yarn copyfiles -u 1 -e test './development/**/*.d.ts*' .",
+				"test": "yarn node --experimental-vm-modules $(yarn bin jest) --coverage --runInBand --passWithNoTests",
+				"test:watch": "yarn node --experimental-vm-modules $(yarn bin jest) --watchAll --coverage"
+			},
+			"publishConfig": {
+				"registry": "http://172.22.193.80:16428/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1673442553036,
+			"_id": "@proteo/event-decorators@1.0.0-next.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.0-next.2.tgz",
+				"shasum": "8ac405367bdcde964f3955a93544b3e01bc784f3"
+			},
+			"typings": "index.d.ts",
+			"exports": {
+				".": {
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"packageManager": "yarn@3.1.1",
+			"type": "module",
+			"contributors": []
+		},
+		"1.0.0-next.1": {
+			"name": "@proteo/event-decorators",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.0-next.1",
+			"repository": {
+				"type": "git",
+				"url": "http://repos.bancsabadell.com/bitbucket/scm/p4des/front-core.git",
+				"directory": "src/decorators/event-decorators"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@stencil/core": "^2.0.0"
+			},
+			"devDependencies": {
+				"@jest/globals": "^27.0.0",
+				"@proteo/internal-scripts": "1.0.0-next.1",
+				"@proteo/jest-config": "1.0.0-next.1",
+				"@proteo/rollup-config": "1.0.0-next.1",
+				"@proteo/tsconfig": "1.0.0-next.1",
+				"@proteo/types": "1.0.0-next.1",
+				"@types/jest": "^27.0.0",
+				"copyfiles": "^2.0.0",
+				"cross-env": "^7.0.0",
+				"jest": "^27.0.0",
+				"rimraf": "^3.0.0",
+				"rollup": "^2.0.0",
+				"ts-jest": "^27.0.0",
+				"typescript": "4.6.3"
+			},
+			"files": [
+				"*.{d.ts,d.ts.map,js,js.map}",
+				"!test",
+				"development",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"bootstrap": "yarn build",
+				"prepublishOnly": "npm run build",
+				"build": "npm run build:dev && npm run build:pro",
+				"build:watch": "yarn rollup-config-checker && npm run copy:dts && yarn rollup -c --watch",
+				"build:pro": "yarn rollup-config-checker && npm run copy:dts && yarn rollup -c",
+				"build:dev": "yarn tsc --build",
+				"build:dev:watch": "yarn tsc --build --watch",
+				"clean": "yarn rimraf ./*.{js,js.map,ts,d.ts,d.ts.map} types/ test/ coverage/ development/ *.tsbuildinfo",
+				"copy:dts": "yarn copyfiles -u 1 -e test './development/**/*.d.ts*' .",
+				"test": "yarn node --experimental-vm-modules $(yarn bin jest) --coverage --runInBand --passWithNoTests",
+				"test:watch": "yarn node --experimental-vm-modules $(yarn bin jest) --watchAll --coverage"
+			},
+			"publishConfig": {
+				"registry": "http://172.22.193.80:16428/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1673442549585,
+			"_id": "@proteo/event-decorators@1.0.0-next.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.0-next.1.tgz",
+				"shasum": "a4edf31c84cf3392466b8c6243d8643ba5c43999"
+			},
+			"typings": "index.d.ts",
+			"exports": {
+				".": {
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"packageManager": "yarn@3.1.1",
+			"type": "module",
+			"contributors": []
+		},
+		"1.0.0-rc.5": {
+			"name": "@proteo/event-decorators",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.0-rc.5",
+			"repository": {
+				"type": "git",
+				"url": "http://repos.bancsabadell.com/bitbucket/scm/p4des/front-core.git",
+				"directory": "src/decorators/event-decorators"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@stencil/core": "^2.18.0"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.0.3",
+				"@proteo/esbuild-config": "1.0.0-rc.4",
+				"@proteo/jest-config": "1.0.0-rc.2",
+				"@proteo/rollup-config": "1.0.0-rc.2",
+				"@proteo/tsconfig": "1.0.0-rc.4",
+				"@proteo/types": "1.0.0-rc.8",
+				"@types/jest": "^29.0.3",
+				"cross-env": "^7.0.3",
+				"jest": "^29.0.3",
+				"jest-environment-jsdom": "^29.0.3",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.0.1",
+				"typescript": "^4.8.3",
+				"wireit": "^0.8.0"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"!.wireit/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "wireit",
+				"build:bundle": "wireit",
+				"build:ts": "wireit",
+				"format": "wireit",
+				"format:eslint": "wireit",
+				"format:prettier": "wireit",
+				"lint": "wireit",
+				"lint:eslint": "wireit",
+				"lint:prettier": "wireit",
+				"clean": "wireit",
+				"test": "wireit",
+				"test:debug": "yarn node --experimental-vm-modules $(yarn bin jest)"
+			},
+			"publishConfig": {
+				"registry": "http://172.22.193.80:16428/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1673442560494,
+			"_id": "@proteo/event-decorators@1.0.0-rc.5",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.0-rc.5.tgz",
+				"shasum": "78ca35760927fb0adfc3701fc12929e3b85df76c"
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"wireit": {
+				"build": {
+					"dependencies": [
+						"build:ts",
+						"build:bundle"
+					]
+				},
+				"build:bundle": {
+					"command": "proteo-esbuild",
+					"dependencies": [
+						"build:ts"
+					],
+					"files": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"esbuild.config.js"
+					],
+					"output": [
+						"index.js",
+						"index.js.map"
+					],
+					"packageLocks": [
+						"yarn.lock"
+					]
+				},
+				"build:ts": {
+					"command": "tsc --build --pretty",
+					"clean": "if-file-deleted",
+					"files": [
+						"src/**/*.ts",
+						"tsconfig.json"
+					],
+					"output": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"tsconfig.tsbuildinfo"
+					],
+					"dependencies": [
+						"../../types:build"
+					]
+				},
+				"format": {
+					"dependencies": [
+						"format:eslint",
+						"format:prettier"
+					]
+				},
+				"format:eslint": {
+					"command": "npm run lint:eslint -- --fix"
+				},
+				"format:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"lint": {
+					"dependencies": [
+						"lint:eslint",
+						"lint:prettier"
+					]
+				},
+				"lint:eslint": {
+					"command": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": [
+						".eslintcache"
+					]
+				},
+				"lint:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"clean": {
+					"command": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo .wireit/"
+				},
+				"test": {
+					"command": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --runInBand --passWithNoTests"
+				}
+			},
+			"contributors": []
+		},
+		"1.0.0-next.0": {
+			"name": "@proteo/event-decorators",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.0-next.0",
+			"repository": {
+				"type": "git",
+				"url": "http://repos.bancsabadell.com/bitbucket/scm/p4des/front-core.git",
+				"directory": "src/decorators/event-decorators"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@stencil/core": "^2.0.0"
+			},
+			"devDependencies": {
+				"@jest/globals": "^27.0.0",
+				"@proteo/internal-scripts": "1.0.0-next.0",
+				"@proteo/jest-config": "1.0.0-next.0",
+				"@proteo/rollup-config": "1.0.0-next.0",
+				"@proteo/tsconfig": "1.0.0-next.0",
+				"@proteo/types": "1.0.0-next.0",
+				"@types/jest": "^27.0.0",
+				"@types/rsync": "^0.4.32",
+				"cross-env": "^7.0.0",
+				"jest": "^27.0.0",
+				"rimraf": "^3.0.0",
+				"rollup": "^2.0.0",
+				"rsync": "^0.6.0",
+				"ts-jest": "^27.0.0",
+				"typescript": "4.6.3"
+			},
+			"files": [
+				"/index.{d.ts,d.ts.map,js,js.map}",
+				"/development/",
+				"!/development/test/"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"prepare": "yarn build",
+				"build": "npm run build:dev && npm run build:pro",
+				"build:watch": "rollup-config-checker && npm run copy:dts && rollup -c --watch",
+				"build:pro": "rollup-config-checker && npm run copy:dts && rollup -c",
+				"build:dev": "tsc --build",
+				"build:dev:watch": "tsc --build --watch",
+				"clean": "rimraf ./*.{js,js.map,ts,d.ts,d.ts.map} types/ test/ coverage/ development/ *.tsbuildinfo",
+				"copy:dts": "rsync -arv --include '*/' --include '*.d.ts*' --include '*.d.ts' --exclude '*' ./development/ ./",
+				"test": "yarn node --experimental-vm-modules $(yarn bin jest) --coverage --runInBand --passWithNoTests",
+				"test:watch": "yarn node --experimental-vm-modules $(yarn bin jest) --watchAll --coverage"
+			},
+			"publishConfig": {
+				"registry": "http://172.22.193.80:16428/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1673442548864,
+			"_id": "@proteo/event-decorators@1.0.0-next.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.0-next.0.tgz",
+				"shasum": "498b864fa4066c2f5c7ee0a9e0902ffa0f4d36f4"
+			},
+			"typings": "index.d.ts",
+			"exports": {
+				".": {
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"packageManager": "yarn@3.1.1",
+			"type": "module",
+			"contributors": []
+		},
+		"1.0.5-SNAPSHOT-72": {
+			"name": "@proteo/event-decorators",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.5-SNAPSHOT-72",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/decorators/event-decorators"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@stencil/core": "2.9.0"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/jest-config": "1.0.2-SNAPSHOT-72",
+				"@proteo/rollup-config": "1.1.0",
+				"@proteo/types": "1.1.88-SNAPSHOT-72",
+				"@proteo/tsconfig": "1.1.2-SNAPSHOT-72",
+				"@proteo/esbuild-config": "1.0.2"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts && pnpm run build:bundle",
+				"build:bundle": "proteo-esbuild",
+				"build:ts": "tsc --build --pretty",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1780328960813,
+			"_id": "@proteo/event-decorators@1.0.5-SNAPSHOT-72",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.5-SNAPSHOT-72.tgz",
+				"shasum": "f28c2cf375c963e77ec5cf565f9cf42fc0a13322",
+				"integrity": "sha512-7zKJ2TuRn9R9le/ociLEX8VbM0PH0Yug5Gzv3zUivcCD/JkLFe43Kb362sb/Q95It/omooKjp3cgJRqIzi/eTA=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"0.0.0-20251017111651": {
+			"name": "@proteo/event-decorators",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "0.0.0-20251017111651",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/decorators/event-decorators"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@stencil/core": "2.9.0"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@proteo/esbuild-config": "^1.0.2",
+				"@proteo/jest-config": "^1.0.2",
+				"@proteo/rollup-config": "^1.0.1",
+				"@proteo/tsconfig": "^1.1.2",
+				"@proteo/types": "0.0.0-20251017111651",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"wireit": "^0.14.4"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"!.wireit/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "wireit",
+				"build:bundle": "wireit",
+				"build:ts": "wireit",
+				"link:dev": "npm link",
+				"format": "wireit",
+				"format:eslint": "wireit",
+				"format:prettier": "wireit",
+				"lint": "wireit",
+				"lint:eslint": "wireit",
+				"lint:prettier": "wireit",
+				"clean": "wireit",
+				"test": "wireit",
+				"test:full": "wireit",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1760960009012,
+			"_id": "@proteo/event-decorators@0.0.0-20251017111651",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-0.0.0-20251017111651.tgz",
+				"shasum": "9bf90260081bdc5dc43d205d30fd153bdb42323a",
+				"integrity": "sha512-Afx6kzFjE4LSaWhw5DCRFY3TQgfG7Z/AMvbmswKhi/oi0Wqt1Uy/WGftcxWW34QtAxze7UG7c24WKI5SLU+48w=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"wireit": {
+				"build": {
+					"dependencies": [
+						"build:ts",
+						"build:bundle"
+					]
+				},
+				"build:bundle": {
+					"command": "proteo-esbuild",
+					"dependencies": [
+						"build:ts"
+					],
+					"files": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"esbuild.config.js"
+					],
+					"output": [
+						"index.js",
+						"index.js.map"
+					]
+				},
+				"build:ts": {
+					"command": "tsc --build --pretty",
+					"clean": "if-file-deleted",
+					"files": [
+						"src/**/*.ts",
+						"tsconfig.json"
+					],
+					"output": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"tsconfig.tsbuildinfo"
+					],
+					"dependencies": [
+						"../../types:build"
+					]
+				},
+				"format": {
+					"dependencies": [
+						"format:eslint",
+						"format:prettier"
+					]
+				},
+				"format:eslint": {
+					"command": "npm run lint:eslint -- --fix"
+				},
+				"format:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"lint": {
+					"dependencies": [
+						"lint:eslint",
+						"lint:prettier"
+					]
+				},
+				"lint:eslint": {
+					"command": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": [
+						".eslintcache"
+					]
+				},
+				"lint:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"clean": {
+					"command": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo .wireit/"
+				},
+				"test": {
+					"command": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent"
+				},
+				"test:full": {
+					"command": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%"
+				}
+			},
+			"contributors": []
+		},
+		"1.0.0-next.12": {
+			"name": "@proteo/event-decorators",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.0-next.12",
+			"repository": {
+				"type": "git",
+				"url": "http://repos.bancsabadell.com/bitbucket/scm/p4des/front-core.git",
+				"directory": "src/decorators/event-decorators"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@stencil/core": "^2.0.0"
+			},
+			"devDependencies": {
+				"@jest/globals": "^27.0.0",
+				"@proteo/internal-scripts": "1.0.0-next.10",
+				"@proteo/jest-config": "1.0.0-next.10",
+				"@proteo/rollup-config": "1.0.0-next.10",
+				"@proteo/tsconfig": "1.0.0-next.12",
+				"@proteo/types": "1.0.0-next.13",
+				"@types/jest": "^27.0.0",
+				"copyfiles": "^2.0.0",
+				"cross-env": "^7.0.0",
+				"jest": "^27.0.0",
+				"rimraf": "^3.0.0",
+				"rollup": "^2.0.0",
+				"ts-jest": "^27.0.0",
+				"typescript": "4.6.3"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test",
+				"!coverage",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"bootstrap": "yarn build",
+				"build": "yarn build:dev && yarn build:pro",
+				"build:watch": "yarn rollup-config-checker && yarn copy:dts && yarn rollup -c --watch",
+				"build:pro": "yarn rollup-config-checker && yarn copy:dts && yarn rollup -c",
+				"build:dev": "yarn tsc --build",
+				"build:dev:watch": "yarn tsc --build --watch",
+				"clean": "yarn rimraf ./*.{js,js.map,ts,d.ts,d.ts.map} types/ test/ coverage/ development/ *.tsbuildinfo",
+				"copy:dts": "yarn copyfiles -u 1 -e test './development/**/*.d.ts*' ./",
+				"test": "yarn node --experimental-vm-modules $(yarn bin jest) --coverage --runInBand --passWithNoTests",
+				"test:watch": "yarn node --experimental-vm-modules $(yarn bin jest) --watchAll --coverage"
+			},
+			"publishConfig": {
+				"registry": "http://172.22.193.80:16428/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1673442550789,
+			"_id": "@proteo/event-decorators@1.0.0-next.12",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.0-next.12.tgz",
+				"shasum": "9bbce7948dbf5a57c468a6c1afe24307c3bcdea5"
+			},
+			"typings": "index.d.ts",
+			"exports": {
+				".": {
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"packageManager": "yarn@3.1.1",
+			"type": "module",
+			"contributors": []
+		},
+		"1.0.3": {
+			"name": "@proteo/event-decorators",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.3",
+			"repository": {
+				"type": "git",
+				"url": "http://repos.bancsabadell.com/bitbucket/scm/p4des/front-core.git",
+				"directory": "src/decorators/event-decorators"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@stencil/core": "2.9.0"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.0.3",
+				"@proteo/esbuild-config": "^1.0.1",
+				"@proteo/jest-config": "^1.0.1",
+				"@proteo/rollup-config": "^1.0.0",
+				"@proteo/tsconfig": "^1.1.0",
+				"@proteo/types": "^1.1.4",
+				"@types/jest": "^29.0.3",
+				"cross-env": "^7.0.3",
+				"jest": "^29.0.3",
+				"jest-environment-jsdom": "^29.0.3",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.0.3",
+				"typescript": "^4.9.5",
+				"wireit": "^0.8.0"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"!.wireit/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "wireit",
+				"build:bundle": "wireit",
+				"build:ts": "wireit",
+				"link:dev": "npm link",
+				"format": "wireit",
+				"format:eslint": "wireit",
+				"format:prettier": "wireit",
+				"lint": "wireit",
+				"lint:eslint": "wireit",
+				"lint:prettier": "wireit",
+				"clean": "wireit",
+				"test": "wireit",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1719392823671,
+			"_id": "@proteo/event-decorators@1.0.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.3.tgz",
+				"shasum": "3898e7165cbf8ac37b8e79145c143cfff2236d1e"
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"wireit": {
+				"build": {
+					"dependencies": [
+						"build:ts",
+						"build:bundle"
+					]
+				},
+				"build:bundle": {
+					"command": "proteo-esbuild",
+					"dependencies": [
+						"build:ts"
+					],
+					"files": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"esbuild.config.js"
+					],
+					"output": [
+						"index.js",
+						"index.js.map"
+					]
+				},
+				"build:ts": {
+					"command": "tsc --build --pretty",
+					"clean": "if-file-deleted",
+					"files": [
+						"src/**/*.ts",
+						"tsconfig.json"
+					],
+					"output": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"tsconfig.tsbuildinfo"
+					],
+					"dependencies": [
+						"../../types:build"
+					]
+				},
+				"format": {
+					"dependencies": [
+						"format:eslint",
+						"format:prettier"
+					]
+				},
+				"format:eslint": {
+					"command": "npm run lint:eslint -- --fix"
+				},
+				"format:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"lint": {
+					"dependencies": [
+						"lint:eslint",
+						"lint:prettier"
+					]
+				},
+				"lint:eslint": {
+					"command": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": [
+						".eslintcache"
+					]
+				},
+				"lint:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"clean": {
+					"command": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo .wireit/"
+				},
+				"test": {
+					"command": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --lastCommit --passWithNoTests --maxWorkers=25% --silent"
+				}
+			},
+			"contributors": []
+		},
+		"1.0.0-next.13": {
+			"name": "@proteo/event-decorators",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.0-next.13",
+			"repository": {
+				"type": "git",
+				"url": "http://repos.bancsabadell.com/bitbucket/scm/p4des/front-core.git",
+				"directory": "src/decorators/event-decorators"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@stencil/core": "^2.0.0"
+			},
+			"devDependencies": {
+				"@jest/globals": "^27.0.0",
+				"@proteo/internal-scripts": "1.0.0-next.11",
+				"@proteo/jest-config": "1.0.0-next.11",
+				"@proteo/rollup-config": "1.0.0-next.11",
+				"@proteo/tsconfig": "1.0.0-next.13",
+				"@proteo/types": "1.0.0-next.14",
+				"@types/jest": "^27.0.0",
+				"copyfiles": "^2.0.0",
+				"cross-env": "^7.0.0",
+				"jest": "^27.0.0",
+				"rimraf": "^3.0.0",
+				"rollup": "^2.0.0",
+				"ts-jest": "^27.0.0",
+				"typescript": "4.6.3"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test",
+				"!coverage",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"bootstrap": "yarn build",
+				"build": "yarn build:dev && yarn build:pro",
+				"build:watch": "yarn rollup-config-checker && yarn copy:dts && yarn rollup -c --watch",
+				"build:pro": "yarn rollup-config-checker && yarn copy:dts && yarn rollup -c",
+				"build:dev": "yarn tsc --build",
+				"build:dev:watch": "yarn tsc --build --watch",
+				"clean": "yarn rimraf ./*.{js,js.map,ts,d.ts,d.ts.map} types/ test/ coverage/ development/ *.tsbuildinfo",
+				"copy:dts": "yarn copyfiles -u 1 -e test './development/**/*.d.ts*' ./",
+				"test": "yarn node --experimental-vm-modules $(yarn bin jest) --coverage --runInBand --passWithNoTests",
+				"test:watch": "yarn node --experimental-vm-modules $(yarn bin jest) --watchAll --coverage"
+			},
+			"publishConfig": {
+				"registry": "http://172.22.193.80:16428/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1673442551384,
+			"_id": "@proteo/event-decorators@1.0.0-next.13",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.0-next.13.tgz",
+				"shasum": "2be7cd22e1fcde60a86f4a80086f5974d80a4d59"
+			},
+			"typings": "index.d.ts",
+			"exports": {
+				".": {
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"packageManager": "yarn@3.1.1",
+			"type": "module",
+			"contributors": []
+		},
+		"1.0.4": {
+			"name": "@proteo/event-decorators",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.4",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/decorators/event-decorators"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@stencil/core": "2.9.0"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@proteo/esbuild-config": "^1.0.2",
+				"@proteo/jest-config": "^1.0.2",
+				"@proteo/rollup-config": "^1.0.1",
+				"@proteo/tsconfig": "^1.1.1",
+				"@proteo/types": "^1.1.5",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.2",
+				"wireit": "^0.14.4"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"!.wireit/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "wireit",
+				"build:bundle": "wireit",
+				"build:ts": "wireit",
+				"link:dev": "npm link",
+				"format": "wireit",
+				"format:eslint": "wireit",
+				"format:prettier": "wireit",
+				"lint": "wireit",
+				"lint:eslint": "wireit",
+				"lint:prettier": "wireit",
+				"clean": "wireit",
+				"test": "wireit",
+				"test:full": "wireit",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1719403476181,
+			"_id": "@proteo/event-decorators@1.0.4",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.4.tgz",
+				"shasum": "e96c2391a0583ae3f07a54b35363ad9bbc6e23c0"
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"wireit": {
+				"build": {
+					"dependencies": [
+						"build:ts",
+						"build:bundle"
+					]
+				},
+				"build:bundle": {
+					"command": "proteo-esbuild",
+					"dependencies": [
+						"build:ts"
+					],
+					"files": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"esbuild.config.js"
+					],
+					"output": [
+						"index.js",
+						"index.js.map"
+					]
+				},
+				"build:ts": {
+					"command": "tsc --build --pretty",
+					"clean": "if-file-deleted",
+					"files": [
+						"src/**/*.ts",
+						"tsconfig.json"
+					],
+					"output": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"tsconfig.tsbuildinfo"
+					],
+					"dependencies": [
+						"../../types:build"
+					]
+				},
+				"format": {
+					"dependencies": [
+						"format:eslint",
+						"format:prettier"
+					]
+				},
+				"format:eslint": {
+					"command": "npm run lint:eslint -- --fix"
+				},
+				"format:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"lint": {
+					"dependencies": [
+						"lint:eslint",
+						"lint:prettier"
+					]
+				},
+				"lint:eslint": {
+					"command": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": [
+						".eslintcache"
+					]
+				},
+				"lint:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"clean": {
+					"command": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo .wireit/"
+				},
+				"test": {
+					"command": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent"
+				},
+				"test:full": {
+					"command": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%"
+				}
+			},
+			"contributors": []
+		},
+		"1.0.0-next.14": {
+			"name": "@proteo/event-decorators",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.0-next.14",
+			"repository": {
+				"type": "git",
+				"url": "http://repos.bancsabadell.com/bitbucket/scm/p4des/front-core.git",
+				"directory": "src/decorators/event-decorators"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@stencil/core": "^2.0.0"
+			},
+			"devDependencies": {
+				"@jest/globals": "^27.0.0",
+				"@proteo/internal-scripts": "1.0.0-next.12",
+				"@proteo/jest-config": "1.0.0-next.12",
+				"@proteo/rollup-config": "1.0.0-next.12",
+				"@proteo/tsconfig": "1.0.0-next.15",
+				"@proteo/types": "1.0.0-next.15",
+				"@types/jest": "^27.0.0",
+				"copyfiles": "^2.0.0",
+				"cross-env": "^7.0.0",
+				"jest": "^27.0.0",
+				"rimraf": "^3.0.0",
+				"rollup": "^2.0.0",
+				"ts-jest": "^27.0.0",
+				"typescript": "4.6.3"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test",
+				"!coverage",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"bootstrap": "yarn build",
+				"build": "yarn build:dev && yarn build:pro",
+				"build:watch": "yarn rollup-config-checker && yarn rollup -c --watch",
+				"build:pro": "yarn rollup-config-checker && yarn rollup -c",
+				"build:dev": "yarn tsc --build",
+				"build:dev:watch": "yarn tsc --build --watch",
+				"clean": "yarn rimraf ./*.{js,js.map,ts,d.ts,d.ts.map} types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "yarn node --experimental-vm-modules $(yarn bin jest) --coverage --runInBand --passWithNoTests",
+				"test:watch": "yarn node --experimental-vm-modules $(yarn bin jest) --watchAll --coverage"
+			},
+			"publishConfig": {
+				"registry": "http://172.22.193.80:16428/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1673442551906,
+			"_id": "@proteo/event-decorators@1.0.0-next.14",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.0-next.14.tgz",
+				"shasum": "1c5141a7ccadb49cb48d7adecf4c901b45e84acc"
+			},
+			"typings": "types/index.d.ts",
+			"exports": {
+				".": {
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"1.0.5": {
+			"name": "@proteo/event-decorators",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.5",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/decorators/event-decorators"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@stencil/core": "2.9.0"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@proteo/esbuild-config": "^1.0.2",
+				"@proteo/jest-config": "^1.0.2",
+				"@proteo/rollup-config": "^1.0.1",
+				"@proteo/tsconfig": "^1.1.1",
+				"@proteo/types": "^1.1.52",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"wireit": "^0.14.4"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"!.wireit/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "wireit",
+				"build:bundle": "wireit",
+				"build:ts": "wireit",
+				"link:dev": "npm link",
+				"format": "wireit",
+				"format:eslint": "wireit",
+				"format:prettier": "wireit",
+				"lint": "wireit",
+				"lint:eslint": "wireit",
+				"lint:prettier": "wireit",
+				"clean": "wireit",
+				"test": "wireit",
+				"test:full": "wireit",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1749033245487,
+			"_id": "@proteo/event-decorators@1.0.5",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.5.tgz",
+				"shasum": "74c3d15ca9d58a22da1599f84fb8d449065796d8"
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"wireit": {
+				"build": {
+					"dependencies": [
+						"build:ts",
+						"build:bundle"
+					]
+				},
+				"build:bundle": {
+					"command": "proteo-esbuild",
+					"dependencies": [
+						"build:ts"
+					],
+					"files": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"esbuild.config.js"
+					],
+					"output": [
+						"index.js",
+						"index.js.map"
+					]
+				},
+				"build:ts": {
+					"command": "tsc --build --pretty",
+					"clean": "if-file-deleted",
+					"files": [
+						"src/**/*.ts",
+						"tsconfig.json"
+					],
+					"output": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"tsconfig.tsbuildinfo"
+					],
+					"dependencies": [
+						"../../types:build"
+					]
+				},
+				"format": {
+					"dependencies": [
+						"format:eslint",
+						"format:prettier"
+					]
+				},
+				"format:eslint": {
+					"command": "npm run lint:eslint -- --fix"
+				},
+				"format:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"lint": {
+					"dependencies": [
+						"lint:eslint",
+						"lint:prettier"
+					]
+				},
+				"lint:eslint": {
+					"command": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": [
+						".eslintcache"
+					]
+				},
+				"lint:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"clean": {
+					"command": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo .wireit/"
+				},
+				"test": {
+					"command": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent"
+				},
+				"test:full": {
+					"command": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%"
+				}
+			},
+			"contributors": []
+		},
+		"1.0.0-next.15": {
+			"name": "@proteo/event-decorators",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.0-next.15",
+			"repository": {
+				"type": "git",
+				"url": "http://repos.bancsabadell.com/bitbucket/scm/p4des/front-core.git",
+				"directory": "src/decorators/event-decorators"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@stencil/core": "^2.0.0"
+			},
+			"devDependencies": {
+				"@jest/globals": "^27.0.0",
+				"@proteo/internal-scripts": "1.0.0-next.13",
+				"@proteo/jest-config": "1.0.0-next.13",
+				"@proteo/rollup-config": "1.0.0-next.13",
+				"@proteo/tsconfig": "1.0.0-next.16",
+				"@proteo/types": "1.0.0-next.16",
+				"@types/jest": "^27.0.0",
+				"copyfiles": "^2.0.0",
+				"cross-env": "^7.0.0",
+				"jest": "^27.0.0",
+				"rimraf": "^3.0.0",
+				"rollup": "^2.0.0",
+				"ts-jest": "^27.0.0",
+				"typescript": "4.6.3"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test",
+				"!coverage",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"bootstrap": "yarn build",
+				"build": "yarn build:dev && yarn build:pro",
+				"build:watch": "yarn rollup-config-checker && yarn rollup -c --watch",
+				"build:pro": "yarn rollup-config-checker && yarn rollup -c",
+				"build:dev": "yarn tsc --build",
+				"build:dev:watch": "yarn tsc --build --watch",
+				"clean": "yarn rimraf ./*.{js,js.map,ts,d.ts,d.ts.map} types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "yarn node --experimental-vm-modules $(yarn bin jest) --coverage --runInBand --passWithNoTests",
+				"test:watch": "yarn node --experimental-vm-modules $(yarn bin jest) --watchAll --coverage"
+			},
+			"publishConfig": {
+				"registry": "http://172.22.193.80:16428/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1673442552510,
+			"_id": "@proteo/event-decorators@1.0.0-next.15",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.0-next.15.tgz",
+				"shasum": "c029d8166b4a55b4950b2bc0b965a7544810f638"
+			},
+			"typings": "types/index.d.ts",
+			"exports": {
+				".": {
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"1.0.0-next.10": {
+			"name": "@proteo/event-decorators",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.0-next.10",
+			"repository": {
+				"type": "git",
+				"url": "http://repos.bancsabadell.com/bitbucket/scm/p4des/front-core.git",
+				"directory": "src/decorators/event-decorators"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@stencil/core": "^2.0.0"
+			},
+			"devDependencies": {
+				"@jest/globals": "^27.0.0",
+				"@proteo/internal-scripts": "1.0.0-next.8",
+				"@proteo/jest-config": "1.0.0-next.8",
+				"@proteo/rollup-config": "1.0.0-next.8",
+				"@proteo/tsconfig": "1.0.0-next.9",
+				"@proteo/types": "1.0.0-next.11",
+				"@types/jest": "^27.0.0",
+				"copyfiles": "^2.0.0",
+				"cross-env": "^7.0.0",
+				"jest": "^27.0.0",
+				"rimraf": "^3.0.0",
+				"rollup": "^2.0.0",
+				"ts-jest": "^27.0.0",
+				"typescript": "4.6.3"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test",
+				"!coverage",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"bootstrap": "yarn build",
+				"build": "npm run build:dev && npm run build:pro",
+				"build:watch": "yarn rollup-config-checker && npm run copy:dts && yarn rollup -c --watch",
+				"build:pro": "yarn rollup-config-checker && npm run copy:dts && yarn rollup -c",
+				"build:dev": "yarn tsc --build",
+				"build:dev:watch": "yarn tsc --build --watch",
+				"clean": "yarn rimraf ./*.{js,js.map,ts,d.ts,d.ts.map} types/ test/ coverage/ development/ *.tsbuildinfo",
+				"copy:dts": "yarn copyfiles -u 1 -e test './development/**/*.d.ts*' ./",
+				"test": "yarn node --experimental-vm-modules $(yarn bin jest) --coverage --runInBand --passWithNoTests",
+				"test:watch": "yarn node --experimental-vm-modules $(yarn bin jest) --watchAll --coverage"
+			},
+			"publishConfig": {
+				"registry": "http://172.22.193.80:16428/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1673442550150,
+			"_id": "@proteo/event-decorators@1.0.0-next.10",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.0-next.10.tgz",
+				"shasum": "ea85d8f4a1c3bcd34eda45e32eb60cf75af42cc2"
+			},
+			"typings": "index.d.ts",
+			"exports": {
+				".": {
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"packageManager": "yarn@3.1.1",
+			"type": "module",
+			"contributors": []
+		},
+		"1.0.0": {
+			"name": "@proteo/event-decorators",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.0",
+			"repository": {
+				"type": "git",
+				"url": "http://repos.bancsabadell.com/bitbucket/scm/p4des/front-core.git",
+				"directory": "src/decorators/event-decorators"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@stencil/core": "^2.18.0"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.0.3",
+				"@proteo/esbuild-config": "1.0.0",
+				"@proteo/jest-config": "1.0.0",
+				"@proteo/rollup-config": "1.0.0",
+				"@proteo/tsconfig": "1.0.0",
+				"@proteo/types": "1.0.0",
+				"@types/jest": "^29.0.3",
+				"cross-env": "^7.0.3",
+				"jest": "^29.0.3",
+				"jest-environment-jsdom": "^29.0.3",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.0.1",
+				"typescript": "^4.8.3",
+				"wireit": "^0.8.0"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"!.wireit/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "wireit",
+				"build:bundle": "wireit",
+				"build:ts": "wireit",
+				"format": "wireit",
+				"format:eslint": "wireit",
+				"format:prettier": "wireit",
+				"lint": "wireit",
+				"lint:eslint": "wireit",
+				"lint:prettier": "wireit",
+				"clean": "wireit",
+				"test": "wireit",
+				"test:debug": "yarn node --experimental-vm-modules $(yarn bin jest)"
+			},
+			"publishConfig": {
+				"registry": "http://172.22.193.80:16428/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1673442561257,
+			"_id": "@proteo/event-decorators@1.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.0.tgz",
+				"shasum": "4bacbe4a3b3faa0ad01d60200de9b321560f13b0"
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"wireit": {
+				"build": {
+					"dependencies": [
+						"build:ts",
+						"build:bundle"
+					]
+				},
+				"build:bundle": {
+					"command": "proteo-esbuild",
+					"dependencies": [
+						"build:ts"
+					],
+					"files": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"esbuild.config.js"
+					],
+					"output": [
+						"index.js",
+						"index.js.map"
+					],
+					"packageLocks": [
+						"yarn.lock"
+					]
+				},
+				"build:ts": {
+					"command": "tsc --build --pretty",
+					"clean": "if-file-deleted",
+					"files": [
+						"src/**/*.ts",
+						"tsconfig.json"
+					],
+					"output": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"tsconfig.tsbuildinfo"
+					],
+					"dependencies": [
+						"../../types:build"
+					]
+				},
+				"format": {
+					"dependencies": [
+						"format:eslint",
+						"format:prettier"
+					]
+				},
+				"format:eslint": {
+					"command": "npm run lint:eslint -- --fix"
+				},
+				"format:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"lint": {
+					"dependencies": [
+						"lint:eslint",
+						"lint:prettier"
+					]
+				},
+				"lint:eslint": {
+					"command": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": [
+						".eslintcache"
+					]
+				},
+				"lint:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"clean": {
+					"command": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo .wireit/"
+				},
+				"test": {
+					"command": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --runInBand --passWithNoTests"
+				}
+			},
+			"contributors": []
+		},
+		"1.0.1": {
+			"name": "@proteo/event-decorators",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.1",
+			"repository": {
+				"type": "git",
+				"url": "http://repos.bancsabadell.com/bitbucket/scm/p4des/front-core.git",
+				"directory": "src/decorators/event-decorators"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@stencil/core": "2.5.2"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.0.3",
+				"@proteo/esbuild-config": "1.0.0",
+				"@proteo/jest-config": "1.0.0",
+				"@proteo/rollup-config": "1.0.0",
+				"@proteo/tsconfig": "1.0.0",
+				"@proteo/types": "^1.0.0",
+				"@types/jest": "^29.0.3",
+				"cross-env": "^7.0.3",
+				"jest": "^29.0.3",
+				"jest-environment-jsdom": "^29.0.3",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.0.1",
+				"typescript": "^4.8.3",
+				"wireit": "^0.8.0"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"!.wireit/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "wireit",
+				"build:bundle": "wireit",
+				"build:ts": "wireit",
+				"link:dev": "npm link",
+				"format": "wireit",
+				"format:eslint": "wireit",
+				"format:prettier": "wireit",
+				"lint": "wireit",
+				"lint:eslint": "wireit",
+				"lint:prettier": "wireit",
+				"clean": "wireit",
+				"test": "wireit",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1703070494327,
+			"_id": "@proteo/event-decorators@1.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.1.tgz",
+				"shasum": "06747e09e28f9307ba59c5a64d12e48e273baad3"
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"wireit": {
+				"build": {
+					"dependencies": [
+						"build:ts",
+						"build:bundle"
+					]
+				},
+				"build:bundle": {
+					"command": "proteo-esbuild",
+					"dependencies": [
+						"build:ts"
+					],
+					"files": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"esbuild.config.js"
+					],
+					"output": [
+						"index.js",
+						"index.js.map"
+					]
+				},
+				"build:ts": {
+					"command": "tsc --build --pretty",
+					"clean": "if-file-deleted",
+					"files": [
+						"src/**/*.ts",
+						"tsconfig.json"
+					],
+					"output": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"tsconfig.tsbuildinfo"
+					],
+					"dependencies": [
+						"../../types:build"
+					]
+				},
+				"format": {
+					"dependencies": [
+						"format:eslint",
+						"format:prettier"
+					]
+				},
+				"format:eslint": {
+					"command": "npm run lint:eslint -- --fix"
+				},
+				"format:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"lint": {
+					"dependencies": [
+						"lint:eslint",
+						"lint:prettier"
+					]
+				},
+				"lint:eslint": {
+					"command": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": [
+						".eslintcache"
+					]
+				},
+				"lint:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"clean": {
+					"command": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo .wireit/"
+				},
+				"test": {
+					"command": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --lastCommit --maxWorkers=25% --silent"
+				}
+			},
+			"contributors": []
+		},
+		"1.0.2": {
+			"name": "@proteo/event-decorators",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.2",
+			"repository": {
+				"type": "git",
+				"url": "http://repos.bancsabadell.com/bitbucket/scm/p4des/front-core.git",
+				"directory": "src/decorators/event-decorators"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@stencil/core": "2.9.0"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.0.3",
+				"@proteo/esbuild-config": "^1.0.0",
+				"@proteo/jest-config": "^1.0.0",
+				"@proteo/rollup-config": "^1.0.0",
+				"@proteo/tsconfig": "^1.0.0",
+				"@proteo/types": "^1.0.0",
+				"@types/jest": "^29.0.3",
+				"cross-env": "^7.0.3",
+				"jest": "^29.0.3",
+				"jest-environment-jsdom": "^29.0.3",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.0.1",
+				"typescript": "^4.8.3",
+				"wireit": "^0.8.0"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"!.wireit/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "wireit",
+				"build:bundle": "wireit",
+				"build:ts": "wireit",
+				"link:dev": "npm link",
+				"format": "wireit",
+				"format:eslint": "wireit",
+				"format:prettier": "wireit",
+				"lint": "wireit",
+				"lint:eslint": "wireit",
+				"lint:prettier": "wireit",
+				"clean": "wireit",
+				"test": "wireit",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1703602989829,
+			"_id": "@proteo/event-decorators@1.0.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.2.tgz",
+				"shasum": "e99873a343e79087ae2d5782bd88855f90c7562b"
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"wireit": {
+				"build": {
+					"dependencies": [
+						"build:ts",
+						"build:bundle"
+					]
+				},
+				"build:bundle": {
+					"command": "proteo-esbuild",
+					"dependencies": [
+						"build:ts"
+					],
+					"files": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"esbuild.config.js"
+					],
+					"output": [
+						"index.js",
+						"index.js.map"
+					]
+				},
+				"build:ts": {
+					"command": "tsc --build --pretty",
+					"clean": "if-file-deleted",
+					"files": [
+						"src/**/*.ts",
+						"tsconfig.json"
+					],
+					"output": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"tsconfig.tsbuildinfo"
+					],
+					"dependencies": [
+						"../../types:build"
+					]
+				},
+				"format": {
+					"dependencies": [
+						"format:eslint",
+						"format:prettier"
+					]
+				},
+				"format:eslint": {
+					"command": "npm run lint:eslint -- --fix"
+				},
+				"format:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"lint": {
+					"dependencies": [
+						"lint:eslint",
+						"lint:prettier"
+					]
+				},
+				"lint:eslint": {
+					"command": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": [
+						".eslintcache"
+					]
+				},
+				"lint:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"clean": {
+					"command": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo .wireit/"
+				},
+				"test": {
+					"command": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --lastCommit --maxWorkers=25% --silent"
+				}
+			},
+			"contributors": []
+		},
+		"1.0.5-dev.1781194532158": {
+			"name": "@proteo/event-decorators",
+			"version": "1.0.5-dev.1781194532158",
+			"description": "Proteo4 Frontend Core Library",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/decorators/event-decorators"
+			},
+			"publishConfig": {
+				"registry": "http://localhost:4873"
+			},
+			"main": "index.js",
+			"type": "module",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"dependencies": {
+				"@stencil/core": "2.9.0"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/esbuild-config": "1.0.2",
+				"@proteo/types": "1.1.88-dev.1781194532158",
+				"@proteo/jest-config": "1.0.2",
+				"@proteo/tsconfig": "1.1.2"
+			},
+			"types": "types/index.d.ts",
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts && pnpm run build:bundle",
+				"build:bundle": "proteo-esbuild",
+				"build:ts": "tsc --build --pretty",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"_nodeVersion": "24.11.1",
+			"_id": "@proteo/event-decorators@1.0.5-dev.1781194532158",
+			"dist": {
+				"integrity": "sha512-SWwNGWWgT/0zO9qWgeaqZKt11aKNlPDrOHKn5Ax/kZ8OPnrulK6nB3RKxO5b2luCbSUy8+7Nrs1Sd+4Hi/g1oA==",
+				"shasum": "68b0086e417c901cefea7d2122742deb9d59046d",
+				"tarball": "http://localhost:4873/@proteo/event-decorators/-/@proteo/event-decorators-1.0.5-dev.1781194532158.tgz"
+			},
+			"contributors": []
+		},
+		"1.0.5-dev.1781194905727": {
+			"name": "@proteo/event-decorators",
+			"version": "1.0.5-dev.1781194905727",
+			"description": "Proteo4 Frontend Core Library",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/decorators/event-decorators"
+			},
+			"publishConfig": {
+				"registry": "http://localhost:4873"
+			},
+			"main": "index.js",
+			"type": "module",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"dependencies": {
+				"@stencil/core": "2.9.0"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/esbuild-config": "1.0.2",
+				"@proteo/jest-config": "1.0.2",
+				"@proteo/types": "1.1.88",
+				"@proteo/tsconfig": "1.1.2"
+			},
+			"types": "types/index.d.ts",
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts && pnpm run build:bundle",
+				"build:bundle": "proteo-esbuild",
+				"build:ts": "tsc --build --pretty",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"_nodeVersion": "24.11.1",
+			"_id": "@proteo/event-decorators@1.0.5-dev.1781194905727",
+			"dist": {
+				"integrity": "sha512-Agp5syMcB6lTChh58mIb5fTpHtuELln4rPHt++8YicjFBe/803hSJ4n/X1RAEjV+Vp9CNZxYt7J0T3Uv4LstFQ==",
+				"shasum": "911678208d0bfed15662d649cf7e70833fde416b",
+				"tarball": "http://localhost:4873/@proteo/event-decorators/-/@proteo/event-decorators-1.0.5-dev.1781194905727.tgz"
+			},
+			"contributors": []
+		},
+		"1.0.5-dev.1781195668306": {
+			"name": "@proteo/event-decorators",
+			"version": "1.0.5-dev.1781195668306",
+			"description": "Proteo4 Frontend Core Library",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/decorators/event-decorators"
+			},
+			"publishConfig": {
+				"registry": "http://localhost:4873"
+			},
+			"main": "index.js",
+			"type": "module",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"dependencies": {
+				"@stencil/core": "2.9.0"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@proteo/esbuild-config": "1.0.2",
+				"@proteo/jest-config": "1.0.2",
+				"@proteo/tsconfig": "1.1.2",
+				"@proteo/types": "1.1.88-dev.1781195668306",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4"
+			},
+			"types": "types/index.d.ts",
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts && pnpm run build:bundle",
+				"build:bundle": "proteo-esbuild",
+				"build:ts": "tsc --build --pretty",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"_nodeVersion": "24.11.1",
+			"_id": "@proteo/event-decorators@1.0.5-dev.1781195668306",
+			"dist": {
+				"integrity": "sha512-3zXzaEtr2IVgbNoSez2AwUjlGa8pPNnoqKSHE7Eu0uq36TvowCRZGupU0eIumLf17Q1oyqWYf+PHwyig5mor7g==",
+				"shasum": "4d333a0d764acbef823b4cee3a33647288f896b6",
+				"tarball": "http://localhost:4873/@proteo/event-decorators/-/@proteo/event-decorators-1.0.5-dev.1781195668306.tgz"
+			},
+			"contributors": []
+		},
+		"1.0.5-SNAPSHOT-100": {
+			"name": "@proteo/event-decorators",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.5-SNAPSHOT-100",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/decorators/event-decorators"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@stencil/core": "2.9.0"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/esbuild-config": "1.0.2",
+				"@proteo/jest-config": "1.0.2-SNAPSHOT-100",
+				"@proteo/tsconfig": "1.1.2-SNAPSHOT-100",
+				"@proteo/types": "1.1.88-SNAPSHOT-100"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts && pnpm run build:bundle",
+				"build:bundle": "proteo-esbuild",
+				"build:ts": "tsc --build --pretty",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1781602468184,
+			"_id": "@proteo/event-decorators@1.0.5-SNAPSHOT-100",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.5-SNAPSHOT-100.tgz",
+				"shasum": "1d3a2ce1778e35a688e6ec4f5a3fd50c67bc0068",
+				"integrity": "sha512-z2v86yG7wOVPxC1RMU1YpSuk2DsLQK4LpQ1pHsXb1MNZbpHUqdn648luTJWnyplARB6F8JlGcMNfirXHnUAWmg=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"1.0.5-tmp-build-test-SNAPSHOT-111": {
+			"name": "@proteo/event-decorators",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.5-tmp-build-test-SNAPSHOT-111",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/decorators/event-decorators"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@stencil/core": "2.9.0"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/esbuild-config": "1.0.2",
+				"@proteo/jest-config": "1.0.2-tmp-build-test-SNAPSHOT-111",
+				"@proteo/tsconfig": "1.1.2-tmp-build-test-SNAPSHOT-111",
+				"@proteo/types": "1.1.88-tmp-build-test-SNAPSHOT-111"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts && pnpm run build:bundle",
+				"build:bundle": "proteo-esbuild",
+				"build:ts": "tsc --build --pretty",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1781618991914,
+			"_id": "@proteo/event-decorators@1.0.5-tmp-build-test-SNAPSHOT-111",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.5-tmp-build-test-SNAPSHOT-111.tgz",
+				"shasum": "8a6f71460844ef22d2e5636ebb69c5f83d67bb3f",
+				"integrity": "sha512-kFG2XbHNxn47Jg/19P3zSU1V05OYEOM0NJ9RRmAMGMGReQ0XxL82BuIb6CJtHcXKa+yC3UNXHeh1zMSE+k+Vzw=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		}
+	},
+	"time": {
+		"unpublished": null,
+		"1.0.0-next.9": "2023-01-11T13:09:16.936Z",
+		"1.0.0-next.8": "2023-01-11T13:09:16.353Z",
+		"1.0.0-rc.0": "2023-01-11T13:09:17.503Z",
+		"1.0.0-next.7": "2023-01-11T13:09:15.782Z",
+		"1.0.0-next.6": "2023-01-11T13:09:15.229Z",
+		"1.0.0-rc.2": "2023-01-11T13:09:18.730Z",
+		"1.0.0-rc.1": "2023-01-11T13:09:18.156Z",
+		"1.0.0-next.5": "2023-01-11T13:09:14.707Z",
+		"1.0.0-next.4": "2023-01-11T13:09:14.170Z",
+		"1.0.0-rc.4": "2023-01-11T13:09:19.864Z",
+		"1.0.0-next.3": "2023-01-11T13:09:13.596Z",
+		"1.0.0-rc.3": "2023-01-11T13:09:19.290Z",
+		"1.0.5-SNAPSHOT-83": "2026-06-02T08:26:45.156Z",
+		"1.0.5-SNAPSHOT-84": "2026-06-02T11:53:11.843Z",
+		"1.0.5-SNAPSHOT-85": "2026-06-02T16:43:33.432Z",
+		"0.0.0": "2023-01-11T13:09:08.326Z",
+		"1.1.0-dev-2": "2026-05-20T16:29:51.987Z",
+		"1.1.0-dev-1": "2026-05-20T15:09:49.614Z",
+		"0.0.0-SNAPSHOT-20250902100438": "2025-09-02T10:33:40.230Z",
+		"1.0.0-next.2": "2023-01-11T13:09:13.036Z",
+		"modified": "2026-06-16T14:09:51.914Z",
+		"1.0.0-next.1": "2023-01-11T13:09:09.585Z",
+		"1.0.0-rc.5": "2023-01-11T13:09:20.494Z",
+		"1.0.0-next.0": "2023-01-11T13:09:08.864Z",
+		"created": "2026-06-01T15:49:20.813Z",
+		"1.0.5-SNAPSHOT-72": "2026-06-01T15:49:20.813Z",
+		"0.0.0-20251017111651": "2025-10-20T11:33:29.012Z",
+		"1.0.0-next.12": "2023-01-11T13:09:10.789Z",
+		"1.0.3": "2024-06-26T09:07:03.671Z",
+		"1.0.0-next.13": "2023-01-11T13:09:11.384Z",
+		"1.0.4": "2024-06-26T12:04:36.181Z",
+		"1.0.0-next.14": "2023-01-11T13:09:11.906Z",
+		"1.0.5": "2025-06-04T10:34:05.487Z",
+		"1.0.0-next.15": "2023-01-11T13:09:12.510Z",
+		"1.0.0-next.10": "2023-01-11T13:09:10.150Z",
+		"1.0.0": "2023-01-11T13:09:21.257Z",
+		"1.0.1": "2023-12-20T11:08:14.327Z",
+		"1.0.2": "2023-12-26T15:03:09.829Z",
+		"1.0.5-dev.1781194532158": "2026-06-11T16:15:39.789Z",
+		"1.0.5-dev.1781194905727": "2026-06-11T16:21:48.605Z",
+		"1.0.5-dev.1781195668306": "2026-06-11T16:34:36.528Z",
+		"1.0.5-SNAPSHOT-100": "2026-06-16T09:34:28.184Z",
+		"1.0.5-tmp-build-test-SNAPSHOT-111": "2026-06-16T14:09:51.914Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "1.0.5",
+		"dev": "1.0.5-dev.1781195668306"
+	},
+	"_uplinks": {
+		"artifactory-sabadell": {
+			"etag": "266c2570a9b487a072b9da7d07d2d0e858ef7fff",
+			"fetched": 1781793657131
+		}
+	},
+	"_distfiles": {
+		"event-decorators-1.0.0-next.9.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.0-next.9.tgz",
+			"sha": "eaf11a1431e8c3429a44bc2699997df331f23612",
+			"registry": "artifactory-sabadell"
+		},
+		"event-decorators-1.0.0-next.8.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.0-next.8.tgz",
+			"sha": "32164bc832338c7a4ffc0bb4ce13340765eb9044",
+			"registry": "artifactory-sabadell"
+		},
+		"event-decorators-1.0.0-rc.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.0-rc.0.tgz",
+			"sha": "d37df78571502e5847b7e125f56ee9f8445c6fef",
+			"registry": "artifactory-sabadell"
+		},
+		"event-decorators-1.0.0-next.7.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.0-next.7.tgz",
+			"sha": "d5c9fdce208ca878d680c995c5a0f4184bb73fa8",
+			"registry": "artifactory-sabadell"
+		},
+		"event-decorators-1.0.0-next.6.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.0-next.6.tgz",
+			"sha": "da1a595824892df911391dc5ad0cc6cf5dfb060b",
+			"registry": "artifactory-sabadell"
+		},
+		"event-decorators-1.0.0-rc.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.0-rc.2.tgz",
+			"sha": "075b841dbde016155350aaca7853a23cd5ef8c13",
+			"registry": "artifactory-sabadell"
+		},
+		"event-decorators-1.0.0-rc.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.0-rc.1.tgz",
+			"sha": "d9ec35bc1989ffac892494d10510a5fa76e43a5e",
+			"registry": "artifactory-sabadell"
+		},
+		"event-decorators-1.0.0-next.5.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.0-next.5.tgz",
+			"sha": "6fca408c56f981105c11906963847a67ab90fc8f",
+			"registry": "artifactory-sabadell"
+		},
+		"event-decorators-1.0.0-next.4.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.0-next.4.tgz",
+			"sha": "78ca5e6d5629df6f6e11c027e897915929b31448",
+			"registry": "artifactory-sabadell"
+		},
+		"event-decorators-1.0.0-rc.4.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.0-rc.4.tgz",
+			"sha": "c93c8fd1058df95b72cfae4ad327e799453145ba",
+			"registry": "artifactory-sabadell"
+		},
+		"event-decorators-1.0.0-next.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.0-next.3.tgz",
+			"sha": "ff3ae140a7b235967d75971d46b2d35bf2db82f7",
+			"registry": "artifactory-sabadell"
+		},
+		"event-decorators-1.0.0-rc.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.0-rc.3.tgz",
+			"sha": "5745d5c3547c86952024b5a70b407ad844b9adc4",
+			"registry": "artifactory-sabadell"
+		},
+		"event-decorators-1.0.5-SNAPSHOT-83.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.5-SNAPSHOT-83.tgz",
+			"sha": "23a80255fc67b9b2a6266c0c55e308018ffc550d",
+			"registry": "artifactory-sabadell"
+		},
+		"event-decorators-1.0.5-SNAPSHOT-84.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.5-SNAPSHOT-84.tgz",
+			"sha": "d13c53a4d8ced0bee14dc45e8ab61d05f2fbd25d",
+			"registry": "artifactory-sabadell"
+		},
+		"event-decorators-1.0.5-SNAPSHOT-85.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.5-SNAPSHOT-85.tgz",
+			"sha": "4ccf30596c4af5f1fd0ced617d2fd1b03cb33198",
+			"registry": "artifactory-sabadell"
+		},
+		"event-decorators-0.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-0.0.0.tgz",
+			"sha": "d34434e427ca064e69007c3fc01a6facbb830183",
+			"registry": "artifactory-sabadell"
+		},
+		"event-decorators-1.1.0-dev-2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.1.0-dev-2.tgz",
+			"sha": "90737c06d0c3066cd6008c577f409010c6390ab3",
+			"registry": "artifactory-sabadell"
+		},
+		"event-decorators-1.1.0-dev-1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.1.0-dev-1.tgz",
+			"sha": "10da6572d5591e8cb80a7e4c2514d638c9fd3b80",
+			"registry": "artifactory-sabadell"
+		},
+		"event-decorators-0.0.0-SNAPSHOT-20250902100438.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-0.0.0-SNAPSHOT-20250902100438.tgz",
+			"sha": "39182369adbdf00edcfef673aaa58c80529a922f",
+			"registry": "artifactory-sabadell"
+		},
+		"event-decorators-1.0.0-next.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.0-next.2.tgz",
+			"sha": "8ac405367bdcde964f3955a93544b3e01bc784f3",
+			"registry": "artifactory-sabadell"
+		},
+		"event-decorators-1.0.0-next.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.0-next.1.tgz",
+			"sha": "a4edf31c84cf3392466b8c6243d8643ba5c43999",
+			"registry": "artifactory-sabadell"
+		},
+		"event-decorators-1.0.0-rc.5.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.0-rc.5.tgz",
+			"sha": "78ca35760927fb0adfc3701fc12929e3b85df76c",
+			"registry": "artifactory-sabadell"
+		},
+		"event-decorators-1.0.0-next.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.0-next.0.tgz",
+			"sha": "498b864fa4066c2f5c7ee0a9e0902ffa0f4d36f4",
+			"registry": "artifactory-sabadell"
+		},
+		"event-decorators-1.0.5-SNAPSHOT-72.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.5-SNAPSHOT-72.tgz",
+			"sha": "f28c2cf375c963e77ec5cf565f9cf42fc0a13322",
+			"registry": "artifactory-sabadell"
+		},
+		"event-decorators-0.0.0-20251017111651.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-0.0.0-20251017111651.tgz",
+			"sha": "9bf90260081bdc5dc43d205d30fd153bdb42323a",
+			"registry": "artifactory-sabadell"
+		},
+		"event-decorators-1.0.0-next.12.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.0-next.12.tgz",
+			"sha": "9bbce7948dbf5a57c468a6c1afe24307c3bcdea5",
+			"registry": "artifactory-sabadell"
+		},
+		"event-decorators-1.0.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.3.tgz",
+			"sha": "3898e7165cbf8ac37b8e79145c143cfff2236d1e",
+			"registry": "artifactory-sabadell"
+		},
+		"event-decorators-1.0.0-next.13.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.0-next.13.tgz",
+			"sha": "2be7cd22e1fcde60a86f4a80086f5974d80a4d59",
+			"registry": "artifactory-sabadell"
+		},
+		"event-decorators-1.0.4.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.4.tgz",
+			"sha": "e96c2391a0583ae3f07a54b35363ad9bbc6e23c0",
+			"registry": "artifactory-sabadell"
+		},
+		"event-decorators-1.0.0-next.14.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.0-next.14.tgz",
+			"sha": "1c5141a7ccadb49cb48d7adecf4c901b45e84acc",
+			"registry": "artifactory-sabadell"
+		},
+		"event-decorators-1.0.5.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.5.tgz",
+			"sha": "74c3d15ca9d58a22da1599f84fb8d449065796d8",
+			"registry": "artifactory-sabadell"
+		},
+		"event-decorators-1.0.0-next.15.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.0-next.15.tgz",
+			"sha": "c029d8166b4a55b4950b2bc0b965a7544810f638",
+			"registry": "artifactory-sabadell"
+		},
+		"event-decorators-1.0.0-next.10.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.0-next.10.tgz",
+			"sha": "ea85d8f4a1c3bcd34eda45e32eb60cf75af42cc2",
+			"registry": "artifactory-sabadell"
+		},
+		"event-decorators-1.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.0.tgz",
+			"sha": "4bacbe4a3b3faa0ad01d60200de9b321560f13b0",
+			"registry": "artifactory-sabadell"
+		},
+		"event-decorators-1.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.1.tgz",
+			"sha": "06747e09e28f9307ba59c5a64d12e48e273baad3",
+			"registry": "artifactory-sabadell"
+		},
+		"event-decorators-1.0.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.2.tgz",
+			"sha": "e99873a343e79087ae2d5782bd88855f90c7562b",
+			"registry": "artifactory-sabadell"
+		},
+		"event-decorators-1.0.5-SNAPSHOT-100.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.5-SNAPSHOT-100.tgz",
+			"sha": "1d3a2ce1778e35a688e6ec4f5a3fd50c67bc0068",
+			"registry": "artifactory-sabadell"
+		},
+		"event-decorators-1.0.5-tmp-build-test-SNAPSHOT-111.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/event-decorators/-/@proteo/event-decorators-1.0.5-tmp-build-test-SNAPSHOT-111.tgz",
+			"sha": "8a6f71460844ef22d2e5636ebb69c5f83d67bb3f",
+			"registry": "artifactory-sabadell"
+		}
+	},
+	"_attachments": {
+		"event-decorators-1.0.5-dev.1781194532158.tgz": {
+			"shasum": "68b0086e417c901cefea7d2122742deb9d59046d",
+			"version": "1.0.5-dev.1781194532158"
+		},
+		"event-decorators-1.0.5-dev.1781194905727.tgz": {
+			"shasum": "911678208d0bfed15662d649cf7e70833fde416b",
+			"version": "1.0.5-dev.1781194905727"
+		},
+		"event-decorators-1.0.5-dev.1781195668306.tgz": {
+			"shasum": "4d333a0d764acbef823b4cee3a33647288f896b6",
+			"version": "1.0.5-dev.1781195668306"
+		}
+	},
+	"_rev": "15-c995f1bb7e92e855",
+	"_id": "@proteo/event-decorators",
+	"readme": ""
+}

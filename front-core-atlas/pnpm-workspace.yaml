@@ -1,0 +1,49 @@
+# See full docs for this file on
+# https://pnpm.io/settings
+
+
+# Define which folders contain packages that belong to this workspace.
+packages:
+  - 'src/config/packages/*'
+  - 'src/config/packages/**/*'
+  - 'src/typescript/packages/*'
+  - 'src/typescript/packages/**/*'
+  - 'src/angular/packages/*'
+  - 'src/angular/packages/**/*'
+
+# Explicitly allow certain packages to run build scripts (postinstall, native builds).
+allowBuilds:
+  '@parcel/watcher': true
+  esbuild: true
+  unrs-resolver: true
+  nice-napi: true
+
+# Force specific versions of dependencies across the entire workspace.
+overrides:
+  rimraf: ^5.0.0
+  tar: ^6.2.1
+  glob: ^13.0.6
+  minimatch: ^3.1.4
+  micromatch: ^4.0.8
+  serialize-javascript: ^7.0.3
+  test-exclude: ^7.0.1
+  "test-exclude>minimatch": ^9.0.4
+
+# Prevent installation of very recently published packages.
+# Value is expressed in minutes (1440 minutes = 1 day).
+minimumReleaseAge: 1000
+
+# Hoist all dependencies to the root node_modules instead of per-package.
+# Improves compatibility with tools/libraries that assume flat structure.
+shamefullyHoist: true
+
+# Automatically install missing peer dependencies when possible.
+autoInstallPeers: true
+
+# Disables strict enforcement of peer dependency compatibility.
+# Set to false to avoid install failures when peer versions don't match exactly
+strictPeerDependencies: false
+
+# Prefer installing strictly from pnpm-lock.yaml (reproducible builds).
+# Falls back to normal resolution if lockfile is incomplete.
+preferFrozenLockfile: true

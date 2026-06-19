@@ -1,0 +1,16 @@
+{
+  "extends": "@proteo/tsconfig",
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.json"
+  ],
+  "exclude": [
+    "src/test"
+  ],
+  "compilerOptions": {
+    "outDir": "./development",
+    "declarationDir": "./types",
+    "rootDir": "./src",
+    "declaration": true
+  }
+}

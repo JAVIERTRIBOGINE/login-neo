@@ -1,0 +1,4320 @@
+{
+	"name": "@proteo/tag-manager-driver",
+	"versions": {
+		"1.0.0-next.9": {
+			"name": "@proteo/tag-manager-driver",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.0-next.9",
+			"repository": {
+				"type": "git",
+				"url": "http://repos.bancsabadell.com/bitbucket/scm/p4des/front-core.git",
+				"directory": "src/utils/tag-manager-driver"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"@proteo/internal-scripts": "1.0.0-next.8",
+				"@proteo/jest-config": "1.0.0-next.8",
+				"@proteo/rollup-config": "1.0.0-next.8",
+				"@proteo/tsconfig": "1.0.0-next.8",
+				"@proteo/types": "1.0.0-next.10",
+				"@types/jest": "^27.0.0",
+				"copyfiles": "^2.0.0",
+				"cross-env": "^7.0.0",
+				"jest": "^27.0.0",
+				"rimraf": "^3.0.0",
+				"rollup": "^2.0.0",
+				"ts-jest": "^27.0.0",
+				"typescript": "4.6.3"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test",
+				"!coverage",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"bootstrap": "yarn build",
+				"build": "npm run build:dev && npm run build:pro",
+				"build:watch": "yarn rollup-config-checker && npm run copy:dts && yarn rollup -c --watch",
+				"build:pro": "yarn rollup-config-checker && npm run copy:dts && yarn rollup -c",
+				"build:dev": "yarn tsc --build",
+				"build:dev:watch": "yarn tsc --build --watch",
+				"clean": "yarn rimraf ./*.{js,js.map,ts,d.ts,d.ts.map} types/ test/ coverage/ development/ *.tsbuildinfo",
+				"copy:dts": "yarn copyfiles -u 1 -e test './development/**/*.d.ts*' ./",
+				"test": "yarn node --experimental-vm-modules $(yarn bin jest) --coverage --runInBand --passWithNoTests",
+				"test:watch": "yarn node --experimental-vm-modules $(yarn bin jest) --watchAll --coverage"
+			},
+			"publishConfig": {
+				"registry": "http://172.22.193.80:16428/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1673447509232,
+			"_id": "@proteo/tag-manager-driver@1.0.0-next.9",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.0-next.9.tgz",
+				"shasum": "1a6ce2bcd2547282360bf6d84b5f6f2fd1d0eabc"
+			},
+			"typings": "index.d.ts",
+			"exports": {
+				".": {
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"packageManager": "yarn@3.1.1",
+			"type": "module",
+			"contributors": []
+		},
+		"1.0.0-next.8": {
+			"name": "@proteo/tag-manager-driver",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.0-next.8",
+			"repository": {
+				"type": "git",
+				"url": "http://repos.bancsabadell.com/bitbucket/scm/p4des/front-core.git",
+				"directory": "src/utils/tag-manager-driver"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"@proteo/internal-scripts": "1.0.0-next.8",
+				"@proteo/jest-config": "1.0.0-next.8",
+				"@proteo/rollup-config": "1.0.0-next.8",
+				"@proteo/tsconfig": "1.0.0-next.8",
+				"@proteo/types": "1.0.0-next.8",
+				"@types/jest": "^27.0.0",
+				"copyfiles": "^2.0.0",
+				"cross-env": "^7.0.0",
+				"jest": "^27.0.0",
+				"rimraf": "^3.0.0",
+				"rollup": "^2.0.0",
+				"ts-jest": "^27.0.0",
+				"typescript": "4.6.3"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test",
+				"!coverage",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"bootstrap": "yarn build",
+				"build": "npm run build:dev && npm run build:pro",
+				"build:watch": "yarn rollup-config-checker && npm run copy:dts && yarn rollup -c --watch",
+				"build:pro": "yarn rollup-config-checker && npm run copy:dts && yarn rollup -c",
+				"build:dev": "yarn tsc --build",
+				"build:dev:watch": "yarn tsc --build --watch",
+				"clean": "yarn rimraf ./*.{js,js.map,ts,d.ts,d.ts.map} types/ test/ coverage/ development/ *.tsbuildinfo",
+				"copy:dts": "yarn copyfiles -u 1 -e test './development/**/*.d.ts*' .",
+				"test": "yarn node --experimental-vm-modules $(yarn bin jest) --coverage --runInBand --passWithNoTests",
+				"test:watch": "yarn node --experimental-vm-modules $(yarn bin jest) --watchAll --coverage"
+			},
+			"publishConfig": {
+				"registry": "http://172.22.193.80:16428/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1673447508694,
+			"_id": "@proteo/tag-manager-driver@1.0.0-next.8",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.0-next.8.tgz",
+				"shasum": "0745ba53b9dfa2bd6f55b4404579162282817b2f"
+			},
+			"typings": "index.d.ts",
+			"exports": {
+				".": {
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"packageManager": "yarn@3.1.1",
+			"type": "module",
+			"contributors": []
+		},
+		"1.0.0-rc.0": {
+			"name": "@proteo/tag-manager-driver",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.0-rc.0",
+			"repository": {
+				"type": "git",
+				"url": "http://repos.bancsabadell.com/bitbucket/scm/p4des/front-core.git",
+				"directory": "src/utils/tag-manager-driver"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"@proteo/esbuild-config": "workspace:^",
+				"@proteo/jest-config": "workspace:^",
+				"@proteo/rollup-config": "workspace:^",
+				"@proteo/tsconfig": "workspace:^",
+				"@proteo/types": "workspace:^",
+				"@types/jest": "^28.0.0",
+				"cross-env": "^7.0.0",
+				"jest": "^28.0.0",
+				"jest-environment-jsdom": "^28.0.0",
+				"rimraf": "^3.0.0",
+				"ts-jest": "^28.0.0",
+				"typescript": "4.6.3",
+				"wireit": "^0.7.1"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test",
+				"!coverage",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "wireit",
+				"build:bundle": "wireit",
+				"build:ts": "wireit",
+				"format": "wireit",
+				"format:eslint": "wireit",
+				"format:prettier": "wireit",
+				"lint": "wireit",
+				"lint:eslint": "wireit",
+				"lint:prettier": "wireit",
+				"clean": "wireit",
+				"test": "wireit",
+				"test:debug": "yarn node --experimental-vm-modules $(yarn bin jest)"
+			},
+			"publishConfig": {
+				"registry": "http://172.22.193.80:16428/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1673447509863,
+			"_id": "@proteo/tag-manager-driver@1.0.0-rc.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.0-rc.0.tgz",
+				"shasum": "32c71d214926be5339871a6cd1f3435117814783"
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"wireit": {
+				"build": {
+					"dependencies": [
+						"build:ts",
+						"build:bundle"
+					]
+				},
+				"build:bundle": {
+					"command": "proteo-esbuild",
+					"dependencies": [
+						"build:ts"
+					],
+					"files": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"esbuild.config.js"
+					],
+					"output": [
+						"index.js",
+						"index.js.map"
+					],
+					"packageLocks": [
+						"yarn.lock"
+					]
+				},
+				"build:ts": {
+					"command": "tsc --build --pretty",
+					"clean": "if-file-deleted",
+					"files": [
+						"src/**/*.ts",
+						"tsconfig.json"
+					],
+					"output": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"tsconfig.tsbuildinfo"
+					],
+					"dependencies": [
+						"../../types:build"
+					]
+				},
+				"format": {
+					"dependencies": [
+						"format:eslint",
+						"format:prettier"
+					]
+				},
+				"format:eslint": {
+					"command": "npm run lint:eslint -- --fix"
+				},
+				"format:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"lint": {
+					"dependencies": [
+						"lint:eslint",
+						"lint:prettier"
+					]
+				},
+				"lint:eslint": {
+					"command": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": [
+						".eslintcache"
+					]
+				},
+				"lint:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"clean": {
+					"command": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo .wireit/"
+				},
+				"test": {
+					"command": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --runInBand --passWithNoTests"
+				}
+			},
+			"contributors": []
+		},
+		"1.0.0-next.7": {
+			"name": "@proteo/tag-manager-driver",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.0-next.7",
+			"repository": {
+				"type": "git",
+				"url": "http://repos.bancsabadell.com/bitbucket/scm/p4des/front-core.git",
+				"directory": "src/utils/tag-manager-driver"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"@proteo/internal-scripts": "1.0.0-next.7",
+				"@proteo/jest-config": "1.0.0-next.7",
+				"@proteo/rollup-config": "1.0.0-next.7",
+				"@proteo/tsconfig": "1.0.0-next.7",
+				"@proteo/types": "1.0.0-next.7",
+				"@types/jest": "^27.0.0",
+				"copyfiles": "^2.0.0",
+				"cross-env": "^7.0.0",
+				"jest": "^27.0.0",
+				"rimraf": "^3.0.0",
+				"rollup": "^2.0.0",
+				"ts-jest": "^27.0.0",
+				"typescript": "4.6.3"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test",
+				"!coverage",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"bootstrap": "yarn build",
+				"build": "npm run build:dev && npm run build:pro",
+				"build:watch": "yarn rollup-config-checker && npm run copy:dts && yarn rollup -c --watch",
+				"build:pro": "yarn rollup-config-checker && npm run copy:dts && yarn rollup -c",
+				"build:dev": "yarn tsc --build",
+				"build:dev:watch": "yarn tsc --build --watch",
+				"clean": "yarn rimraf ./*.{js,js.map,ts,d.ts,d.ts.map} types/ test/ coverage/ development/ *.tsbuildinfo",
+				"copy:dts": "yarn copyfiles -u 1 -e test './development/**/*.d.ts*' .",
+				"test": "yarn node --experimental-vm-modules $(yarn bin jest) --coverage --runInBand --passWithNoTests",
+				"test:watch": "yarn node --experimental-vm-modules $(yarn bin jest) --watchAll --coverage"
+			},
+			"publishConfig": {
+				"registry": "http://172.22.193.80:16428/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1673447508171,
+			"_id": "@proteo/tag-manager-driver@1.0.0-next.7",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.0-next.7.tgz",
+				"shasum": "085a80bbd90b4c4a28d62c3467e6ec7144be4732"
+			},
+			"typings": "index.d.ts",
+			"exports": {
+				".": {
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"packageManager": "yarn@3.1.1",
+			"type": "module",
+			"contributors": []
+		},
+		"1.0.0-rc.2": {
+			"name": "@proteo/tag-manager-driver",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.0-rc.2",
+			"repository": {
+				"type": "git",
+				"url": "http://repos.bancsabadell.com/bitbucket/scm/p4des/front-core.git",
+				"directory": "src/utils/tag-manager-driver"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"@proteo/esbuild-config": "^1.0.0-rc.2",
+				"@proteo/jest-config": "^1.0.0-rc.1",
+				"@proteo/rollup-config": "^1.0.0-rc.1",
+				"@proteo/tsconfig": "^1.0.0-rc.1",
+				"@proteo/types": "^1.0.0-rc.5",
+				"@types/jest": "^29.0.3",
+				"cross-env": "^7.0.3",
+				"jest": "^29.0.3",
+				"jest-environment-jsdom": "^29.0.3",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.0.1",
+				"typescript": "4.8.3",
+				"wireit": "^0.7.1"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"!.wireit/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "wireit",
+				"build:bundle": "wireit",
+				"build:ts": "wireit",
+				"format": "wireit",
+				"format:eslint": "wireit",
+				"format:prettier": "wireit",
+				"lint": "wireit",
+				"lint:eslint": "wireit",
+				"lint:prettier": "wireit",
+				"clean": "wireit",
+				"test": "wireit",
+				"test:debug": "yarn node --experimental-vm-modules $(yarn bin jest)"
+			},
+			"publishConfig": {
+				"registry": "http://172.22.193.80:16428/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1673447511029,
+			"_id": "@proteo/tag-manager-driver@1.0.0-rc.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.0-rc.2.tgz",
+				"shasum": "9e22297fd7968fbe910634b3da704a43aadcdbe0"
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"wireit": {
+				"build": {
+					"dependencies": [
+						"build:ts",
+						"build:bundle"
+					]
+				},
+				"build:bundle": {
+					"command": "proteo-esbuild",
+					"dependencies": [
+						"build:ts"
+					],
+					"files": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"esbuild.config.js"
+					],
+					"output": [
+						"index.js",
+						"index.js.map"
+					],
+					"packageLocks": [
+						"yarn.lock"
+					]
+				},
+				"build:ts": {
+					"command": "tsc --build --pretty",
+					"clean": "if-file-deleted",
+					"files": [
+						"src/**/*.ts",
+						"tsconfig.json"
+					],
+					"output": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"tsconfig.tsbuildinfo"
+					],
+					"dependencies": [
+						"../../types:build"
+					]
+				},
+				"format": {
+					"dependencies": [
+						"format:eslint",
+						"format:prettier"
+					]
+				},
+				"format:eslint": {
+					"command": "npm run lint:eslint -- --fix"
+				},
+				"format:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"lint": {
+					"dependencies": [
+						"lint:eslint",
+						"lint:prettier"
+					]
+				},
+				"lint:eslint": {
+					"command": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": [
+						".eslintcache"
+					]
+				},
+				"lint:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"clean": {
+					"command": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo .wireit/"
+				},
+				"test": {
+					"command": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --runInBand --passWithNoTests"
+				}
+			},
+			"contributors": []
+		},
+		"1.0.0-next.6": {
+			"name": "@proteo/tag-manager-driver",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.0-next.6",
+			"repository": {
+				"type": "git",
+				"url": "http://repos.bancsabadell.com/bitbucket/scm/p4des/front-core.git",
+				"directory": "src/utils/tag-manager-driver"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"@proteo/internal-scripts": "workspace:^",
+				"@proteo/jest-config": "workspace:^",
+				"@proteo/rollup-config": "workspace:^",
+				"@proteo/tsconfig": "workspace:^",
+				"@proteo/types": "workspace:^",
+				"@types/jest": "^27.0.0",
+				"copyfiles": "^2.0.0",
+				"cross-env": "^7.0.0",
+				"jest": "^27.0.0",
+				"rimraf": "^3.0.0",
+				"rollup": "^2.0.0",
+				"ts-jest": "^27.0.0",
+				"typescript": "4.6.3"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"bootstrap": "yarn build",
+				"build": "npm run build:dev && npm run build:pro",
+				"build:watch": "yarn rollup-config-checker && npm run copy:dts && yarn rollup -c --watch",
+				"build:pro": "yarn rollup-config-checker && npm run copy:dts && yarn rollup -c",
+				"build:dev": "yarn tsc --build",
+				"build:dev:watch": "yarn tsc --build --watch",
+				"clean": "yarn rimraf ./*.{js,js.map,ts,d.ts,d.ts.map} types/ test/ coverage/ development/ *.tsbuildinfo",
+				"copy:dts": "yarn copyfiles -u 1 -e test './development/**/*.d.ts*' .",
+				"test": "yarn node --experimental-vm-modules $(yarn bin jest) --coverage --runInBand --passWithNoTests",
+				"test:watch": "yarn node --experimental-vm-modules $(yarn bin jest) --watchAll --coverage"
+			},
+			"publishConfig": {
+				"registry": "http://172.22.193.80:16428/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1673447507575,
+			"_id": "@proteo/tag-manager-driver@1.0.0-next.6",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.0-next.6.tgz",
+				"shasum": "5013730348f45e316d119f728e77e16676ed2c82"
+			},
+			"typings": "index.d.ts",
+			"exports": {
+				".": {
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"packageManager": "yarn@3.1.1",
+			"type": "module",
+			"contributors": []
+		},
+		"1.0.0-next.5": {
+			"name": "@proteo/tag-manager-driver",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.0-next.5",
+			"repository": {
+				"type": "git",
+				"url": "http://repos.bancsabadell.com/bitbucket/scm/p4des/front-core.git",
+				"directory": "src/utils/tag-manager-driver"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"@proteo/internal-scripts": "workspace:^",
+				"@proteo/jest-config": "workspace:^",
+				"@proteo/rollup-config": "workspace:^",
+				"@proteo/tsconfig": "workspace:^",
+				"@proteo/types": "workspace:^",
+				"@types/jest": "^27.0.0",
+				"copyfiles": "^2.0.0",
+				"cross-env": "^7.0.0",
+				"jest": "^27.0.0",
+				"rimraf": "^3.0.0",
+				"rollup": "^2.0.0",
+				"ts-jest": "^27.0.0",
+				"typescript": "4.6.3"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"bootstrap": "yarn build",
+				"build": "npm run build:dev && npm run build:pro",
+				"build:watch": "yarn rollup-config-checker && npm run copy:dts && yarn rollup -c --watch",
+				"build:pro": "yarn rollup-config-checker && npm run copy:dts && yarn rollup -c",
+				"build:dev": "yarn tsc --build",
+				"build:dev:watch": "yarn tsc --build --watch",
+				"clean": "yarn rimraf ./*.{js,js.map,ts,d.ts,d.ts.map} types/ test/ coverage/ development/ *.tsbuildinfo",
+				"copy:dts": "yarn copyfiles -u 1 -e test './development/**/*.d.ts*' .",
+				"test": "yarn node --experimental-vm-modules $(yarn bin jest) --coverage --runInBand --passWithNoTests",
+				"test:watch": "yarn node --experimental-vm-modules $(yarn bin jest) --watchAll --coverage"
+			},
+			"publishConfig": {
+				"registry": "http://172.22.193.80:16428/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1673447506786,
+			"_id": "@proteo/tag-manager-driver@1.0.0-next.5",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.0-next.5.tgz",
+				"shasum": "e816f2e37491ded12182e4b5a0b4380b12a1acab"
+			},
+			"typings": "index.d.ts",
+			"exports": {
+				".": {
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"packageManager": "yarn@3.1.1",
+			"type": "module",
+			"contributors": []
+		},
+		"1.0.0-rc.1": {
+			"name": "@proteo/tag-manager-driver",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.0-rc.1",
+			"repository": {
+				"type": "git",
+				"url": "http://repos.bancsabadell.com/bitbucket/scm/p4des/front-core.git",
+				"directory": "src/utils/tag-manager-driver"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"@proteo/esbuild-config": "^1.0.0-rc.1",
+				"@proteo/jest-config": "^1.0.0-rc.1",
+				"@proteo/rollup-config": "^1.0.0-rc.1",
+				"@proteo/tsconfig": "^1.0.0-rc.1",
+				"@proteo/types": "^1.0.0-rc.1",
+				"@types/jest": "^29.0.3",
+				"cross-env": "^7.0.3",
+				"jest": "^29.0.3",
+				"jest-environment-jsdom": "^29.0.3",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.0.1",
+				"typescript": "4.8.3",
+				"wireit": "^0.7.1"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"!.wireit/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "wireit",
+				"build:bundle": "wireit",
+				"build:ts": "wireit",
+				"format": "wireit",
+				"format:eslint": "wireit",
+				"format:prettier": "wireit",
+				"lint": "wireit",
+				"lint:eslint": "wireit",
+				"lint:prettier": "wireit",
+				"clean": "wireit",
+				"test": "wireit",
+				"test:debug": "yarn node --experimental-vm-modules $(yarn bin jest)"
+			},
+			"publishConfig": {
+				"registry": "http://172.22.193.80:16428/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1673447510407,
+			"_id": "@proteo/tag-manager-driver@1.0.0-rc.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.0-rc.1.tgz",
+				"shasum": "ef715557215b80ea58d2742bbdcf7fce784c9635"
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"wireit": {
+				"build": {
+					"dependencies": [
+						"build:ts",
+						"build:bundle"
+					]
+				},
+				"build:bundle": {
+					"command": "proteo-esbuild",
+					"dependencies": [
+						"build:ts"
+					],
+					"files": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"esbuild.config.js"
+					],
+					"output": [
+						"index.js",
+						"index.js.map"
+					],
+					"packageLocks": [
+						"yarn.lock"
+					]
+				},
+				"build:ts": {
+					"command": "tsc --build --pretty",
+					"clean": "if-file-deleted",
+					"files": [
+						"src/**/*.ts",
+						"tsconfig.json"
+					],
+					"output": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"tsconfig.tsbuildinfo"
+					],
+					"dependencies": [
+						"../../types:build"
+					]
+				},
+				"format": {
+					"dependencies": [
+						"format:eslint",
+						"format:prettier"
+					]
+				},
+				"format:eslint": {
+					"command": "npm run lint:eslint -- --fix"
+				},
+				"format:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"lint": {
+					"dependencies": [
+						"lint:eslint",
+						"lint:prettier"
+					]
+				},
+				"lint:eslint": {
+					"command": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": [
+						".eslintcache"
+					]
+				},
+				"lint:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"clean": {
+					"command": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo .wireit/"
+				},
+				"test": {
+					"command": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --runInBand --passWithNoTests"
+				}
+			},
+			"contributors": []
+		},
+		"1.0.0-rc.4": {
+			"name": "@proteo/tag-manager-driver",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.0-rc.4",
+			"repository": {
+				"type": "git",
+				"url": "http://repos.bancsabadell.com/bitbucket/scm/p4des/front-core.git",
+				"directory": "src/utils/tag-manager-driver"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"@proteo/esbuild-config": "1.0.0-rc.3",
+				"@proteo/jest-config": "1.0.0-rc.2",
+				"@proteo/rollup-config": "1.0.0-rc.2",
+				"@proteo/tsconfig": "1.0.0-rc.4",
+				"@proteo/types": "1.0.0-rc.7",
+				"@types/jest": "^29.0.3",
+				"cross-env": "^7.0.3",
+				"jest": "^29.0.3",
+				"jest-environment-jsdom": "^29.0.3",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.0.1",
+				"typescript": "^4.8.3",
+				"wireit": "^0.7.1"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"!.wireit/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "wireit",
+				"build:bundle": "wireit",
+				"build:ts": "wireit",
+				"format": "wireit",
+				"format:eslint": "wireit",
+				"format:prettier": "wireit",
+				"lint": "wireit",
+				"lint:eslint": "wireit",
+				"lint:prettier": "wireit",
+				"clean": "wireit",
+				"test": "wireit",
+				"test:debug": "yarn node --experimental-vm-modules $(yarn bin jest)"
+			},
+			"publishConfig": {
+				"registry": "http://172.22.193.80:16428/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1673447512215,
+			"_id": "@proteo/tag-manager-driver@1.0.0-rc.4",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.0-rc.4.tgz",
+				"shasum": "b7c05ce6e5ef2604131b098dc07e5d77f5ac727e"
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"wireit": {
+				"build": {
+					"dependencies": [
+						"build:ts",
+						"build:bundle"
+					]
+				},
+				"build:bundle": {
+					"command": "proteo-esbuild",
+					"dependencies": [
+						"build:ts"
+					],
+					"files": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"esbuild.config.js"
+					],
+					"output": [
+						"index.js",
+						"index.js.map"
+					],
+					"packageLocks": [
+						"yarn.lock"
+					]
+				},
+				"build:ts": {
+					"command": "tsc --build --pretty",
+					"clean": "if-file-deleted",
+					"files": [
+						"src/**/*.ts",
+						"tsconfig.json"
+					],
+					"output": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"tsconfig.tsbuildinfo"
+					],
+					"dependencies": [
+						"../../types:build"
+					]
+				},
+				"format": {
+					"dependencies": [
+						"format:eslint",
+						"format:prettier"
+					]
+				},
+				"format:eslint": {
+					"command": "npm run lint:eslint -- --fix"
+				},
+				"format:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"lint": {
+					"dependencies": [
+						"lint:eslint",
+						"lint:prettier"
+					]
+				},
+				"lint:eslint": {
+					"command": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": [
+						".eslintcache"
+					]
+				},
+				"lint:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"clean": {
+					"command": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo .wireit/"
+				},
+				"test": {
+					"command": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --runInBand --passWithNoTests"
+				}
+			},
+			"contributors": []
+		},
+		"1.0.0-next.4": {
+			"name": "@proteo/tag-manager-driver",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.0-next.4",
+			"repository": {
+				"type": "git",
+				"url": "http://repos.bancsabadell.com/bitbucket/scm/p4des/front-core.git",
+				"directory": "src/utils/tag-manager-driver"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"@proteo/internal-scripts": "workspace:^",
+				"@proteo/jest-config": "workspace:^",
+				"@proteo/rollup-config": "workspace:^",
+				"@proteo/tsconfig": "workspace:^",
+				"@proteo/types": "workspace:^",
+				"@types/jest": "^27.0.0",
+				"copyfiles": "^2.0.0",
+				"cross-env": "^7.0.0",
+				"jest": "^27.0.0",
+				"rimraf": "^3.0.0",
+				"rollup": "^2.0.0",
+				"ts-jest": "^27.0.0",
+				"typescript": "4.6.3"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"bootstrap": "yarn build",
+				"build": "npm run build:dev && npm run build:pro",
+				"build:watch": "yarn rollup-config-checker && npm run copy:dts && yarn rollup -c --watch",
+				"build:pro": "yarn rollup-config-checker && npm run copy:dts && yarn rollup -c",
+				"build:dev": "yarn tsc --build",
+				"build:dev:watch": "yarn tsc --build --watch",
+				"clean": "yarn rimraf ./*.{js,js.map,ts,d.ts,d.ts.map} types/ test/ coverage/ development/ *.tsbuildinfo",
+				"copy:dts": "yarn copyfiles -u 1 -e test './development/**/*.d.ts*' .",
+				"test": "yarn node --experimental-vm-modules $(yarn bin jest) --coverage --runInBand --passWithNoTests",
+				"test:watch": "yarn node --experimental-vm-modules $(yarn bin jest) --watchAll --coverage"
+			},
+			"publishConfig": {
+				"registry": "http://172.22.193.80:16428/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1673447506238,
+			"_id": "@proteo/tag-manager-driver@1.0.0-next.4",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.0-next.4.tgz",
+				"shasum": "52c23c714e0f68a3ec9a03012319496b41d74689"
+			},
+			"typings": "index.d.ts",
+			"exports": {
+				".": {
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"packageManager": "yarn@3.1.1",
+			"type": "module",
+			"contributors": []
+		},
+		"1.0.0-next.3": {
+			"name": "@proteo/tag-manager-driver",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.0-next.3",
+			"repository": {
+				"type": "git",
+				"url": "http://repos.bancsabadell.com/bitbucket/scm/p4des/front-core.git",
+				"directory": "src/utils/tag-manager-driver"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"@proteo/internal-scripts": "1.0.0-next.3",
+				"@proteo/jest-config": "1.0.0-next.3",
+				"@proteo/rollup-config": "1.0.0-next.3",
+				"@proteo/tsconfig": "1.0.0-next.3",
+				"@proteo/types": "1.0.0-next.3",
+				"@types/jest": "^27.0.0",
+				"copyfiles": "^2.0.0",
+				"cross-env": "^7.0.0",
+				"jest": "^27.0.0",
+				"rimraf": "^3.0.0",
+				"rollup": "^2.0.0",
+				"ts-jest": "^27.0.0",
+				"typescript": "4.6.3"
+			},
+			"files": [
+				"*.{d.ts,d.ts.map,js,js.map}",
+				"!test",
+				"development",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"bootstrap": "yarn build",
+				"build": "npm run build:dev && npm run build:pro",
+				"build:watch": "yarn rollup-config-checker && npm run copy:dts && yarn rollup -c --watch",
+				"build:pro": "yarn rollup-config-checker && npm run copy:dts && yarn rollup -c",
+				"build:dev": "yarn tsc --build",
+				"build:dev:watch": "yarn tsc --build --watch",
+				"clean": "yarn rimraf ./*.{js,js.map,ts,d.ts,d.ts.map} types/ test/ coverage/ development/ *.tsbuildinfo",
+				"copy:dts": "yarn copyfiles -u 1 -e test './development/**/*.d.ts*' .",
+				"test": "yarn node --experimental-vm-modules $(yarn bin jest) --coverage --runInBand --passWithNoTests",
+				"test:watch": "yarn node --experimental-vm-modules $(yarn bin jest) --watchAll --coverage"
+			},
+			"publishConfig": {
+				"registry": "http://172.22.193.80:16428/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1673447505629,
+			"_id": "@proteo/tag-manager-driver@1.0.0-next.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.0-next.3.tgz",
+				"shasum": "7048b061ebbb7ea970ae12bdcc2cc56bb915556b"
+			},
+			"typings": "index.d.ts",
+			"exports": {
+				".": {
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"packageManager": "yarn@3.1.1",
+			"type": "module",
+			"contributors": []
+		},
+		"1.0.0-rc.3": {
+			"name": "@proteo/tag-manager-driver",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.0-rc.3",
+			"repository": {
+				"type": "git",
+				"url": "http://repos.bancsabadell.com/bitbucket/scm/p4des/front-core.git",
+				"directory": "src/utils/tag-manager-driver"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"@proteo/esbuild-config": "1.0.0-rc.3",
+				"@proteo/jest-config": "1.0.0-rc.2",
+				"@proteo/rollup-config": "1.0.0-rc.2",
+				"@proteo/tsconfig": "1.0.0-rc.3",
+				"@proteo/types": "1.0.0-rc.6",
+				"@types/jest": "^29.0.3",
+				"cross-env": "^7.0.3",
+				"jest": "^29.0.3",
+				"jest-environment-jsdom": "^29.0.3",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.0.1",
+				"typescript": "^4.8.3",
+				"wireit": "^0.7.1"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"!.wireit/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "wireit",
+				"build:bundle": "wireit",
+				"build:ts": "wireit",
+				"format": "wireit",
+				"format:eslint": "wireit",
+				"format:prettier": "wireit",
+				"lint": "wireit",
+				"lint:eslint": "wireit",
+				"lint:prettier": "wireit",
+				"clean": "wireit",
+				"test": "wireit",
+				"test:debug": "yarn node --experimental-vm-modules $(yarn bin jest)"
+			},
+			"publishConfig": {
+				"registry": "http://172.22.193.80:16428/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1673447511586,
+			"_id": "@proteo/tag-manager-driver@1.0.0-rc.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.0-rc.3.tgz",
+				"shasum": "0455d5a5070421026a68baca8c74f3806bdb8d73"
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"wireit": {
+				"build": {
+					"dependencies": [
+						"build:ts",
+						"build:bundle"
+					]
+				},
+				"build:bundle": {
+					"command": "proteo-esbuild",
+					"dependencies": [
+						"build:ts"
+					],
+					"files": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"esbuild.config.js"
+					],
+					"output": [
+						"index.js",
+						"index.js.map"
+					],
+					"packageLocks": [
+						"yarn.lock"
+					]
+				},
+				"build:ts": {
+					"command": "tsc --build --pretty",
+					"clean": "if-file-deleted",
+					"files": [
+						"src/**/*.ts",
+						"tsconfig.json"
+					],
+					"output": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"tsconfig.tsbuildinfo"
+					],
+					"dependencies": [
+						"../../types:build"
+					]
+				},
+				"format": {
+					"dependencies": [
+						"format:eslint",
+						"format:prettier"
+					]
+				},
+				"format:eslint": {
+					"command": "npm run lint:eslint -- --fix"
+				},
+				"format:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"lint": {
+					"dependencies": [
+						"lint:eslint",
+						"lint:prettier"
+					]
+				},
+				"lint:eslint": {
+					"command": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": [
+						".eslintcache"
+					]
+				},
+				"lint:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"clean": {
+					"command": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo .wireit/"
+				},
+				"test": {
+					"command": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --runInBand --passWithNoTests"
+				}
+			},
+			"contributors": []
+		},
+		"1.0.5-SNAPSHOT-83": {
+			"name": "@proteo/tag-manager-driver",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.5-SNAPSHOT-83",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/tag-manager-driver"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/jest-config": "1.0.2-SNAPSHOT-83",
+				"@proteo/rollup-config": "1.1.0",
+				"@proteo/types": "1.1.88-SNAPSHOT-83",
+				"@proteo/tsconfig": "1.1.2-SNAPSHOT-83"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rollup -c rollup.config.mjs",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1780388804795,
+			"_id": "@proteo/tag-manager-driver@1.0.5-SNAPSHOT-83",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.5-SNAPSHOT-83.tgz",
+				"shasum": "a30d505a432c14406250bc5fd6a1c6a1d94906df",
+				"integrity": "sha512-WvaMjzePH3ZSe1tuoaQ3rp5qhR8A/4fme4WbDS/wVDP2+jzzZ5bbqRAM0Jq3OgvuHyP8zpfOLwGHneCVYxKreA=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"1.0.5-SNAPSHOT-84": {
+			"name": "@proteo/tag-manager-driver",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.5-SNAPSHOT-84",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/tag-manager-driver"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/rollup-config": "1.1.0",
+				"@proteo/jest-config": "1.0.2-SNAPSHOT-84",
+				"@proteo/tsconfig": "1.1.2-SNAPSHOT-84",
+				"@proteo/types": "1.1.88-SNAPSHOT-84"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rollup -c rollup.config.mjs",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1780401191489,
+			"_id": "@proteo/tag-manager-driver@1.0.5-SNAPSHOT-84",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.5-SNAPSHOT-84.tgz",
+				"shasum": "110460e530119f927e844a096303ca3b7383b270",
+				"integrity": "sha512-lBI6n1yZYaVP4YydAyG3ju9nR0PCkYhIUStU0N9xWAwcWg+RHufLueiAYnVrLtMxCMj5fcvLO+ta+6p6JMznjw=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"1.0.5-SNAPSHOT-85": {
+			"name": "@proteo/tag-manager-driver",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.5-SNAPSHOT-85",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/tag-manager-driver"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/jest-config": "1.0.2-SNAPSHOT-85",
+				"@proteo/rollup-config": "1.1.0",
+				"@proteo/tsconfig": "1.1.2-SNAPSHOT-85",
+				"@proteo/types": "1.1.88-SNAPSHOT-85"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rollup -c rollup.config.mjs",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1780418613111,
+			"_id": "@proteo/tag-manager-driver@1.0.5-SNAPSHOT-85",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.5-SNAPSHOT-85.tgz",
+				"shasum": "8cde3ae585b6510c12c81e7b44d7d1dcff5cc3dc",
+				"integrity": "sha512-O/q3MuBlr3ot27Ng2mRZ7YCAlgshl0LKWjHJNVjncVE+aKuw+9XsC21hQYfiGjzkzjsPHNvXB0+ipYMg5PdDwg=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"0.0.0": {
+			"name": "@proteo/tag-manager-driver",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "0.0.0",
+			"repository": {
+				"type": "git",
+				"url": "http://repos.bancsabadell.com/bitbucket/scm/p4des/front-core.git",
+				"directory": "src/utils/tag-manager-driver"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"@proteo/esbuild-config": "workspace:^",
+				"@proteo/jest-config": "workspace:^",
+				"@proteo/rollup-config": "workspace:^",
+				"@proteo/tsconfig": "workspace:^",
+				"@proteo/types": "workspace:^",
+				"@types/jest": "^28.0.0",
+				"cross-env": "^7.0.0",
+				"jest": "^28.0.0",
+				"jest-environment-jsdom": "^28.0.0",
+				"rimraf": "^3.0.0",
+				"ts-jest": "^28.0.0",
+				"typescript": "4.6.3",
+				"wireit": "^0.7.1"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test",
+				"!coverage",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "wireit",
+				"build:bundle": "wireit",
+				"build:ts": "wireit",
+				"format": "wireit",
+				"format:eslint": "wireit",
+				"format:prettier": "wireit",
+				"lint": "wireit",
+				"lint:eslint": "wireit",
+				"lint:prettier": "wireit",
+				"clean": "wireit",
+				"test": "wireit",
+				"test:debug": "yarn node --experimental-vm-modules $(yarn bin jest)"
+			},
+			"publishConfig": {
+				"registry": "http://172.22.193.80:16428/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1673447500312,
+			"_id": "@proteo/tag-manager-driver@0.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-0.0.0.tgz",
+				"shasum": "5231fd307f0907fa5f35f1fb27ecd0217215dad7"
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"wireit": {
+				"build": {
+					"dependencies": [
+						"build:ts",
+						"build:bundle"
+					]
+				},
+				"build:bundle": {
+					"command": "proteo-esbuild",
+					"dependencies": [
+						"build:ts"
+					],
+					"files": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"esbuild.config.js"
+					],
+					"output": [
+						"index.js",
+						"index.js.map"
+					],
+					"packageLocks": [
+						"yarn.lock"
+					]
+				},
+				"build:ts": {
+					"command": "tsc --build --pretty",
+					"clean": "if-file-deleted",
+					"files": [
+						"src/**/*.ts",
+						"tsconfig.json"
+					],
+					"output": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"tsconfig.tsbuildinfo"
+					],
+					"dependencies": [
+						"../../types:build"
+					]
+				},
+				"format": {
+					"dependencies": [
+						"format:eslint",
+						"format:prettier"
+					]
+				},
+				"format:eslint": {
+					"command": "npm run lint:eslint -- --fix"
+				},
+				"format:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"lint": {
+					"dependencies": [
+						"lint:eslint",
+						"lint:prettier"
+					]
+				},
+				"lint:eslint": {
+					"command": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": [
+						".eslintcache"
+					]
+				},
+				"lint:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"clean": {
+					"command": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo .wireit/"
+				},
+				"test": {
+					"command": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --runInBand --passWithNoTests"
+				}
+			},
+			"contributors": []
+		},
+		"1.1.0-dev-2": {
+			"name": "@proteo/tag-manager-driver",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.1.0-dev-2",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-atlas.git",
+				"directory": "src/utils/tag-manager-driver"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^5.0.5",
+				"ts-jest": "^29.1.5",
+				"typescript": "5.4.5",
+				"@proteo/esbuild-config": "1.1.0-dev-2",
+				"@proteo/rollup-config": "1.1.0-dev-2",
+				"@proteo/types": "1.2.0-dev-2",
+				"@proteo/tsconfig": "1.2.0-dev-2",
+				"@proteo/jest-config": "1.1.0-dev-2"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "pnpm exec rollup -c ./rollup.config.mjs",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"package": "pnpm run package:pack && pnpm run package:move",
+				"package:pack": "npm pack",
+				"package:move": "shx mkdir -p ../../../../dist && shx mv *.tgz ../../../../dist/",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo ",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules --inspect node_modules/jest/bin/jest.js"
+			},
+			"lastModified": 1779294594618,
+			"_id": "@proteo/tag-manager-driver@1.1.0-dev-2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.1.0-dev-2.tgz",
+				"shasum": "b732c9ca02ce946b9219744706c406ca6dd042c0",
+				"integrity": "sha512-E23xU6UQFVIHvdF2cvXLrB+zHkxJLSv+3ftjX/1tvxJMC6Ho6QmMENJ4WzNAQpC4zVgTBnhuakmprV9zUE1zTg=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"1.1.0-dev-1": {
+			"name": "@proteo/tag-manager-driver",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.1.0-dev-1",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/tag-manager-driver"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^5.0.5",
+				"ts-jest": "^29.1.5",
+				"typescript": "5.4.5",
+				"@proteo/esbuild-config": "1.1.0-dev-1",
+				"@proteo/tsconfig": "1.2.0-dev-1",
+				"@proteo/jest-config": "1.1.0-dev-1",
+				"@proteo/rollup-config": "1.1.0-dev-1",
+				"@proteo/types": "1.2.0-dev-1"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "pnpm exec rollup -c ./rollup.config.mjs",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"package": "pnpm run package:pack && pnpm run package:move",
+				"package:pack": "npm pack",
+				"package:move": "shx mkdir -p ../../../../dist && shx mv *.tgz ../../../../dist/",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo ",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules --inspect node_modules/jest/bin/jest.js"
+			},
+			"lastModified": 1779289792246,
+			"_id": "@proteo/tag-manager-driver@1.1.0-dev-1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.1.0-dev-1.tgz",
+				"shasum": "4e22b923afb003b9eb4bc2d54045fcdde99666dd",
+				"integrity": "sha512-HGGO7NBPFLJ2WkLygNsLVQ0h3RXfrvEBoSU2IAz0tWN5B9nVNa1hc7gzZQTyMXEQqI40GUCXIJX1t4kBODeeBw=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"0.0.0-SNAPSHOT-20250902100438": {
+			"name": "@proteo/tag-manager-driver",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "0.0.0-SNAPSHOT-20250902100438",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/tag-manager-driver"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"@proteo/esbuild-config": "^1.0.2",
+				"@proteo/jest-config": "^1.0.2",
+				"@proteo/rollup-config": "^1.0.1",
+				"@proteo/tsconfig": "0.0.0-SNAPSHOT-20250902100438",
+				"@proteo/types": "0.0.0-SNAPSHOT-20250902100438",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"wireit": "^0.14.4"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"!.wireit/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "wireit",
+				"build:bundle": "wireit",
+				"build:ts": "wireit",
+				"link:dev": "npm link",
+				"format": "wireit",
+				"format:eslint": "wireit",
+				"format:prettier": "wireit",
+				"lint": "wireit",
+				"lint:eslint": "wireit",
+				"lint:prettier": "wireit",
+				"clean": "wireit",
+				"test": "wireit",
+				"test:full": "wireit",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1756809264829,
+			"_id": "@proteo/tag-manager-driver@0.0.0-SNAPSHOT-20250902100438",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-0.0.0-SNAPSHOT-20250902100438.tgz",
+				"shasum": "0d8599240eafe572a9357836a16ff21800f2c35b"
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"wireit": {
+				"build": {
+					"dependencies": [
+						"build:ts",
+						"build:bundle"
+					]
+				},
+				"build:bundle": {
+					"command": "proteo-esbuild",
+					"dependencies": [
+						"build:ts"
+					],
+					"files": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"esbuild.config.js"
+					],
+					"output": [
+						"index.js",
+						"index.js.map"
+					]
+				},
+				"build:ts": {
+					"command": "tsc --build --pretty",
+					"clean": "if-file-deleted",
+					"files": [
+						"src/**/*.ts",
+						"tsconfig.json"
+					],
+					"output": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"tsconfig.tsbuildinfo"
+					],
+					"dependencies": [
+						"../../types:build"
+					]
+				},
+				"format": {
+					"dependencies": [
+						"format:eslint",
+						"format:prettier"
+					]
+				},
+				"format:eslint": {
+					"command": "npm run lint:eslint -- --fix"
+				},
+				"format:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"lint": {
+					"dependencies": [
+						"lint:eslint",
+						"lint:prettier"
+					]
+				},
+				"lint:eslint": {
+					"command": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": [
+						".eslintcache"
+					]
+				},
+				"lint:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"clean": {
+					"command": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo .wireit/"
+				},
+				"test": {
+					"command": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent"
+				},
+				"test:full": {
+					"command": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%"
+				}
+			},
+			"contributors": []
+		},
+		"1.0.0-next.2": {
+			"name": "@proteo/tag-manager-driver",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.0-next.2",
+			"repository": {
+				"type": "git",
+				"url": "http://repos.bancsabadell.com/bitbucket/scm/p4des/front-core.git",
+				"directory": "src/utils/tag-manager-driver"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"@proteo/internal-scripts": "1.0.0-next.2",
+				"@proteo/jest-config": "1.0.0-next.2",
+				"@proteo/rollup-config": "1.0.0-next.2",
+				"@proteo/tsconfig": "1.0.0-next.2",
+				"@proteo/types": "1.0.0-next.2",
+				"@types/jest": "^27.0.0",
+				"copyfiles": "^2.0.0",
+				"cross-env": "^7.0.0",
+				"jest": "^27.0.0",
+				"rimraf": "^3.0.0",
+				"rollup": "^2.0.0",
+				"ts-jest": "^27.0.0",
+				"typescript": "4.6.3"
+			},
+			"files": [
+				"*.{d.ts,d.ts.map,js,js.map}",
+				"!test",
+				"development",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"bootstrap": "yarn build",
+				"prepublishOnly": "npm run build",
+				"build": "npm run build:dev && npm run build:pro",
+				"build:watch": "yarn rollup-config-checker && npm run copy:dts && yarn rollup -c --watch",
+				"build:pro": "yarn rollup-config-checker && npm run copy:dts && yarn rollup -c",
+				"build:dev": "yarn tsc --build",
+				"build:dev:watch": "yarn tsc --build --watch",
+				"clean": "yarn rimraf ./*.{js,js.map,ts,d.ts,d.ts.map} types/ test/ coverage/ development/ *.tsbuildinfo",
+				"copy:dts": "yarn copyfiles -u 1 -e test './development/**/*.d.ts*' .",
+				"test": "yarn node --experimental-vm-modules $(yarn bin jest) --coverage --runInBand --passWithNoTests",
+				"test:watch": "yarn node --experimental-vm-modules $(yarn bin jest) --watchAll --coverage"
+			},
+			"publishConfig": {
+				"registry": "http://172.22.193.80:16428/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1673447505061,
+			"_id": "@proteo/tag-manager-driver@1.0.0-next.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.0-next.2.tgz",
+				"shasum": "01c926a80be58c6e47909b4af37a329dd7c76e93"
+			},
+			"typings": "index.d.ts",
+			"exports": {
+				".": {
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"packageManager": "yarn@3.1.1",
+			"type": "module",
+			"contributors": []
+		},
+		"1.0.0-next.1": {
+			"name": "@proteo/tag-manager-driver",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.0-next.1",
+			"repository": {
+				"type": "git",
+				"url": "http://repos.bancsabadell.com/bitbucket/scm/p4des/front-core.git",
+				"directory": "src/utils/tag-manager-driver"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"@proteo/internal-scripts": "1.0.0-next.1",
+				"@proteo/jest-config": "1.0.0-next.1",
+				"@proteo/rollup-config": "1.0.0-next.1",
+				"@proteo/tsconfig": "1.0.0-next.1",
+				"@proteo/types": "1.0.0-next.1",
+				"@types/jest": "^27.0.0",
+				"copyfiles": "^2.0.0",
+				"cross-env": "^7.0.0",
+				"jest": "^27.0.0",
+				"rimraf": "^3.0.0",
+				"rollup": "^2.0.0",
+				"ts-jest": "^27.0.0",
+				"typescript": "4.6.3"
+			},
+			"files": [
+				"*.{d.ts,d.ts.map,js,js.map}",
+				"!test",
+				"development",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"bootstrap": "yarn build",
+				"prepublishOnly": "npm run build",
+				"build": "npm run build:dev && npm run build:pro",
+				"build:watch": "yarn rollup-config-checker && npm run copy:dts && yarn rollup -c --watch",
+				"build:pro": "yarn rollup-config-checker && npm run copy:dts && yarn rollup -c",
+				"build:dev": "yarn tsc --build",
+				"build:dev:watch": "yarn tsc --build --watch",
+				"clean": "yarn rimraf ./*.{js,js.map,ts,d.ts,d.ts.map} types/ test/ coverage/ development/ *.tsbuildinfo",
+				"copy:dts": "yarn copyfiles -u 1 -e test './development/**/*.d.ts*' .",
+				"test": "yarn node --experimental-vm-modules $(yarn bin jest) --coverage --runInBand --passWithNoTests",
+				"test:watch": "yarn node --experimental-vm-modules $(yarn bin jest) --watchAll --coverage"
+			},
+			"publishConfig": {
+				"registry": "http://172.22.193.80:16428/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1673447501589,
+			"_id": "@proteo/tag-manager-driver@1.0.0-next.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.0-next.1.tgz",
+				"shasum": "a87e2b1ff27aa4d6a375a3617c2974930689be9b"
+			},
+			"typings": "index.d.ts",
+			"exports": {
+				".": {
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"packageManager": "yarn@3.1.1",
+			"type": "module",
+			"contributors": []
+		},
+		"1.0.0-rc.5": {
+			"name": "@proteo/tag-manager-driver",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.0-rc.5",
+			"repository": {
+				"type": "git",
+				"url": "http://repos.bancsabadell.com/bitbucket/scm/p4des/front-core.git",
+				"directory": "src/utils/tag-manager-driver"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"@proteo/esbuild-config": "1.0.0-rc.4",
+				"@proteo/jest-config": "1.0.0-rc.2",
+				"@proteo/rollup-config": "1.0.0-rc.2",
+				"@proteo/tsconfig": "1.0.0-rc.4",
+				"@proteo/types": "1.0.0-rc.8",
+				"@types/jest": "^29.0.3",
+				"cross-env": "^7.0.3",
+				"jest": "^29.0.3",
+				"jest-environment-jsdom": "^29.0.3",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.0.1",
+				"typescript": "^4.8.3",
+				"wireit": "^0.8.0"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"!.wireit/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "wireit",
+				"build:bundle": "wireit",
+				"build:ts": "wireit",
+				"format": "wireit",
+				"format:eslint": "wireit",
+				"format:prettier": "wireit",
+				"lint": "wireit",
+				"lint:eslint": "wireit",
+				"lint:prettier": "wireit",
+				"clean": "wireit",
+				"test": "wireit",
+				"test:debug": "yarn node --experimental-vm-modules $(yarn bin jest)"
+			},
+			"publishConfig": {
+				"registry": "http://172.22.193.80:16428/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1673447512813,
+			"_id": "@proteo/tag-manager-driver@1.0.0-rc.5",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.0-rc.5.tgz",
+				"shasum": "5c2c39d7c14cddd9e125fb445ccc137bbcd351ab"
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"wireit": {
+				"build": {
+					"dependencies": [
+						"build:ts",
+						"build:bundle"
+					]
+				},
+				"build:bundle": {
+					"command": "proteo-esbuild",
+					"dependencies": [
+						"build:ts"
+					],
+					"files": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"esbuild.config.js"
+					],
+					"output": [
+						"index.js",
+						"index.js.map"
+					],
+					"packageLocks": [
+						"yarn.lock"
+					]
+				},
+				"build:ts": {
+					"command": "tsc --build --pretty",
+					"clean": "if-file-deleted",
+					"files": [
+						"src/**/*.ts",
+						"tsconfig.json"
+					],
+					"output": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"tsconfig.tsbuildinfo"
+					],
+					"dependencies": [
+						"../../types:build"
+					]
+				},
+				"format": {
+					"dependencies": [
+						"format:eslint",
+						"format:prettier"
+					]
+				},
+				"format:eslint": {
+					"command": "npm run lint:eslint -- --fix"
+				},
+				"format:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"lint": {
+					"dependencies": [
+						"lint:eslint",
+						"lint:prettier"
+					]
+				},
+				"lint:eslint": {
+					"command": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": [
+						".eslintcache"
+					]
+				},
+				"lint:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"clean": {
+					"command": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo .wireit/"
+				},
+				"test": {
+					"command": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --runInBand --passWithNoTests"
+				}
+			},
+			"contributors": []
+		},
+		"1.0.0-next.0": {
+			"name": "@proteo/tag-manager-driver",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.0-next.0",
+			"repository": {
+				"type": "git",
+				"url": "http://repos.bancsabadell.com/bitbucket/scm/p4des/front-core.git",
+				"directory": "src/utils/tag-manager-driver"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"@proteo/internal-scripts": "1.0.0-next.0",
+				"@proteo/jest-config": "1.0.0-next.0",
+				"@proteo/rollup-config": "1.0.0-next.0",
+				"@proteo/tsconfig": "1.0.0-next.0",
+				"@proteo/types": "1.0.0-next.0",
+				"@types/jest": "^27.0.0",
+				"@types/rsync": "^0.4.32",
+				"cross-env": "^7.0.0",
+				"jest": "^27.0.0",
+				"rimraf": "^3.0.0",
+				"rollup": "^2.0.0",
+				"rsync": "^0.6.0",
+				"ts-jest": "^27.0.0",
+				"typescript": "4.6.3"
+			},
+			"files": [
+				"/index.{d.ts,d.ts.map,js,js.map}",
+				"/development/",
+				"!/development/test/"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"prepare": "yarn workspaces foreach -ptR --from @proteo/tag-manager-driver run build",
+				"build": "npm run build:dev && npm run build:pro",
+				"build:watch": "rollup-config-checker && npm run copy:dts && rollup -c --watch",
+				"build:pro": "rollup-config-checker && npm run copy:dts && rollup -c",
+				"build:dev": "tsc --build",
+				"build:dev:watch": "tsc --build --watch",
+				"clean": "rimraf ./*.{js,js.map,ts,d.ts,d.ts.map} types/ test/ coverage/ development/ *.tsbuildinfo",
+				"copy:dts": "rsync -arv --include '*/' --include '*.d.ts*' --include '*.d.ts' --exclude '*' ./development/ ./",
+				"test": "yarn node --experimental-vm-modules $(yarn bin jest) --coverage --runInBand --passWithNoTests",
+				"test:watch": "yarn node --experimental-vm-modules $(yarn bin jest) --watchAll --coverage"
+			},
+			"publishConfig": {
+				"registry": "http://172.22.193.80:16428/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1673447500891,
+			"_id": "@proteo/tag-manager-driver@1.0.0-next.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.0-next.0.tgz",
+				"shasum": "cc800d200bce7568cc6a729a37823be1e3e2dd66"
+			},
+			"typings": "index.d.ts",
+			"exports": {
+				".": {
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"packageManager": "yarn@3.1.1",
+			"type": "module",
+			"contributors": []
+		},
+		"1.0.5-SNAPSHOT-72": {
+			"name": "@proteo/tag-manager-driver",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.5-SNAPSHOT-72",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/tag-manager-driver"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/jest-config": "1.0.2-SNAPSHOT-72",
+				"@proteo/rollup-config": "1.1.0",
+				"@proteo/tsconfig": "1.1.2-SNAPSHOT-72",
+				"@proteo/types": "1.1.88-SNAPSHOT-72"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rollup -c rollup.config.mjs",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1780328960488,
+			"_id": "@proteo/tag-manager-driver@1.0.5-SNAPSHOT-72",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.5-SNAPSHOT-72.tgz",
+				"shasum": "3512e8c1ccf40cd45d4c9ff8f073c1c3d5bd03df",
+				"integrity": "sha512-ToGMMOfrois41jqoy0AdpebQHHfAmA2YCWD+LvsiE5p1ry2p9lp/pkGcIo9jLBTTve8zhryCreDZrS73ozj+Ew=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"0.0.0-20251017111651": {
+			"name": "@proteo/tag-manager-driver",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "0.0.0-20251017111651",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/tag-manager-driver"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"@proteo/esbuild-config": "^1.0.2",
+				"@proteo/jest-config": "^1.0.2",
+				"@proteo/rollup-config": "^1.0.1",
+				"@proteo/tsconfig": "^1.1.2",
+				"@proteo/types": "0.0.0-20251017111651",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"wireit": "^0.14.4"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"!.wireit/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "wireit",
+				"build:bundle": "wireit",
+				"build:ts": "wireit",
+				"link:dev": "npm link",
+				"format": "wireit",
+				"format:eslint": "wireit",
+				"format:prettier": "wireit",
+				"lint": "wireit",
+				"lint:eslint": "wireit",
+				"lint:prettier": "wireit",
+				"clean": "wireit",
+				"test": "wireit",
+				"test:full": "wireit",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1760960046825,
+			"_id": "@proteo/tag-manager-driver@0.0.0-20251017111651",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-0.0.0-20251017111651.tgz",
+				"shasum": "d6bf6b692babbb0fdfbc5528e0e8c5c01b436492",
+				"integrity": "sha512-O8ctsi/1cAdixhvsXSvEYsNd3tBfxzIqKjV1DOvvSR2nLzaRbovcxfqkZRX9CIK/ZrSSzn+xShxOTri6jBkySA=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"wireit": {
+				"build": {
+					"dependencies": [
+						"build:ts",
+						"build:bundle"
+					]
+				},
+				"build:bundle": {
+					"command": "proteo-esbuild",
+					"dependencies": [
+						"build:ts"
+					],
+					"files": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"esbuild.config.js"
+					],
+					"output": [
+						"index.js",
+						"index.js.map"
+					]
+				},
+				"build:ts": {
+					"command": "tsc --build --pretty",
+					"clean": "if-file-deleted",
+					"files": [
+						"src/**/*.ts",
+						"tsconfig.json"
+					],
+					"output": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"tsconfig.tsbuildinfo"
+					],
+					"dependencies": [
+						"../../types:build"
+					]
+				},
+				"format": {
+					"dependencies": [
+						"format:eslint",
+						"format:prettier"
+					]
+				},
+				"format:eslint": {
+					"command": "npm run lint:eslint -- --fix"
+				},
+				"format:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"lint": {
+					"dependencies": [
+						"lint:eslint",
+						"lint:prettier"
+					]
+				},
+				"lint:eslint": {
+					"command": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": [
+						".eslintcache"
+					]
+				},
+				"lint:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"clean": {
+					"command": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo .wireit/"
+				},
+				"test": {
+					"command": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent"
+				},
+				"test:full": {
+					"command": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%"
+				}
+			},
+			"contributors": []
+		},
+		"1.0.0-next.12": {
+			"name": "@proteo/tag-manager-driver",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.0-next.12",
+			"repository": {
+				"type": "git",
+				"url": "http://repos.bancsabadell.com/bitbucket/scm/p4des/front-core.git",
+				"directory": "src/utils/tag-manager-driver"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"@proteo/internal-scripts": "1.0.0-next.10",
+				"@proteo/jest-config": "1.0.0-next.10",
+				"@proteo/rollup-config": "1.0.0-next.10",
+				"@proteo/tsconfig": "1.0.0-next.12",
+				"@proteo/types": "1.0.0-next.13",
+				"@types/jest": "^27.0.0",
+				"copyfiles": "^2.0.0",
+				"cross-env": "^7.0.0",
+				"jest": "^27.0.0",
+				"rimraf": "^3.0.0",
+				"rollup": "^2.0.0",
+				"ts-jest": "^27.0.0",
+				"typescript": "4.6.3"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test",
+				"!coverage",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"bootstrap": "yarn build",
+				"build": "yarn build:dev && yarn build:pro",
+				"build:watch": "yarn rollup-config-checker && yarn copy:dts && yarn rollup -c --watch",
+				"build:pro": "yarn rollup-config-checker && yarn copy:dts && yarn rollup -c",
+				"build:dev": "yarn tsc --build",
+				"build:dev:watch": "yarn tsc --build --watch",
+				"clean": "yarn rimraf ./*.{js,js.map,ts,d.ts,d.ts.map} types/ test/ coverage/ development/ *.tsbuildinfo",
+				"copy:dts": "yarn copyfiles -u 1 -e test './development/**/*.d.ts*' ./",
+				"test": "yarn node --experimental-vm-modules $(yarn bin jest) --coverage --runInBand --passWithNoTests",
+				"test:watch": "yarn node --experimental-vm-modules $(yarn bin jest) --watchAll --coverage"
+			},
+			"publishConfig": {
+				"registry": "http://172.22.193.80:16428/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1673447502859,
+			"_id": "@proteo/tag-manager-driver@1.0.0-next.12",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.0-next.12.tgz",
+				"shasum": "b457f4f3d3ef8478f948db1e00012895c3c2c68b"
+			},
+			"typings": "index.d.ts",
+			"exports": {
+				".": {
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"packageManager": "yarn@3.1.1",
+			"type": "module",
+			"contributors": []
+		},
+		"1.0.3": {
+			"name": "@proteo/tag-manager-driver",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.3",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/tag-manager-driver"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"@proteo/esbuild-config": "^1.0.2",
+				"@proteo/jest-config": "^1.0.2",
+				"@proteo/rollup-config": "^1.0.1",
+				"@proteo/tsconfig": "^1.1.1",
+				"@proteo/types": "^1.1.47",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"wireit": "^0.14.4"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"!.wireit/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "wireit",
+				"build:bundle": "wireit",
+				"build:ts": "wireit",
+				"link:dev": "npm link",
+				"format": "wireit",
+				"format:eslint": "wireit",
+				"format:prettier": "wireit",
+				"lint": "wireit",
+				"lint:eslint": "wireit",
+				"lint:prettier": "wireit",
+				"clean": "wireit",
+				"test": "wireit",
+				"test:full": "wireit",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1744300176662,
+			"_id": "@proteo/tag-manager-driver@1.0.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.3.tgz",
+				"shasum": "5b510cf36323fd5df0f4fe08690b66486d111492"
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"wireit": {
+				"build": {
+					"dependencies": [
+						"build:ts",
+						"build:bundle"
+					]
+				},
+				"build:bundle": {
+					"command": "proteo-esbuild",
+					"dependencies": [
+						"build:ts"
+					],
+					"files": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"esbuild.config.js"
+					],
+					"output": [
+						"index.js",
+						"index.js.map"
+					]
+				},
+				"build:ts": {
+					"command": "tsc --build --pretty",
+					"clean": "if-file-deleted",
+					"files": [
+						"src/**/*.ts",
+						"tsconfig.json"
+					],
+					"output": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"tsconfig.tsbuildinfo"
+					],
+					"dependencies": [
+						"../../types:build"
+					]
+				},
+				"format": {
+					"dependencies": [
+						"format:eslint",
+						"format:prettier"
+					]
+				},
+				"format:eslint": {
+					"command": "npm run lint:eslint -- --fix"
+				},
+				"format:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"lint": {
+					"dependencies": [
+						"lint:eslint",
+						"lint:prettier"
+					]
+				},
+				"lint:eslint": {
+					"command": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": [
+						".eslintcache"
+					]
+				},
+				"lint:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"clean": {
+					"command": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo .wireit/"
+				},
+				"test": {
+					"command": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent"
+				},
+				"test:full": {
+					"command": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%"
+				}
+			},
+			"contributors": []
+		},
+		"1.0.0-next.13": {
+			"name": "@proteo/tag-manager-driver",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.0-next.13",
+			"repository": {
+				"type": "git",
+				"url": "http://repos.bancsabadell.com/bitbucket/scm/p4des/front-core.git",
+				"directory": "src/utils/tag-manager-driver"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"@proteo/internal-scripts": "1.0.0-next.11",
+				"@proteo/jest-config": "1.0.0-next.11",
+				"@proteo/rollup-config": "1.0.0-next.11",
+				"@proteo/tsconfig": "1.0.0-next.13",
+				"@proteo/types": "1.0.0-next.14",
+				"@types/jest": "^27.0.0",
+				"copyfiles": "^2.0.0",
+				"cross-env": "^7.0.0",
+				"jest": "^27.0.0",
+				"rimraf": "^3.0.0",
+				"rollup": "^2.0.0",
+				"ts-jest": "^27.0.0",
+				"typescript": "4.6.3"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test",
+				"!coverage",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"bootstrap": "yarn build",
+				"build": "yarn build:dev && yarn build:pro",
+				"build:watch": "yarn rollup-config-checker && yarn copy:dts && yarn rollup -c --watch",
+				"build:pro": "yarn rollup-config-checker && yarn copy:dts && yarn rollup -c",
+				"build:dev": "yarn tsc --build",
+				"build:dev:watch": "yarn tsc --build --watch",
+				"clean": "yarn rimraf ./*.{js,js.map,ts,d.ts,d.ts.map} types/ test/ coverage/ development/ *.tsbuildinfo",
+				"copy:dts": "yarn copyfiles -u 1 -e test './development/**/*.d.ts*' ./",
+				"test": "yarn node --experimental-vm-modules $(yarn bin jest) --coverage --runInBand --passWithNoTests",
+				"test:watch": "yarn node --experimental-vm-modules $(yarn bin jest) --watchAll --coverage"
+			},
+			"publishConfig": {
+				"registry": "http://172.22.193.80:16428/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1673447503432,
+			"_id": "@proteo/tag-manager-driver@1.0.0-next.13",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.0-next.13.tgz",
+				"shasum": "64c482f15de35f33d4d0bc819bbc960ad16854bf"
+			},
+			"typings": "index.d.ts",
+			"exports": {
+				".": {
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"packageManager": "yarn@3.1.1",
+			"type": "module",
+			"contributors": []
+		},
+		"1.0.4": {
+			"name": "@proteo/tag-manager-driver",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.4",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/tag-manager-driver"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"@proteo/esbuild-config": "^1.0.2",
+				"@proteo/jest-config": "^1.0.2",
+				"@proteo/rollup-config": "^1.0.1",
+				"@proteo/tsconfig": "^1.1.1",
+				"@proteo/types": "^1.1.48",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"wireit": "^0.14.4"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"!.wireit/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "wireit",
+				"build:bundle": "wireit",
+				"build:ts": "wireit",
+				"link:dev": "npm link",
+				"format": "wireit",
+				"format:eslint": "wireit",
+				"format:prettier": "wireit",
+				"lint": "wireit",
+				"lint:eslint": "wireit",
+				"lint:prettier": "wireit",
+				"clean": "wireit",
+				"test": "wireit",
+				"test:full": "wireit",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1746519680208,
+			"_id": "@proteo/tag-manager-driver@1.0.4",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.4.tgz",
+				"shasum": "86d4437f953acf51942c86463e2f78a4c156994e"
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"wireit": {
+				"build": {
+					"dependencies": [
+						"build:ts",
+						"build:bundle"
+					]
+				},
+				"build:bundle": {
+					"command": "proteo-esbuild",
+					"dependencies": [
+						"build:ts"
+					],
+					"files": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"esbuild.config.js"
+					],
+					"output": [
+						"index.js",
+						"index.js.map"
+					]
+				},
+				"build:ts": {
+					"command": "tsc --build --pretty",
+					"clean": "if-file-deleted",
+					"files": [
+						"src/**/*.ts",
+						"tsconfig.json"
+					],
+					"output": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"tsconfig.tsbuildinfo"
+					],
+					"dependencies": [
+						"../../types:build"
+					]
+				},
+				"format": {
+					"dependencies": [
+						"format:eslint",
+						"format:prettier"
+					]
+				},
+				"format:eslint": {
+					"command": "npm run lint:eslint -- --fix"
+				},
+				"format:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"lint": {
+					"dependencies": [
+						"lint:eslint",
+						"lint:prettier"
+					]
+				},
+				"lint:eslint": {
+					"command": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": [
+						".eslintcache"
+					]
+				},
+				"lint:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"clean": {
+					"command": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo .wireit/"
+				},
+				"test": {
+					"command": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent"
+				},
+				"test:full": {
+					"command": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%"
+				}
+			},
+			"contributors": []
+		},
+		"1.0.0-next.14": {
+			"name": "@proteo/tag-manager-driver",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.0-next.14",
+			"repository": {
+				"type": "git",
+				"url": "http://repos.bancsabadell.com/bitbucket/scm/p4des/front-core.git",
+				"directory": "src/utils/tag-manager-driver"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"@proteo/internal-scripts": "1.0.0-next.12",
+				"@proteo/jest-config": "1.0.0-next.12",
+				"@proteo/rollup-config": "1.0.0-next.12",
+				"@proteo/tsconfig": "1.0.0-next.15",
+				"@proteo/types": "1.0.0-next.15",
+				"@types/jest": "^27.0.0",
+				"copyfiles": "^2.0.0",
+				"cross-env": "^7.0.0",
+				"jest": "^27.0.0",
+				"rimraf": "^3.0.0",
+				"rollup": "^2.0.0",
+				"ts-jest": "^27.0.0",
+				"typescript": "4.6.3"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test",
+				"!coverage",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"bootstrap": "yarn build",
+				"build": "yarn build:dev && yarn build:pro",
+				"build:watch": "yarn rollup-config-checker && yarn rollup -c --watch",
+				"build:pro": "yarn rollup-config-checker && yarn rollup -c",
+				"build:dev": "yarn tsc --build",
+				"build:dev:watch": "yarn tsc --build --watch",
+				"clean": "yarn rimraf ./*.{js,js.map,ts,d.ts,d.ts.map} types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "yarn node --experimental-vm-modules $(yarn bin jest) --coverage --runInBand --passWithNoTests",
+				"test:watch": "yarn node --experimental-vm-modules $(yarn bin jest) --watchAll --coverage"
+			},
+			"publishConfig": {
+				"registry": "http://172.22.193.80:16428/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1673447503921,
+			"_id": "@proteo/tag-manager-driver@1.0.0-next.14",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.0-next.14.tgz",
+				"shasum": "699cdeaea4caeaaac8662ab3be952a570f0061d2"
+			},
+			"typings": "types/index.d.ts",
+			"exports": {
+				".": {
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"1.0.5": {
+			"name": "@proteo/tag-manager-driver",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.5",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/tag-manager-driver"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"@proteo/esbuild-config": "^1.0.2",
+				"@proteo/jest-config": "^1.0.2",
+				"@proteo/rollup-config": "^1.0.1",
+				"@proteo/tsconfig": "^1.1.1",
+				"@proteo/types": "^1.1.52",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"wireit": "^0.14.4"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"!.wireit/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "wireit",
+				"build:bundle": "wireit",
+				"build:ts": "wireit",
+				"link:dev": "npm link",
+				"format": "wireit",
+				"format:eslint": "wireit",
+				"format:prettier": "wireit",
+				"lint": "wireit",
+				"lint:eslint": "wireit",
+				"lint:prettier": "wireit",
+				"clean": "wireit",
+				"test": "wireit",
+				"test:full": "wireit",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1749033281984,
+			"_id": "@proteo/tag-manager-driver@1.0.5",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.5.tgz",
+				"shasum": "d94ac0e7d0d7a879da873f308c5c367465b4ce46"
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"wireit": {
+				"build": {
+					"dependencies": [
+						"build:ts",
+						"build:bundle"
+					]
+				},
+				"build:bundle": {
+					"command": "proteo-esbuild",
+					"dependencies": [
+						"build:ts"
+					],
+					"files": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"esbuild.config.js"
+					],
+					"output": [
+						"index.js",
+						"index.js.map"
+					]
+				},
+				"build:ts": {
+					"command": "tsc --build --pretty",
+					"clean": "if-file-deleted",
+					"files": [
+						"src/**/*.ts",
+						"tsconfig.json"
+					],
+					"output": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"tsconfig.tsbuildinfo"
+					],
+					"dependencies": [
+						"../../types:build"
+					]
+				},
+				"format": {
+					"dependencies": [
+						"format:eslint",
+						"format:prettier"
+					]
+				},
+				"format:eslint": {
+					"command": "npm run lint:eslint -- --fix"
+				},
+				"format:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"lint": {
+					"dependencies": [
+						"lint:eslint",
+						"lint:prettier"
+					]
+				},
+				"lint:eslint": {
+					"command": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": [
+						".eslintcache"
+					]
+				},
+				"lint:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"clean": {
+					"command": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo .wireit/"
+				},
+				"test": {
+					"command": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent"
+				},
+				"test:full": {
+					"command": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%"
+				}
+			},
+			"contributors": []
+		},
+		"1.0.0-next.15": {
+			"name": "@proteo/tag-manager-driver",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.0-next.15",
+			"repository": {
+				"type": "git",
+				"url": "http://repos.bancsabadell.com/bitbucket/scm/p4des/front-core.git",
+				"directory": "src/utils/tag-manager-driver"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"@proteo/internal-scripts": "1.0.0-next.13",
+				"@proteo/jest-config": "1.0.0-next.13",
+				"@proteo/rollup-config": "1.0.0-next.13",
+				"@proteo/tsconfig": "1.0.0-next.16",
+				"@proteo/types": "1.0.0-next.16",
+				"@types/jest": "^27.0.0",
+				"copyfiles": "^2.0.0",
+				"cross-env": "^7.0.0",
+				"jest": "^27.0.0",
+				"rimraf": "^3.0.0",
+				"rollup": "^2.0.0",
+				"ts-jest": "^27.0.0",
+				"typescript": "4.6.3"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test",
+				"!coverage",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"bootstrap": "yarn build",
+				"build": "yarn build:dev && yarn build:pro",
+				"build:watch": "yarn rollup-config-checker && yarn rollup -c --watch",
+				"build:pro": "yarn rollup-config-checker && yarn rollup -c",
+				"build:dev": "yarn tsc --build",
+				"build:dev:watch": "yarn tsc --build --watch",
+				"clean": "yarn rimraf ./*.{js,js.map,ts,d.ts,d.ts.map} types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "yarn node --experimental-vm-modules $(yarn bin jest) --coverage --runInBand --passWithNoTests",
+				"test:watch": "yarn node --experimental-vm-modules $(yarn bin jest) --watchAll --coverage"
+			},
+			"publishConfig": {
+				"registry": "http://172.22.193.80:16428/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1673447504534,
+			"_id": "@proteo/tag-manager-driver@1.0.0-next.15",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.0-next.15.tgz",
+				"shasum": "a1bd5c665c5ab5e3d46a3df30fd04e005879c979"
+			},
+			"typings": "types/index.d.ts",
+			"exports": {
+				".": {
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"1.0.0-next.10": {
+			"name": "@proteo/tag-manager-driver",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.0-next.10",
+			"repository": {
+				"type": "git",
+				"url": "http://repos.bancsabadell.com/bitbucket/scm/p4des/front-core.git",
+				"directory": "src/utils/tag-manager-driver"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"@proteo/internal-scripts": "1.0.0-next.8",
+				"@proteo/jest-config": "1.0.0-next.8",
+				"@proteo/rollup-config": "1.0.0-next.8",
+				"@proteo/tsconfig": "1.0.0-next.9",
+				"@proteo/types": "1.0.0-next.11",
+				"@types/jest": "^27.0.0",
+				"copyfiles": "^2.0.0",
+				"cross-env": "^7.0.0",
+				"jest": "^27.0.0",
+				"rimraf": "^3.0.0",
+				"rollup": "^2.0.0",
+				"ts-jest": "^27.0.0",
+				"typescript": "4.6.3"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test",
+				"!coverage",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"bootstrap": "yarn build",
+				"build": "npm run build:dev && npm run build:pro",
+				"build:watch": "yarn rollup-config-checker && npm run copy:dts && yarn rollup -c --watch",
+				"build:pro": "yarn rollup-config-checker && npm run copy:dts && yarn rollup -c",
+				"build:dev": "yarn tsc --build",
+				"build:dev:watch": "yarn tsc --build --watch",
+				"clean": "yarn rimraf ./*.{js,js.map,ts,d.ts,d.ts.map} types/ test/ coverage/ development/ *.tsbuildinfo",
+				"copy:dts": "yarn copyfiles -u 1 -e test './development/**/*.d.ts*' ./",
+				"test": "yarn node --experimental-vm-modules $(yarn bin jest) --coverage --runInBand --passWithNoTests",
+				"test:watch": "yarn node --experimental-vm-modules $(yarn bin jest) --watchAll --coverage"
+			},
+			"publishConfig": {
+				"registry": "http://172.22.193.80:16428/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1673447502160,
+			"_id": "@proteo/tag-manager-driver@1.0.0-next.10",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.0-next.10.tgz",
+				"shasum": "61648af9ed7901d32559a3a28f2e4f04b099c6a6"
+			},
+			"typings": "index.d.ts",
+			"exports": {
+				".": {
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"packageManager": "yarn@3.1.1",
+			"type": "module",
+			"contributors": []
+		},
+		"1.0.0": {
+			"name": "@proteo/tag-manager-driver",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.0",
+			"repository": {
+				"type": "git",
+				"url": "http://repos.bancsabadell.com/bitbucket/scm/p4des/front-core.git",
+				"directory": "src/utils/tag-manager-driver"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"@proteo/esbuild-config": "1.0.0",
+				"@proteo/jest-config": "1.0.0",
+				"@proteo/rollup-config": "1.0.0",
+				"@proteo/tsconfig": "1.0.0",
+				"@proteo/types": "1.0.0",
+				"@types/jest": "^29.0.3",
+				"cross-env": "^7.0.3",
+				"jest": "^29.0.3",
+				"jest-environment-jsdom": "^29.0.3",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.0.1",
+				"typescript": "^4.8.3",
+				"wireit": "^0.8.0"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"!.wireit/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "wireit",
+				"build:bundle": "wireit",
+				"build:ts": "wireit",
+				"format": "wireit",
+				"format:eslint": "wireit",
+				"format:prettier": "wireit",
+				"lint": "wireit",
+				"lint:eslint": "wireit",
+				"lint:prettier": "wireit",
+				"clean": "wireit",
+				"test": "wireit",
+				"test:debug": "yarn node --experimental-vm-modules $(yarn bin jest)"
+			},
+			"publishConfig": {
+				"registry": "http://172.22.193.80:16428/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1673447513651,
+			"_id": "@proteo/tag-manager-driver@1.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.0.tgz",
+				"shasum": "6ee270317b820cc690f9bc45bcef764b253d49a9"
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"wireit": {
+				"build": {
+					"dependencies": [
+						"build:ts",
+						"build:bundle"
+					]
+				},
+				"build:bundle": {
+					"command": "proteo-esbuild",
+					"dependencies": [
+						"build:ts"
+					],
+					"files": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"esbuild.config.js"
+					],
+					"output": [
+						"index.js",
+						"index.js.map"
+					],
+					"packageLocks": [
+						"yarn.lock"
+					]
+				},
+				"build:ts": {
+					"command": "tsc --build --pretty",
+					"clean": "if-file-deleted",
+					"files": [
+						"src/**/*.ts",
+						"tsconfig.json"
+					],
+					"output": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"tsconfig.tsbuildinfo"
+					],
+					"dependencies": [
+						"../../types:build"
+					]
+				},
+				"format": {
+					"dependencies": [
+						"format:eslint",
+						"format:prettier"
+					]
+				},
+				"format:eslint": {
+					"command": "npm run lint:eslint -- --fix"
+				},
+				"format:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"lint": {
+					"dependencies": [
+						"lint:eslint",
+						"lint:prettier"
+					]
+				},
+				"lint:eslint": {
+					"command": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": [
+						".eslintcache"
+					]
+				},
+				"lint:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"clean": {
+					"command": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo .wireit/"
+				},
+				"test": {
+					"command": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --runInBand --passWithNoTests"
+				}
+			},
+			"contributors": []
+		},
+		"1.0.1": {
+			"name": "@proteo/tag-manager-driver",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.1",
+			"repository": {
+				"type": "git",
+				"url": "http://repos.bancsabadell.com/bitbucket/scm/p4des/front-core.git",
+				"directory": "src/utils/tag-manager-driver"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"@proteo/esbuild-config": "^1.0.1",
+				"@proteo/jest-config": "^1.0.1",
+				"@proteo/rollup-config": "^1.0.0",
+				"@proteo/tsconfig": "^1.1.0",
+				"@proteo/types": "^1.1.4",
+				"@types/jest": "^29.0.3",
+				"cross-env": "^7.0.3",
+				"jest": "^29.0.3",
+				"jest-environment-jsdom": "^29.0.3",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.0.3",
+				"typescript": "^4.9.5",
+				"wireit": "^0.8.0"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"!.wireit/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "wireit",
+				"build:bundle": "wireit",
+				"build:ts": "wireit",
+				"link:dev": "npm link",
+				"format": "wireit",
+				"format:eslint": "wireit",
+				"format:prettier": "wireit",
+				"lint": "wireit",
+				"lint:eslint": "wireit",
+				"lint:prettier": "wireit",
+				"clean": "wireit",
+				"test": "wireit",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1719392881578,
+			"_id": "@proteo/tag-manager-driver@1.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.1.tgz",
+				"shasum": "b3478764e58255bc7ab1837e239c8938c1a69c71"
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"wireit": {
+				"build": {
+					"dependencies": [
+						"build:ts",
+						"build:bundle"
+					]
+				},
+				"build:bundle": {
+					"command": "proteo-esbuild",
+					"dependencies": [
+						"build:ts"
+					],
+					"files": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"esbuild.config.js"
+					],
+					"output": [
+						"index.js",
+						"index.js.map"
+					]
+				},
+				"build:ts": {
+					"command": "tsc --build --pretty",
+					"clean": "if-file-deleted",
+					"files": [
+						"src/**/*.ts",
+						"tsconfig.json"
+					],
+					"output": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"tsconfig.tsbuildinfo"
+					],
+					"dependencies": [
+						"../../types:build"
+					]
+				},
+				"format": {
+					"dependencies": [
+						"format:eslint",
+						"format:prettier"
+					]
+				},
+				"format:eslint": {
+					"command": "npm run lint:eslint -- --fix"
+				},
+				"format:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"lint": {
+					"dependencies": [
+						"lint:eslint",
+						"lint:prettier"
+					]
+				},
+				"lint:eslint": {
+					"command": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": [
+						".eslintcache"
+					]
+				},
+				"lint:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"clean": {
+					"command": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo .wireit/"
+				},
+				"test": {
+					"command": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --lastCommit --passWithNoTests --maxWorkers=25% --silent"
+				}
+			},
+			"contributors": []
+		},
+		"1.0.2": {
+			"name": "@proteo/tag-manager-driver",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.2",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/tag-manager-driver"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"@proteo/esbuild-config": "^1.0.2",
+				"@proteo/jest-config": "^1.0.2",
+				"@proteo/rollup-config": "^1.0.1",
+				"@proteo/tsconfig": "^1.1.1",
+				"@proteo/types": "^1.1.5",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.2",
+				"wireit": "^0.14.4"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"!.wireit/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "wireit",
+				"build:bundle": "wireit",
+				"build:ts": "wireit",
+				"link:dev": "npm link",
+				"format": "wireit",
+				"format:eslint": "wireit",
+				"format:prettier": "wireit",
+				"lint": "wireit",
+				"lint:eslint": "wireit",
+				"lint:prettier": "wireit",
+				"clean": "wireit",
+				"test": "wireit",
+				"test:full": "wireit",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-local/"
+			},
+			"lastModified": 1719403549577,
+			"_id": "@proteo/tag-manager-driver@1.0.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.2.tgz",
+				"shasum": "38cbe6d5c1583134a6eb491b0939b94df4e8a846"
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"wireit": {
+				"build": {
+					"dependencies": [
+						"build:ts",
+						"build:bundle"
+					]
+				},
+				"build:bundle": {
+					"command": "proteo-esbuild",
+					"dependencies": [
+						"build:ts"
+					],
+					"files": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"esbuild.config.js"
+					],
+					"output": [
+						"index.js",
+						"index.js.map"
+					]
+				},
+				"build:ts": {
+					"command": "tsc --build --pretty",
+					"clean": "if-file-deleted",
+					"files": [
+						"src/**/*.ts",
+						"tsconfig.json"
+					],
+					"output": [
+						"development/**/*.{js,js.map,d.ts,d.ts.map}",
+						"tsconfig.tsbuildinfo"
+					],
+					"dependencies": [
+						"../../types:build"
+					]
+				},
+				"format": {
+					"dependencies": [
+						"format:eslint",
+						"format:prettier"
+					]
+				},
+				"format:eslint": {
+					"command": "npm run lint:eslint -- --fix"
+				},
+				"format:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"lint": {
+					"dependencies": [
+						"lint:eslint",
+						"lint:prettier"
+					]
+				},
+				"lint:eslint": {
+					"command": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": [
+						".eslintcache"
+					]
+				},
+				"lint:prettier": {
+					"command": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+					"files": [
+						"src/**/*.ts",
+						".eslintignore",
+						".eslintrc.cjs"
+					],
+					"output": []
+				},
+				"clean": {
+					"command": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo .wireit/"
+				},
+				"test": {
+					"command": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent"
+				},
+				"test:full": {
+					"command": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%"
+				}
+			},
+			"contributors": []
+		},
+		"1.0.5-dev.1781194532158": {
+			"name": "@proteo/tag-manager-driver",
+			"version": "1.0.5-dev.1781194532158",
+			"description": "Proteo4 Frontend Core Library",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/tag-manager-driver"
+			},
+			"publishConfig": {
+				"registry": "http://localhost:4873"
+			},
+			"main": "index.js",
+			"type": "module",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"devDependencies": {
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/jest-config": "1.0.2",
+				"@proteo/types": "1.1.88-dev.1781194532158",
+				"@proteo/tsconfig": "1.1.2",
+				"@proteo/rolldown-config": "1.0.0"
+			},
+			"types": "types/index.d.ts",
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"_nodeVersion": "24.11.1",
+			"_id": "@proteo/tag-manager-driver@1.0.5-dev.1781194532158",
+			"dist": {
+				"integrity": "sha512-XufiLbQnbZz3tLdcVm+SxAECZx34G+OirPhTzGK+Nju6SetlpeuMS5tCiWKFKfcCZd6buQh8136tGnbEPbN/yw==",
+				"shasum": "9ab0d095b93c9e43bac16131533c8c876fd8de70",
+				"tarball": "http://localhost:4873/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.5-dev.1781194532158.tgz"
+			},
+			"contributors": []
+		},
+		"1.0.5-dev.1781195668306": {
+			"name": "@proteo/tag-manager-driver",
+			"version": "1.0.5-dev.1781195668306",
+			"description": "Proteo4 Frontend Core Library",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/tag-manager-driver"
+			},
+			"publishConfig": {
+				"registry": "http://localhost:4873"
+			},
+			"main": "index.js",
+			"type": "module",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"devDependencies": {
+				"@proteo/jest-config": "1.0.2",
+				"@proteo/tsconfig": "1.1.2",
+				"@proteo/types": "1.1.88-dev.1781195668306",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/rolldown-config": "1.0.0"
+			},
+			"types": "types/index.d.ts",
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"_nodeVersion": "24.11.1",
+			"_id": "@proteo/tag-manager-driver@1.0.5-dev.1781195668306",
+			"dist": {
+				"integrity": "sha512-/FL8hRm8xlBRPTmnZBY6vkv7u2r2eGsgx3CHORXyQqbMKdeDO26h+is9A96xXlcXi603DSnOkAJRc9an8jIJ0Q==",
+				"shasum": "efc6d83596299044564b6a61a7d85333aa51e25e",
+				"tarball": "http://localhost:4873/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.5-dev.1781195668306.tgz"
+			},
+			"contributors": []
+		},
+		"1.0.5-SNAPSHOT-100": {
+			"name": "@proteo/tag-manager-driver",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.5-SNAPSHOT-100",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/tag-manager-driver"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/jest-config": "1.0.2-SNAPSHOT-100",
+				"@proteo/tsconfig": "1.1.2-SNAPSHOT-100",
+				"@proteo/types": "1.1.88-SNAPSHOT-100",
+				"@proteo/rolldown-config": "1.0.0"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1781602467848,
+			"_id": "@proteo/tag-manager-driver@1.0.5-SNAPSHOT-100",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.5-SNAPSHOT-100.tgz",
+				"shasum": "a3b1aa51bd1fceed59153fca9d7cf6c489bd234b",
+				"integrity": "sha512-OaT0TkTX6kMBYvH7ubswWs6XMXk3Lx1P1DO9VgkaF1FiH3O4DFwGJ9TpWVHXGROy2gS/05lZJP7aPf8IpX2wKQ=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"1.0.5-tmp-build-test-SNAPSHOT-111": {
+			"name": "@proteo/tag-manager-driver",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.5-tmp-build-test-SNAPSHOT-111",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/tag-manager-driver"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/jest-config": "1.0.2-tmp-build-test-SNAPSHOT-111",
+				"@proteo/tsconfig": "1.1.2-tmp-build-test-SNAPSHOT-111",
+				"@proteo/types": "1.1.88-tmp-build-test-SNAPSHOT-111",
+				"@proteo/rolldown-config": "1.0.0"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1781618991591,
+			"_id": "@proteo/tag-manager-driver@1.0.5-tmp-build-test-SNAPSHOT-111",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.5-tmp-build-test-SNAPSHOT-111.tgz",
+				"shasum": "0fe8f44edb57a7f425f6bddedd78e026cf6febc3",
+				"integrity": "sha512-pBLrdSdelods2K2qr3OC0fKSxPcEuz+7MSHGhSRznKx7Sr3b7vKHEgWSPuWfXjU30MGYjzjR8qeODjc6Cy+llQ=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		}
+	},
+	"time": {
+		"unpublished": null,
+		"1.0.0-next.9": "2023-01-11T14:31:49.232Z",
+		"1.0.0-next.8": "2023-01-11T14:31:48.694Z",
+		"1.0.0-rc.0": "2023-01-11T14:31:49.863Z",
+		"1.0.0-next.7": "2023-01-11T14:31:48.171Z",
+		"1.0.0-rc.2": "2023-01-11T14:31:51.029Z",
+		"1.0.0-next.6": "2023-01-11T14:31:47.575Z",
+		"1.0.0-next.5": "2023-01-11T14:31:46.786Z",
+		"1.0.0-rc.1": "2023-01-11T14:31:50.407Z",
+		"1.0.0-rc.4": "2023-01-11T14:31:52.215Z",
+		"1.0.0-next.4": "2023-01-11T14:31:46.238Z",
+		"1.0.0-next.3": "2023-01-11T14:31:45.629Z",
+		"1.0.0-rc.3": "2023-01-11T14:31:51.586Z",
+		"1.0.5-SNAPSHOT-83": "2026-06-02T08:26:44.795Z",
+		"1.0.5-SNAPSHOT-84": "2026-06-02T11:53:11.489Z",
+		"1.0.5-SNAPSHOT-85": "2026-06-02T16:43:33.111Z",
+		"0.0.0": "2023-01-11T14:31:40.312Z",
+		"1.1.0-dev-2": "2026-05-20T16:29:54.618Z",
+		"1.1.0-dev-1": "2026-05-20T15:09:52.246Z",
+		"0.0.0-SNAPSHOT-20250902100438": "2025-09-02T10:34:24.829Z",
+		"1.0.0-next.2": "2023-01-11T14:31:45.061Z",
+		"modified": "2026-06-16T14:09:51.591Z",
+		"1.0.0-next.1": "2023-01-11T14:31:41.589Z",
+		"1.0.0-rc.5": "2023-01-11T14:31:52.813Z",
+		"1.0.0-next.0": "2023-01-11T14:31:40.891Z",
+		"created": "2026-06-01T15:49:20.488Z",
+		"1.0.5-SNAPSHOT-72": "2026-06-01T15:49:20.488Z",
+		"0.0.0-20251017111651": "2025-10-20T11:34:06.825Z",
+		"1.0.0-next.12": "2023-01-11T14:31:42.859Z",
+		"1.0.3": "2025-04-10T15:49:36.662Z",
+		"1.0.0-next.13": "2023-01-11T14:31:43.432Z",
+		"1.0.4": "2025-05-06T08:21:20.208Z",
+		"1.0.0-next.14": "2023-01-11T14:31:43.921Z",
+		"1.0.5": "2025-06-04T10:34:41.984Z",
+		"1.0.0-next.15": "2023-01-11T14:31:44.534Z",
+		"1.0.0-next.10": "2023-01-11T14:31:42.160Z",
+		"1.0.0": "2023-01-11T14:31:53.651Z",
+		"1.0.1": "2024-06-26T09:08:01.578Z",
+		"1.0.2": "2024-06-26T12:05:49.577Z",
+		"1.0.5-dev.1781194532158": "2026-06-11T16:15:39.763Z",
+		"1.0.5-dev.1781195668306": "2026-06-11T16:34:36.221Z",
+		"1.0.5-SNAPSHOT-100": "2026-06-16T09:34:27.848Z",
+		"1.0.5-tmp-build-test-SNAPSHOT-111": "2026-06-16T14:09:51.591Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "1.0.5",
+		"dev": "1.0.5-dev.1781195668306"
+	},
+	"_uplinks": {
+		"artifactory-sabadell": {
+			"etag": "bf47caad111dd56ad99e43cfe03a6257026890d0",
+			"fetched": 1781793664996
+		}
+	},
+	"_distfiles": {
+		"tag-manager-driver-1.0.0-next.9.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.0-next.9.tgz",
+			"sha": "1a6ce2bcd2547282360bf6d84b5f6f2fd1d0eabc",
+			"registry": "artifactory-sabadell"
+		},
+		"tag-manager-driver-1.0.0-next.8.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.0-next.8.tgz",
+			"sha": "0745ba53b9dfa2bd6f55b4404579162282817b2f",
+			"registry": "artifactory-sabadell"
+		},
+		"tag-manager-driver-1.0.0-rc.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.0-rc.0.tgz",
+			"sha": "32c71d214926be5339871a6cd1f3435117814783",
+			"registry": "artifactory-sabadell"
+		},
+		"tag-manager-driver-1.0.0-next.7.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.0-next.7.tgz",
+			"sha": "085a80bbd90b4c4a28d62c3467e6ec7144be4732",
+			"registry": "artifactory-sabadell"
+		},
+		"tag-manager-driver-1.0.0-rc.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.0-rc.2.tgz",
+			"sha": "9e22297fd7968fbe910634b3da704a43aadcdbe0",
+			"registry": "artifactory-sabadell"
+		},
+		"tag-manager-driver-1.0.0-next.6.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.0-next.6.tgz",
+			"sha": "5013730348f45e316d119f728e77e16676ed2c82",
+			"registry": "artifactory-sabadell"
+		},
+		"tag-manager-driver-1.0.0-next.5.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.0-next.5.tgz",
+			"sha": "e816f2e37491ded12182e4b5a0b4380b12a1acab",
+			"registry": "artifactory-sabadell"
+		},
+		"tag-manager-driver-1.0.0-rc.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.0-rc.1.tgz",
+			"sha": "ef715557215b80ea58d2742bbdcf7fce784c9635",
+			"registry": "artifactory-sabadell"
+		},
+		"tag-manager-driver-1.0.0-rc.4.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.0-rc.4.tgz",
+			"sha": "b7c05ce6e5ef2604131b098dc07e5d77f5ac727e",
+			"registry": "artifactory-sabadell"
+		},
+		"tag-manager-driver-1.0.0-next.4.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.0-next.4.tgz",
+			"sha": "52c23c714e0f68a3ec9a03012319496b41d74689",
+			"registry": "artifactory-sabadell"
+		},
+		"tag-manager-driver-1.0.0-next.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.0-next.3.tgz",
+			"sha": "7048b061ebbb7ea970ae12bdcc2cc56bb915556b",
+			"registry": "artifactory-sabadell"
+		},
+		"tag-manager-driver-1.0.0-rc.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.0-rc.3.tgz",
+			"sha": "0455d5a5070421026a68baca8c74f3806bdb8d73",
+			"registry": "artifactory-sabadell"
+		},
+		"tag-manager-driver-1.0.5-SNAPSHOT-83.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.5-SNAPSHOT-83.tgz",
+			"sha": "a30d505a432c14406250bc5fd6a1c6a1d94906df",
+			"registry": "artifactory-sabadell"
+		},
+		"tag-manager-driver-1.0.5-SNAPSHOT-84.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.5-SNAPSHOT-84.tgz",
+			"sha": "110460e530119f927e844a096303ca3b7383b270",
+			"registry": "artifactory-sabadell"
+		},
+		"tag-manager-driver-1.0.5-SNAPSHOT-85.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.5-SNAPSHOT-85.tgz",
+			"sha": "8cde3ae585b6510c12c81e7b44d7d1dcff5cc3dc",
+			"registry": "artifactory-sabadell"
+		},
+		"tag-manager-driver-0.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-0.0.0.tgz",
+			"sha": "5231fd307f0907fa5f35f1fb27ecd0217215dad7",
+			"registry": "artifactory-sabadell"
+		},
+		"tag-manager-driver-1.1.0-dev-2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.1.0-dev-2.tgz",
+			"sha": "b732c9ca02ce946b9219744706c406ca6dd042c0",
+			"registry": "artifactory-sabadell"
+		},
+		"tag-manager-driver-1.1.0-dev-1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.1.0-dev-1.tgz",
+			"sha": "4e22b923afb003b9eb4bc2d54045fcdde99666dd",
+			"registry": "artifactory-sabadell"
+		},
+		"tag-manager-driver-0.0.0-SNAPSHOT-20250902100438.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-0.0.0-SNAPSHOT-20250902100438.tgz",
+			"sha": "0d8599240eafe572a9357836a16ff21800f2c35b",
+			"registry": "artifactory-sabadell"
+		},
+		"tag-manager-driver-1.0.0-next.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.0-next.2.tgz",
+			"sha": "01c926a80be58c6e47909b4af37a329dd7c76e93",
+			"registry": "artifactory-sabadell"
+		},
+		"tag-manager-driver-1.0.0-next.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.0-next.1.tgz",
+			"sha": "a87e2b1ff27aa4d6a375a3617c2974930689be9b",
+			"registry": "artifactory-sabadell"
+		},
+		"tag-manager-driver-1.0.0-rc.5.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.0-rc.5.tgz",
+			"sha": "5c2c39d7c14cddd9e125fb445ccc137bbcd351ab",
+			"registry": "artifactory-sabadell"
+		},
+		"tag-manager-driver-1.0.0-next.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.0-next.0.tgz",
+			"sha": "cc800d200bce7568cc6a729a37823be1e3e2dd66",
+			"registry": "artifactory-sabadell"
+		},
+		"tag-manager-driver-1.0.5-SNAPSHOT-72.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.5-SNAPSHOT-72.tgz",
+			"sha": "3512e8c1ccf40cd45d4c9ff8f073c1c3d5bd03df",
+			"registry": "artifactory-sabadell"
+		},
+		"tag-manager-driver-0.0.0-20251017111651.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-0.0.0-20251017111651.tgz",
+			"sha": "d6bf6b692babbb0fdfbc5528e0e8c5c01b436492",
+			"registry": "artifactory-sabadell"
+		},
+		"tag-manager-driver-1.0.0-next.12.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.0-next.12.tgz",
+			"sha": "b457f4f3d3ef8478f948db1e00012895c3c2c68b",
+			"registry": "artifactory-sabadell"
+		},
+		"tag-manager-driver-1.0.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.3.tgz",
+			"sha": "5b510cf36323fd5df0f4fe08690b66486d111492",
+			"registry": "artifactory-sabadell"
+		},
+		"tag-manager-driver-1.0.0-next.13.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.0-next.13.tgz",
+			"sha": "64c482f15de35f33d4d0bc819bbc960ad16854bf",
+			"registry": "artifactory-sabadell"
+		},
+		"tag-manager-driver-1.0.4.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.4.tgz",
+			"sha": "86d4437f953acf51942c86463e2f78a4c156994e",
+			"registry": "artifactory-sabadell"
+		},
+		"tag-manager-driver-1.0.0-next.14.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.0-next.14.tgz",
+			"sha": "699cdeaea4caeaaac8662ab3be952a570f0061d2",
+			"registry": "artifactory-sabadell"
+		},
+		"tag-manager-driver-1.0.5.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.5.tgz",
+			"sha": "d94ac0e7d0d7a879da873f308c5c367465b4ce46",
+			"registry": "artifactory-sabadell"
+		},
+		"tag-manager-driver-1.0.0-next.15.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.0-next.15.tgz",
+			"sha": "a1bd5c665c5ab5e3d46a3df30fd04e005879c979",
+			"registry": "artifactory-sabadell"
+		},
+		"tag-manager-driver-1.0.0-next.10.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.0-next.10.tgz",
+			"sha": "61648af9ed7901d32559a3a28f2e4f04b099c6a6",
+			"registry": "artifactory-sabadell"
+		},
+		"tag-manager-driver-1.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.0.tgz",
+			"sha": "6ee270317b820cc690f9bc45bcef764b253d49a9",
+			"registry": "artifactory-sabadell"
+		},
+		"tag-manager-driver-1.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.1.tgz",
+			"sha": "b3478764e58255bc7ab1837e239c8938c1a69c71",
+			"registry": "artifactory-sabadell"
+		},
+		"tag-manager-driver-1.0.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.2.tgz",
+			"sha": "38cbe6d5c1583134a6eb491b0939b94df4e8a846",
+			"registry": "artifactory-sabadell"
+		},
+		"tag-manager-driver-1.0.5-SNAPSHOT-100.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.5-SNAPSHOT-100.tgz",
+			"sha": "a3b1aa51bd1fceed59153fca9d7cf6c489bd234b",
+			"registry": "artifactory-sabadell"
+		},
+		"tag-manager-driver-1.0.5-tmp-build-test-SNAPSHOT-111.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/tag-manager-driver/-/@proteo/tag-manager-driver-1.0.5-tmp-build-test-SNAPSHOT-111.tgz",
+			"sha": "0fe8f44edb57a7f425f6bddedd78e026cf6febc3",
+			"registry": "artifactory-sabadell"
+		}
+	},
+	"_attachments": {
+		"tag-manager-driver-1.0.5-dev.1781194532158.tgz": {
+			"shasum": "9ab0d095b93c9e43bac16131533c8c876fd8de70",
+			"version": "1.0.5-dev.1781194532158"
+		},
+		"tag-manager-driver-1.0.5-dev.1781195668306.tgz": {
+			"shasum": "efc6d83596299044564b6a61a7d85333aa51e25e",
+			"version": "1.0.5-dev.1781195668306"
+		}
+	},
+	"_rev": "10-b805afdc01a85557",
+	"_id": "@proteo/tag-manager-driver",
+	"readme": ""
+}

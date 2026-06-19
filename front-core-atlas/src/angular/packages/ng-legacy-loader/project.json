@@ -1,0 +1,61 @@
+{
+  "name": "ng-legacy-loader",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "lib/angular/ng-legacy-loader/src",
+  "prefix": "proteo",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:package",
+      "outputs": ["{workspaceRoot}/dist/lib/ng-legacy-loader"],
+      "options": {
+        "project": "lib/angular/ng-legacy-loader/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "lib/angular/ng-legacy-loader/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "lib/angular/ng-legacy-loader/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/ng-legacy-loader"],
+      "options": {
+        "jestConfig": "lib/angular/ng-legacy-loader/jest.config.ts",
+        "maxWorkers": "%50"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    },
+    "package:pack": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npm pack",
+        "cwd": "{workspaceRoot}/dist/lib/ng-legacy-loader",
+        "parallel": true
+      }
+    },
+    "package:move": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "mv ./*.tgz ../../",
+        "cwd": "{workspaceRoot}/dist/lib/ng-legacy-loader",
+        "parallel": true
+      }
+    },
+    "generate:doc": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx typedoc --plugin typedoc-plugin-markdown",
+        "cwd": "{projectRoot}",
+        "parallel": true
+      }
+    }
+  }
+}

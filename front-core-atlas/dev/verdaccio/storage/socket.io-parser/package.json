@@ -1,0 +1,4581 @@
+{
+	"name": "socket.io-parser",
+	"versions": {
+		"4.1.1": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "4.1.1",
+			"homepage": "https://github.com/socketio/socket.io-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/socketio/socket.io-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/socketio/socket.io-parser/issues"
+			},
+			"engines": {
+				"node": ">=10.0.0"
+			},
+			"main": "./build/cjs/index.js",
+			"dependencies": {
+				"debug": "~4.3.1",
+				"@socket.io/component-emitter": "~3.0.0"
+			},
+			"devDependencies": {
+				"zuul": "3.11.1",
+				"mocha": "3.2.0",
+				"rimraf": "^3.0.2",
+				"babelify": "~10.0.0",
+				"prettier": "^2.1.2",
+				"benchmark": "2.1.2",
+				"expect.js": "0.3.1",
+				"typescript": "^4.0.3",
+				"zuul-ngrok": "4.0.0",
+				"@babel/core": "~7.9.6",
+				"@types/node": "^14.11.1",
+				"@types/debug": "^4.1.5",
+				"@babel/preset-env": "~7.9.6",
+				"socket.io-browsers": "^1.0.0"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				},
+				{
+					"name": "darrachequesne",
+					"email": "damien.arrachequesne@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run format:check && npm run compile && if test \"$BROWSERS\" = \"1\" ; then npm run test:browser; else npm run test:node; fi",
+				"compile": "rimraf ./build && tsc && tsc -p tsconfig.esm.json && ./postcompile.sh",
+				"prepack": "npm run compile",
+				"test:node": "mocha --reporter dot --bail test/index.js",
+				"format:fix": "prettier --write --parser typescript 'lib/**/*.ts' 'test/**/*.js'",
+				"format:check": "prettier --check --parser typescript 'lib/**/*.ts' 'test/**/*.js'",
+				"test:browser": "zuul test/index.js --no-coverage"
+			},
+			"lastModified": 0,
+			"_id": "socket.io-parser@4.1.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-4.1.1.tgz",
+				"shasum": "0ad53d980781cab1eabe320417d8480c0133e62d",
+				"integrity": "sha512-USQVLSkDWE5nbcY760ExdKaJxCE65kcsG/8k5FDGZVVxpD1pA7hABYXYkCUvxUuYYh/+uQw0N/fvBzfT8o07KA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCICCevF2DpUC+98Q4ArcaC1tE98Xw2kDXFtgYDEyVWf61AiEA/59iOOSrDwfVXVNBX+vWSfn/+8ER60ZwDyfr1TMAFS4="
+					}
+				]
+			},
+			"_npmVersion": "6.14.8",
+			"_npmUser": {
+				"name": "darrachequesne",
+				"email": "damien.arrachequesne@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "ea86f413ed73d4dd470186a8a67c7a28e39039dc",
+			"types": "./build/esm/index.d.ts",
+			"exports": {
+				"import": {
+					"node": "./build/esm-debug/index.js",
+					"default": "./build/esm/index.js"
+				},
+				"require": "./build/cjs/index.js"
+			},
+			"module": "./build/esm/index.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/socket.io-parser_4.1.1_1634212415019_0.05018357359945469",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "12.19.0",
+			"contributors": []
+		},
+		"4.1.2": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "4.1.2",
+			"homepage": "https://github.com/socketio/socket.io-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/socketio/socket.io-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/socketio/socket.io-parser/issues"
+			},
+			"engines": {
+				"node": ">=10.0.0"
+			},
+			"main": "./build/cjs/index.js",
+			"dependencies": {
+				"debug": "~4.3.1",
+				"@socket.io/component-emitter": "~3.0.0"
+			},
+			"devDependencies": {
+				"zuul": "3.11.1",
+				"mocha": "3.2.0",
+				"rimraf": "^3.0.2",
+				"babelify": "~10.0.0",
+				"prettier": "^2.1.2",
+				"benchmark": "2.1.2",
+				"expect.js": "0.3.1",
+				"typescript": "^4.0.3",
+				"zuul-ngrok": "4.0.0",
+				"@babel/core": "~7.9.6",
+				"@types/node": "^14.11.1",
+				"@types/debug": "^4.1.5",
+				"@babel/preset-env": "~7.9.6",
+				"socket.io-browsers": "^1.0.0"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				},
+				{
+					"name": "darrachequesne",
+					"email": "damien.arrachequesne@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run format:check && npm run compile && if test \"$BROWSERS\" = \"1\" ; then npm run test:browser; else npm run test:node; fi",
+				"compile": "rimraf ./build && tsc && tsc -p tsconfig.esm.json && ./postcompile.sh",
+				"prepack": "npm run compile",
+				"test:node": "mocha --reporter dot --bail test/index.js",
+				"format:fix": "prettier --write --parser typescript 'lib/**/*.ts' 'test/**/*.js'",
+				"format:check": "prettier --check --parser typescript 'lib/**/*.ts' 'test/**/*.js'",
+				"test:browser": "zuul test/index.js --no-coverage"
+			},
+			"lastModified": 0,
+			"_id": "socket.io-parser@4.1.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-4.1.2.tgz",
+				"shasum": "0a97d4fb8e67022158a568450a6e41887e42035e",
+				"integrity": "sha512-j3kk71QLJuyQ/hh5F/L2t1goqzdTL0gvDzuhTuNSwihfuFUrcSji0qFZmJJPtG6Rmug153eOPsUizeirf1IIog==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIBeomfTCU4t80c3OxVdMxTkZd5pMwq+fk2GxqbmFOMkBAiBueJdj07w0b0sKjdFQBEOclVH88KlntAm+jdGGTMkQ5A=="
+					}
+				]
+			},
+			"_npmVersion": "8.1.2",
+			"_npmUser": {
+				"name": "darrachequesne",
+				"email": "damien.arrachequesne@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "aed252c74260f5cbfbd3f61307905a2277fab7ce",
+			"types": "./build/esm/index.d.ts",
+			"exports": {
+				"import": {
+					"node": "./build/esm-debug/index.js",
+					"default": "./build/esm/index.js"
+				},
+				"require": "./build/cjs/index.js"
+			},
+			"module": "./build/esm/index.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/socket.io-parser_4.1.2_1645079899305_0.03299620089070743",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "16.13.1",
+			"contributors": []
+		},
+		"4.1.0": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "4.1.0",
+			"homepage": "https://github.com/socketio/socket.io-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/socketio/socket.io-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/socketio/socket.io-parser/issues"
+			},
+			"engines": {
+				"node": ">=10.0.0"
+			},
+			"main": "./build/cjs/index.js",
+			"dependencies": {
+				"debug": "~4.3.1",
+				"@socket.io/component-emitter": "~2.0.0"
+			},
+			"devDependencies": {
+				"zuul": "3.11.1",
+				"mocha": "3.2.0",
+				"rimraf": "^3.0.2",
+				"babelify": "~10.0.0",
+				"prettier": "^2.1.2",
+				"benchmark": "2.1.2",
+				"expect.js": "0.3.1",
+				"typescript": "^4.0.3",
+				"zuul-ngrok": "4.0.0",
+				"@babel/core": "~7.9.6",
+				"@types/node": "^14.11.1",
+				"@types/debug": "^4.1.5",
+				"@babel/preset-env": "~7.9.6",
+				"socket.io-browsers": "^1.0.0"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				},
+				{
+					"name": "darrachequesne",
+					"email": "damien.arrachequesne@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run format:check && npm run compile && if test \"$BROWSERS\" = \"1\" ; then npm run test:browser; else npm run test:node; fi",
+				"compile": "rimraf ./build && tsc && tsc -p tsconfig.esm.json && ./postcompile.sh",
+				"prepack": "npm run compile",
+				"test:node": "mocha --reporter dot --bail test/index.js",
+				"format:fix": "prettier --write --parser typescript 'lib/**/*.ts' 'test/**/*.js'",
+				"format:check": "prettier --check --parser typescript 'lib/**/*.ts' 'test/**/*.js'",
+				"test:browser": "zuul test/index.js --no-coverage"
+			},
+			"lastModified": 0,
+			"_id": "socket.io-parser@4.1.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-4.1.0.tgz",
+				"shasum": "c0debc10b65d4a3fbe7bad6092ca78dc88f22eb1",
+				"integrity": "sha512-3iMr+HAKwvQPIoZ5rwgnqowUCiGDziM1KqI1pJJgvSRo+nES4DeTQ3UtR8cMOaWepaUkoB+at9haEiN0FqQNlA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIA340aiSOE8LSR70EtXoZlpnp9KZ/iNCdyfATt1+K/YvAiEA+0bG9Z/7bQ//Kn/JVBEbs9wAXx4K72NWYG2X4iKxgMY="
+					}
+				]
+			},
+			"_npmVersion": "6.14.8",
+			"_npmUser": {
+				"name": "darrachequesne",
+				"email": "damien.arrachequesne@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "5ad3e5cc4b16326e3def2b834bd90c0424bfdd83",
+			"types": "./build/esm/index.d.ts",
+			"exports": {
+				"import": {
+					"node": "./build/esm-debug/index.js",
+					"default": "./build/esm/index.js"
+				},
+				"require": "./build/cjs/index.js"
+			},
+			"module": "./build/esm/index.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/socket.io-parser_4.1.0_1633984737095_0.7401369017829",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "12.19.0",
+			"contributors": []
+		},
+		"3.3.2": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "3.3.2",
+			"homepage": "https://github.com/Automattic/socket.io-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/Automattic/socket.io-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/Automattic/socket.io-parser/issues"
+			},
+			"dependencies": {
+				"debug": "~3.1.0",
+				"isarray": "2.0.1",
+				"component-emitter": "~1.3.0"
+			},
+			"devDependencies": {
+				"zuul": "3.11.1",
+				"mocha": "3.2.0",
+				"benchmark": "2.1.2",
+				"expect.js": "0.3.1",
+				"zuul-ngrok": "4.0.0",
+				"socket.io-browsers": "^1.0.0"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				},
+				{
+					"name": "darrachequesne",
+					"email": "damien.arrachequesne@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "make test"
+			},
+			"lastModified": 0,
+			"_id": "socket.io-parser@3.3.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-3.3.2.tgz",
+				"shasum": "ef872009d0adcf704f2fbe830191a14752ad50b6",
+				"integrity": "sha512-FJvDBuOALxdCI9qwRrO/Rfp9yfndRtc1jSgVgV8FDraihmSP/MLGD5PEuJrNfjALvcQ+vMDM/33AWOYP/JSjDg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIGc+eUMhzZmPNKwP14CEvmZ8/GmZSEyTA0QTnU8FbXduAiEA9f5psLsGoD678OJCnozylE5HrKI+jWVTijDt3f4/MY0="
+					}
+				]
+			},
+			"_npmVersion": "6.14.8",
+			"_npmUser": {
+				"name": "darrachequesne",
+				"email": "damien.arrachequesne@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "3b0a3925fd9f765228e5d06e4a0cc90d81a60d0e",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/socket.io-parser_3.3.2_1610200354633_0.5507446271981351",
+				"host": "s3://npm-registry-packages"
+			},
+			"readmeFilename": "Readme.md",
+			"_nodeVersion": "12.19.0",
+			"contributors": []
+		},
+		"3.3.3": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "3.3.3",
+			"homepage": "https://github.com/Automattic/socket.io-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/Automattic/socket.io-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/Automattic/socket.io-parser/issues"
+			},
+			"dependencies": {
+				"debug": "~3.1.0",
+				"isarray": "2.0.1",
+				"component-emitter": "~1.3.0"
+			},
+			"devDependencies": {
+				"zuul": "3.11.1",
+				"mocha": "3.2.0",
+				"benchmark": "2.1.2",
+				"expect.js": "0.3.1",
+				"zuul-ngrok": "4.0.0",
+				"socket.io-browsers": "^1.0.0"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				},
+				{
+					"name": "darrachequesne",
+					"email": "damien.arrachequesne@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "make test"
+			},
+			"lastModified": 0,
+			"_id": "socket.io-parser@3.3.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-3.3.3.tgz",
+				"shasum": "3a8b84823eba87f3f7624e64a8aaab6d6318a72f",
+				"integrity": "sha512-qOg87q1PMWWTeO01768Yh9ogn7chB9zkKtQnya41Y355S0UmpXgpcrFwAgjYJxu9BdKug5r5e9YtVSeWhKBUZg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIC+qyDk9dsgiqvDbY6kM91+RcJv/bjtfW02vpOsJ+xk1AiAVUEq2hVuiOD9wsfq5AmXuJmsVTgP8UsYqXnlsRCmHNQ=="
+					}
+				]
+			},
+			"_npmVersion": "8.11.0",
+			"_npmUser": {
+				"name": "darrachequesne",
+				"email": "damien.arrachequesne@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "cd11e38e1a3e2146617bc586f86512605607b212",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/socket.io-parser_3.3.3_1667989365907_0.4022280656448094",
+				"host": "s3://npm-registry-packages"
+			},
+			"readmeFilename": "Readme.md",
+			"_nodeVersion": "16.15.1",
+			"contributors": []
+		},
+		"3.3.4": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "3.3.4",
+			"homepage": "https://github.com/Automattic/socket.io-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/Automattic/socket.io-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/Automattic/socket.io-parser/issues"
+			},
+			"dependencies": {
+				"debug": "~3.1.0",
+				"isarray": "2.0.1",
+				"component-emitter": "~1.3.0"
+			},
+			"devDependencies": {
+				"zuul": "3.11.1",
+				"mocha": "3.2.0",
+				"benchmark": "2.1.2",
+				"expect.js": "0.3.1",
+				"zuul-ngrok": "4.0.0",
+				"socket.io-browsers": "^1.0.0"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				},
+				{
+					"name": "darrachequesne",
+					"email": "damien.arrachequesne@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "make test"
+			},
+			"lastModified": 0,
+			"_id": "socket.io-parser@3.3.4",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-3.3.4.tgz",
+				"shasum": "ab84236b6d06eaf1fb68b179b3a7501195886cc3",
+				"integrity": "sha512-z/pFQB3x+EZldRRzORYW1vwVO8m/3ILkswtnpoeU6Ve3cbMWkmHEWDAVJn4QJtchiiFTo5j7UG2QvwxvaA9vow==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDnx+4/+uTjmC+ffUoZR66ZTsWh9hn5xGApM3NJqCrFDQIgTYI52lAH2RrKwbFE6wsKuOr1jE2/Dj8tXiY4nQQWeVg="
+					}
+				]
+			},
+			"_npmVersion": "9.6.7",
+			"_npmUser": {
+				"name": "darrachequesne",
+				"email": "damien.arrachequesne@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "1e9ebc6b7fef7716176551f1725191e1362453a9",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/socket.io-parser_3.3.4_1721639370745_0.7522774378099153",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "20.3.0",
+			"contributors": []
+		},
+		"3.3.5": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "3.3.5",
+			"homepage": "https://github.com/socketio/socket.io#readme",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/socketio/socket.io.git"
+			},
+			"bugs": {
+				"url": "https://github.com/socketio/socket.io/issues"
+			},
+			"dependencies": {
+				"component-emitter": "~1.3.0",
+				"debug": "~3.1.0",
+				"isarray": "2.0.1"
+			},
+			"devDependencies": {
+				"benchmark": "2.1.2",
+				"expect.js": "0.3.1",
+				"mocha": "3.2.0",
+				"socket.io-browsers": "^1.0.0",
+				"zuul": "3.11.1",
+				"zuul-ngrok": "4.0.0"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				},
+				{
+					"name": "darrachequesne",
+					"email": "damien.arrachequesne@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "make test"
+			},
+			"lastModified": 0,
+			"_id": "socket.io-parser@3.3.5",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-3.3.5.tgz",
+				"shasum": "f07ca7a170de80837464aee39972acac6189ee9f",
+				"integrity": "sha512-pn+xG/oVnofxqteOawycpHw9QKclpNRa+Z7RW0vZmrIpkgZOVSVzBvY1YGR+p9kIEZXkeAjpHa21wRNLCZ6UAA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEUCIQCqvuPdvhC3Kv0C/W/1TUhBk56cojPtQPs2a3PHcdI9WwIgLjgvtQKRpHXDwQ8gdQbBWpZuqM3MvNWFH3eOgIbjvO8="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/socket.io-parser@3.3.5",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "11.9.0",
+			"_npmUser": {
+				"name": "GitHub Actions",
+				"email": "npm-oidc-no-reply@github.com",
+				"trustedPublisher": {
+					"id": "github",
+					"oidcConfigId": "oidc:fcd79f7e-54c9-42ad-ad52-65da652d3dc4"
+				}
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "17bc1d65cf92148a7fd4a24930c8d7ea944faca8",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages-npm-production",
+				"tmp": "tmp/socket.io-parser_3.3.5_1773760032868_0.5079187839529367"
+			},
+			"readmeFilename": "Readme.md",
+			"_nodeVersion": "24.14.0",
+			"contributors": []
+		},
+		"3.1.0": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "3.1.0",
+			"homepage": "https://github.com/Automattic/socket.io-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/Automattic/socket.io-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/Automattic/socket.io-parser/issues"
+			},
+			"dependencies": {
+				"debug": "~2.6.4",
+				"isarray": "2.0.1",
+				"has-binary2": "1.0.1",
+				"component-emitter": "1.2.1"
+			},
+			"devDependencies": {
+				"zuul": "3.11.1",
+				"mocha": "3.2.0",
+				"benchmark": "2.1.2",
+				"expect.js": "0.3.1",
+				"zuul-ngrok": "4.0.0",
+				"socket.io-browsers": "^1.0.0"
+			},
+			"license": "MIT",
+			"files": [
+				"binary.js",
+				"index.js",
+				"is-buffer.js"
+			],
+			"maintainers": [
+				{
+					"name": "darrachequesne",
+					"email": "damien.arrachequesne@gmail.com"
+				},
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "make test"
+			},
+			"lastModified": 0,
+			"_id": "socket.io-parser@3.1.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-3.1.0.tgz",
+				"shasum": "b58a3d780fe63370e4055d51bff6cb1b582715e9",
+				"integrity": "sha512-sFWuFkKI246mvEjqBkafugjueilGvLjvLC5dXii+UaDrquVlgFFVNTPrh1h9wgRIE+VBY1ucyGuv4AF0ikiQdQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDfbpUNd7FkUCR50+VoikQU6Dl/GygAlkzxj9h4X/cDfQIhAOe1EkapASnVK6KlQvn4JLYM8tJUouJqJFfu5kVnp8xg"
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "3.10.10",
+			"_npmUser": {
+				"name": "darrachequesne",
+				"email": "damien.arrachequesne@gmail.com"
+			},
+			"gitHead": "8e5465de2f264f856a3fd063248d2006d650c5e1",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/socket.io-parser-3.1.0.tgz_1493069653408_0.31741833384148777",
+				"host": "packages-18-east.internal.npmjs.com"
+			},
+			"_shasum": "b58a3d780fe63370e4055d51bff6cb1b582715e9",
+			"_nodeVersion": "6.9.4",
+			"contributors": []
+		},
+		"3.1.1": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "3.1.1",
+			"homepage": "https://github.com/Automattic/socket.io-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/Automattic/socket.io-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/Automattic/socket.io-parser/issues"
+			},
+			"dependencies": {
+				"debug": "~2.6.4",
+				"isarray": "2.0.1",
+				"has-binary2": "1.0.1",
+				"component-emitter": "1.2.1"
+			},
+			"devDependencies": {
+				"zuul": "3.11.1",
+				"mocha": "3.2.0",
+				"benchmark": "2.1.2",
+				"expect.js": "0.3.1",
+				"zuul-ngrok": "4.0.0",
+				"socket.io-browsers": "^1.0.0"
+			},
+			"license": "MIT",
+			"files": [
+				"binary.js",
+				"index.js",
+				"is-buffer.js"
+			],
+			"maintainers": [
+				{
+					"name": "darrachequesne",
+					"email": "damien.arrachequesne@gmail.com"
+				},
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "make test"
+			},
+			"lastModified": 0,
+			"_id": "socket.io-parser@3.1.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-3.1.1.tgz",
+				"shasum": "9dce6ed0a66abdcc927b4572e8fd1a8b64e3df36",
+				"integrity": "sha512-Kv2gHzsKYaf1k88PsDUBnEBWNSmWPl8H2kZf/nS51g7C+BWxYyZLE7lh2ET3OIVC8H7PKYO/Y0V5t0O7MBFFCw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIBliGNRBukj6aWG2Cke7bMwW+QoldcVW/ZZQuRCT7al2AiEAo5uuuiEQxPUCCIES1G4rVd/Iv/vPWYMr32P56vINB2g="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "3.10.10",
+			"_npmUser": {
+				"name": "darrachequesne",
+				"email": "damien.arrachequesne@gmail.com"
+			},
+			"gitHead": "eaee5d58c4fb3e593131502bb389ea28ab8d26f1",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/socket.io-parser-3.1.1.tgz_1493072561102_0.18692600820213556",
+				"host": "packages-18-east.internal.npmjs.com"
+			},
+			"_shasum": "9dce6ed0a66abdcc927b4572e8fd1a8b64e3df36",
+			"_nodeVersion": "6.9.4",
+			"contributors": []
+		},
+		"3.1.2": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "3.1.2",
+			"homepage": "https://github.com/Automattic/socket.io-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/Automattic/socket.io-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/Automattic/socket.io-parser/issues"
+			},
+			"dependencies": {
+				"debug": "~2.6.4",
+				"isarray": "2.0.1",
+				"has-binary2": "~1.0.2",
+				"component-emitter": "1.2.1"
+			},
+			"devDependencies": {
+				"zuul": "3.11.1",
+				"mocha": "3.2.0",
+				"benchmark": "2.1.2",
+				"expect.js": "0.3.1",
+				"zuul-ngrok": "4.0.0",
+				"socket.io-browsers": "^1.0.0"
+			},
+			"license": "MIT",
+			"files": [
+				"binary.js",
+				"index.js",
+				"is-buffer.js"
+			],
+			"maintainers": [
+				{
+					"name": "darrachequesne",
+					"email": "damien.arrachequesne@gmail.com"
+				},
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "make test"
+			},
+			"lastModified": 0,
+			"_id": "socket.io-parser@3.1.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-3.1.2.tgz",
+				"shasum": "dbc2282151fc4faebbe40aeedc0772eba619f7f2",
+				"integrity": "sha512-X/2VzU82iSIKyhivQjgM9nR4czG7vQ8AlM5z8+zdu3XbUTddulYlhLCP/nlT6VTua4SsmCyi/3h8YSOwPZA8Yw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCzv+UpB5ubDUGBV9NdAfcwuf/BEjrUr5qPv9ZocDhobQIgAlLiGaKrdTJem8TmrU6Z9cdsncyMrwzC3m30RlAxEkA="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "3.10.10",
+			"_npmUser": {
+				"name": "darrachequesne",
+				"email": "damien.arrachequesne@gmail.com"
+			},
+			"gitHead": "f9c3549dd17df095b0806086df3f4834ddc98d45",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/socket.io-parser-3.1.2.tgz_1493329580053_0.09636084409430623",
+				"host": "packages-12-west.internal.npmjs.com"
+			},
+			"_shasum": "dbc2282151fc4faebbe40aeedc0772eba619f7f2",
+			"_nodeVersion": "6.9.4",
+			"contributors": []
+		},
+		"3.3.0": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "3.3.0",
+			"homepage": "https://github.com/Automattic/socket.io-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/Automattic/socket.io-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/Automattic/socket.io-parser/issues"
+			},
+			"dependencies": {
+				"debug": "~3.1.0",
+				"isarray": "2.0.1",
+				"component-emitter": "1.2.1"
+			},
+			"devDependencies": {
+				"zuul": "3.11.1",
+				"mocha": "3.2.0",
+				"benchmark": "2.1.2",
+				"expect.js": "0.3.1",
+				"zuul-ngrok": "4.0.0",
+				"socket.io-browsers": "^1.0.0"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "darrachequesne",
+					"email": "damien.arrachequesne@gmail.com"
+				},
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "make test"
+			},
+			"lastModified": 0,
+			"_id": "socket.io-parser@3.3.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-3.3.0.tgz",
+				"shasum": "2b52a96a509fdf31440ba40fed6094c7d4f1262f",
+				"integrity": "sha512-hczmV6bDgdaEbVqhAeVMM/jfUfzuEZHsQg6eOmLgJht6G3mPKMxYm75w2+qhAQZ+4X+1+ATZ+QFKeOZD5riHng==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDbUTc8jqkl7EXPy+sQ79aGbYeRzxRxj2wb8BW7DLPnpAIgRxft+vNdGyYEOlVeShGu+csHG7BHWCPEEwWp986m9rY="
+					}
+				]
+			},
+			"_npmVersion": "6.2.0",
+			"_npmUser": {
+				"name": "darrachequesne",
+				"email": "damien.arrachequesne@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "0de72b9cc25c0950f09811e1e2a951b80e67e3fb",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/socket.io-parser_3.3.0_1541631559593_0.9539303406614281",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "10.9.0",
+			"contributors": []
+		},
+		"3.1.3": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "3.1.3",
+			"homepage": "https://github.com/Automattic/socket.io-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/Automattic/socket.io-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/Automattic/socket.io-parser/issues"
+			},
+			"dependencies": {
+				"debug": "~3.1.0",
+				"isarray": "2.0.1",
+				"has-binary2": "~1.0.2",
+				"component-emitter": "1.2.1"
+			},
+			"devDependencies": {
+				"zuul": "3.11.1",
+				"mocha": "3.2.0",
+				"benchmark": "2.1.2",
+				"expect.js": "0.3.1",
+				"zuul-ngrok": "4.0.0",
+				"socket.io-browsers": "^1.0.0"
+			},
+			"license": "MIT",
+			"files": [
+				"binary.js",
+				"index.js",
+				"is-buffer.js"
+			],
+			"maintainers": [
+				{
+					"name": "darrachequesne",
+					"email": "damien.arrachequesne@gmail.com"
+				},
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "make test"
+			},
+			"lastModified": 0,
+			"_id": "socket.io-parser@3.1.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-3.1.3.tgz",
+				"shasum": "ed2da5ee79f10955036e3da413bfd7f1e4d86c8e",
+				"integrity": "sha512-g0a2HPqLguqAczs3dMECuA1RgoGFPyvDqcbaDEdCWY9g59kdUAz3YRmaJBNKXflrHNwB7Q12Gkf/0CZXfdHR7g==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIFNm7ZFRzFTrN/GORyiMJmqTteNllu61bfBDZ3fMjYe8AiEA9jXli7soR7kl/dYLBcnJgCJ3a17X33vkTxqE90dRB9Q="
+					}
+				]
+			},
+			"_npmVersion": "5.5.1",
+			"_npmUser": {
+				"name": "darrachequesne",
+				"email": "damien.arrachequesne@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "f9c06255de817b19e47eb41a6e7d90dc1976cbba",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/socket.io-parser_3.1.3_1519546829648_0.5290136964864698",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "9.2.0",
+			"contributors": []
+		},
+		"3.3.1": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "3.3.1",
+			"homepage": "https://github.com/Automattic/socket.io-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/Automattic/socket.io-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/Automattic/socket.io-parser/issues"
+			},
+			"dependencies": {
+				"debug": "~3.1.0",
+				"isarray": "2.0.1",
+				"component-emitter": "~1.3.0"
+			},
+			"devDependencies": {
+				"zuul": "3.11.1",
+				"mocha": "3.2.0",
+				"benchmark": "2.1.2",
+				"expect.js": "0.3.1",
+				"zuul-ngrok": "4.0.0",
+				"socket.io-browsers": "^1.0.0"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				},
+				{
+					"name": "darrachequesne",
+					"email": "damien.arrachequesne@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "make test"
+			},
+			"lastModified": 0,
+			"_id": "socket.io-parser@3.3.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-3.3.1.tgz",
+				"shasum": "f07d9c8cb3fb92633aa93e76d98fd3a334623199",
+				"integrity": "sha512-1QLvVAe8dTz+mKmZ07Swxt+LAo4Y1ff50rlyoEx00TQmDFVQYPfcqGvIDJLGaBdhdNCecXtyKpD+EgKGcmmbuQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQD5ETsI96bi6Nd6YEUtgVLCTYElCtet0Cc4POzQR3fnmwIgFomLtShkKoy4Y9LZcrMvADwUdXbscWd+j+iSHXbqWyo="
+					}
+				]
+			},
+			"_npmVersion": "6.14.6",
+			"_npmUser": {
+				"name": "darrachequesne",
+				"email": "damien.arrachequesne@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "25ca624b0d9eddc54a0dbaecc535cdf400722169",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/socket.io-parser_3.3.1_1601426428304_0.9842848198521501",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "12.18.3",
+			"contributors": []
+		},
+		"2.1.0": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "2.1.0",
+			"homepage": "https://github.com/LearnBoost/socket.io-parser",
+			"repository": {
+				"url": "https://github.com/LearnBoost/socket.io-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/LearnBoost/socket.io-parser/issues"
+			},
+			"dependencies": {
+				"debug": "0.7.4",
+				"json3": "3.2.6",
+				"emitter": "http://github.com/component/emitter/archive/1.0.1.tar.gz",
+				"isarray": "0.0.1"
+			},
+			"devDependencies": {
+				"zuul": "1.5.4",
+				"mocha": "1.16.2",
+				"expect.js": "0.2.0"
+			},
+			"maintainers": [
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "make test"
+			},
+			"lastModified": 0,
+			"_id": "socket.io-parser@2.1.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-2.1.0.tgz",
+				"shasum": "1c0569a214ec1453a11bc457f472b126b8ec6dd8",
+				"integrity": "sha512-ui7Jao4NWvApGkBumtlZaF7U0ArmK2pbz6hwubSxKtQCC7qc3IbbzC7kKG/3TfhWQ2s/AO8wCkBoxQM7pR1FWA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQD7HyKzDs30fPBo8/LpoAk6ZdOGipywV9aXnrPoCT/S8QIgF2I+pBm//ueH4u5hbh2sw1xchx8rRIWxJyyz9dz/2ro="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "1.4.3",
+			"_npmUser": {
+				"name": "rauchg",
+				"email": "rauchg@gmail.com"
+			},
+			"component": {
+				"scripts": [
+					"index.js"
+				]
+			},
+			"contributors": []
+		},
+		"2.1.5": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "2.1.5",
+			"homepage": "https://github.com/LearnBoost/socket.io-parser",
+			"repository": {
+				"url": "https://github.com/LearnBoost/socket.io-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/LearnBoost/socket.io-parser/issues"
+			},
+			"dependencies": {
+				"debug": "0.7.4",
+				"json3": "3.2.6",
+				"emitter": "http://github.com/component/emitter/archive/1.0.1.tar.gz",
+				"isarray": "0.0.1"
+			},
+			"devDependencies": {
+				"zuul": "1.6.3",
+				"mocha": "1.16.2",
+				"expect.js": "0.2.0"
+			},
+			"maintainers": [
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "make test"
+			},
+			"lastModified": 0,
+			"_id": "socket.io-parser@2.1.5",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-2.1.5.tgz",
+				"shasum": "4deb9339a36ec4b2bc782dffbfdbd53811493ebf",
+				"integrity": "sha512-Ruc5lOCshCWmCF9zUeQSRFh8viltB1g/0AdMXPWfg04JSwSXKGFvDz9Ctb/HuwF8yLZW7zxqvAIJ/H9MATk3Rg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDmmwg+iHNqjux3+dXvAYW5ryOYjzzfuPNv4E0h6Fk56QIgI++Hu6ALGadiOo3e5GJdw9hI28Z8VWrnCyOa3j5skzQ="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "1.4.7",
+			"_npmUser": {
+				"name": "rauchg",
+				"email": "rauchg@gmail.com"
+			},
+			"component": {
+				"scripts": [
+					"index.js"
+				]
+			},
+			"_shasum": "4deb9339a36ec4b2bc782dffbfdbd53811493ebf",
+			"contributors": []
+		},
+		"2.1.3": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "2.1.3",
+			"homepage": "https://github.com/LearnBoost/socket.io-parser",
+			"repository": {
+				"url": "https://github.com/LearnBoost/socket.io-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/LearnBoost/socket.io-parser/issues"
+			},
+			"dependencies": {
+				"debug": "0.7.4",
+				"json3": "3.2.6",
+				"emitter": "http://github.com/component/emitter/archive/1.0.1.tar.gz",
+				"isarray": "0.0.1"
+			},
+			"devDependencies": {
+				"zuul": "1.6.3",
+				"mocha": "1.16.2",
+				"expect.js": "0.2.0"
+			},
+			"maintainers": [
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "make test"
+			},
+			"lastModified": 0,
+			"_id": "socket.io-parser@2.1.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-2.1.3.tgz",
+				"shasum": "539a6ee23f18c578f52acccd12c8a4e582469aef",
+				"integrity": "sha512-mqLMkrc/T2IjM/dVrXAittxl2xZhaVDcb1ji3PNiKpYoSgVrNvCeUqQGXPLufQDfNEqpbnedd2N3250woElRGw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIAgun7Cr8uEvaPiIUDLK4QWcHz3JKubVYbqfsn566adRAiEAxWi1hixGKYZl4ZWsjy9tu0nRzWGvOkIphVDX9042BWM="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "1.4.3",
+			"_npmUser": {
+				"name": "rauchg",
+				"email": "rauchg@gmail.com"
+			},
+			"component": {
+				"scripts": [
+					"index.js"
+				]
+			},
+			"contributors": []
+		},
+		"2.3.1": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "2.3.1",
+			"homepage": "https://github.com/Automattic/socket.io-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/Automattic/socket.io-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/Automattic/socket.io-parser/issues"
+			},
+			"dependencies": {
+				"debug": "2.2.0",
+				"json3": "3.3.2",
+				"isarray": "0.0.1",
+				"component-emitter": "1.1.2"
+			},
+			"devDependencies": {
+				"zuul": "3.11.0",
+				"mocha": "1.16.2",
+				"benchmark": "1.0.0",
+				"expect.js": "0.2.0",
+				"zuul-ngrok": "4.0.0"
+			},
+			"license": "MIT",
+			"files": [
+				"binary.js",
+				"index.js",
+				"is-buffer.js"
+			],
+			"maintainers": [
+				{
+					"name": "darrachequesne",
+					"email": "damien.arrachequesne@gmail.com"
+				},
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "make test"
+			},
+			"lastModified": 0,
+			"_id": "socket.io-parser@2.3.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-2.3.1.tgz",
+				"shasum": "dd532025103ce429697326befd64005fcfe5b4a0",
+				"integrity": "sha512-j6l4g/+yWQjmy1yByzg1DPFL4vxQw+NwCJatIxni/AE1wfm17FBtIKSWU4Ay+onrJwDxmC4eK4QS/04ZsqYwZQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCFaSJ/T3f1SKU4QWuuiM2obcB13+SWNdJGUcms7BC7dQIgI9ktV9LghVrznxo0ZX4rM/ZK7Ejm2MgstLPt6+9S054="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "2.15.8",
+			"_npmUser": {
+				"name": "darrachequesne",
+				"email": "damien.arrachequesne@gmail.com"
+			},
+			"gitHead": "64455b432c9af2f9692a0eb845b17129eec0442a",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/socket.io-parser-2.3.1.tgz_1477269125715_0.3387652209494263",
+				"host": "packages-12-west.internal.npmjs.com"
+			},
+			"_shasum": "dd532025103ce429697326befd64005fcfe5b4a0",
+			"_nodeVersion": "4.4.7",
+			"contributors": []
+		},
+		"2.1.4": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "2.1.4",
+			"homepage": "https://github.com/LearnBoost/socket.io-parser",
+			"repository": {
+				"url": "https://github.com/LearnBoost/socket.io-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/LearnBoost/socket.io-parser/issues"
+			},
+			"dependencies": {
+				"debug": "0.7.4",
+				"json3": "3.2.6",
+				"emitter": "http://github.com/component/emitter/archive/1.0.1.tar.gz",
+				"isarray": "0.0.1"
+			},
+			"devDependencies": {
+				"zuul": "1.6.3",
+				"mocha": "1.16.2",
+				"expect.js": "0.2.0"
+			},
+			"maintainers": [
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "make test"
+			},
+			"lastModified": 0,
+			"_id": "socket.io-parser@2.1.4",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-2.1.4.tgz",
+				"shasum": "ed2ec2608aa2e21189d922512a4703984166c270",
+				"integrity": "sha512-e8AS9yIxQMgHc5b01Yb55yu846CDYeonrHtRKSp8BYNK56P4k1TcJ6boQFWEALwER8aKtxGs0X7CSJhHioe8NA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIFsWncEmRORLxX9GDgs7kXWkfKg+27pLljUZZ8z1h5obAiEAuyXMnIpPI5UEZQgXHL9LTBWIZQ4myFOnTQFiuTcxKXA="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "1.4.7",
+			"_npmUser": {
+				"name": "rauchg",
+				"email": "rauchg@gmail.com"
+			},
+			"component": {
+				"scripts": [
+					"index.js"
+				]
+			},
+			"_shasum": "ed2ec2608aa2e21189d922512a4703984166c270",
+			"contributors": []
+		},
+		"2.3.2": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "2.3.2",
+			"homepage": "https://github.com/Automattic/socket.io-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/Automattic/socket.io-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/Automattic/socket.io-parser/issues"
+			},
+			"dependencies": {
+				"debug": "2.3.3",
+				"json3": "3.3.2",
+				"isarray": "0.0.1",
+				"component-emitter": "1.2.1"
+			},
+			"devDependencies": {
+				"zuul": "3.11.1",
+				"mocha": "3.2.0",
+				"benchmark": "2.1.2",
+				"expect.js": "0.3.1",
+				"zuul-ngrok": "4.0.0",
+				"socket.io-browsers": "^1.0.0"
+			},
+			"license": "MIT",
+			"files": [
+				"binary.js",
+				"index.js",
+				"is-buffer.js"
+			],
+			"maintainers": [
+				{
+					"name": "darrachequesne",
+					"email": "damien.arrachequesne@gmail.com"
+				},
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "make test"
+			},
+			"lastModified": 0,
+			"_id": "socket.io-parser@2.3.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-2.3.2.tgz",
+				"shasum": "ae64f90cd8d0b5316556280d98cb744f7422cd94",
+				"integrity": "sha512-5BU+AyITiKkBZQeFsCMmkYMMA0oEi27nonUYGADcA0fGWl/DKQpLDx0qGPjDdroVqVx8Y3ExDEPx4xEp40y7Aw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDaF5yf7or3PsR3fkez3K2eIGPm43UthAPv90mPXcr2bAIhAKOENgQR+rg62lX3YieeGCFF2UiEbP6bR58URGw9hdzS"
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "4.0.3",
+			"_npmUser": {
+				"name": "darrachequesne",
+				"email": "damien.arrachequesne@gmail.com"
+			},
+			"gitHead": "9ce9a98dd0969328e34146d287e82c5500614f27",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/socket.io-parser-2.3.2.tgz_1483134214356_0.5245977933518589",
+				"host": "packages-12-west.internal.npmjs.com"
+			},
+			"_shasum": "ae64f90cd8d0b5316556280d98cb744f7422cd94",
+			"_nodeVersion": "6.9.1",
+			"contributors": []
+		},
+		"2.1.1": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "2.1.1",
+			"homepage": "https://github.com/LearnBoost/socket.io-parser",
+			"repository": {
+				"url": "https://github.com/LearnBoost/socket.io-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/LearnBoost/socket.io-parser/issues"
+			},
+			"dependencies": {
+				"debug": "0.7.4",
+				"json3": "3.2.6",
+				"emitter": "http://github.com/component/emitter/archive/1.0.1.tar.gz",
+				"isarray": "0.0.1"
+			},
+			"devDependencies": {
+				"zuul": "1.5.4",
+				"mocha": "1.16.2",
+				"expect.js": "0.2.0"
+			},
+			"maintainers": [
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "make test"
+			},
+			"lastModified": 0,
+			"_id": "socket.io-parser@2.1.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-2.1.1.tgz",
+				"shasum": "fbb21a4ccb216e659d77ef2ed8c5f80575a9b8ee",
+				"integrity": "sha512-pvzEi0F2RFnVNdh3jRDqZRHhNz75DkJvDQvzWwZVOkptIwamXz1nQ7gWgQg+FZie6CZy1tEazyNHfIZnzbqQLw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIE/TmTblsZgmxPt+aEXjB1p2JcAHgXgZWUgBiHOgQmksAiAIZrMbLbcV1WTb6XQQ8M3SnJO0ZPfYjhVxYFHvb7vQUw=="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "1.4.3",
+			"_npmUser": {
+				"name": "rauchg",
+				"email": "rauchg@gmail.com"
+			},
+			"component": {
+				"scripts": [
+					"index.js"
+				]
+			},
+			"contributors": []
+		},
+		"2.1.2": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "2.1.2",
+			"homepage": "https://github.com/LearnBoost/socket.io-parser",
+			"repository": {
+				"url": "https://github.com/LearnBoost/socket.io-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/LearnBoost/socket.io-parser/issues"
+			},
+			"dependencies": {
+				"debug": "0.7.4",
+				"json3": "3.2.6",
+				"emitter": "http://github.com/component/emitter/archive/1.0.1.tar.gz",
+				"isarray": "0.0.1"
+			},
+			"devDependencies": {
+				"zuul": "1.5.4",
+				"mocha": "1.16.2",
+				"expect.js": "0.2.0"
+			},
+			"maintainers": [
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "make test"
+			},
+			"lastModified": 0,
+			"_id": "socket.io-parser@2.1.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-2.1.2.tgz",
+				"shasum": "876655b9edd555c5bdf7301cedf30a436c67b8b0",
+				"integrity": "sha512-eVkt8prgw20H+4P8Iw6tis/w7leiN5EW/93Vq+KL8w+yNJu+QNgaej2Cgt8FhVCVuN3AHyLU50vXvM8cpUR1JQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCsazxhihHNfB8IzzYMM9dA49LOBdyGGR7ka8UsWyiTbAIgfTcp6jLOBJvIC5/pCMqHLtPaLztJCHRpza3NwUffXNI="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "1.4.3",
+			"_npmUser": {
+				"name": "rauchg",
+				"email": "rauchg@gmail.com"
+			},
+			"component": {
+				"scripts": [
+					"index.js"
+				]
+			},
+			"contributors": []
+		},
+		"2.3.0": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "2.3.0",
+			"homepage": "https://github.com/Automattic/socket.io-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/Automattic/socket.io-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/Automattic/socket.io-parser/issues"
+			},
+			"dependencies": {
+				"debug": "2.2.0",
+				"json3": "3.3.2",
+				"component-emitter": "1.1.2"
+			},
+			"devDependencies": {
+				"zuul": "3.11.0",
+				"mocha": "1.16.2",
+				"benchmark": "1.0.0",
+				"expect.js": "0.2.0",
+				"zuul-ngrok": "4.0.0"
+			},
+			"license": "MIT",
+			"files": [
+				"binary.js",
+				"index.js",
+				"is-buffer.js"
+			],
+			"maintainers": [
+				{
+					"name": "darrachequesne",
+					"email": "damien.arrachequesne@gmail.com"
+				},
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "make test"
+			},
+			"lastModified": 0,
+			"_id": "socket.io-parser@2.3.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-2.3.0.tgz",
+				"shasum": "deb02dc50f7f5ac7a35f43bc6f7d413dc46a5153",
+				"integrity": "sha512-ZHfrPexBWrrChXWKz4P4UfXs1HZCk5R+Djd5AWz/KXyCodDjcD0cvhA5GQt1Jdj7KfqArm0URTxwPL5IyqS35g==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQD2oMCVDVoG+GqxJJ5lXii0z6vI6V7dLk0GdnhLjhegtAIgNA2qZjBz2jfuW4fSfYqmLBHJXoHOKmrBl82g4cQoIdM="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "2.15.8",
+			"_npmUser": {
+				"name": "darrachequesne",
+				"email": "damien.arrachequesne@gmail.com"
+			},
+			"gitHead": "baf384cd6cbcdf716ec35ed2187cd755c7e5e9d2",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/socket.io-parser-2.3.0.tgz_1477006456151_0.5716474098153412",
+				"host": "packages-18-east.internal.npmjs.com"
+			},
+			"_shasum": "deb02dc50f7f5ac7a35f43bc6f7d413dc46a5153",
+			"_nodeVersion": "4.4.7",
+			"contributors": []
+		},
+		"1.1.2": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "1.1.2",
+			"homepage": "https://github.com/LearnBoost/socket.io-protocol",
+			"repository": {
+				"url": "https://github.com/LearnBoost/socket.io-protocol.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/LearnBoost/socket.io-protocol/issues"
+			},
+			"dependencies": {
+				"debug": "0.7.4",
+				"json3": "3.3.0"
+			},
+			"devDependencies": {
+				"mocha": "1.16.2",
+				"expect.js": "0.2.0"
+			},
+			"maintainers": [
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				}
+			],
+			"directories": {},
+			"lastModified": 0,
+			"_id": "socket.io-parser@1.1.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-1.1.2.tgz",
+				"shasum": "ac3ff22eefe2b5e6b2f546151038d27a22bea6ba",
+				"integrity": "sha512-6lgvHYjIJekf1/jPypLP9AtCjMxpoFhl0WnGyQqnD7063QEVrgIFXFExW5JYIfUGiaCiKsRhucth9Numr1cZyg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCehv3syUNyKpIQxsPpDk8ptci3M+ty+k7Wi40BmV/aZQIgFeWuFKw8TX6wC9fcn6vlu0nGHRd7Tp1Sm598mbcKnf0="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "1.3.22",
+			"_npmUser": {
+				"name": "rauchg",
+				"email": "rauchg@gmail.com"
+			},
+			"component": {
+				"scripts": [
+					"index.js"
+				]
+			},
+			"contributors": []
+		},
+		"4.2.6": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "4.2.6",
+			"homepage": "https://github.com/socketio/socket.io/tree/main/packages/socket.io-client#readme",
+			"repository": {
+				"url": "git+https://github.com/socketio/socket.io.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/socketio/socket.io/issues"
+			},
+			"engines": {
+				"node": ">=10.0.0"
+			},
+			"main": "./build/cjs/index.js",
+			"dependencies": {
+				"debug": "~4.4.1",
+				"@socket.io/component-emitter": "~3.1.0"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				},
+				{
+					"name": "darrachequesne",
+					"email": "damien.arrachequesne@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run format:check && npm run compile && if test \"$BROWSERS\" = \"1\" ; then npm run test:browser; else npm run test:node; fi",
+				"compile": "rimraf ./build && tsc && tsc -p tsconfig.esm.json && ./postcompile.sh",
+				"prepack": "npm run compile",
+				"test:node": "mocha --reporter dot --bail test/index.js",
+				"format:fix": "prettier --write --parser typescript '*.js' 'lib/**/*.ts' 'test/**/*.js'",
+				"format:check": "prettier --check --parser typescript '*.js' 'lib/**/*.ts' 'test/**/*.js'",
+				"test:browser": "wdio"
+			},
+			"lastModified": 0,
+			"_id": "socket.io-parser@4.2.6",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-4.2.6.tgz",
+				"shasum": "19156bf179af3931abd05260cfb1491822578a6f",
+				"integrity": "sha512-asJqbVBDsBCJx0pTqw3WfesSY0iRX+2xzWEWzrpcH7L6fLzrhyF8WPI8UaeM4YCuDfpwA/cgsdugMsmtz8EJeg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEUCIENWvPasFJKrIS78jF3M9iiwocmtwYOSUnomd4hdGGemAiEA6XRCS6t0Ci0fV0HE7QiEyWcdnkbUdyZGCzhZXvwibnM="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/socket.io-parser@4.2.6",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "11.9.0",
+			"_npmUser": {
+				"name": "GitHub Actions",
+				"email": "npm-oidc-no-reply@github.com",
+				"trustedPublisher": {
+					"id": "github",
+					"oidcConfigId": "oidc:31e33aa9-513e-461c-90ed-24cd65e19f1b"
+				}
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "522edcdbb89da5eb647abb93c73229d1e91c304f",
+			"types": "./build/esm/index.d.ts",
+			"exports": {
+				"import": {
+					"node": "./build/esm-debug/index.js",
+					"default": "./build/esm/index.js",
+					"development": "./build/esm-debug/index.js"
+				},
+				"require": "./build/cjs/index.js"
+			},
+			"module": "./build/esm/index.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/socket.io-parser_4.2.6_1773741378512_0.6550391573773011",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"_nodeVersion": "24.14.0",
+			"contributors": []
+		},
+		"1.1.0": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "1.1.0",
+			"repository": {
+				"url": "https://github.com/LearnBoost/socket.io-protocol.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/LearnBoost/socket.io-protocol/issues"
+			},
+			"dependencies": {
+				"debug": "0.6.0",
+				"json3": "3.2.6"
+			},
+			"devDependencies": {
+				"mocha": "1.16.2",
+				"expect.js": "0.2.0"
+			},
+			"maintainers": [
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				}
+			],
+			"directories": {},
+			"lastModified": 0,
+			"_id": "socket.io-parser@1.1.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-1.1.0.tgz",
+				"shasum": "3929528fbe7f43bdc9887db037db6fe933376150",
+				"integrity": "sha512-QAxbA1QUg+sd8SJ0ELdTcw1pN4klPiPU8fB4nXx1ZZVjtDx8iYrh10NLdR3fFcmpJYXLxuWta65nPRSbLd3+YQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDjSeeA76p+jAVD5Ora8+/88LBUwmm8e6aoke58uMYzQwIgdglWNBseRfdwPZb6Dlcri0s2i6LMQPEgQZuumXfJ4dY="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "1.2.30",
+			"_npmUser": {
+				"name": "rauchg",
+				"email": "rauchg@gmail.com"
+			},
+			"component": {
+				"scripts": [
+					"index.js"
+				]
+			},
+			"contributors": []
+		},
+		"1.1.1": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "1.1.1",
+			"homepage": "https://github.com/LearnBoost/socket.io-protocol",
+			"repository": {
+				"url": "https://github.com/LearnBoost/socket.io-protocol.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/LearnBoost/socket.io-protocol/issues"
+			},
+			"dependencies": {
+				"debug": "0.7.4",
+				"json3": "3.2.6"
+			},
+			"devDependencies": {
+				"mocha": "1.16.2",
+				"expect.js": "0.2.0"
+			},
+			"maintainers": [
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				}
+			],
+			"directories": {},
+			"lastModified": 0,
+			"_id": "socket.io-parser@1.1.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-1.1.1.tgz",
+				"shasum": "a7b7c3d799cda79704aa2960eb1dfd153e904fb4",
+				"integrity": "sha512-0AUqIe6/+fuWqRYvFX+qX1dAv3EHQWdyxgF6mTdPjZm60i4yBJEhnx7xYaFW0nT4ukJu7b53w8uiTEljF4qACA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQCkQCOcxaEoSW4d7S6VwywjKkMJyCmW4qcWX4K22S0GwAIhAN9ToeirOYIWNBsw0asX2uy5ZYuuxTnkQcWth+Ky1kor"
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "1.3.22",
+			"_npmUser": {
+				"name": "rauchg",
+				"email": "rauchg@gmail.com"
+			},
+			"component": {
+				"scripts": [
+					"index.js"
+				]
+			},
+			"contributors": []
+		},
+		"4.0.1-rc3": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "4.0.1-rc3",
+			"homepage": "https://github.com/socketio/socket.io-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/socketio/socket.io-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/socketio/socket.io-parser/issues"
+			},
+			"engines": {
+				"node": ">=10.0.0"
+			},
+			"main": "./dist/index.js",
+			"dependencies": {
+				"debug": "~4.1.0",
+				"component-emitter": "~1.3.0"
+			},
+			"devDependencies": {
+				"zuul": "3.11.1",
+				"mocha": "3.2.0",
+				"babelify": "~10.0.0",
+				"prettier": "^2.1.2",
+				"benchmark": "2.1.2",
+				"expect.js": "0.3.1",
+				"typescript": "^4.0.3",
+				"zuul-ngrok": "4.0.0",
+				"@babel/core": "~7.9.6",
+				"@types/node": "^14.11.1",
+				"@types/debug": "^4.1.5",
+				"@babel/preset-env": "~7.9.6",
+				"socket.io-browsers": "^1.0.0",
+				"@types/component-emitter": "^1.2.10"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				},
+				{
+					"name": "darrachequesne",
+					"email": "damien.arrachequesne@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run format:check && tsc && if test \"$BROWSERS\" = \"1\" ; then npm run test:browser; else npm run test:node; fi",
+				"prepack": "tsc",
+				"test:node": "mocha --reporter dot --bail test/index.js",
+				"format:fix": "prettier --write --parser typescript 'lib/**/*.ts' 'test/**/*.js'",
+				"format:check": "prettier --check --parser typescript 'lib/**/*.ts' 'test/**/*.js'",
+				"test:browser": "zuul test/index.js --no-coverage"
+			},
+			"lastModified": 0,
+			"_id": "socket.io-parser@4.0.1-rc3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-4.0.1-rc3.tgz",
+				"shasum": "cfb3d7ecdde5be90af37ca07a7ad86a38f2a28fa",
+				"integrity": "sha512-H85dvTVUOBMzquX5AojQvxRPCvH7jMkrhp2la+2gYn/uiS20sK1U8osWCMwU00oUITDUkjDTxLjw0fGkDTA76w==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIGjKkvxhusyv7vBYkyx0DcKy/dhSNbLA5Lrp70FnPjZNAiEA9zMmQXyw8ECe9corly1cW3QhsT6Btn7FJ9lKL7wmZ8k="
+					}
+				]
+			},
+			"_npmVersion": "6.14.8",
+			"_npmUser": {
+				"name": "darrachequesne",
+				"email": "damien.arrachequesne@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "412769fd18bd1a91258d3565701c9274399a3318",
+			"types": "./dist/index.d.ts",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/socket.io-parser_4.0.1-rc3_1603667894980_0.8311853911576967",
+				"host": "s3://npm-registry-packages"
+			},
+			"readmeFilename": "Readme.md",
+			"_nodeVersion": "12.19.0",
+			"contributors": []
+		},
+		"4.0.1-rc2": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "4.0.1-rc2",
+			"homepage": "https://github.com/socketio/socket.io-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/socketio/socket.io-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/socketio/socket.io-parser/issues"
+			},
+			"engines": {
+				"node": ">=10.0.0"
+			},
+			"main": "./dist/index.js",
+			"dependencies": {
+				"debug": "~4.1.0",
+				"component-emitter": "~1.3.0"
+			},
+			"devDependencies": {
+				"zuul": "3.11.1",
+				"mocha": "3.2.0",
+				"babelify": "~10.0.0",
+				"prettier": "^2.1.2",
+				"benchmark": "2.1.2",
+				"expect.js": "0.3.1",
+				"typescript": "^4.0.3",
+				"zuul-ngrok": "4.0.0",
+				"@babel/core": "~7.9.6",
+				"@types/node": "^14.11.1",
+				"@types/debug": "^4.1.5",
+				"@babel/preset-env": "~7.9.6",
+				"socket.io-browsers": "^1.0.0",
+				"@types/component-emitter": "^1.2.10"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				},
+				{
+					"name": "darrachequesne",
+					"email": "damien.arrachequesne@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run format:check && tsc && if test \"$BROWSERS\" = \"1\" ; then npm run test:browser; else npm run test:node; fi",
+				"prepack": "tsc",
+				"test:node": "mocha --reporter dot --bail test/index.js",
+				"format:fix": "prettier --write --parser typescript 'lib/**/*.ts' 'test/**/*.js'",
+				"format:check": "prettier --check --parser typescript 'lib/**/*.ts' 'test/**/*.js'",
+				"test:browser": "zuul test/index.js --no-coverage"
+			},
+			"lastModified": 0,
+			"_id": "socket.io-parser@4.0.1-rc2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-4.0.1-rc2.tgz",
+				"shasum": "70cf1b97eedf93957daaed0667f3723e4a699033",
+				"integrity": "sha512-aI20UWITf5vKgwA1HjCanYlM8cr2VDmOBiM3+1MM1MautnHAngiceuN0gUOtQs4MmWatuD2Td8g00EwHf3qthQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDj1lSlKIYoxTB/2Ei4yL6PoRkDPN8VvgGPKYz4yu7QGAIgf/96PstrwmnrV6RlTEvNDwxtFWjSG/9McREisVGN4SA="
+					}
+				]
+			},
+			"_npmVersion": "6.14.8",
+			"_npmUser": {
+				"name": "darrachequesne",
+				"email": "damien.arrachequesne@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "64b66482368e38382ea93409b95b4af299c45a5e",
+			"types": "./dist/index.d.ts",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/socket.io-parser_4.0.1-rc2_1602750338946_0.17932262684258116",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "12.19.0",
+			"contributors": []
+		},
+		"4.0.1-rc1": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "4.0.1-rc1",
+			"homepage": "https://github.com/socketio/socket.io-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/socketio/socket.io-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/socketio/socket.io-parser/issues"
+			},
+			"engines": {
+				"node": ">=10.0.0"
+			},
+			"main": "./dist/index.js",
+			"dependencies": {
+				"debug": "~4.1.0",
+				"component-emitter": "~1.3.0"
+			},
+			"devDependencies": {
+				"zuul": "3.11.1",
+				"mocha": "3.2.0",
+				"babelify": "~10.0.0",
+				"prettier": "^2.1.2",
+				"benchmark": "2.1.2",
+				"expect.js": "0.3.1",
+				"typescript": "^4.0.3",
+				"zuul-ngrok": "4.0.0",
+				"@babel/core": "~7.9.6",
+				"@types/node": "^14.11.1",
+				"@types/debug": "^4.1.5",
+				"@babel/preset-env": "~7.9.6",
+				"socket.io-browsers": "^1.0.0",
+				"@types/component-emitter": "^1.2.10"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				},
+				{
+					"name": "darrachequesne",
+					"email": "damien.arrachequesne@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run format:check && tsc && if test \"$BROWSERS\" = \"1\" ; then npm run test:browser; else npm run test:node; fi",
+				"prepack": "tsc",
+				"test:node": "mocha --reporter dot --bail test/index.js",
+				"format:fix": "prettier --write --parser typescript 'lib/**/*.ts' 'test/**/*.js'",
+				"format:check": "prettier --check --parser typescript 'lib/**/*.ts' 'test/**/*.js'",
+				"test:browser": "zuul test/index.js --no-coverage"
+			},
+			"lastModified": 0,
+			"_id": "socket.io-parser@4.0.1-rc1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-4.0.1-rc1.tgz",
+				"shasum": "80980a03b245462d614c75911970447990df9169",
+				"integrity": "sha512-bkOwROtXKg6Q4Si3vsZq4SOxxqN0ZZ9G1QhZ/oUtbAwVenCq/QbOFu3DcVZAIfVQfRgRJpyuq4RhGVOqGbi2Tg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDOiClM1B5crEP6QYBn9OXDZNobjNTalywm/7rCG8r+UgIhALZkU5uO7FVnzGcCC5gqKRuqMDNJaWbg72+QdjsF+5va"
+					}
+				]
+			},
+			"_npmVersion": "6.14.6",
+			"_npmUser": {
+				"name": "darrachequesne",
+				"email": "damien.arrachequesne@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "7fc3c422347b6ec33e3c3b3bf3671b825a41f18f",
+			"types": "./dist/index.d.ts",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/socket.io-parser_4.0.1-rc1_1602508999535_0.6838202678764804",
+				"host": "s3://npm-registry-packages"
+			},
+			"readmeFilename": "Readme.md",
+			"_nodeVersion": "12.18.3",
+			"contributors": []
+		},
+		"4.0.2": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "4.0.2",
+			"homepage": "https://github.com/socketio/socket.io-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/socketio/socket.io-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/socketio/socket.io-parser/issues"
+			},
+			"engines": {
+				"node": ">=10.0.0"
+			},
+			"main": "./dist/index.js",
+			"dependencies": {
+				"debug": "~4.1.0",
+				"component-emitter": "~1.3.0",
+				"@types/component-emitter": "^1.2.10"
+			},
+			"devDependencies": {
+				"zuul": "3.11.1",
+				"mocha": "3.2.0",
+				"rimraf": "^3.0.2",
+				"babelify": "~10.0.0",
+				"prettier": "^2.1.2",
+				"benchmark": "2.1.2",
+				"expect.js": "0.3.1",
+				"typescript": "^4.0.3",
+				"zuul-ngrok": "4.0.0",
+				"@babel/core": "~7.9.6",
+				"@types/node": "^14.11.1",
+				"@types/debug": "^4.1.5",
+				"@babel/preset-env": "~7.9.6",
+				"socket.io-browsers": "^1.0.0"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				},
+				{
+					"name": "darrachequesne",
+					"email": "damien.arrachequesne@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run format:check && npm run compile && if test \"$BROWSERS\" = \"1\" ; then npm run test:browser; else npm run test:node; fi",
+				"compile": "rimraf ./dist && tsc",
+				"prepack": "npm run compile",
+				"test:node": "mocha --reporter dot --bail test/index.js",
+				"format:fix": "prettier --write --parser typescript 'lib/**/*.ts' 'test/**/*.js'",
+				"format:check": "prettier --check --parser typescript 'lib/**/*.ts' 'test/**/*.js'",
+				"test:browser": "zuul test/index.js --no-coverage"
+			},
+			"lastModified": 0,
+			"_id": "socket.io-parser@4.0.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-4.0.2.tgz",
+				"shasum": "3d021a9c86671bb079e7c6c806db6a1d9b1bc780",
+				"integrity": "sha512-Bs3IYHDivwf+bAAuW/8xwJgIiBNtlvnjYRc4PbXgniLmcP1BrakBoq/QhO24rgtgW7VZ7uAaswRGxutUnlAK7g==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCID2CcirUR2t8wOnXssEQyJ5k50BX1KiOP+FYp6YZVBfjAiEAoOCNgxidAnrdDQko9pt72DJXkMRFhLOUYKZzkK5U+Ds="
+					}
+				]
+			},
+			"_npmVersion": "6.14.8",
+			"_npmUser": {
+				"name": "darrachequesne",
+				"email": "damien.arrachequesne@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "f2098b031d5191f10ec8b66e3c659b702302d577",
+			"types": "./dist/index.d.ts",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/socket.io-parser_4.0.2_1606298470431_0.31318221322262163",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "12.19.0",
+			"contributors": []
+		},
+		"4.2.0": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "4.2.0",
+			"homepage": "https://github.com/socketio/socket.io-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/socketio/socket.io-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/socketio/socket.io-parser/issues"
+			},
+			"engines": {
+				"node": ">=10.0.0"
+			},
+			"main": "./build/cjs/index.js",
+			"dependencies": {
+				"debug": "~4.3.1",
+				"@socket.io/component-emitter": "~3.1.0"
+			},
+			"devDependencies": {
+				"zuul": "3.11.1",
+				"mocha": "3.2.0",
+				"rimraf": "^3.0.2",
+				"babelify": "~10.0.0",
+				"prettier": "^2.1.2",
+				"benchmark": "2.1.2",
+				"expect.js": "0.3.1",
+				"typescript": "^4.0.3",
+				"zuul-ngrok": "4.0.0",
+				"@babel/core": "~7.9.6",
+				"@types/node": "^14.11.1",
+				"@types/debug": "^4.1.5",
+				"@babel/preset-env": "~7.9.6",
+				"socket.io-browsers": "^1.0.0"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				},
+				{
+					"name": "darrachequesne",
+					"email": "damien.arrachequesne@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run format:check && npm run compile && if test \"$BROWSERS\" = \"1\" ; then npm run test:browser; else npm run test:node; fi",
+				"compile": "rimraf ./build && tsc && tsc -p tsconfig.esm.json && ./postcompile.sh",
+				"prepack": "npm run compile",
+				"test:node": "mocha --reporter dot --bail test/index.js",
+				"format:fix": "prettier --write --parser typescript 'lib/**/*.ts' 'test/**/*.js'",
+				"format:check": "prettier --check --parser typescript 'lib/**/*.ts' 'test/**/*.js'",
+				"test:browser": "zuul test/index.js --no-coverage"
+			},
+			"lastModified": 0,
+			"_id": "socket.io-parser@4.2.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-4.2.0.tgz",
+				"shasum": "3f01e5bc525d94aa52a97ed5cbc12e229bbc4d6b",
+				"integrity": "sha512-tLfmEwcEwnlQTxFB7jibL/q2+q8dlVQzj4JdRLJ/W/G1+Fu9VSxCx1Lo+n1HvXxKnM//dUuD0xgiA7tQf57Vng==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCK95fiNt0TmxMqPC81upA1KVYmFUhouk677OmGbLJY4gIgDBG5ZLSiPbVI5PYP0f4rRAZTG+af8tzS4P3vW1PrOzU="
+					}
+				]
+			},
+			"_npmVersion": "8.1.2",
+			"_npmUser": {
+				"name": "darrachequesne",
+				"email": "damien.arrachequesne@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "c7514b5aa638d8b779c72a1172a2a694e97b15b7",
+			"types": "./build/esm/index.d.ts",
+			"exports": {
+				"import": {
+					"node": "./build/esm-debug/index.js",
+					"default": "./build/esm/index.js"
+				},
+				"require": "./build/cjs/index.js"
+			},
+			"module": "./build/esm/index.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/socket.io-parser_4.2.0_1650234435434_0.17027970054567643",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "16.13.1",
+			"contributors": []
+		},
+		"4.0.3": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "4.0.3",
+			"homepage": "https://github.com/socketio/socket.io-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/socketio/socket.io-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/socketio/socket.io-parser/issues"
+			},
+			"engines": {
+				"node": ">=10.0.0"
+			},
+			"main": "./dist/index.js",
+			"dependencies": {
+				"debug": "~4.3.1",
+				"component-emitter": "~1.3.0",
+				"@types/component-emitter": "^1.2.10"
+			},
+			"devDependencies": {
+				"zuul": "3.11.1",
+				"mocha": "3.2.0",
+				"rimraf": "^3.0.2",
+				"babelify": "~10.0.0",
+				"prettier": "^2.1.2",
+				"benchmark": "2.1.2",
+				"expect.js": "0.3.1",
+				"typescript": "^4.0.3",
+				"zuul-ngrok": "4.0.0",
+				"@babel/core": "~7.9.6",
+				"@types/node": "^14.11.1",
+				"@types/debug": "^4.1.5",
+				"@babel/preset-env": "~7.9.6",
+				"socket.io-browsers": "^1.0.0"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				},
+				{
+					"name": "darrachequesne",
+					"email": "damien.arrachequesne@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run format:check && npm run compile && if test \"$BROWSERS\" = \"1\" ; then npm run test:browser; else npm run test:node; fi",
+				"compile": "rimraf ./dist && tsc",
+				"prepack": "npm run compile",
+				"test:node": "mocha --reporter dot --bail test/index.js",
+				"format:fix": "prettier --write --parser typescript 'lib/**/*.ts' 'test/**/*.js'",
+				"format:check": "prettier --check --parser typescript 'lib/**/*.ts' 'test/**/*.js'",
+				"test:browser": "zuul test/index.js --no-coverage"
+			},
+			"lastModified": 0,
+			"_id": "socket.io-parser@4.0.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-4.0.3.tgz",
+				"shasum": "2c494f2de1e7c1b40a14ba1512227e9798d8b10e",
+				"integrity": "sha512-m4ybFiP4UYVORRt7jcdqf8UWx+ywVdAqqsJyruXxAdD3Sv6MDemijWij34mOWdMJ55bEdIb9jACBhxUgNK6sxw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCi1vAtzXqLcovq11+egP9IrfPe0KjGXipWyJzAJiC0wAIgAQ6vBaBjI/3POBvKzzwH3MyaY7iCfz5U0+VtJz5+Dso="
+					}
+				]
+			},
+			"_npmVersion": "6.14.8",
+			"_npmUser": {
+				"name": "darrachequesne",
+				"email": "damien.arrachequesne@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "444520d6cdc78b1abbe3bd684dc3723b5e22d196",
+			"types": "./dist/index.d.ts",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/socket.io-parser_4.0.3_1609842420195_0.7275875797816962",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "12.19.0",
+			"contributors": []
+		},
+		"4.2.1": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "4.2.1",
+			"homepage": "https://github.com/socketio/socket.io-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/socketio/socket.io-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/socketio/socket.io-parser/issues"
+			},
+			"engines": {
+				"node": ">=10.0.0"
+			},
+			"main": "./build/cjs/index.js",
+			"dependencies": {
+				"debug": "~4.3.1",
+				"@socket.io/component-emitter": "~3.1.0"
+			},
+			"devDependencies": {
+				"zuul": "3.11.1",
+				"mocha": "3.2.0",
+				"rimraf": "^3.0.2",
+				"babelify": "~10.0.0",
+				"prettier": "^2.1.2",
+				"benchmark": "2.1.2",
+				"expect.js": "0.3.1",
+				"typescript": "^4.0.3",
+				"zuul-ngrok": "4.0.0",
+				"@babel/core": "~7.9.6",
+				"@types/node": "^14.11.1",
+				"@types/debug": "^4.1.5",
+				"@babel/preset-env": "~7.9.6",
+				"socket.io-browsers": "^1.0.0"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				},
+				{
+					"name": "darrachequesne",
+					"email": "damien.arrachequesne@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run format:check && npm run compile && if test \"$BROWSERS\" = \"1\" ; then npm run test:browser; else npm run test:node; fi",
+				"compile": "rimraf ./build && tsc && tsc -p tsconfig.esm.json && ./postcompile.sh",
+				"prepack": "npm run compile",
+				"test:node": "mocha --reporter dot --bail test/index.js",
+				"format:fix": "prettier --write --parser typescript 'lib/**/*.ts' 'test/**/*.js'",
+				"format:check": "prettier --check --parser typescript 'lib/**/*.ts' 'test/**/*.js'",
+				"test:browser": "zuul test/index.js --no-coverage"
+			},
+			"lastModified": 0,
+			"_id": "socket.io-parser@4.2.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-4.2.1.tgz",
+				"shasum": "01c96efa11ded938dcb21cbe590c26af5eff65e5",
+				"integrity": "sha512-V4GrkLy+HeF1F/en3SpUaM+7XxYXpuMUWLGde1kSSh5nQMN4hLrbPIkD+otwh6q9R6NOQBN4AMaOZ2zVjui82g==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIEQ1LUNMaDP1bKyrkQoR+m10F/Y1IwjXtyDywgU1LKxTAiA7MrSl1kh1I0zInIpTajyD7gY389BXaPqQ4og+OpzDLA=="
+					}
+				]
+			},
+			"_npmVersion": "8.11.0",
+			"_npmUser": {
+				"name": "darrachequesne",
+				"email": "damien.arrachequesne@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "5a2ccff9d1d8fdbadd3faad9290a9e3b165cf9a2",
+			"types": "./build/esm/index.d.ts",
+			"exports": {
+				"import": {
+					"node": "./build/esm-debug/index.js",
+					"default": "./build/esm/index.js"
+				},
+				"require": "./build/cjs/index.js"
+			},
+			"module": "./build/esm/index.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/socket.io-parser_4.2.1_1656337406296_0.2888559866301885",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "16.15.1",
+			"contributors": []
+		},
+		"4.0.0": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "4.0.0",
+			"homepage": "https://github.com/socketio/socket.io-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/socketio/socket.io-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/socketio/socket.io-parser/issues"
+			},
+			"engines": {
+				"node": ">=10.0.0"
+			},
+			"main": "./dist/index.js",
+			"dependencies": {
+				"debug": "~4.1.0",
+				"component-emitter": "~1.3.0"
+			},
+			"devDependencies": {
+				"zuul": "3.11.1",
+				"mocha": "3.2.0",
+				"babelify": "~10.0.0",
+				"prettier": "^2.1.2",
+				"benchmark": "2.1.2",
+				"expect.js": "0.3.1",
+				"typescript": "^4.0.3",
+				"zuul-ngrok": "4.0.0",
+				"@babel/core": "~7.9.6",
+				"@types/node": "^14.11.1",
+				"@types/debug": "^4.1.5",
+				"@babel/preset-env": "~7.9.6",
+				"socket.io-browsers": "^1.0.0",
+				"@types/component-emitter": "^1.2.10"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				},
+				{
+					"name": "darrachequesne",
+					"email": "damien.arrachequesne@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run format:check && tsc && if test \"$BROWSERS\" = \"1\" ; then npm run test:browser; else npm run test:node; fi",
+				"test:node": "mocha --reporter dot --bail test/index.js",
+				"format:fix": "prettier --write --parser typescript 'lib/**/*.ts' 'test/**/*.js'",
+				"format:check": "prettier --check --parser typescript 'lib/**/*.ts' 'test/**/*.js'",
+				"test:browser": "zuul test/index.js --no-coverage"
+			},
+			"lastModified": 0,
+			"_id": "socket.io-parser@4.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-4.0.0.tgz",
+				"shasum": "678de0a56a7e332235f876b718cd0e3ab106d731",
+				"integrity": "sha512-uH2Pfy9AeKCokfhMRQ74aZ2/dXv14AJ83Fzzz7zbq9rRpM+1NGHWI8iGcrP4E0MxKEvh7LochViCEX8cU+5DWg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIGF/ZvhYuoRLIq5tr+2m3n4ml78PwwmLApCBFzvnp7vDAiEAxYIs2I/84FrFisSE2xWa0ditY+yn1X5bbdArf0VDmkI="
+					}
+				]
+			},
+			"_npmVersion": "6.14.6",
+			"_npmUser": {
+				"name": "darrachequesne",
+				"email": "damien.arrachequesne@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "c04d7f5c47ed712eb0f56cfc1a859f1aaa828f1e",
+			"types": "./dist/index.d.ts",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/socket.io-parser_4.0.0_1601297771862_0.07798122580779054",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "12.18.3",
+			"contributors": []
+		},
+		"4.0.1": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "4.0.1",
+			"homepage": "https://github.com/socketio/socket.io-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/socketio/socket.io-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/socketio/socket.io-parser/issues"
+			},
+			"engines": {
+				"node": ">=10.0.0"
+			},
+			"main": "./dist/index.js",
+			"dependencies": {
+				"debug": "~4.1.0",
+				"component-emitter": "~1.3.0"
+			},
+			"devDependencies": {
+				"zuul": "3.11.1",
+				"mocha": "3.2.0",
+				"babelify": "~10.0.0",
+				"prettier": "^2.1.2",
+				"benchmark": "2.1.2",
+				"expect.js": "0.3.1",
+				"typescript": "^4.0.3",
+				"zuul-ngrok": "4.0.0",
+				"@babel/core": "~7.9.6",
+				"@types/node": "^14.11.1",
+				"@types/debug": "^4.1.5",
+				"@babel/preset-env": "~7.9.6",
+				"socket.io-browsers": "^1.0.0",
+				"@types/component-emitter": "^1.2.10"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				},
+				{
+					"name": "darrachequesne",
+					"email": "damien.arrachequesne@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run format:check && tsc && if test \"$BROWSERS\" = \"1\" ; then npm run test:browser; else npm run test:node; fi",
+				"prepack": "tsc",
+				"test:node": "mocha --reporter dot --bail test/index.js",
+				"format:fix": "prettier --write --parser typescript 'lib/**/*.ts' 'test/**/*.js'",
+				"format:check": "prettier --check --parser typescript 'lib/**/*.ts' 'test/**/*.js'",
+				"test:browser": "zuul test/index.js --no-coverage"
+			},
+			"lastModified": 0,
+			"_id": "socket.io-parser@4.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-4.0.1.tgz",
+				"shasum": "b8ec84364c7369ad32ae0c16dd4d388db19b3a04",
+				"integrity": "sha512-5JfNykYptCwU2lkOI0ieoePWm+6stEhkZ2UnLDjqnE1YEjUlXXLd1lpxPZ+g+h3rtaytwWkWrLQCaJULlGqjOg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIHnORQ99XOibp+3KpBGPsvI4t0s7V45Tfuyu3LOb9a+6AiEAwxS/AE+2ZcBf/wB5yJCgjX4C4K1qUEb8rFrHtdGodhQ="
+					}
+				]
+			},
+			"_npmVersion": "6.14.8",
+			"_npmUser": {
+				"name": "darrachequesne",
+				"email": "damien.arrachequesne@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "e33932365443b8203198ad7cc2af5f856a63600e",
+			"types": "./dist/index.d.ts",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/socket.io-parser_4.0.1_1604588903839_0.038952370416422744",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "12.19.0",
+			"contributors": []
+		},
+		"4.2.4": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "4.2.4",
+			"homepage": "https://github.com/socketio/socket.io-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/socketio/socket.io-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/socketio/socket.io-parser/issues"
+			},
+			"engines": {
+				"node": ">=10.0.0"
+			},
+			"main": "./build/cjs/index.js",
+			"dependencies": {
+				"debug": "~4.3.1",
+				"@socket.io/component-emitter": "~3.1.0"
+			},
+			"devDependencies": {
+				"mocha": "^10.1.0",
+				"rimraf": "^3.0.2",
+				"prettier": "^2.1.2",
+				"@wdio/cli": "^7.26.0",
+				"benchmark": "2.1.2",
+				"expect.js": "0.3.1",
+				"typescript": "^4.0.3",
+				"@babel/core": "~7.9.6",
+				"@types/node": "^14.11.1",
+				"@types/debug": "^4.1.5",
+				"@babel/register": "^7.18.9",
+				"@babel/preset-env": "~7.9.6",
+				"@wdio/local-runner": "^7.26.0",
+				"@wdio/sauce-service": "^7.26.0",
+				"@wdio/spec-reporter": "^7.26.0",
+				"@wdio/mocha-framework": "^7.26.0",
+				"wdio-geckodriver-service": "^4.0.0"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				},
+				{
+					"name": "darrachequesne",
+					"email": "damien.arrachequesne@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run format:check && npm run compile && if test \"$BROWSERS\" = \"1\" ; then npm run test:browser; else npm run test:node; fi",
+				"compile": "rimraf ./build && tsc && tsc -p tsconfig.esm.json && ./postcompile.sh",
+				"prepack": "npm run compile",
+				"test:node": "mocha --reporter dot --bail test/index.js",
+				"format:fix": "prettier --write --parser typescript '*.js' 'lib/**/*.ts' 'test/**/*.js'",
+				"format:check": "prettier --check --parser typescript '*.js' 'lib/**/*.ts' 'test/**/*.js'",
+				"test:browser": "wdio"
+			},
+			"lastModified": 0,
+			"_id": "socket.io-parser@4.2.4",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-4.2.4.tgz",
+				"shasum": "c806966cf7270601e47469ddeec30fbdfda44c83",
+				"integrity": "sha512-/GbIKmo8ioc+NIWIhwdecY0ge+qVBSMdgxGygevmdHj24bsfgtCmcUUcQ5ZzcylGFHsN3k4HB4Cgkl96KVnuew==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIDD13o4FAIop03TYL5FgWVay07F+bmKdlHfBTMkMF4ehAiAeIVvRBdWxzWakZ49YsgA+HUQQ9rt8Dj8PXdX8nqeWPQ=="
+					}
+				]
+			},
+			"_npmVersion": "8.11.0",
+			"_npmUser": {
+				"name": "darrachequesne",
+				"email": "damien.arrachequesne@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "164ba2a11edc34c2f363401e9768f9a8541a8b89",
+			"types": "./build/esm/index.d.ts",
+			"exports": {
+				"import": {
+					"node": "./build/esm-debug/index.js",
+					"default": "./build/esm/index.js"
+				},
+				"require": "./build/cjs/index.js"
+			},
+			"module": "./build/esm/index.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/socket.io-parser_4.2.4_1685523443697_0.09160402228678488",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "16.15.1",
+			"contributors": []
+		},
+		"4.2.5": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "4.2.5",
+			"homepage": "https://github.com/socketio/socket.io/tree/main/packages/socket.io-client#readme",
+			"repository": {
+				"url": "git+https://github.com/socketio/socket.io.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/socketio/socket.io/issues"
+			},
+			"engines": {
+				"node": ">=10.0.0"
+			},
+			"main": "./build/cjs/index.js",
+			"dependencies": {
+				"debug": "~4.4.1",
+				"@socket.io/component-emitter": "~3.1.0"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				},
+				{
+					"name": "darrachequesne",
+					"email": "damien.arrachequesne@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run format:check && npm run compile && if test \"$BROWSERS\" = \"1\" ; then npm run test:browser; else npm run test:node; fi",
+				"compile": "rimraf ./build && tsc && tsc -p tsconfig.esm.json && ./postcompile.sh",
+				"prepack": "npm run compile",
+				"test:node": "mocha --reporter dot --bail test/index.js",
+				"format:fix": "prettier --write --parser typescript '*.js' 'lib/**/*.ts' 'test/**/*.js'",
+				"format:check": "prettier --check --parser typescript '*.js' 'lib/**/*.ts' 'test/**/*.js'",
+				"test:browser": "wdio"
+			},
+			"lastModified": 0,
+			"_id": "socket.io-parser@4.2.5",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-4.2.5.tgz",
+				"shasum": "3f41b8d369129a93268f2abecba94b5292850099",
+				"integrity": "sha512-bPMmpy/5WWKHea5Y/jYAP6k74A+hvmRCQaJuJB6I/ML5JZq/KfNieUVo/3Mh7SAqn7TyFdIo6wqYHInG1MU1bQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEUCIDxis5cIEbuyCW/QaOqaHMWu7Izh0Bj3lNDT7LV5FdMxAiEA922vKDBAXs+16Ptm85veEr0cmcL+9AZyj7TGJN2eHoY="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/socket.io-parser@4.2.5",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "11.6.2",
+			"_npmUser": {
+				"name": "GitHub Actions",
+				"email": "npm-oidc-no-reply@github.com",
+				"trustedPublisher": {
+					"id": "github",
+					"oidcConfigId": "oidc:31e33aa9-513e-461c-90ed-24cd65e19f1b"
+				}
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "ee9aac31342da4ccad8e9bfe5b98081701037f32",
+			"types": "./build/esm/index.d.ts",
+			"exports": {
+				"import": {
+					"node": "./build/esm-debug/index.js",
+					"default": "./build/esm/index.js",
+					"development": "./build/esm-debug/index.js"
+				},
+				"require": "./build/cjs/index.js"
+			},
+			"module": "./build/esm/index.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/socket.io-parser_4.2.5_1766489356065_0.9904628679854592",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"_nodeVersion": "24.12.0",
+			"contributors": []
+		},
+		"4.0.4": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "4.0.4",
+			"homepage": "https://github.com/socketio/socket.io-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/socketio/socket.io-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/socketio/socket.io-parser/issues"
+			},
+			"engines": {
+				"node": ">=10.0.0"
+			},
+			"main": "./dist/index.js",
+			"dependencies": {
+				"debug": "~4.3.1",
+				"component-emitter": "~1.3.0",
+				"@types/component-emitter": "^1.2.10"
+			},
+			"devDependencies": {
+				"zuul": "3.11.1",
+				"mocha": "3.2.0",
+				"rimraf": "^3.0.2",
+				"babelify": "~10.0.0",
+				"prettier": "^2.1.2",
+				"benchmark": "2.1.2",
+				"expect.js": "0.3.1",
+				"typescript": "^4.0.3",
+				"zuul-ngrok": "4.0.0",
+				"@babel/core": "~7.9.6",
+				"@types/node": "^14.11.1",
+				"@types/debug": "^4.1.5",
+				"@babel/preset-env": "~7.9.6",
+				"socket.io-browsers": "^1.0.0"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				},
+				{
+					"name": "darrachequesne",
+					"email": "damien.arrachequesne@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run format:check && npm run compile && if test \"$BROWSERS\" = \"1\" ; then npm run test:browser; else npm run test:node; fi",
+				"compile": "rimraf ./dist && tsc",
+				"prepack": "npm run compile",
+				"test:node": "mocha --reporter dot --bail test/index.js",
+				"format:fix": "prettier --write --parser typescript 'lib/**/*.ts' 'test/**/*.js'",
+				"format:check": "prettier --check --parser typescript 'lib/**/*.ts' 'test/**/*.js'",
+				"test:browser": "zuul test/index.js --no-coverage"
+			},
+			"lastModified": 0,
+			"_id": "socket.io-parser@4.0.4",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-4.0.4.tgz",
+				"shasum": "9ea21b0d61508d18196ef04a2c6b9ab630f4c2b0",
+				"integrity": "sha512-t+b0SS+IxG7Rxzda2EVvyBZbvFPBCjJoyHuE0P//7OAsN23GItzDRdWa6ALxZI/8R5ygK7jAR6t028/z+7295g==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCICXHbicpHsH6h77mnDu+MpklYWZrOX3fM9HAeM7uLB7eAiBpQJwscqVRXDwD7b+c/7enrSHl27IscOuBurKl4DuoQg=="
+					}
+				]
+			},
+			"_npmVersion": "6.14.8",
+			"_npmUser": {
+				"name": "darrachequesne",
+				"email": "damien.arrachequesne@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "af1b23ca85fb64a0d7a050abd0362c5f632ce429",
+			"types": "./dist/index.d.ts",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/socket.io-parser_4.0.4_1610671566472_0.5009076872005831",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "12.19.0",
+			"contributors": []
+		},
+		"4.2.2": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "4.2.2",
+			"homepage": "https://github.com/socketio/socket.io-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/socketio/socket.io-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/socketio/socket.io-parser/issues"
+			},
+			"engines": {
+				"node": ">=10.0.0"
+			},
+			"main": "./build/cjs/index.js",
+			"dependencies": {
+				"debug": "~4.3.1",
+				"@socket.io/component-emitter": "~3.1.0"
+			},
+			"devDependencies": {
+				"mocha": "^10.1.0",
+				"rimraf": "^3.0.2",
+				"prettier": "^2.1.2",
+				"@wdio/cli": "^7.26.0",
+				"benchmark": "2.1.2",
+				"expect.js": "0.3.1",
+				"typescript": "^4.0.3",
+				"@babel/core": "~7.9.6",
+				"@types/node": "^14.11.1",
+				"@types/debug": "^4.1.5",
+				"@babel/register": "^7.18.9",
+				"@babel/preset-env": "~7.9.6",
+				"@wdio/local-runner": "^7.26.0",
+				"@wdio/sauce-service": "^7.26.0",
+				"@wdio/spec-reporter": "^7.26.0",
+				"@wdio/mocha-framework": "^7.26.0",
+				"wdio-geckodriver-service": "^4.0.0"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				},
+				{
+					"name": "darrachequesne",
+					"email": "damien.arrachequesne@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run format:check && npm run compile && if test \"$BROWSERS\" = \"1\" ; then npm run test:browser; else npm run test:node; fi",
+				"compile": "rimraf ./build && tsc && tsc -p tsconfig.esm.json && ./postcompile.sh",
+				"prepack": "npm run compile",
+				"test:node": "mocha --reporter dot --bail test/index.js",
+				"format:fix": "prettier --write --parser typescript '*.js' 'lib/**/*.ts' 'test/**/*.js'",
+				"format:check": "prettier --check --parser typescript '*.js' 'lib/**/*.ts' 'test/**/*.js'",
+				"test:browser": "wdio"
+			},
+			"lastModified": 0,
+			"_id": "socket.io-parser@4.2.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-4.2.2.tgz",
+				"shasum": "1dd384019e25b7a3d374877f492ab34f2ad0d206",
+				"integrity": "sha512-DJtziuKypFkMMHCm2uIshOYC7QaylbtzQwiMYDuCKy3OPkjLzu4B2vAhTlqipRHHzrI0NJeBAizTK7X+6m1jVw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIF+HT4UBh+cXM/GwZsCFR28MtLfyQ+/HYuHzDvARAFzNAiEA1p2TsX+4xI+D+BzYSXne0zCNMB1xQBX+QP+weLJBo+E="
+					}
+				]
+			},
+			"_npmVersion": "8.11.0",
+			"_npmUser": {
+				"name": "darrachequesne",
+				"email": "damien.arrachequesne@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "28dd6685021353b26a4b022e25b453c627d0a7e8",
+			"types": "./build/esm/index.d.ts",
+			"exports": {
+				"import": {
+					"node": "./build/esm-debug/index.js",
+					"default": "./build/esm/index.js"
+				},
+				"require": "./build/cjs/index.js"
+			},
+			"module": "./build/esm/index.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/socket.io-parser_4.2.2_1674121811361_0.8671322070825747",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "16.15.1",
+			"contributors": []
+		},
+		"4.0.5": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "4.0.5",
+			"homepage": "https://github.com/socketio/socket.io-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/socketio/socket.io-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/socketio/socket.io-parser/issues"
+			},
+			"engines": {
+				"node": ">=10.0.0"
+			},
+			"main": "./dist/index.js",
+			"dependencies": {
+				"debug": "~4.3.1",
+				"component-emitter": "~1.3.0",
+				"@types/component-emitter": "^1.2.10"
+			},
+			"devDependencies": {
+				"zuul": "3.11.1",
+				"mocha": "3.2.0",
+				"rimraf": "^3.0.2",
+				"babelify": "~10.0.0",
+				"prettier": "^2.1.2",
+				"benchmark": "2.1.2",
+				"expect.js": "0.3.1",
+				"typescript": "^4.0.3",
+				"zuul-ngrok": "4.0.0",
+				"@babel/core": "~7.9.6",
+				"@types/node": "^14.11.1",
+				"@types/debug": "^4.1.5",
+				"@babel/preset-env": "~7.9.6",
+				"socket.io-browsers": "^1.0.0"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				},
+				{
+					"name": "darrachequesne",
+					"email": "damien.arrachequesne@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run format:check && npm run compile && if test \"$BROWSERS\" = \"1\" ; then npm run test:browser; else npm run test:node; fi",
+				"compile": "rimraf ./dist && tsc",
+				"prepack": "npm run compile",
+				"test:node": "mocha --reporter dot --bail test/index.js",
+				"format:fix": "prettier --write --parser typescript 'lib/**/*.ts' 'test/**/*.js'",
+				"format:check": "prettier --check --parser typescript 'lib/**/*.ts' 'test/**/*.js'",
+				"test:browser": "zuul test/index.js --no-coverage"
+			},
+			"lastModified": 0,
+			"_id": "socket.io-parser@4.0.5",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-4.0.5.tgz",
+				"shasum": "cb404382c32324cc962f27f3a44058cf6e0552df",
+				"integrity": "sha512-sNjbT9dX63nqUFIOv95tTVm6elyIU4RvB1m8dOeZt+IgWwcWklFDOdmGcfo3zSiRsnR/3pJkjY5lfoGqEe4Eig==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIE9izuDpafH4dbOcZAdaSR1qQnyhMfxEuk3P6ntBmv1KAiEA09MQBdGV2Yh4LT17P3Px7zn3GBu0Z5dYnfJC6AUAdW0="
+					}
+				]
+			},
+			"_npmVersion": "8.11.0",
+			"_npmUser": {
+				"name": "darrachequesne",
+				"email": "damien.arrachequesne@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "f3329eb5a46b215a3fdf91b6008c56cf177a4124",
+			"types": "./dist/index.d.ts",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/socket.io-parser_4.0.5_1656338082334_0.9654632120854212",
+				"host": "s3://npm-registry-packages"
+			},
+			"readmeFilename": "Readme.md",
+			"_nodeVersion": "16.15.1",
+			"contributors": []
+		},
+		"4.2.3": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "4.2.3",
+			"homepage": "https://github.com/socketio/socket.io-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/socketio/socket.io-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/socketio/socket.io-parser/issues"
+			},
+			"engines": {
+				"node": ">=10.0.0"
+			},
+			"main": "./build/cjs/index.js",
+			"dependencies": {
+				"debug": "~4.3.1",
+				"@socket.io/component-emitter": "~3.1.0"
+			},
+			"devDependencies": {
+				"mocha": "^10.1.0",
+				"rimraf": "^3.0.2",
+				"prettier": "^2.1.2",
+				"@wdio/cli": "^7.26.0",
+				"benchmark": "2.1.2",
+				"expect.js": "0.3.1",
+				"typescript": "^4.0.3",
+				"@babel/core": "~7.9.6",
+				"@types/node": "^14.11.1",
+				"@types/debug": "^4.1.5",
+				"@babel/register": "^7.18.9",
+				"@babel/preset-env": "~7.9.6",
+				"@wdio/local-runner": "^7.26.0",
+				"@wdio/sauce-service": "^7.26.0",
+				"@wdio/spec-reporter": "^7.26.0",
+				"@wdio/mocha-framework": "^7.26.0",
+				"wdio-geckodriver-service": "^4.0.0"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				},
+				{
+					"name": "darrachequesne",
+					"email": "damien.arrachequesne@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run format:check && npm run compile && if test \"$BROWSERS\" = \"1\" ; then npm run test:browser; else npm run test:node; fi",
+				"compile": "rimraf ./build && tsc && tsc -p tsconfig.esm.json && ./postcompile.sh",
+				"prepack": "npm run compile",
+				"test:node": "mocha --reporter dot --bail test/index.js",
+				"format:fix": "prettier --write --parser typescript '*.js' 'lib/**/*.ts' 'test/**/*.js'",
+				"format:check": "prettier --check --parser typescript '*.js' 'lib/**/*.ts' 'test/**/*.js'",
+				"test:browser": "wdio"
+			},
+			"lastModified": 0,
+			"_id": "socket.io-parser@4.2.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-4.2.3.tgz",
+				"shasum": "926bcc6658e2ae0883dc9dee69acbdc76e4e3667",
+				"integrity": "sha512-JMafRntWVO2DCJimKsRTh/wnqVvO4hrfwOqtO7f+uzwsQMuxO6VwImtYxaQ+ieoyshWOTJyV0fA21lccEXRPpQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQCAUkNo1htuyheH8LyVGuwn0T/kG3mXOORLOWik8Ns4EAIhAIaftw8PQYh45d5DM8LMwPkcFab5S3Q9VxupBR//RyP7"
+					}
+				]
+			},
+			"_npmVersion": "8.11.0",
+			"_npmUser": {
+				"name": "darrachequesne",
+				"email": "damien.arrachequesne@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "8f4d929b63f2384597ba92770d400034f7c13591",
+			"types": "./build/esm/index.d.ts",
+			"exports": {
+				"import": {
+					"node": "./build/esm-debug/index.js",
+					"default": "./build/esm/index.js"
+				},
+				"require": "./build/cjs/index.js"
+			},
+			"module": "./build/esm/index.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/socket.io-parser_4.2.3_1684736688763_0.7893118532802346",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "16.15.1",
+			"contributors": []
+		},
+		"3.0.0": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "3.0.0",
+			"homepage": "https://github.com/Automattic/socket.io-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/Automattic/socket.io-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/Automattic/socket.io-parser/issues"
+			},
+			"dependencies": {
+				"debug": "2.3.3",
+				"isarray": "2.0.1",
+				"component-emitter": "1.2.1"
+			},
+			"devDependencies": {
+				"zuul": "3.11.1",
+				"mocha": "3.2.0",
+				"benchmark": "2.1.2",
+				"expect.js": "0.3.1",
+				"zuul-ngrok": "4.0.0",
+				"socket.io-browsers": "^1.0.0"
+			},
+			"license": "MIT",
+			"files": [
+				"binary.js",
+				"index.js",
+				"is-buffer.js"
+			],
+			"maintainers": [
+				{
+					"name": "darrachequesne",
+					"email": "damien.arrachequesne@gmail.com"
+				},
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "make test"
+			},
+			"lastModified": 0,
+			"_id": "socket.io-parser@3.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-3.0.0.tgz",
+				"shasum": "19c1cd4582b8a0b729ec013af744465e0f1400bc",
+				"integrity": "sha512-Ud7nf89gw2WMirwOd3zKw5UMAvtEBPm+UB3M9k0ZwW8mT2i2u3C5D/MOZ76coohnrErGLkA2nYxDjKQzj6gGqw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEMCIE8J0X/f0+xyFS9HF99be70TgnXgcwewqGkWdWU6f97CAh9T5pV2E7iAbv0ZbovH9Sm8St+C8kwcfR51Lpp0+k3m"
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "3.10.10",
+			"_npmUser": {
+				"name": "darrachequesne",
+				"email": "damien.arrachequesne@gmail.com"
+			},
+			"gitHead": "817adca41d77d8b717fcfae622e89b6fc6c50a92",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/socket.io-parser-3.0.0.tgz_1491256377575_0.5008517696987838",
+				"host": "packages-18-east.internal.npmjs.com"
+			},
+			"_shasum": "19c1cd4582b8a0b729ec013af744465e0f1400bc",
+			"_nodeVersion": "6.9.4",
+			"contributors": []
+		},
+		"3.4.1": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "3.4.1",
+			"homepage": "https://github.com/socketio/socket.io-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/socketio/socket.io-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/socketio/socket.io-parser/issues"
+			},
+			"dependencies": {
+				"debug": "~4.1.0",
+				"isarray": "2.0.1",
+				"component-emitter": "1.2.1"
+			},
+			"devDependencies": {
+				"zuul": "3.11.1",
+				"mocha": "3.2.0",
+				"babelify": "~10.0.0",
+				"benchmark": "2.1.2",
+				"expect.js": "0.3.1",
+				"zuul-ngrok": "4.0.0",
+				"@babel/core": "~7.9.6",
+				"@babel/preset-env": "~7.9.6",
+				"socket.io-browsers": "^1.0.0"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "darrachequesne",
+					"email": "damien.arrachequesne@gmail.com"
+				},
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "make test"
+			},
+			"lastModified": 0,
+			"_id": "socket.io-parser@3.4.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-3.4.1.tgz",
+				"shasum": "b06af838302975837eab2dc980037da24054d64a",
+				"integrity": "sha512-11hMgzL+WCLWf1uFtHSNvliI++tcRUWdoeYuwIl+Axvwy9z2gQM+7nJyN3STj1tLj5JyIUH8/gpDGxzAlDdi0A==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCICGAE9zdzShNhf1Y09XZusMP0xRf9yg7s3feLkXA40BWAiEAg8qopX+J+RsYsnT9ynicZHB/ws6SdOtMua1jIR4BoW4="
+					}
+				]
+			},
+			"_npmVersion": "6.9.0",
+			"_npmUser": {
+				"name": "darrachequesne",
+				"email": "damien.arrachequesne@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "a8130ce3a9682498bf986a0c3e4a53f9cf2ef965",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/socket.io-parser_3.4.1_1589349612071_0.23606581333925036",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "10.16.0",
+			"contributors": []
+		},
+		"3.4.2": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "3.4.2",
+			"homepage": "https://github.com/socketio/socket.io-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/socketio/socket.io-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/socketio/socket.io-parser/issues"
+			},
+			"engines": {
+				"node": ">=10.0.0"
+			},
+			"dependencies": {
+				"debug": "~4.1.0",
+				"isarray": "2.0.1",
+				"component-emitter": "1.2.1"
+			},
+			"devDependencies": {
+				"zuul": "3.11.1",
+				"mocha": "3.2.0",
+				"babelify": "~10.0.0",
+				"benchmark": "2.1.2",
+				"expect.js": "0.3.1",
+				"zuul-ngrok": "4.0.0",
+				"@babel/core": "~7.9.6",
+				"@babel/preset-env": "~7.9.6",
+				"socket.io-browsers": "^1.0.0"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				},
+				{
+					"name": "darrachequesne",
+					"email": "damien.arrachequesne@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "make test"
+			},
+			"lastModified": 0,
+			"_id": "socket.io-parser@3.4.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-3.4.2.tgz",
+				"shasum": "d70a69f34900d8290a511995d26f581828a49065",
+				"integrity": "sha512-QFZBaZDNqZXeemwejc7D39jrq2eGK/qZuVDiMPKzZK1hLlNvjGilGt4ckfQZeVX4dGmuPzCytN9ZW1nQlEWjgA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQCaAkY5lck91Wsh3RAk0Ri09Lo7ZtLva6d7AKZnu6fjdAIhAPBnyM5YG/nraXOt9g/FiFUOGpwOY0HYCbwBDK1+tB31"
+					}
+				]
+			},
+			"_npmVersion": "8.11.0",
+			"_npmUser": {
+				"name": "darrachequesne",
+				"email": "damien.arrachequesne@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "4b3c191bc411578099c8dd35499d8c7a75860192",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/socket.io-parser_3.4.2_1667989146984_0.1535231038422853",
+				"host": "s3://npm-registry-packages"
+			},
+			"readmeFilename": "Readme.md",
+			"_nodeVersion": "16.15.1",
+			"contributors": []
+		},
+		"3.4.3": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "3.4.3",
+			"homepage": "https://github.com/socketio/socket.io-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/socketio/socket.io-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/socketio/socket.io-parser/issues"
+			},
+			"engines": {
+				"node": ">=10.0.0"
+			},
+			"dependencies": {
+				"debug": "~4.1.0",
+				"isarray": "2.0.1",
+				"component-emitter": "1.2.1"
+			},
+			"devDependencies": {
+				"zuul": "3.11.1",
+				"mocha": "3.2.0",
+				"babelify": "~10.0.0",
+				"benchmark": "2.1.2",
+				"expect.js": "0.3.1",
+				"zuul-ngrok": "4.0.0",
+				"@babel/core": "~7.9.6",
+				"@babel/preset-env": "~7.9.6",
+				"socket.io-browsers": "^1.0.0"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				},
+				{
+					"name": "darrachequesne",
+					"email": "damien.arrachequesne@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "make test"
+			},
+			"lastModified": 0,
+			"_id": "socket.io-parser@3.4.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-3.4.3.tgz",
+				"shasum": "b19bdaad38ed39fd68fba3f9d86768f667df0c29",
+				"integrity": "sha512-1rE4dZN3kCI/E5wixd393hmbqa78vVpkKmnEJhLeWoS/C5hbFYAbcSfnWoaVH43u9ToUVtzKjguxEZq+1XZfCQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDsOLWbEFlJua4qzDJPQR8IK80QzoONGnF+kissrGTp9gIhAJa5guh301j5wOFCA0xb4pi3BNT0nhgis3GwKQFuITI8"
+					}
+				]
+			},
+			"_npmVersion": "8.11.0",
+			"_npmUser": {
+				"name": "darrachequesne",
+				"email": "damien.arrachequesne@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "060339a206268d8860d82aa3c0766e867ce5bb8a",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/socket.io-parser_3.4.3_1684742478510_0.6371055722190264",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "16.15.1",
+			"contributors": []
+		},
+		"3.4.4": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "3.4.4",
+			"homepage": "https://github.com/socketio/socket.io#readme",
+			"repository": {
+				"url": "git+https://github.com/socketio/socket.io.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/socketio/socket.io/issues"
+			},
+			"engines": {
+				"node": ">=10.0.0"
+			},
+			"dependencies": {
+				"debug": "~4.1.0",
+				"isarray": "2.0.1",
+				"component-emitter": "1.2.1"
+			},
+			"devDependencies": {
+				"zuul": "3.11.1",
+				"mocha": "3.2.0",
+				"babelify": "~10.0.0",
+				"benchmark": "2.1.2",
+				"expect.js": "0.3.1",
+				"zuul-ngrok": "4.0.0",
+				"@babel/core": "~7.9.6",
+				"@babel/preset-env": "~7.9.6",
+				"socket.io-browsers": "^1.0.0"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				},
+				{
+					"name": "darrachequesne",
+					"email": "damien.arrachequesne@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "make test"
+			},
+			"lastModified": 0,
+			"_id": "socket.io-parser@3.4.4",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-3.4.4.tgz",
+				"shasum": "bf44554a59246bfec27a11297d7277f35fe01817",
+				"integrity": "sha512-9JWZRGFA1aFK5W9yPrHoaZBOuaPE4NO7VZr96uVAsP8zkAYZkzrKeQhNPKkiPJq3qQK5q9c5xKcMysE5PUnPbw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEQCICvDPNM3gqMU95uxkYJd5lHM7xNm3HLQBKAYbRWDCY9IAiAXe54gEsmizdTroaZZ5auiCkZremhK2E6JcKChgkkYBA=="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/socket.io-parser@3.4.4",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "11.9.0",
+			"_npmUser": {
+				"name": "GitHub Actions",
+				"email": "npm-oidc-no-reply@github.com",
+				"trustedPublisher": {
+					"id": "github",
+					"oidcConfigId": "oidc:fcd79f7e-54c9-42ad-ad52-65da652d3dc4"
+				}
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "082b68394f0bb300c1479a58cb38f13b952f10fe",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/socket.io-parser_3.4.4_1773759326935_0.44130136285915045",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"readmeFilename": "Readme.md",
+			"_nodeVersion": "24.14.0",
+			"contributors": []
+		},
+		"3.2.0": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "3.2.0",
+			"homepage": "https://github.com/Automattic/socket.io-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/Automattic/socket.io-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/Automattic/socket.io-parser/issues"
+			},
+			"dependencies": {
+				"debug": "~3.1.0",
+				"isarray": "2.0.1",
+				"component-emitter": "1.2.1"
+			},
+			"devDependencies": {
+				"zuul": "3.11.1",
+				"mocha": "3.2.0",
+				"benchmark": "2.1.2",
+				"expect.js": "0.3.1",
+				"zuul-ngrok": "4.0.0",
+				"socket.io-browsers": "^1.0.0"
+			},
+			"license": "MIT",
+			"files": [
+				"binary.js",
+				"index.js",
+				"is-buffer.js"
+			],
+			"maintainers": [
+				{
+					"name": "darrachequesne",
+					"email": "damien.arrachequesne@gmail.com"
+				},
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "make test"
+			},
+			"lastModified": 0,
+			"_id": "socket.io-parser@3.2.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-3.2.0.tgz",
+				"shasum": "e7c6228b6aa1f814e6148aea325b51aa9499e077",
+				"integrity": "sha512-FYiBx7rc/KORMJlgsXysflWx/RIvtqZbyGLlHZvjfmPTPeuD/I8MaW7cfFrj5tRltICJdgwflhfZ3NVVbVLFQA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQD4TFcVBau+qzqYw4YU1C5UcLGity8A/tsYx3roUM2nwwIgfChp9KFIv4wQ2LjEPqyodAUs4ELFhYnNdUJMPgtmpMU="
+					}
+				]
+			},
+			"_npmVersion": "5.5.1",
+			"_npmUser": {
+				"name": "darrachequesne",
+				"email": "damien.arrachequesne@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "6e400188be089990fcb811bb734b7d0215cb74f7",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/socket.io-parser_3.2.0_1519852162668_0.45235605487419206",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "9.2.0",
+			"contributors": []
+		},
+		"3.4.0": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "3.4.0",
+			"homepage": "https://github.com/Automattic/socket.io-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/Automattic/socket.io-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/Automattic/socket.io-parser/issues"
+			},
+			"dependencies": {
+				"debug": "~4.1.0",
+				"isarray": "2.0.1",
+				"component-emitter": "1.2.1"
+			},
+			"devDependencies": {
+				"zuul": "3.11.1",
+				"mocha": "3.2.0",
+				"benchmark": "2.1.2",
+				"expect.js": "0.3.1",
+				"zuul-ngrok": "4.0.0",
+				"socket.io-browsers": "^1.0.0"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "darrachequesne",
+					"email": "damien.arrachequesne@gmail.com"
+				},
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "make test"
+			},
+			"lastModified": 0,
+			"_id": "socket.io-parser@3.4.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-3.4.0.tgz",
+				"shasum": "370bb4a151df2f77ce3345ff55a7072cc6e9565a",
+				"integrity": "sha512-/G/VOI+3DBp0+DJKW4KesGnQkQPFmUCbA/oO2QGT6CWxU7hLGWqU3tyuzeSK/dqcyeHsQg1vTe9jiZI8GU9SCQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIGIg6gpSK/ItYdoeLazVo54uVQnEFdq5Ml5N8atYb331AiBhXRzeCh3Rgnd53XPaKw7riyc7Cd0kwomkoYMdIvyqtg=="
+					}
+				]
+			},
+			"_npmVersion": "6.9.0",
+			"_npmUser": {
+				"name": "darrachequesne",
+				"email": "damien.arrachequesne@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "652402a8568c2138da3c27c96756b32efca6c4bf",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/socket.io-parser_3.4.0_1568970127031_0.24533172655663904",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "10.16.0",
+			"contributors": []
+		},
+		"2.0.0": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "2.0.0",
+			"homepage": "https://github.com/LearnBoost/socket.io-parser",
+			"repository": {
+				"url": "https://github.com/LearnBoost/socket.io-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/LearnBoost/socket.io-parser/issues"
+			},
+			"dependencies": {
+				"debug": "0.7.4",
+				"json3": "3.2.6",
+				"isarray": "0.0.1",
+				"base64-js": "0.0.6",
+				"msgpack-js": "0.3.0",
+				"msgpack-allbrowsers": "0.0.1"
+			},
+			"devDependencies": {
+				"mocha": "1.16.2",
+				"expect.js": "0.2.0"
+			},
+			"maintainers": [
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				}
+			],
+			"directories": {},
+			"lastModified": 0,
+			"_id": "socket.io-parser@2.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-2.0.0.tgz",
+				"shasum": "2d00f6c0a0a1952bfcca8de7897960c9f8c9e82a",
+				"integrity": "sha512-3J35q9xJX33VY9vpmuX+IxSjL0dlDiyX0u8XBlFilxZWKDA7i10wLzRKPvjwJa/rhaecg7RvcEqpbPpph4UAzA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCICFl0mW/bZgZrVQORFzGQNAym4pN2/4OzMZEomSOyDUxAiAMhizFONqOYPTxWPAFf7VSYCkWT8lC6GZitR1h5Zn4sQ=="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "1.4.2",
+			"_npmUser": {
+				"name": "rauchg",
+				"email": "rauchg@gmail.com"
+			},
+			"component": {
+				"scripts": [
+					"index.js"
+				]
+			},
+			"browser": {
+				"msgpack-js": "msgpack-allbrowsers"
+			},
+			"contributors": []
+		},
+		"2.2.6": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "2.2.6",
+			"homepage": "https://github.com/Automattic/socket.io-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/Automattic/socket.io-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/Automattic/socket.io-parser/issues"
+			},
+			"dependencies": {
+				"debug": "2.2.0",
+				"json3": "3.3.2",
+				"isarray": "0.0.1",
+				"benchmark": "1.0.0",
+				"component-emitter": "1.1.2"
+			},
+			"devDependencies": {
+				"zuul": "3.7.3",
+				"mocha": "1.16.2",
+				"expect.js": "0.2.0",
+				"zuul-ngrok": "3.2.0"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "make test"
+			},
+			"lastModified": 0,
+			"_id": "socket.io-parser@2.2.6",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-2.2.6.tgz",
+				"shasum": "38dfd61df50dcf8ab1d9e2091322bf902ba28b99",
+				"integrity": "sha512-uXTZmnj1jyTE57vgOlU0K5GKVFA80KB+q3kcExgFDtofI9l1ax5rS6LVG8aOLSK1Tb17jvF1pMVPQCYygD3tYQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCa0PzQeWPfmos1MxB/D4ij5T0MhSuWO+25+EMmDXjxDQIgAlQuVxGdwAc1FNDHeO2NHHaNUOuKHfRGke606cZKTWQ="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "3.4.1",
+			"_npmUser": {
+				"name": "rauchg",
+				"email": "rauchg@gmail.com"
+			},
+			"gitHead": "b5f7c7573a4bbe3bff883c4436cdf90628319d24",
+			"_shasum": "38dfd61df50dcf8ab1d9e2091322bf902ba28b99",
+			"_nodeVersion": "4.2.2",
+			"contributors": []
+		},
+		"2.2.4": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "2.2.4",
+			"homepage": "https://github.com/Automattic/socket.io-parser",
+			"repository": {
+				"url": "https://github.com/Automattic/socket.io-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/Automattic/socket.io-parser/issues"
+			},
+			"dependencies": {
+				"debug": "0.7.4",
+				"json3": "3.2.6",
+				"isarray": "0.0.1",
+				"benchmark": "1.0.0",
+				"component-emitter": "1.1.2"
+			},
+			"devDependencies": {
+				"zuul": "1.6.3",
+				"mocha": "1.16.2",
+				"expect.js": "0.2.0"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "make test"
+			},
+			"lastModified": 0,
+			"_id": "socket.io-parser@2.2.4",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-2.2.4.tgz",
+				"shasum": "f9ce19bf1909608ceb15d97721e23bfdd1e7cf65",
+				"integrity": "sha512-j0TD2g5DtrmQwcBy+C0RejylNk43rdeCBRRm8EBExrE/f5RlztV+d0k4PRR/tXrcaLcgZeXRpsZvcPVKHarj8g==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIELXfuHT53Ophm0/WilLPMerdTcwDBzhVZYhK7FO+x4gAiEAljQYDsjkVb6IMjTawrEf+yPdo+llikbz4bgJOvC2gz8="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "1.4.28",
+			"_npmUser": {
+				"name": "rauchg",
+				"email": "rauchg@gmail.com"
+			},
+			"gitHead": "6455fb27613f708d2f66bc186ae323d47f4262c5",
+			"_shasum": "f9ce19bf1909608ceb15d97721e23bfdd1e7cf65",
+			"contributors": []
+		},
+		"2.2.5": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "2.2.5",
+			"homepage": "https://github.com/Automattic/socket.io-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/Automattic/socket.io-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/Automattic/socket.io-parser/issues"
+			},
+			"dependencies": {
+				"debug": "2.2.0",
+				"json3": "3.3.2",
+				"isarray": "0.0.1",
+				"benchmark": "1.0.0",
+				"component-emitter": "1.1.2"
+			},
+			"devDependencies": {
+				"zuul": "3.7.3",
+				"mocha": "1.16.2",
+				"expect.js": "0.2.0"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "make test"
+			},
+			"lastModified": 0,
+			"_id": "socket.io-parser@2.2.5",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-2.2.5.tgz",
+				"shasum": "8d945b6da2158bafaf04f4e9c77c573b44cde52c",
+				"integrity": "sha512-pE72wuzcTzsr5Jhx7w433woXaWPXFfGyvsNJDi/lUE6XoEqltBoKz4KlJ5O2x9xqfiJekR3j86+Iw0pgDKFCow==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIDi8jnV/AMlvNeLqsxWI+MAGKzju0Q/gjNJxfufSCCvRAiB4Uq4hXATmc7iFygN71Q3JXrHQk0hZtFQPdY7GL9hANg=="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "2.14.7",
+			"_npmUser": {
+				"name": "rauchg",
+				"email": "rauchg@gmail.com"
+			},
+			"gitHead": "913ddb8c6e0524f0aaf2d519ea4a3a9cf9e1e96d",
+			"_shasum": "8d945b6da2158bafaf04f4e9c77c573b44cde52c",
+			"_nodeVersion": "4.2.2",
+			"contributors": []
+		},
+		"2.2.2": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "2.2.2",
+			"homepage": "https://github.com/Automattic/socket.io-parser",
+			"repository": {
+				"url": "https://github.com/Automattic/socket.io-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/Automattic/socket.io-parser/issues"
+			},
+			"dependencies": {
+				"debug": "0.7.4",
+				"json3": "3.2.6",
+				"isarray": "0.0.1",
+				"benchmark": "1.0.0",
+				"component-emitter": "1.1.2"
+			},
+			"devDependencies": {
+				"zuul": "1.6.3",
+				"mocha": "1.16.2",
+				"expect.js": "0.2.0"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "make test"
+			},
+			"lastModified": 0,
+			"_id": "socket.io-parser@2.2.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-2.2.2.tgz",
+				"shasum": "3d7af6b64497e956b7d9fe775f999716027f9417",
+				"integrity": "sha512-fM+hIkoQPh0oNLoL7yx39fvtqMncRTBekjENFPT8dEYHXqvRYC8yWwT+m9PW8wmYieUcqzw7yJnHNXzPAC9i9w==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIE8OIqJjtEI0K422D5blJY6huAbDH6EK7tgYiYcGfuVfAiEA1V7Fzz5MU5kWY49iYalYe5t51KQC60Z1QiqSsm3D+W8="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "1.4.25",
+			"_npmUser": {
+				"name": "rauchg",
+				"email": "rauchg@gmail.com"
+			},
+			"gitHead": "83c68c7a715ac54e95c5dae6445f751b3a4dfe9f",
+			"_shasum": "3d7af6b64497e956b7d9fe775f999716027f9417",
+			"contributors": []
+		},
+		"2.2.3": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "2.2.3",
+			"homepage": "https://github.com/Automattic/socket.io-parser",
+			"repository": {
+				"url": "https://github.com/Automattic/socket.io-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/Automattic/socket.io-parser/issues"
+			},
+			"dependencies": {
+				"debug": "0.7.4",
+				"json3": "3.2.6",
+				"isarray": "0.0.1",
+				"benchmark": "1.0.0",
+				"component-emitter": "1.1.2"
+			},
+			"devDependencies": {
+				"zuul": "1.6.3",
+				"mocha": "1.16.2",
+				"expect.js": "0.2.0"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "make test"
+			},
+			"lastModified": 0,
+			"_id": "socket.io-parser@2.2.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-2.2.3.tgz",
+				"shasum": "6b2c2d6b971a0c0b8510eb83dd2d281a00ee7320",
+				"integrity": "sha512-0G3AYiTdnRciMBgEBURHYCMVuAph9N7fXXj8xlaSssFlRGcfbEYAuXLAJLHYozNelFiVYEZ3EBYLd3JD3SN9+w==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCWgXHe6gVbx96XiLXbh48NeGWqY79+qVf5xxcaxxy5rQIgAIIu6eEhJ7v5JxAcaDDZNkW72gZgU1OantBvYMfP6ZM="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "1.4.28",
+			"_npmUser": {
+				"name": "rauchg",
+				"email": "rauchg@gmail.com"
+			},
+			"gitHead": "c4bfb06a72c767d31c44a976a0b08b44874a2575",
+			"_shasum": "6b2c2d6b971a0c0b8510eb83dd2d281a00ee7320",
+			"contributors": []
+		},
+		"2.2.0": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "2.2.0",
+			"homepage": "https://github.com/LearnBoost/socket.io-parser",
+			"repository": {
+				"url": "https://github.com/LearnBoost/socket.io-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/LearnBoost/socket.io-parser/issues"
+			},
+			"dependencies": {
+				"debug": "0.7.4",
+				"json3": "3.2.6",
+				"emitter": "http://github.com/component/emitter/archive/1.0.1.tar.gz",
+				"isarray": "0.0.1"
+			},
+			"devDependencies": {
+				"zuul": "1.6.3",
+				"mocha": "1.16.2",
+				"expect.js": "0.2.0"
+			},
+			"maintainers": [
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "make test"
+			},
+			"lastModified": 0,
+			"_id": "socket.io-parser@2.2.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-2.2.0.tgz",
+				"shasum": "2609601f59e6a7fab436a53be3d333fbbfcbd30a",
+				"integrity": "sha512-uW3UiLVibAyleKq8r/yZe1oPO51olhY18T6HtnN0iI6RLqJfYC0YiyAFlsPw1+8I0Z1qFd8jFLTRZo2vr6ISxA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIAEEcxO/BcgLqmRG3f/UXxWVhtBZN5/cqjdaJtFRwxwTAiEArlHuHWwtw27MzDGYJDtQnirZNu/HcWEPVRFN6sW9Fu4="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "1.4.7",
+			"_npmUser": {
+				"name": "rauchg",
+				"email": "rauchg@gmail.com"
+			},
+			"component": {
+				"scripts": [
+					"index.js"
+				]
+			},
+			"_shasum": "2609601f59e6a7fab436a53be3d333fbbfcbd30a",
+			"contributors": []
+		},
+		"2.2.1": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "2.2.1",
+			"homepage": "https://github.com/Automattic/socket.io-parser",
+			"repository": {
+				"url": "https://github.com/Automattic/socket.io-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/Automattic/socket.io-parser/issues"
+			},
+			"dependencies": {
+				"debug": "0.7.4",
+				"json3": "3.2.6",
+				"isarray": "0.0.1",
+				"benchmark": "1.0.0",
+				"component-emitter": "1.1.2"
+			},
+			"devDependencies": {
+				"zuul": "1.6.3",
+				"mocha": "1.16.2",
+				"expect.js": "0.2.0"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "make test"
+			},
+			"lastModified": 0,
+			"_id": "socket.io-parser@2.2.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-2.2.1.tgz",
+				"shasum": "22e79d7a8458f4b48cc20884c00285487b1b77d8",
+				"integrity": "sha512-8ao1fH2132eTTKHg4wKHmIjOWiYh7Jr87mwq35wokuLOm5Q3xAZolIbpFHdFnPpfYWhaCAxUXPYoAq6FbSfg0w==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQCIvfr3K4y/4/PjihLYpjxSngFK+9hVmHIKDmgQqOZaRAIhAJ7KwPAGBHwkW6VHba6k9J0Sp2Cizc7sCNowCpPJIDRh"
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "1.4.14",
+			"_npmUser": {
+				"name": "rauchg",
+				"email": "rauchg@gmail.com"
+			},
+			"gitHead": "5c551f0f527fec41361df6fdc0d60d202e658045",
+			"_shasum": "22e79d7a8458f4b48cc20884c00285487b1b77d8",
+			"contributors": []
+		},
+		"1.0.1": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "1.0.1",
+			"devDependencies": {
+				"mocha": "*",
+				"expect.js": "*"
+			},
+			"maintainers": [
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				}
+			],
+			"directories": {},
+			"lastModified": 0,
+			"_id": "socket.io-parser@1.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-1.0.1.tgz",
+				"shasum": "1e4f458c637d62afb51184832669d4db5c8d95c0",
+				"integrity": "sha512-zE6aqOcgrSZFQmRkJ22tWH2tu5ouzaYWUES9nzDUg2JKGdXz6Nff/xMbYld9Xb82fCAnwSPl5dwCnD09HU1qtg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQD/HmNg9AhI8rWuTVyigdueknCBOJ6gibOP+egHw2/fVgIgFld2TIFKGjV0/fR8WrvE3ZoUxnRQesm9aWhWX91guLU="
+					}
+				]
+			},
+			"_npmVersion": "1.1.59",
+			"_npmUser": {
+				"name": "rauchg",
+				"email": "rauchg@gmail.com"
+			},
+			"component": {
+				"scripts": [
+					"index.js"
+				],
+				"dependencies": {
+					"component/json": "0.0.1"
+				}
+			},
+			"contributors": []
+		},
+		"1.0.2": {
+			"name": "socket.io-parser",
+			"description": "socket.io protocol parser",
+			"version": "1.0.2",
+			"devDependencies": {
+				"mocha": "*",
+				"expect.js": "*"
+			},
+			"maintainers": [
+				{
+					"name": "rauchg",
+					"email": "rauchg@gmail.com"
+				}
+			],
+			"directories": {},
+			"lastModified": 0,
+			"_id": "socket.io-parser@1.0.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-1.0.2.tgz",
+				"shasum": "2689acd3b81477f270a112b7ef6ad584370981b5",
+				"integrity": "sha512-Xi0sqiVDQ4mNVuiU83SbNL6oCwByXbf/E7tXFvzkmOPI2C+gMxoPuciuUS3NQlZKiXJviwBDl9AIyDE9OHuizQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQD0/d6zRporGhgTah7t1Wi5DBGBk7kDIGyhYTp113WZIwIgWXRiZ3aJp+RkInEoiJDRavPR8eoVjS5VYIuBsfAWrjs="
+					}
+				]
+			},
+			"_npmVersion": "1.1.59",
+			"_npmUser": {
+				"name": "rauchg",
+				"email": "rauchg@gmail.com"
+			},
+			"component": {
+				"scripts": [
+					"index.js"
+				]
+			},
+			"contributors": []
+		}
+	},
+	"time": {
+		"4.1.1": "2021-10-14T11:53:35.175Z",
+		"4.1.2": "2022-02-17T06:38:19.438Z",
+		"4.1.0": "2021-10-11T20:38:57.269Z",
+		"3.3.2": "2021-01-09T13:52:34.839Z",
+		"modified": "2026-03-17T15:07:13.266Z",
+		"3.3.3": "2022-11-09T10:22:46.102Z",
+		"3.3.4": "2024-07-22T09:09:30.910Z",
+		"3.3.5": "2026-03-17T15:07:13.002Z",
+		"3.1.0": "2017-04-24T21:34:13.969Z",
+		"3.1.1": "2017-04-24T22:22:41.669Z",
+		"3.1.2": "2017-04-27T21:46:22.018Z",
+		"3.3.0": "2018-11-07T22:59:20.663Z",
+		"3.1.3": "2018-02-25T08:20:29.707Z",
+		"3.3.1": "2020-09-30T00:40:28.476Z",
+		"2.1.0": "2014-03-01T16:32:31.228Z",
+		"created": "2012-12-10T00:04:57.829Z",
+		"2.1.5": "2014-05-24T18:36:27.565Z",
+		"2.1.3": "2014-04-28T01:45:41.927Z",
+		"2.3.1": "2016-10-24T00:32:07.563Z",
+		"2.1.4": "2014-05-17T20:50:19.496Z",
+		"2.3.2": "2016-12-30T21:43:36.289Z",
+		"2.1.1": "2014-03-05T07:19:08.679Z",
+		"2.1.2": "2014-03-06T23:38:16.573Z",
+		"2.3.0": "2016-10-20T23:34:16.871Z",
+		"1.1.2": "2014-02-11T18:14:32.802Z",
+		"4.2.6": "2026-03-17T09:56:18.668Z",
+		"1.1.0": "2013-12-25T18:59:54.509Z",
+		"1.1.1": "2014-02-11T00:06:23.883Z",
+		"4.0.1-rc3": "2020-10-25T23:18:15.196Z",
+		"4.0.1-rc2": "2020-10-15T08:25:39.091Z",
+		"4.0.1-rc1": "2020-10-12T13:23:19.654Z",
+		"4.0.2": "2020-11-25T10:01:10.532Z",
+		"4.2.0": "2022-04-17T22:27:15.609Z",
+		"4.0.3": "2021-01-05T10:27:00.317Z",
+		"4.2.1": "2022-06-27T13:43:26.446Z",
+		"4.0.0": "2020-09-28T12:56:12.020Z",
+		"4.0.1": "2020-11-05T15:08:23.947Z",
+		"4.2.4": "2023-05-31T08:57:23.862Z",
+		"4.2.5": "2025-12-23T11:29:16.213Z",
+		"4.0.4": "2021-01-15T00:46:06.625Z",
+		"4.2.2": "2023-01-19T09:50:11.518Z",
+		"4.0.5": "2022-06-27T13:54:42.490Z",
+		"4.2.3": "2023-05-22T06:24:48.950Z",
+		"3.0.0": "2017-04-03T21:52:58.208Z",
+		"3.4.1": "2020-05-13T06:00:12.181Z",
+		"3.4.2": "2022-11-09T10:19:07.192Z",
+		"3.4.3": "2023-05-22T08:01:18.682Z",
+		"3.4.4": "2026-03-17T14:55:27.070Z",
+		"3.2.0": "2018-02-28T21:09:22.718Z",
+		"3.4.0": "2019-09-20T09:02:07.232Z",
+		"2.0.0": "2014-02-20T00:51:22.714Z",
+		"2.2.6": "2015-11-25T18:13:06.246Z",
+		"2.2.4": "2015-03-03T18:34:26.714Z",
+		"2.2.5": "2015-11-21T18:45:42.106Z",
+		"2.2.2": "2014-09-04T08:13:20.797Z",
+		"2.2.3": "2015-02-04T00:31:33.757Z",
+		"2.2.0": "2014-05-31T04:10:18.114Z",
+		"2.2.1": "2014-06-20T23:56:14.435Z",
+		"1.0.1": "2012-12-10T00:05:00.215Z",
+		"1.0.2": "2012-12-18T19:31:47.192Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"beta": "4.0.1-rc3",
+		"v4.0-latest": "4.0.5",
+		"v2-latest": "3.3.5",
+		"latest": "4.2.6"
+	},
+	"_uplinks": {
+		"artifactory-sabadell": {
+			"etag": "7c0c4a8b3bcd89a45163d2f13502ec44596aa953",
+			"fetched": 1781195708041
+		}
+	},
+	"_distfiles": {
+		"socket.io-parser-4.1.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-4.1.1.tgz",
+			"sha": "0ad53d980781cab1eabe320417d8480c0133e62d",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-4.1.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-4.1.2.tgz",
+			"sha": "0a97d4fb8e67022158a568450a6e41887e42035e",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-4.1.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-4.1.0.tgz",
+			"sha": "c0debc10b65d4a3fbe7bad6092ca78dc88f22eb1",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-3.3.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-3.3.2.tgz",
+			"sha": "ef872009d0adcf704f2fbe830191a14752ad50b6",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-3.3.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-3.3.3.tgz",
+			"sha": "3a8b84823eba87f3f7624e64a8aaab6d6318a72f",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-3.3.4.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-3.3.4.tgz",
+			"sha": "ab84236b6d06eaf1fb68b179b3a7501195886cc3",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-3.3.5.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-3.3.5.tgz",
+			"sha": "f07ca7a170de80837464aee39972acac6189ee9f",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-3.1.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-3.1.0.tgz",
+			"sha": "b58a3d780fe63370e4055d51bff6cb1b582715e9",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-3.1.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-3.1.1.tgz",
+			"sha": "9dce6ed0a66abdcc927b4572e8fd1a8b64e3df36",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-3.1.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-3.1.2.tgz",
+			"sha": "dbc2282151fc4faebbe40aeedc0772eba619f7f2",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-3.3.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-3.3.0.tgz",
+			"sha": "2b52a96a509fdf31440ba40fed6094c7d4f1262f",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-3.1.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-3.1.3.tgz",
+			"sha": "ed2da5ee79f10955036e3da413bfd7f1e4d86c8e",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-3.3.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-3.3.1.tgz",
+			"sha": "f07d9c8cb3fb92633aa93e76d98fd3a334623199",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-2.1.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-2.1.0.tgz",
+			"sha": "1c0569a214ec1453a11bc457f472b126b8ec6dd8",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-2.1.5.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-2.1.5.tgz",
+			"sha": "4deb9339a36ec4b2bc782dffbfdbd53811493ebf",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-2.1.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-2.1.3.tgz",
+			"sha": "539a6ee23f18c578f52acccd12c8a4e582469aef",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-2.3.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-2.3.1.tgz",
+			"sha": "dd532025103ce429697326befd64005fcfe5b4a0",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-2.1.4.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-2.1.4.tgz",
+			"sha": "ed2ec2608aa2e21189d922512a4703984166c270",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-2.3.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-2.3.2.tgz",
+			"sha": "ae64f90cd8d0b5316556280d98cb744f7422cd94",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-2.1.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-2.1.1.tgz",
+			"sha": "fbb21a4ccb216e659d77ef2ed8c5f80575a9b8ee",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-2.1.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-2.1.2.tgz",
+			"sha": "876655b9edd555c5bdf7301cedf30a436c67b8b0",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-2.3.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-2.3.0.tgz",
+			"sha": "deb02dc50f7f5ac7a35f43bc6f7d413dc46a5153",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-1.1.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-1.1.2.tgz",
+			"sha": "ac3ff22eefe2b5e6b2f546151038d27a22bea6ba",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-4.2.6.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-4.2.6.tgz",
+			"sha": "19156bf179af3931abd05260cfb1491822578a6f",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-1.1.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-1.1.0.tgz",
+			"sha": "3929528fbe7f43bdc9887db037db6fe933376150",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-1.1.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-1.1.1.tgz",
+			"sha": "a7b7c3d799cda79704aa2960eb1dfd153e904fb4",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-4.0.1-rc3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-4.0.1-rc3.tgz",
+			"sha": "cfb3d7ecdde5be90af37ca07a7ad86a38f2a28fa",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-4.0.1-rc2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-4.0.1-rc2.tgz",
+			"sha": "70cf1b97eedf93957daaed0667f3723e4a699033",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-4.0.1-rc1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-4.0.1-rc1.tgz",
+			"sha": "80980a03b245462d614c75911970447990df9169",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-4.0.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-4.0.2.tgz",
+			"sha": "3d021a9c86671bb079e7c6c806db6a1d9b1bc780",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-4.2.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-4.2.0.tgz",
+			"sha": "3f01e5bc525d94aa52a97ed5cbc12e229bbc4d6b",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-4.0.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-4.0.3.tgz",
+			"sha": "2c494f2de1e7c1b40a14ba1512227e9798d8b10e",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-4.2.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-4.2.1.tgz",
+			"sha": "01c96efa11ded938dcb21cbe590c26af5eff65e5",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-4.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-4.0.0.tgz",
+			"sha": "678de0a56a7e332235f876b718cd0e3ab106d731",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-4.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-4.0.1.tgz",
+			"sha": "b8ec84364c7369ad32ae0c16dd4d388db19b3a04",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-4.2.4.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-4.2.4.tgz",
+			"sha": "c806966cf7270601e47469ddeec30fbdfda44c83",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-4.2.5.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-4.2.5.tgz",
+			"sha": "3f41b8d369129a93268f2abecba94b5292850099",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-4.0.4.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-4.0.4.tgz",
+			"sha": "9ea21b0d61508d18196ef04a2c6b9ab630f4c2b0",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-4.2.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-4.2.2.tgz",
+			"sha": "1dd384019e25b7a3d374877f492ab34f2ad0d206",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-4.0.5.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-4.0.5.tgz",
+			"sha": "cb404382c32324cc962f27f3a44058cf6e0552df",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-4.2.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-4.2.3.tgz",
+			"sha": "926bcc6658e2ae0883dc9dee69acbdc76e4e3667",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-3.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-3.0.0.tgz",
+			"sha": "19c1cd4582b8a0b729ec013af744465e0f1400bc",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-3.4.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-3.4.1.tgz",
+			"sha": "b06af838302975837eab2dc980037da24054d64a",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-3.4.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-3.4.2.tgz",
+			"sha": "d70a69f34900d8290a511995d26f581828a49065",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-3.4.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-3.4.3.tgz",
+			"sha": "b19bdaad38ed39fd68fba3f9d86768f667df0c29",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-3.4.4.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-3.4.4.tgz",
+			"sha": "bf44554a59246bfec27a11297d7277f35fe01817",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-3.2.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-3.2.0.tgz",
+			"sha": "e7c6228b6aa1f814e6148aea325b51aa9499e077",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-3.4.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-3.4.0.tgz",
+			"sha": "370bb4a151df2f77ce3345ff55a7072cc6e9565a",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-2.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-2.0.0.tgz",
+			"sha": "2d00f6c0a0a1952bfcca8de7897960c9f8c9e82a",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-2.2.6.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-2.2.6.tgz",
+			"sha": "38dfd61df50dcf8ab1d9e2091322bf902ba28b99",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-2.2.4.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-2.2.4.tgz",
+			"sha": "f9ce19bf1909608ceb15d97721e23bfdd1e7cf65",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-2.2.5.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-2.2.5.tgz",
+			"sha": "8d945b6da2158bafaf04f4e9c77c573b44cde52c",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-2.2.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-2.2.2.tgz",
+			"sha": "3d7af6b64497e956b7d9fe775f999716027f9417",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-2.2.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-2.2.3.tgz",
+			"sha": "6b2c2d6b971a0c0b8510eb83dd2d281a00ee7320",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-2.2.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-2.2.0.tgz",
+			"sha": "2609601f59e6a7fab436a53be3d333fbbfcbd30a",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-2.2.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-2.2.1.tgz",
+			"sha": "22e79d7a8458f4b48cc20884c00285487b1b77d8",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-1.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-1.0.1.tgz",
+			"sha": "1e4f458c637d62afb51184832669d4db5c8d95c0",
+			"registry": "artifactory-sabadell"
+		},
+		"socket.io-parser-1.0.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/socket.io-parser/-/socket.io-parser-1.0.2.tgz",
+			"sha": "2689acd3b81477f270a112b7ef6ad584370981b5",
+			"registry": "artifactory-sabadell"
+		}
+	},
+	"_attachments": {},
+	"_rev": "1-c60ce75c0988937d",
+	"_id": "socket.io-parser",
+	"readme": ""
+}
