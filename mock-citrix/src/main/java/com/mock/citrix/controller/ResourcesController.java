@@ -32,10 +32,8 @@ public class ResourcesController {
     @GetMapping("/resources")
     public ResponseEntity<Map<String, Object>> getResources(HttpServletRequest request) {
         String session = readCookie(request, sessionCookieName);
-        String ssoSession = readCookie(request, "PA_SSO");
 
-        if ((session == null || !store.validSessions.contains(session))
-                && (ssoSession == null || !ssoSession.startsWith("mock-token-"))) {
+        if (session == null || !store.validSessions.contains(session)) {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
         }
 

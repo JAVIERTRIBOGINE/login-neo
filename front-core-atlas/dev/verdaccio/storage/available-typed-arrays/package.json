@@ -1,0 +1,1019 @@
+{
+	"name": "available-typed-arrays",
+	"versions": {
+		"1.0.3": {
+			"name": "available-typed-arrays",
+			"description": "Returns an array of Typed Array names that are available in the current environment",
+			"version": "1.0.3",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/inspect-js/available-typed-arrays#readme",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/inspect-js/available-typed-arrays.git"
+			},
+			"bugs": {
+				"url": "https://github.com/inspect-js/available-typed-arrays/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"array.prototype.filter": "^1.0.0"
+			},
+			"devDependencies": {
+				"@ljharb/eslint-config": "^17.6.0",
+				"array.prototype.every": "^1.1.2",
+				"aud": "^1.1.5",
+				"auto-changelog": "^2.2.1",
+				"eslint": "^7.26.0",
+				"evalmd": "^0.0.19",
+				"isarray": "^2.0.5",
+				"nyc": "^10.3.2",
+				"safe-publish-latest": "^1.1.4",
+				"tape": "^5.2.2"
+			},
+			"keywords": [
+				"typed",
+				"arrays",
+				"Float32Array",
+				"Float64Array",
+				"Int8Array",
+				"Int16Array",
+				"Int32Array",
+				"Uint8Array",
+				"Uint8ClampedArray",
+				"Uint16Array",
+				"Uint32Array",
+				"BigInt64Array",
+				"BigUint64Array"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"prepublish": "not-in-publish || npm run prepublishOnly",
+				"prepublishOnly": "safe-publish-latest",
+				"prelint": "evalmd README.md",
+				"lint": "eslint --ext=js,mjs .",
+				"pretest": "npm run lint",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"test:harmony": "nyc node --harmony --es-staging test",
+				"test": "npm run tests-only && npm run test:harmony",
+				"posttest": "aud --production",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\""
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "available-typed-arrays@1.0.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/available-typed-arrays/-/available-typed-arrays-1.0.3.tgz",
+				"shasum": "fb7d02445bfedefad79fad1fe47931163a227198",
+				"integrity": "sha512-CuPhFULixV/d89POo1UG4GqGbR7dmrefY2ZdmsYakeR4gOSJXoF7tfeaiqMHGOMrlTiJoeEs87fpLsBYmE2BMw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDkvH2vFDYrUK8YQLayDMnXb8dJCvGTakr41Dn3t/A0wwIgV/wWYRcauCrKYW7Ok+rHiu2OOolDVmEjfe0eV3yotUI="
+					}
+				]
+			},
+			"_npmVersion": "7.11.2",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "7f09d376aa70c60626fe1c97beb4d6af97f7eff0",
+			"exports": {
+				".": [
+					{
+						"default": "./index.js"
+					},
+					"./index.js"
+				],
+				"./package": "./package.json",
+				"./package.json": "./package.json"
+			},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/available-typed-arrays_1.0.3_1621436920941_0.23538947922503084"
+			},
+			"type": "commonjs",
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false,
+				"hideCredit": true
+			},
+			"_nodeVersion": "16.1.0",
+			"contributors": []
+		},
+		"1.0.4": {
+			"name": "available-typed-arrays",
+			"description": "Returns an array of Typed Array names that are available in the current environment",
+			"version": "1.0.4",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/inspect-js/available-typed-arrays#readme",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/inspect-js/available-typed-arrays.git"
+			},
+			"bugs": {
+				"url": "https://github.com/inspect-js/available-typed-arrays/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"@ljharb/eslint-config": "^17.6.0",
+				"array.prototype.every": "^1.1.2",
+				"aud": "^1.1.5",
+				"auto-changelog": "^2.3.0",
+				"eslint": "^7.27.0",
+				"evalmd": "^0.0.19",
+				"isarray": "^2.0.5",
+				"nyc": "^10.3.2",
+				"safe-publish-latest": "^1.1.4",
+				"tape": "^5.2.2"
+			},
+			"keywords": [
+				"typed",
+				"arrays",
+				"Float32Array",
+				"Float64Array",
+				"Int8Array",
+				"Int16Array",
+				"Int32Array",
+				"Uint8Array",
+				"Uint8ClampedArray",
+				"Uint16Array",
+				"Uint32Array",
+				"BigInt64Array",
+				"BigUint64Array"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"prepublish": "not-in-publish || npm run prepublishOnly",
+				"prepublishOnly": "safe-publish-latest",
+				"prelint": "evalmd README.md",
+				"lint": "eslint --ext=js,mjs .",
+				"pretest": "npm run lint",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"test:harmony": "nyc node --harmony --es-staging test",
+				"test": "npm run tests-only && npm run test:harmony",
+				"posttest": "aud --production",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\""
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "available-typed-arrays@1.0.4",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/available-typed-arrays/-/available-typed-arrays-1.0.4.tgz",
+				"shasum": "9e0ae84ecff20caae6a94a1c3bc39b955649b7a9",
+				"integrity": "sha512-SA5mXJWrId1TaQjfxUYghbqQ/hYioKmLJvPJyDuYRtXXenFNMjj4hSSt1Cf1xsuXSXrtxrVC5Ot4eU6cOtBDdA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIGEx4CYiSreZsr13AJbqzIbOgozmISKox9gG89JDi4qBAiEApYg3Trne9BjE+Bb1FS2yXyKSZ0939QCzGKQwkGand38="
+					}
+				]
+			},
+			"_npmVersion": "7.11.2",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "9401fb568f20ca35203007830b11657563a7e983",
+			"exports": {
+				".": [
+					{
+						"default": "./index.js"
+					},
+					"./index.js"
+				],
+				"./package": "./package.json",
+				"./package.json": "./package.json"
+			},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/available-typed-arrays_1.0.4_1621958956714_0.2935773881456296"
+			},
+			"type": "commonjs",
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false,
+				"hideCredit": true
+			},
+			"sideEffects": false,
+			"_nodeVersion": "16.1.0",
+			"contributors": []
+		},
+		"1.0.5": {
+			"name": "available-typed-arrays",
+			"description": "Returns an array of Typed Array names that are available in the current environment",
+			"version": "1.0.5",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/inspect-js/available-typed-arrays#readme",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/inspect-js/available-typed-arrays.git"
+			},
+			"bugs": {
+				"url": "https://github.com/inspect-js/available-typed-arrays/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"@ljharb/eslint-config": "^18.0.0",
+				"array.prototype.every": "^1.1.2",
+				"aud": "^1.1.5",
+				"auto-changelog": "^2.3.0",
+				"eslint": "^7.32.0",
+				"evalmd": "^0.0.19",
+				"isarray": "^2.0.5",
+				"nyc": "^10.3.2",
+				"safe-publish-latest": "^1.1.4",
+				"tape": "^5.3.1"
+			},
+			"keywords": [
+				"typed",
+				"arrays",
+				"Float32Array",
+				"Float64Array",
+				"Int8Array",
+				"Int16Array",
+				"Int32Array",
+				"Uint8Array",
+				"Uint8ClampedArray",
+				"Uint16Array",
+				"Uint32Array",
+				"BigInt64Array",
+				"BigUint64Array"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"prepublish": "not-in-publish || npm run prepublishOnly",
+				"prepublishOnly": "safe-publish-latest",
+				"prelint": "evalmd README.md",
+				"lint": "eslint --ext=js,mjs .",
+				"pretest": "npm run lint",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"test:harmony": "nyc node --harmony --es-staging test",
+				"test": "npm run tests-only && npm run test:harmony",
+				"posttest": "aud --production",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\""
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "available-typed-arrays@1.0.5",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/available-typed-arrays/-/available-typed-arrays-1.0.5.tgz",
+				"shasum": "92f95616501069d07d10edb2fc37d3e1c65123b7",
+				"integrity": "sha512-DMD0KiN46eipeziST1LPP/STfDU0sufISXmjSgvVsoU2tqxctQeASejWcfNtxYKqETM1UxQ8sp2OrSBWpHY6sw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIAFCWG/QMTZN+JpDsi1HaGTT5BaghDyXnOxOfJWzpqk+AiEAnl2+LrlKLHRd8fHBz33TrOMsppTRFe2OBkVb/4M3TzQ="
+					}
+				]
+			},
+			"_npmVersion": "7.21.0",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "d0f3cb979af4322acaa149e08ae58fd4faed3715",
+			"exports": {
+				".": [
+					{
+						"default": "./index.js"
+					},
+					"./index.js"
+				],
+				"./package": "./package.json",
+				"./package.json": "./package.json"
+			},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/available-typed-arrays_1.0.5_1630376643554_0.2131087752403893"
+			},
+			"type": "commonjs",
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false,
+				"hideCredit": true
+			},
+			"sideEffects": false,
+			"_nodeVersion": "16.8.0",
+			"contributors": []
+		},
+		"1.0.6": {
+			"name": "available-typed-arrays",
+			"description": "Returns an array of Typed Array names that are available in the current environment",
+			"version": "1.0.6",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/inspect-js/available-typed-arrays#readme",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/inspect-js/available-typed-arrays.git"
+			},
+			"bugs": {
+				"url": "https://github.com/inspect-js/available-typed-arrays/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"@ljharb/eslint-config": "^21.1.0",
+				"@types/array.prototype.every": "^1.1.1",
+				"@types/isarray": "^2.0.2",
+				"@types/tape": "^5.6.4",
+				"array.prototype.every": "^1.1.5",
+				"aud": "^2.0.4",
+				"auto-changelog": "^2.4.0",
+				"eslint": "=8.8.0",
+				"evalmd": "^0.0.19",
+				"in-publish": "^2.0.1",
+				"isarray": "^2.0.5",
+				"npmignore": "^0.3.1",
+				"nyc": "^10.3.2",
+				"safe-publish-latest": "^2.0.0",
+				"tape": "^5.7.4",
+				"typescript": "^5.4.0-dev.20240131"
+			},
+			"keywords": [
+				"typed",
+				"arrays",
+				"Float32Array",
+				"Float64Array",
+				"Int8Array",
+				"Int16Array",
+				"Int32Array",
+				"Uint8Array",
+				"Uint8ClampedArray",
+				"Uint16Array",
+				"Uint32Array",
+				"BigInt64Array",
+				"BigUint64Array"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"prepack": "npmignore --auto --commentLines=autogenerated",
+				"prepublish": "not-in-publish || npm run prepublishOnly",
+				"prepublishOnly": "safe-publish-latest",
+				"prelint": "evalmd README.md",
+				"lint": "eslint --ext=js,mjs .",
+				"postlint": "tsc -p .",
+				"pretest": "npm run lint",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"test:harmony": "nyc node --harmony --es-staging test",
+				"test": "npm run tests-only && npm run test:harmony",
+				"posttest": "aud --production",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\""
+			},
+			"publishConfig": {
+				"ignore": [
+					".github/workflows"
+				]
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "available-typed-arrays@1.0.6",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/available-typed-arrays/-/available-typed-arrays-1.0.6.tgz",
+				"shasum": "ac812d8ce5a6b976d738e1c45f08d0b00bc7d725",
+				"integrity": "sha512-j1QzY8iPNPG4o4xmO3ptzpRxTciqD3MgEHtifP/YnJpIo58Xu+ne4BejlbkuaLfXn/nz6HFiw29bLpj2PNMdGg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCUcP7eBf6u1xi1CAJfcAVgQ+XrniZwSwlZ8bn7I4J6YAIgfMxE6gHC/5gEyPgg1PpCHY7LMwqFacHTln8AKcjp2mc="
+					}
+				]
+			},
+			"_npmVersion": "10.2.4",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "a18bbe6d9513b44ebf9ca17170794dae1d53d443",
+			"types": "./index.d.ts",
+			"exports": {
+				".": "./index.js",
+				"./package.json": "./package.json"
+			},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/available-typed-arrays_1.0.6_1706766379004_0.910742744450938"
+			},
+			"type": "commonjs",
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false,
+				"hideCredit": true
+			},
+			"sideEffects": false,
+			"_nodeVersion": "21.6.0",
+			"contributors": []
+		},
+		"1.0.7": {
+			"name": "available-typed-arrays",
+			"description": "Returns an array of Typed Array names that are available in the current environment",
+			"version": "1.0.7",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/inspect-js/available-typed-arrays#readme",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/inspect-js/available-typed-arrays.git"
+			},
+			"bugs": {
+				"url": "https://github.com/inspect-js/available-typed-arrays/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"possible-typed-array-names": "^1.0.0"
+			},
+			"devDependencies": {
+				"@ljharb/eslint-config": "^21.1.0",
+				"@types/array.prototype.every": "^1.1.1",
+				"@types/isarray": "^2.0.2",
+				"@types/tape": "^5.6.4",
+				"array.prototype.every": "^1.1.5",
+				"aud": "^2.0.4",
+				"auto-changelog": "^2.4.0",
+				"eslint": "=8.8.0",
+				"evalmd": "^0.0.19",
+				"in-publish": "^2.0.1",
+				"isarray": "^2.0.5",
+				"npmignore": "^0.3.1",
+				"nyc": "^10.3.2",
+				"safe-publish-latest": "^2.0.0",
+				"tape": "^5.7.4",
+				"typescript": "^5.4.0-dev.20240131"
+			},
+			"keywords": [
+				"typed",
+				"arrays",
+				"Float32Array",
+				"Float64Array",
+				"Int8Array",
+				"Int16Array",
+				"Int32Array",
+				"Uint8Array",
+				"Uint8ClampedArray",
+				"Uint16Array",
+				"Uint32Array",
+				"BigInt64Array",
+				"BigUint64Array"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"prepack": "npmignore --auto --commentLines=autogenerated",
+				"prepublish": "not-in-publish || npm run prepublishOnly",
+				"prepublishOnly": "safe-publish-latest",
+				"prelint": "evalmd README.md",
+				"lint": "eslint --ext=js,mjs .",
+				"postlint": "tsc -p .",
+				"pretest": "npm run lint",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"test:harmony": "nyc node --harmony --es-staging test",
+				"test": "npm run tests-only && npm run test:harmony",
+				"posttest": "aud --production",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\""
+			},
+			"publishConfig": {
+				"ignore": [
+					".github/workflows"
+				]
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "available-typed-arrays@1.0.7",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/available-typed-arrays/-/available-typed-arrays-1.0.7.tgz",
+				"shasum": "a5cc375d6a03c2efc87a553f3e0b1522def14846",
+				"integrity": "sha512-wvUjBtSGN7+7SjNpq/9M2Tg350UZD3q62IFZLbRAR1bSMlCo1ZaeW+BJ+D090e4hIIZLBcTDWe4Mh4jvUDajzQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDoqwDwclim1uEhw17jNNg0gv39Ju8MtQAWOYTPwxkldgIgEPaVtQkMYFsWMoFxWmB82FvaBTuWcvHgiPI5Wj6aAj0="
+					}
+				]
+			},
+			"_npmVersion": "10.2.4",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "d72cd6154ce39482ca83bed2200ff3b56c76e8d8",
+			"types": "./index.d.ts",
+			"exports": {
+				".": "./index.js",
+				"./package.json": "./package.json"
+			},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/available-typed-arrays_1.0.7_1708386870564_0.5677413133448181"
+			},
+			"type": "commonjs",
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false,
+				"hideCredit": true
+			},
+			"sideEffects": false,
+			"_nodeVersion": "21.6.2",
+			"contributors": []
+		},
+		"1.0.0": {
+			"name": "available-typed-arrays",
+			"description": "Returns an array of Typed Array names that are available in the current environment",
+			"version": "1.0.0",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/inspect-js/available-typed-arrays#readme",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/inspect-js/available-typed-arrays.git"
+			},
+			"bugs": {
+				"url": "https://github.com/inspect-js/available-typed-arrays/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"array-filter": "^1.0.0"
+			},
+			"devDependencies": {
+				"@ljharb/eslint-config": "^15.1.0",
+				"array.prototype.every": "^1.1.0",
+				"auto-changelog": "^1.16.2",
+				"eslint": "^6.8.0",
+				"evalmd": "^0.0.19",
+				"isarray": "^2.0.5",
+				"safe-publish-latest": "^1.1.4",
+				"tape": "^5.0.0-next.4"
+			},
+			"keywords": [
+				"typed",
+				"arrays",
+				"Float32Array",
+				"Float64Array",
+				"Int8Array",
+				"Int16Array",
+				"Int32Array",
+				"Uint8Array",
+				"Uint8ClampedArray",
+				"Uint16Array",
+				"Uint32Array",
+				"BigInt64Array",
+				"BigUint64Array"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"prepublish": "safe-publish-latest",
+				"prelint": "evalmd README.md",
+				"lint": "eslint .",
+				"pretest": "npm run lint",
+				"tests-only": "node test",
+				"test": "npm run tests-only",
+				"posttest": "npx aud",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\""
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "available-typed-arrays@1.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/available-typed-arrays/-/available-typed-arrays-1.0.0.tgz",
+				"shasum": "2d3e2d7b0846523a47b631d6c3ab25fc59541c54",
+				"integrity": "sha512-IGFg4IjmQpIPx/j6+VJhUcjhYJOtDG/mvnJK2nlVgtLZhgryVCZ65TuQg7wyqYyE0QK3fqj3/GYVYPy4xnBhEQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDOlByXleboOepBLAFUpTSr9aTi+TPyJr05xrEqBphZRQIhAJHwSIe+uzkoFuNwpTl5V7ZvU90Rdv4U6UbZI2evRBZN"
+					}
+				]
+			},
+			"_npmVersion": "6.13.6",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "013987241993b7447915e4129506d7dd917570e0",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/available-typed-arrays_1.0.0_1579858199841_0.27181267351846605"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false
+			},
+			"_nodeVersion": "13.7.0",
+			"contributors": []
+		},
+		"1.0.1": {
+			"name": "available-typed-arrays",
+			"description": "Returns an array of Typed Array names that are available in the current environment",
+			"version": "1.0.1",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/inspect-js/available-typed-arrays#readme",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/inspect-js/available-typed-arrays.git"
+			},
+			"bugs": {
+				"url": "https://github.com/inspect-js/available-typed-arrays/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"array-filter": "^1.0.0"
+			},
+			"devDependencies": {
+				"@ljharb/eslint-config": "^15.1.0",
+				"array.prototype.every": "^1.1.0",
+				"auto-changelog": "^1.16.2",
+				"eslint": "^6.8.0",
+				"evalmd": "^0.0.19",
+				"isarray": "^2.0.5",
+				"safe-publish-latest": "^1.1.4",
+				"tape": "^5.0.0-next.4"
+			},
+			"keywords": [
+				"typed",
+				"arrays",
+				"Float32Array",
+				"Float64Array",
+				"Int8Array",
+				"Int16Array",
+				"Int32Array",
+				"Uint8Array",
+				"Uint8ClampedArray",
+				"Uint16Array",
+				"Uint32Array",
+				"BigInt64Array",
+				"BigUint64Array"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"prepublish": "safe-publish-latest",
+				"prelint": "evalmd README.md",
+				"lint": "eslint .",
+				"pretest": "npm run lint",
+				"tests-only": "node test",
+				"test": "npm run tests-only",
+				"posttest": "npx aud",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\""
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "available-typed-arrays@1.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/available-typed-arrays/-/available-typed-arrays-1.0.1.tgz",
+				"shasum": "0065ccef4a3f4894db02e1f6a72bcfb8f3f1b98d",
+				"integrity": "sha512-Zo/GKz+tytvGfpbqSckhEm/moLI08UhK62Nus5uJjJHqwUFdTv9Q9NQAgntlvD83uPcEixZNzhm7dMtfCzrr0Q==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIDBfd0yuKvI257p7eKNzz3TBy7h6yrb4y/HVvVpwU4uUAiEAwGSWvhn2CIPmBX9P7+gYTYCXy6vYqzf1mGv0riHDKts="
+					}
+				]
+			},
+			"_npmVersion": "6.13.6",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "28e0709cb723c4373cbeca3d3e690331c3b824a9",
+			"exports": {
+				".": [
+					{
+						"require": "./index.js",
+						"default": "./index.js"
+					},
+					"./index.js"
+				],
+				"./package": "./package.json",
+				"./package.json": "./package.json"
+			},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/available-typed-arrays_1.0.1_1579885111828_0.31777765501901256"
+			},
+			"type": "commonjs",
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false
+			},
+			"_nodeVersion": "13.7.0",
+			"contributors": []
+		},
+		"1.0.2": {
+			"name": "available-typed-arrays",
+			"description": "Returns an array of Typed Array names that are available in the current environment",
+			"version": "1.0.2",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/inspect-js/available-typed-arrays#readme",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/inspect-js/available-typed-arrays.git"
+			},
+			"bugs": {
+				"url": "https://github.com/inspect-js/available-typed-arrays/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"array-filter": "^1.0.0"
+			},
+			"devDependencies": {
+				"@ljharb/eslint-config": "^16.0.0",
+				"array.prototype.every": "^1.1.0",
+				"auto-changelog": "^1.16.2",
+				"eslint": "^6.8.0",
+				"evalmd": "^0.0.19",
+				"isarray": "^2.0.5",
+				"safe-publish-latest": "^1.1.4",
+				"tape": "^5.0.0-next.4"
+			},
+			"keywords": [
+				"typed",
+				"arrays",
+				"Float32Array",
+				"Float64Array",
+				"Int8Array",
+				"Int16Array",
+				"Int32Array",
+				"Uint8Array",
+				"Uint8ClampedArray",
+				"Uint16Array",
+				"Uint32Array",
+				"BigInt64Array",
+				"BigUint64Array"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"prepublish": "safe-publish-latest",
+				"prelint": "evalmd README.md",
+				"lint": "eslint .",
+				"pretest": "npm run lint",
+				"tests-only": "node test",
+				"test": "npm run tests-only",
+				"posttest": "npx aud",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\""
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "available-typed-arrays@1.0.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/available-typed-arrays/-/available-typed-arrays-1.0.2.tgz",
+				"shasum": "6b098ca9d8039079ee3f77f7b783c4480ba513f5",
+				"integrity": "sha512-XWX3OX8Onv97LMk/ftVyBibpGwY5a8SmuxZPzeOxqmuEqUCOM9ZE+uIaD1VNJ5QnvU2UQusvmKbuM1FR8QWGfQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIEC/gyvDrSEHCFVOxqiNMxW0+L72i2SXX8RS6PzueuRmAiBAcy9NG5D6KJvazgu9YxmrOKV6qXzsUSfy4J3wzUg6CQ=="
+					}
+				]
+			},
+			"_npmVersion": "6.13.6",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "7f44c74097f86c7a8a6f469fda4b9ebbb68c5f96",
+			"exports": {
+				".": [
+					{
+						"default": "./index.js"
+					},
+					"./index.js"
+				],
+				"./package": "./package.json",
+				"./package.json": "./package.json"
+			},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/available-typed-arrays_1.0.2_1580025964459_0.20148085947412264"
+			},
+			"type": "commonjs",
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false
+			},
+			"_nodeVersion": "13.7.0",
+			"contributors": []
+		}
+	},
+	"time": {
+		"1.0.3": "2021-05-19T15:08:41.114Z",
+		"1.0.4": "2021-05-25T16:09:16.855Z",
+		"1.0.5": "2021-08-31T02:24:03.721Z",
+		"1.0.6": "2024-02-01T05:46:19.196Z",
+		"1.0.7": "2024-02-19T23:54:30.736Z",
+		"created": "2020-01-24T09:29:59.840Z",
+		"modified": "2024-02-19T23:54:31.157Z",
+		"1.0.0": "2020-01-24T09:30:00.014Z",
+		"1.0.1": "2020-01-24T16:58:31.926Z",
+		"1.0.2": "2020-01-26T08:06:04.613Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "1.0.7"
+	},
+	"_uplinks": {
+		"artifactory-sabadell": {
+			"etag": "f11755153eefd4a3bce4d86dc6f1a6c3e66165ea",
+			"fetched": 1782459825148
+		}
+	},
+	"_distfiles": {
+		"available-typed-arrays-1.0.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/available-typed-arrays/-/available-typed-arrays-1.0.3.tgz",
+			"sha": "fb7d02445bfedefad79fad1fe47931163a227198",
+			"registry": "artifactory-sabadell"
+		},
+		"available-typed-arrays-1.0.4.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/available-typed-arrays/-/available-typed-arrays-1.0.4.tgz",
+			"sha": "9e0ae84ecff20caae6a94a1c3bc39b955649b7a9",
+			"registry": "artifactory-sabadell"
+		},
+		"available-typed-arrays-1.0.5.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/available-typed-arrays/-/available-typed-arrays-1.0.5.tgz",
+			"sha": "92f95616501069d07d10edb2fc37d3e1c65123b7",
+			"registry": "artifactory-sabadell"
+		},
+		"available-typed-arrays-1.0.6.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/available-typed-arrays/-/available-typed-arrays-1.0.6.tgz",
+			"sha": "ac812d8ce5a6b976d738e1c45f08d0b00bc7d725",
+			"registry": "artifactory-sabadell"
+		},
+		"available-typed-arrays-1.0.7.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/available-typed-arrays/-/available-typed-arrays-1.0.7.tgz",
+			"sha": "a5cc375d6a03c2efc87a553f3e0b1522def14846",
+			"registry": "artifactory-sabadell"
+		},
+		"available-typed-arrays-1.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/available-typed-arrays/-/available-typed-arrays-1.0.0.tgz",
+			"sha": "2d3e2d7b0846523a47b631d6c3ab25fc59541c54",
+			"registry": "artifactory-sabadell"
+		},
+		"available-typed-arrays-1.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/available-typed-arrays/-/available-typed-arrays-1.0.1.tgz",
+			"sha": "0065ccef4a3f4894db02e1f6a72bcfb8f3f1b98d",
+			"registry": "artifactory-sabadell"
+		},
+		"available-typed-arrays-1.0.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/available-typed-arrays/-/available-typed-arrays-1.0.2.tgz",
+			"sha": "6b098ca9d8039079ee3f77f7b783c4480ba513f5",
+			"registry": "artifactory-sabadell"
+		}
+	},
+	"_attachments": {},
+	"_rev": "1-38ee7ae7f49a839e",
+	"_id": "available-typed-arrays",
+	"readme": "# available-typed-arrays <sup>[![Version Badge][2]][1]</sup>\n\n[![github actions][actions-image]][actions-url]\n[![coverage][codecov-image]][codecov-url]\n[![dependency status][5]][6]\n[![dev dependency status][7]][8]\n[![License][license-image]][license-url]\n[![Downloads][downloads-image]][downloads-url]\n\n[![npm badge][11]][1]\n\nReturns an array of Typed Array names that are available in the current environment.\n\n## Example\n\n```js\nvar availableTypedArrays = require('available-typed-arrays');\nvar assert = require('assert');\n\nassert.deepStrictEqual(\n\tavailableTypedArrays().sort(),\n\t[\n\t\t'Int8Array',\n\t\t'Uint8Array',\n\t\t'Uint8ClampedArray',\n\t\t'Int16Array',\n\t\t'Uint16Array',\n\t\t'Int32Array',\n\t\t'Uint32Array',\n\t\t'Float32Array',\n\t\t'Float64Array',\n\t\t'BigInt64Array',\n\t\t'BigUint64Array'\n\t].sort()\n);\n```\n\n## Tests\nSimply clone the repo, `npm install`, and run `npm test`\n\n[1]: https://npmjs.org/package/available-typed-arrays\n[2]: https://versionbadg.es/inspect-js/available-typed-arrays.svg\n[5]: https://david-dm.org/inspect-js/available-typed-arrays.svg\n[6]: https://david-dm.org/inspect-js/available-typed-arrays\n[7]: https://david-dm.org/inspect-js/available-typed-arrays/dev-status.svg\n[8]: https://david-dm.org/inspect-js/available-typed-arrays#info=devDependencies\n[11]: https://nodei.co/npm/available-typed-arrays.png?downloads=true&stars=true\n[license-image]: https://img.shields.io/npm/l/available-typed-arrays.svg\n[license-url]: LICENSE\n[downloads-image]: https://img.shields.io/npm/dm/available-typed-arrays.svg\n[downloads-url]: https://npm-stat.com/charts.html?package=available-typed-arrays\n[codecov-image]: https://codecov.io/gh/inspect-js/available-typed-arrays/branch/main/graphs/badge.svg\n[codecov-url]: https://app.codecov.io/gh/inspect-js/available-typed-arrays/\n[actions-image]: https://img.shields.io/endpoint?url=https://github-actions-badge-u3jn4tfpocch.runkit.sh/inspect-js/available-typed-arrays\n[actions-url]: https://github.com/inspect-js/available-typed-arrays/actions"
+}

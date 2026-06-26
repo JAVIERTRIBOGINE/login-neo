@@ -1,0 +1,20 @@
+{
+  "extends": "@proteo/tsconfig",
+  "compilerOptions": {
+    "target": "es2022",
+    "module": "es2022",
+    "moduleResolution": "bundler",
+    "useDefineForClassFields": false,
+    "strict": true,
+    "composite": false,
+    "verbatimModuleSyntax": false
+  },
+  "files": [],
+  "include": [],
+  "references": [{ "path": "./tsconfig.lib.json" }],
+  "angularCompilerOptions": {
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  }
+}

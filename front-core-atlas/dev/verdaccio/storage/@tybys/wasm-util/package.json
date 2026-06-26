@@ -1,0 +1,1967 @@
+{
+	"name": "@tybys/wasm-util",
+	"versions": {
+		"0.5.1": {
+			"name": "@tybys/wasm-util",
+			"description": "WASI polyfill for browser and some wasm util",
+			"version": "0.5.1",
+			"author": {
+				"name": "toyobayashi"
+			},
+			"homepage": "https://github.com/toyobayashi/wasm-util#readme",
+			"repository": {
+				"url": "git+https://github.com/toyobayashi/wasm-util.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/toyobayashi/wasm-util/issues"
+			},
+			"main": "./lib/cjs/index.js",
+			"devDependencies": {
+				"mocha": "^10.1.0",
+				"eslint": "^8.25.0",
+				"ts-node": "^10.9.1",
+				"typescript": "~4.8.3",
+				"@tybys/tsgo": "^1.1.0",
+				"@types/node": "^14.14.31",
+				"eslint-plugin-n": "^15.3.0",
+				"eslint-plugin-import": "^2.26.0",
+				"eslint-plugin-promise": "^6.1.0",
+				"@typescript-eslint/parser": "^5.40.1",
+				"@tybys/ts-transform-pure-class": "^0.1.1",
+				"@typescript-eslint/eslint-plugin": "^5.40.1",
+				"@tybys/ts-transform-module-specifier": "^0.0.2",
+				"eslint-config-standard-with-typescript": "^23.0.0"
+			},
+			"keywords": [
+				"wasm",
+				"webassembly",
+				"wasi",
+				"polyfill"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "toyobayashi",
+					"email": "lifenglin314@outlook.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint ./src/**/*.{ts,js} --fix",
+				"test": "jest",
+				"build": "tsgo build",
+				"watch": "tsgo watch",
+				"prepare": "npm run build"
+			},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@tybys/wasm-util@0.5.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@tybys/wasm-util/-/wasm-util-0.5.1.tgz",
+				"shasum": "ff5461119125271375ff0999d208443244082f95",
+				"integrity": "sha512-vdlj6jTnhcHPUhbDfrLeJj1XxEKDvkH8ThQJksU08KswK6aK1wJ4TouabBZ+4NPw7CvyDVNiU+HphprM1OyUow==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDQy2phlZuRbd1ik1Wc4gdot9ymA9vUr5pfzmhWlesfhAIgKpQBZzhetJFZApPb0L4NxLs8EtEqJdBwe/thc6oeEZA="
+					}
+				]
+			},
+			"_npmVersion": "8.5.5",
+			"_npmUser": {
+				"name": "toyobayashi",
+				"email": "lifenglin314@outlook.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "255ab7bede3aa2c89b046a8df780bbc158ce279b",
+			"types": "./dist/wasm-util.d.ts",
+			"exports": {
+				".": {
+					"types": "./dist/wasm-util.d.ts",
+					"import": "./lib/mjs/index.mjs",
+					"module": "./dist/wasm-util.esm-bundler.js",
+					"require": "./lib/cjs/index.js"
+				}
+			},
+			"module": "./dist/wasm-util.esm-bundler.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/wasm-util_0.5.1_1670743889388_0.30021676246328344",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "16.15.0",
+			"contributors": []
+		},
+		"0.6.0": {
+			"name": "@tybys/wasm-util",
+			"description": "WASI polyfill for browser and some wasm util",
+			"version": "0.6.0",
+			"author": {
+				"name": "toyobayashi"
+			},
+			"homepage": "https://github.com/toyobayashi/wasm-util#readme",
+			"repository": {
+				"url": "git+https://github.com/toyobayashi/wasm-util.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/toyobayashi/wasm-util/issues"
+			},
+			"main": "./lib/cjs/index.js",
+			"dependencies": {
+				"tslib": "^2.4.0"
+			},
+			"devDependencies": {
+				"mocha": "^10.1.0",
+				"eslint": "^8.25.0",
+				"ts-node": "^10.9.1",
+				"typescript": "~4.8.3",
+				"@tybys/tsgo": "^1.1.0",
+				"@types/node": "^14.14.31",
+				"memfs-browser": "^3.4.13000",
+				"eslint-plugin-n": "^15.3.0",
+				"eslint-plugin-import": "^2.26.0",
+				"eslint-plugin-promise": "^6.1.0",
+				"@typescript-eslint/parser": "^5.40.1",
+				"@tybys/ts-transform-pure-class": "^0.1.1",
+				"@typescript-eslint/eslint-plugin": "^5.40.1",
+				"@tybys/ts-transform-module-specifier": "^0.0.2",
+				"eslint-config-standard-with-typescript": "^23.0.0"
+			},
+			"keywords": [
+				"wasm",
+				"webassembly",
+				"wasi",
+				"polyfill"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "toyobayashi",
+					"email": "lifenglin314@outlook.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint ./src/**/*.{ts,js} --fix",
+				"test": "jest",
+				"build": "tsgo build",
+				"watch": "tsgo watch",
+				"prepare": "npm run build"
+			},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@tybys/wasm-util@0.6.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@tybys/wasm-util/-/wasm-util-0.6.0.tgz",
+				"shasum": "6ea5a76ae2289dd55cec4189b6bab43630eff71d",
+				"integrity": "sha512-lLc3ere7iAmJ+Sw4WnCM7KBfsZo5jZo+ssxW0FcBZ6+JqdQy/UPXzideWloDP0S1wNJgNDto5RlNCQ+MjI2SVw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIDidcrds2Vszk0yNNjgMTzd2tjaSn52krG1gNp9vIVzaAiEAi5oKABuXJcQTDZjEQOHjVBRWJHznPqtbUk6d5IRB5gI="
+					}
+				]
+			},
+			"_npmVersion": "9.3.1",
+			"_npmUser": {
+				"name": "toyobayashi",
+				"email": "lifenglin314@outlook.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "c3ec419ccdc961677fe8f46e80aeabcb1492787c",
+			"types": "./dist/wasm-util.d.ts",
+			"exports": {
+				".": {
+					"types": "./dist/wasm-util.d.ts",
+					"import": "./lib/mjs/index.mjs",
+					"module": "./dist/wasm-util.esm-bundler.js",
+					"require": "./lib/cjs/index.js"
+				}
+			},
+			"module": "./dist/wasm-util.esm-bundler.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/wasm-util_0.6.0_1676786001220_0.16624776638651273",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "18.14.0",
+			"contributors": []
+		},
+		"0.5.2": {
+			"name": "@tybys/wasm-util",
+			"description": "WASI polyfill for browser and some wasm util",
+			"version": "0.5.2",
+			"author": {
+				"name": "toyobayashi"
+			},
+			"homepage": "https://github.com/toyobayashi/wasm-util#readme",
+			"repository": {
+				"url": "git+https://github.com/toyobayashi/wasm-util.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/toyobayashi/wasm-util/issues"
+			},
+			"main": "./lib/cjs/index.js",
+			"devDependencies": {
+				"mocha": "^10.1.0",
+				"eslint": "^8.25.0",
+				"ts-node": "^10.9.1",
+				"typescript": "~4.8.3",
+				"@tybys/tsgo": "^1.1.0",
+				"@types/node": "^14.14.31",
+				"eslint-plugin-n": "^15.3.0",
+				"eslint-plugin-import": "^2.26.0",
+				"eslint-plugin-promise": "^6.1.0",
+				"@typescript-eslint/parser": "^5.40.1",
+				"@tybys/ts-transform-pure-class": "^0.1.1",
+				"@typescript-eslint/eslint-plugin": "^5.40.1",
+				"@tybys/ts-transform-module-specifier": "^0.0.2",
+				"eslint-config-standard-with-typescript": "^23.0.0"
+			},
+			"keywords": [
+				"wasm",
+				"webassembly",
+				"wasi",
+				"polyfill"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "toyobayashi",
+					"email": "lifenglin314@outlook.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint ./src/**/*.{ts,js} --fix",
+				"test": "jest",
+				"build": "tsgo build",
+				"watch": "tsgo watch",
+				"prepare": "npm run build"
+			},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@tybys/wasm-util@0.5.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@tybys/wasm-util/-/wasm-util-0.5.2.tgz",
+				"shasum": "892901cddc1970318789b71bfe3078bd422434a6",
+				"integrity": "sha512-WfQJur2aBh6zY3zYd+WMVldWgLdEQbMsiOqtDQPW0aYW4euWAFDea2zWeMX6waqYL2uvSFLUHFzMVsom/Ywwwg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIFNliZrUsWl5HA5kUfcdeiJC7aCVpfmf1Bdyox9cYHFKAiEApwfSmIw0IxV/NL5dRgpmy7YuTQa6LGIziH2Ot8wAhMo="
+					}
+				]
+			},
+			"_npmVersion": "8.5.5",
+			"_npmUser": {
+				"name": "toyobayashi",
+				"email": "lifenglin314@outlook.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "1c0d440d1d062bb0fd950ae18370201fde712379",
+			"types": "./dist/wasm-util.d.ts",
+			"exports": {
+				".": {
+					"types": "./dist/wasm-util.d.ts",
+					"import": "./lib/mjs/index.mjs",
+					"module": "./dist/wasm-util.esm-bundler.js",
+					"require": "./lib/cjs/index.js"
+				}
+			},
+			"module": "./dist/wasm-util.esm-bundler.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/wasm-util_0.5.2_1670744314428_0.3858615028775574",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "16.15.0",
+			"contributors": []
+		},
+		"0.7.0": {
+			"name": "@tybys/wasm-util",
+			"description": "WASI polyfill for browser and some wasm util",
+			"version": "0.7.0",
+			"author": {
+				"name": "toyobayashi"
+			},
+			"homepage": "https://github.com/toyobayashi/wasm-util#readme",
+			"repository": {
+				"url": "git+https://github.com/toyobayashi/wasm-util.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/toyobayashi/wasm-util/issues"
+			},
+			"main": "./lib/cjs/index.js",
+			"dependencies": {
+				"tslib": "^2.4.0"
+			},
+			"devDependencies": {
+				"mocha": "^10.1.0",
+				"eslint": "^8.25.0",
+				"ts-node": "^10.9.1",
+				"typescript": "~4.8.3",
+				"@tybys/tsgo": "^1.1.0",
+				"@types/node": "^14.14.31",
+				"memfs-browser": "^3.4.13000",
+				"eslint-plugin-n": "^15.3.0",
+				"eslint-plugin-import": "^2.26.0",
+				"eslint-plugin-promise": "^6.1.0",
+				"@typescript-eslint/parser": "^5.40.1",
+				"@tybys/ts-transform-pure-class": "^0.1.1",
+				"@typescript-eslint/eslint-plugin": "^5.40.1",
+				"@tybys/ts-transform-module-specifier": "^0.0.2",
+				"eslint-config-standard-with-typescript": "^23.0.0"
+			},
+			"keywords": [
+				"wasm",
+				"webassembly",
+				"wasi",
+				"polyfill"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "toyobayashi",
+					"email": "lifenglin314@outlook.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint ./src/**/*.{ts,js} --fix",
+				"test": "jest",
+				"build": "tsgo build",
+				"watch": "tsgo watch",
+				"prepare": "npm run build"
+			},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@tybys/wasm-util@0.7.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@tybys/wasm-util/-/wasm-util-0.7.0.tgz",
+				"shasum": "c2a8cde1ff5c083a9770fd0ba82aab7dbb8cb615",
+				"integrity": "sha512-sjzytRuEU9rDwzthrDbo4iXTd6+7OiWoNdUFJzbFZQJact7RXFGkuBds8CRHaAEFYZlemaXP9/HRqBbwfMstGw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQC7qj9hJmtAU0dEfs1xWEkOPP5ecA5fxcW1SFRZV3V7iwIgfjGLuFk/kf3T1u2XgNmH4zHONmH0fgQFO1B9AhS6jaY="
+					}
+				]
+			},
+			"_npmVersion": "9.3.1",
+			"_npmUser": {
+				"name": "toyobayashi",
+				"email": "lifenglin314@outlook.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "8419f783e90b6cd62b65c2d28183da4b8f52a9c3",
+			"types": "./dist/wasm-util.d.ts",
+			"exports": {
+				".": {
+					"types": "./dist/wasm-util.d.ts",
+					"import": "./lib/mjs/index.mjs",
+					"module": "./dist/wasm-util.esm-bundler.js",
+					"require": "./lib/cjs/index.js"
+				}
+			},
+			"module": "./dist/wasm-util.esm-bundler.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/wasm-util_0.7.0_1676794252264_0.024169055774116988",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "18.14.0",
+			"contributors": []
+		},
+		"0.4.0": {
+			"name": "@tybys/wasm-util",
+			"description": "WASI polyfill for browser and some wasm util",
+			"version": "0.4.0",
+			"author": {
+				"name": "toyobayashi"
+			},
+			"homepage": "https://github.com/toyobayashi/wasm-util#readme",
+			"repository": {
+				"url": "git+https://github.com/toyobayashi/wasm-util.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/toyobayashi/wasm-util/issues"
+			},
+			"main": "./lib/cjs/index.js",
+			"devDependencies": {
+				"mocha": "^10.1.0",
+				"eslint": "^8.25.0",
+				"ts-node": "^10.9.1",
+				"typescript": "~4.8.3",
+				"@tybys/tsgo": "^1.1.0",
+				"@types/node": "^14.14.31",
+				"eslint-plugin-n": "^15.3.0",
+				"eslint-plugin-import": "^2.26.0",
+				"eslint-plugin-promise": "^6.1.0",
+				"@typescript-eslint/parser": "^5.40.1",
+				"@tybys/ts-transform-pure-class": "^0.1.1",
+				"@typescript-eslint/eslint-plugin": "^5.40.1",
+				"@tybys/ts-transform-module-specifier": "^0.0.2",
+				"eslint-config-standard-with-typescript": "^23.0.0"
+			},
+			"keywords": [
+				"wasm",
+				"webassembly",
+				"wasi",
+				"polyfill"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "toyobayashi",
+					"email": "lifenglin314@outlook.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint ./src/**/*.{ts,js} --fix",
+				"test": "jest",
+				"build": "tsgo build",
+				"watch": "tsgo watch",
+				"prepare": "npm run build"
+			},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@tybys/wasm-util@0.4.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@tybys/wasm-util/-/wasm-util-0.4.0.tgz",
+				"shasum": "302686a56b20f4f85dcf16d5c71c9d2fe84df636",
+				"integrity": "sha512-IpHXomh5v05z2lD03LP3x4y19CwOMcN9xrcdxveBsxcgiN3e5V3VLWB0OYs/yj0/hv/u1dJCMbDeiRWRRHnIWQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIA5RMoNvg3fpCGpwozKW/fdOu141SgNn7j3Z7BqNaSWfAiEAu2hSITsGl6ynqdz2bz3cg19dz6kdwSiYFoOT/U/xX9k="
+					}
+				]
+			},
+			"_npmVersion": "8.5.5",
+			"_npmUser": {
+				"name": "toyobayashi",
+				"email": "lifenglin314@outlook.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "fd4e388a966a9dab8025207d955c04c8e00c2ef7",
+			"types": "./dist/wasm-util.d.ts",
+			"exports": {
+				".": {
+					"types": "./dist/wasm-util.d.ts",
+					"import": "./lib/mjs/index.mjs",
+					"module": "./dist/wasm-util.esm-bundler.js",
+					"require": "./lib/cjs/index.js"
+				}
+			},
+			"module": "./dist/wasm-util.esm-bundler.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/wasm-util_0.4.0_1668422350365_0.3792978599155723",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "16.15.0",
+			"contributors": []
+		},
+		"0.5.0": {
+			"name": "@tybys/wasm-util",
+			"description": "WASI polyfill for browser and some wasm util",
+			"version": "0.5.0",
+			"author": {
+				"name": "toyobayashi"
+			},
+			"homepage": "https://github.com/toyobayashi/wasm-util#readme",
+			"repository": {
+				"url": "git+https://github.com/toyobayashi/wasm-util.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/toyobayashi/wasm-util/issues"
+			},
+			"main": "./lib/cjs/index.js",
+			"devDependencies": {
+				"mocha": "^10.1.0",
+				"eslint": "^8.25.0",
+				"ts-node": "^10.9.1",
+				"typescript": "~4.8.3",
+				"@tybys/tsgo": "^1.1.0",
+				"@types/node": "^14.14.31",
+				"eslint-plugin-n": "^15.3.0",
+				"eslint-plugin-import": "^2.26.0",
+				"eslint-plugin-promise": "^6.1.0",
+				"@typescript-eslint/parser": "^5.40.1",
+				"@tybys/ts-transform-pure-class": "^0.1.1",
+				"@typescript-eslint/eslint-plugin": "^5.40.1",
+				"@tybys/ts-transform-module-specifier": "^0.0.2",
+				"eslint-config-standard-with-typescript": "^23.0.0"
+			},
+			"keywords": [
+				"wasm",
+				"webassembly",
+				"wasi",
+				"polyfill"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "toyobayashi",
+					"email": "lifenglin314@outlook.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint ./src/**/*.{ts,js} --fix",
+				"test": "jest",
+				"build": "tsgo build",
+				"watch": "tsgo watch",
+				"prepare": "npm run build"
+			},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@tybys/wasm-util@0.5.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@tybys/wasm-util/-/wasm-util-0.5.0.tgz",
+				"shasum": "226315b7965c822fe1e6aad5e5ef7672f23c492c",
+				"integrity": "sha512-GLh0zhlOvBYfY5dednSgvNh7Np2Xw3PVh2XOxeAzlUm+HPpgVf4t9+7kpepoZwroi5ks2TaHdVibV3uVQOa4Rw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDGxCYCkEQ0Gi/LOvcEtTS1L+1sJdDf91auBaD6/oineQIgTUvusRayN45QiGqRMsZo4XfKqdMUkbwTCBypwk9A/aM="
+					}
+				]
+			},
+			"_npmVersion": "8.5.5",
+			"_npmUser": {
+				"name": "toyobayashi",
+				"email": "lifenglin314@outlook.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "73f6b231e6d17b096e137bbaefce6c6cf998e5f0",
+			"types": "./dist/wasm-util.d.ts",
+			"exports": {
+				".": {
+					"types": "./dist/wasm-util.d.ts",
+					"import": "./lib/mjs/index.mjs",
+					"module": "./dist/wasm-util.esm-bundler.js",
+					"require": "./lib/cjs/index.js"
+				}
+			},
+			"module": "./dist/wasm-util.esm-bundler.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/wasm-util_0.5.0_1670739652427_0.8265448585473647",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "16.15.0",
+			"contributors": []
+		},
+		"0.8.2": {
+			"name": "@tybys/wasm-util",
+			"description": "WASI polyfill for browser and some wasm util",
+			"version": "0.8.2",
+			"author": {
+				"name": "toyobayashi"
+			},
+			"homepage": "https://github.com/toyobayashi/wasm-util#readme",
+			"repository": {
+				"url": "git+https://github.com/toyobayashi/wasm-util.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/toyobayashi/wasm-util/issues"
+			},
+			"main": "./lib/cjs/index.js",
+			"dependencies": {
+				"tslib": "^2.4.0"
+			},
+			"devDependencies": {
+				"mocha": "^10.1.0",
+				"eslint": "^8.25.0",
+				"ts-node": "^10.9.1",
+				"typescript": "~4.8.3",
+				"@tybys/tsgo": "^1.1.0",
+				"@types/node": "^14.14.31",
+				"memfs-browser": "^3.4.13000",
+				"eslint-plugin-n": "^15.3.0",
+				"eslint-plugin-import": "^2.26.0",
+				"eslint-plugin-promise": "^6.1.0",
+				"@typescript-eslint/parser": "^5.40.1",
+				"@tybys/ts-transform-pure-class": "^0.1.1",
+				"@typescript-eslint/eslint-plugin": "^5.40.1",
+				"@tybys/ts-transform-module-specifier": "^0.0.2",
+				"eslint-config-standard-with-typescript": "^23.0.0"
+			},
+			"keywords": [
+				"wasm",
+				"webassembly",
+				"wasi",
+				"polyfill"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "toyobayashi",
+					"email": "lifenglin314@outlook.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint ./src/**/*.{ts,js} --fix",
+				"test": "jest",
+				"build": "tsgo build",
+				"watch": "tsgo watch",
+				"prepare": "npm run build"
+			},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@tybys/wasm-util@0.8.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@tybys/wasm-util/-/wasm-util-0.8.2.tgz",
+				"shasum": "33aa636e019d60b3805df797c54d53e10155a291",
+				"integrity": "sha512-kzI0zdUtC/ymNQCVQiqHCKobSSyppUHet+pHaiOdKUV48B/uKCEDznwf4N9tOoDKdh7Uuhm8V60xPU8VYbBbrQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIDbbqheFe39UE3Zmm+RLXrxzOY2yTKtqrp1G4KgPNCCAAiEAstzZTwdMmn6JF/yiuE3hmdu53HMDirv+iCHJN/7RGWw="
+					}
+				]
+			},
+			"_npmVersion": "10.4.0",
+			"_npmUser": {
+				"name": "toyobayashi",
+				"email": "lifenglin314@outlook.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "b439ddeab7e972bc50ba40dd61808a2e8ace6b50",
+			"types": "./dist/wasm-util.d.ts",
+			"exports": {
+				".": {
+					"types": "./dist/wasm-util.d.ts",
+					"import": "./lib/mjs/index.mjs",
+					"module": "./dist/wasm-util.esm-bundler.js",
+					"require": "./lib/cjs/index.js"
+				}
+			},
+			"module": "./dist/wasm-util.esm-bundler.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/wasm-util_0.8.2_1713511331596_0.9707771199918427",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "20.12.0",
+			"contributors": []
+		},
+		"0.8.3": {
+			"name": "@tybys/wasm-util",
+			"description": "WASI polyfill for browser and some wasm util",
+			"version": "0.8.3",
+			"author": {
+				"name": "toyobayashi"
+			},
+			"homepage": "https://github.com/toyobayashi/wasm-util#readme",
+			"repository": {
+				"url": "git+https://github.com/toyobayashi/wasm-util.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/toyobayashi/wasm-util/issues"
+			},
+			"main": "./lib/cjs/index.js",
+			"dependencies": {
+				"tslib": "^2.4.0"
+			},
+			"devDependencies": {
+				"mocha": "^10.1.0",
+				"eslint": "^8.25.0",
+				"ts-node": "^10.9.1",
+				"typescript": "~4.8.3",
+				"@tybys/tsgo": "^1.1.0",
+				"@types/node": "^14.14.31",
+				"memfs-browser": "^3.4.13000",
+				"eslint-plugin-n": "^15.3.0",
+				"eslint-plugin-import": "^2.26.0",
+				"eslint-plugin-promise": "^6.1.0",
+				"@typescript-eslint/parser": "^5.40.1",
+				"@tybys/ts-transform-pure-class": "^0.1.1",
+				"@typescript-eslint/eslint-plugin": "^5.40.1",
+				"@tybys/ts-transform-module-specifier": "^0.0.2",
+				"eslint-config-standard-with-typescript": "^23.0.0"
+			},
+			"keywords": [
+				"wasm",
+				"webassembly",
+				"wasi",
+				"polyfill"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "toyobayashi",
+					"email": "lifenglin314@outlook.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint ./src/**/*.{ts,js} --fix",
+				"test": "jest",
+				"build": "tsgo build",
+				"watch": "tsgo watch",
+				"prepare": "npm run build"
+			},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@tybys/wasm-util@0.8.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@tybys/wasm-util/-/wasm-util-0.8.3.tgz",
+				"shasum": "34dc6fd51bdc03524a27359137594bb15c59bba1",
+				"integrity": "sha512-Z96T/L6dUFFxgFJ+pQtkPpne9q7i6kIPYCFnQBHSgSPV9idTsKfIhCss0h5iM9irweZCatkrdeP8yi5uM1eX6Q==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIET2gDOLKXf6R0esuwjgnaIazLQe2I4taBia/JnRZueVAiAdPA6JyUMjc9yKXof/0wWgyvX1yvylXDhwJdGOV9AR/g=="
+					}
+				]
+			},
+			"_npmVersion": "10.4.0",
+			"_npmUser": {
+				"name": "toyobayashi",
+				"email": "lifenglin314@outlook.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "2c43cbd77885e607baa8618ce1bdddbae021c327",
+			"types": "./dist/wasm-util.d.ts",
+			"exports": {
+				".": {
+					"types": "./dist/wasm-util.d.ts",
+					"import": "./lib/mjs/index.mjs",
+					"module": "./dist/wasm-util.esm-bundler.js",
+					"require": "./lib/cjs/index.js"
+				}
+			},
+			"module": "./dist/wasm-util.esm-bundler.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/wasm-util_0.8.3_1713679157958_0.867275491318598",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "20.12.0",
+			"contributors": []
+		},
+		"0.10.3": {
+			"name": "@tybys/wasm-util",
+			"description": "WASI polyfill for browser and some wasm util",
+			"version": "0.10.3",
+			"author": {
+				"name": "toyobayashi"
+			},
+			"homepage": "https://github.com/toyobayashi/wasm-util#readme",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/toyobayashi/wasm-util.git"
+			},
+			"bugs": {
+				"url": "https://github.com/toyobayashi/wasm-util/issues"
+			},
+			"main": "./lib/cjs/index.js",
+			"dependencies": {
+				"tslib": "^2.4.0"
+			},
+			"devDependencies": {
+				"@tybys/ts-transform-module-specifier": "^0.0.2",
+				"@tybys/ts-transform-pure-class": "^0.1.1",
+				"@tybys/tsgo": "^1.1.0",
+				"@types/node": "^14.14.31",
+				"@typescript-eslint/eslint-plugin": "^5.40.1",
+				"@typescript-eslint/parser": "^5.40.1",
+				"eslint": "^8.25.0",
+				"eslint-config-standard-with-typescript": "^23.0.0",
+				"eslint-plugin-import": "^2.26.0",
+				"eslint-plugin-n": "^15.3.0",
+				"eslint-plugin-promise": "^6.1.0",
+				"memfs-browser": "^3.4.13000",
+				"mocha": "^10.1.0",
+				"ts-node": "^10.9.1",
+				"typescript": "~4.8.3"
+			},
+			"keywords": [
+				"wasm",
+				"webassembly",
+				"wasi",
+				"polyfill"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "toyobayashi",
+					"email": "lifenglin314@outlook.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"build": "tsgo build",
+				"watch": "tsgo watch",
+				"test": "jest",
+				"lint": "eslint ./src/**/*.{ts,js} --fix",
+				"prepare": "npm run build"
+			},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@tybys/wasm-util@0.10.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@tybys/wasm-util/-/wasm-util-0.10.3.tgz",
+				"shasum": "015cba9e9dd47ce14d03d2a8c5d547bfb169665d",
+				"integrity": "sha512-F3fo1MYrRJYL3zER0OUOmkutjr1Vp23m7OsSgp7nq4SP6OqX6C/56XFIPAl5bt3zaBRjmW7SGz3u/6LwFpYcOg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEYCIQCRsJ0IVBNOK4iBAB3eVFtIHHLSNWpBEqYU9oSxbOCW6wIhAOMCVzRAyORufiD3MdaQ9qAKIRWWpyV4qZcEwfwhvjjO"
+					}
+				]
+			},
+			"_npmVersion": "11.6.2",
+			"_npmUser": {
+				"name": "toyobayashi",
+				"email": "lifenglin314@outlook.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "efb17cc128a30fb16b58127738f09c8871a3f7d1",
+			"types": "./dist/wasm-util.d.ts",
+			"exports": {
+				".": {
+					"module": "./dist/wasm-util.esm-bundler.js",
+					"import": "./lib/mjs/index.mjs",
+					"require": "./lib/cjs/index.js",
+					"types": "./dist/wasm-util.d.ts"
+				}
+			},
+			"module": "./dist/wasm-util.esm-bundler.js",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages-npm-production",
+				"tmp": "tmp/wasm-util_0.10.3_1782199676623_0.9436226387008044"
+			},
+			"_nodeVersion": "24.12.0",
+			"contributors": []
+		},
+		"0.5.3": {
+			"name": "@tybys/wasm-util",
+			"description": "WASI polyfill for browser and some wasm util",
+			"version": "0.5.3",
+			"author": {
+				"name": "toyobayashi"
+			},
+			"homepage": "https://github.com/toyobayashi/wasm-util#readme",
+			"repository": {
+				"url": "git+https://github.com/toyobayashi/wasm-util.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/toyobayashi/wasm-util/issues"
+			},
+			"main": "./lib/cjs/index.js",
+			"dependencies": {
+				"tslib": "^2.4.0"
+			},
+			"devDependencies": {
+				"mocha": "^10.1.0",
+				"eslint": "^8.25.0",
+				"ts-node": "^10.9.1",
+				"typescript": "~4.8.3",
+				"@tybys/tsgo": "^1.1.0",
+				"@types/node": "^14.14.31",
+				"eslint-plugin-n": "^15.3.0",
+				"eslint-plugin-import": "^2.26.0",
+				"eslint-plugin-promise": "^6.1.0",
+				"@typescript-eslint/parser": "^5.40.1",
+				"@tybys/ts-transform-pure-class": "^0.1.1",
+				"@typescript-eslint/eslint-plugin": "^5.40.1",
+				"@tybys/ts-transform-module-specifier": "^0.0.2",
+				"eslint-config-standard-with-typescript": "^23.0.0"
+			},
+			"keywords": [
+				"wasm",
+				"webassembly",
+				"wasi",
+				"polyfill"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "toyobayashi",
+					"email": "lifenglin314@outlook.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint ./src/**/*.{ts,js} --fix",
+				"test": "jest",
+				"build": "tsgo build",
+				"watch": "tsgo watch",
+				"prepare": "npm run build"
+			},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@tybys/wasm-util@0.5.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@tybys/wasm-util/-/wasm-util-0.5.3.tgz",
+				"shasum": "d56550c6cf89f8ceb67aee3a3097963a8355dbf7",
+				"integrity": "sha512-J+oxfyqk9l41s3AKLIlyaWYXGhuqbBhxWqEczwsZukQJqdJu9xkE7OTjBLemw6FoNaxxYzOrhA12Nke1E8bHOQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDMKrXawP0xCfxyg7tm7T5PtKYe1Bn04hRhX7decqRZFAIhAP/xYPyx+rWMOZrbqD1RRCDcfwk2+TS1jtyceOGWvAC3"
+					}
+				]
+			},
+			"_npmVersion": "8.5.5",
+			"_npmUser": {
+				"name": "toyobayashi",
+				"email": "lifenglin314@outlook.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "f869972d0b9216a76edbbef9be0db8d8dc55fe93",
+			"types": "./dist/wasm-util.d.ts",
+			"exports": {
+				".": {
+					"types": "./dist/wasm-util.d.ts",
+					"import": "./lib/mjs/index.mjs",
+					"module": "./dist/wasm-util.esm-bundler.js",
+					"require": "./lib/cjs/index.js"
+				}
+			},
+			"module": "./dist/wasm-util.esm-bundler.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/wasm-util_0.5.3_1670761624320_0.4520184246007617",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "16.15.0",
+			"contributors": []
+		},
+		"0.8.0": {
+			"name": "@tybys/wasm-util",
+			"description": "WASI polyfill for browser and some wasm util",
+			"version": "0.8.0",
+			"author": {
+				"name": "toyobayashi"
+			},
+			"homepage": "https://github.com/toyobayashi/wasm-util#readme",
+			"repository": {
+				"url": "git+https://github.com/toyobayashi/wasm-util.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/toyobayashi/wasm-util/issues"
+			},
+			"main": "./lib/cjs/index.js",
+			"dependencies": {
+				"tslib": "^2.4.0"
+			},
+			"devDependencies": {
+				"mocha": "^10.1.0",
+				"eslint": "^8.25.0",
+				"ts-node": "^10.9.1",
+				"typescript": "~4.8.3",
+				"@tybys/tsgo": "^1.1.0",
+				"@types/node": "^14.14.31",
+				"memfs-browser": "^3.4.13000",
+				"eslint-plugin-n": "^15.3.0",
+				"eslint-plugin-import": "^2.26.0",
+				"eslint-plugin-promise": "^6.1.0",
+				"@typescript-eslint/parser": "^5.40.1",
+				"@tybys/ts-transform-pure-class": "^0.1.1",
+				"@typescript-eslint/eslint-plugin": "^5.40.1",
+				"@tybys/ts-transform-module-specifier": "^0.0.2",
+				"eslint-config-standard-with-typescript": "^23.0.0"
+			},
+			"keywords": [
+				"wasm",
+				"webassembly",
+				"wasi",
+				"polyfill"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "toyobayashi",
+					"email": "lifenglin314@outlook.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint ./src/**/*.{ts,js} --fix",
+				"test": "jest",
+				"build": "tsgo build",
+				"watch": "tsgo watch",
+				"prepare": "npm run build"
+			},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@tybys/wasm-util@0.8.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@tybys/wasm-util/-/wasm-util-0.8.0.tgz",
+				"shasum": "1abdb263e63b86ad24e2a4df823272ff423455fb",
+				"integrity": "sha512-00Sa73E9LjWg1d0+zo5WGLUSpHiVGK6OqlDn6fKaVnf0K9FOw+mF+diQAtvJXyBGurQhfJi2oS0JP9EV9ytbCg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIA4DLne8U1hA0bNDcastO1NAYL41tg1eXuEDSrpMje4OAiEA+ECZ6HOAamI7d5pHZbWmv6QduwTn+HNN3MOa3512UhI="
+					}
+				]
+			},
+			"_npmVersion": "8.19.2",
+			"_npmUser": {
+				"name": "toyobayashi",
+				"email": "lifenglin314@outlook.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "23117669ac178ea9b693b5b20d87f89be232a31e",
+			"types": "./dist/wasm-util.d.ts",
+			"exports": {
+				".": {
+					"types": "./dist/wasm-util.d.ts",
+					"import": "./lib/mjs/index.mjs",
+					"module": "./dist/wasm-util.esm-bundler.js",
+					"require": "./lib/cjs/index.js"
+				}
+			},
+			"module": "./dist/wasm-util.esm-bundler.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/wasm-util_0.8.0_1677419605943_0.3536485990310789",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "18.12.1",
+			"contributors": []
+		},
+		"0.10.2": {
+			"name": "@tybys/wasm-util",
+			"description": "WASI polyfill for browser and some wasm util",
+			"version": "0.10.2",
+			"author": {
+				"name": "toyobayashi"
+			},
+			"homepage": "https://github.com/toyobayashi/wasm-util#readme",
+			"repository": {
+				"url": "git+https://github.com/toyobayashi/wasm-util.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/toyobayashi/wasm-util/issues"
+			},
+			"main": "./lib/cjs/index.js",
+			"dependencies": {
+				"tslib": "^2.4.0"
+			},
+			"devDependencies": {
+				"mocha": "^10.1.0",
+				"eslint": "^8.25.0",
+				"ts-node": "^10.9.1",
+				"typescript": "~4.8.3",
+				"@tybys/tsgo": "^1.1.0",
+				"@types/node": "^14.14.31",
+				"memfs-browser": "^3.4.13000",
+				"eslint-plugin-n": "^15.3.0",
+				"eslint-plugin-import": "^2.26.0",
+				"eslint-plugin-promise": "^6.1.0",
+				"@typescript-eslint/parser": "^5.40.1",
+				"@tybys/ts-transform-pure-class": "^0.1.1",
+				"@typescript-eslint/eslint-plugin": "^5.40.1",
+				"@tybys/ts-transform-module-specifier": "^0.0.2",
+				"eslint-config-standard-with-typescript": "^23.0.0"
+			},
+			"keywords": [
+				"wasm",
+				"webassembly",
+				"wasi",
+				"polyfill"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "toyobayashi",
+					"email": "lifenglin314@outlook.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint ./src/**/*.{ts,js} --fix",
+				"test": "jest",
+				"build": "tsgo build",
+				"watch": "tsgo watch",
+				"prepare": "npm run build"
+			},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@tybys/wasm-util@0.10.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@tybys/wasm-util/-/wasm-util-0.10.2.tgz",
+				"shasum": "12b3a1b33db1f9cad4ddff1f604ab7dd00bf464e",
+				"integrity": "sha512-RoBvJ2X0wuKlWFIjrwffGw1IqZHKQqzIchKaadZZfnNpsAYp2mM0h36JtPCjNDAHGgYez/15uMBpfGwchhiMgg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEQCIFAsKh7dI7l6rVFO0IEqhgKhfHqpdjPJ5/dnpFswXhocAiAWOtluz5vwT3HEA/nZEdMQ2+wpyU7VBZZSYIKsEM9O0A=="
+					}
+				]
+			},
+			"_npmVersion": "11.6.2",
+			"_npmUser": {
+				"name": "toyobayashi",
+				"email": "lifenglin314@outlook.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "cded8e894fe40c7c6200a3fdb2bd33e328b7bb65",
+			"types": "./dist/wasm-util.d.ts",
+			"exports": {
+				".": {
+					"types": "./dist/wasm-util.d.ts",
+					"import": "./lib/mjs/index.mjs",
+					"module": "./dist/wasm-util.esm-bundler.js",
+					"require": "./lib/cjs/index.js"
+				}
+			},
+			"module": "./dist/wasm-util.esm-bundler.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/wasm-util_0.10.2_1777868229323_0.9384414672017809",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"_nodeVersion": "24.12.0",
+			"contributors": []
+		},
+		"0.8.1": {
+			"name": "@tybys/wasm-util",
+			"description": "WASI polyfill for browser and some wasm util",
+			"version": "0.8.1",
+			"author": {
+				"name": "toyobayashi"
+			},
+			"homepage": "https://github.com/toyobayashi/wasm-util#readme",
+			"repository": {
+				"url": "git+https://github.com/toyobayashi/wasm-util.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/toyobayashi/wasm-util/issues"
+			},
+			"main": "./lib/cjs/index.js",
+			"dependencies": {
+				"tslib": "^2.4.0"
+			},
+			"devDependencies": {
+				"mocha": "^10.1.0",
+				"eslint": "^8.25.0",
+				"ts-node": "^10.9.1",
+				"typescript": "~4.8.3",
+				"@tybys/tsgo": "^1.1.0",
+				"@types/node": "^14.14.31",
+				"memfs-browser": "^3.4.13000",
+				"eslint-plugin-n": "^15.3.0",
+				"eslint-plugin-import": "^2.26.0",
+				"eslint-plugin-promise": "^6.1.0",
+				"@typescript-eslint/parser": "^5.40.1",
+				"@tybys/ts-transform-pure-class": "^0.1.1",
+				"@typescript-eslint/eslint-plugin": "^5.40.1",
+				"@tybys/ts-transform-module-specifier": "^0.0.2",
+				"eslint-config-standard-with-typescript": "^23.0.0"
+			},
+			"keywords": [
+				"wasm",
+				"webassembly",
+				"wasi",
+				"polyfill"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "toyobayashi",
+					"email": "lifenglin314@outlook.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint ./src/**/*.{ts,js} --fix",
+				"test": "jest",
+				"build": "tsgo build",
+				"watch": "tsgo watch",
+				"prepare": "npm run build"
+			},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@tybys/wasm-util@0.8.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@tybys/wasm-util/-/wasm-util-0.8.1.tgz",
+				"shasum": "10360976b7f679497ea8526791006417ff304abb",
+				"integrity": "sha512-GSsTwyBl4pIzsxAY5wroZdyQKyhXk0d8PCRZtrSZ2WEB1cBdrp2EgGBwHOGCZtIIPun/DL3+AykCv+J6fyRH4Q==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQC9pLOgcyspSE6qwQOrBkXw+UthF50FSrBMOZyCCS3bYgIhAIu0IMJ5taihoaQEH98XV9tVpwOZr8uoIrh98g4wvQT8"
+					}
+				]
+			},
+			"_npmVersion": "10.2.3",
+			"_npmUser": {
+				"name": "toyobayashi",
+				"email": "lifenglin314@outlook.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "7e642b1728b790c2d2fc23cb5386cacdb9be469c",
+			"types": "./dist/wasm-util.d.ts",
+			"exports": {
+				".": {
+					"types": "./dist/wasm-util.d.ts",
+					"import": "./lib/mjs/index.mjs",
+					"module": "./dist/wasm-util.esm-bundler.js",
+					"require": "./lib/cjs/index.js"
+				}
+			},
+			"module": "./dist/wasm-util.esm-bundler.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/wasm-util_0.8.1_1704635391732_0.7616910707663462",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "20.10.0",
+			"contributors": []
+		},
+		"0.9.0": {
+			"name": "@tybys/wasm-util",
+			"description": "WASI polyfill for browser and some wasm util",
+			"version": "0.9.0",
+			"author": {
+				"name": "toyobayashi"
+			},
+			"homepage": "https://github.com/toyobayashi/wasm-util#readme",
+			"repository": {
+				"url": "git+https://github.com/toyobayashi/wasm-util.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/toyobayashi/wasm-util/issues"
+			},
+			"main": "./lib/cjs/index.js",
+			"dependencies": {
+				"tslib": "^2.4.0"
+			},
+			"devDependencies": {
+				"mocha": "^10.1.0",
+				"eslint": "^8.25.0",
+				"ts-node": "^10.9.1",
+				"typescript": "~4.8.3",
+				"@tybys/tsgo": "^1.1.0",
+				"@types/node": "^14.14.31",
+				"memfs-browser": "^3.4.13000",
+				"eslint-plugin-n": "^15.3.0",
+				"eslint-plugin-import": "^2.26.0",
+				"eslint-plugin-promise": "^6.1.0",
+				"@typescript-eslint/parser": "^5.40.1",
+				"@tybys/ts-transform-pure-class": "^0.1.1",
+				"@typescript-eslint/eslint-plugin": "^5.40.1",
+				"@tybys/ts-transform-module-specifier": "^0.0.2",
+				"eslint-config-standard-with-typescript": "^23.0.0"
+			},
+			"keywords": [
+				"wasm",
+				"webassembly",
+				"wasi",
+				"polyfill"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "toyobayashi",
+					"email": "lifenglin314@outlook.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint ./src/**/*.{ts,js} --fix",
+				"test": "jest",
+				"build": "tsgo build",
+				"watch": "tsgo watch",
+				"prepare": "npm run build"
+			},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@tybys/wasm-util@0.9.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@tybys/wasm-util/-/wasm-util-0.9.0.tgz",
+				"shasum": "3e75eb00604c8d6db470bf18c37b7d984a0e3355",
+				"integrity": "sha512-6+7nlbMVX/PVDCwaIQ8nTOPveOcFLSt8GcXdx8hD0bt39uWxYT88uXzqTd4fTvqta7oeUJqudepapKNt2DYJFw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDh7dHRgd57RbyOw8jjyOm82XiLSCol2XQtxjgtyws3iwIhAIcevh+qpHZ6PsLgnjXGZ/1X0iOV7BF5XG+OA7A038uV"
+					}
+				]
+			},
+			"_npmVersion": "10.4.0",
+			"_npmUser": {
+				"name": "toyobayashi",
+				"email": "lifenglin314@outlook.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "d9383999f6095329c94f875e16934d50cf7ad1c4",
+			"types": "./dist/wasm-util.d.ts",
+			"exports": {
+				".": {
+					"types": "./dist/wasm-util.d.ts",
+					"import": "./lib/mjs/index.mjs",
+					"module": "./dist/wasm-util.esm-bundler.js",
+					"require": "./lib/cjs/index.js"
+				}
+			},
+			"module": "./dist/wasm-util.esm-bundler.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/wasm-util_0.9.0_1715052131470_0.5039025010679323",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "20.12.0",
+			"contributors": []
+		},
+		"0.10.1": {
+			"name": "@tybys/wasm-util",
+			"description": "WASI polyfill for browser and some wasm util",
+			"version": "0.10.1",
+			"author": {
+				"name": "toyobayashi"
+			},
+			"homepage": "https://github.com/toyobayashi/wasm-util#readme",
+			"repository": {
+				"url": "git+https://github.com/toyobayashi/wasm-util.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/toyobayashi/wasm-util/issues"
+			},
+			"main": "./lib/cjs/index.js",
+			"dependencies": {
+				"tslib": "^2.4.0"
+			},
+			"devDependencies": {
+				"mocha": "^10.1.0",
+				"eslint": "^8.25.0",
+				"ts-node": "^10.9.1",
+				"typescript": "~4.8.3",
+				"@tybys/tsgo": "^1.1.0",
+				"@types/node": "^14.14.31",
+				"memfs-browser": "^3.4.13000",
+				"eslint-plugin-n": "^15.3.0",
+				"eslint-plugin-import": "^2.26.0",
+				"eslint-plugin-promise": "^6.1.0",
+				"@typescript-eslint/parser": "^5.40.1",
+				"@tybys/ts-transform-pure-class": "^0.1.1",
+				"@typescript-eslint/eslint-plugin": "^5.40.1",
+				"@tybys/ts-transform-module-specifier": "^0.0.2",
+				"eslint-config-standard-with-typescript": "^23.0.0"
+			},
+			"keywords": [
+				"wasm",
+				"webassembly",
+				"wasi",
+				"polyfill"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "toyobayashi",
+					"email": "lifenglin314@outlook.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint ./src/**/*.{ts,js} --fix",
+				"test": "jest",
+				"build": "tsgo build",
+				"watch": "tsgo watch",
+				"prepare": "npm run build"
+			},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@tybys/wasm-util@0.10.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@tybys/wasm-util/-/wasm-util-0.10.1.tgz",
+				"shasum": "ecddd3205cf1e2d5274649ff0eedd2991ed7f414",
+				"integrity": "sha512-9tTaPJLSiejZKx+Bmog4uSubteqTvFrVrURwkmHixBo0G4seD0zUxp98E1DzUBJxLQ3NPwXrGKDiVjwx/DpPsg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEUCIQC/jMrbbrp3DN9OAW/ncn437mnDPtxWcya8CjlQjocEQQIgcwrlbfxN6Iy7HnpQacAkA9g7yC9+KO6ZxfJDIwyAp6U="
+					}
+				]
+			},
+			"_npmVersion": "10.9.2",
+			"_npmUser": {
+				"name": "toyobayashi",
+				"email": "lifenglin314@outlook.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "70f23296562c19ba3a00b9294532c1ebf7090b05",
+			"types": "./dist/wasm-util.d.ts",
+			"exports": {
+				".": {
+					"types": "./dist/wasm-util.d.ts",
+					"import": "./lib/mjs/index.mjs",
+					"module": "./dist/wasm-util.esm-bundler.js",
+					"require": "./lib/cjs/index.js"
+				}
+			},
+			"module": "./dist/wasm-util.esm-bundler.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/wasm-util_0.10.1_1757600855043_0.5058113824178418",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"_nodeVersion": "22.16.0",
+			"contributors": []
+		},
+		"0.2.0": {
+			"name": "@tybys/wasm-util",
+			"description": "WASI polyfill for browser and some wasm util",
+			"version": "0.2.0",
+			"author": {
+				"name": "toyobayashi"
+			},
+			"homepage": "https://github.com/toyobayashi/wasm-util#readme",
+			"repository": {
+				"url": "git+https://github.com/toyobayashi/wasm-util.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/toyobayashi/wasm-util/issues"
+			},
+			"main": "./lib/cjs/index.js",
+			"dependencies": {
+				"memfs-browser": "^3.4.10801"
+			},
+			"devDependencies": {
+				"mocha": "^10.1.0",
+				"eslint": "^8.25.0",
+				"ts-node": "^10.9.1",
+				"typescript": "~4.8.3",
+				"@tybys/tsgo": "^1.1.0",
+				"@types/node": "^14.14.31",
+				"eslint-plugin-n": "^15.3.0",
+				"eslint-plugin-import": "^2.26.0",
+				"eslint-plugin-promise": "^6.1.0",
+				"@typescript-eslint/parser": "^5.40.1",
+				"@tybys/ts-transform-pure-class": "^0.1.1",
+				"@typescript-eslint/eslint-plugin": "^5.40.1",
+				"@tybys/ts-transform-module-specifier": "^0.0.2",
+				"eslint-config-standard-with-typescript": "^23.0.0"
+			},
+			"keywords": [
+				"wasm",
+				"webassembly",
+				"wasi",
+				"polyfill"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "toyobayashi",
+					"email": "lifenglin314@outlook.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint ./src/**/*.{ts,js} --fix",
+				"test": "jest",
+				"build": "tsgo build",
+				"watch": "tsgo watch",
+				"prepare": "npm run build"
+			},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@tybys/wasm-util@0.2.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@tybys/wasm-util/-/wasm-util-0.2.0.tgz",
+				"shasum": "2c7bd6c0ed34a10db0206019795942673e1dc699",
+				"integrity": "sha512-if0TCxCiFI9qSt0po1oDqSDdQGDSuSU3pfrtJtqb5eQkFkt2a0DAV9xtdvkmJsSwg6T7397hAvanCmTIXL84+Q==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIAPIdiNew5helXlod5+g4raTGD7sHkdO5OpY4pGDTIj0AiBwEoHPrIq9nbF3xMHGm7iTCjBUY7RE9RDQa+3/OiI8Tg=="
+					}
+				]
+			},
+			"_npmVersion": "8.5.5",
+			"_npmUser": {
+				"name": "toyobayashi",
+				"email": "lifenglin314@outlook.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "b9b7130f42bc314dd1b3dbf2f73ea8d155cbb87e",
+			"types": "./dist/wasm-util.d.ts",
+			"exports": {
+				".": {
+					"types": "./dist/wasm-util.d.ts",
+					"import": "./lib/mjs/index.mjs",
+					"module": "./dist/wasm-util.esm-bundler.js",
+					"require": "./lib/cjs/index.js"
+				}
+			},
+			"module": "./dist/wasm-util.esm-bundler.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/wasm-util_0.2.0_1667308031755_0.8041020347900993",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "16.15.0",
+			"contributors": []
+		},
+		"0.3.0": {
+			"name": "@tybys/wasm-util",
+			"description": "WASI polyfill for browser and some wasm util",
+			"version": "0.3.0",
+			"author": {
+				"name": "toyobayashi"
+			},
+			"homepage": "https://github.com/toyobayashi/wasm-util#readme",
+			"repository": {
+				"url": "git+https://github.com/toyobayashi/wasm-util.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/toyobayashi/wasm-util/issues"
+			},
+			"main": "./lib/cjs/index.js",
+			"dependencies": {
+				"memfs-browser": "^3.4.10801"
+			},
+			"devDependencies": {
+				"mocha": "^10.1.0",
+				"eslint": "^8.25.0",
+				"ts-node": "^10.9.1",
+				"typescript": "~4.8.3",
+				"@tybys/tsgo": "^1.1.0",
+				"@types/node": "^14.14.31",
+				"eslint-plugin-n": "^15.3.0",
+				"eslint-plugin-import": "^2.26.0",
+				"eslint-plugin-promise": "^6.1.0",
+				"@typescript-eslint/parser": "^5.40.1",
+				"@tybys/ts-transform-pure-class": "^0.1.1",
+				"@typescript-eslint/eslint-plugin": "^5.40.1",
+				"@tybys/ts-transform-module-specifier": "^0.0.2",
+				"eslint-config-standard-with-typescript": "^23.0.0"
+			},
+			"keywords": [
+				"wasm",
+				"webassembly",
+				"wasi",
+				"polyfill"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "toyobayashi",
+					"email": "lifenglin314@outlook.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint ./src/**/*.{ts,js} --fix",
+				"test": "jest",
+				"build": "tsgo build",
+				"watch": "tsgo watch",
+				"prepare": "npm run build"
+			},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@tybys/wasm-util@0.3.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@tybys/wasm-util/-/wasm-util-0.3.0.tgz",
+				"shasum": "a00da9773af8cd2321449d9c5d2a58f9b14e6875",
+				"integrity": "sha512-LFHImIkjMh537Bomwd9vJlwMS9TPuhP6PRRmej+U2Fh46s4SW8Z5qYD3xqlnQzlC2BOwDI8y35HrHBwHGk7TfA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDqUPivuE2aE0SlzHB0Ya4myZ6E3DfwMw/MLXJIMYFmygIhALIvHADfnXBoqZxdbJu9Hk+jwDA7FtuoxGk4EjcWALYo"
+					}
+				]
+			},
+			"_npmVersion": "8.5.5",
+			"_npmUser": {
+				"name": "toyobayashi",
+				"email": "lifenglin314@outlook.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "809660a794341fe88a498bcf65489e12722709f4",
+			"types": "./dist/wasm-util.d.ts",
+			"exports": {
+				".": {
+					"types": "./dist/wasm-util.d.ts",
+					"import": "./lib/mjs/index.mjs",
+					"module": "./dist/wasm-util.esm-bundler.js",
+					"require": "./lib/cjs/index.js"
+				}
+			},
+			"module": "./dist/wasm-util.esm-bundler.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/wasm-util_0.3.0_1668331254715_0.4355458953283129",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "16.15.0",
+			"contributors": []
+		},
+		"0.1.0": {
+			"name": "@tybys/wasm-util",
+			"description": "WASI polyfill for browser and some wasm util",
+			"version": "0.1.0",
+			"author": {
+				"name": "toyobayashi"
+			},
+			"homepage": "https://github.com/toyobayashi/wasm-util#readme",
+			"repository": {
+				"url": "git+https://github.com/toyobayashi/wasm-util.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/toyobayashi/wasm-util/issues"
+			},
+			"main": "./lib/cjs/index.js",
+			"dependencies": {
+				"memfs-browser": "^3.4.10801"
+			},
+			"devDependencies": {
+				"mocha": "^10.1.0",
+				"eslint": "^8.25.0",
+				"ts-node": "^10.9.1",
+				"typescript": "~4.8.3",
+				"@tybys/tsgo": "^1.1.0",
+				"@types/node": "^14.14.31",
+				"eslint-plugin-n": "^15.3.0",
+				"eslint-plugin-import": "^2.26.0",
+				"eslint-plugin-promise": "^6.1.0",
+				"@typescript-eslint/parser": "^5.40.1",
+				"@tybys/ts-transform-pure-class": "^0.1.1",
+				"@typescript-eslint/eslint-plugin": "^5.40.1",
+				"@tybys/ts-transform-module-specifier": "^0.0.2",
+				"eslint-config-standard-with-typescript": "^23.0.0"
+			},
+			"keywords": [
+				"wasm",
+				"webassembly",
+				"wasi",
+				"polyfill"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "toyobayashi",
+					"email": "lifenglin314@outlook.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint ./src/**/*.{ts,js} --fix",
+				"test": "jest",
+				"build": "tsgo build",
+				"watch": "tsgo watch",
+				"prepare": "npm run build"
+			},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@tybys/wasm-util@0.1.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@tybys/wasm-util/-/wasm-util-0.1.0.tgz",
+				"shasum": "933c4574ea1ba497bc1f9b4365642615c96cd94e",
+				"integrity": "sha512-2hQGR2pmvsdjVVhk51tiNAZ4j+4qn51PeOKrAEhm9rQwvr2YcqIZWWECf+hn9Snt0Ja1S1GkW3Lw4J8QbIxzDQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIG6w/7ZnnQwRKTDM+3N2puKSSbsMrktwEl1av63/GiBXAiALW8PRm1oQt/I/T6sLVd4osUQdKE4uW/3yoPH4T7Tt8Q=="
+					}
+				]
+			},
+			"_npmVersion": "8.5.5",
+			"_npmUser": {
+				"name": "toyobayashi",
+				"email": "lifenglin314@outlook.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "4ee985bfbef1ca07f87903e303931275e2a994a3",
+			"types": "./dist/wasm-util.d.ts",
+			"exports": {
+				".": {
+					"types": "./dist/wasm-util.d.ts",
+					"import": "./lib/mjs/index.mjs",
+					"module": "./dist/wasm-util.esm-bundler.js",
+					"require": "./lib/cjs/index.js"
+				}
+			},
+			"module": "./dist/wasm-util.esm-bundler.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/wasm-util_0.1.0_1666966073985_0.9798312777805356",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "16.15.0",
+			"contributors": []
+		},
+		"0.10.0": {
+			"name": "@tybys/wasm-util",
+			"description": "WASI polyfill for browser and some wasm util",
+			"version": "0.10.0",
+			"author": {
+				"name": "toyobayashi"
+			},
+			"homepage": "https://github.com/toyobayashi/wasm-util#readme",
+			"repository": {
+				"url": "git+https://github.com/toyobayashi/wasm-util.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/toyobayashi/wasm-util/issues"
+			},
+			"main": "./lib/cjs/index.js",
+			"dependencies": {
+				"tslib": "^2.4.0"
+			},
+			"devDependencies": {
+				"mocha": "^10.1.0",
+				"eslint": "^8.25.0",
+				"ts-node": "^10.9.1",
+				"typescript": "~4.8.3",
+				"@tybys/tsgo": "^1.1.0",
+				"@types/node": "^14.14.31",
+				"memfs-browser": "^3.4.13000",
+				"eslint-plugin-n": "^15.3.0",
+				"eslint-plugin-import": "^2.26.0",
+				"eslint-plugin-promise": "^6.1.0",
+				"@typescript-eslint/parser": "^5.40.1",
+				"@tybys/ts-transform-pure-class": "^0.1.1",
+				"@typescript-eslint/eslint-plugin": "^5.40.1",
+				"@tybys/ts-transform-module-specifier": "^0.0.2",
+				"eslint-config-standard-with-typescript": "^23.0.0"
+			},
+			"keywords": [
+				"wasm",
+				"webassembly",
+				"wasi",
+				"polyfill"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "toyobayashi",
+					"email": "lifenglin314@outlook.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint ./src/**/*.{ts,js} --fix",
+				"test": "jest",
+				"build": "tsgo build",
+				"watch": "tsgo watch",
+				"prepare": "npm run build"
+			},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@tybys/wasm-util@0.10.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@tybys/wasm-util/-/wasm-util-0.10.0.tgz",
+				"shasum": "2fd3cd754b94b378734ce17058d0507c45c88369",
+				"integrity": "sha512-VyyPYFlOMNylG45GoAe0xDoLwWuowvf92F9kySqzYh8vmYm7D2u4iUJKa1tOUpS70Ku13ASrOkS4ScXFsTaCNQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEUCICCB5L1N4UTFdMKVHGq3wsbWgMczTgrOoxDG4/zLuIBlAiEA3Wheu+B32SfbH4u3mSGL0ZbD2zrp3NWmA9aol86n2i4="
+					}
+				]
+			},
+			"_npmVersion": "10.9.2",
+			"_npmUser": {
+				"name": "toyobayashi",
+				"actor": {
+					"name": "toyobayashi",
+					"type": "user",
+					"email": "lifenglin314@outlook.com"
+				},
+				"email": "lifenglin314@outlook.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "a43fae714cea577748ec5d2b389573373ca7cd4c",
+			"types": "./dist/wasm-util.d.ts",
+			"exports": {
+				".": {
+					"types": "./dist/wasm-util.d.ts",
+					"import": "./lib/mjs/index.mjs",
+					"module": "./dist/wasm-util.esm-bundler.js",
+					"require": "./lib/cjs/index.js"
+				}
+			},
+			"module": "./dist/wasm-util.esm-bundler.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/wasm-util_0.10.0_1751962310023_0.9701470589964174",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"_nodeVersion": "22.16.0",
+			"contributors": []
+		}
+	},
+	"time": {
+		"0.5.1": "2022-12-11T07:31:29.659Z",
+		"0.6.0": "2023-02-19T05:53:21.350Z",
+		"0.5.2": "2022-12-11T07:38:34.830Z",
+		"0.7.0": "2023-02-19T08:10:52.486Z",
+		"0.4.0": "2022-11-14T10:39:10.563Z",
+		"0.5.0": "2022-12-11T06:20:52.687Z",
+		"0.8.2": "2024-04-19T07:22:11.767Z",
+		"0.8.3": "2024-04-21T05:59:18.111Z",
+		"0.10.3": "2026-06-23T07:27:56.813Z",
+		"created": "2022-10-28T14:07:53.902Z",
+		"0.5.3": "2022-12-11T12:27:04.626Z",
+		"0.8.0": "2023-02-26T13:53:26.195Z",
+		"0.10.2": "2026-05-04T04:17:09.547Z",
+		"0.8.1": "2024-01-07T13:49:51.936Z",
+		"0.9.0": "2024-05-07T03:22:11.646Z",
+		"0.10.1": "2025-09-11T14:27:35.250Z",
+		"0.2.0": "2022-11-01T13:07:12.002Z",
+		"0.3.0": "2022-11-13T09:20:54.992Z",
+		"0.1.0": "2022-10-28T14:07:54.141Z",
+		"0.10.0": "2025-07-08T08:11:50.187Z",
+		"modified": "2026-06-23T07:27:56.981Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "0.10.3"
+	},
+	"_uplinks": {
+		"artifactory-sabadell": {
+			"etag": "a1cb6362fcdaa9334966a9fc6ff70ddcefc7c657",
+			"fetched": 1782459828992
+		}
+	},
+	"_distfiles": {
+		"wasm-util-0.5.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@tybys/wasm-util/-/wasm-util-0.5.1.tgz",
+			"sha": "ff5461119125271375ff0999d208443244082f95",
+			"registry": "artifactory-sabadell"
+		},
+		"wasm-util-0.6.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@tybys/wasm-util/-/wasm-util-0.6.0.tgz",
+			"sha": "6ea5a76ae2289dd55cec4189b6bab43630eff71d",
+			"registry": "artifactory-sabadell"
+		},
+		"wasm-util-0.5.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@tybys/wasm-util/-/wasm-util-0.5.2.tgz",
+			"sha": "892901cddc1970318789b71bfe3078bd422434a6",
+			"registry": "artifactory-sabadell"
+		},
+		"wasm-util-0.7.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@tybys/wasm-util/-/wasm-util-0.7.0.tgz",
+			"sha": "c2a8cde1ff5c083a9770fd0ba82aab7dbb8cb615",
+			"registry": "artifactory-sabadell"
+		},
+		"wasm-util-0.4.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@tybys/wasm-util/-/wasm-util-0.4.0.tgz",
+			"sha": "302686a56b20f4f85dcf16d5c71c9d2fe84df636",
+			"registry": "artifactory-sabadell"
+		},
+		"wasm-util-0.5.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@tybys/wasm-util/-/wasm-util-0.5.0.tgz",
+			"sha": "226315b7965c822fe1e6aad5e5ef7672f23c492c",
+			"registry": "artifactory-sabadell"
+		},
+		"wasm-util-0.8.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@tybys/wasm-util/-/wasm-util-0.8.2.tgz",
+			"sha": "33aa636e019d60b3805df797c54d53e10155a291",
+			"registry": "artifactory-sabadell"
+		},
+		"wasm-util-0.8.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@tybys/wasm-util/-/wasm-util-0.8.3.tgz",
+			"sha": "34dc6fd51bdc03524a27359137594bb15c59bba1",
+			"registry": "artifactory-sabadell"
+		},
+		"wasm-util-0.10.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@tybys/wasm-util/-/wasm-util-0.10.3.tgz",
+			"sha": "015cba9e9dd47ce14d03d2a8c5d547bfb169665d",
+			"registry": "artifactory-sabadell"
+		},
+		"wasm-util-0.5.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@tybys/wasm-util/-/wasm-util-0.5.3.tgz",
+			"sha": "d56550c6cf89f8ceb67aee3a3097963a8355dbf7",
+			"registry": "artifactory-sabadell"
+		},
+		"wasm-util-0.8.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@tybys/wasm-util/-/wasm-util-0.8.0.tgz",
+			"sha": "1abdb263e63b86ad24e2a4df823272ff423455fb",
+			"registry": "artifactory-sabadell"
+		},
+		"wasm-util-0.10.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@tybys/wasm-util/-/wasm-util-0.10.2.tgz",
+			"sha": "12b3a1b33db1f9cad4ddff1f604ab7dd00bf464e",
+			"registry": "artifactory-sabadell"
+		},
+		"wasm-util-0.8.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@tybys/wasm-util/-/wasm-util-0.8.1.tgz",
+			"sha": "10360976b7f679497ea8526791006417ff304abb",
+			"registry": "artifactory-sabadell"
+		},
+		"wasm-util-0.9.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@tybys/wasm-util/-/wasm-util-0.9.0.tgz",
+			"sha": "3e75eb00604c8d6db470bf18c37b7d984a0e3355",
+			"registry": "artifactory-sabadell"
+		},
+		"wasm-util-0.10.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@tybys/wasm-util/-/wasm-util-0.10.1.tgz",
+			"sha": "ecddd3205cf1e2d5274649ff0eedd2991ed7f414",
+			"registry": "artifactory-sabadell"
+		},
+		"wasm-util-0.2.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@tybys/wasm-util/-/wasm-util-0.2.0.tgz",
+			"sha": "2c7bd6c0ed34a10db0206019795942673e1dc699",
+			"registry": "artifactory-sabadell"
+		},
+		"wasm-util-0.3.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@tybys/wasm-util/-/wasm-util-0.3.0.tgz",
+			"sha": "a00da9773af8cd2321449d9c5d2a58f9b14e6875",
+			"registry": "artifactory-sabadell"
+		},
+		"wasm-util-0.1.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@tybys/wasm-util/-/wasm-util-0.1.0.tgz",
+			"sha": "933c4574ea1ba497bc1f9b4365642615c96cd94e",
+			"registry": "artifactory-sabadell"
+		},
+		"wasm-util-0.10.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@tybys/wasm-util/-/wasm-util-0.10.0.tgz",
+			"sha": "2fd3cd754b94b378734ce17058d0507c45c88369",
+			"registry": "artifactory-sabadell"
+		}
+	},
+	"_attachments": {},
+	"_rev": "1-e5d1ad432aeb5df8",
+	"_id": "@tybys/wasm-util",
+	"readme": "# @tybys/wasm-util\n\nWebAssembly related utils for browser environment\n\n**The output code is ES2019**\n\n## Features\n\nAll example code below need to be bundled by ES module bundlers like `webpack` / `rollup`, or specify import map in browser native ES module runtime.\n\n### WASI polyfill for browser\n\nThe API is similar to the `require('wasi').WASI` in Node.js.\n\nYou can use `memfs-browser` to provide filesystem capability.\n\n- Example: [https://github.com/toyobayashi/wasi-wabt](https://github.com/toyobayashi/wasi-wabt)\n- Demo: [https://toyobayashi.github.io/wasi-wabt/](https://toyobayashi.github.io/wasi-wabt/)\n\n```js\nimport { load, WASI } from '@tybys/wasm-util'\nimport { Volume, createFsFromVolume } from 'memfs-browser'\n\nconst fs = createFsFromVolume(Volume.fromJSON({\n  '/home/wasi': null\n}))\n\nconst wasi = new WASI({\n  args: ['chrome', 'file.wasm'],\n  env: {\n    NODE_ENV: 'development',\n    WASI_SDK_PATH: '/opt/wasi-sdk'\n  },\n  preopens: {\n    '/': '/'\n  },\n  fs,\n\n  // redirect stdout / stderr\n\n  // print (text) { console.log(text) },\n  // printErr (text) { console.error(text) }\n})\n\nconst imports = {\n  wasi_snapshot_preview1: wasi.wasiImport\n}\n\nconst { module, instance } = await load('/path/to/file.wasm', imports)\nwasi.start(instance)\n// wasi.initialize(instance)\n```\n\nImplemented syscalls: [wasi_snapshot_preview1](#wasi_snapshot_preview1)\n\n### `load` / `loadSync`\n\n`loadSync` has 4KB wasm size limit in browser.\n\n```js\n// bundler\nimport { load, loadSync } from '@tybys/wasm-util'\n\nconst imports = { /* ... */ }\n\n// using path\nconst { module, instance } = await load('/path/to/file.wasm', imports)\nconst { module, instance } = loadSync('/path/to/file.wasm', imports)\n\n// using URL\nconst { module, instance } = await load(new URL('./file.wasm', import.meta.url), imports)\nconst { module, instance } = loadSync(new URL('./file.wasm', import.meta.url), imports)\n\n// using Uint8Array\nconst buffer = new Uint8Array([\n  0x00, 0x61, 0x73, 0x6d,\n  0x01, 0x00, 0x00, 0x00\n])\nconst { module, instance } = await load(buffer, imports)\nconst { module, instance } = loadSync(buffer, imports)\n\n// auto asyncify\nconst {\n  module,\n  instance: asyncifiedInstance\n} = await load(buffer, imports, { /* asyncify options */})\nasyncifiedInstance.exports.fn() // => return Promise\n```\n\n### Extend Memory instance\n\n```js\nimport { Memory, extendMemory } from '@tybys/wasm-util'\n\nconst memory = new WebAssembly.Memory({ initial: 256 })\n// const memory = instance.exports.memory\n\nextendMemory(memory)\nconsole.log(memory instanceof Memory)\nconsole.log(memory instanceof WebAssembly.Memory)\n// expose memory view getters like Emscripten\nconst { HEAPU8, HEAPU32, view } = memory\n```\n\n### Asyncify wrap\n\nBuild the C code using `clang`, `wasm-ld` and `wasm-opt`\n\n```c\nvoid async_sleep(int ms);\n\nint main() {\n  async_sleep(200);\n  return 0;\n}\n```\n\n```js\nimport { Asyncify } from '@tybys/wasm-util'\n\nconst asyncify = new Asyncify()\n\nconst imports = {\n  env: {\n    async_sleep: asyncify.wrapImportFunction(function (ms) {\n      return new Promise((resolve) => {\n        setTimeout(resolve, ms)\n      })\n    })\n  }\n}\n\n// async_sleep(200)\nconst bytes = await (await fetch('/asyncfied_by_wasm-opt.wasm')).arrayBuffer()\nconst { instance } = await WebAssembly.instantiate(bytes, imports)\nconst asyncifiedInstance = asyncify.init(instance.exports.memory, instance, {\n  wrapExports: ['_start']\n})\n\nconst p = asyncifedInstance._start()\nconsole.log(typeof p.then === 'function')\nconst now = Date.now()\nawait p\nconsole.log(Date.now() - now >= 200)\n```\n\n### wasi_snapshot_preview1\n\n- [x] args_get\n- [x] args_sizes_get\n- [x] environ_get\n- [x] environ_sizes_get\n- [x] clock_res_get\n- [x] clock_time_get\n- [ ] ~~fd_advise~~\n- [x] fd_allocate\n- [x] fd_close\n- [x] fd_datasync\n- [x] fd_fdstat_get\n- [ ] ~~fd_fdstat_set_flags~~\n- [x] fd_fdstat_set_rights\n- [x] fd_filestat_get\n- [x] fd_filestat_set_size\n- [x] fd_filestat_set_times\n- [x] fd_pread\n- [x] fd_prestat_get\n- [x] fd_prestat_dir_name\n- [x] fd_pwrite\n- [x] fd_read\n- [x] fd_readdir\n- [x] fd_renumber\n- [x] fd_seek\n- [x] fd_sync\n- [x] fd_tell\n- [x] fd_write\n- [x] path_create_directory\n- [x] path_filestat_get\n- [x] path_filestat_set_times\n- [x] path_link\n- [x] path_open\n- [x] path_readlink\n- [x] path_remove_directory\n- [x] path_rename\n- [x] path_symlink\n- [x] path_unlink_file\n- [x] poll_oneoff (timer only)\n- [x] proc_exit\n- [ ] ~~proc_raise~~\n- [x] sched_yield\n- [x] random_get\n- [ ] ~~sock_recv~~\n- [ ] ~~sock_send~~\n- [ ] ~~sock_shutdown~~"
+}

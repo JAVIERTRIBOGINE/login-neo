@@ -1,0 +1,4421 @@
+{
+	"name": "@babel/helper-define-polyfill-provider",
+	"versions": {
+		"0.0.6": {
+			"name": "@babel/helper-define-polyfill-provider",
+			"description": "Babel helper to create your own polyfill provider",
+			"version": "0.0.6",
+			"homepage": "https://github.com/babel/babel-polyfills#readme",
+			"repository": {
+				"url": "git+https://github.com/babel/babel-polyfills.git",
+				"type": "git",
+				"directory": "packages/babel-helper-define-polyfill-provider"
+			},
+			"bugs": {
+				"url": "https://github.com/babel/babel-polyfills/issues"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"debug": "^4.1.1",
+				"semver": "^6.1.2",
+				"resolve": "^1.14.2",
+				"@babel/traverse": "^7.11.5",
+				"lodash.debounce": "^4.0.8",
+				"@babel/helper-plugin-utils": "^7.10.4",
+				"@babel/helper-module-imports": "^7.10.4",
+				"@babel/helper-compilation-targets": "^7.10.4"
+			},
+			"devDependencies": {
+				"rollup": "^2.3.2",
+				"webpack": "^4.42.1",
+				"@babel/cli": "^7.11.5",
+				"@babel/core": "^7.11.5",
+				"webpack-cli": "^3.3.11",
+				"babel-loader": "^8.1.0",
+				"@babel/generator": "^7.11.5",
+				"rollup-plugin-babel": "^4.4.0"
+			},
+			"peerDependencies": {
+				"@babel/core": "^7.4.0-0"
+			},
+			"keywords": [
+				"babel-plugin"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "hzoo",
+					"email": "hi@henryzoo.com"
+				},
+				{
+					"name": "loganfsmyth",
+					"email": "loganfsmyth@gmail.com"
+				},
+				{
+					"name": "danez",
+					"email": "daniel@tschinder.de"
+				},
+				{
+					"name": "existentialism",
+					"email": "bng412@gmail.com"
+				},
+				{
+					"name": "nicolo-ribaudo",
+					"email": "nicolo.ribaudo@gmail.com"
+				},
+				{
+					"name": "jlhwung",
+					"email": "i@jhuang.me"
+				}
+			],
+			"directories": {},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@babel/helper-define-polyfill-provider@0.0.6",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.0.6.tgz",
+				"shasum": "140740ace1338cd6fbf28dd747d886af04002997",
+				"integrity": "sha512-EJHDp6i0P0c5ul9hRHj9uldk67SRSjLxrHyceIzLfY/xTdwsFpzYFBqHMVok7aKZ92Sil73aMqaEPccVu8H4Xw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIEIZLCn1VYNMkC15ot5rhAWx/N/88s4O5NvVS3OREAakAiEAitBSYWrBLDk1/kSk0BSTM6D3r/TzntYDDfuSB282c+U="
+					}
+				]
+			},
+			"_npmVersion": "lerna/3.22.0/node@v14.15.3+x64 (linux)",
+			"_npmUser": {
+				"name": "nicolo-ribaudo",
+				"email": "nicolo.ribaudo@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "04e366d5948db64ebe1eae82c3df42bb062c5071",
+			"browser": {
+				"./lib/config/loader.js": "./lib/config/loader-browser.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/helper-define-polyfill-provider_0.0.6_1608598432036_0.44975445614284215",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "14.15.3",
+			"contributors": []
+		},
+		"0.1.5": {
+			"name": "@babel/helper-define-polyfill-provider",
+			"description": "Babel helper to create your own polyfill provider",
+			"version": "0.1.5",
+			"homepage": "https://github.com/babel/babel-polyfills#readme",
+			"repository": {
+				"url": "git+https://github.com/babel/babel-polyfills.git",
+				"type": "git",
+				"directory": "packages/babel-helper-define-polyfill-provider"
+			},
+			"bugs": {
+				"url": "https://github.com/babel/babel-polyfills/issues"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"debug": "^4.1.1",
+				"semver": "^6.1.2",
+				"resolve": "^1.14.2",
+				"@babel/traverse": "^7.13.0",
+				"lodash.debounce": "^4.0.8",
+				"@babel/helper-plugin-utils": "^7.13.0",
+				"@babel/helper-module-imports": "^7.12.13",
+				"@babel/helper-compilation-targets": "^7.13.0"
+			},
+			"devDependencies": {
+				"rollup": "^2.3.2",
+				"webpack": "^4.42.1",
+				"@babel/cli": "^7.11.5",
+				"@babel/core": "^7.13.0",
+				"webpack-cli": "^3.3.11",
+				"babel-loader": "^8.1.0",
+				"@babel/generator": "^7.11.5",
+				"rollup-plugin-babel": "^4.4.0",
+				"@babel/plugin-transform-modules-commonjs": "^7.10.4"
+			},
+			"peerDependencies": {
+				"@babel/core": "^7.4.0-0"
+			},
+			"keywords": [
+				"babel-plugin"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "hzoo",
+					"email": "hi@henryzoo.com"
+				},
+				{
+					"name": "loganfsmyth",
+					"email": "loganfsmyth@gmail.com"
+				},
+				{
+					"name": "danez",
+					"email": "daniel@tschinder.de"
+				},
+				{
+					"name": "existentialism",
+					"email": "bng412@gmail.com"
+				},
+				{
+					"name": "nicolo-ribaudo",
+					"email": "nicolo.ribaudo@gmail.com"
+				},
+				{
+					"name": "jlhwung",
+					"email": "i@jhuang.me"
+				}
+			],
+			"directories": {},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@babel/helper-define-polyfill-provider@0.1.5",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.1.5.tgz",
+				"shasum": "3c2f91b7971b9fc11fe779c945c014065dea340e",
+				"integrity": "sha512-nXuzCSwlJ/WKr8qxzW816gwyT6VZgiJG17zR40fou70yfAcqjoNyTLl/DQ+FExw5Hx5KNqshmN8Ldl/r2N7cTg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQC7UpWqNp0cJVDNvrLbOgvmrPeTKCSr4WWIFAmiGnLrlAIhAOxNW5TKjMf0I+NHMzRS/Dz0TMbFbSMfChniejpZNLRX"
+					}
+				]
+			},
+			"_npmVersion": "lerna/3.22.0/node@v15.10.0+x64 (linux)",
+			"_npmUser": {
+				"name": "nicolo-ribaudo",
+				"email": "nicolo.ribaudo@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "cca90e89debf689aff23e982f8a30bc3b512c573",
+			"browser": {
+				"./lib/node/dependencies.js": "./lib/browser/dependencies.js",
+				"./src/node/dependencies.js": "./src/browser/dependencies.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/helper-define-polyfill-provider_0.1.5_1614674327584_0.886653768444682",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "15.10.0",
+			"contributors": []
+		},
+		"0.2.4": {
+			"name": "@babel/helper-define-polyfill-provider",
+			"description": "Babel helper to create your own polyfill provider",
+			"version": "0.2.4",
+			"homepage": "https://github.com/babel/babel-polyfills#readme",
+			"repository": {
+				"url": "git+https://github.com/babel/babel-polyfills.git",
+				"type": "git",
+				"directory": "packages/babel-helper-define-polyfill-provider"
+			},
+			"bugs": {
+				"url": "https://github.com/babel/babel-polyfills/issues"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"debug": "^4.1.1",
+				"semver": "^6.1.2",
+				"resolve": "^1.14.2",
+				"@babel/traverse": "^7.13.0",
+				"lodash.debounce": "^4.0.8",
+				"@babel/helper-plugin-utils": "^7.13.0",
+				"@babel/helper-module-imports": "^7.12.13",
+				"@babel/helper-compilation-targets": "^7.13.0"
+			},
+			"devDependencies": {
+				"rollup": "^2.3.2",
+				"webpack": "^4.42.1",
+				"@babel/cli": "^7.11.5",
+				"@babel/core": "^7.13.0",
+				"webpack-cli": "^3.3.11",
+				"babel-loader": "^8.1.0",
+				"@babel/generator": "^7.11.5",
+				"rollup-plugin-babel": "^4.4.0",
+				"@babel/plugin-transform-modules-commonjs": "^7.10.4"
+			},
+			"peerDependencies": {
+				"@babel/core": "^7.4.0-0"
+			},
+			"keywords": [
+				"babel-plugin"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "hzoo",
+					"email": "hi@henryzoo.com"
+				},
+				{
+					"name": "loganfsmyth",
+					"email": "loganfsmyth@gmail.com"
+				},
+				{
+					"name": "danez",
+					"email": "npm@tschinder.de"
+				},
+				{
+					"name": "existentialism",
+					"email": "bng412@gmail.com"
+				},
+				{
+					"name": "nicolo-ribaudo",
+					"email": "nicolo.ribaudo@gmail.com"
+				},
+				{
+					"name": "jlhwung",
+					"email": "i@jhuang.me"
+				}
+			],
+			"directories": {},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@babel/helper-define-polyfill-provider@0.2.4",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.2.4.tgz",
+				"shasum": "8867aed79d3ea6cade40f801efb7ac5c66916b10",
+				"integrity": "sha512-OrpPZ97s+aPi6h2n1OXzdhVis1SGSsMU2aMHgLcOKfsp4/v1NWpx3CWT3lBj5eeBq9cDkPkh+YCfdF7O12uNDQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIBxVK1VQGT1llzrE5CdQuXDUZon3AY6QWN15KZdbRadpAiBzgdtKQjEPj4htAqD4dTnZQ3AxLYBqqgcRqfpOaroeGA=="
+					}
+				]
+			},
+			"_npmVersion": "lerna/3.22.0/node@v14.18.1+x64 (linux)",
+			"_npmUser": {
+				"name": "nicolo-ribaudo",
+				"email": "nicolo.ribaudo@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "de48880e867791eaa94c00ce7132dc259f3c777b",
+			"exports": {
+				".": [
+					{
+						"import": {
+							"node": "./esm/index.node.mjs",
+							"browser": "./esm/index.browser.mjs"
+						},
+						"default": "./lib/index.js"
+					},
+					"./lib/index.js"
+				],
+				"./package.json": "./package.json"
+			},
+			"browser": {
+				"./lib/node/dependencies.js": "./lib/browser/dependencies.js",
+				"./src/node/dependencies.js": "./src/browser/dependencies.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/helper-define-polyfill-provider_0.2.4_1635546016599_0.14527217133863934",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "14.18.1",
+			"contributors": []
+		},
+		"0.3.3": {
+			"name": "@babel/helper-define-polyfill-provider",
+			"description": "Babel helper to create your own polyfill provider",
+			"version": "0.3.3",
+			"homepage": "https://github.com/babel/babel-polyfills#readme",
+			"repository": {
+				"url": "git+https://github.com/babel/babel-polyfills.git",
+				"type": "git",
+				"directory": "packages/babel-helper-define-polyfill-provider"
+			},
+			"bugs": {
+				"url": "https://github.com/babel/babel-polyfills/issues"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"debug": "^4.1.1",
+				"semver": "^6.1.2",
+				"resolve": "^1.14.2",
+				"lodash.debounce": "^4.0.8",
+				"@babel/helper-plugin-utils": "^7.16.7",
+				"@babel/helper-compilation-targets": "^7.17.7"
+			},
+			"devDependencies": {
+				"rollup": "^2.3.2",
+				"webpack": "^4.42.1",
+				"@babel/cli": "^7.17.6",
+				"strip-ansi": "^6.0.0",
+				"@babel/core": "^7.17.8",
+				"webpack-cli": "^3.3.11",
+				"babel-loader": "^8.1.0",
+				"@babel/traverse": "^7.17.3",
+				"@babel/generator": "^7.17.7",
+				"rollup-plugin-babel": "^4.4.0",
+				"@babel/plugin-transform-modules-commonjs": "^7.17.7"
+			},
+			"peerDependencies": {
+				"@babel/core": "^7.4.0-0"
+			},
+			"keywords": [
+				"babel-plugin"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "hzoo",
+					"email": "hi@henryzoo.com"
+				},
+				{
+					"name": "existentialism",
+					"email": "bng412@gmail.com"
+				},
+				{
+					"name": "nicolo-ribaudo",
+					"email": "nicolo.ribaudo@gmail.com"
+				},
+				{
+					"name": "jlhwung",
+					"email": "i@jhuang.me"
+				}
+			],
+			"directories": {},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@babel/helper-define-polyfill-provider@0.3.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.3.3.tgz",
+				"shasum": "8612e55be5d51f0cd1f36b4a5a83924e89884b7a",
+				"integrity": "sha512-z5aQKU4IzbqCC1XH0nAqfsFLMVSo22SBKUc0BxGrLkolTdPTructy0ToNnlO2zA4j9Q/7pjMZf0DSY+DSTYzww==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIF/EQWoel10YSfs7nVvEq2lzFjbPXS7QS58QQ2vY7XFuAiEAiJHFtb9tHkgbgPwihdZ3CY4Z3zTDsrPyT0w30h4LKRw="
+					}
+				]
+			},
+			"_npmVersion": "lerna/3.22.0/node@v18.7.0+x64 (linux)",
+			"_npmUser": {
+				"name": "nicolo-ribaudo",
+				"email": "nicolo.ribaudo@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "42b9477c199c0c5420b45cfa8c9bb892d94a64af",
+			"exports": {
+				".": [
+					{
+						"import": {
+							"node": "./esm/index.node.mjs",
+							"browser": "./esm/index.browser.mjs"
+						},
+						"default": "./lib/index.js"
+					},
+					"./lib/index.js"
+				],
+				"./package.json": "./package.json"
+			},
+			"browser": {
+				"./lib/node/dependencies.js": "./lib/browser/dependencies.js",
+				"./src/node/dependencies.js": "./src/browser/dependencies.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/helper-define-polyfill-provider_0.3.3_1663035490095_0.6162474424612572",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "18.7.0",
+			"contributors": []
+		},
+		"0.4.2": {
+			"name": "@babel/helper-define-polyfill-provider",
+			"description": "Babel helper to create your own polyfill provider",
+			"version": "0.4.2",
+			"homepage": "https://github.com/babel/babel-polyfills#readme",
+			"repository": {
+				"url": "git+https://github.com/babel/babel-polyfills.git",
+				"type": "git",
+				"directory": "packages/babel-helper-define-polyfill-provider"
+			},
+			"bugs": {
+				"url": "https://github.com/babel/babel-polyfills/issues"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"debug": "^4.1.1",
+				"resolve": "^1.14.2",
+				"lodash.debounce": "^4.0.8",
+				"@babel/helper-plugin-utils": "^7.22.5",
+				"@babel/helper-compilation-targets": "^7.22.6"
+			},
+			"devDependencies": {
+				"rollup": "^2.3.2",
+				"webpack": "^4.42.1",
+				"@babel/cli": "^7.22.6",
+				"strip-ansi": "^6.0.0",
+				"@babel/core": "^7.22.6",
+				"webpack-cli": "^3.3.11",
+				"babel-loader": "^8.1.0",
+				"@babel/traverse": "^7.22.6",
+				"@babel/generator": "^7.22.5",
+				"rollup-plugin-babel": "^4.4.0",
+				"@babel/plugin-transform-modules-commonjs": "^7.22.5"
+			},
+			"peerDependencies": {
+				"@babel/core": "^7.4.0 || ^8.0.0-0 <8.0.0"
+			},
+			"keywords": [
+				"babel-plugin"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "hzoo",
+					"email": "hi@henryzoo.com"
+				},
+				{
+					"name": "existentialism",
+					"email": "bng412@gmail.com"
+				},
+				{
+					"name": "nicolo-ribaudo",
+					"email": "nicolo.ribaudo@gmail.com"
+				},
+				{
+					"name": "jlhwung",
+					"email": "jlhwung@gmail.com"
+				}
+			],
+			"directories": {},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@babel/helper-define-polyfill-provider@0.4.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.4.2.tgz",
+				"shasum": "82c825cadeeeee7aad237618ebbe8fa1710015d7",
+				"integrity": "sha512-k0qnnOqHn5dK9pZpfD5XXZ9SojAITdCKRn2Lp6rnDGzIbaP0rHyMPk/4wsSxVBVz4RfN0q6VpXWP2pDGIoQ7hw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQC5vPFeBVuKF8hNq7VcODonASXdpaj+L94PDQ73oLfpUQIgLQMGdnCr6DL7IjTzPtZ+kvM7Nj5+LNM/B8kWbzp6zYI="
+					}
+				]
+			},
+			"_npmVersion": "lerna/3.22.0/node@v20.4.0+arm64 (darwin)",
+			"_npmUser": {
+				"name": "nicolo-ribaudo",
+				"email": "nicolo.ribaudo@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "0e8cfb85899c8fb01728199d81fd37108e1668ab",
+			"exports": {
+				".": [
+					{
+						"import": {
+							"node": "./esm/index.node.mjs",
+							"browser": "./esm/index.browser.mjs"
+						},
+						"default": "./lib/index.js"
+					},
+					"./lib/index.js"
+				],
+				"./package.json": "./package.json"
+			},
+			"browser": {
+				"./lib/node/dependencies.js": "./lib/browser/dependencies.js",
+				"./src/node/dependencies.js": "./src/browser/dependencies.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/helper-define-polyfill-provider_0.4.2_1689930192485_0.15291042371370267",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "20.4.0",
+			"contributors": []
+		},
+		"0.6.0": {
+			"name": "@babel/helper-define-polyfill-provider",
+			"description": "Babel helper to create your own polyfill provider",
+			"version": "0.6.0",
+			"homepage": "https://github.com/babel/babel-polyfills#readme",
+			"repository": {
+				"url": "git+https://github.com/babel/babel-polyfills.git",
+				"type": "git",
+				"directory": "packages/babel-helper-define-polyfill-provider"
+			},
+			"bugs": {
+				"url": "https://github.com/babel/babel-polyfills/issues"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"debug": "^4.1.1",
+				"resolve": "^1.14.2",
+				"lodash.debounce": "^4.0.8",
+				"@babel/helper-plugin-utils": "^7.22.5",
+				"@babel/helper-compilation-targets": "^7.22.6"
+			},
+			"devDependencies": {
+				"rollup": "^2.3.2",
+				"webpack": "^4.42.1",
+				"@babel/cli": "^7.22.6",
+				"strip-ansi": "^6.0.0",
+				"@babel/core": "^7.22.6",
+				"webpack-cli": "^3.3.11",
+				"babel-loader": "^8.1.0",
+				"@babel/traverse": "^7.22.6",
+				"@babel/generator": "^7.22.5",
+				"rollup-plugin-babel": "^4.4.0",
+				"@babel/plugin-transform-modules-commonjs": "^7.22.5"
+			},
+			"peerDependencies": {
+				"@babel/core": "^7.4.0 || ^8.0.0-0 <8.0.0"
+			},
+			"keywords": [
+				"babel-plugin"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "hzoo",
+					"email": "hi@henryzoo.com"
+				},
+				{
+					"name": "existentialism",
+					"email": "bng412@gmail.com"
+				},
+				{
+					"name": "nicolo-ribaudo",
+					"email": "nicolo.ribaudo@gmail.com"
+				},
+				{
+					"name": "jlhwung",
+					"email": "jlhwung@gmail.com"
+				}
+			],
+			"directories": {},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@babel/helper-define-polyfill-provider@0.6.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.6.0.tgz",
+				"shasum": "4d1a8b898c8299a2fcf295d7d356d2648471ab31",
+				"integrity": "sha512-efwOM90nCG6YeT8o3PCyBVSxRfmILxCNL+TNI8CGQl7a62M0Wd9VkV+XHwIlkOz1r4b+lxu6gBjdWiOMdUCrCQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIG1vpA5MUrYtsLVotkOhp3JIdeWTcbTFKoP7DtS1XXvZAiBMDUeOCLQG34VHJORjWM/6Iv6rHMsefR0rVJOamqLVDQ=="
+					}
+				]
+			},
+			"_npmVersion": "lerna/3.22.0/node@v20.11.1+x64 (linux)",
+			"_npmUser": {
+				"name": "nicolo-ribaudo",
+				"email": "nicolo.ribaudo@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "58703f07c9cff9f27d145215265042094739a175",
+			"exports": {
+				".": [
+					{
+						"import": {
+							"node": "./esm/index.node.mjs",
+							"browser": "./esm/index.browser.mjs"
+						},
+						"default": "./lib/index.js"
+					},
+					"./lib/index.js"
+				],
+				"./package.json": "./package.json"
+			},
+			"browser": {
+				"./lib/node/dependencies.js": "./lib/browser/dependencies.js",
+				"./src/node/dependencies.js": "./src/browser/dependencies.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/helper-define-polyfill-provider_0.6.0_1709919058658_0.7591531475782434",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "20.11.1",
+			"contributors": []
+		},
+		"0.0.7": {
+			"name": "@babel/helper-define-polyfill-provider",
+			"description": "Babel helper to create your own polyfill provider",
+			"version": "0.0.7",
+			"homepage": "https://github.com/babel/babel-polyfills#readme",
+			"repository": {
+				"url": "git+https://github.com/babel/babel-polyfills.git",
+				"type": "git",
+				"directory": "packages/babel-helper-define-polyfill-provider"
+			},
+			"bugs": {
+				"url": "https://github.com/babel/babel-polyfills/issues"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"debug": "^4.1.1",
+				"semver": "^6.1.2",
+				"resolve": "^1.14.2",
+				"@babel/traverse": "^7.11.5",
+				"lodash.debounce": "^4.0.8",
+				"@babel/helper-plugin-utils": "^7.10.4",
+				"@babel/helper-module-imports": "^7.10.4",
+				"@babel/helper-compilation-targets": "^7.10.4"
+			},
+			"devDependencies": {
+				"rollup": "^2.3.2",
+				"webpack": "^4.42.1",
+				"@babel/cli": "^7.11.5",
+				"@babel/core": "^7.11.5",
+				"webpack-cli": "^3.3.11",
+				"babel-loader": "^8.1.0",
+				"@babel/generator": "^7.11.5",
+				"rollup-plugin-babel": "^4.4.0"
+			},
+			"peerDependencies": {
+				"@babel/core": "^7.4.0-0"
+			},
+			"keywords": [
+				"babel-plugin"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "hzoo",
+					"email": "hi@henryzoo.com"
+				},
+				{
+					"name": "loganfsmyth",
+					"email": "loganfsmyth@gmail.com"
+				},
+				{
+					"name": "danez",
+					"email": "daniel@tschinder.de"
+				},
+				{
+					"name": "existentialism",
+					"email": "bng412@gmail.com"
+				},
+				{
+					"name": "nicolo-ribaudo",
+					"email": "nicolo.ribaudo@gmail.com"
+				},
+				{
+					"name": "jlhwung",
+					"email": "i@jhuang.me"
+				}
+			],
+			"directories": {},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@babel/helper-define-polyfill-provider@0.0.7",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.0.7.tgz",
+				"shasum": "f61deeb9bdf72efdb8d39b534a65862506444e45",
+				"integrity": "sha512-EGERVJUd63IISyZaMp8WZirGvmPAEc1PZ/nYXFewg70nsW3qXQS1WakKcKQUyPlauDMXUGhk/ssl6RTR+qTpYQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDLORlXQAZnyYleP3P3mdcaxxk2L/iE92cEMBZ192jJDwIhAPof1WUuuyaH9CElFieLv8IWi8g0TEzoevsUW/xSnNfr"
+					}
+				]
+			},
+			"_npmVersion": "lerna/3.22.0/node@v15.5.1+x64 (linux)",
+			"_npmUser": {
+				"name": "nicolo-ribaudo",
+				"email": "nicolo.ribaudo@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "bb9300ed54b6cc33e09a89764efbb2bd2949ccdf",
+			"browser": {
+				"./lib/config/loader.js": "./lib/config/loader-browser.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/helper-define-polyfill-provider_0.0.7_1610031963375_0.6720032552269306",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "15.5.1",
+			"contributors": []
+		},
+		"0.4.3": {
+			"name": "@babel/helper-define-polyfill-provider",
+			"description": "Babel helper to create your own polyfill provider",
+			"version": "0.4.3",
+			"homepage": "https://github.com/babel/babel-polyfills#readme",
+			"repository": {
+				"url": "git+https://github.com/babel/babel-polyfills.git",
+				"type": "git",
+				"directory": "packages/babel-helper-define-polyfill-provider"
+			},
+			"bugs": {
+				"url": "https://github.com/babel/babel-polyfills/issues"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"debug": "^4.1.1",
+				"resolve": "^1.14.2",
+				"lodash.debounce": "^4.0.8",
+				"@babel/helper-plugin-utils": "^7.22.5",
+				"@babel/helper-compilation-targets": "^7.22.6"
+			},
+			"devDependencies": {
+				"rollup": "^2.3.2",
+				"webpack": "^4.42.1",
+				"@babel/cli": "^7.22.6",
+				"strip-ansi": "^6.0.0",
+				"@babel/core": "^7.22.6",
+				"webpack-cli": "^3.3.11",
+				"babel-loader": "^8.1.0",
+				"@babel/traverse": "^7.22.6",
+				"@babel/generator": "^7.22.5",
+				"rollup-plugin-babel": "^4.4.0",
+				"@babel/plugin-transform-modules-commonjs": "^7.22.5"
+			},
+			"peerDependencies": {
+				"@babel/core": "^7.4.0 || ^8.0.0-0 <8.0.0"
+			},
+			"keywords": [
+				"babel-plugin"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "hzoo",
+					"email": "hi@henryzoo.com"
+				},
+				{
+					"name": "existentialism",
+					"email": "bng412@gmail.com"
+				},
+				{
+					"name": "nicolo-ribaudo",
+					"email": "nicolo.ribaudo@gmail.com"
+				},
+				{
+					"name": "jlhwung",
+					"email": "jlhwung@gmail.com"
+				}
+			],
+			"directories": {},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@babel/helper-define-polyfill-provider@0.4.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.4.3.tgz",
+				"shasum": "a71c10f7146d809f4a256c373f462d9bba8cf6ba",
+				"integrity": "sha512-WBrLmuPP47n7PNwsZ57pqam6G/RGo1vw/87b0Blc53tZNGZ4x7YvZ6HgQe2vo1W/FR20OgjeZuGXzudPiXHFug==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIBXjzUm9jYD6sWJk3Lf29wsI3YA8NomIo0kg8TR0xwBpAiBxT/wUbGs7K6dEJ99J35EjjHWU9obS9MxGx/lVcfYltQ=="
+					}
+				]
+			},
+			"_npmVersion": "lerna/3.22.0/node@v20.6.1+arm64 (darwin)",
+			"_npmUser": {
+				"name": "nicolo-ribaudo",
+				"email": "nicolo.ribaudo@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "66a6819f44a57152798cb3b0a9272c65752bae86",
+			"exports": {
+				".": [
+					{
+						"import": {
+							"node": "./esm/index.node.mjs",
+							"browser": "./esm/index.browser.mjs"
+						},
+						"default": "./lib/index.js"
+					},
+					"./lib/index.js"
+				],
+				"./package.json": "./package.json"
+			},
+			"browser": {
+				"./lib/node/dependencies.js": "./lib/browser/dependencies.js",
+				"./src/node/dependencies.js": "./src/browser/dependencies.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/helper-define-polyfill-provider_0.4.3_1697007735139_0.6833312859004623",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "20.6.1",
+			"contributors": []
+		},
+		"0.6.1": {
+			"name": "@babel/helper-define-polyfill-provider",
+			"description": "Babel helper to create your own polyfill provider",
+			"version": "0.6.1",
+			"homepage": "https://github.com/babel/babel-polyfills#readme",
+			"repository": {
+				"url": "git+https://github.com/babel/babel-polyfills.git",
+				"type": "git",
+				"directory": "packages/babel-helper-define-polyfill-provider"
+			},
+			"bugs": {
+				"url": "https://github.com/babel/babel-polyfills/issues"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"debug": "^4.1.1",
+				"resolve": "^1.14.2",
+				"lodash.debounce": "^4.0.8",
+				"@babel/helper-plugin-utils": "^7.22.5",
+				"@babel/helper-compilation-targets": "^7.22.6"
+			},
+			"devDependencies": {
+				"rollup": "^2.3.2",
+				"webpack": "^4.42.1",
+				"@babel/cli": "^7.22.6",
+				"strip-ansi": "^6.0.0",
+				"@babel/core": "^7.22.6",
+				"webpack-cli": "^3.3.11",
+				"babel-loader": "^8.1.0",
+				"@babel/traverse": "^7.22.6",
+				"@babel/generator": "^7.22.5",
+				"rollup-plugin-babel": "^4.4.0",
+				"@babel/plugin-transform-modules-commonjs": "^7.22.5"
+			},
+			"peerDependencies": {
+				"@babel/core": "^7.4.0 || ^8.0.0-0 <8.0.0"
+			},
+			"keywords": [
+				"babel-plugin"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "hzoo",
+					"email": "hi@henryzoo.com"
+				},
+				{
+					"name": "existentialism",
+					"email": "bng412@gmail.com"
+				},
+				{
+					"name": "nicolo-ribaudo",
+					"email": "nicolo.ribaudo@gmail.com"
+				},
+				{
+					"name": "jlhwung",
+					"email": "jlhwung@gmail.com"
+				}
+			],
+			"directories": {},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@babel/helper-define-polyfill-provider@0.6.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.6.1.tgz",
+				"shasum": "fadc63f0c2ff3c8d02ed905dcea747c5b0fb74fd",
+				"integrity": "sha512-o7SDgTJuvx5vLKD6SFvkydkSMBvahDKGiNJzG22IZYXhiqoe9efY7zocICBgzHV4IRg5wdgl2nEL/tulKIEIbA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDi0o1yZ8MxC+kK5f6/smapdApNcJ4wjsRVbWOxax5fBAIhALO1p0QT7c5IVD99bhCkT1SkwpqVLfwe/BEhJO9gh60e"
+					}
+				]
+			},
+			"_npmVersion": "lerna/3.22.0/node@v20.11.1+x64 (linux)",
+			"_npmUser": {
+				"name": "nicolo-ribaudo",
+				"email": "nicolo.ribaudo@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "1ce88db2507db2ef3d2ed2a2f920a3cf0b9364b5",
+			"exports": {
+				".": [
+					{
+						"import": {
+							"node": "./esm/index.node.mjs",
+							"browser": "./esm/index.browser.mjs"
+						},
+						"default": "./lib/index.js"
+					},
+					"./lib/index.js"
+				],
+				"./package.json": "./package.json"
+			},
+			"browser": {
+				"./lib/node/dependencies.js": "./lib/browser/dependencies.js",
+				"./src/node/dependencies.js": "./src/browser/dependencies.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/helper-define-polyfill-provider_0.6.1_1710259176323_0.5895338377216652",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "20.11.1",
+			"contributors": []
+		},
+		"0.0.4": {
+			"name": "@babel/helper-define-polyfill-provider",
+			"description": "Babel helper to create your own polyfill provider",
+			"version": "0.0.4",
+			"homepage": "https://github.com/babel/babel-polyfills#readme",
+			"repository": {
+				"url": "git+https://github.com/babel/babel-polyfills.git",
+				"type": "git",
+				"directory": "packages/babel-helper-define-polyfill-provider"
+			},
+			"bugs": {
+				"url": "https://github.com/babel/babel-polyfills/issues"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"debug": "^4.1.1",
+				"semver": "^6.1.2",
+				"resolve": "^1.14.2",
+				"@babel/traverse": "^7.11.5",
+				"lodash.debounce": "^4.0.8",
+				"@babel/helper-plugin-utils": "^7.10.4",
+				"@babel/helper-module-imports": "^7.10.4",
+				"@babel/helper-compilation-targets": "^7.10.4"
+			},
+			"devDependencies": {
+				"rollup": "^2.3.2",
+				"webpack": "^4.42.1",
+				"@babel/cli": "^7.11.5",
+				"@babel/core": "^7.11.5",
+				"webpack-cli": "^3.3.11",
+				"babel-loader": "^8.1.0",
+				"@babel/generator": "^7.11.5",
+				"rollup-plugin-babel": "^4.4.0"
+			},
+			"peerDependencies": {
+				"@babel/core": "^7.4.0-0"
+			},
+			"keywords": [
+				"babel-plugin"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "jlhwung",
+					"email": "i@jhuang.me"
+				},
+				{
+					"name": "nicolo-ribaudo",
+					"email": "nicolo.ribaudo@gmail.com"
+				},
+				{
+					"name": "hzoo",
+					"email": "hi@henryzoo.com"
+				},
+				{
+					"name": "loganfsmyth",
+					"email": "loganfsmyth@gmail.com"
+				},
+				{
+					"name": "danez",
+					"email": "daniel@tschinder.de"
+				},
+				{
+					"name": "existentialism",
+					"email": "bng412@gmail.com"
+				}
+			],
+			"directories": {},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@babel/helper-define-polyfill-provider@0.0.4",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.0.4.tgz",
+				"shasum": "d8b382b8796057343b27a2094944f8d5ab6a2561",
+				"integrity": "sha512-wlgaWVW0uGs6mFZC/ghJWgWwAjhzjgjGcuedBw3TLFFtXXbqBLBwJx5NPboXfWPNazhpduWdM+Rly9E/RpX5Jw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDFzW8/45DpbnJTHs0y4s9kAEEomrgCWFeCk/hYYf2UhwIgL6G+B8vasr4LqVdqtuegA6P59bUplFk4G0vKmuAroPE="
+					}
+				]
+			},
+			"_npmVersion": "lerna/3.22.0/node@v14.10.1+x64 (linux)",
+			"_npmUser": {
+				"name": "nicolo-ribaudo",
+				"email": "nicolo.ribaudo@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "a3e08229b65e7224eee3d822322576ec922a79f9",
+			"browser": {
+				"./lib/config/loader.js": "./lib/config/loader-browser.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/helper-define-polyfill-provider_0.0.4_1601722471678_0.15203418466245755",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "14.10.1",
+			"contributors": []
+		},
+		"0.2.2": {
+			"name": "@babel/helper-define-polyfill-provider",
+			"description": "Babel helper to create your own polyfill provider",
+			"version": "0.2.2",
+			"homepage": "https://github.com/babel/babel-polyfills#readme",
+			"repository": {
+				"url": "git+https://github.com/babel/babel-polyfills.git",
+				"type": "git",
+				"directory": "packages/babel-helper-define-polyfill-provider"
+			},
+			"bugs": {
+				"url": "https://github.com/babel/babel-polyfills/issues"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"debug": "^4.1.1",
+				"semver": "^6.1.2",
+				"resolve": "^1.14.2",
+				"@babel/traverse": "^7.13.0",
+				"lodash.debounce": "^4.0.8",
+				"@babel/helper-plugin-utils": "^7.13.0",
+				"@babel/helper-module-imports": "^7.12.13",
+				"@babel/helper-compilation-targets": "^7.13.0"
+			},
+			"devDependencies": {
+				"rollup": "^2.3.2",
+				"webpack": "^4.42.1",
+				"@babel/cli": "^7.11.5",
+				"@babel/core": "^7.13.0",
+				"webpack-cli": "^3.3.11",
+				"babel-loader": "^8.1.0",
+				"@babel/generator": "^7.11.5",
+				"rollup-plugin-babel": "^4.4.0",
+				"@babel/plugin-transform-modules-commonjs": "^7.10.4"
+			},
+			"peerDependencies": {
+				"@babel/core": "^7.4.0-0"
+			},
+			"keywords": [
+				"babel-plugin"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "hzoo",
+					"email": "hi@henryzoo.com"
+				},
+				{
+					"name": "loganfsmyth",
+					"email": "loganfsmyth@gmail.com"
+				},
+				{
+					"name": "danez",
+					"email": "npm@tschinder.de"
+				},
+				{
+					"name": "existentialism",
+					"email": "bng412@gmail.com"
+				},
+				{
+					"name": "nicolo-ribaudo",
+					"email": "nicolo.ribaudo@gmail.com"
+				},
+				{
+					"name": "jlhwung",
+					"email": "i@jhuang.me"
+				}
+			],
+			"directories": {},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@babel/helper-define-polyfill-provider@0.2.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.2.2.tgz",
+				"shasum": "b9f469f11b38b4c947f069e2cda44f5a56b8b533",
+				"integrity": "sha512-XjIrEdsW56J7UXKr88RWr6EwjyWSu7b+o1EwFUysFvME1nTNdg6z9l+zaSj/uMFIorUuIAjTWDQULUQauQG3Cw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDQOdByw4Wp0hFcTaLqI6YELnV3kYk8sweP+i9gS0DaggIhAPKaQQrnWSHb55tGZf+WfXaRE5xos8ac4upPdxTLG/5U"
+					}
+				]
+			},
+			"_npmVersion": "lerna/3.22.0/node@v16.2.0+x64 (linux)",
+			"_npmUser": {
+				"name": "nicolo-ribaudo",
+				"email": "nicolo.ribaudo@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "1db1e16a7e6855094c52a6cf9b98410e3f0e80de",
+			"exports": {
+				".": [
+					{
+						"import": {
+							"node": "./esm/index.node.mjs",
+							"browser": "./esm/index.browser.mjs"
+						},
+						"default": "./lib/index.js"
+					},
+					"./lib/index.js"
+				],
+				"./package.json": "./package.json"
+			},
+			"browser": {
+				"./lib/node/dependencies.js": "./lib/browser/dependencies.js",
+				"./src/node/dependencies.js": "./src/browser/dependencies.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/helper-define-polyfill-provider_0.2.2_1622023827991_0.7237030809082943",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "16.2.0",
+			"contributors": []
+		},
+		"0.3.1": {
+			"name": "@babel/helper-define-polyfill-provider",
+			"description": "Babel helper to create your own polyfill provider",
+			"version": "0.3.1",
+			"homepage": "https://github.com/babel/babel-polyfills#readme",
+			"repository": {
+				"url": "git+https://github.com/babel/babel-polyfills.git",
+				"type": "git",
+				"directory": "packages/babel-helper-define-polyfill-provider"
+			},
+			"bugs": {
+				"url": "https://github.com/babel/babel-polyfills/issues"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"debug": "^4.1.1",
+				"semver": "^6.1.2",
+				"resolve": "^1.14.2",
+				"@babel/traverse": "^7.13.0",
+				"lodash.debounce": "^4.0.8",
+				"@babel/helper-plugin-utils": "^7.13.0",
+				"@babel/helper-module-imports": "^7.12.13",
+				"@babel/helper-compilation-targets": "^7.13.0"
+			},
+			"devDependencies": {
+				"rollup": "^2.3.2",
+				"webpack": "^4.42.1",
+				"@babel/cli": "^7.11.5",
+				"@babel/core": "^7.13.0",
+				"webpack-cli": "^3.3.11",
+				"babel-loader": "^8.1.0",
+				"@babel/generator": "^7.11.5",
+				"rollup-plugin-babel": "^4.4.0",
+				"@babel/plugin-transform-modules-commonjs": "^7.10.4"
+			},
+			"peerDependencies": {
+				"@babel/core": "^7.4.0-0"
+			},
+			"keywords": [
+				"babel-plugin"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "hzoo",
+					"email": "hi@henryzoo.com"
+				},
+				{
+					"name": "loganfsmyth",
+					"email": "loganfsmyth@gmail.com"
+				},
+				{
+					"name": "danez",
+					"email": "npm@tschinder.de"
+				},
+				{
+					"name": "existentialism",
+					"email": "bng412@gmail.com"
+				},
+				{
+					"name": "nicolo-ribaudo",
+					"email": "nicolo.ribaudo@gmail.com"
+				},
+				{
+					"name": "jlhwung",
+					"email": "i@jhuang.me"
+				}
+			],
+			"directories": {},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@babel/helper-define-polyfill-provider@0.3.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.3.1.tgz",
+				"shasum": "52411b445bdb2e676869e5a74960d2d3826d2665",
+				"integrity": "sha512-J9hGMpJQmtWmj46B3kBHmL38UhJGhYX7eqkcq+2gsstyYt341HmPeWspihX43yVRA0mS+8GGk2Gckc7bY/HCmA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCTFvOywvyw5PTMXVoqRNW/SpYBY9qDKFtT0f4qqWWDigIgf1mAsqHGWon2/Q2TIt1rb8/FlOEkgk6nVO5qo89c+h0="
+					}
+				]
+			},
+			"_npmVersion": "lerna/3.22.0/node@v16.13.1+x64 (linux)",
+			"_npmUser": {
+				"name": "nicolo-ribaudo",
+				"email": "nicolo.ribaudo@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "f5eb1c6d74fa29afdb0a3a533dfc5742557197bc",
+			"exports": {
+				".": [
+					{
+						"import": {
+							"node": "./esm/index.node.mjs",
+							"browser": "./esm/index.browser.mjs"
+						},
+						"default": "./lib/index.js"
+					},
+					"./lib/index.js"
+				],
+				"./package.json": "./package.json"
+			},
+			"browser": {
+				"./lib/node/dependencies.js": "./lib/browser/dependencies.js",
+				"./src/node/dependencies.js": "./src/browser/dependencies.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/helper-define-polyfill-provider_0.3.1_1642259082489_0.6032668801327383",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "16.13.1",
+			"contributors": []
+		},
+		"0.4.0": {
+			"name": "@babel/helper-define-polyfill-provider",
+			"description": "Babel helper to create your own polyfill provider",
+			"version": "0.4.0",
+			"homepage": "https://github.com/babel/babel-polyfills#readme",
+			"repository": {
+				"url": "git+https://github.com/babel/babel-polyfills.git",
+				"type": "git",
+				"directory": "packages/babel-helper-define-polyfill-provider"
+			},
+			"bugs": {
+				"url": "https://github.com/babel/babel-polyfills/issues"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"debug": "^4.1.1",
+				"semver": "^6.1.2",
+				"resolve": "^1.14.2",
+				"lodash.debounce": "^4.0.8",
+				"@babel/helper-plugin-utils": "^7.16.7",
+				"@babel/helper-compilation-targets": "^7.17.7"
+			},
+			"devDependencies": {
+				"rollup": "^2.3.2",
+				"webpack": "^4.42.1",
+				"@babel/cli": "^7.17.6",
+				"strip-ansi": "^6.0.0",
+				"@babel/core": "^7.17.8",
+				"webpack-cli": "^3.3.11",
+				"babel-loader": "^8.1.0",
+				"@babel/traverse": "^7.17.3",
+				"@babel/generator": "^7.17.7",
+				"rollup-plugin-babel": "^4.4.0",
+				"@babel/plugin-transform-modules-commonjs": "^7.17.7"
+			},
+			"peerDependencies": {
+				"@babel/core": "^7.4.0-0"
+			},
+			"keywords": [
+				"babel-plugin"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "hzoo",
+					"email": "hi@henryzoo.com"
+				},
+				{
+					"name": "existentialism",
+					"email": "bng412@gmail.com"
+				},
+				{
+					"name": "nicolo-ribaudo",
+					"email": "nicolo.ribaudo@gmail.com"
+				},
+				{
+					"name": "jlhwung",
+					"email": "i@jhuang.me"
+				}
+			],
+			"directories": {},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@babel/helper-define-polyfill-provider@0.4.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.4.0.tgz",
+				"shasum": "487053f103110f25b9755c5980e031e93ced24d8",
+				"integrity": "sha512-RnanLx5ETe6aybRi1cO/edaRH+bNYWaryCEmjDDYyNr4wnSzyOp8T0dWipmqVHKEY3AbVKUom50AKSlj1zmKbg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDOoxAenjyoOjfThyrnjbToV38A02rp0+fp0c0dVbUexQIgdByexCszKl8FhtTRiJ3jE60fyEoNH1QhXDvyrYR2yBs="
+					}
+				]
+			},
+			"_npmVersion": "lerna/3.22.0/node@v20.0.0+arm64 (darwin)",
+			"_npmUser": {
+				"name": "nicolo-ribaudo",
+				"email": "nicolo.ribaudo@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "391a1f4049fe1d6943ca8e91cf7e2e23f3f1ef73",
+			"exports": {
+				".": [
+					{
+						"import": {
+							"node": "./esm/index.node.mjs",
+							"browser": "./esm/index.browser.mjs"
+						},
+						"default": "./lib/index.js"
+					},
+					"./lib/index.js"
+				],
+				"./package.json": "./package.json"
+			},
+			"browser": {
+				"./lib/node/dependencies.js": "./lib/browser/dependencies.js",
+				"./src/node/dependencies.js": "./src/browser/dependencies.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/helper-define-polyfill-provider_0.4.0_1683713938278_0.9266601179393246",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "20.0.0",
+			"contributors": []
+		},
+		"0.0.5": {
+			"name": "@babel/helper-define-polyfill-provider",
+			"description": "Babel helper to create your own polyfill provider",
+			"version": "0.0.5",
+			"homepage": "https://github.com/babel/babel-polyfills#readme",
+			"repository": {
+				"url": "git+https://github.com/babel/babel-polyfills.git",
+				"type": "git",
+				"directory": "packages/babel-helper-define-polyfill-provider"
+			},
+			"bugs": {
+				"url": "https://github.com/babel/babel-polyfills/issues"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"debug": "^4.1.1",
+				"semver": "^6.1.2",
+				"resolve": "^1.14.2",
+				"@babel/traverse": "^7.11.5",
+				"lodash.debounce": "^4.0.8",
+				"@babel/helper-plugin-utils": "^7.10.4",
+				"@babel/helper-module-imports": "^7.10.4",
+				"@babel/helper-compilation-targets": "^7.10.4"
+			},
+			"devDependencies": {
+				"rollup": "^2.3.2",
+				"webpack": "^4.42.1",
+				"@babel/cli": "^7.11.5",
+				"@babel/core": "^7.11.5",
+				"webpack-cli": "^3.3.11",
+				"babel-loader": "^8.1.0",
+				"@babel/generator": "^7.11.5",
+				"rollup-plugin-babel": "^4.4.0"
+			},
+			"peerDependencies": {
+				"@babel/core": "^7.4.0-0"
+			},
+			"keywords": [
+				"babel-plugin"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "jlhwung",
+					"email": "i@jhuang.me"
+				},
+				{
+					"name": "nicolo-ribaudo",
+					"email": "nicolo.ribaudo@gmail.com"
+				},
+				{
+					"name": "hzoo",
+					"email": "hi@henryzoo.com"
+				},
+				{
+					"name": "loganfsmyth",
+					"email": "loganfsmyth@gmail.com"
+				},
+				{
+					"name": "danez",
+					"email": "daniel@tschinder.de"
+				},
+				{
+					"name": "existentialism",
+					"email": "bng412@gmail.com"
+				}
+			],
+			"directories": {},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@babel/helper-define-polyfill-provider@0.0.5",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.0.5.tgz",
+				"shasum": "a800224db85c562db2f31a1a6fe6e93d25b7b8d1",
+				"integrity": "sha512-SjyoYnKgK5fXyIx9X5Fa02cCXJtkp17t0iQeSv0cKu3/rDhcA2DszStwx3ugFy+mdZeTm24ZwlDU1n3/LSN6Cg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIHqBUWlDpNSJq7nmkWdLi2oW2NOxh/y0/i2Upy6EU1N9AiBl0mLkr1iM4MewmXFipBtEADRwgMq6cC58q+HaDUXljQ=="
+					}
+				]
+			},
+			"_npmVersion": "lerna/3.22.0/node@v15.1.0+x64 (linux)",
+			"_npmUser": {
+				"name": "nicolo-ribaudo",
+				"email": "nicolo.ribaudo@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "ab1ebbd308b1111920327d95dc4c66a5ae4518f5",
+			"browser": {
+				"./lib/config/loader.js": "./lib/config/loader-browser.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/helper-define-polyfill-provider_0.0.5_1604932644888_0.1472905221465879",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "15.1.0",
+			"contributors": []
+		},
+		"0.1.4": {
+			"name": "@babel/helper-define-polyfill-provider",
+			"description": "Babel helper to create your own polyfill provider",
+			"version": "0.1.4",
+			"homepage": "https://github.com/babel/babel-polyfills#readme",
+			"repository": {
+				"url": "git+https://github.com/babel/babel-polyfills.git",
+				"type": "git",
+				"directory": "packages/babel-helper-define-polyfill-provider"
+			},
+			"bugs": {
+				"url": "https://github.com/babel/babel-polyfills/issues"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"debug": "^4.1.1",
+				"semver": "^6.1.2",
+				"resolve": "^1.14.2",
+				"@babel/traverse": "^7.13.0",
+				"lodash.debounce": "^4.0.8",
+				"@babel/helper-plugin-utils": "^7.13.0",
+				"@babel/helper-module-imports": "^7.12.13",
+				"@babel/helper-compilation-targets": "^7.13.0"
+			},
+			"devDependencies": {
+				"rollup": "^2.3.2",
+				"webpack": "^4.42.1",
+				"@babel/cli": "^7.11.5",
+				"@babel/core": "^7.13.0",
+				"webpack-cli": "^3.3.11",
+				"babel-loader": "^8.1.0",
+				"@babel/generator": "^7.11.5",
+				"rollup-plugin-babel": "^4.4.0",
+				"@babel/plugin-transform-modules-commonjs": "^7.10.4"
+			},
+			"peerDependencies": {
+				"@babel/core": "^7.4.0-0"
+			},
+			"keywords": [
+				"babel-plugin"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "hzoo",
+					"email": "hi@henryzoo.com"
+				},
+				{
+					"name": "loganfsmyth",
+					"email": "loganfsmyth@gmail.com"
+				},
+				{
+					"name": "danez",
+					"email": "daniel@tschinder.de"
+				},
+				{
+					"name": "existentialism",
+					"email": "bng412@gmail.com"
+				},
+				{
+					"name": "nicolo-ribaudo",
+					"email": "nicolo.ribaudo@gmail.com"
+				},
+				{
+					"name": "jlhwung",
+					"email": "i@jhuang.me"
+				}
+			],
+			"directories": {},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@babel/helper-define-polyfill-provider@0.1.4",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.1.4.tgz",
+				"shasum": "b618b087c6a0328127e5d53576df818bcee2b15f",
+				"integrity": "sha512-K5V2GaQZ1gpB+FTXM4AFVG2p1zzhm67n9wrQCJYNzvuLzQybhJyftW7qeDd2uUxPDNdl5Rkon1rOAeUeNDZ28Q==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIB8zRC/OsVHjhvknXY2VlOt23f/HGdaySmqRbBEMFE1xAiEAu7hEWM0iw4hdinUXbnjxcORPfPbHV+ZWRn/wjq80EGM="
+					}
+				]
+			},
+			"_npmVersion": "lerna/3.22.0/node@v14.16.0+x64 (linux)",
+			"_npmUser": {
+				"name": "nicolo-ribaudo",
+				"email": "nicolo.ribaudo@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "6e6c7d2925b0f512397518d9f5ec35c925ea9960",
+			"browser": {
+				"./lib/node/dependencies.js": "./lib/browser/dependencies.js",
+				"./src/node/dependencies.js": "./src/browser/dependencies.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/helper-define-polyfill-provider_0.1.4_1614295076656_0.5545538627077415",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "14.16.0",
+			"contributors": []
+		},
+		"0.2.3": {
+			"name": "@babel/helper-define-polyfill-provider",
+			"description": "Babel helper to create your own polyfill provider",
+			"version": "0.2.3",
+			"homepage": "https://github.com/babel/babel-polyfills#readme",
+			"repository": {
+				"url": "git+https://github.com/babel/babel-polyfills.git",
+				"type": "git",
+				"directory": "packages/babel-helper-define-polyfill-provider"
+			},
+			"bugs": {
+				"url": "https://github.com/babel/babel-polyfills/issues"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"debug": "^4.1.1",
+				"semver": "^6.1.2",
+				"resolve": "^1.14.2",
+				"@babel/traverse": "^7.13.0",
+				"lodash.debounce": "^4.0.8",
+				"@babel/helper-plugin-utils": "^7.13.0",
+				"@babel/helper-module-imports": "^7.12.13",
+				"@babel/helper-compilation-targets": "^7.13.0"
+			},
+			"devDependencies": {
+				"rollup": "^2.3.2",
+				"webpack": "^4.42.1",
+				"@babel/cli": "^7.11.5",
+				"@babel/core": "^7.13.0",
+				"webpack-cli": "^3.3.11",
+				"babel-loader": "^8.1.0",
+				"@babel/generator": "^7.11.5",
+				"rollup-plugin-babel": "^4.4.0",
+				"@babel/plugin-transform-modules-commonjs": "^7.10.4"
+			},
+			"peerDependencies": {
+				"@babel/core": "^7.4.0-0"
+			},
+			"keywords": [
+				"babel-plugin"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "hzoo",
+					"email": "hi@henryzoo.com"
+				},
+				{
+					"name": "loganfsmyth",
+					"email": "loganfsmyth@gmail.com"
+				},
+				{
+					"name": "danez",
+					"email": "npm@tschinder.de"
+				},
+				{
+					"name": "existentialism",
+					"email": "bng412@gmail.com"
+				},
+				{
+					"name": "nicolo-ribaudo",
+					"email": "nicolo.ribaudo@gmail.com"
+				},
+				{
+					"name": "jlhwung",
+					"email": "i@jhuang.me"
+				}
+			],
+			"directories": {},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@babel/helper-define-polyfill-provider@0.2.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.2.3.tgz",
+				"shasum": "0525edec5094653a282688d34d846e4c75e9c0b6",
+				"integrity": "sha512-RH3QDAfRMzj7+0Nqu5oqgO5q9mFtQEVvCRsi8qCEfzLR9p2BHfn5FzhSB2oj1fF7I2+DcTORkYaQ6aTR9Cofew==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIGxe5I1kEYsKS5NVijBxGBCeUIQOWDjytjCZo7iAR7JWAiAxy5wwfOCWWwHXKU7NO5U791iZq8eCH1RNVkGu3CWX/w=="
+					}
+				]
+			},
+			"_npmVersion": "lerna/3.22.0/node@v16.2.0+x64 (linux)",
+			"_npmUser": {
+				"name": "nicolo-ribaudo",
+				"email": "nicolo.ribaudo@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "9ecc6171257ca4185ebd880a75ae0232862720c2",
+			"exports": {
+				".": [
+					{
+						"import": {
+							"node": "./esm/index.node.mjs",
+							"browser": "./esm/index.browser.mjs"
+						},
+						"default": "./lib/index.js"
+					},
+					"./lib/index.js"
+				],
+				"./package.json": "./package.json"
+			},
+			"browser": {
+				"./lib/node/dependencies.js": "./lib/browser/dependencies.js",
+				"./src/node/dependencies.js": "./src/browser/dependencies.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/helper-define-polyfill-provider_0.2.3_1622025373409_0.2137497506357524",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "16.2.0",
+			"contributors": []
+		},
+		"0.3.2": {
+			"name": "@babel/helper-define-polyfill-provider",
+			"description": "Babel helper to create your own polyfill provider",
+			"version": "0.3.2",
+			"homepage": "https://github.com/babel/babel-polyfills#readme",
+			"repository": {
+				"url": "git+https://github.com/babel/babel-polyfills.git",
+				"type": "git",
+				"directory": "packages/babel-helper-define-polyfill-provider"
+			},
+			"bugs": {
+				"url": "https://github.com/babel/babel-polyfills/issues"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"debug": "^4.1.1",
+				"semver": "^6.1.2",
+				"resolve": "^1.14.2",
+				"lodash.debounce": "^4.0.8",
+				"@babel/helper-plugin-utils": "^7.16.7",
+				"@babel/helper-compilation-targets": "^7.17.7"
+			},
+			"devDependencies": {
+				"rollup": "^2.3.2",
+				"webpack": "^4.42.1",
+				"@babel/cli": "^7.17.6",
+				"@babel/core": "^7.17.8",
+				"webpack-cli": "^3.3.11",
+				"babel-loader": "^8.1.0",
+				"@babel/traverse": "^7.17.3",
+				"@babel/generator": "^7.17.7",
+				"rollup-plugin-babel": "^4.4.0",
+				"@babel/plugin-transform-modules-commonjs": "^7.17.7"
+			},
+			"peerDependencies": {
+				"@babel/core": "^7.4.0-0"
+			},
+			"keywords": [
+				"babel-plugin"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "hzoo",
+					"email": "hi@henryzoo.com"
+				},
+				{
+					"name": "existentialism",
+					"email": "bng412@gmail.com"
+				},
+				{
+					"name": "nicolo-ribaudo",
+					"email": "nicolo.ribaudo@gmail.com"
+				},
+				{
+					"name": "jlhwung",
+					"email": "i@jhuang.me"
+				}
+			],
+			"directories": {},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@babel/helper-define-polyfill-provider@0.3.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.3.2.tgz",
+				"shasum": "bd10d0aca18e8ce012755395b05a79f45eca5073",
+				"integrity": "sha512-r9QJJ+uDWrd+94BSPcP6/de67ygLtvVy6cK4luE6MOuDsZIdoaPBnfSpbO/+LTifjPckbKXRuI9BB/Z2/y3iTg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIHKASa7UZ63Ne6esOMRh9kyis2ke6FYNluVIcm+lqNC3AiBiWkV2ivrZFCkeWpBFNm6dq+BeeByh2MzaTmAOm0tA9g=="
+					}
+				]
+			},
+			"_npmVersion": "lerna/3.22.0/node@v14.20.0+x64 (linux)",
+			"_npmUser": {
+				"name": "nicolo-ribaudo",
+				"email": "nicolo.ribaudo@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "62b9025beeec450a1ff5d61fadcf63963aec5015",
+			"exports": {
+				".": [
+					{
+						"import": {
+							"node": "./esm/index.node.mjs",
+							"browser": "./esm/index.browser.mjs"
+						},
+						"default": "./lib/index.js"
+					},
+					"./lib/index.js"
+				],
+				"./package.json": "./package.json"
+			},
+			"browser": {
+				"./lib/node/dependencies.js": "./lib/browser/dependencies.js",
+				"./src/node/dependencies.js": "./src/browser/dependencies.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/helper-define-polyfill-provider_0.3.2_1658645815987_0.23799866255158175",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "14.20.0",
+			"contributors": []
+		},
+		"0.4.1": {
+			"name": "@babel/helper-define-polyfill-provider",
+			"description": "Babel helper to create your own polyfill provider",
+			"version": "0.4.1",
+			"homepage": "https://github.com/babel/babel-polyfills#readme",
+			"repository": {
+				"url": "git+https://github.com/babel/babel-polyfills.git",
+				"type": "git",
+				"directory": "packages/babel-helper-define-polyfill-provider"
+			},
+			"bugs": {
+				"url": "https://github.com/babel/babel-polyfills/issues"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"debug": "^4.1.1",
+				"resolve": "^1.14.2",
+				"lodash.debounce": "^4.0.8",
+				"@babel/helper-plugin-utils": "^7.22.5",
+				"@babel/helper-compilation-targets": "^7.22.6"
+			},
+			"devDependencies": {
+				"rollup": "^2.3.2",
+				"webpack": "^4.42.1",
+				"@babel/cli": "^7.22.6",
+				"strip-ansi": "^6.0.0",
+				"@babel/core": "^7.22.6",
+				"webpack-cli": "^3.3.11",
+				"babel-loader": "^8.1.0",
+				"@babel/traverse": "^7.22.6",
+				"@babel/generator": "^7.22.5",
+				"rollup-plugin-babel": "^4.4.0",
+				"@babel/plugin-transform-modules-commonjs": "^7.22.5"
+			},
+			"peerDependencies": {
+				"@babel/core": "^7.4.0-0"
+			},
+			"keywords": [
+				"babel-plugin"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "hzoo",
+					"email": "hi@henryzoo.com"
+				},
+				{
+					"name": "existentialism",
+					"email": "bng412@gmail.com"
+				},
+				{
+					"name": "nicolo-ribaudo",
+					"email": "nicolo.ribaudo@gmail.com"
+				},
+				{
+					"name": "jlhwung",
+					"email": "jlhwung@gmail.com"
+				}
+			],
+			"directories": {},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@babel/helper-define-polyfill-provider@0.4.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.4.1.tgz",
+				"shasum": "af1429c4a83ac316a6a8c2cc8ff45cb5d2998d3a",
+				"integrity": "sha512-kX4oXixDxG197yhX+J3Wp+NpL2wuCFjWQAr6yX2jtCnflK9ulMI51ULFGIrWiX1jGfvAxdHp+XQCcP2bZGPs9A==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQD3mfVOv3aI15mjilDQ8ft8MG42yhblxTnzNmI1vQFcGAIgI0K43UgGY0oGu56dbBh5MlQlfSoYDQTRVWhO9RY4MBc="
+					}
+				]
+			},
+			"_npmVersion": "lerna/3.22.0/node@v20.3.1+arm64 (darwin)",
+			"_npmUser": {
+				"name": "nicolo-ribaudo",
+				"email": "nicolo.ribaudo@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "74956db5d547985ac8e60bf1af56f4c61af12e4e",
+			"exports": {
+				".": [
+					{
+						"import": {
+							"node": "./esm/index.node.mjs",
+							"browser": "./esm/index.browser.mjs"
+						},
+						"default": "./lib/index.js"
+					},
+					"./lib/index.js"
+				],
+				"./package.json": "./package.json"
+			},
+			"browser": {
+				"./lib/node/dependencies.js": "./lib/browser/dependencies.js",
+				"./src/node/dependencies.js": "./src/browser/dependencies.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/helper-define-polyfill-provider_0.4.1_1688546287937_0.21944381833373416",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "20.3.1",
+			"contributors": []
+		},
+		"0.5.0": {
+			"name": "@babel/helper-define-polyfill-provider",
+			"description": "Babel helper to create your own polyfill provider",
+			"version": "0.5.0",
+			"homepage": "https://github.com/babel/babel-polyfills#readme",
+			"repository": {
+				"url": "git+https://github.com/babel/babel-polyfills.git",
+				"type": "git",
+				"directory": "packages/babel-helper-define-polyfill-provider"
+			},
+			"bugs": {
+				"url": "https://github.com/babel/babel-polyfills/issues"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"debug": "^4.1.1",
+				"resolve": "^1.14.2",
+				"lodash.debounce": "^4.0.8",
+				"@babel/helper-plugin-utils": "^7.22.5",
+				"@babel/helper-compilation-targets": "^7.22.6"
+			},
+			"devDependencies": {
+				"rollup": "^2.3.2",
+				"webpack": "^4.42.1",
+				"@babel/cli": "^7.22.6",
+				"strip-ansi": "^6.0.0",
+				"@babel/core": "^7.22.6",
+				"webpack-cli": "^3.3.11",
+				"babel-loader": "^8.1.0",
+				"@babel/traverse": "^7.22.6",
+				"@babel/generator": "^7.22.5",
+				"rollup-plugin-babel": "^4.4.0",
+				"@babel/plugin-transform-modules-commonjs": "^7.22.5"
+			},
+			"peerDependencies": {
+				"@babel/core": "^7.4.0 || ^8.0.0-0 <8.0.0"
+			},
+			"keywords": [
+				"babel-plugin"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "hzoo",
+					"email": "hi@henryzoo.com"
+				},
+				{
+					"name": "existentialism",
+					"email": "bng412@gmail.com"
+				},
+				{
+					"name": "nicolo-ribaudo",
+					"email": "nicolo.ribaudo@gmail.com"
+				},
+				{
+					"name": "jlhwung",
+					"email": "jlhwung@gmail.com"
+				}
+			],
+			"directories": {},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@babel/helper-define-polyfill-provider@0.5.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.5.0.tgz",
+				"shasum": "465805b7361f461e86c680f1de21eaf88c25901b",
+				"integrity": "sha512-NovQquuQLAQ5HuyjCz7WQP9MjRj7dx++yspwiyUiGl9ZyadHRSql1HZh5ogRd8W8w6YM6EQ/NTB8rgjLt5W65Q==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIA4/wLKc8Gy1eaTVTMo0OTcZQMC9HO/0O6XLyQHcGMUlAiAkuWsV6o5hczGui0a+exYn6lDD0zaQNqT0zwvx1QD2wA=="
+					}
+				]
+			},
+			"_npmVersion": "lerna/3.22.0/node@v20.10.0+arm64 (darwin)",
+			"_npmUser": {
+				"name": "nicolo-ribaudo",
+				"email": "nicolo.ribaudo@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "9738ea2a12643376a52c9be30c20ac19426a88cb",
+			"exports": {
+				".": [
+					{
+						"import": {
+							"node": "./esm/index.node.mjs",
+							"browser": "./esm/index.browser.mjs"
+						},
+						"default": "./lib/index.js"
+					},
+					"./lib/index.js"
+				],
+				"./package.json": "./package.json"
+			},
+			"browser": {
+				"./lib/node/dependencies.js": "./lib/browser/dependencies.js",
+				"./src/node/dependencies.js": "./src/browser/dependencies.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/helper-define-polyfill-provider_0.5.0_1705571830150_0.7721819831102381",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "20.10.0",
+			"contributors": []
+		},
+		"0.6.4": {
+			"name": "@babel/helper-define-polyfill-provider",
+			"description": "Babel helper to create your own polyfill provider",
+			"version": "0.6.4",
+			"homepage": "https://github.com/babel/babel-polyfills#readme",
+			"repository": {
+				"url": "git+https://github.com/babel/babel-polyfills.git",
+				"type": "git",
+				"directory": "packages/babel-helper-define-polyfill-provider"
+			},
+			"bugs": {
+				"url": "https://github.com/babel/babel-polyfills/issues"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"debug": "^4.1.1",
+				"resolve": "^1.14.2",
+				"lodash.debounce": "^4.0.8",
+				"@babel/helper-plugin-utils": "^7.22.5",
+				"@babel/helper-compilation-targets": "^7.22.6"
+			},
+			"devDependencies": {
+				"rollup": "^2.3.2",
+				"webpack": "^4.42.1",
+				"@babel/cli": "^7.22.6",
+				"strip-ansi": "^6.0.0",
+				"@babel/core": "^7.22.6",
+				"webpack-cli": "^3.3.11",
+				"babel-loader": "^8.1.0",
+				"@babel/traverse": "^7.22.6",
+				"@babel/generator": "^7.22.5",
+				"rollup-plugin-babel": "^4.4.0",
+				"@babel/plugin-transform-modules-commonjs": "^7.22.5"
+			},
+			"peerDependencies": {
+				"@babel/core": "^7.4.0 || ^8.0.0-0 <8.0.0"
+			},
+			"keywords": [
+				"babel-plugin"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "hzoo",
+					"email": "hi@henryzoo.com"
+				},
+				{
+					"name": "existentialism",
+					"email": "bng412@gmail.com"
+				},
+				{
+					"name": "nicolo-ribaudo",
+					"email": "nicolo.ribaudo@gmail.com"
+				},
+				{
+					"name": "jlhwung",
+					"email": "jlhwung@gmail.com"
+				}
+			],
+			"directories": {},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@babel/helper-define-polyfill-provider@0.6.4",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.6.4.tgz",
+				"shasum": "15e8746368bfa671785f5926ff74b3064c291fab",
+				"integrity": "sha512-jljfR1rGnXXNWnmQg2K3+bvhkxB51Rl32QRaOTuwwjviGrHzIbSc8+x9CpraDtbT7mfyjXObULP4w/adunNwAw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEQCIBRuedyjsYPbmKPJQbLC2YoJzAilQ8BGJu6z1WHjQzlnAiAzDqzDvJNetClwv3dyvnxuKzMXsqMABuYZLTAeVb2+XQ=="
+					}
+				]
+			},
+			"_npmVersion": "lerna/3.22.0/node@v23.6.1+arm64 (darwin)",
+			"_npmUser": {
+				"name": "nicolo-ribaudo",
+				"email": "nicolo.ribaudo@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "d87c29c909148920ad18690b63d450c561842298",
+			"exports": {
+				".": [
+					{
+						"import": {
+							"node": "./esm/index.node.mjs",
+							"browser": "./esm/index.browser.mjs"
+						},
+						"default": "./lib/index.js"
+					},
+					"./lib/index.js"
+				],
+				"./package.json": "./package.json"
+			},
+			"browser": {
+				"./lib/node/dependencies.js": "./lib/browser/dependencies.js",
+				"./src/node/dependencies.js": "./src/browser/dependencies.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/helper-define-polyfill-provider_0.6.4_1742390646422_0.1415508682293356",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"_nodeVersion": "23.6.1",
+			"contributors": []
+		},
+		"1.0.0-rc.2": {
+			"name": "@babel/helper-define-polyfill-provider",
+			"description": "Babel helper to create your own polyfill provider",
+			"version": "1.0.0-rc.2",
+			"homepage": "https://github.com/babel/babel-polyfills#readme",
+			"repository": {
+				"url": "git+https://github.com/babel/babel-polyfills.git",
+				"type": "git",
+				"directory": "packages/babel-helper-define-polyfill-provider"
+			},
+			"bugs": {
+				"url": "https://github.com/babel/babel-polyfills/issues"
+			},
+			"engines": {
+				"node": "^20.19.0 || >=22.12.0"
+			},
+			"dependencies": {
+				"lodash.debounce": "^4.0.8",
+				"@babel/helper-plugin-utils": "^8.0.0-rc.3 <8.0.0",
+				"@babel/helper-compilation-targets": "^8.0.0-rc.3 <8.0.0"
+			},
+			"devDependencies": {
+				"rollup": "^4.59.0",
+				"webpack": "^5.105.4",
+				"@babel/cli": "^8.0.0-rc.3 <8.0.0",
+				"strip-ansi": "^6.0.1",
+				"@babel/core": "^8.0.0-rc.3 <8.0.0",
+				"webpack-cli": "^6.0.1",
+				"babel-loader": "^10.1.0",
+				"@babel/traverse": "^8.0.0-rc.3 <8.0.0",
+				"@babel/generator": "^8.0.0-rc.3 <8.0.0",
+				"@rollup/plugin-babel": "^7.0.0",
+				"@babel/plugin-transform-modules-commonjs": "^8.0.0-rc.3 <8.0.0"
+			},
+			"peerDependencies": {
+				"@babel/core": "^7.4.0 || ^8.0.0-rc.3"
+			},
+			"keywords": [
+				"babel-plugin"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "hzoo",
+					"email": "hi@henryzoo.com"
+				},
+				{
+					"name": "existentialism",
+					"email": "bng412@gmail.com"
+				},
+				{
+					"name": "nicolo-ribaudo",
+					"email": "nicolo.ribaudo@gmail.com"
+				},
+				{
+					"name": "jlhwung",
+					"email": "jlhwung@gmail.com"
+				}
+			],
+			"directories": {},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@babel/helper-define-polyfill-provider@1.0.0-rc.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-1.0.0-rc.2.tgz",
+				"shasum": "ce4761ce3be7da9bc6b791210155078880ab2f61",
+				"integrity": "sha512-AWy1lGqBObYp6gYE7TCVnjmCMstbTLEVevkzw/wHjD43XZ8HqOOe+PAg2zjROFl9qEjF6LH+QLxSrXGuQqLwBA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEQCIGzA4VVEFRNOvm4SbeqhZ8Wz7R/ka5/x43fsStVDRnfmAiB8npYpXyldhx3NsCjXGeHe8vzBajbfW8SVBXupn6HmbA=="
+					}
+				]
+			},
+			"_npmVersion": "lerna/3.22.1/node@v25.6.1+x64 (linux)",
+			"_npmUser": {
+				"name": "nicolo-ribaudo",
+				"email": "nicolo.ribaudo@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "07135f7cc464ea3e87bdf51baf00704a2aa20aef",
+			"imports": {
+				"#dependencies": {
+					"browser": "./src/browser/dependencies.ts",
+					"default": "./src/node/dependencies.ts"
+				}
+			},
+			"exports": {
+				".": {
+					"browser": "./lib/index.browser.js",
+					"default": "./lib/index.node.js"
+				},
+				"./package.json": "./package.json"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/helper-define-polyfill-provider_1.0.0-rc.2_1775845467480_0.4841826771309736",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"readmeFilename": "README.md",
+			"type": "module",
+			"_nodeVersion": "25.6.1",
+			"contributors": []
+		},
+		"0.6.5": {
+			"name": "@babel/helper-define-polyfill-provider",
+			"description": "Babel helper to create your own polyfill provider",
+			"version": "0.6.5",
+			"homepage": "https://github.com/babel/babel-polyfills#readme",
+			"repository": {
+				"url": "git+https://github.com/babel/babel-polyfills.git",
+				"type": "git",
+				"directory": "packages/babel-helper-define-polyfill-provider"
+			},
+			"bugs": {
+				"url": "https://github.com/babel/babel-polyfills/issues"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"debug": "^4.4.1",
+				"resolve": "^1.22.10",
+				"lodash.debounce": "^4.0.8",
+				"@babel/helper-plugin-utils": "^7.27.1",
+				"@babel/helper-compilation-targets": "^7.27.2"
+			},
+			"devDependencies": {
+				"rollup": "^2.79.2",
+				"webpack": "^4.47.0",
+				"@babel/cli": "^7.27.2",
+				"strip-ansi": "^6.0.1",
+				"@babel/core": "^7.27.7",
+				"webpack-cli": "^3.3.12",
+				"babel-loader": "^8.4.1",
+				"@babel/traverse": "^7.27.7",
+				"@babel/generator": "^7.27.5",
+				"rollup-plugin-babel": "^4.4.0",
+				"@babel/plugin-transform-modules-commonjs": "^7.27.1"
+			},
+			"peerDependencies": {
+				"@babel/core": "^7.4.0 || ^8.0.0-0 <8.0.0"
+			},
+			"keywords": [
+				"babel-plugin"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "hzoo",
+					"email": "hi@henryzoo.com"
+				},
+				{
+					"name": "existentialism",
+					"email": "bng412@gmail.com"
+				},
+				{
+					"name": "nicolo-ribaudo",
+					"email": "nicolo.ribaudo@gmail.com"
+				},
+				{
+					"name": "jlhwung",
+					"email": "jlhwung@gmail.com"
+				}
+			],
+			"directories": {},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@babel/helper-define-polyfill-provider@0.6.5",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.6.5.tgz",
+				"shasum": "742ccf1cb003c07b48859fc9fa2c1bbe40e5f753",
+				"integrity": "sha512-uJnGFcPsWQK8fvjgGP5LZUZZsYGIoPeRjSF5PGwrelYgq7Q15/Ft9NGFp1zglwgIv//W0uG4BevRuSJRyylZPg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEUCIEdKw+pFUuds2eCYt8i7htAV4IxcgpnYEO9oLwtbGyWOAiEA3U9M3U5iTztH69ezTrE6ewyko49Bb9e2rX9kDvfQPXc="
+					}
+				]
+			},
+			"_npmVersion": "lerna/3.22.1/node@v24.3.0+x64 (linux)",
+			"_npmUser": {
+				"name": "nicolo-ribaudo",
+				"actor": {
+					"name": "nicolo-ribaudo",
+					"type": "user",
+					"email": "nicolo.ribaudo@gmail.com"
+				},
+				"email": "nicolo.ribaudo@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "fddd6fc6e7c3c41b1234d82e53faf5de832bbf2b",
+			"exports": {
+				".": [
+					{
+						"import": {
+							"node": "./esm/index.node.mjs",
+							"browser": "./esm/index.browser.mjs"
+						},
+						"default": "./lib/index.js"
+					},
+					"./lib/index.js"
+				],
+				"./package.json": "./package.json"
+			},
+			"browser": {
+				"./lib/node/dependencies.js": "./lib/browser/dependencies.js",
+				"./src/node/dependencies.js": "./src/browser/dependencies.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/helper-define-polyfill-provider_0.6.5_1751042267594_0.9112943965033315",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"_nodeVersion": "24.3.0",
+			"contributors": []
+		},
+		"1.0.0-rc.1": {
+			"name": "@babel/helper-define-polyfill-provider",
+			"description": "Babel helper to create your own polyfill provider",
+			"version": "1.0.0-rc.1",
+			"homepage": "https://github.com/babel/babel-polyfills#readme",
+			"repository": {
+				"url": "git+https://github.com/babel/babel-polyfills.git",
+				"type": "git",
+				"directory": "packages/babel-helper-define-polyfill-provider"
+			},
+			"bugs": {
+				"url": "https://github.com/babel/babel-polyfills/issues"
+			},
+			"engines": {
+				"node": "^20.19.0 || >=22.12.0"
+			},
+			"dependencies": {
+				"lodash.debounce": "^4.0.8",
+				"@babel/helper-plugin-utils": "^8.0.0-rc.3 <8.0.0",
+				"@babel/helper-compilation-targets": "^8.0.0-rc.3 <8.0.0"
+			},
+			"devDependencies": {
+				"rollup": "^4.59.0",
+				"webpack": "^5.105.4",
+				"@babel/cli": "^8.0.0-rc.3 <8.0.0",
+				"strip-ansi": "^6.0.1",
+				"@babel/core": "^8.0.0-rc.3 <8.0.0",
+				"webpack-cli": "^6.0.1",
+				"babel-loader": "^10.1.0",
+				"@babel/traverse": "^8.0.0-rc.3 <8.0.0",
+				"@babel/generator": "^8.0.0-rc.3 <8.0.0",
+				"@rollup/plugin-babel": "^7.0.0",
+				"@babel/plugin-transform-modules-commonjs": "^8.0.0-rc.3 <8.0.0"
+			},
+			"peerDependencies": {
+				"@babel/core": "^7.4.0 || ^8.0.0-rc.3"
+			},
+			"keywords": [
+				"babel-plugin"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "hzoo",
+					"email": "hi@henryzoo.com"
+				},
+				{
+					"name": "existentialism",
+					"email": "bng412@gmail.com"
+				},
+				{
+					"name": "nicolo-ribaudo",
+					"email": "nicolo.ribaudo@gmail.com"
+				},
+				{
+					"name": "jlhwung",
+					"email": "jlhwung@gmail.com"
+				}
+			],
+			"directories": {},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@babel/helper-define-polyfill-provider@1.0.0-rc.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-1.0.0-rc.1.tgz",
+				"shasum": "74006c1d4824b0eb12b45efb3b4871156c8f3872",
+				"integrity": "sha512-dWt+cjeCIIfG97opGg46vNcplihtv8CTacTdI2gjl8LCAHKAET5IwA8HhntDPYQMz2NNyEKZny90DHP1QjEB+g==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEUCIG+hY15Py9G/YsXp71isJmOyqTO3ldHuvN3LsYrQZdgrAiEAywjGDI4TIPqvckG4fV/SudvIbhzMdkipRoDBk/gQSIs="
+					}
+				]
+			},
+			"_npmVersion": "lerna/3.22.1/node@v25.6.1+x64 (linux)",
+			"_npmUser": {
+				"name": "nicolo-ribaudo",
+				"email": "nicolo.ribaudo@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "e36c7f3b3b737891daa64cf60d7bb49f4562e263",
+			"exports": {
+				".": {
+					"browser": "./lib/index.browser.js",
+					"default": "./lib/index.node.js"
+				},
+				"./package.json": "./package.json"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/helper-define-polyfill-provider_1.0.0-rc.1_1775844053282_0.6072761745682449",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"type": "module",
+			"_nodeVersion": "25.6.1",
+			"contributors": []
+		},
+		"0.4.4": {
+			"name": "@babel/helper-define-polyfill-provider",
+			"description": "Babel helper to create your own polyfill provider",
+			"version": "0.4.4",
+			"homepage": "https://github.com/babel/babel-polyfills#readme",
+			"repository": {
+				"url": "git+https://github.com/babel/babel-polyfills.git",
+				"type": "git",
+				"directory": "packages/babel-helper-define-polyfill-provider"
+			},
+			"bugs": {
+				"url": "https://github.com/babel/babel-polyfills/issues"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"debug": "^4.1.1",
+				"resolve": "^1.14.2",
+				"lodash.debounce": "^4.0.8",
+				"@babel/helper-plugin-utils": "^7.22.5",
+				"@babel/helper-compilation-targets": "^7.22.6"
+			},
+			"devDependencies": {
+				"rollup": "^2.3.2",
+				"webpack": "^4.42.1",
+				"@babel/cli": "^7.22.6",
+				"strip-ansi": "^6.0.0",
+				"@babel/core": "^7.22.6",
+				"webpack-cli": "^3.3.11",
+				"babel-loader": "^8.1.0",
+				"@babel/traverse": "^7.22.6",
+				"@babel/generator": "^7.22.5",
+				"rollup-plugin-babel": "^4.4.0",
+				"@babel/plugin-transform-modules-commonjs": "^7.22.5"
+			},
+			"peerDependencies": {
+				"@babel/core": "^7.4.0 || ^8.0.0-0 <8.0.0"
+			},
+			"keywords": [
+				"babel-plugin"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "hzoo",
+					"email": "hi@henryzoo.com"
+				},
+				{
+					"name": "existentialism",
+					"email": "bng412@gmail.com"
+				},
+				{
+					"name": "nicolo-ribaudo",
+					"email": "nicolo.ribaudo@gmail.com"
+				},
+				{
+					"name": "jlhwung",
+					"email": "jlhwung@gmail.com"
+				}
+			],
+			"directories": {},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@babel/helper-define-polyfill-provider@0.4.4",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.4.4.tgz",
+				"shasum": "64df615451cb30e94b59a9696022cffac9a10088",
+				"integrity": "sha512-QcJMILQCu2jm5TFPGA3lCpJJTeEP+mqeXooG/NZbg/h5FTFi6V0+99ahlRsW8/kRLyb24LZVCCiclDedhLKcBA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIEU4/QbxxUgPGvDasOFeY8R1Xd+8HwmqstrLAq0RrR1fAiEAjD/bVVqxq/5+S+69yDVsW1K71bOLc5QtwJktiDHazmk="
+					}
+				]
+			},
+			"_npmVersion": "lerna/3.22.0/node@v20.10.0+arm64 (darwin)",
+			"_npmUser": {
+				"name": "nicolo-ribaudo",
+				"email": "nicolo.ribaudo@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "984c56c59568283889c3f0f89e58d370e4fd10f8",
+			"exports": {
+				".": [
+					{
+						"import": {
+							"node": "./esm/index.node.mjs",
+							"browser": "./esm/index.browser.mjs"
+						},
+						"default": "./lib/index.js"
+					},
+					"./lib/index.js"
+				],
+				"./package.json": "./package.json"
+			},
+			"browser": {
+				"./lib/node/dependencies.js": "./lib/browser/dependencies.js",
+				"./src/node/dependencies.js": "./src/browser/dependencies.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/helper-define-polyfill-provider_0.4.4_1702304406607_0.14828632673282782",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "20.10.0",
+			"contributors": []
+		},
+		"0.6.2": {
+			"name": "@babel/helper-define-polyfill-provider",
+			"description": "Babel helper to create your own polyfill provider",
+			"version": "0.6.2",
+			"homepage": "https://github.com/babel/babel-polyfills#readme",
+			"repository": {
+				"url": "git+https://github.com/babel/babel-polyfills.git",
+				"type": "git",
+				"directory": "packages/babel-helper-define-polyfill-provider"
+			},
+			"bugs": {
+				"url": "https://github.com/babel/babel-polyfills/issues"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"debug": "^4.1.1",
+				"resolve": "^1.14.2",
+				"lodash.debounce": "^4.0.8",
+				"@babel/helper-plugin-utils": "^7.22.5",
+				"@babel/helper-compilation-targets": "^7.22.6"
+			},
+			"devDependencies": {
+				"rollup": "^2.3.2",
+				"webpack": "^4.42.1",
+				"@babel/cli": "^7.22.6",
+				"strip-ansi": "^6.0.0",
+				"@babel/core": "^7.22.6",
+				"webpack-cli": "^3.3.11",
+				"babel-loader": "^8.1.0",
+				"@babel/traverse": "^7.22.6",
+				"@babel/generator": "^7.22.5",
+				"rollup-plugin-babel": "^4.4.0",
+				"@babel/plugin-transform-modules-commonjs": "^7.22.5"
+			},
+			"peerDependencies": {
+				"@babel/core": "^7.4.0 || ^8.0.0-0 <8.0.0"
+			},
+			"keywords": [
+				"babel-plugin"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "hzoo",
+					"email": "hi@henryzoo.com"
+				},
+				{
+					"name": "existentialism",
+					"email": "bng412@gmail.com"
+				},
+				{
+					"name": "nicolo-ribaudo",
+					"email": "nicolo.ribaudo@gmail.com"
+				},
+				{
+					"name": "jlhwung",
+					"email": "jlhwung@gmail.com"
+				}
+			],
+			"directories": {},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@babel/helper-define-polyfill-provider@0.6.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.6.2.tgz",
+				"shasum": "18594f789c3594acb24cfdb4a7f7b7d2e8bd912d",
+				"integrity": "sha512-LV76g+C502biUK6AyZ3LK10vDpDyCzZnhZFXkH1L75zHPj68+qc8Zfpx2th+gzwA2MzyK+1g/3EPl62yFnVttQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIDzUE5TyZaduznI/r2pwlJSsz6+e898hz7nEaHVzI9+DAiAyOcJXqR1dsnxQAALoi5gSajhU8lIdK6JKP46Znc2DJA=="
+					}
+				]
+			},
+			"_npmVersion": "lerna/3.22.0/node@v21.7.1+x64 (linux)",
+			"_npmUser": {
+				"name": "nicolo-ribaudo",
+				"email": "nicolo.ribaudo@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "2da4da8e1a3d87640c88a3cd7e650cbb1c049a33",
+			"exports": {
+				".": [
+					{
+						"import": {
+							"node": "./esm/index.node.mjs",
+							"browser": "./esm/index.browser.mjs"
+						},
+						"default": "./lib/index.js"
+					},
+					"./lib/index.js"
+				],
+				"./package.json": "./package.json"
+			},
+			"browser": {
+				"./lib/node/dependencies.js": "./lib/browser/dependencies.js",
+				"./src/node/dependencies.js": "./src/browser/dependencies.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/helper-define-polyfill-provider_0.6.2_1713809613883_0.31062632621503794",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "21.7.1",
+			"contributors": []
+		},
+		"0.6.3": {
+			"name": "@babel/helper-define-polyfill-provider",
+			"description": "Babel helper to create your own polyfill provider",
+			"version": "0.6.3",
+			"homepage": "https://github.com/babel/babel-polyfills#readme",
+			"repository": {
+				"url": "git+https://github.com/babel/babel-polyfills.git",
+				"type": "git",
+				"directory": "packages/babel-helper-define-polyfill-provider"
+			},
+			"bugs": {
+				"url": "https://github.com/babel/babel-polyfills/issues"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"debug": "^4.1.1",
+				"resolve": "^1.14.2",
+				"lodash.debounce": "^4.0.8",
+				"@babel/helper-plugin-utils": "^7.22.5",
+				"@babel/helper-compilation-targets": "^7.22.6"
+			},
+			"devDependencies": {
+				"rollup": "^2.3.2",
+				"webpack": "^4.42.1",
+				"@babel/cli": "^7.22.6",
+				"strip-ansi": "^6.0.0",
+				"@babel/core": "^7.22.6",
+				"webpack-cli": "^3.3.11",
+				"babel-loader": "^8.1.0",
+				"@babel/traverse": "^7.22.6",
+				"@babel/generator": "^7.22.5",
+				"rollup-plugin-babel": "^4.4.0",
+				"@babel/plugin-transform-modules-commonjs": "^7.22.5"
+			},
+			"peerDependencies": {
+				"@babel/core": "^7.4.0 || ^8.0.0-0 <8.0.0"
+			},
+			"keywords": [
+				"babel-plugin"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "hzoo",
+					"email": "hi@henryzoo.com"
+				},
+				{
+					"name": "existentialism",
+					"email": "bng412@gmail.com"
+				},
+				{
+					"name": "nicolo-ribaudo",
+					"email": "nicolo.ribaudo@gmail.com"
+				},
+				{
+					"name": "jlhwung",
+					"email": "jlhwung@gmail.com"
+				}
+			],
+			"directories": {},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@babel/helper-define-polyfill-provider@0.6.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.6.3.tgz",
+				"shasum": "f4f2792fae2ef382074bc2d713522cf24e6ddb21",
+				"integrity": "sha512-HK7Bi+Hj6H+VTHA3ZvBis7V/6hu9QuTrnMXNybfUf2iiuU/N97I8VjB+KbhFF8Rld/Lx5MzoCwPCpPjfK+n8Cg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDvcX67upjfMeSO4WpUQ0wbRZ/bruICuD7eLXWt7FFo1gIhAMdMzxiCM3SJDmBVAMO2QjI8vv+OS1NTPwtEAMCgo4KZ"
+					}
+				]
+			},
+			"_npmVersion": "lerna/3.22.0/node@v22.9.0+x64 (linux)",
+			"_npmUser": {
+				"name": "nicolo-ribaudo",
+				"email": "nicolo.ribaudo@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "66340fb145086a826c496f008f67488367846c09",
+			"exports": {
+				".": [
+					{
+						"import": {
+							"node": "./esm/index.node.mjs",
+							"browser": "./esm/index.browser.mjs"
+						},
+						"default": "./lib/index.js"
+					},
+					"./lib/index.js"
+				],
+				"./package.json": "./package.json"
+			},
+			"browser": {
+				"./lib/node/dependencies.js": "./lib/browser/dependencies.js",
+				"./src/node/dependencies.js": "./src/browser/dependencies.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/helper-define-polyfill-provider_0.6.3_1731351011935_0.6366997084672124",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "22.9.0",
+			"contributors": []
+		},
+		"0.0.2": {
+			"name": "@babel/helper-define-polyfill-provider",
+			"description": "Babel helper to create your own polyfill provider",
+			"version": "0.0.2",
+			"homepage": "https://github.com/babel/babel-polyfills#readme",
+			"repository": {
+				"url": "git+https://github.com/babel/babel-polyfills.git",
+				"type": "git",
+				"directory": "packages/babel-helper-define-polyfill-provider"
+			},
+			"bugs": {
+				"url": "https://github.com/babel/babel-polyfills/issues"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"debug": "^4.1.1",
+				"semver": "^6.1.2",
+				"resolve": "^1.14.2",
+				"@babel/traverse": "^7.0.0",
+				"lodash.debounce": "^4.0.8",
+				"@babel/helper-plugin-utils": "^7.8.3",
+				"@babel/helper-module-imports": "^7.8.3",
+				"@babel/helper-compilation-targets": "^7.8.7"
+			},
+			"devDependencies": {
+				"rollup": "^2.3.2",
+				"webpack": "^4.42.1",
+				"@babel/cli": "^7.8.4",
+				"@babel/core": "^7.8.3",
+				"webpack-cli": "^3.3.11",
+				"babel-loader": "^8.1.0",
+				"@babel/generator": "^7.8.3",
+				"rollup-plugin-babel": "^4.4.0"
+			},
+			"peerDependencies": {
+				"@babel/core": "^7.4.0-0"
+			},
+			"keywords": [
+				"babel-plugin"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "danez",
+					"email": "daniel@tschinder.de"
+				},
+				{
+					"name": "existentialism",
+					"email": "bng412@gmail.com"
+				},
+				{
+					"name": "hzoo",
+					"email": "hi@henryzoo.com"
+				},
+				{
+					"name": "jlhwung",
+					"email": "i@jhuang.me"
+				},
+				{
+					"name": "loganfsmyth",
+					"email": "loganfsmyth@gmail.com"
+				},
+				{
+					"name": "nicolo-ribaudo",
+					"email": "nicolo.ribaudo@gmail.com"
+				}
+			],
+			"directories": {},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@babel/helper-define-polyfill-provider@0.0.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.0.2.tgz",
+				"shasum": "c6bd27c2a990285df028cf4e5d952fc7b51de499",
+				"integrity": "sha512-JKslvq5j0hyH7pnw8KdvPbUbCeqNeNJvFChsaVqqQaASW/F920wIRVoU5B/14MHk9sH6Z94gbymzOTab7v9nIQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIH6yxVOUSNhfRLMmmOajwyqhzpYE13nmDNdenC88x95EAiEAxmZIwqKVJCL15fE95SvMyhRiblQLcTGGfhdaElqb6IM="
+					}
+				]
+			},
+			"_npmVersion": "lerna/3.22.0/node@v14.4.0+x64 (linux)",
+			"_npmUser": {
+				"name": "nicolo-ribaudo",
+				"email": "nicolo.ribaudo@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "884798ac0f8dec9d8a4b6fc18967acdaf6596836",
+			"browser": {
+				"./lib/config/loader.js": "./lib/config/loader-browser.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/helper-define-polyfill-provider_0.0.2_1594416964587_0.0648406671333579",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "14.4.0",
+			"contributors": []
+		},
+		"0.1.1": {
+			"name": "@babel/helper-define-polyfill-provider",
+			"description": "Babel helper to create your own polyfill provider",
+			"version": "0.1.1",
+			"homepage": "https://github.com/babel/babel-polyfills#readme",
+			"repository": {
+				"url": "git+https://github.com/babel/babel-polyfills.git",
+				"type": "git",
+				"directory": "packages/babel-helper-define-polyfill-provider"
+			},
+			"bugs": {
+				"url": "https://github.com/babel/babel-polyfills/issues"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"debug": "^4.1.1",
+				"semver": "^6.1.2",
+				"resolve": "^1.14.2",
+				"@babel/traverse": "^7.11.5",
+				"lodash.debounce": "^4.0.8",
+				"@babel/helper-plugin-utils": "^7.10.4",
+				"@babel/helper-module-imports": "^7.10.4",
+				"@babel/helper-compilation-targets": "^7.10.4"
+			},
+			"devDependencies": {
+				"rollup": "^2.3.2",
+				"webpack": "^4.42.1",
+				"@babel/cli": "^7.11.5",
+				"@babel/core": "^7.13.0",
+				"webpack-cli": "^3.3.11",
+				"babel-loader": "^8.1.0",
+				"@babel/generator": "^7.11.5",
+				"rollup-plugin-babel": "^4.4.0",
+				"@babel/plugin-transform-modules-commonjs": "^7.10.4"
+			},
+			"peerDependencies": {
+				"@babel/core": "^7.4.0-0"
+			},
+			"keywords": [
+				"babel-plugin"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "hzoo",
+					"email": "hi@henryzoo.com"
+				},
+				{
+					"name": "loganfsmyth",
+					"email": "loganfsmyth@gmail.com"
+				},
+				{
+					"name": "danez",
+					"email": "daniel@tschinder.de"
+				},
+				{
+					"name": "existentialism",
+					"email": "bng412@gmail.com"
+				},
+				{
+					"name": "nicolo-ribaudo",
+					"email": "nicolo.ribaudo@gmail.com"
+				},
+				{
+					"name": "jlhwung",
+					"email": "i@jhuang.me"
+				}
+			],
+			"directories": {},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@babel/helper-define-polyfill-provider@0.1.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.1.1.tgz",
+				"shasum": "b9adee042f08c8fa6c73529e26248300e8c6277a",
+				"integrity": "sha512-ZwE8b0l6teFdOy6Zdd3KzBl74FyJeH1Vzz20ebBqcovUPjgnU5KUSaY060LeKgVvBrP8Ko+A9jPX9V5FRRr9Nw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCICMICTSxe0Ud5chwWmhUeGQmSt063/clsItLY6IGOXJxAiEAvw4UB9A4xuRgU0R3VGpqRspf2mOyH+QT57nAlWHe1EE="
+					}
+				]
+			},
+			"_npmVersion": "lerna/3.22.0/node@v15.9.0+x64 (linux)",
+			"_npmUser": {
+				"name": "nicolo-ribaudo",
+				"email": "nicolo.ribaudo@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "187944845010adf2dc1a673af48d0d9e6d06d6b0",
+			"browser": {
+				"./lib/config/loader.js": "./lib/config/loader-browser.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/helper-define-polyfill-provider_0.1.1_1614079394398_0.33591442374336555",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "15.9.0",
+			"contributors": []
+		},
+		"0.2.0": {
+			"name": "@babel/helper-define-polyfill-provider",
+			"description": "Babel helper to create your own polyfill provider",
+			"version": "0.2.0",
+			"homepage": "https://github.com/babel/babel-polyfills#readme",
+			"repository": {
+				"url": "git+https://github.com/babel/babel-polyfills.git",
+				"type": "git",
+				"directory": "packages/babel-helper-define-polyfill-provider"
+			},
+			"bugs": {
+				"url": "https://github.com/babel/babel-polyfills/issues"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"debug": "^4.1.1",
+				"semver": "^6.1.2",
+				"resolve": "^1.14.2",
+				"@babel/traverse": "^7.13.0",
+				"lodash.debounce": "^4.0.8",
+				"@babel/helper-plugin-utils": "^7.13.0",
+				"@babel/helper-module-imports": "^7.12.13",
+				"@babel/helper-compilation-targets": "^7.13.0"
+			},
+			"devDependencies": {
+				"rollup": "^2.3.2",
+				"webpack": "^4.42.1",
+				"@babel/cli": "^7.11.5",
+				"@babel/core": "^7.13.0",
+				"webpack-cli": "^3.3.11",
+				"babel-loader": "^8.1.0",
+				"@babel/generator": "^7.11.5",
+				"rollup-plugin-babel": "^4.4.0",
+				"@babel/plugin-transform-modules-commonjs": "^7.10.4"
+			},
+			"peerDependencies": {
+				"@babel/core": "^7.4.0-0"
+			},
+			"keywords": [
+				"babel-plugin"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "hzoo",
+					"email": "hi@henryzoo.com"
+				},
+				{
+					"name": "loganfsmyth",
+					"email": "loganfsmyth@gmail.com"
+				},
+				{
+					"name": "danez",
+					"email": "daniel@tschinder.de"
+				},
+				{
+					"name": "existentialism",
+					"email": "bng412@gmail.com"
+				},
+				{
+					"name": "nicolo-ribaudo",
+					"email": "nicolo.ribaudo@gmail.com"
+				},
+				{
+					"name": "jlhwung",
+					"email": "i@jhuang.me"
+				}
+			],
+			"directories": {},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@babel/helper-define-polyfill-provider@0.2.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.2.0.tgz",
+				"shasum": "a640051772045fedaaecc6f0c6c69f02bdd34bf1",
+				"integrity": "sha512-JT8tHuFjKBo8NnaUbblz7mIu1nnvUDiHVjXXkulZULyidvo/7P6TY7+YqpV37IfF+KUFxmlK04elKtGKXaiVgw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCge7zLRRSfAs/iipmYwATEatkmNunUfKTIkR8QxfCUhQIgTibzR2I7/JgZMpJrRklBFYdWq2huRomUQDzBL3HLIhI="
+					}
+				]
+			},
+			"_npmVersion": "lerna/3.22.0/node@v14.16.0+x64 (linux)",
+			"_npmUser": {
+				"name": "nicolo-ribaudo",
+				"email": "nicolo.ribaudo@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "841e713e0002eb8aa167553fc43840e526fa2d8c",
+			"exports": {
+				".": [
+					{
+						"import": {
+							"node": "./esm/index.node.mjs",
+							"browser": "./esm/index.browser.mjs"
+						},
+						"default": "./lib/index.js"
+					},
+					"./lib/index.js"
+				],
+				"./package.json": "./package.json"
+			},
+			"browser": {
+				"./lib/node/dependencies.js": "./lib/browser/dependencies.js",
+				"./src/node/dependencies.js": "./src/browser/dependencies.js",
+				"./esm/node/dependencies.mjs": "./esm/node/dependencies.mjs"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/helper-define-polyfill-provider_0.2.0_1617205973932_0.5769875896721532",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "14.16.0",
+			"contributors": []
+		},
+		"0.0.3": {
+			"name": "@babel/helper-define-polyfill-provider",
+			"description": "Babel helper to create your own polyfill provider",
+			"version": "0.0.3",
+			"homepage": "https://github.com/babel/babel-polyfills#readme",
+			"repository": {
+				"url": "git+https://github.com/babel/babel-polyfills.git",
+				"type": "git",
+				"directory": "packages/babel-helper-define-polyfill-provider"
+			},
+			"bugs": {
+				"url": "https://github.com/babel/babel-polyfills/issues"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"debug": "^4.1.1",
+				"semver": "^6.1.2",
+				"resolve": "^1.14.2",
+				"@babel/traverse": "^7.11.5",
+				"lodash.debounce": "^4.0.8",
+				"@babel/helper-plugin-utils": "^7.10.4",
+				"@babel/helper-module-imports": "^7.10.4",
+				"@babel/helper-compilation-targets": "^7.10.4"
+			},
+			"devDependencies": {
+				"rollup": "^2.3.2",
+				"webpack": "^4.42.1",
+				"@babel/cli": "^7.11.5",
+				"@babel/core": "^7.11.5",
+				"webpack-cli": "^3.3.11",
+				"babel-loader": "^8.1.0",
+				"@babel/generator": "^7.11.5",
+				"rollup-plugin-babel": "^4.4.0"
+			},
+			"peerDependencies": {
+				"@babel/core": "^7.4.0-0"
+			},
+			"keywords": [
+				"babel-plugin"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "danez",
+					"email": "daniel@tschinder.de"
+				},
+				{
+					"name": "existentialism",
+					"email": "bng412@gmail.com"
+				},
+				{
+					"name": "hzoo",
+					"email": "hi@henryzoo.com"
+				},
+				{
+					"name": "jlhwung",
+					"email": "i@jhuang.me"
+				},
+				{
+					"name": "loganfsmyth",
+					"email": "loganfsmyth@gmail.com"
+				},
+				{
+					"name": "nicolo-ribaudo",
+					"email": "nicolo.ribaudo@gmail.com"
+				}
+			],
+			"directories": {},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@babel/helper-define-polyfill-provider@0.0.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.0.3.tgz",
+				"shasum": "df9da66285b884ce66417abdd0b6ca91198149bd",
+				"integrity": "sha512-dULDd/APiP4JowYDAMosecKOi/1v+UId99qhBGiO3myM29KtAVKS/R3x3OJJNBR0FeYB1BcYb2dCwkhqvxWXXQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIAvemlNagokB4EpTfjgWNPuw/iHobX3cYyiEj9HfwsM+AiB88Mjp28eBtjZOV4KsJ/abvQLTuA3QooTHJXjuUcYquQ=="
+					}
+				]
+			},
+			"_npmVersion": "lerna/3.22.0/node@v14.4.0+x64 (linux)",
+			"_npmUser": {
+				"name": "nicolo-ribaudo",
+				"email": "nicolo.ribaudo@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "84d6f5b367b9044dcf25d8539a638531effb5add",
+			"browser": {
+				"./lib/config/loader.js": "./lib/config/loader-browser.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/helper-define-polyfill-provider_0.0.3_1598914775295_0.970045424042425",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "14.4.0",
+			"contributors": []
+		},
+		"0.1.2": {
+			"name": "@babel/helper-define-polyfill-provider",
+			"description": "Babel helper to create your own polyfill provider",
+			"version": "0.1.2",
+			"homepage": "https://github.com/babel/babel-polyfills#readme",
+			"repository": {
+				"url": "git+https://github.com/babel/babel-polyfills.git",
+				"type": "git",
+				"directory": "packages/babel-helper-define-polyfill-provider"
+			},
+			"bugs": {
+				"url": "https://github.com/babel/babel-polyfills/issues"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"debug": "^4.1.1",
+				"semver": "^6.1.2",
+				"resolve": "^1.14.2",
+				"@babel/traverse": "^7.13.0",
+				"lodash.debounce": "^4.0.8",
+				"@babel/helper-plugin-utils": "^7.13.0",
+				"@babel/helper-module-imports": "^7.12.13",
+				"@babel/helper-compilation-targets": "^7.13.0"
+			},
+			"devDependencies": {
+				"rollup": "^2.3.2",
+				"webpack": "^4.42.1",
+				"@babel/cli": "^7.11.5",
+				"@babel/core": "^7.13.0",
+				"webpack-cli": "^3.3.11",
+				"babel-loader": "^8.1.0",
+				"@babel/generator": "^7.11.5",
+				"rollup-plugin-babel": "^4.4.0",
+				"@babel/plugin-transform-modules-commonjs": "^7.10.4"
+			},
+			"peerDependencies": {
+				"@babel/core": "^7.4.0-0"
+			},
+			"keywords": [
+				"babel-plugin"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "hzoo",
+					"email": "hi@henryzoo.com"
+				},
+				{
+					"name": "loganfsmyth",
+					"email": "loganfsmyth@gmail.com"
+				},
+				{
+					"name": "danez",
+					"email": "daniel@tschinder.de"
+				},
+				{
+					"name": "existentialism",
+					"email": "bng412@gmail.com"
+				},
+				{
+					"name": "nicolo-ribaudo",
+					"email": "nicolo.ribaudo@gmail.com"
+				},
+				{
+					"name": "jlhwung",
+					"email": "i@jhuang.me"
+				}
+			],
+			"directories": {},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@babel/helper-define-polyfill-provider@0.1.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.1.2.tgz",
+				"shasum": "619f01afe1deda460676c25c463b42eaefdb71a2",
+				"integrity": "sha512-hWeolZJivTNGHXHzJjQz/NwDaG4mGXf22ZroOP8bQYgvHNzaQ5tylsVbAcAS2oDjXBwpu8qH2I/654QFS2rDpw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIDlBymQF7FQMEAd+DXnNAu4UC0Lxi6q0ta/Kf50ROAvWAiEAueTUyW02CeG+Kut5XfRbOTMQmC8ZTHPe/aYJqu5G+U4="
+					}
+				]
+			},
+			"_npmVersion": "lerna/3.22.0/node@v15.9.0+x64 (linux)",
+			"_npmUser": {
+				"name": "nicolo-ribaudo",
+				"email": "nicolo.ribaudo@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "55f582c8ebc4b8a181a51fecaa92c89158cc7ac9",
+			"browser": {
+				"./lib/config/loader.js": "./lib/config/loader-browser.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/helper-define-polyfill-provider_0.1.2_1614086473171_0.1909213591578296",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "15.9.0",
+			"contributors": []
+		},
+		"0.2.1": {
+			"name": "@babel/helper-define-polyfill-provider",
+			"description": "Babel helper to create your own polyfill provider",
+			"version": "0.2.1",
+			"homepage": "https://github.com/babel/babel-polyfills#readme",
+			"repository": {
+				"url": "git+https://github.com/babel/babel-polyfills.git",
+				"type": "git",
+				"directory": "packages/babel-helper-define-polyfill-provider"
+			},
+			"bugs": {
+				"url": "https://github.com/babel/babel-polyfills/issues"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"debug": "^4.1.1",
+				"semver": "^6.1.2",
+				"resolve": "^1.14.2",
+				"@babel/traverse": "^7.13.0",
+				"lodash.debounce": "^4.0.8",
+				"@babel/helper-plugin-utils": "^7.13.0",
+				"@babel/helper-module-imports": "^7.12.13",
+				"@babel/helper-compilation-targets": "^7.13.0"
+			},
+			"devDependencies": {
+				"rollup": "^2.3.2",
+				"webpack": "^4.42.1",
+				"@babel/cli": "^7.11.5",
+				"@babel/core": "^7.13.0",
+				"webpack-cli": "^3.3.11",
+				"babel-loader": "^8.1.0",
+				"@babel/generator": "^7.11.5",
+				"rollup-plugin-babel": "^4.4.0",
+				"@babel/plugin-transform-modules-commonjs": "^7.10.4"
+			},
+			"peerDependencies": {
+				"@babel/core": "^7.4.0-0"
+			},
+			"keywords": [
+				"babel-plugin"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "hzoo",
+					"email": "hi@henryzoo.com"
+				},
+				{
+					"name": "loganfsmyth",
+					"email": "loganfsmyth@gmail.com"
+				},
+				{
+					"name": "danez",
+					"email": "npm@tschinder.de"
+				},
+				{
+					"name": "existentialism",
+					"email": "bng412@gmail.com"
+				},
+				{
+					"name": "nicolo-ribaudo",
+					"email": "nicolo.ribaudo@gmail.com"
+				},
+				{
+					"name": "jlhwung",
+					"email": "i@jhuang.me"
+				}
+			],
+			"directories": {},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@babel/helper-define-polyfill-provider@0.2.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.2.1.tgz",
+				"shasum": "e6f5f4a6edc3722152c21359190de67fc6cf664d",
+				"integrity": "sha512-x3AUTVZNPunaw1opRTa5OwVA5N0YxGlIad9xQ5QflK1uIS7PnAGGU5O2Dj/G183fR//N8AzTq+Q8+oiu9m0VFg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIFndf9aZwu2l01Zpnm2Xe51w6Ou7b2tZ7Wm4ZfsTlgYGAiEA2A6ybMArboy86FjmpYvpObdDSAgleYlIZpIWvJik57o="
+					}
+				]
+			},
+			"_npmVersion": "lerna/3.22.0/node@v16.1.0+x64 (linux)",
+			"_npmUser": {
+				"name": "nicolo-ribaudo",
+				"email": "nicolo.ribaudo@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "a82aa2032d84ece15914846fde5f1544701b0a04",
+			"exports": {
+				".": [
+					{
+						"import": {
+							"node": "./esm/index.node.mjs",
+							"browser": "./esm/index.browser.mjs"
+						},
+						"default": "./lib/index.js"
+					},
+					"./lib/index.js"
+				],
+				"./package.json": "./package.json"
+			},
+			"browser": {
+				"./lib/node/dependencies.js": "./lib/browser/dependencies.js",
+				"./src/node/dependencies.js": "./src/browser/dependencies.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/helper-define-polyfill-provider_0.2.1_1621635639670_0.23036224234144775",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "16.1.0",
+			"contributors": []
+		},
+		"0.3.0": {
+			"name": "@babel/helper-define-polyfill-provider",
+			"description": "Babel helper to create your own polyfill provider",
+			"version": "0.3.0",
+			"homepage": "https://github.com/babel/babel-polyfills#readme",
+			"repository": {
+				"url": "git+https://github.com/babel/babel-polyfills.git",
+				"type": "git",
+				"directory": "packages/babel-helper-define-polyfill-provider"
+			},
+			"bugs": {
+				"url": "https://github.com/babel/babel-polyfills/issues"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"debug": "^4.1.1",
+				"semver": "^6.1.2",
+				"resolve": "^1.14.2",
+				"@babel/traverse": "^7.13.0",
+				"lodash.debounce": "^4.0.8",
+				"@babel/helper-plugin-utils": "^7.13.0",
+				"@babel/helper-module-imports": "^7.12.13",
+				"@babel/helper-compilation-targets": "^7.13.0"
+			},
+			"devDependencies": {
+				"rollup": "^2.3.2",
+				"webpack": "^4.42.1",
+				"@babel/cli": "^7.11.5",
+				"@babel/core": "^7.13.0",
+				"webpack-cli": "^3.3.11",
+				"babel-loader": "^8.1.0",
+				"@babel/generator": "^7.11.5",
+				"rollup-plugin-babel": "^4.4.0",
+				"@babel/plugin-transform-modules-commonjs": "^7.10.4"
+			},
+			"peerDependencies": {
+				"@babel/core": "^7.4.0-0"
+			},
+			"keywords": [
+				"babel-plugin"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "hzoo",
+					"email": "hi@henryzoo.com"
+				},
+				{
+					"name": "loganfsmyth",
+					"email": "loganfsmyth@gmail.com"
+				},
+				{
+					"name": "danez",
+					"email": "npm@tschinder.de"
+				},
+				{
+					"name": "existentialism",
+					"email": "bng412@gmail.com"
+				},
+				{
+					"name": "nicolo-ribaudo",
+					"email": "nicolo.ribaudo@gmail.com"
+				},
+				{
+					"name": "jlhwung",
+					"email": "i@jhuang.me"
+				}
+			],
+			"directories": {},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@babel/helper-define-polyfill-provider@0.3.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.3.0.tgz",
+				"shasum": "c5b10cf4b324ff840140bb07e05b8564af2ae971",
+				"integrity": "sha512-7hfT8lUljl/tM3h+izTX/pO3W3frz2ok6Pk+gzys8iJqDfZrZy2pXjRTZAvG2YmfHun1X4q8/UZRLatMfqc5Tg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDp/THqOIx4u8X/v+butZlFilJLXBGJD2H7ekxaqQjM5AIgej6GZu75p6xB8LXiEGiWmaKTk7VqRM3k5eDP6OoRn2g="
+					}
+				]
+			},
+			"_npmVersion": "lerna/3.22.0/node@v14.18.1+x64 (linux)",
+			"_npmUser": {
+				"name": "nicolo-ribaudo",
+				"email": "nicolo.ribaudo@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "b2688bbffcae0f0c6ef5cd6ddf1abacc574060a1",
+			"exports": {
+				".": [
+					{
+						"import": {
+							"node": "./esm/index.node.mjs",
+							"browser": "./esm/index.browser.mjs"
+						},
+						"default": "./lib/index.js"
+					},
+					"./lib/index.js"
+				],
+				"./package.json": "./package.json"
+			},
+			"browser": {
+				"./lib/node/dependencies.js": "./lib/browser/dependencies.js",
+				"./src/node/dependencies.js": "./src/browser/dependencies.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/helper-define-polyfill-provider_0.3.0_1636799699827_0.6999036722279381",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "14.18.1",
+			"contributors": []
+		},
+		"0.0.1": {
+			"name": "@babel/helper-define-polyfill-provider",
+			"description": "Babel helper to create your own polyfill provider",
+			"version": "0.0.1",
+			"homepage": "https://github.com/babel/babel-polyfills#readme",
+			"repository": {
+				"url": "git+https://github.com/babel/babel-polyfills.git",
+				"type": "git",
+				"directory": "packages/babel-helper-define-polyfill-provider"
+			},
+			"bugs": {
+				"url": "https://github.com/babel/babel-polyfills/issues"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"debug": "^4.1.1",
+				"semver": "^6.1.2",
+				"resolve": "^1.14.2",
+				"@babel/traverse": "^7.0.0",
+				"lodash.debounce": "^4.0.8",
+				"@babel/helper-plugin-utils": "^7.8.3",
+				"@babel/helper-module-imports": "^7.8.3",
+				"@babel/helper-compilation-targets": "^7.8.7"
+			},
+			"devDependencies": {
+				"rollup": "^2.3.2",
+				"webpack": "^4.42.1",
+				"@babel/cli": "^7.8.4",
+				"@babel/core": "^7.8.3",
+				"webpack-cli": "^3.3.11",
+				"babel-loader": "^8.1.0",
+				"@babel/generator": "^7.8.3",
+				"rollup-plugin-babel": "^4.4.0"
+			},
+			"peerDependencies": {
+				"@babel/core": "^7.4.0-0"
+			},
+			"keywords": [
+				"babel-plugin"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "nicolo-ribaudo",
+					"email": "nicolo.ribaudo@gmail.com"
+				},
+				{
+					"name": "hzoo",
+					"email": "hi@henryzoo.com"
+				},
+				{
+					"name": "loganfsmyth",
+					"email": "loganfsmyth@gmail.com"
+				},
+				{
+					"name": "danez",
+					"email": "daniel@tschinder.de"
+				},
+				{
+					"name": "existentialism",
+					"email": "bng412@gmail.com"
+				}
+			],
+			"directories": {},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@babel/helper-define-polyfill-provider@0.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.0.1.tgz",
+				"shasum": "a67fe9fe7000832c09267c57190904b695b6b7b9",
+				"integrity": "sha512-OLNwGAwO6HPglKFsdt6apZlSH225nFDCwJg+Nfu9o2m9GHHMUYd9X9V4fbcwyiyCAoy7MBxR2qSwXoaa/Ep+nQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCICzZJlIuuXiqKkS4OO5/POuHLi6/rT5aWaR3aD/p1RSUAiEA6KBZMHc1DAGmDRa/x2fiHr5Tvkac5Wpx0Z+YeSA/egk="
+					}
+				]
+			},
+			"_npmVersion": "lerna/3.22.0/node@v12.16.3+x64 (linux)",
+			"_npmUser": {
+				"name": "nicolo-ribaudo",
+				"email": "nicolo.ribaudo@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "82bf8ef0c6f375d290434a1c083983f0b8c6dffc",
+			"browser": {
+				"./lib/config/loader.js": "./lib/config/loader-browser.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/helper-define-polyfill-provider_0.0.1_1590525744906_0.6770839818867049",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "12.16.3",
+			"contributors": []
+		},
+		"0.1.0": {
+			"name": "@babel/helper-define-polyfill-provider",
+			"description": "Babel helper to create your own polyfill provider",
+			"version": "0.1.0",
+			"homepage": "https://github.com/babel/babel-polyfills#readme",
+			"repository": {
+				"url": "git+https://github.com/babel/babel-polyfills.git",
+				"type": "git",
+				"directory": "packages/babel-helper-define-polyfill-provider"
+			},
+			"bugs": {
+				"url": "https://github.com/babel/babel-polyfills/issues"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"debug": "^4.1.1",
+				"semver": "^6.1.2",
+				"resolve": "^1.14.2",
+				"@babel/traverse": "^7.11.5",
+				"lodash.debounce": "^4.0.8",
+				"@babel/helper-plugin-utils": "^7.10.4",
+				"@babel/helper-module-imports": "^7.10.4",
+				"@babel/helper-compilation-targets": "^7.10.4"
+			},
+			"devDependencies": {
+				"rollup": "^2.3.2",
+				"webpack": "^4.42.1",
+				"@babel/cli": "^7.11.5",
+				"@babel/core": "^7.11.5",
+				"webpack-cli": "^3.3.11",
+				"babel-loader": "^8.1.0",
+				"@babel/generator": "^7.11.5",
+				"rollup-plugin-babel": "^4.4.0",
+				"@babel/plugin-transform-modules-commonjs": "^7.10.4"
+			},
+			"peerDependencies": {
+				"@babel/core": "^7.4.0-0"
+			},
+			"keywords": [
+				"babel-plugin"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "hzoo",
+					"email": "hi@henryzoo.com"
+				},
+				{
+					"name": "loganfsmyth",
+					"email": "loganfsmyth@gmail.com"
+				},
+				{
+					"name": "danez",
+					"email": "daniel@tschinder.de"
+				},
+				{
+					"name": "existentialism",
+					"email": "bng412@gmail.com"
+				},
+				{
+					"name": "nicolo-ribaudo",
+					"email": "nicolo.ribaudo@gmail.com"
+				},
+				{
+					"name": "jlhwung",
+					"email": "i@jhuang.me"
+				}
+			],
+			"directories": {},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@babel/helper-define-polyfill-provider@0.1.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.1.0.tgz",
+				"shasum": "a9e8a161bb594a6a26ba93f68efd475c935a1727",
+				"integrity": "sha512-/nX4CQRve5OZsc0FsvkuefeIQFG7GQo2X5GbD/seME7Tu4s2gHuQfXTIKup++/W9K1SWi2dTe7H9zhgJxhn/pA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIGbeQCrm6E3wwMVuNB2EONDREw9f2pnpxZNh1mRXa5WCAiB0PP5/YgjWsq2s6JIAT/du8ronDTu/F9zpI1pPxK3z7g=="
+					}
+				]
+			},
+			"_npmVersion": "lerna/3.22.0/node@v15.5.1+x64 (linux)",
+			"_npmUser": {
+				"name": "nicolo-ribaudo",
+				"email": "nicolo.ribaudo@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "440228dfbaff5d0632a02f295002579fe862e614",
+			"browser": {
+				"./lib/config/loader.js": "./lib/config/loader-browser.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/helper-define-polyfill-provider_0.1.0_1610201366191_0.34822339160951365",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "15.5.1",
+			"contributors": []
+		},
+		"0.6.8": {
+			"name": "@babel/helper-define-polyfill-provider",
+			"description": "Babel helper to create your own polyfill provider",
+			"version": "0.6.8",
+			"homepage": "https://github.com/babel/babel-polyfills#readme",
+			"repository": {
+				"url": "git+https://github.com/babel/babel-polyfills.git",
+				"type": "git",
+				"directory": "packages/babel-helper-define-polyfill-provider"
+			},
+			"bugs": {
+				"url": "https://github.com/babel/babel-polyfills/issues"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"debug": "^4.4.3",
+				"resolve": "^1.22.11",
+				"lodash.debounce": "^4.0.8",
+				"@babel/helper-plugin-utils": "^7.28.6",
+				"@babel/helper-compilation-targets": "^7.28.6"
+			},
+			"devDependencies": {
+				"rollup": "^2.79.2",
+				"webpack": "^4.47.0",
+				"@babel/cli": "^7.28.6",
+				"strip-ansi": "^6.0.1",
+				"@babel/core": "^7.28.6",
+				"webpack-cli": "^3.3.12",
+				"babel-loader": "^8.4.1",
+				"@babel/traverse": "^7.28.6",
+				"@babel/generator": "^7.28.6",
+				"rollup-plugin-babel": "^4.4.0",
+				"@babel/plugin-transform-modules-commonjs": "^7.28.6"
+			},
+			"peerDependencies": {
+				"@babel/core": "^7.4.0 || ^8.0.0-0 <8.0.0"
+			},
+			"keywords": [
+				"babel-plugin"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "hzoo",
+					"email": "hi@henryzoo.com"
+				},
+				{
+					"name": "existentialism",
+					"email": "bng412@gmail.com"
+				},
+				{
+					"name": "nicolo-ribaudo",
+					"email": "nicolo.ribaudo@gmail.com"
+				},
+				{
+					"name": "jlhwung",
+					"email": "jlhwung@gmail.com"
+				}
+			],
+			"directories": {},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@babel/helper-define-polyfill-provider@0.6.8",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.6.8.tgz",
+				"shasum": "cf1e4462b613f2b54c41e6ff758d5dfcaa2c85d1",
+				"integrity": "sha512-47UwBLPpQi1NoWzLuHNjRoHlYXMwIJoBf7MFou6viC/sIHWYygpvr0B6IAyh5sBdA2nr2LPIRww8lfaUVQINBA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEUCIBWSBzIeSNiZOfYwvON7W6jSfCwbkhuaNHWjcF0oNwD3AiEAvXnKOpaZrWfwxRKDrk7crsmChw6wocsdL68HLR3SSHA="
+					}
+				]
+			},
+			"_npmVersion": "lerna/3.22.1/node@v25.6.1+x64 (linux)",
+			"_npmUser": {
+				"name": "nicolo-ribaudo",
+				"email": "nicolo.ribaudo@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "86eff78e98adc17cdf0eb9ba4d94140eb7cb0da0",
+			"exports": {
+				".": [
+					{
+						"import": {
+							"node": "./esm/index.node.mjs",
+							"browser": "./esm/index.browser.mjs"
+						},
+						"default": "./lib/index.js"
+					},
+					"./lib/index.js"
+				],
+				"./package.json": "./package.json"
+			},
+			"browser": {
+				"./lib/node/dependencies.js": "./lib/browser/dependencies.js",
+				"./src/node/dependencies.js": "./src/browser/dependencies.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/helper-define-polyfill-provider_0.6.8_1773698699002_0.3089272022291205",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"_nodeVersion": "25.6.1",
+			"contributors": []
+		},
+		"0.6.6": {
+			"name": "@babel/helper-define-polyfill-provider",
+			"description": "Babel helper to create your own polyfill provider",
+			"version": "0.6.6",
+			"homepage": "https://github.com/babel/babel-polyfills#readme",
+			"repository": {
+				"url": "git+https://github.com/babel/babel-polyfills.git",
+				"type": "git",
+				"directory": "packages/babel-helper-define-polyfill-provider"
+			},
+			"bugs": {
+				"url": "https://github.com/babel/babel-polyfills/issues"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"debug": "^4.4.3",
+				"resolve": "^1.22.11",
+				"lodash.debounce": "^4.0.8",
+				"@babel/helper-plugin-utils": "^7.28.6",
+				"@babel/helper-compilation-targets": "^7.28.6"
+			},
+			"devDependencies": {
+				"rollup": "^2.79.2",
+				"webpack": "^4.47.0",
+				"@babel/cli": "^7.28.6",
+				"strip-ansi": "^6.0.1",
+				"@babel/core": "^7.28.6",
+				"webpack-cli": "^3.3.12",
+				"babel-loader": "^8.4.1",
+				"@babel/traverse": "^7.28.6",
+				"@babel/generator": "^7.28.6",
+				"rollup-plugin-babel": "^4.4.0",
+				"@babel/plugin-transform-modules-commonjs": "^7.28.6"
+			},
+			"peerDependencies": {
+				"@babel/core": "^7.4.0 || ^8.0.0-0 <8.0.0"
+			},
+			"keywords": [
+				"babel-plugin"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "hzoo",
+					"email": "hi@henryzoo.com"
+				},
+				{
+					"name": "existentialism",
+					"email": "bng412@gmail.com"
+				},
+				{
+					"name": "nicolo-ribaudo",
+					"email": "nicolo.ribaudo@gmail.com"
+				},
+				{
+					"name": "jlhwung",
+					"email": "jlhwung@gmail.com"
+				}
+			],
+			"directories": {},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@babel/helper-define-polyfill-provider@0.6.6",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.6.6.tgz",
+				"shasum": "714dfe33d8bd710f556df59953720f6eeb6c1a14",
+				"integrity": "sha512-mOAsxeeKkUKayvZR3HeTYD/fICpCPLJrU5ZjelT/PA6WHtNDBOE436YiaEUvHN454bRM3CebhDsIpieCc4texA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEYCIQDMY8EsJTXrvl7A8fJNMeXQpwD6k9LEM2td5LbR3WCb5gIhAOEk39lRfeIXLawUusQlCv9RnOlDNOgJG4n55c2qXrNl"
+					}
+				]
+			},
+			"_npmVersion": "lerna/3.22.1/node@v25.2.1+arm64 (darwin)",
+			"_npmUser": {
+				"name": "nicolo-ribaudo",
+				"email": "nicolo.ribaudo@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "9b040e303af7d703a57f16d46538d1b0d5462237",
+			"exports": {
+				".": [
+					{
+						"import": {
+							"node": "./esm/index.node.mjs",
+							"browser": "./esm/index.browser.mjs"
+						},
+						"default": "./lib/index.js"
+					},
+					"./lib/index.js"
+				],
+				"./package.json": "./package.json"
+			},
+			"browser": {
+				"./lib/node/dependencies.js": "./lib/browser/dependencies.js",
+				"./src/node/dependencies.js": "./src/browser/dependencies.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/helper-define-polyfill-provider_0.6.6_1769188581162_0.7836177313607227",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"_nodeVersion": "25.2.1",
+			"contributors": []
+		},
+		"0.6.7": {
+			"name": "@babel/helper-define-polyfill-provider",
+			"description": "Babel helper to create your own polyfill provider",
+			"version": "0.6.7",
+			"homepage": "https://github.com/babel/babel-polyfills#readme",
+			"repository": {
+				"url": "git+https://github.com/babel/babel-polyfills.git",
+				"type": "git",
+				"directory": "packages/babel-helper-define-polyfill-provider"
+			},
+			"bugs": {
+				"url": "https://github.com/babel/babel-polyfills/issues"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"debug": "^4.4.3",
+				"resolve": "^1.22.11",
+				"lodash.debounce": "^4.0.8",
+				"@babel/helper-plugin-utils": "^7.28.6",
+				"@babel/helper-compilation-targets": "^7.28.6"
+			},
+			"devDependencies": {
+				"rollup": "^2.79.2",
+				"webpack": "^4.47.0",
+				"@babel/cli": "^7.28.6",
+				"strip-ansi": "^6.0.1",
+				"@babel/core": "^7.28.6",
+				"webpack-cli": "^3.3.12",
+				"babel-loader": "^8.4.1",
+				"@babel/traverse": "^7.28.6",
+				"@babel/generator": "^7.28.6",
+				"rollup-plugin-babel": "^4.4.0",
+				"@babel/plugin-transform-modules-commonjs": "^7.28.6"
+			},
+			"peerDependencies": {
+				"@babel/core": "^7.4.0 || ^8.0.0-0 <8.0.0"
+			},
+			"keywords": [
+				"babel-plugin"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "hzoo",
+					"email": "hi@henryzoo.com"
+				},
+				{
+					"name": "existentialism",
+					"email": "bng412@gmail.com"
+				},
+				{
+					"name": "nicolo-ribaudo",
+					"email": "nicolo.ribaudo@gmail.com"
+				},
+				{
+					"name": "jlhwung",
+					"email": "jlhwung@gmail.com"
+				}
+			],
+			"directories": {},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@babel/helper-define-polyfill-provider@0.6.7",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.6.7.tgz",
+				"shasum": "8d01cba97de419115ad3497573a476db15dc6c6a",
+				"integrity": "sha512-6Fqi8MtQ/PweQ9xvux65emkLQ83uB+qAVtfHkC9UodyHMIZdxNI01HjLCLUtybElp2KY2XNE0nOgyP1E1vXw9w==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEQCIFD8Dx8WhNwF2duqsyqU34Fh0f0hABuwMEQdjmut4NQ0AiAHb2+5cw66qIjFS7Z+6VR72hgWIJY2CqW4Qqegz5RbNQ=="
+					}
+				]
+			},
+			"_npmVersion": "lerna/3.22.1/node@v25.8.0+x64 (linux)",
+			"_npmUser": {
+				"name": "nicolo-ribaudo",
+				"email": "nicolo.ribaudo@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "35d742c19e250d8908b0fb77340191f268706161",
+			"exports": {
+				".": [
+					{
+						"import": {
+							"node": "./esm/index.node.mjs",
+							"browser": "./esm/index.browser.mjs"
+						},
+						"default": "./lib/index.js"
+					},
+					"./lib/index.js"
+				],
+				"./package.json": "./package.json"
+			},
+			"browser": {
+				"./lib/node/dependencies.js": "./lib/browser/dependencies.js",
+				"./src/node/dependencies.js": "./src/browser/dependencies.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/helper-define-polyfill-provider_0.6.7_1772814033070_0.30161520952412335",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"_nodeVersion": "25.8.0",
+			"contributors": []
+		},
+		"1.0.0": {
+			"name": "@babel/helper-define-polyfill-provider",
+			"description": "Babel helper to create your own polyfill provider",
+			"version": "1.0.0",
+			"homepage": "https://github.com/babel/babel-polyfills#readme",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/babel/babel-polyfills.git",
+				"directory": "packages/babel-helper-define-polyfill-provider"
+			},
+			"bugs": {
+				"url": "https://github.com/babel/babel-polyfills/issues"
+			},
+			"engines": {
+				"node": "^20.19.0 || >=22.12.0"
+			},
+			"dependencies": {
+				"@babel/helper-compilation-targets": "^8.0.0",
+				"@babel/helper-plugin-utils": "^8.0.0",
+				"lodash.debounce": "^4.0.8"
+			},
+			"devDependencies": {
+				"@babel/cli": "^8.0.0",
+				"@babel/core": "^8.0.0",
+				"@babel/generator": "^8.0.0",
+				"@babel/plugin-transform-modules-commonjs": "^8.0.0",
+				"@babel/traverse": "^8.0.0",
+				"@rollup/plugin-babel": "^7.0.0",
+				"babel-loader": "^10.1.0",
+				"rollup": "^4.59.0",
+				"strip-ansi": "^6.0.1",
+				"webpack": "^5.105.4",
+				"webpack-cli": "^6.0.1"
+			},
+			"peerDependencies": {
+				"@babel/core": "^7.4.0 || ^8.0.0"
+			},
+			"keywords": [
+				"babel-plugin"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "hzoo",
+					"email": "hi@henryzoo.com"
+				},
+				{
+					"name": "existentialism",
+					"email": "bng412@gmail.com"
+				},
+				{
+					"name": "nicolo-ribaudo",
+					"email": "hello+npm@nicr.dev"
+				},
+				{
+					"name": "jlhwung",
+					"email": "jlhwung@gmail.com"
+				}
+			],
+			"directories": {},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@babel/helper-define-polyfill-provider@1.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-1.0.0.tgz",
+				"shasum": "f88af5f058a456f05d87148b3a0357220c3d3042",
+				"integrity": "sha512-9jzVaTeZyXRDKTgUnNzcPQMO8y0ga3o+Z4fKjNet9Fcx7slgKa83qRbz0EwROSd6qO6CoEe/HQszqSPKb5lhkw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEYCIQCNI4xjFe1os6kiE6E4RG+Psr5Gnsh5FD55OuzFf98VIQIhALpkv+CIkwykYFV1WeF/E4pJRbOJPXBWGAAOXqVF+PUU"
+					}
+				]
+			},
+			"_npmVersion": "lerna/3.22.1/node@v26.1.0+arm64 (darwin)",
+			"_npmUser": {
+				"name": "nicolo-ribaudo",
+				"email": "hello+npm@nicr.dev"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "6ef4cbfa11a278111869ca5ccab9e1d805ab69f7",
+			"imports": {
+				"#dependencies": {
+					"browser": "./src/browser/dependencies.ts",
+					"default": "./src/node/dependencies.ts"
+				}
+			},
+			"exports": {
+				".": {
+					"browser": "./lib/index.browser.js",
+					"default": "./lib/index.node.js"
+				},
+				"./package.json": "./package.json"
+			},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages-npm-production",
+				"tmp": "tmp/helper-define-polyfill-provider_1.0.0_1781722146443_0.6447086467801804"
+			},
+			"type": "module",
+			"_nodeVersion": "26.1.0",
+			"contributors": []
+		}
+	},
+	"time": {
+		"0.0.6": "2020-12-22T00:53:52.232Z",
+		"0.1.5": "2021-03-02T08:38:47.834Z",
+		"0.2.4": "2021-10-29T22:20:16.785Z",
+		"0.3.3": "2022-09-13T02:18:10.257Z",
+		"0.4.2": "2023-07-21T09:03:12.680Z",
+		"0.6.0": "2024-03-08T17:30:58.865Z",
+		"0.0.7": "2021-01-07T15:06:03.565Z",
+		"0.4.3": "2023-10-11T07:02:15.501Z",
+		"0.6.1": "2024-03-12T15:59:36.511Z",
+		"0.0.4": "2020-10-03T10:54:31.839Z",
+		"0.2.2": "2021-05-26T10:10:28.118Z",
+		"0.3.1": "2022-01-15T15:04:42.638Z",
+		"0.4.0": "2023-05-10T10:18:58.467Z",
+		"0.0.5": "2020-11-09T14:37:25.043Z",
+		"0.1.4": "2021-02-25T23:17:56.857Z",
+		"0.2.3": "2021-05-26T10:36:13.604Z",
+		"0.3.2": "2022-07-24T06:56:56.190Z",
+		"0.4.1": "2023-07-05T08:38:08.142Z",
+		"0.5.0": "2024-01-18T09:57:10.357Z",
+		"0.6.4": "2025-03-19T13:24:06.647Z",
+		"1.0.0-rc.2": "2026-04-10T18:24:27.627Z",
+		"0.6.5": "2025-06-27T16:37:47.817Z",
+		"1.0.0-rc.1": "2026-04-10T18:00:53.458Z",
+		"0.4.4": "2023-12-11T14:20:06.806Z",
+		"0.6.2": "2024-04-22T18:13:34.059Z",
+		"0.6.3": "2024-11-11T18:50:12.161Z",
+		"0.0.2": "2020-07-10T21:36:04.724Z",
+		"0.1.1": "2021-02-23T11:23:14.561Z",
+		"0.2.0": "2021-03-31T15:52:54.120Z",
+		"0.0.3": "2020-08-31T22:59:35.454Z",
+		"0.1.2": "2021-02-23T13:21:13.355Z",
+		"0.2.1": "2021-05-21T22:20:39.806Z",
+		"0.3.0": "2021-11-13T10:35:00.043Z",
+		"0.0.1": "2020-05-26T20:42:25.011Z",
+		"0.1.0": "2021-01-09T14:09:26.290Z",
+		"modified": "2026-06-17T18:49:06.796Z",
+		"created": "2020-05-26T20:42:24.584Z",
+		"0.6.8": "2026-03-16T22:04:59.151Z",
+		"0.6.6": "2026-01-23T17:16:21.319Z",
+		"0.6.7": "2026-03-06T16:20:33.221Z",
+		"1.0.0": "2026-06-17T18:49:06.618Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"next": "1.0.0-rc.2",
+		"latest": "1.0.0"
+	},
+	"_uplinks": {
+		"artifactory-sabadell": {
+			"etag": "84287be2ac6e5ee9c366bd3bd4ce8cd03aa173d4",
+			"fetched": 1782459825483
+		}
+	},
+	"_distfiles": {
+		"helper-define-polyfill-provider-0.0.6.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.0.6.tgz",
+			"sha": "140740ace1338cd6fbf28dd747d886af04002997",
+			"registry": "artifactory-sabadell"
+		},
+		"helper-define-polyfill-provider-0.1.5.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.1.5.tgz",
+			"sha": "3c2f91b7971b9fc11fe779c945c014065dea340e",
+			"registry": "artifactory-sabadell"
+		},
+		"helper-define-polyfill-provider-0.2.4.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.2.4.tgz",
+			"sha": "8867aed79d3ea6cade40f801efb7ac5c66916b10",
+			"registry": "artifactory-sabadell"
+		},
+		"helper-define-polyfill-provider-0.3.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.3.3.tgz",
+			"sha": "8612e55be5d51f0cd1f36b4a5a83924e89884b7a",
+			"registry": "artifactory-sabadell"
+		},
+		"helper-define-polyfill-provider-0.4.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.4.2.tgz",
+			"sha": "82c825cadeeeee7aad237618ebbe8fa1710015d7",
+			"registry": "artifactory-sabadell"
+		},
+		"helper-define-polyfill-provider-0.6.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.6.0.tgz",
+			"sha": "4d1a8b898c8299a2fcf295d7d356d2648471ab31",
+			"registry": "artifactory-sabadell"
+		},
+		"helper-define-polyfill-provider-0.0.7.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.0.7.tgz",
+			"sha": "f61deeb9bdf72efdb8d39b534a65862506444e45",
+			"registry": "artifactory-sabadell"
+		},
+		"helper-define-polyfill-provider-0.4.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.4.3.tgz",
+			"sha": "a71c10f7146d809f4a256c373f462d9bba8cf6ba",
+			"registry": "artifactory-sabadell"
+		},
+		"helper-define-polyfill-provider-0.6.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.6.1.tgz",
+			"sha": "fadc63f0c2ff3c8d02ed905dcea747c5b0fb74fd",
+			"registry": "artifactory-sabadell"
+		},
+		"helper-define-polyfill-provider-0.0.4.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.0.4.tgz",
+			"sha": "d8b382b8796057343b27a2094944f8d5ab6a2561",
+			"registry": "artifactory-sabadell"
+		},
+		"helper-define-polyfill-provider-0.2.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.2.2.tgz",
+			"sha": "b9f469f11b38b4c947f069e2cda44f5a56b8b533",
+			"registry": "artifactory-sabadell"
+		},
+		"helper-define-polyfill-provider-0.3.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.3.1.tgz",
+			"sha": "52411b445bdb2e676869e5a74960d2d3826d2665",
+			"registry": "artifactory-sabadell"
+		},
+		"helper-define-polyfill-provider-0.4.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.4.0.tgz",
+			"sha": "487053f103110f25b9755c5980e031e93ced24d8",
+			"registry": "artifactory-sabadell"
+		},
+		"helper-define-polyfill-provider-0.0.5.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.0.5.tgz",
+			"sha": "a800224db85c562db2f31a1a6fe6e93d25b7b8d1",
+			"registry": "artifactory-sabadell"
+		},
+		"helper-define-polyfill-provider-0.1.4.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.1.4.tgz",
+			"sha": "b618b087c6a0328127e5d53576df818bcee2b15f",
+			"registry": "artifactory-sabadell"
+		},
+		"helper-define-polyfill-provider-0.2.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.2.3.tgz",
+			"sha": "0525edec5094653a282688d34d846e4c75e9c0b6",
+			"registry": "artifactory-sabadell"
+		},
+		"helper-define-polyfill-provider-0.3.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.3.2.tgz",
+			"sha": "bd10d0aca18e8ce012755395b05a79f45eca5073",
+			"registry": "artifactory-sabadell"
+		},
+		"helper-define-polyfill-provider-0.4.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.4.1.tgz",
+			"sha": "af1429c4a83ac316a6a8c2cc8ff45cb5d2998d3a",
+			"registry": "artifactory-sabadell"
+		},
+		"helper-define-polyfill-provider-0.5.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.5.0.tgz",
+			"sha": "465805b7361f461e86c680f1de21eaf88c25901b",
+			"registry": "artifactory-sabadell"
+		},
+		"helper-define-polyfill-provider-0.6.4.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.6.4.tgz",
+			"sha": "15e8746368bfa671785f5926ff74b3064c291fab",
+			"registry": "artifactory-sabadell"
+		},
+		"helper-define-polyfill-provider-1.0.0-rc.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-1.0.0-rc.2.tgz",
+			"sha": "ce4761ce3be7da9bc6b791210155078880ab2f61",
+			"registry": "artifactory-sabadell"
+		},
+		"helper-define-polyfill-provider-0.6.5.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.6.5.tgz",
+			"sha": "742ccf1cb003c07b48859fc9fa2c1bbe40e5f753",
+			"registry": "artifactory-sabadell"
+		},
+		"helper-define-polyfill-provider-1.0.0-rc.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-1.0.0-rc.1.tgz",
+			"sha": "74006c1d4824b0eb12b45efb3b4871156c8f3872",
+			"registry": "artifactory-sabadell"
+		},
+		"helper-define-polyfill-provider-0.4.4.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.4.4.tgz",
+			"sha": "64df615451cb30e94b59a9696022cffac9a10088",
+			"registry": "artifactory-sabadell"
+		},
+		"helper-define-polyfill-provider-0.6.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.6.2.tgz",
+			"sha": "18594f789c3594acb24cfdb4a7f7b7d2e8bd912d",
+			"registry": "artifactory-sabadell"
+		},
+		"helper-define-polyfill-provider-0.6.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.6.3.tgz",
+			"sha": "f4f2792fae2ef382074bc2d713522cf24e6ddb21",
+			"registry": "artifactory-sabadell"
+		},
+		"helper-define-polyfill-provider-0.0.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.0.2.tgz",
+			"sha": "c6bd27c2a990285df028cf4e5d952fc7b51de499",
+			"registry": "artifactory-sabadell"
+		},
+		"helper-define-polyfill-provider-0.1.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.1.1.tgz",
+			"sha": "b9adee042f08c8fa6c73529e26248300e8c6277a",
+			"registry": "artifactory-sabadell"
+		},
+		"helper-define-polyfill-provider-0.2.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.2.0.tgz",
+			"sha": "a640051772045fedaaecc6f0c6c69f02bdd34bf1",
+			"registry": "artifactory-sabadell"
+		},
+		"helper-define-polyfill-provider-0.0.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.0.3.tgz",
+			"sha": "df9da66285b884ce66417abdd0b6ca91198149bd",
+			"registry": "artifactory-sabadell"
+		},
+		"helper-define-polyfill-provider-0.1.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.1.2.tgz",
+			"sha": "619f01afe1deda460676c25c463b42eaefdb71a2",
+			"registry": "artifactory-sabadell"
+		},
+		"helper-define-polyfill-provider-0.2.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.2.1.tgz",
+			"sha": "e6f5f4a6edc3722152c21359190de67fc6cf664d",
+			"registry": "artifactory-sabadell"
+		},
+		"helper-define-polyfill-provider-0.3.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.3.0.tgz",
+			"sha": "c5b10cf4b324ff840140bb07e05b8564af2ae971",
+			"registry": "artifactory-sabadell"
+		},
+		"helper-define-polyfill-provider-0.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.0.1.tgz",
+			"sha": "a67fe9fe7000832c09267c57190904b695b6b7b9",
+			"registry": "artifactory-sabadell"
+		},
+		"helper-define-polyfill-provider-0.1.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.1.0.tgz",
+			"sha": "a9e8a161bb594a6a26ba93f68efd475c935a1727",
+			"registry": "artifactory-sabadell"
+		},
+		"helper-define-polyfill-provider-0.6.8.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.6.8.tgz",
+			"sha": "cf1e4462b613f2b54c41e6ff758d5dfcaa2c85d1",
+			"registry": "artifactory-sabadell"
+		},
+		"helper-define-polyfill-provider-0.6.6.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.6.6.tgz",
+			"sha": "714dfe33d8bd710f556df59953720f6eeb6c1a14",
+			"registry": "artifactory-sabadell"
+		},
+		"helper-define-polyfill-provider-0.6.7.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.6.7.tgz",
+			"sha": "8d01cba97de419115ad3497573a476db15dc6c6a",
+			"registry": "artifactory-sabadell"
+		},
+		"helper-define-polyfill-provider-1.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-1.0.0.tgz",
+			"sha": "f88af5f058a456f05d87148b3a0357220c3d3042",
+			"registry": "artifactory-sabadell"
+		}
+	},
+	"_attachments": {},
+	"_rev": "2-ac5d2b423162ab87",
+	"_id": "@babel/helper-define-polyfill-provider",
+	"readme": "# @babel/helper-define-polyfill-provider\n\n## Install\n\nUsing npm:\n\n```sh\nnpm install --save-dev @babel/helper-define-polyfill-provider\n```\n\nor using yarn:\n\n```sh\nyarn add @babel/helper-define-polyfill-provider --dev\n```"
+}

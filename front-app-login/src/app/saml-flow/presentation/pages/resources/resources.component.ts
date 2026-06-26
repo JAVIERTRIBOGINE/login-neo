@@ -1,9 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { CUSTOM_ELEMENTS_SCHEMA, Component, OnInit, OnDestroy, WritableSignal, inject, signal } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { SamlManagerService, SAML_MANAGER_EVENTS, SamlManagerEvent } from '@proteo/saml-manager';
+import { AuthManagerService, SamlManagerService, SAML_MANAGER_EVENTS, SamlManagerEvent } from '@proteo/auth-manager';
 import { SamlLoaderComponent } from '../../shared/loader.component';
 import { buildSamlManagerConfig } from '@app/saml-flow/domain/constants/global.constants';
+import { Router } from '@angular/router';
+import { SAML_ROUTE_DATA } from '@app/saml-flow/domain/constants/path.constant';
+import { FlowConfirmationModalService } from '@app/login/application/services/flow-confirmation-modal.service';
+import { SamlRuntimeConfigService } from '@app/saml-flow/application/services/saml-runtime-config.service';
+import { SamlManagerConfig } from '@proteo/auth-manager';
 
 @Component({
   selector: 'saml-resources',
@@ -22,11 +27,21 @@ export class ResourcesComponent implements OnInit, OnDestroy {
   loading: WritableSignal<boolean> = signal(true);
 
   private samlManager = inject(SamlManagerService);
+  private authManager = inject(AuthManagerService);
+  private router = inject(Router);
+  private flowConfirmation = inject(FlowConfirmationModalService);
+  private runtimeConfig = inject(SamlRuntimeConfigService);
   private samlSub!: Subscription;
+  private config!: SamlManagerConfig;
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
     this.samlSub = this.samlManager.events$.subscribe(event => this.handleEvent(event));
-    this.samlManager.setConfig(buildSamlManagerConfig());
+    const shellConfig = await this.runtimeConfig.whenReady();
+    this.config = buildSamlManagerConfig(shellConfig);
+    this.samlManager.setConfig({
+      ...this.config,
+      confirmStep: step => this.flowConfirmation.confirm(step),
+    });
     this.samlManager.checkResources(); // cubre llamadas 1 (primera vez) y 6 (retorno tras NetScaler)
   }
 
@@ -35,16 +50,22 @@ export class ResourcesComponent implements OnInit, OnDestroy {
       case SAML_MANAGER_EVENTS.SAML_SUCCESS:
         // saml:success ya publicado por SamlManagerService — fin del flujo
         this.loading.set(false);
+        this.authManager.completeSamlAuthorization(event.payload);
         break;
       case SAML_MANAGER_EVENTS.AUTHN_REQUEST:
-        // 401 en /resources: el manager navega al flujo OAuth/login.
+        this.authManager.requireSamlAuthorization({
+          authnRequestUrl: this.config.endpoints.authnRequest,
+          method: this.config.authnRequestMethod,
+        });
+        this.router.navigate([SAML_ROUTE_DATA.AUTHORIZATION_REQUEST]);
         break;
       case SAML_MANAGER_EVENTS.SAML_ERROR:
         // saml:error ya publicado por SamlManagerService
         this.loading.set(false);
+        this.authManager.failSamlAuthorization(event.payload);
         break;
       case SAML_MANAGER_EVENTS.SAML_UNAUTHORIZED:
-        // Exclusivo de SamlResponseComponent — no se emite desde checkResources()
+        // Exclusivo de ACSComponent — no se emite desde checkResources()
         break;
     }
   }

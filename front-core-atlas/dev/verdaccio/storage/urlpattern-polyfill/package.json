@@ -1,0 +1,4635 @@
+{
+	"name": "urlpattern-polyfill",
+	"versions": {
+		"0.1.5": {
+			"name": "urlpattern-polyfill",
+			"description": "Polyfill for the proposed URLPattern API",
+			"version": "0.1.5",
+			"author": "",
+			"homepage": "https://github.com/kenchris/urlpattern-polyfill#readme",
+			"repository": {
+				"url": "git+https://github.com/kenchris/urlpattern-polyfill.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/kenchris/urlpattern-polyfill/issues"
+			},
+			"main": "dist/index.js",
+			"devDependencies": {
+				"ava": "^3.14.0",
+				"esm": "^3.2.25",
+				"rimraf": "^3.0.2",
+				"rollup": "^2.35.1",
+				"typescript": "^4.1.3",
+				"rollup-plugin-terser": "^5.2.0",
+				"rollup-plugin-filesize": "^9.1.0"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "kenchris",
+					"email": "kenneth.christiansen@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run build && ava --fail-fast -s",
+				"build": "rimraf dist/ && tsc",
+				"checksize": "rollup -c ; cat urlpattern-polyfill.bundled.js | gzip -9 | wc -c ; rm urlpattern-polyfill.bundled.js",
+				"quicktest": "ava --fail-fast -s",
+				"build:watch": "tsc --watch",
+				"publish-dev": "npm test && VERSION=${npm_package_version%-*}-dev.`git rev-parse --short HEAD` && npm version --no-git-tag-version $VERSION && npm publish --tag dev"
+			},
+			"lastModified": 0,
+			"_id": "urlpattern-polyfill@0.1.5",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-0.1.5.tgz",
+				"shasum": "23e70326e169f49cee87958f9a3c295a752e64ef",
+				"integrity": "sha512-0ldERIN9J/IeweWZotm8B0zWoLEFnSSg0a8SFVJeUBHaAEBxSzfiEco+COx039I3mnp6+8fDxTk8qgASo+/s7A==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQC4ZuLePieESZGKgW8jT82Au34Ng/dGBdlQOUcLDN7DyAIgdFe/AF8Eajz0PW3AjTlhuJLc/BQjz05Z+DdQ8qq2cZc="
+					}
+				]
+			},
+			"_npmVersion": "6.14.8",
+			"_npmUser": {
+				"name": "kenchris",
+				"email": "kenneth.christiansen@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "e470e3db21f82161246e839fb86ff0905787732a",
+			"module": "dist/index.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/urlpattern-polyfill_0.1.5_1608487976731_0.8265806992629938",
+				"host": "s3://npm-registry-packages"
+			},
+			"ava": {
+				"require": [
+					"esm"
+				]
+			},
+			"_nodeVersion": "14.13.0",
+			"contributors": []
+		},
+		"0.1.6": {
+			"name": "urlpattern-polyfill",
+			"description": "Polyfill for the proposed URLPattern API",
+			"version": "0.1.6",
+			"author": "",
+			"homepage": "https://github.com/kenchris/urlpattern-polyfill#readme",
+			"repository": {
+				"url": "git+https://github.com/kenchris/urlpattern-polyfill.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/kenchris/urlpattern-polyfill/issues"
+			},
+			"main": "dist/index.js",
+			"devDependencies": {
+				"ava": "^3.14.0",
+				"esm": "^3.2.25",
+				"rimraf": "^3.0.2",
+				"rollup": "^2.35.1",
+				"typescript": "^4.1.3",
+				"rollup-plugin-terser": "^5.2.0",
+				"rollup-plugin-filesize": "^9.1.0"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "kenchris",
+					"email": "kenneth.christiansen@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run build && ava --fail-fast -s",
+				"build": "rimraf dist/ && tsc",
+				"checksize": "rollup -c ; cat urlpattern-polyfill.bundled.js | gzip -9 | wc -c ; rm urlpattern-polyfill.bundled.js",
+				"quicktest": "ava --fail-fast -s",
+				"build:watch": "tsc --watch",
+				"publish-dev": "npm test && VERSION=${npm_package_version%-*}-dev.`git rev-parse --short HEAD` && npm version --no-git-tag-version $VERSION && npm publish --tag dev"
+			},
+			"lastModified": 0,
+			"_id": "urlpattern-polyfill@0.1.6",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-0.1.6.tgz",
+				"shasum": "c2e66db826833482c5ccb36e4bf49f2b97536535",
+				"integrity": "sha512-qFFe1ovjB/gjD7B0PgCML5uJLHQfyUFzd5rwENeGSiPpPeK2F37pY6BAisrrmUYFK95wuZQhK5ekVGu2/JT2mQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQC+t16aPTBqOzbqoPrXRMQTG9LH+7JsQ8ekw/c9RcLGjAIgBQS1GJKKmfRi1qgvvbGQBnnnGxi7T2XTnBKOhZjhKN0="
+					}
+				]
+			},
+			"_npmVersion": "6.14.8",
+			"_npmUser": {
+				"name": "kenchris",
+				"email": "kenneth.christiansen@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "ac9db9ba85be788f1087b593f087c8d5cd9dedd9",
+			"module": "dist/index.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/urlpattern-polyfill_0.1.6_1608490281056_0.6624376691224725",
+				"host": "s3://npm-registry-packages"
+			},
+			"ava": {
+				"require": [
+					"esm"
+				]
+			},
+			"_nodeVersion": "14.13.0",
+			"contributors": []
+		},
+		"5.0.8": {
+			"name": "urlpattern-polyfill",
+			"description": "Polyfill for the URLPattern API",
+			"tags": [
+				"url",
+				"urlpattern",
+				"url-pattern",
+				"browser",
+				"node",
+				"polyfill",
+				"w3c",
+				"wicg"
+			],
+			"version": "5.0.8",
+			"author": "",
+			"homepage": "https://github.com/kenchris/urlpattern-polyfill#readme",
+			"repository": {
+				"url": "git+https://github.com/kenchris/urlpattern-polyfill.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/kenchris/urlpattern-polyfill/issues"
+			},
+			"main": "./index.cjs",
+			"devDependencies": {
+				"ava": "^4.1.0",
+				"rimraf": "^3.0.2",
+				"wireit": "^0.4.3",
+				"esbuild": "^0.14.31",
+				"typescript": "^4.7.2",
+				"@ava/typescript": "^3.0.1"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "wanderview",
+					"email": "ben@wanderview.com"
+				},
+				{
+					"name": "sanderelias",
+					"email": "sanderelias@gmail.com"
+				},
+				{
+					"name": "kenchris",
+					"email": "kenneth.christiansen@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "wireit",
+				"build": "wireit",
+				"build:cjs": "wireit",
+				"build:esm": "wireit",
+				"manual-test": "wireit",
+				"publish-dev": "wireit",
+				"publish-prod": "wireit",
+				"copyTypeFiles": "wireit",
+				"prepFakeNodeModules": "wireit"
+			},
+			"lastModified": 0,
+			"_id": "urlpattern-polyfill@5.0.8",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-5.0.8.tgz",
+				"shasum": "a99c978b920885bc1ed5ae7b4b8dbdae35a64b75",
+				"integrity": "sha512-sUYjIAtlvl0vHWGIDM9CAFSywMkY4n7wuCny1ti7rQtWO0lG4wSjA1+p8xlsF1dCRhGxncz/BmdWa4WT/c/yVA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIBW/2wYgXkDsK0khyAyi+4okaBFgc32KWD/CjM34YRHhAiEArBO3vQ0k0VYLUsgeIcoAy781d08NRX4UznHmRy9Vdkk="
+					}
+				]
+			},
+			"_npmVersion": "8.18.0",
+			"_npmUser": {
+				"name": "sanderelias",
+				"email": "sanderelias@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "fdb7e6def4cc40415c9185167005bc452d0cb68e",
+			"types": "./dist/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./dist/index.d.ts",
+					"import": "./index.js",
+					"require": "./index.cjs"
+				},
+				"./urlpattern": {
+					"types": "./dist/index.d.ts",
+					"import": "./dist/urlpattern.js",
+					"require": "./dist/urlpattern.cjs"
+				}
+			},
+			"module": "./index.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/urlpattern-polyfill_5.0.8_1662377434294_0.5305301407566845",
+				"host": "s3://npm-registry-packages"
+			},
+			"readmeFilename": "README.md",
+			"type": "module",
+			"ava": {
+				"files": [
+					"test/**/*",
+					"!test/wpt"
+				],
+				"typescript": {
+					"compile": false,
+					"rewritePaths": {
+						"src/": "dist/"
+					}
+				}
+			},
+			"wireit": {
+				"test": {
+					"files": [
+						"test/**/*"
+					],
+					"watch": "test/**/*",
+					"command": "ava --fail-fast -s",
+					"dependencies": [
+						"prepFakeNodeModules",
+						"build"
+					]
+				},
+				"build": {
+					"dependencies": [
+						"copyTypeFiles"
+					]
+				},
+				"build:cjs": {
+					"files": [
+						"src/**/*"
+					],
+					"output": [
+						"dist/urlpattern.cjs"
+					],
+					"command": "esbuild --bundle --format=cjs src/url-pattern.ts --outfile=dist/urlpattern.cjs"
+				},
+				"build:esm": {
+					"files": [
+						"src/**/*"
+					],
+					"output": [
+						"dist/urlpattern.js"
+					],
+					"command": "esbuild --bundle --format=esm src/url-pattern.ts --outfile=dist/urlpattern.js"
+				},
+				"manual-test": {
+					"command": "npx http-server -o /index.html -p 4203",
+					"dependencies": [
+						"test"
+					]
+				},
+				"publish-dev": {
+					"command": "VERSION=${npm_package_version%-*}-dev.`git rev-parse --short HEAD` && npm version --no-git-tag-version $VERSION && npm publish --tag dev",
+					"dependencies": [
+						"test"
+					]
+				},
+				"publish-prod": {
+					"command": "npm version patch && npm publish --tag dev",
+					"dependencies": [
+						"test"
+					]
+				},
+				"copyTypeFiles": {
+					"output": [
+						"dist/index.d.ts",
+						"dist/types.d.ts"
+					],
+					"command": "cp ./src/index.d.ts ./src/types.d.ts ./dist",
+					"dependencies": [
+						"build:esm",
+						"build:cjs"
+					]
+				},
+				"prepFakeNodeModules": {
+					"command": "rm -rf node_modules/urlpattern-polyfill; ln -s $(pwd) node_modules/urlpattern-polyfill"
+				}
+			},
+			"_nodeVersion": "18.4.0",
+			"contributors": []
+		},
+		"0.1.3": {
+			"name": "urlpattern-polyfill",
+			"description": "Polyfill for the proposed URLPattern API",
+			"version": "0.1.3",
+			"author": "",
+			"homepage": "https://github.com/kenchris/urlpattern-polyfill#readme",
+			"repository": {
+				"url": "git+https://github.com/kenchris/urlpattern-polyfill.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/kenchris/urlpattern-polyfill/issues"
+			},
+			"main": "dist/index.js",
+			"devDependencies": {
+				"ava": "^3.14.0",
+				"esm": "^3.2.25",
+				"rimraf": "^3.0.2",
+				"rollup": "^2.35.1",
+				"typescript": "^4.1.3",
+				"rollup-plugin-terser": "^5.2.0",
+				"rollup-plugin-filesize": "^9.1.0"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "kenchris",
+					"email": "kenneth.christiansen@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run build && ava --fail-fast -s",
+				"build": "rimraf dist/ && tsc",
+				"checksize": "rollup -c ; cat urlpattern-polyfill.bundled.js | gzip -9 | wc -c ; rm urlpattern-polyfill.bundled.js",
+				"quicktest": "ava --fail-fast -s",
+				"build:watch": "tsc --watch",
+				"publish-dev": "npm test && VERSION=${npm_package_version%-*}-dev.`git rev-parse --short HEAD` && npm version --no-git-tag-version $VERSION && npm publish --tag dev"
+			},
+			"lastModified": 0,
+			"_id": "urlpattern-polyfill@0.1.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-0.1.3.tgz",
+				"shasum": "d383fc66339f97643d2b724c714b31c69110cd98",
+				"integrity": "sha512-Z+kckinIFUXpcNEbpLHeSh69gIB3xVivlybhbsTuKP3sgLatIGk7A9EBSPf6O+kP12/LywYrehBRV5sTxOK78A==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDkWVg7JQfV8gjE2o7rlABAVFMtaaRTTJO47OPd+Pb2FAIhAO/Chx3Xw8+H7Y2Ilvpp+PftvXw6GwImaESSEkdncncc"
+					}
+				]
+			},
+			"_npmVersion": "6.14.8",
+			"_npmUser": {
+				"name": "kenchris",
+				"email": "kenneth.christiansen@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "1af5421f8123da06539170536babde70426c0dc2",
+			"module": "dist/index.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/urlpattern-polyfill_0.1.3_1608232341933_0.689932126261009",
+				"host": "s3://npm-registry-packages"
+			},
+			"ava": {
+				"require": [
+					"esm"
+				]
+			},
+			"_nodeVersion": "14.13.0",
+			"contributors": []
+		},
+		"5.0.9": {
+			"name": "urlpattern-polyfill",
+			"description": "Polyfill for the URLPattern API",
+			"tags": [
+				"url",
+				"urlpattern",
+				"url-pattern",
+				"browser",
+				"node",
+				"polyfill",
+				"w3c",
+				"wicg"
+			],
+			"version": "5.0.9",
+			"author": "",
+			"homepage": "https://github.com/kenchris/urlpattern-polyfill#readme",
+			"repository": {
+				"url": "git+https://github.com/kenchris/urlpattern-polyfill.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/kenchris/urlpattern-polyfill/issues"
+			},
+			"main": "./index.cjs",
+			"devDependencies": {
+				"ava": "^4.1.0",
+				"rimraf": "^3.0.2",
+				"wireit": "^0.4.3",
+				"esbuild": "^0.14.31",
+				"typescript": "^4.7.2",
+				"@ava/typescript": "^3.0.1"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "wanderview",
+					"email": "ben@wanderview.com"
+				},
+				{
+					"name": "sanderelias",
+					"email": "sanderelias@gmail.com"
+				},
+				{
+					"name": "kenchris",
+					"email": "kenneth.christiansen@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "wireit",
+				"build": "wireit",
+				"build:cjs": "wireit",
+				"build:esm": "wireit",
+				"manual-test": "wireit",
+				"publish-dev": "wireit",
+				"publish-prod": "wireit",
+				"copyTypeFiles": "wireit",
+				"prepFakeNodeModules": "wireit"
+			},
+			"lastModified": 0,
+			"_id": "urlpattern-polyfill@5.0.9",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-5.0.9.tgz",
+				"shasum": "99b1f88c770f04bcce6967ad705f7b45e3cf902f",
+				"integrity": "sha512-7MM/vXEZhbWtSBKPTWFb431QUxn9IKBN3HutHN+2JrO9UAusttvvCjEVB+7MZkAowduXCs2v0D/puv6sE9oyFA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIAd4BgnHQvUzB0rmD0GNjzKCBzxjJYPo/I0JtpkTWhAtAiBxEuPFj0RxIIp7jDe7CJ3qTAg6UqGteBXtvT8KjtqciQ=="
+					}
+				]
+			},
+			"_npmVersion": "8.18.0",
+			"_npmUser": {
+				"name": "sanderelias",
+				"email": "sanderelias@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "f64406dea7d8f9eaa91d41468bfb8db6a7755a63",
+			"types": "./dist/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./dist/index.d.ts",
+					"import": "./index.js",
+					"require": "./index.cjs"
+				},
+				"./urlpattern": {
+					"types": "./dist/index.d.ts",
+					"import": "./dist/urlpattern.js",
+					"require": "./dist/urlpattern.cjs"
+				}
+			},
+			"module": "./index.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/urlpattern-polyfill_5.0.9_1662377675767_0.024039754812418046",
+				"host": "s3://npm-registry-packages"
+			},
+			"type": "module",
+			"ava": {
+				"files": [
+					"test/**/*",
+					"!test/wpt"
+				],
+				"typescript": {
+					"compile": false,
+					"rewritePaths": {
+						"src/": "dist/"
+					}
+				}
+			},
+			"wireit": {
+				"test": {
+					"files": [
+						"test/**/*"
+					],
+					"watch": "test/**/*",
+					"command": "ava --fail-fast -s",
+					"dependencies": [
+						"prepFakeNodeModules",
+						"build"
+					]
+				},
+				"build": {
+					"dependencies": [
+						"copyTypeFiles"
+					]
+				},
+				"build:cjs": {
+					"files": [
+						"src/**/*"
+					],
+					"output": [
+						"dist/urlpattern.cjs"
+					],
+					"command": "esbuild --bundle --format=cjs src/url-pattern.ts --outfile=dist/urlpattern.cjs"
+				},
+				"build:esm": {
+					"files": [
+						"src/**/*"
+					],
+					"output": [
+						"dist/urlpattern.js"
+					],
+					"command": "esbuild --bundle --format=esm src/url-pattern.ts --outfile=dist/urlpattern.js"
+				},
+				"manual-test": {
+					"command": "npx http-server -o /index.html -p 4203",
+					"dependencies": [
+						"test"
+					]
+				},
+				"publish-dev": {
+					"command": "VERSION=${npm_package_version%-*}-dev.`git rev-parse --short HEAD` && npm version --no-git-tag-version $VERSION && npm publish --tag dev",
+					"dependencies": [
+						"test"
+					]
+				},
+				"publish-prod": {
+					"command": "npm version patch && npm publish",
+					"dependencies": [
+						"test"
+					]
+				},
+				"copyTypeFiles": {
+					"output": [
+						"dist/index.d.ts",
+						"dist/types.d.ts"
+					],
+					"command": "cp ./src/index.d.ts ./src/types.d.ts ./dist",
+					"dependencies": [
+						"build:esm",
+						"build:cjs"
+					]
+				},
+				"prepFakeNodeModules": {
+					"command": "rm -rf node_modules/urlpattern-polyfill; ln -s $(pwd) node_modules/urlpattern-polyfill"
+				}
+			},
+			"_nodeVersion": "18.4.0",
+			"contributors": []
+		},
+		"0.1.4": {
+			"name": "urlpattern-polyfill",
+			"description": "Polyfill for the proposed URLPattern API",
+			"version": "0.1.4",
+			"author": "",
+			"homepage": "https://github.com/kenchris/urlpattern-polyfill#readme",
+			"repository": {
+				"url": "git+https://github.com/kenchris/urlpattern-polyfill.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/kenchris/urlpattern-polyfill/issues"
+			},
+			"main": "dist/index.js",
+			"devDependencies": {
+				"ava": "^3.14.0",
+				"esm": "^3.2.25",
+				"rimraf": "^3.0.2",
+				"rollup": "^2.35.1",
+				"typescript": "^4.1.3",
+				"rollup-plugin-terser": "^5.2.0",
+				"rollup-plugin-filesize": "^9.1.0"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "kenchris",
+					"email": "kenneth.christiansen@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run build && ava --fail-fast -s",
+				"build": "rimraf dist/ && tsc",
+				"checksize": "rollup -c ; cat urlpattern-polyfill.bundled.js | gzip -9 | wc -c ; rm urlpattern-polyfill.bundled.js",
+				"quicktest": "ava --fail-fast -s",
+				"build:watch": "tsc --watch",
+				"publish-dev": "npm test && VERSION=${npm_package_version%-*}-dev.`git rev-parse --short HEAD` && npm version --no-git-tag-version $VERSION && npm publish --tag dev"
+			},
+			"lastModified": 0,
+			"_id": "urlpattern-polyfill@0.1.4",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-0.1.4.tgz",
+				"shasum": "9f0e1e6da0f9c9d6be6491db212939d5984d342d",
+				"integrity": "sha512-oLXH1oyYbqmDqgctz88+iPuqsiLjj0fXEJ/zZqpqvu9k/VCAfAW3t+V0fmwvSsX+YxdhlEtHs+67G7sMQvQBJg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDUOhu01WT+kWOFuH5fC3bwCBkyS9hkClG74bI9XosYvwIhANzyXvq/QdULlwEtraeYSUkNvbL8pVihb5rj6brIc5dz"
+					}
+				]
+			},
+			"_npmVersion": "6.14.8",
+			"_npmUser": {
+				"name": "kenchris",
+				"email": "kenneth.christiansen@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "75dc4e68541ba2567612e3ed6e4533eef751b113",
+			"module": "dist/index.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/urlpattern-polyfill_0.1.4_1608294946641_0.11321427913201965",
+				"host": "s3://npm-registry-packages"
+			},
+			"ava": {
+				"require": [
+					"esm"
+				]
+			},
+			"_nodeVersion": "14.13.0",
+			"contributors": []
+		},
+		"5.0.0-dev.4a67043": {
+			"name": "urlpattern-polyfill",
+			"description": "Polyfill for the URLPattern API",
+			"tags": [
+				"url",
+				"urlpattern",
+				"url-pattern",
+				"browser",
+				"node",
+				"polyfill",
+				"w3c",
+				"wicg"
+			],
+			"version": "5.0.0-dev.4a67043",
+			"author": "",
+			"homepage": "https://github.com/kenchris/urlpattern-polyfill#readme",
+			"repository": {
+				"url": "git+https://github.com/kenchris/urlpattern-polyfill.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/kenchris/urlpattern-polyfill/issues"
+			},
+			"main": "./index.cjs",
+			"devDependencies": {
+				"ava": "^4.1.0",
+				"rimraf": "^3.0.2",
+				"wireit": "^0.4.3",
+				"esbuild": "^0.14.31",
+				"typescript": "^4.7.2",
+				"@ava/typescript": "^3.0.1"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "wanderview",
+					"email": "ben@wanderview.com"
+				},
+				{
+					"name": "sanderelias",
+					"email": "sanderelias@gmail.com"
+				},
+				{
+					"name": "kenchris",
+					"email": "kenneth.christiansen@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "wireit",
+				"build": "wireit",
+				"build:cjs": "wireit",
+				"build:esm": "wireit",
+				"manual-test": "wireit",
+				"publish-dev": "wireit",
+				"copyTypeFiles": "wireit",
+				"prepFakeNodeModules": "wireit"
+			},
+			"lastModified": 0,
+			"_id": "urlpattern-polyfill@5.0.0-dev.4a67043",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-5.0.0-dev.4a67043.tgz",
+				"shasum": "8071085c8e3ba03ab7164769078a08edab1fd9c3",
+				"integrity": "sha512-M6El/DsluP0hcEtHtOEEvXiCjeZ/7bxdWYs36UbAV6GEyjxlh+/9vPWqsiCB7ar+MWy5NExq3KF2HsHchgLUhA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEMCIDTLMqYevV43d/mhFMCGs7nc9rVX5sU2q4IvP9s/HVcGAh9SfokFQn4rvN7T1mTJHaktyPnK7ebyL+vf5glGUUYi"
+					}
+				]
+			},
+			"_npmVersion": "8.8.0",
+			"_npmUser": {
+				"name": "sanderelias",
+				"email": "sanderelias@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "4a6704368e485667698053e62a81c06430eb1358",
+			"types": "./dist/index.d.ts",
+			"exports": {
+				".": {
+					"import": "./index.js",
+					"require": "./index.cjs"
+				},
+				"./urlpattern": {
+					"import": "./dist/urlpattern.js",
+					"require": "./dist/urlpattern.cjs"
+				}
+			},
+			"module": "./index.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/urlpattern-polyfill_5.0.0-dev.4a67043_1653465076206_0.9990408228697276",
+				"host": "s3://npm-registry-packages"
+			},
+			"readmeFilename": "README.md",
+			"type": "module",
+			"ava": {
+				"files": [
+					"test/**/*",
+					"!test/wpt"
+				],
+				"typescript": {
+					"compile": false,
+					"rewritePaths": {
+						"src/": "dist/"
+					}
+				}
+			},
+			"wireit": {
+				"test": {
+					"watch": "test/**/*",
+					"command": "ava --fail-fast -s",
+					"dependencies": [
+						"prepFakeNodeModules",
+						"build"
+					]
+				},
+				"build": {
+					"dependencies": [
+						"copyTypeFiles"
+					]
+				},
+				"build:cjs": {
+					"files": [
+						"src/**/*"
+					],
+					"output": [
+						"dist/urlpattern.cjs"
+					],
+					"command": "esbuild --bundle --format=cjs src/url-pattern.ts --outfile=dist/urlpattern.cjs"
+				},
+				"build:esm": {
+					"files": [
+						"src/**/*"
+					],
+					"output": [
+						"dist/urlpattern.js"
+					],
+					"command": "esbuild --bundle --format=esm src/url-pattern.ts --outfile=dist/urlpattern.js"
+				},
+				"manual-test": {
+					"command": "npx http-server -o /index.html -p 4203",
+					"dependencies": [
+						"test"
+					]
+				},
+				"publish-dev": {
+					"command": "VERSION=${npm_package_version%-*}-dev.`git rev-parse --short HEAD` && npm version --no-git-tag-version $VERSION && npm publish --tag dev",
+					"dependencies": [
+						"test"
+					]
+				},
+				"copyTypeFiles": {
+					"output": [
+						"dist/index.d.ts",
+						"dist/types.d.ts"
+					],
+					"command": "cp ./src/index.d.ts ./src/types.d.ts ./dist",
+					"dependencies": [
+						"build:esm",
+						"build:cjs"
+					]
+				},
+				"prepFakeNodeModules": {
+					"command": "rm -rf node_modules/urlpattern-polyfill; ln -s $(pwd) node_modules/urlpattern-polyfill"
+				}
+			},
+			"_nodeVersion": "18.1.0",
+			"contributors": []
+		},
+		"9.0.0": {
+			"name": "urlpattern-polyfill",
+			"description": "Polyfill for the URLPattern API",
+			"tags": [
+				"url",
+				"urlpattern",
+				"url-pattern",
+				"browser",
+				"node",
+				"polyfill",
+				"w3c",
+				"wicg"
+			],
+			"version": "9.0.0",
+			"author": "",
+			"homepage": "https://github.com/kenchris/urlpattern-polyfill#readme",
+			"repository": {
+				"url": "git+https://github.com/kenchris/urlpattern-polyfill.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/kenchris/urlpattern-polyfill/issues"
+			},
+			"main": "./index.cjs",
+			"dependencies": {},
+			"devDependencies": {
+				"ava": "^5.3.0",
+				"rimraf": "^5.0.1",
+				"wireit": "^0.9.5",
+				"esbuild": "^0.17.19",
+				"typescript": "^5.1.3",
+				"@ava/typescript": "^4.0.0"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "wanderview",
+					"email": "ben@wanderview.com"
+				},
+				{
+					"name": "sanderelias",
+					"email": "sanderelias@gmail.com"
+				},
+				{
+					"name": "kenchris",
+					"email": "kenneth.christiansen@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "wireit",
+				"build": "wireit",
+				"sync-wpt": "wireit",
+				"manual-test": "wireit",
+				"publish-dev": "wireit",
+				"publish-major": "wireit",
+				"publish-patch": "wireit"
+			},
+			"lastModified": 0,
+			"_id": "urlpattern-polyfill@9.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-9.0.0.tgz",
+				"shasum": "bc7e386bb12fd7898b58d1509df21d3c29ab3460",
+				"integrity": "sha512-WHN8KDQblxd32odxeIgo83rdVDE2bvdkb86it7bMhYZwWKJz0+O0RK/eZiHYnM+zgt/U7hAHOlCQGfjjvSkw2g==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIBx+A3yW8rP4/FBkyuzMHVyWA9MRUkJnWbuEcNHd/Wn9AiBCTqkq/NBuAQV39+pFSPrZxUXus/PwgsF5sdm27N3OQQ=="
+					}
+				]
+			},
+			"_npmVersion": "9.5.1",
+			"_npmUser": {
+				"name": "sanderelias",
+				"email": "sanderelias@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "e0b1d0c32d0de88777b0d9c973ed65391d11b6ab",
+			"types": "./dist/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./dist/index.d.ts",
+					"import": "./index.js",
+					"require": "./index.cjs"
+				},
+				"./urlpattern": {
+					"types": "./dist/index.d.ts",
+					"import": "./dist/urlpattern.js",
+					"require": "./dist/urlpattern.cjs"
+				}
+			},
+			"module": "./index.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/urlpattern-polyfill_9.0.0_1685687013487_0.7927975633832056",
+				"host": "s3://npm-registry-packages"
+			},
+			"type": "module",
+			"ava": {
+				"files": [
+					"test/**/*",
+					"!test/wpt"
+				],
+				"typescript": {
+					"compile": false,
+					"rewritePaths": {
+						"src/": "dist/"
+					}
+				}
+			},
+			"wireit": {
+				"test": {
+					"files": [
+						"test/**/*"
+					],
+					"watch": "test/**/*",
+					"command": "ava --timeout=60s",
+					"dependencies": [
+						"prepFakeNodeModules",
+						"build"
+					]
+				},
+				"build": {
+					"dependencies": [
+						"copyTypeFiles"
+					]
+				},
+				"sync-wpt": {
+					"command": "cd test && wget http://wpt.live/urlpattern/resources/urlpatterntestdata.json && wget http://wpt.live/urlpattern/resources/urlpattern-compare-test-data.json"
+				},
+				"build:cjs": {
+					"files": [
+						"src/**/*"
+					],
+					"output": [
+						"dist/urlpattern.cjs"
+					],
+					"command": "esbuild --bundle --format=cjs src/url-pattern.ts --outfile=dist/urlpattern.cjs --minify --target=es2022"
+				},
+				"build:esm": {
+					"files": [
+						"src/**/*"
+					],
+					"output": [
+						"dist/urlpattern.js"
+					],
+					"command": "esbuild --bundle --format=esm src/url-pattern.ts --outfile=dist/urlpattern.js --minify --target=es2022"
+				},
+				"manual-test": {
+					"command": "npx http-server -o /index.html -p 4203",
+					"dependencies": [
+						"test"
+					]
+				},
+				"publish-dev": {
+					"command": "VERSION=${npm_package_version%-*}-dev.`git rev-parse --short HEAD` && npm version --no-git-tag-version $VERSION && npm publish --tag dev",
+					"dependencies": [
+						"test"
+					]
+				},
+				"copyTypeFiles": {
+					"output": [
+						"dist/index.d.ts",
+						"dist/types.d.ts"
+					],
+					"command": "cp ./src/index.d.ts ./src/types.d.ts ./dist",
+					"dependencies": [
+						"build:esm",
+						"build:cjs"
+					]
+				},
+				"publish-major": {
+					"command": "npm version major && npm publish",
+					"dependencies": [
+						"test"
+					]
+				},
+				"publish-patch": {
+					"command": "npm version patch && npm publish",
+					"dependencies": [
+						"test"
+					]
+				},
+				"prepFakeNodeModules": {
+					"command": "rm -rf node_modules/urlpattern-polyfill; ln -s $(pwd) node_modules/urlpattern-polyfill"
+				}
+			},
+			"_nodeVersion": "18.16.0",
+			"contributors": []
+		},
+		"4.0.2": {
+			"name": "urlpattern-polyfill",
+			"description": "Polyfill for the URLPattern API",
+			"tags": [
+				"url",
+				"urlpattern",
+				"url-pattern",
+				"browser",
+				"node",
+				"polyfill",
+				"w3c",
+				"wicg"
+			],
+			"version": "4.0.2",
+			"author": "",
+			"homepage": "https://github.com/kenchris/urlpattern-polyfill#readme",
+			"repository": {
+				"url": "git+https://github.com/kenchris/urlpattern-polyfill.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/kenchris/urlpattern-polyfill/issues"
+			},
+			"main": "./dist/index.cjs",
+			"devDependencies": {
+				"ava": "^3.14.0",
+				"rimraf": "^3.0.2",
+				"esbuild": "^0.14.31",
+				"typescript": "^4.6.3"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "wanderview",
+					"email": "ben@wanderview.com"
+				},
+				{
+					"name": "sanderelias",
+					"email": "sanderelias@gmail.com"
+				},
+				{
+					"name": "kenchris",
+					"email": "kenneth.christiansen@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "ava --fail-fast -s",
+				"build": "npm run build:esm && npm run build:cjs && npm run copy:dts",
+				"pretest": "npm run build",
+				"copy:dts": "cp ./src/index.d.ts ./dist",
+				"prebuild": "rimraf dist",
+				"build:cjs": "esbuild --bundle --format=cjs src/url-pattern.ts --outfile=dist/url-pattern.cjs && esbuild --format=cjs src/patch-global.cts --outfile=dist/index.cjs",
+				"build:esm": "esbuild --bundle --format=esm src/patch-global.mts --outfile=dist/index.js",
+				"publish-dev": "npm test && VERSION=${npm_package_version%-*}-dev.`git rev-parse --short HEAD` && npm version --no-git-tag-version $VERSION && npm publish --tag dev"
+			},
+			"lastModified": 0,
+			"_id": "urlpattern-polyfill@4.0.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-4.0.2.tgz",
+				"shasum": "df0fe52e4bbd1f62ce857f050f3752383b00bf28",
+				"integrity": "sha512-qWm0awpsU1wCmofU3dy3EzpgoJiqJoq8LK+7YtYngfOrj2e7dDXB5xjacy+dMLlS0jgqtFx5hQWYpAuV2FtT7w==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCICTdP1fp52bRjgRRAoBwu2ZYeblUafrX1aZDZJzHYhHFAiEA8IzEzhw3DVEeYU/n+1nioGOwujd6XtqwS757FKRDN7A="
+					}
+				]
+			},
+			"_npmVersion": "8.1.2",
+			"_npmUser": {
+				"name": "kenchris",
+				"email": "kenneth.christiansen@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "a0763370127e1bf7d4d94a045b8b5a0897e17d4e",
+			"types": "./dist/index.d.ts",
+			"exports": {
+				"import": "./dist/index.js",
+				"require": "./dist/index.cjs"
+			},
+			"module": "./dist/index.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/urlpattern-polyfill_4.0.2_1649235046985_0.014200929736550627",
+				"host": "s3://npm-registry-packages"
+			},
+			"type": "module",
+			"_nodeVersion": "16.13.2",
+			"contributors": []
+		},
+		"4.0.3": {
+			"name": "urlpattern-polyfill",
+			"description": "Polyfill for the URLPattern API",
+			"tags": [
+				"url",
+				"urlpattern",
+				"url-pattern",
+				"browser",
+				"node",
+				"polyfill",
+				"w3c",
+				"wicg"
+			],
+			"version": "4.0.3",
+			"author": "",
+			"homepage": "https://github.com/kenchris/urlpattern-polyfill#readme",
+			"repository": {
+				"url": "git+https://github.com/kenchris/urlpattern-polyfill.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/kenchris/urlpattern-polyfill/issues"
+			},
+			"main": "./dist/index.cjs",
+			"devDependencies": {
+				"ava": "^4.1.0",
+				"rimraf": "^3.0.2",
+				"esbuild": "^0.14.31",
+				"typescript": "^4.6.3",
+				"@ava/typescript": "^3.0.1"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "wanderview",
+					"email": "ben@wanderview.com"
+				},
+				{
+					"name": "sanderelias",
+					"email": "sanderelias@gmail.com"
+				},
+				{
+					"name": "kenchris",
+					"email": "kenneth.christiansen@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "ava --fail-fast -s",
+				"build": "npm run build:esm && npm run build:cjs && npm run copy:dts",
+				"pretest": "npm run build",
+				"copy:dts": "cp ./src/index.d.ts ./dist",
+				"prebuild": "rimraf dist",
+				"build:cjs": "esbuild --bundle --format=cjs src/patch-global.cts --outfile=dist/index.cjs",
+				"build:esm": "esbuild --bundle --format=esm src/patch-global.mts --outfile=dist/index.js",
+				"manual-test": "npx http-server -o /index.html -p 4203",
+				"publish-dev": "npm test && VERSION=${npm_package_version%-*}-dev.`git rev-parse --short HEAD` && npm version --no-git-tag-version $VERSION && npm publish --tag dev"
+			},
+			"lastModified": 0,
+			"_id": "urlpattern-polyfill@4.0.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-4.0.3.tgz",
+				"shasum": "c1fa7a73eb4e6c6a1ffb41b24cf31974f7392d3b",
+				"integrity": "sha512-DOE84vZT2fEcl9gqCUTcnAw5ZY5Id55ikUcziSUntuEFL3pRvavg5kwDmTEUJkeCHInTlV/HexFomgYnzO5kdQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDdLDjFuAMPvFzxuFsDCdIAQ/GHhZsJ2ryOFtfQi8bErgIhAMPNSha20RorLuXwSRR+c7lmmoAPBzFo53SYxAoxdf/a"
+					}
+				]
+			},
+			"_npmVersion": "8.1.2",
+			"_npmUser": {
+				"name": "kenchris",
+				"email": "kenneth.christiansen@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "69ac528cb2cd4da5d5ce234a77d29bfbef4f2534",
+			"types": "./dist/index.d.ts",
+			"exports": {
+				"import": "./dist/index.js",
+				"require": "./dist/index.cjs"
+			},
+			"module": "./dist/index.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/urlpattern-polyfill_4.0.3_1649416060066_0.5056055089614797",
+				"host": "s3://npm-registry-packages"
+			},
+			"type": "module",
+			"ava": {
+				"files": [
+					"test/**/*",
+					"!test/wpt"
+				],
+				"typescript": {
+					"compile": false,
+					"rewritePaths": {
+						"src/": "dist/"
+					}
+				}
+			},
+			"_nodeVersion": "16.13.2",
+			"contributors": []
+		},
+		"4.0.0": {
+			"name": "urlpattern-polyfill",
+			"description": "Polyfill for the URLPattern API",
+			"version": "4.0.0",
+			"author": "",
+			"homepage": "https://github.com/kenchris/urlpattern-polyfill#readme",
+			"repository": {
+				"url": "git+https://github.com/kenchris/urlpattern-polyfill.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/kenchris/urlpattern-polyfill/issues"
+			},
+			"devDependencies": {
+				"ava": "^3.14.0",
+				"rimraf": "^3.0.2",
+				"esbuild": "^0.14.31",
+				"typescript": "^4.6.3"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "wanderview",
+					"email": "ben@wanderview.com"
+				},
+				{
+					"name": "kenchris",
+					"email": "kenneth.christiansen@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "ava --fail-fast -s",
+				"build": "npm run build:esm && npm run build:cjs && npm run copy:dts",
+				"pretest": "npm run build",
+				"copy:dts": "cp ./src/index.d.ts ./dist",
+				"prebuild": "rimraf dist",
+				"build:cjs": "esbuild --bundle --format=cjs src/url-pattern.ts --outfile=dist/url-pattern.cjs && esbuild --format=cjs src/patch-global.cts --outfile=dist/index.cjs",
+				"build:esm": "esbuild --bundle --format=esm src/patch-global.mts --outfile=dist/index.js",
+				"publish-dev": "npm test && VERSION=${npm_package_version%-*}-dev.`git rev-parse --short HEAD` && npm version --no-git-tag-version $VERSION && npm publish --tag dev"
+			},
+			"lastModified": 0,
+			"_id": "urlpattern-polyfill@4.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-4.0.0.tgz",
+				"shasum": "2e09c3a9a58e24b6b91d76489526e872b358edeb",
+				"integrity": "sha512-tyeTNta2U8dGjxPA6Yu/VWOyELsWR1bKs/P+vQv2Mpv3QkKoD7DFaxjCgHkMM5VViIoHQH4hYz0R/i0nw5RIkA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIBAL5YlP617VICGoZbw8BWSCOWRHixTu2+THIjUxNMxGAiAv+GP5b2fY2xSFHm1so+T9M+eNIPnmDsPejI019b+FVQ=="
+					}
+				]
+			},
+			"_npmVersion": "8.1.2",
+			"_npmUser": {
+				"name": "kenchris",
+				"email": "kenneth.christiansen@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "2bca4370ee655f27d5512bfa95debbd962d23290",
+			"types": "./index.d.ts",
+			"exports": {
+				"main": "./dist/index.cjs",
+				"types": "./dist/index.d.ts",
+				"import": "./dist/index.js",
+				"module": "./dist/index.js",
+				"require": "./dist/index.cjs"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/urlpattern-polyfill_4.0.0_1649080256352_0.2399116101130736",
+				"host": "s3://npm-registry-packages"
+			},
+			"type": "module",
+			"_nodeVersion": "16.13.2",
+			"contributors": []
+		},
+		"4.0.1": {
+			"name": "urlpattern-polyfill",
+			"description": "Polyfill for the URLPattern API",
+			"version": "4.0.1",
+			"author": "",
+			"homepage": "https://github.com/kenchris/urlpattern-polyfill#readme",
+			"repository": {
+				"url": "git+https://github.com/kenchris/urlpattern-polyfill.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/kenchris/urlpattern-polyfill/issues"
+			},
+			"main": "./dist/index.cjs",
+			"devDependencies": {
+				"ava": "^3.14.0",
+				"rimraf": "^3.0.2",
+				"esbuild": "^0.14.31",
+				"typescript": "^4.6.3"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "wanderview",
+					"email": "ben@wanderview.com"
+				},
+				{
+					"name": "kenchris",
+					"email": "kenneth.christiansen@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "ava --fail-fast -s",
+				"build": "npm run build:esm && npm run build:cjs && npm run copy:dts",
+				"pretest": "npm run build",
+				"copy:dts": "cp ./src/index.d.ts ./dist",
+				"prebuild": "rimraf dist",
+				"build:cjs": "esbuild --bundle --format=cjs src/url-pattern.ts --outfile=dist/url-pattern.cjs && esbuild --format=cjs src/patch-global.cts --outfile=dist/index.cjs",
+				"build:esm": "esbuild --bundle --format=esm src/patch-global.mts --outfile=dist/index.js",
+				"publish-dev": "npm test && VERSION=${npm_package_version%-*}-dev.`git rev-parse --short HEAD` && npm version --no-git-tag-version $VERSION && npm publish --tag dev"
+			},
+			"lastModified": 0,
+			"_id": "urlpattern-polyfill@4.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-4.0.1.tgz",
+				"shasum": "f431f663de85bcaf3e6f984640c684190d4a6a51",
+				"integrity": "sha512-U0QDS/RR36TTMkJ2mM2nAtiS0sE6JV81YbzBQFXCecq6iz7nM+JKRoQFimyRI8PZ3uRPph9bSsg9BgnjuUoDtw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDSIPBPHyQYYKlNJs/UNlp05UXAk0JWBpBv5ydoF9NQCAIgAme9oZTHf9Ul3oTaBFa89ql4iErwxnICW+yDJT73+cg="
+					}
+				]
+			},
+			"_npmVersion": "8.1.2",
+			"_npmUser": {
+				"name": "kenchris",
+				"email": "kenneth.christiansen@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "c688f143705e744a7a215d1c80db43e63b3c66ae",
+			"types": "./dist/index.d.ts",
+			"exports": {
+				"import": "./dist/index.js",
+				"require": "./dist/index.cjs"
+			},
+			"module": "./dist/index.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/urlpattern-polyfill_4.0.1_1649088003285_0.06910755383354816",
+				"host": "s3://npm-registry-packages"
+			},
+			"type": "module",
+			"_nodeVersion": "16.13.2",
+			"contributors": []
+		},
+		"3.0.0-dev.2764da6": {
+			"name": "urlpattern-polyfill",
+			"description": "Polyfill for the URLPattern API",
+			"version": "3.0.0-dev.2764da6",
+			"author": "",
+			"homepage": "https://github.com/kenchris/urlpattern-polyfill#readme",
+			"repository": {
+				"url": "git+https://github.com/kenchris/urlpattern-polyfill.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/kenchris/urlpattern-polyfill/issues"
+			},
+			"dependencies": {},
+			"devDependencies": {
+				"ava": "^3.14.0",
+				"esm": "^3.2.25",
+				"rimraf": "^3.0.2",
+				"typescript": "^4.6.3"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "wanderview",
+					"email": "ben@wanderview.com"
+				},
+				{
+					"name": "kenchris",
+					"email": "kenneth.christiansen@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "ava --fail-fast -s",
+				"build": "npm run build:esm && npm run build:cjs && npm run copy:dts",
+				"pretest": "npm run build",
+				"copy:dts": "cp ./src/index.d.ts ./dist",
+				"prebuild": "rimraf dist",
+				"build:cjs": "esbuild --bundle --format=cjs src/index.ts --outfile=dist/index.impl.cjs && esbuild --format=cjs src/patch-global-cjs.ts --outfile=dist/index.cjs",
+				"build:esm": "esbuild --bundle --format=esm src/index.ts --outfile=dist/index.impl.js && esbuild --format=esm src/patch-global.ts --outfile=dist/index.js",
+				"publish-dev": "npm test && VERSION=${npm_package_version%-*}-dev.`git rev-parse --short HEAD` && npm version --no-git-tag-version $VERSION && npm publish --tag dev"
+			},
+			"lastModified": 0,
+			"_id": "urlpattern-polyfill@3.0.0-dev.2764da6",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-3.0.0-dev.2764da6.tgz",
+				"shasum": "0678a2394ca383084168ba948af77ec0b4aa014f",
+				"integrity": "sha512-El1Y1JcLKSn9sT2/aSMiBB0s+tdWxAFPL5PBPD7wdAXsiCAs0UmPL9NudhhZqbQEMm/C6iMxueWCkS8zawDe4g==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDIbweupGSkdtuFo9QKfvFA8aWRqitNVsB1XwMeehMvcQIgbH8tmX0nGLYNBZn8siXfu1nrkM3iwkTj7YW8OFTl4i4="
+					}
+				]
+			},
+			"_npmVersion": "8.1.2",
+			"_npmUser": {
+				"name": "kenchris",
+				"email": "kenneth.christiansen@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "2764da6664a58b660b5e3314f0570b2a09d5728e",
+			"types": "./index.d.ts",
+			"exports": {
+				"types": "./dist/index.d.ts",
+				"import": "./dist/index.js",
+				"require": "./dist/index.cjs"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/urlpattern-polyfill_3.0.0-dev.2764da6_1648796400537_0.7276643982268025",
+				"host": "s3://npm-registry-packages"
+			},
+			"readmeFilename": "README.md",
+			"type": "module",
+			"ava": {
+				"require": [
+					"esm"
+				]
+			},
+			"_nodeVersion": "16.13.2",
+			"contributors": []
+		},
+		"3.0.0": {
+			"name": "urlpattern-polyfill",
+			"description": "Polyfill for the URLPattern API",
+			"version": "3.0.0",
+			"author": "",
+			"homepage": "https://github.com/kenchris/urlpattern-polyfill#readme",
+			"repository": {
+				"url": "git+https://github.com/kenchris/urlpattern-polyfill.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/kenchris/urlpattern-polyfill/issues"
+			},
+			"dependencies": {},
+			"devDependencies": {
+				"ava": "^3.14.0",
+				"esm": "^3.2.25",
+				"rimraf": "^3.0.2",
+				"typescript": "^4.6.3"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "wanderview",
+					"email": "ben@wanderview.com"
+				},
+				{
+					"name": "kenchris",
+					"email": "kenneth.christiansen@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "ava --fail-fast -s",
+				"build": "npm run build:esm && npm run build:cjs && npm run copy:dts",
+				"pretest": "npm run build",
+				"copy:dts": "cp ./src/index.d.ts ./dist",
+				"prebuild": "rimraf dist",
+				"build:cjs": "esbuild --bundle --format=cjs src/index.ts --outfile=dist/index.impl.cjs && esbuild --format=cjs src/patch-global-cjs.ts --outfile=dist/index.cjs",
+				"build:esm": "esbuild --bundle --format=esm src/index.ts --outfile=dist/index.impl.js && esbuild --format=esm src/patch-global.ts --outfile=dist/index.js",
+				"publish-dev": "npm test && VERSION=${npm_package_version%-*}-dev.`git rev-parse --short HEAD` && npm version --no-git-tag-version $VERSION && npm publish --tag dev",
+				"publish-release": "npm test && npm publish"
+			},
+			"lastModified": 0,
+			"_id": "urlpattern-polyfill@3.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-3.0.0.tgz",
+				"shasum": "eabcf53b7e60241d631319e5450c3c06046b59ef",
+				"integrity": "sha512-0hCMh9PlDSBramx6tMcktCmkVH+nLzjTYXneJt1htMnsFks+rOoAcDJuDOFllNwE97wTh69VYS4ZjKEI7ZqSxQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIHJwDZNmLYy5VgxDEw7ctzSEpmAFC8DMpj6PPkOS8cY7AiEAk8QN2tg68JDTGUxstrY1CuxDCFBxK3Emc6uA4apUBu8="
+					}
+				]
+			},
+			"_npmVersion": "8.1.2",
+			"_npmUser": {
+				"name": "kenchris",
+				"email": "kenneth.christiansen@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "2764da6664a58b660b5e3314f0570b2a09d5728e",
+			"types": "./index.d.ts",
+			"exports": {
+				"types": "./dist/index.d.ts",
+				"import": "./dist/index.js",
+				"require": "./dist/index.cjs"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/urlpattern-polyfill_3.0.0_1648797253502_0.09183575198433425",
+				"host": "s3://npm-registry-packages"
+			},
+			"type": "module",
+			"ava": {
+				"require": [
+					"esm"
+				]
+			},
+			"_nodeVersion": "16.13.2",
+			"contributors": []
+		},
+		"8.0.2": {
+			"name": "urlpattern-polyfill",
+			"description": "Polyfill for the URLPattern API",
+			"tags": [
+				"url",
+				"urlpattern",
+				"url-pattern",
+				"browser",
+				"node",
+				"polyfill",
+				"w3c",
+				"wicg"
+			],
+			"version": "8.0.2",
+			"author": "",
+			"homepage": "https://github.com/kenchris/urlpattern-polyfill#readme",
+			"repository": {
+				"url": "git+https://github.com/kenchris/urlpattern-polyfill.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/kenchris/urlpattern-polyfill/issues"
+			},
+			"main": "./index.cjs",
+			"dependencies": {},
+			"devDependencies": {
+				"ava": "^5.2.0",
+				"rimraf": "^5.0.0",
+				"wireit": "^0.9.5",
+				"esbuild": "^0.17.18",
+				"typescript": "^5.0.4",
+				"@ava/typescript": "^4.0.0"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "wanderview",
+					"email": "ben@wanderview.com"
+				},
+				{
+					"name": "sanderelias",
+					"email": "sanderelias@gmail.com"
+				},
+				{
+					"name": "kenchris",
+					"email": "kenneth.christiansen@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "wireit",
+				"build": "wireit",
+				"sync-wpt": "wireit",
+				"build:cjs": "wireit",
+				"build:esm": "wireit",
+				"manual-test": "wireit",
+				"publish-dev": "wireit",
+				"publish-prod": "wireit",
+				"copyTypeFiles": "wireit",
+				"prepFakeNodeModules": "wireit"
+			},
+			"lastModified": 0,
+			"_id": "urlpattern-polyfill@8.0.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-8.0.2.tgz",
+				"shasum": "99f096e35eff8bf4b5a2aa7d58a1523d6ebc7ce5",
+				"integrity": "sha512-Qp95D4TPJl1kC9SKigDcqgyM2VDVO4RiJc2d4qe5GrYm+zbIQCWWKAFaJNQ4BhdFeDGwBmAxqJBwWSJDb9T3BQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIGK/yO+546qd0fhwq6OPwXvZxYAEBCJrQlJoGDqIzdbXAiEA8iaKxlVDozYSD8LpP45ARrckBsEBBbGGZQdqVYMExuc="
+					}
+				]
+			},
+			"_npmVersion": "9.5.1",
+			"_npmUser": {
+				"name": "sanderelias",
+				"email": "sanderelias@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "f30fd0a1807fdae725114632586b86db8814a352",
+			"types": "./dist/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./dist/index.d.ts",
+					"import": "./index.js",
+					"require": "./index.cjs"
+				},
+				"./urlpattern": {
+					"types": "./dist/index.d.ts",
+					"import": "./dist/urlpattern.js",
+					"require": "./dist/urlpattern.cjs"
+				}
+			},
+			"module": "./index.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/urlpattern-polyfill_8.0.2_1682334172163_0.44823031543918046",
+				"host": "s3://npm-registry-packages"
+			},
+			"type": "module",
+			"ava": {
+				"files": [
+					"test/**/*",
+					"!test/wpt"
+				],
+				"typescript": {
+					"compile": false,
+					"rewritePaths": {
+						"src/": "dist/"
+					}
+				}
+			},
+			"wireit": {
+				"test": {
+					"files": [
+						"test/**/*"
+					],
+					"watch": "test/**/*",
+					"command": "ava --timeout=60s",
+					"dependencies": [
+						"prepFakeNodeModules",
+						"build"
+					]
+				},
+				"build": {
+					"dependencies": [
+						"copyTypeFiles"
+					]
+				},
+				"sync-wpt": {
+					"command": "cd test && wget http://wpt.live/urlpattern/resources/urlpatterntestdata.json && wget http://wpt.live/urlpattern/resources/urlpattern-compare-test-data.json"
+				},
+				"build:cjs": {
+					"files": [
+						"src/**/*"
+					],
+					"output": [
+						"dist/urlpattern.cjs"
+					],
+					"command": "esbuild --bundle --format=cjs src/url-pattern.ts --outfile=dist/urlpattern.cjs"
+				},
+				"build:esm": {
+					"files": [
+						"src/**/*"
+					],
+					"output": [
+						"dist/urlpattern.js"
+					],
+					"command": "esbuild --bundle --format=esm src/url-pattern.ts --outfile=dist/urlpattern.js"
+				},
+				"manual-test": {
+					"command": "npx http-server -o /index.html -p 4203",
+					"dependencies": [
+						"test"
+					]
+				},
+				"publish-dev": {
+					"command": "VERSION=${npm_package_version%-*}-dev.`git rev-parse --short HEAD` && npm version --no-git-tag-version $VERSION && npm publish --tag dev",
+					"dependencies": [
+						"test"
+					]
+				},
+				"publish-prod": {
+					"command": "npm version patch && npm publish",
+					"dependencies": [
+						"test"
+					]
+				},
+				"copyTypeFiles": {
+					"output": [
+						"dist/index.d.ts",
+						"dist/types.d.ts"
+					],
+					"command": "cp ./src/index.d.ts ./src/types.d.ts ./dist",
+					"dependencies": [
+						"build:esm",
+						"build:cjs"
+					]
+				},
+				"prepFakeNodeModules": {
+					"command": "rm -rf node_modules/urlpattern-polyfill; ln -s $(pwd) node_modules/urlpattern-polyfill"
+				}
+			},
+			"_nodeVersion": "18.14.0",
+			"contributors": []
+		},
+		"8.0.1": {
+			"name": "urlpattern-polyfill",
+			"description": "Polyfill for the URLPattern API",
+			"tags": [
+				"url",
+				"urlpattern",
+				"url-pattern",
+				"browser",
+				"node",
+				"polyfill",
+				"w3c",
+				"wicg"
+			],
+			"version": "8.0.1",
+			"author": "",
+			"homepage": "https://github.com/kenchris/urlpattern-polyfill#readme",
+			"repository": {
+				"url": "git+https://github.com/kenchris/urlpattern-polyfill.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/kenchris/urlpattern-polyfill/issues"
+			},
+			"main": "./index.cjs",
+			"dependencies": {
+				"braces": "^3.0.2"
+			},
+			"devDependencies": {
+				"ava": "^5.2.0",
+				"rimraf": "^5.0.0",
+				"wireit": "^0.9.5",
+				"esbuild": "^0.17.18",
+				"typescript": "^5.0.4",
+				"@ava/typescript": "^4.0.0"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "wanderview",
+					"email": "ben@wanderview.com"
+				},
+				{
+					"name": "sanderelias",
+					"email": "sanderelias@gmail.com"
+				},
+				{
+					"name": "kenchris",
+					"email": "kenneth.christiansen@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "wireit",
+				"build": "wireit",
+				"sync-wpt": "wireit",
+				"build:cjs": "wireit",
+				"build:esm": "wireit",
+				"manual-test": "wireit",
+				"publish-dev": "wireit",
+				"publish-prod": "wireit",
+				"copyTypeFiles": "wireit",
+				"prepFakeNodeModules": "wireit"
+			},
+			"lastModified": 0,
+			"_id": "urlpattern-polyfill@8.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-8.0.1.tgz",
+				"shasum": "aa302bf8d584d36fbbe90dac0c1a6c28bf914d6b",
+				"integrity": "sha512-uRsgZkqvviY4s6XsG3Jc5ti7L+tH0lH14PuAXAJRsxldtPtXZjIhlPnoAimds6c9JJaFhxXW8qCJQB/WknPJUw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQCjRE8wimN/lBdmuShU8ZlI5C4hQe1N5Y4GgLDnTF2A4gIhALdU6vKq91Qyrze6ikuNaBaiGWo4VW7AmMoUP+E5PXSS"
+					}
+				]
+			},
+			"_npmVersion": "9.5.1",
+			"_npmUser": {
+				"name": "sanderelias",
+				"email": "sanderelias@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "363f47babc8b3c31549003efb626c11cf1fcc8f9",
+			"types": "./dist/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./dist/index.d.ts",
+					"import": "./index.js",
+					"require": "./index.cjs"
+				},
+				"./urlpattern": {
+					"types": "./dist/index.d.ts",
+					"import": "./dist/urlpattern.js",
+					"require": "./dist/urlpattern.cjs"
+				}
+			},
+			"module": "./index.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/urlpattern-polyfill_8.0.1_1682323212325_0.4614126684485327",
+				"host": "s3://npm-registry-packages"
+			},
+			"type": "module",
+			"ava": {
+				"files": [
+					"test/**/*",
+					"!test/wpt"
+				],
+				"typescript": {
+					"compile": false,
+					"rewritePaths": {
+						"src/": "dist/"
+					}
+				}
+			},
+			"wireit": {
+				"test": {
+					"files": [
+						"test/**/*"
+					],
+					"watch": "test/**/*",
+					"command": "ava --timeout=60s",
+					"dependencies": [
+						"prepFakeNodeModules",
+						"build"
+					]
+				},
+				"build": {
+					"dependencies": [
+						"copyTypeFiles"
+					]
+				},
+				"sync-wpt": {
+					"command": "cd test && wget http://wpt.live/urlpattern/resources/urlpatterntestdata.json && wget http://wpt.live/urlpattern/resources/urlpattern-compare-test-data.json"
+				},
+				"build:cjs": {
+					"files": [
+						"src/**/*"
+					],
+					"output": [
+						"dist/urlpattern.cjs"
+					],
+					"command": "esbuild --bundle --format=cjs src/url-pattern.ts --outfile=dist/urlpattern.cjs"
+				},
+				"build:esm": {
+					"files": [
+						"src/**/*"
+					],
+					"output": [
+						"dist/urlpattern.js"
+					],
+					"command": "esbuild --bundle --format=esm src/url-pattern.ts --outfile=dist/urlpattern.js"
+				},
+				"manual-test": {
+					"command": "npx http-server -o /index.html -p 4203",
+					"dependencies": [
+						"test"
+					]
+				},
+				"publish-dev": {
+					"command": "VERSION=${npm_package_version%-*}-dev.`git rev-parse --short HEAD` && npm version --no-git-tag-version $VERSION && npm publish --tag dev",
+					"dependencies": [
+						"test"
+					]
+				},
+				"publish-prod": {
+					"command": "npm version patch && npm publish",
+					"dependencies": [
+						"test"
+					]
+				},
+				"copyTypeFiles": {
+					"output": [
+						"dist/index.d.ts",
+						"dist/types.d.ts"
+					],
+					"command": "cp ./src/index.d.ts ./src/types.d.ts ./dist",
+					"dependencies": [
+						"build:esm",
+						"build:cjs"
+					]
+				},
+				"prepFakeNodeModules": {
+					"command": "rm -rf node_modules/urlpattern-polyfill; ln -s $(pwd) node_modules/urlpattern-polyfill"
+				}
+			},
+			"_nodeVersion": "18.14.0",
+			"contributors": []
+		},
+		"0.1.2-dev.1af5421": {
+			"name": "urlpattern-polyfill",
+			"description": "URLPattern polyfills\r ===",
+			"version": "0.1.2-dev.1af5421",
+			"author": "",
+			"main": "dist/index.js",
+			"devDependencies": {
+				"ava": "^3.14.0",
+				"esm": "^3.2.25",
+				"rimraf": "^3.0.2",
+				"typescript": "^4.1.3"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "kenchris",
+					"email": "kenneth.christiansen@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run build && ava --fail-fast -s",
+				"build": "rimraf dist/ && tsc",
+				"quicktest": "ava --fail-fast -s",
+				"build:watch": "tsc --watch",
+				"publish-dev": "npm test && VERSION=${npm_package_version%-*}-dev.`git rev-parse --short HEAD` && npm version --no-git-tag-version $VERSION && npm publish --tag dev --allow-same-version"
+			},
+			"lastModified": 0,
+			"_id": "urlpattern-polyfill@0.1.2-dev.1af5421",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-0.1.2-dev.1af5421.tgz",
+				"shasum": "1acc7b0125728b4979f38f272919385136d181f1",
+				"integrity": "sha512-lS6/o8nxIdQFyTBBFko/rKDhRt9AEexCiuKoh6s08hpdUNtf1agRvlQDaQU7ZYpR9zq1SgBHFMTsbFoaHeKjOQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQCumChg+EW0O1sFN4/pZn3etXV576NWS+K5IcJ0yWwwQQIhAPgTZc1ebBmf0OSz0cy0LOvFlCNXbwnO4Ja4OD1fQoj3"
+					}
+				]
+			},
+			"_npmVersion": "6.14.8",
+			"_npmUser": {
+				"name": "kenchris",
+				"email": "kenneth.christiansen@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "1af5421f8123da06539170536babde70426c0dc2",
+			"module": "dist/index.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/urlpattern-polyfill_0.1.2-dev.1af5421_1608230281147_0.9478923310471914",
+				"host": "s3://npm-registry-packages"
+			},
+			"ava": {
+				"require": [
+					"esm"
+				]
+			},
+			"_nodeVersion": "14.13.0",
+			"contributors": []
+		},
+		"7.0.0": {
+			"name": "urlpattern-polyfill",
+			"description": "Polyfill for the URLPattern API",
+			"tags": [
+				"url",
+				"urlpattern",
+				"url-pattern",
+				"browser",
+				"node",
+				"polyfill",
+				"w3c",
+				"wicg"
+			],
+			"version": "7.0.0",
+			"author": "",
+			"homepage": "https://github.com/kenchris/urlpattern-polyfill#readme",
+			"repository": {
+				"url": "git+https://github.com/kenchris/urlpattern-polyfill.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/kenchris/urlpattern-polyfill/issues"
+			},
+			"main": "./index.cjs",
+			"dependencies": {
+				"braces": "^3.0.2"
+			},
+			"devDependencies": {
+				"ava": "^5.1.0",
+				"rimraf": "^3.0.2",
+				"wireit": "^0.7.3",
+				"esbuild": "^0.14.31",
+				"typescript": "^4.7.2",
+				"@ava/typescript": "^3.0.1"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "wanderview",
+					"email": "ben@wanderview.com"
+				},
+				{
+					"name": "sanderelias",
+					"email": "sanderelias@gmail.com"
+				},
+				{
+					"name": "kenchris",
+					"email": "kenneth.christiansen@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "wireit",
+				"build": "wireit",
+				"build:cjs": "wireit",
+				"build:esm": "wireit",
+				"manual-test": "wireit",
+				"publish-dev": "wireit",
+				"publish-prod": "wireit",
+				"copyTypeFiles": "wireit",
+				"prepFakeNodeModules": "wireit"
+			},
+			"lastModified": 0,
+			"_id": "urlpattern-polyfill@7.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-7.0.0.tgz",
+				"shasum": "dc9e5098efc492b4f09bc9fc6acfba545dfb149d",
+				"integrity": "sha512-fErMjbZwveQIk+EY4vxM5GKDuInBOigxmjM6WT2R/cV2ETVyFtDHeU+VmbnfuJ5sp0qNbyUBelTO/60/d+/SSQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIC3F4r+iMlKp/Dswwv2dwZinWdHt/VA6JEDSqWnHe1SMAiBe5GxE/xKATPIkZm9XOf11yRDNn3Uitxt9s8PGX5FvWg=="
+					}
+				]
+			},
+			"_npmVersion": "9.6.4",
+			"_npmUser": {
+				"name": "kenchris",
+				"email": "kenneth.christiansen@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "b650b5026cf1317914228b3eb051fb77bd2dcd5c",
+			"types": "./dist/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./dist/index.d.ts",
+					"import": "./index.js",
+					"require": "./index.cjs"
+				},
+				"./urlpattern": {
+					"types": "./dist/index.d.ts",
+					"import": "./dist/urlpattern.js",
+					"require": "./dist/urlpattern.cjs"
+				}
+			},
+			"module": "./index.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/urlpattern-polyfill_7.0.0_1681227810766_0.6182306533202997",
+				"host": "s3://npm-registry-packages"
+			},
+			"type": "module",
+			"ava": {
+				"files": [
+					"test/**/*",
+					"!test/wpt"
+				],
+				"typescript": {
+					"compile": false,
+					"rewritePaths": {
+						"src/": "dist/"
+					}
+				}
+			},
+			"wireit": {
+				"test": {
+					"files": [
+						"test/**/*"
+					],
+					"watch": "test/**/*",
+					"command": "ava --fail-fast -s",
+					"dependencies": [
+						"prepFakeNodeModules",
+						"build"
+					]
+				},
+				"build": {
+					"dependencies": [
+						"copyTypeFiles"
+					]
+				},
+				"build:cjs": {
+					"files": [
+						"src/**/*"
+					],
+					"output": [
+						"dist/urlpattern.cjs"
+					],
+					"command": "esbuild --bundle --format=cjs src/url-pattern.ts --outfile=dist/urlpattern.cjs"
+				},
+				"build:esm": {
+					"files": [
+						"src/**/*"
+					],
+					"output": [
+						"dist/urlpattern.js"
+					],
+					"command": "esbuild --bundle --format=esm src/url-pattern.ts --outfile=dist/urlpattern.js"
+				},
+				"manual-test": {
+					"command": "npx http-server -o /index.html -p 4203",
+					"dependencies": [
+						"test"
+					]
+				},
+				"publish-dev": {
+					"command": "VERSION=${npm_package_version%-*}-dev.`git rev-parse --short HEAD` && npm version --no-git-tag-version $VERSION && npm publish --tag dev",
+					"dependencies": [
+						"test"
+					]
+				},
+				"publish-prod": {
+					"command": "npm version patch && npm publish",
+					"dependencies": [
+						"test"
+					]
+				},
+				"copyTypeFiles": {
+					"output": [
+						"dist/index.d.ts",
+						"dist/types.d.ts"
+					],
+					"command": "cp ./src/index.d.ts ./src/types.d.ts ./dist",
+					"dependencies": [
+						"build:esm",
+						"build:cjs"
+					]
+				},
+				"prepFakeNodeModules": {
+					"command": "rm -rf node_modules/urlpattern-polyfill; ln -s $(pwd) node_modules/urlpattern-polyfill"
+				}
+			},
+			"_nodeVersion": "18.12.1",
+			"contributors": []
+		},
+		"1.0.0-dev.e1c1eca": {
+			"name": "urlpattern-polyfill",
+			"description": "Polyfill for the proposed URLPattern API",
+			"version": "1.0.0-dev.e1c1eca",
+			"author": "",
+			"homepage": "https://github.com/kenchris/urlpattern-polyfill#readme",
+			"repository": {
+				"url": "git+https://github.com/kenchris/urlpattern-polyfill.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/kenchris/urlpattern-polyfill/issues"
+			},
+			"main": "./dist/index.cjs",
+			"devDependencies": {
+				"ava": "^3.14.0",
+				"esm": "^3.2.25",
+				"rimraf": "^3.0.2",
+				"rollup": "^2.35.1",
+				"microbundle": "^0.13.3"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "kenchris",
+					"email": "kenneth.christiansen@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run build && ava --fail-fast -s",
+				"build": "rimraf dist/ && microbundle",
+				"quicktest": "ava --fail-fast -s",
+				"build:watch": "microbundle watch",
+				"publish-dev": "npm test && VERSION=${npm_package_version%-*}-dev.`git rev-parse --short HEAD` && npm version --no-git-tag-version $VERSION && npm publish --tag dev"
+			},
+			"lastModified": 0,
+			"_id": "urlpattern-polyfill@1.0.0-dev.e1c1eca",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-1.0.0-dev.e1c1eca.tgz",
+				"shasum": "47995faa533b49c23af83881421230714cf150c6",
+				"integrity": "sha512-o/LDjiWlpFqo3ngw/qARwIp9den6BIZCdo7R1tzy4KEa8kPDpkYBFYtSFDKaNjvomRMrXq1O5PtSipCotoWX0Q==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIAbcZcvH0vLEHc3CzaNEcgUNIduKH47NqbWM3Y8ue4wNAiEA5sL6YJxrNuRP3ndKt0dT7qkvXRcMTnbKrBOWBDxPZp0="
+					}
+				]
+			},
+			"_npmVersion": "6.14.8",
+			"_npmUser": {
+				"name": "kenchris",
+				"email": "kenneth.christiansen@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "e1c1eca037d5e3d54862f22b0b557c4b2181a4a2",
+			"unpkg": "./dist/index.umd.js",
+			"module": "./dist/index.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/urlpattern-polyfill_1.0.0-dev.e1c1eca_1625485812460_0.0655056815362276",
+				"host": "s3://npm-registry-packages"
+			},
+			"readmeFilename": "README.md",
+			"ava": {
+				"require": [
+					"esm"
+				]
+			},
+			"_nodeVersion": "14.13.0",
+			"contributors": []
+		},
+		"6.0.2": {
+			"name": "urlpattern-polyfill",
+			"description": "Polyfill for the URLPattern API",
+			"tags": [
+				"url",
+				"urlpattern",
+				"url-pattern",
+				"browser",
+				"node",
+				"polyfill",
+				"w3c",
+				"wicg"
+			],
+			"version": "6.0.2",
+			"author": "",
+			"homepage": "https://github.com/kenchris/urlpattern-polyfill#readme",
+			"repository": {
+				"url": "git+https://github.com/kenchris/urlpattern-polyfill.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/kenchris/urlpattern-polyfill/issues"
+			},
+			"main": "./index.cjs",
+			"dependencies": {
+				"braces": "^3.0.2"
+			},
+			"devDependencies": {
+				"ava": "^5.1.0",
+				"rimraf": "^3.0.2",
+				"wireit": "^0.7.3",
+				"esbuild": "^0.14.31",
+				"typescript": "^4.7.2",
+				"@ava/typescript": "^3.0.1"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "wanderview",
+					"email": "ben@wanderview.com"
+				},
+				{
+					"name": "sanderelias",
+					"email": "sanderelias@gmail.com"
+				},
+				{
+					"name": "kenchris",
+					"email": "kenneth.christiansen@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "wireit",
+				"build": "wireit",
+				"build:cjs": "wireit",
+				"build:esm": "wireit",
+				"manual-test": "wireit",
+				"publish-dev": "wireit",
+				"publish-prod": "wireit",
+				"copyTypeFiles": "wireit",
+				"prepFakeNodeModules": "wireit"
+			},
+			"lastModified": 0,
+			"_id": "urlpattern-polyfill@6.0.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-6.0.2.tgz",
+				"shasum": "a193fe773459865a2a5c93b246bb794b13d07256",
+				"integrity": "sha512-5vZjFlH9ofROmuWmXM9yj2wljYKgWstGwe8YTyiqM7hVum/g9LyCizPZtb3UqsuppVwety9QJmfc42VggLpTgg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIBiG/3m3uoBSmPXDfwVQUq5SSdEBS3exQug8Sn7bAIfHAiEA7HGSSg+Hc2RjALS4nt5sTif+ZRoNkqPzKJXorpZgwNU="
+					}
+				]
+			},
+			"_npmVersion": "8.19.2",
+			"_npmUser": {
+				"name": "sanderelias",
+				"email": "sanderelias@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "d02a0f4fdb056f59e103eee3d0d4f6d0f2df6840",
+			"types": "./dist/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./dist/index.d.ts",
+					"import": "./index.js",
+					"require": "./index.cjs"
+				},
+				"./urlpattern": {
+					"types": "./dist/index.d.ts",
+					"import": "./dist/urlpattern.js",
+					"require": "./dist/urlpattern.cjs"
+				}
+			},
+			"module": "./index.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/urlpattern-polyfill_6.0.2_1668682748367_0.1116383877021414",
+				"host": "s3://npm-registry-packages"
+			},
+			"type": "module",
+			"ava": {
+				"files": [
+					"test/**/*",
+					"!test/wpt"
+				],
+				"typescript": {
+					"compile": false,
+					"rewritePaths": {
+						"src/": "dist/"
+					}
+				}
+			},
+			"wireit": {
+				"test": {
+					"files": [
+						"test/**/*"
+					],
+					"watch": "test/**/*",
+					"command": "ava --fail-fast -s",
+					"dependencies": [
+						"prepFakeNodeModules",
+						"build"
+					]
+				},
+				"build": {
+					"dependencies": [
+						"copyTypeFiles"
+					]
+				},
+				"build:cjs": {
+					"files": [
+						"src/**/*"
+					],
+					"output": [
+						"dist/urlpattern.cjs"
+					],
+					"command": "esbuild --bundle --format=cjs src/url-pattern.ts --outfile=dist/urlpattern.cjs"
+				},
+				"build:esm": {
+					"files": [
+						"src/**/*"
+					],
+					"output": [
+						"dist/urlpattern.js"
+					],
+					"command": "esbuild --bundle --format=esm src/url-pattern.ts --outfile=dist/urlpattern.js"
+				},
+				"manual-test": {
+					"command": "npx http-server -o /index.html -p 4203",
+					"dependencies": [
+						"test"
+					]
+				},
+				"publish-dev": {
+					"command": "VERSION=${npm_package_version%-*}-dev.`git rev-parse --short HEAD` && npm version --no-git-tag-version $VERSION && npm publish --tag dev",
+					"dependencies": [
+						"test"
+					]
+				},
+				"publish-prod": {
+					"command": "npm version patch && npm publish",
+					"dependencies": [
+						"test"
+					]
+				},
+				"copyTypeFiles": {
+					"output": [
+						"dist/index.d.ts",
+						"dist/types.d.ts"
+					],
+					"command": "cp ./src/index.d.ts ./src/types.d.ts ./dist",
+					"dependencies": [
+						"build:esm",
+						"build:cjs"
+					]
+				},
+				"prepFakeNodeModules": {
+					"command": "rm -rf node_modules/urlpattern-polyfill; ln -s $(pwd) node_modules/urlpattern-polyfill"
+				}
+			},
+			"_nodeVersion": "18.12.1",
+			"contributors": []
+		},
+		"10.1.0": {
+			"name": "urlpattern-polyfill",
+			"description": "Polyfill for the URLPattern API",
+			"tags": [
+				"url",
+				"urlpattern",
+				"url-pattern",
+				"browser",
+				"node",
+				"polyfill",
+				"w3c",
+				"wicg"
+			],
+			"version": "10.1.0",
+			"author": "",
+			"homepage": "https://github.com/kenchris/urlpattern-polyfill#readme",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/kenchris/urlpattern-polyfill.git"
+			},
+			"bugs": {
+				"url": "https://github.com/kenchris/urlpattern-polyfill/issues"
+			},
+			"main": "./index.cjs",
+			"dependencies": {},
+			"devDependencies": {
+				"@ava/typescript": "^4.0.0",
+				"ava": "^5.3.0",
+				"esbuild": "^0.17.19",
+				"rimraf": "^5.0.1",
+				"typescript": "^5.1.3",
+				"wireit": "^0.9.5"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "wanderview",
+					"email": "ben@wanderview.com"
+				},
+				{
+					"name": "sanderelias",
+					"email": "sanderelias@gmail.com"
+				},
+				{
+					"name": "kenchris",
+					"email": "kenneth.christiansen@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"build": "wireit",
+				"sync-wpt": "wireit",
+				"test": "wireit",
+				"manual-test": "wireit",
+				"publish-dev": "wireit",
+				"publish-patch": "wireit",
+				"publish-major": "wireit"
+			},
+			"lastModified": 0,
+			"_id": "urlpattern-polyfill@10.1.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-10.1.0.tgz",
+				"shasum": "1b2517e614136c73ba32948d5e7a3a063cba8e74",
+				"integrity": "sha512-IGjKp/o0NL3Bso1PymYURCJxMPNAf/ILOpendP9f5B6e1rTJgdgiOvgfoT8VxCAdY+Wisb9uhGaJJf3yZ2V9nw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEQCIAa/+d0CZq5bQ/7F5HlyajpMcLYYMd5n5QTQEBIzdOMfAiBU4vn2fYZ7YBffBZ2aVp+HjA4mWAWACo+GNeeUCtnFWw=="
+					}
+				]
+			},
+			"_npmVersion": "10.9.2",
+			"_npmUser": {
+				"name": "sanderelias",
+				"email": "sanderelias@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "8cdbab265bf67b75101505a8a20f9e0e381be80f",
+			"types": "./dist/index.d.ts",
+			"exports": {
+				"./urlpattern": {
+					"types": "./dist/index.d.ts",
+					"import": "./dist/urlpattern.js",
+					"require": "./dist/urlpattern.cjs"
+				},
+				".": {
+					"types": "./dist/index.d.ts",
+					"import": "./index.js",
+					"require": "./index.cjs"
+				}
+			},
+			"module": "./index.js",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages-npm-production",
+				"tmp": "tmp/urlpattern-polyfill_10.1.0_1746688455047_0.1854334153232251"
+			},
+			"type": "module",
+			"ava": {
+				"files": [
+					"test/**/*",
+					"!test/wpt"
+				],
+				"typescript": {
+					"rewritePaths": {
+						"src/": "dist/"
+					},
+					"compile": false
+				}
+			},
+			"wireit": {
+				"build:esm": {
+					"command": "esbuild --bundle --format=esm src/url-pattern.ts --outfile=dist/urlpattern.js --minify --keep-names --target=es2022",
+					"output": [
+						"dist/urlpattern.js"
+					],
+					"files": [
+						"src/**/*"
+					]
+				},
+				"build:cjs": {
+					"command": "esbuild --bundle --format=cjs src/url-pattern.ts --outfile=dist/urlpattern.cjs --minify --keep-names --target=es2022",
+					"output": [
+						"dist/urlpattern.cjs"
+					],
+					"files": [
+						"src/**/*"
+					]
+				},
+				"copyTypeFiles": {
+					"command": "cp ./src/index.d.ts ./src/types.d.ts ./dist",
+					"output": [
+						"dist/index.d.ts",
+						"dist/types.d.ts"
+					],
+					"dependencies": [
+						"build:esm",
+						"build:cjs"
+					]
+				},
+				"build": {
+					"dependencies": [
+						"copyTypeFiles"
+					]
+				},
+				"prepFakeNodeModules": {
+					"command": "rm -rf node_modules/urlpattern-polyfill; ln -s $(pwd) node_modules/urlpattern-polyfill"
+				},
+				"sync-wpt": {
+					"command": "cd test && wget http://wpt.live/urlpattern/resources/urlpatterntestdata.json && wget http://wpt.live/urlpattern/resources/urlpattern-compare-test-data.json"
+				},
+				"test": {
+					"command": "ava --timeout=60s",
+					"watch": "test/**/*",
+					"files": [
+						"test/**/*"
+					],
+					"dependencies": [
+						"prepFakeNodeModules",
+						"build"
+					]
+				},
+				"manual-test": {
+					"command": "npx http-server -o /index.html -p 4203",
+					"dependencies": [
+						"test"
+					]
+				},
+				"publish-dev": {
+					"command": "VERSION=${npm_package_version%-*}-dev.`git rev-parse --short HEAD` && npm version --no-git-tag-version $VERSION && npm publish --tag dev",
+					"dependencies": [
+						"test"
+					]
+				},
+				"publish-patch": {
+					"command": "npm version patch && npm publish",
+					"dependencies": [
+						"test"
+					]
+				},
+				"publish-major": {
+					"command": "npm version major && npm publish",
+					"dependencies": [
+						"test"
+					]
+				}
+			},
+			"_nodeVersion": "22.15.0",
+			"contributors": []
+		},
+		"10.0.0": {
+			"name": "urlpattern-polyfill",
+			"description": "Polyfill for the URLPattern API",
+			"tags": [
+				"url",
+				"urlpattern",
+				"url-pattern",
+				"browser",
+				"node",
+				"polyfill",
+				"w3c",
+				"wicg"
+			],
+			"version": "10.0.0",
+			"author": "",
+			"homepage": "https://github.com/kenchris/urlpattern-polyfill#readme",
+			"repository": {
+				"url": "git+https://github.com/kenchris/urlpattern-polyfill.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/kenchris/urlpattern-polyfill/issues"
+			},
+			"main": "./index.cjs",
+			"dependencies": {},
+			"devDependencies": {
+				"ava": "^5.3.0",
+				"rimraf": "^5.0.1",
+				"wireit": "^0.9.5",
+				"esbuild": "^0.17.19",
+				"typescript": "^5.1.3",
+				"@ava/typescript": "^4.0.0"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "wanderview",
+					"email": "ben@wanderview.com"
+				},
+				{
+					"name": "sanderelias",
+					"email": "sanderelias@gmail.com"
+				},
+				{
+					"name": "kenchris",
+					"email": "kenneth.christiansen@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "wireit",
+				"build": "wireit",
+				"sync-wpt": "wireit",
+				"manual-test": "wireit",
+				"publish-dev": "wireit",
+				"publish-major": "wireit",
+				"publish-patch": "wireit"
+			},
+			"lastModified": 0,
+			"_id": "urlpattern-polyfill@10.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-10.0.0.tgz",
+				"shasum": "f0a03a97bfb03cdf33553e5e79a2aadd22cac8ec",
+				"integrity": "sha512-H/A06tKD7sS1O1X2SshBVeA5FLycRpjqiBeqGKmBwBDBy28EnRjORxTNe269KSSr5un5qyWi1iL61wLxpd+ZOg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCICKUEZjG1gcvDDZrfI91qpaNP2qtW4ZYnIRKqhDdpvMtAiEAn+vOD2oZxHmOfQLNErRBnR+yGLlo4nwRhcdnnoAKP7I="
+					}
+				]
+			},
+			"_npmVersion": "9.6.4",
+			"_npmUser": {
+				"name": "kenchris",
+				"email": "kenneth.christiansen@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "039357b28b68e3d68f59d7c6af0138cd25a91914",
+			"types": "./dist/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./dist/index.d.ts",
+					"import": "./index.js",
+					"require": "./index.cjs"
+				},
+				"./urlpattern": {
+					"types": "./dist/index.d.ts",
+					"import": "./dist/urlpattern.js",
+					"require": "./dist/urlpattern.cjs"
+				}
+			},
+			"module": "./index.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/urlpattern-polyfill_10.0.0_1706017658579_0.3850550449006711",
+				"host": "s3://npm-registry-packages"
+			},
+			"type": "module",
+			"ava": {
+				"files": [
+					"test/**/*",
+					"!test/wpt"
+				],
+				"typescript": {
+					"compile": false,
+					"rewritePaths": {
+						"src/": "dist/"
+					}
+				}
+			},
+			"wireit": {
+				"test": {
+					"files": [
+						"test/**/*"
+					],
+					"watch": "test/**/*",
+					"command": "ava --timeout=60s",
+					"dependencies": [
+						"prepFakeNodeModules",
+						"build"
+					]
+				},
+				"build": {
+					"dependencies": [
+						"copyTypeFiles"
+					]
+				},
+				"sync-wpt": {
+					"command": "cd test && wget http://wpt.live/urlpattern/resources/urlpatterntestdata.json && wget http://wpt.live/urlpattern/resources/urlpattern-compare-test-data.json"
+				},
+				"build:cjs": {
+					"files": [
+						"src/**/*"
+					],
+					"output": [
+						"dist/urlpattern.cjs"
+					],
+					"command": "esbuild --bundle --format=cjs src/url-pattern.ts --outfile=dist/urlpattern.cjs --minify --target=es2022"
+				},
+				"build:esm": {
+					"files": [
+						"src/**/*"
+					],
+					"output": [
+						"dist/urlpattern.js"
+					],
+					"command": "esbuild --bundle --format=esm src/url-pattern.ts --outfile=dist/urlpattern.js --minify --target=es2022"
+				},
+				"manual-test": {
+					"command": "npx http-server -o /index.html -p 4203",
+					"dependencies": [
+						"test"
+					]
+				},
+				"publish-dev": {
+					"command": "VERSION=${npm_package_version%-*}-dev.`git rev-parse --short HEAD` && npm version --no-git-tag-version $VERSION && npm publish --tag dev",
+					"dependencies": [
+						"test"
+					]
+				},
+				"copyTypeFiles": {
+					"output": [
+						"dist/index.d.ts",
+						"dist/types.d.ts"
+					],
+					"command": "cp ./src/index.d.ts ./src/types.d.ts ./dist",
+					"dependencies": [
+						"build:esm",
+						"build:cjs"
+					]
+				},
+				"publish-major": {
+					"command": "npm version major && npm publish",
+					"dependencies": [
+						"test"
+					]
+				},
+				"publish-patch": {
+					"command": "npm version patch && npm publish",
+					"dependencies": [
+						"test"
+					]
+				},
+				"prepFakeNodeModules": {
+					"command": "rm -rf node_modules/urlpattern-polyfill; ln -s $(pwd) node_modules/urlpattern-polyfill"
+				}
+			},
+			"_nodeVersion": "18.12.1",
+			"contributors": []
+		},
+		"6.0.1": {
+			"name": "urlpattern-polyfill",
+			"description": "Polyfill for the URLPattern API",
+			"tags": [
+				"url",
+				"urlpattern",
+				"url-pattern",
+				"browser",
+				"node",
+				"polyfill",
+				"w3c",
+				"wicg"
+			],
+			"version": "6.0.1",
+			"author": "",
+			"homepage": "https://github.com/kenchris/urlpattern-polyfill#readme",
+			"repository": {
+				"url": "git+https://github.com/kenchris/urlpattern-polyfill.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/kenchris/urlpattern-polyfill/issues"
+			},
+			"main": "./index.cjs",
+			"devDependencies": {
+				"ava": "^4.1.0",
+				"rimraf": "^3.0.2",
+				"wireit": "^0.4.3",
+				"esbuild": "^0.14.31",
+				"typescript": "^4.7.2",
+				"@ava/typescript": "^3.0.1"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "wanderview",
+					"email": "ben@wanderview.com"
+				},
+				{
+					"name": "sanderelias",
+					"email": "sanderelias@gmail.com"
+				},
+				{
+					"name": "kenchris",
+					"email": "kenneth.christiansen@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "wireit",
+				"build": "wireit",
+				"build:cjs": "wireit",
+				"build:esm": "wireit",
+				"manual-test": "wireit",
+				"publish-dev": "wireit",
+				"publish-prod": "wireit",
+				"copyTypeFiles": "wireit",
+				"prepFakeNodeModules": "wireit"
+			},
+			"lastModified": 0,
+			"_id": "urlpattern-polyfill@6.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-6.0.1.tgz",
+				"shasum": "1d77f9ce21b0e5856ca5d801a9089db5555b26a7",
+				"integrity": "sha512-yYRsuTJgYRbxYduTSJQhTitEoT3aK7WcH3cdt0A4TKP6lMP89b07yJ9uL8NhtvzA/OYbiT1HK7yS0miJYLe7cw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIHt3FuBOXoPfwVBh2XXIcop626HUYdljvKpHddo09WmOAiEAzUtu80jruDo4F3QYXRlb667Vx97kIQJvgdHsc9UBfQE="
+					}
+				]
+			},
+			"_npmVersion": "8.1.2",
+			"_npmUser": {
+				"name": "kenchris",
+				"email": "kenneth.christiansen@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "8eb1bead647e1a4978d0e342bb480f985465189e",
+			"types": "./dist/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./dist/index.d.ts",
+					"import": "./index.js",
+					"require": "./index.cjs"
+				},
+				"./urlpattern": {
+					"types": "./dist/index.d.ts",
+					"import": "./dist/urlpattern.js",
+					"require": "./dist/urlpattern.cjs"
+				}
+			},
+			"module": "./index.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/urlpattern-polyfill_6.0.1_1664392718732_0.8024392100127302",
+				"host": "s3://npm-registry-packages"
+			},
+			"type": "module",
+			"ava": {
+				"files": [
+					"test/**/*",
+					"!test/wpt"
+				],
+				"typescript": {
+					"compile": false,
+					"rewritePaths": {
+						"src/": "dist/"
+					}
+				}
+			},
+			"wireit": {
+				"test": {
+					"files": [
+						"test/**/*"
+					],
+					"watch": "test/**/*",
+					"command": "ava --fail-fast -s",
+					"dependencies": [
+						"prepFakeNodeModules",
+						"build"
+					]
+				},
+				"build": {
+					"dependencies": [
+						"copyTypeFiles"
+					]
+				},
+				"build:cjs": {
+					"files": [
+						"src/**/*"
+					],
+					"output": [
+						"dist/urlpattern.cjs"
+					],
+					"command": "esbuild --bundle --format=cjs src/url-pattern.ts --outfile=dist/urlpattern.cjs"
+				},
+				"build:esm": {
+					"files": [
+						"src/**/*"
+					],
+					"output": [
+						"dist/urlpattern.js"
+					],
+					"command": "esbuild --bundle --format=esm src/url-pattern.ts --outfile=dist/urlpattern.js"
+				},
+				"manual-test": {
+					"command": "npx http-server -o /index.html -p 4203",
+					"dependencies": [
+						"test"
+					]
+				},
+				"publish-dev": {
+					"command": "VERSION=${npm_package_version%-*}-dev.`git rev-parse --short HEAD` && npm version --no-git-tag-version $VERSION && npm publish --tag dev",
+					"dependencies": [
+						"test"
+					]
+				},
+				"publish-prod": {
+					"command": "npm version patch && npm publish",
+					"dependencies": [
+						"test"
+					]
+				},
+				"copyTypeFiles": {
+					"output": [
+						"dist/index.d.ts",
+						"dist/types.d.ts"
+					],
+					"command": "cp ./src/index.d.ts ./src/types.d.ts ./dist",
+					"dependencies": [
+						"build:esm",
+						"build:cjs"
+					]
+				},
+				"prepFakeNodeModules": {
+					"command": "rm -rf node_modules/urlpattern-polyfill; ln -s $(pwd) node_modules/urlpattern-polyfill"
+				}
+			},
+			"_nodeVersion": "16.13.2",
+			"contributors": []
+		},
+		"1.0.0-rc4": {
+			"name": "urlpattern-polyfill",
+			"description": "Polyfill for the proposed URLPattern API",
+			"version": "1.0.0-rc4",
+			"author": "",
+			"homepage": "https://github.com/kenchris/urlpattern-polyfill#readme",
+			"repository": {
+				"url": "git+https://github.com/kenchris/urlpattern-polyfill.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/kenchris/urlpattern-polyfill/issues"
+			},
+			"main": "./dist/index.umd.js",
+			"dependencies": {},
+			"devDependencies": {
+				"ava": "^3.14.0",
+				"esm": "^3.2.25",
+				"rimraf": "^3.0.2",
+				"rollup": "^2.35.1",
+				"microbundle": "^0.13.3"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "wanderview",
+					"email": "ben@wanderview.com"
+				},
+				{
+					"name": "kenchris",
+					"email": "kenneth.christiansen@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run build && ava --fail-fast -s",
+				"build": "rimraf dist/ && microbundle",
+				"quicktest": "ava --fail-fast -s",
+				"build:watch": "microbundle watch",
+				"publish-dev": "npm test && VERSION=${npm_package_version%-*}-dev.`git rev-parse --short HEAD` && npm version --no-git-tag-version $VERSION && npm publish --tag dev"
+			},
+			"lastModified": 0,
+			"_id": "urlpattern-polyfill@1.0.0-rc4",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-1.0.0-rc4.tgz",
+				"shasum": "7cb62228bf96eb489e1c8f6d67b4ef659a4f8353",
+				"integrity": "sha512-ZGNulZpt4nqZDIL5xcLMoLzISKOGXIND3MEXL8sxu39S0gUprl5AWCw8hp0cgSEagUj8ODkb0xUD4LxL4TtPVA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIDYFdzjW5xuAO98pg+k6EDcynIXEW4uszSoS4Tn8U/xiAiA2ECb2TS+tMQlVbCG+sDw5+YL8cvAkxAnHuseCHko8Sw=="
+					}
+				]
+			},
+			"_npmVersion": "6.14.8",
+			"_npmUser": {
+				"name": "kenchris",
+				"email": "kenneth.christiansen@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "a0162c91c1dff569b8e4a6f3290bd5bed8c78dbe",
+			"types": "./dist/index.d.ts",
+			"exports": "./dist/index.js",
+			"unpkg": "./dist/index.umd.js",
+			"module": "./dist/index.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/urlpattern-polyfill_1.0.0-rc4_1642663375835_0.7285492796055035",
+				"host": "s3://npm-registry-packages"
+			},
+			"type": "module",
+			"ava": {
+				"require": [
+					"esm"
+				]
+			},
+			"_nodeVersion": "14.13.0",
+			"contributors": []
+		},
+		"5.0.0": {
+			"name": "urlpattern-polyfill",
+			"description": "Polyfill for the URLPattern API",
+			"tags": [
+				"url",
+				"urlpattern",
+				"url-pattern",
+				"browser",
+				"node",
+				"polyfill",
+				"w3c",
+				"wicg"
+			],
+			"version": "5.0.0",
+			"author": "",
+			"homepage": "https://github.com/kenchris/urlpattern-polyfill#readme",
+			"repository": {
+				"url": "git+https://github.com/kenchris/urlpattern-polyfill.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/kenchris/urlpattern-polyfill/issues"
+			},
+			"main": "./index.cjs",
+			"devDependencies": {
+				"ava": "^4.1.0",
+				"rimraf": "^3.0.2",
+				"esbuild": "^0.14.31",
+				"typescript": "^4.6.3",
+				"@ava/typescript": "^3.0.1"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "wanderview",
+					"email": "ben@wanderview.com"
+				},
+				{
+					"name": "sanderelias",
+					"email": "sanderelias@gmail.com"
+				},
+				{
+					"name": "kenchris",
+					"email": "kenneth.christiansen@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "ava --fail-fast -s",
+				"build": "npm run build:esm && npm run build:cjs && npm run copy:dts",
+				"pretest": "npm run build; rm -rf node_modules/urlpattern-polyfill; ln -s $(pwd) node_modules/urlpattern-polyfill",
+				"copy:dts": "cp ./src/index.d.ts ./src/types.d.ts ./dist",
+				"prebuild": "rimraf dist",
+				"build:cjs": "esbuild --bundle --format=cjs src/url-pattern.ts --outfile=dist/urlpattern.cjs",
+				"build:esm": "esbuild --bundle --format=esm src/url-pattern.ts --outfile=dist/urlpattern.js",
+				"manual-test": "npx http-server -o /index.html -p 4203",
+				"publish-dev": "npm test && VERSION=${npm_package_version%-*}-dev.`git rev-parse --short HEAD` && npm version --no-git-tag-version $VERSION && npm publish --tag dev"
+			},
+			"lastModified": 0,
+			"_id": "urlpattern-polyfill@5.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-5.0.0.tgz",
+				"shasum": "78608921c82abc50d35870432395fd30fcbe6430",
+				"integrity": "sha512-lCF8s9P/IEXEd3tFNLniseJ4suFj+cmutMQN2cUe7aXD9CqU2qJufM6pGUuhGVbdFKzIzR4gsIJZbmSPbnA+Uw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQD6ykS2xZZiVMyQCVyozLYkMrKj/BJk8jqZGhbox8jlygIhAOpoCUAVsFzx5PxGz7nr3p1U9eLlTZXoCQ5deSKwyBZE"
+					}
+				]
+			},
+			"_npmVersion": "8.1.2",
+			"_npmUser": {
+				"name": "kenchris",
+				"email": "kenneth.christiansen@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "4a6704368e485667698053e62a81c06430eb1358",
+			"types": "./dist/index.d.ts",
+			"exports": {
+				".": {
+					"import": "./index.js",
+					"require": "./index.cjs"
+				},
+				"./urlpattern": {
+					"import": "./dist/urlpattern.js",
+					"require": "./dist/urlpattern.cjs"
+				}
+			},
+			"module": "./index.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/urlpattern-polyfill_5.0.0_1653295362361_0.43700038738025326",
+				"host": "s3://npm-registry-packages"
+			},
+			"type": "module",
+			"ava": {
+				"files": [
+					"test/**/*",
+					"!test/wpt"
+				],
+				"typescript": {
+					"compile": false,
+					"rewritePaths": {
+						"src/": "dist/"
+					}
+				}
+			},
+			"_nodeVersion": "16.13.2",
+			"contributors": []
+		},
+		"1.0.0-rc2": {
+			"name": "urlpattern-polyfill",
+			"description": "Polyfill for the proposed URLPattern API",
+			"version": "1.0.0-rc2",
+			"author": "",
+			"homepage": "https://github.com/kenchris/urlpattern-polyfill#readme",
+			"repository": {
+				"url": "git+https://github.com/kenchris/urlpattern-polyfill.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/kenchris/urlpattern-polyfill/issues"
+			},
+			"main": "./dist/index.umd.js",
+			"dependencies": {},
+			"devDependencies": {
+				"ava": "^3.14.0",
+				"esm": "^3.2.25",
+				"rimraf": "^3.0.2",
+				"rollup": "^2.35.1",
+				"microbundle": "^0.13.3"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "wanderview",
+					"email": "ben@wanderview.com"
+				},
+				{
+					"name": "kenchris",
+					"email": "kenneth.christiansen@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run build && ava --fail-fast -s",
+				"build": "rimraf dist/ && microbundle",
+				"quicktest": "ava --fail-fast -s",
+				"build:watch": "microbundle watch",
+				"publish-dev": "npm test && VERSION=${npm_package_version%-*}-dev.`git rev-parse --short HEAD` && npm version --no-git-tag-version $VERSION && npm publish --tag dev"
+			},
+			"lastModified": 0,
+			"_id": "urlpattern-polyfill@1.0.0-rc2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-1.0.0-rc2.tgz",
+				"shasum": "f2cd0f24f3fade1939d8e7f6735d1f6cb0e1de78",
+				"integrity": "sha512-EH9NRgPZHXE00CkUfT8BXkpN3zuuAfrS1+GcKqDOUyIwI+a2LwV/jtuHaxMWFzFT/x3/uvR/J5G0hEO4KWwj6A==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIAdAWRbW5pXQdDkqEVEBLGghbI5YBUtVLTa0gIW5qvToAiEA5BS7rASd7jRkZ1F3p1bwDh/gqET8GZtJNd6ajBi7mI8="
+					}
+				]
+			},
+			"_npmVersion": "6.14.8",
+			"_npmUser": {
+				"name": "kenchris",
+				"email": "kenneth.christiansen@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "54482cbd500683b3f67399a9aace57bc0988e94d",
+			"types": "./dist/index.d.ts",
+			"exports": "./dist/index.js",
+			"unpkg": "./dist/index.umd.js",
+			"module": "./dist/index.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/urlpattern-polyfill_1.0.0-rc2_1642079721239_0.8094701359085412",
+				"host": "s3://npm-registry-packages"
+			},
+			"type": "module",
+			"ava": {
+				"require": [
+					"esm"
+				]
+			},
+			"_nodeVersion": "14.13.0",
+			"contributors": []
+		},
+		"5.0.1": {
+			"name": "urlpattern-polyfill",
+			"description": "Polyfill for the URLPattern API",
+			"tags": [
+				"url",
+				"urlpattern",
+				"url-pattern",
+				"browser",
+				"node",
+				"polyfill",
+				"w3c",
+				"wicg"
+			],
+			"version": "5.0.1",
+			"author": "",
+			"homepage": "https://github.com/kenchris/urlpattern-polyfill#readme",
+			"repository": {
+				"url": "git+https://github.com/kenchris/urlpattern-polyfill.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/kenchris/urlpattern-polyfill/issues"
+			},
+			"main": "./index.cjs",
+			"devDependencies": {
+				"ava": "^4.1.0",
+				"rimraf": "^3.0.2",
+				"wireit": "^0.4.3",
+				"esbuild": "^0.14.31",
+				"typescript": "^4.7.2",
+				"@ava/typescript": "^3.0.1"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "wanderview",
+					"email": "ben@wanderview.com"
+				},
+				{
+					"name": "sanderelias",
+					"email": "sanderelias@gmail.com"
+				},
+				{
+					"name": "kenchris",
+					"email": "kenneth.christiansen@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "wireit",
+				"build": "wireit",
+				"build:cjs": "wireit",
+				"build:esm": "wireit",
+				"manual-test": "wireit",
+				"publish-dev": "wireit",
+				"copyTypeFiles": "wireit",
+				"prepFakeNodeModules": "wireit"
+			},
+			"lastModified": 0,
+			"_id": "urlpattern-polyfill@5.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-5.0.1.tgz",
+				"shasum": "770a1d2796d481d0c07871d7103c86d9740fea52",
+				"integrity": "sha512-rd/NQPbkzokDme0T5CUKqyV1+Xcq1Z+MP7oRV/2/LsU+kaC60V3NvVqeVk0Ce3iAskjFBva5yxgokoXq0agNtA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDxFgHCVF5k69wDWQrfOmksr16H/Kmc8sLNCfNcQw9ETwIhAPnAcu6t/tsW1PZbmTbhK/EJG66cM7WpahhncX5bMd4Q"
+					}
+				]
+			},
+			"_npmVersion": "8.8.0",
+			"_npmUser": {
+				"name": "sanderelias",
+				"email": "sanderelias@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "e3f3a0b7428c6e42301ab8384838e4544293068a",
+			"types": "./dist/index.d.ts",
+			"exports": {
+				".": {
+					"import": "./index.js",
+					"require": "./index.cjs"
+				},
+				"./urlpattern": {
+					"import": "./dist/urlpattern.js",
+					"require": "./dist/urlpattern.cjs"
+				}
+			},
+			"module": "./index.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/urlpattern-polyfill_5.0.1_1653468702456_0.3905835828160362",
+				"host": "s3://npm-registry-packages"
+			},
+			"type": "module",
+			"ava": {
+				"files": [
+					"test/**/*",
+					"!test/wpt"
+				],
+				"typescript": {
+					"compile": false,
+					"rewritePaths": {
+						"src/": "dist/"
+					}
+				}
+			},
+			"wireit": {
+				"test": {
+					"files": [
+						"test/**/*"
+					],
+					"watch": "test/**/*",
+					"command": "ava --fail-fast -s",
+					"dependencies": [
+						"prepFakeNodeModules",
+						"build"
+					]
+				},
+				"build": {
+					"dependencies": [
+						"copyTypeFiles"
+					]
+				},
+				"build:cjs": {
+					"files": [
+						"src/**/*"
+					],
+					"output": [
+						"dist/urlpattern.cjs"
+					],
+					"command": "esbuild --bundle --format=cjs src/url-pattern.ts --outfile=dist/urlpattern.cjs"
+				},
+				"build:esm": {
+					"files": [
+						"src/**/*"
+					],
+					"output": [
+						"dist/urlpattern.js"
+					],
+					"command": "esbuild --bundle --format=esm src/url-pattern.ts --outfile=dist/urlpattern.js"
+				},
+				"manual-test": {
+					"command": "npx http-server -o /index.html -p 4203",
+					"dependencies": [
+						"test"
+					]
+				},
+				"publish-dev": {
+					"command": "VERSION=${npm_package_version%-*}-dev.`git rev-parse --short HEAD` && npm version --no-git-tag-version $VERSION && npm publish --tag dev",
+					"dependencies": [
+						"test"
+					]
+				},
+				"copyTypeFiles": {
+					"output": [
+						"dist/index.d.ts",
+						"dist/types.d.ts"
+					],
+					"command": "cp ./src/index.d.ts ./src/types.d.ts ./dist",
+					"dependencies": [
+						"build:esm",
+						"build:cjs"
+					]
+				},
+				"prepFakeNodeModules": {
+					"command": "rm -rf node_modules/urlpattern-polyfill; ln -s $(pwd) node_modules/urlpattern-polyfill"
+				}
+			},
+			"_nodeVersion": "18.1.0",
+			"contributors": []
+		},
+		"1.0.0-rc1": {
+			"name": "urlpattern-polyfill",
+			"description": "Polyfill for the proposed URLPattern API",
+			"version": "1.0.0-rc1",
+			"author": "",
+			"homepage": "https://github.com/kenchris/urlpattern-polyfill#readme",
+			"repository": {
+				"url": "git+https://github.com/kenchris/urlpattern-polyfill.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/kenchris/urlpattern-polyfill/issues"
+			},
+			"main": "./dist/index.cjs",
+			"devDependencies": {
+				"ava": "^3.14.0",
+				"esm": "^3.2.25",
+				"rimraf": "^3.0.2",
+				"rollup": "^2.35.1",
+				"microbundle": "^0.13.3"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "kenchris",
+					"email": "kenneth.christiansen@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run build && ava --fail-fast -s",
+				"build": "rimraf dist/ && microbundle",
+				"quicktest": "ava --fail-fast -s",
+				"build:watch": "microbundle watch",
+				"publish-dev": "npm test && VERSION=${npm_package_version%-*}-dev.`git rev-parse --short HEAD` && npm version --no-git-tag-version $VERSION && npm publish --tag dev"
+			},
+			"lastModified": 0,
+			"_id": "urlpattern-polyfill@1.0.0-rc1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-1.0.0-rc1.tgz",
+				"shasum": "88b89983c5f3b2ea4b1d6c75862e19f902d72d3c",
+				"integrity": "sha512-OOH7VgVY4ShouTrd+raK3L6CpplYa24DfHTDW0t1OCeW8cSS4jkM62gvkHdKM4HKvU74klciKAq1SJ9rGFWX1g==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQC4+JvecRGJa3nYnIdLyXwXpplJES3y1zSL7OxvOYF50gIgBuquN9TwX0+aKbj1aWYSjPUmHN056FJ/o6z3z1T5tik="
+					}
+				]
+			},
+			"_npmVersion": "6.14.8",
+			"_npmUser": {
+				"name": "kenchris",
+				"email": "kenneth.christiansen@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "bcfa5d82b5c6f195a85ffb1fa66b5840e8eb6a45",
+			"unpkg": "./dist/index.umd.js",
+			"module": "./dist/index.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/urlpattern-polyfill_1.0.0-rc1_1625485924729_0.1918939934771593",
+				"host": "s3://npm-registry-packages"
+			},
+			"ava": {
+				"require": [
+					"esm"
+				]
+			},
+			"_nodeVersion": "14.13.0",
+			"contributors": []
+		},
+		"5.0.2": {
+			"name": "urlpattern-polyfill",
+			"description": "Polyfill for the URLPattern API",
+			"tags": [
+				"url",
+				"urlpattern",
+				"url-pattern",
+				"browser",
+				"node",
+				"polyfill",
+				"w3c",
+				"wicg"
+			],
+			"version": "5.0.2",
+			"author": "",
+			"homepage": "https://github.com/kenchris/urlpattern-polyfill#readme",
+			"repository": {
+				"url": "git+https://github.com/kenchris/urlpattern-polyfill.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/kenchris/urlpattern-polyfill/issues"
+			},
+			"main": "./index.cjs",
+			"devDependencies": {
+				"ava": "^4.1.0",
+				"rimraf": "^3.0.2",
+				"wireit": "^0.4.3",
+				"esbuild": "^0.14.31",
+				"typescript": "^4.7.2",
+				"@ava/typescript": "^3.0.1"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "wanderview",
+					"email": "ben@wanderview.com"
+				},
+				{
+					"name": "sanderelias",
+					"email": "sanderelias@gmail.com"
+				},
+				{
+					"name": "kenchris",
+					"email": "kenneth.christiansen@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "wireit",
+				"build": "wireit",
+				"build:cjs": "wireit",
+				"build:esm": "wireit",
+				"manual-test": "wireit",
+				"publish-dev": "wireit",
+				"copyTypeFiles": "wireit",
+				"prepFakeNodeModules": "wireit"
+			},
+			"lastModified": 0,
+			"_id": "urlpattern-polyfill@5.0.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-5.0.2.tgz",
+				"shasum": "ac6d07d68fc91fdfe7d9fb9fef1d42aacfe09fd6",
+				"integrity": "sha512-f4leS4CjbDESAR/TnA7P0SSduhx5ioVEZa/sYeuQjC41sDN+ZMG1UzUs2F9VKaYVC21ek7iLVPHmSlXvsm2HBg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIGKNsdhK6juriUP03pZVeJZcCTsCP3Zr3R5iCkAMSDF7AiBKctiCo4A8YJO0635uOtRbw36OSuP2Ot3hjiADVTgpuw=="
+					}
+				]
+			},
+			"_npmVersion": "8.11.0",
+			"_npmUser": {
+				"name": "sanderelias",
+				"email": "sanderelias@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "c15778edf3e6fd6e3da2155ae2cdb23d002f76dc",
+			"types": "./dist/index.d.ts",
+			"exports": {
+				".": {
+					"import": "./index.js",
+					"require": "./index.cjs"
+				},
+				"./urlpattern": {
+					"import": "./dist/urlpattern.js",
+					"require": "./dist/urlpattern.cjs"
+				}
+			},
+			"module": "./index.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/urlpattern-polyfill_5.0.2_1653639794795_0.48398625031409037",
+				"host": "s3://npm-registry-packages"
+			},
+			"type": "module",
+			"ava": {
+				"files": [
+					"test/**/*",
+					"!test/wpt"
+				],
+				"typescript": {
+					"compile": false,
+					"rewritePaths": {
+						"src/": "dist/"
+					}
+				}
+			},
+			"wireit": {
+				"test": {
+					"files": [
+						"test/**/*"
+					],
+					"watch": "test/**/*",
+					"command": "ava --fail-fast -s",
+					"dependencies": [
+						"prepFakeNodeModules",
+						"build"
+					]
+				},
+				"build": {
+					"dependencies": [
+						"copyTypeFiles"
+					]
+				},
+				"build:cjs": {
+					"files": [
+						"src/**/*"
+					],
+					"output": [
+						"dist/urlpattern.cjs"
+					],
+					"command": "esbuild --bundle --format=cjs src/url-pattern.ts --outfile=dist/urlpattern.cjs"
+				},
+				"build:esm": {
+					"files": [
+						"src/**/*"
+					],
+					"output": [
+						"dist/urlpattern.js"
+					],
+					"command": "esbuild --bundle --format=esm src/url-pattern.ts --outfile=dist/urlpattern.js"
+				},
+				"manual-test": {
+					"command": "npx http-server -o /index.html -p 4203",
+					"dependencies": [
+						"test"
+					]
+				},
+				"publish-dev": {
+					"command": "VERSION=${npm_package_version%-*}-dev.`git rev-parse --short HEAD` && npm version --no-git-tag-version $VERSION && npm publish --tag dev",
+					"dependencies": [
+						"test"
+					]
+				},
+				"copyTypeFiles": {
+					"output": [
+						"dist/index.d.ts",
+						"dist/types.d.ts"
+					],
+					"command": "cp ./src/index.d.ts ./src/types.d.ts ./dist",
+					"dependencies": [
+						"build:esm",
+						"build:cjs"
+					]
+				},
+				"prepFakeNodeModules": {
+					"command": "rm -rf node_modules/urlpattern-polyfill; ln -s $(pwd) node_modules/urlpattern-polyfill"
+				}
+			},
+			"_nodeVersion": "18.2.0",
+			"contributors": []
+		},
+		"5.0.3": {
+			"name": "urlpattern-polyfill",
+			"description": "Polyfill for the URLPattern API",
+			"tags": [
+				"url",
+				"urlpattern",
+				"url-pattern",
+				"browser",
+				"node",
+				"polyfill",
+				"w3c",
+				"wicg"
+			],
+			"version": "5.0.3",
+			"author": "",
+			"homepage": "https://github.com/kenchris/urlpattern-polyfill#readme",
+			"repository": {
+				"url": "git+https://github.com/kenchris/urlpattern-polyfill.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/kenchris/urlpattern-polyfill/issues"
+			},
+			"main": "./index.cjs",
+			"devDependencies": {
+				"ava": "^4.1.0",
+				"rimraf": "^3.0.2",
+				"wireit": "^0.4.3",
+				"esbuild": "^0.14.31",
+				"typescript": "^4.7.2",
+				"@ava/typescript": "^3.0.1"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "wanderview",
+					"email": "ben@wanderview.com"
+				},
+				{
+					"name": "sanderelias",
+					"email": "sanderelias@gmail.com"
+				},
+				{
+					"name": "kenchris",
+					"email": "kenneth.christiansen@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "wireit",
+				"build": "wireit",
+				"build:cjs": "wireit",
+				"build:esm": "wireit",
+				"manual-test": "wireit",
+				"publish-dev": "wireit",
+				"copyTypeFiles": "wireit",
+				"prepFakeNodeModules": "wireit"
+			},
+			"lastModified": 0,
+			"_id": "urlpattern-polyfill@5.0.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-5.0.3.tgz",
+				"shasum": "1464fd7b328de3464e7c371142c61d3975cf94cf",
+				"integrity": "sha512-fDnGF6lV6KQUpGhrOyRLgYx8U/zbMelFn1j4aqIGojHIvw+uDSRcBmalOsu1MvWd86HaEnGkihRyko53CSJ8EA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCW8EEUYVU94yQukV14C8Gl5fy/Jw2EgfKj4FE9+a99DQIgRhAl2g7M90wsxHqR+pkJ1W95g+UmAEpHXC7zfv0wWjo="
+					}
+				]
+			},
+			"_npmVersion": "8.11.0",
+			"_npmUser": {
+				"name": "sanderelias",
+				"email": "sanderelias@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "a17c67f906a828f80ce202c9114cab610798f0c9",
+			"types": "./dist/index.d.ts",
+			"exports": {
+				".": {
+					"import": "./index.js",
+					"require": "./index.cjs"
+				},
+				"./urlpattern": {
+					"import": "./dist/urlpattern.js",
+					"require": "./dist/urlpattern.cjs"
+				}
+			},
+			"module": "./index.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/urlpattern-polyfill_5.0.3_1653642201635_0.05203261513159885",
+				"host": "s3://npm-registry-packages"
+			},
+			"type": "module",
+			"ava": {
+				"files": [
+					"test/**/*",
+					"!test/wpt"
+				],
+				"typescript": {
+					"compile": false,
+					"rewritePaths": {
+						"src/": "dist/"
+					}
+				}
+			},
+			"wireit": {
+				"test": {
+					"files": [
+						"test/**/*"
+					],
+					"watch": "test/**/*",
+					"command": "ava --fail-fast -s",
+					"dependencies": [
+						"prepFakeNodeModules",
+						"build"
+					]
+				},
+				"build": {
+					"dependencies": [
+						"copyTypeFiles"
+					]
+				},
+				"build:cjs": {
+					"files": [
+						"src/**/*"
+					],
+					"output": [
+						"dist/urlpattern.cjs"
+					],
+					"command": "esbuild --bundle --format=cjs src/url-pattern.ts --outfile=dist/urlpattern.cjs"
+				},
+				"build:esm": {
+					"files": [
+						"src/**/*"
+					],
+					"output": [
+						"dist/urlpattern.js"
+					],
+					"command": "esbuild --bundle --format=esm src/url-pattern.ts --outfile=dist/urlpattern.js"
+				},
+				"manual-test": {
+					"command": "npx http-server -o /index.html -p 4203",
+					"dependencies": [
+						"test"
+					]
+				},
+				"publish-dev": {
+					"command": "VERSION=${npm_package_version%-*}-dev.`git rev-parse --short HEAD` && npm version --no-git-tag-version $VERSION && npm publish --tag dev",
+					"dependencies": [
+						"test"
+					]
+				},
+				"copyTypeFiles": {
+					"output": [
+						"dist/index.d.ts",
+						"dist/types.d.ts"
+					],
+					"command": "cp ./src/index.d.ts ./src/types.d.ts ./dist",
+					"dependencies": [
+						"build:esm",
+						"build:cjs"
+					]
+				},
+				"prepFakeNodeModules": {
+					"command": "rm -rf node_modules/urlpattern-polyfill; ln -s $(pwd) node_modules/urlpattern-polyfill"
+				}
+			},
+			"_nodeVersion": "18.2.0",
+			"contributors": []
+		},
+		"5.0.4": {
+			"name": "urlpattern-polyfill",
+			"description": "Polyfill for the URLPattern API",
+			"tags": [
+				"url",
+				"urlpattern",
+				"url-pattern",
+				"browser",
+				"node",
+				"polyfill",
+				"w3c",
+				"wicg"
+			],
+			"version": "5.0.4",
+			"author": "",
+			"homepage": "https://github.com/kenchris/urlpattern-polyfill#readme",
+			"repository": {
+				"url": "git+https://github.com/kenchris/urlpattern-polyfill.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/kenchris/urlpattern-polyfill/issues"
+			},
+			"main": "./index.cjs",
+			"devDependencies": {
+				"ava": "^4.1.0",
+				"rimraf": "^3.0.2",
+				"wireit": "^0.4.3",
+				"esbuild": "^0.14.31",
+				"typescript": "^4.7.2",
+				"@ava/typescript": "^3.0.1"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "wanderview",
+					"email": "ben@wanderview.com"
+				},
+				{
+					"name": "sanderelias",
+					"email": "sanderelias@gmail.com"
+				},
+				{
+					"name": "kenchris",
+					"email": "kenneth.christiansen@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "wireit",
+				"build": "wireit",
+				"build:cjs": "wireit",
+				"build:esm": "wireit",
+				"manual-test": "wireit",
+				"publish-dev": "wireit",
+				"copyTypeFiles": "wireit",
+				"prepFakeNodeModules": "wireit"
+			},
+			"lastModified": 0,
+			"_id": "urlpattern-polyfill@5.0.4",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-5.0.4.tgz",
+				"shasum": "edd5d61e46be9959f937bc8bef6c2ca1851138dd",
+				"integrity": "sha512-K53TO4PTS5cqb9E4N9Df0GRPEf/QnTBfwkhY8N0czR1uWnx2g48StU66LyAI5/Uz1Hqb3v6Z5Av3/SbKAvOJtQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCVJo5qAlYbr/PihEKPSDgcG4Zh9KLvmpHTtP/FPo0WYAIgO4AECtqcVAxn1Ad77aOrkR+TAQfJKJH1mCLkJB4ftcU="
+					}
+				]
+			},
+			"_npmVersion": "8.1.2",
+			"_npmUser": {
+				"name": "kenchris",
+				"email": "kenneth.christiansen@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "a3d138baf2774ffd904945744db6170f96ead790",
+			"types": "./dist/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./dist/index.d.ts",
+					"import": "./index.js",
+					"require": "./index.cjs"
+				},
+				"./urlpattern": {
+					"types": "./dist/index.d.ts",
+					"import": "./dist/urlpattern.js",
+					"require": "./dist/urlpattern.cjs"
+				}
+			},
+			"module": "./index.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/urlpattern-polyfill_5.0.4_1657912234052_0.46956140423550363",
+				"host": "s3://npm-registry-packages"
+			},
+			"type": "module",
+			"ava": {
+				"files": [
+					"test/**/*",
+					"!test/wpt"
+				],
+				"typescript": {
+					"compile": false,
+					"rewritePaths": {
+						"src/": "dist/"
+					}
+				}
+			},
+			"wireit": {
+				"test": {
+					"files": [
+						"test/**/*"
+					],
+					"watch": "test/**/*",
+					"command": "ava --fail-fast -s",
+					"dependencies": [
+						"prepFakeNodeModules",
+						"build"
+					]
+				},
+				"build": {
+					"dependencies": [
+						"copyTypeFiles"
+					]
+				},
+				"build:cjs": {
+					"files": [
+						"src/**/*"
+					],
+					"output": [
+						"dist/urlpattern.cjs"
+					],
+					"command": "esbuild --bundle --format=cjs src/url-pattern.ts --outfile=dist/urlpattern.cjs"
+				},
+				"build:esm": {
+					"files": [
+						"src/**/*"
+					],
+					"output": [
+						"dist/urlpattern.js"
+					],
+					"command": "esbuild --bundle --format=esm src/url-pattern.ts --outfile=dist/urlpattern.js"
+				},
+				"manual-test": {
+					"command": "npx http-server -o /index.html -p 4203",
+					"dependencies": [
+						"test"
+					]
+				},
+				"publish-dev": {
+					"command": "VERSION=${npm_package_version%-*}-dev.`git rev-parse --short HEAD` && npm version --no-git-tag-version $VERSION && npm publish --tag dev",
+					"dependencies": [
+						"test"
+					]
+				},
+				"copyTypeFiles": {
+					"output": [
+						"dist/index.d.ts",
+						"dist/types.d.ts"
+					],
+					"command": "cp ./src/index.d.ts ./src/types.d.ts ./dist",
+					"dependencies": [
+						"build:esm",
+						"build:cjs"
+					]
+				},
+				"prepFakeNodeModules": {
+					"command": "rm -rf node_modules/urlpattern-polyfill; ln -s $(pwd) node_modules/urlpattern-polyfill"
+				}
+			},
+			"_nodeVersion": "16.13.2",
+			"contributors": []
+		},
+		"5.0.5": {
+			"name": "urlpattern-polyfill",
+			"description": "Polyfill for the URLPattern API",
+			"tags": [
+				"url",
+				"urlpattern",
+				"url-pattern",
+				"browser",
+				"node",
+				"polyfill",
+				"w3c",
+				"wicg"
+			],
+			"version": "5.0.5",
+			"author": "",
+			"homepage": "https://github.com/kenchris/urlpattern-polyfill#readme",
+			"repository": {
+				"url": "git+https://github.com/kenchris/urlpattern-polyfill.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/kenchris/urlpattern-polyfill/issues"
+			},
+			"main": "./index.cjs",
+			"devDependencies": {
+				"ava": "^4.1.0",
+				"rimraf": "^3.0.2",
+				"wireit": "^0.4.3",
+				"esbuild": "^0.14.31",
+				"typescript": "^4.7.2",
+				"@ava/typescript": "^3.0.1"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "wanderview",
+					"email": "ben@wanderview.com"
+				},
+				{
+					"name": "sanderelias",
+					"email": "sanderelias@gmail.com"
+				},
+				{
+					"name": "kenchris",
+					"email": "kenneth.christiansen@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "wireit",
+				"build": "wireit",
+				"build:cjs": "wireit",
+				"build:esm": "wireit",
+				"manual-test": "wireit",
+				"publish-dev": "wireit",
+				"copyTypeFiles": "wireit",
+				"prepFakeNodeModules": "wireit"
+			},
+			"lastModified": 0,
+			"_id": "urlpattern-polyfill@5.0.5",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-5.0.5.tgz",
+				"shasum": "037adfd438161125f81d8199b9d493e91c5ce247",
+				"integrity": "sha512-Oq4ak65m3IezuCqYnxMN0cKh1eiL62YurYDCXp6epo91iBhN+aesVW8+q0qtUC9r84jKuTWXomWrnpkY5WWuRg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIBd4L1ZvGxcNnAL17oMN8T2zYc57VPGihamN64weVW5mAiEA3/gjfB9msBrYA/Pfm3Nt+D0qwe2VKZG1Pzx8XI0GjmM="
+					}
+				]
+			},
+			"_npmVersion": "8.1.2",
+			"_npmUser": {
+				"name": "kenchris",
+				"email": "kenneth.christiansen@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "a3d138baf2774ffd904945744db6170f96ead790",
+			"types": "./dist/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./dist/index.d.ts",
+					"import": "./index.js",
+					"require": "./index.cjs"
+				},
+				"./urlpattern": {
+					"types": "./dist/index.d.ts",
+					"import": "./dist/urlpattern.js",
+					"require": "./dist/urlpattern.cjs"
+				}
+			},
+			"module": "./index.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/urlpattern-polyfill_5.0.5_1657914176251_0.5976319435560404",
+				"host": "s3://npm-registry-packages"
+			},
+			"type": "module",
+			"ava": {
+				"files": [
+					"test/**/*",
+					"!test/wpt"
+				],
+				"typescript": {
+					"compile": false,
+					"rewritePaths": {
+						"src/": "dist/"
+					}
+				}
+			},
+			"wireit": {
+				"test": {
+					"files": [
+						"test/**/*"
+					],
+					"watch": "test/**/*",
+					"command": "ava --fail-fast -s",
+					"dependencies": [
+						"prepFakeNodeModules",
+						"build"
+					]
+				},
+				"build": {
+					"dependencies": [
+						"copyTypeFiles"
+					]
+				},
+				"build:cjs": {
+					"files": [
+						"src/**/*"
+					],
+					"output": [
+						"dist/urlpattern.cjs"
+					],
+					"command": "esbuild --bundle --format=cjs src/url-pattern.ts --outfile=dist/urlpattern.cjs"
+				},
+				"build:esm": {
+					"files": [
+						"src/**/*"
+					],
+					"output": [
+						"dist/urlpattern.js"
+					],
+					"command": "esbuild --bundle --format=esm src/url-pattern.ts --outfile=dist/urlpattern.js"
+				},
+				"manual-test": {
+					"command": "npx http-server -o /index.html -p 4203",
+					"dependencies": [
+						"test"
+					]
+				},
+				"publish-dev": {
+					"command": "VERSION=${npm_package_version%-*}-dev.`git rev-parse --short HEAD` && npm version --no-git-tag-version $VERSION && npm publish --tag dev",
+					"dependencies": [
+						"test"
+					]
+				},
+				"copyTypeFiles": {
+					"output": [
+						"dist/index.d.ts",
+						"dist/types.d.ts"
+					],
+					"command": "cp ./src/index.d.ts ./src/types.d.ts ./dist",
+					"dependencies": [
+						"build:esm",
+						"build:cjs"
+					]
+				},
+				"prepFakeNodeModules": {
+					"command": "rm -rf node_modules/urlpattern-polyfill; ln -s $(pwd) node_modules/urlpattern-polyfill"
+				}
+			},
+			"_nodeVersion": "16.13.2",
+			"contributors": []
+		},
+		"1.0.0-rc5": {
+			"name": "urlpattern-polyfill",
+			"description": "Polyfill for the proposed URLPattern API",
+			"version": "1.0.0-rc5",
+			"author": "",
+			"homepage": "https://github.com/kenchris/urlpattern-polyfill#readme",
+			"repository": {
+				"url": "git+https://github.com/kenchris/urlpattern-polyfill.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/kenchris/urlpattern-polyfill/issues"
+			},
+			"main": "./dist/index.umd.js",
+			"dependencies": {},
+			"devDependencies": {
+				"ava": "^3.14.0",
+				"esm": "^3.2.25",
+				"rimraf": "^3.0.2",
+				"rollup": "^2.35.1",
+				"microbundle": "^0.13.3"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "wanderview",
+					"email": "ben@wanderview.com"
+				},
+				{
+					"name": "kenchris",
+					"email": "kenneth.christiansen@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run build && ava --fail-fast -s",
+				"build": "rimraf dist/ && microbundle",
+				"quicktest": "ava --fail-fast -s",
+				"build:watch": "microbundle watch",
+				"publish-dev": "npm test && VERSION=${npm_package_version%-*}-dev.`git rev-parse --short HEAD` && npm version --no-git-tag-version $VERSION && npm publish --tag dev"
+			},
+			"lastModified": 0,
+			"_id": "urlpattern-polyfill@1.0.0-rc5",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-1.0.0-rc5.tgz",
+				"shasum": "ce23d459d51950fb78939a892621242852e2f2f8",
+				"integrity": "sha512-OxVmQLKMQbDZX1m8Ljuf26rzMUJ7lm3cnBAicqrB0qmo1qb/koH7EXayeHiZdiyc6Z0OnaHETW2JCoVHgTnGGA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDeogYNWqpIfx4ueVqQQCaJTRXX5i3ma/Zu26p+TIod1AIhANc6oReB9BN90iJj7BIE0EW1JpoItzw75pl7qcdXwr2W"
+					}
+				]
+			},
+			"_npmVersion": "6.14.8",
+			"_npmUser": {
+				"name": "kenchris",
+				"email": "kenneth.christiansen@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "5db8fabef65765f20388e390ed6c2943ee63b070",
+			"types": "./dist/index.d.ts",
+			"exports": "./dist/index.js",
+			"unpkg": "./dist/index.umd.js",
+			"module": "./dist/index.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/urlpattern-polyfill_1.0.0-rc5_1642757062949_0.8536474090409609",
+				"host": "s3://npm-registry-packages"
+			},
+			"type": "module",
+			"ava": {
+				"require": [
+					"esm"
+				]
+			},
+			"_nodeVersion": "14.13.0",
+			"contributors": []
+		},
+		"5.0.6": {
+			"name": "urlpattern-polyfill",
+			"description": "Polyfill for the URLPattern API",
+			"tags": [
+				"url",
+				"urlpattern",
+				"url-pattern",
+				"browser",
+				"node",
+				"polyfill",
+				"w3c",
+				"wicg"
+			],
+			"version": "5.0.6",
+			"author": "",
+			"homepage": "https://github.com/kenchris/urlpattern-polyfill#readme",
+			"repository": {
+				"url": "git+https://github.com/kenchris/urlpattern-polyfill.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/kenchris/urlpattern-polyfill/issues"
+			},
+			"main": "./index.cjs",
+			"devDependencies": {
+				"ava": "^4.1.0",
+				"rimraf": "^3.0.2",
+				"wireit": "^0.4.3",
+				"esbuild": "^0.14.31",
+				"typescript": "^4.7.2",
+				"@ava/typescript": "^3.0.1"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "wanderview",
+					"email": "ben@wanderview.com"
+				},
+				{
+					"name": "sanderelias",
+					"email": "sanderelias@gmail.com"
+				},
+				{
+					"name": "kenchris",
+					"email": "kenneth.christiansen@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "wireit",
+				"build": "wireit",
+				"build:cjs": "wireit",
+				"build:esm": "wireit",
+				"manual-test": "wireit",
+				"publish-dev": "wireit",
+				"copyTypeFiles": "wireit",
+				"prepFakeNodeModules": "wireit"
+			},
+			"lastModified": 0,
+			"_id": "urlpattern-polyfill@5.0.6",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-5.0.6.tgz",
+				"shasum": "98b87986e2ee36609debb08be6f59fdd47342834",
+				"integrity": "sha512-Jh5uMYAPoBlB3xgLZXI9O9e2tXZ0qrFShCimat9nFIFb02PjBAF/lPZSY/cOjbR5CmcDrxSq6v8sA5RjwuJB5w==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQCCZRnazXqle3UxDQLHsC3GuUFPtQNbRlCLkI6noQ6b6AIhAOH31oxg+NCaO4dqallJxk7aOjfVOCU/DCUtxB8Mk1ye"
+					}
+				]
+			},
+			"_npmVersion": "8.1.2",
+			"_npmUser": {
+				"name": "kenchris",
+				"email": "kenneth.christiansen@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "0c9703dbe79653f99822c47943e58eff32acd8e7",
+			"types": "./dist/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./dist/index.d.ts",
+					"import": "./index.js",
+					"require": "./index.cjs"
+				},
+				"./urlpattern": {
+					"types": "./dist/index.d.ts",
+					"import": "./dist/urlpattern.js",
+					"require": "./dist/urlpattern.cjs"
+				}
+			},
+			"module": "./index.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/urlpattern-polyfill_5.0.6_1660209434352_0.7879673166631731",
+				"host": "s3://npm-registry-packages"
+			},
+			"type": "module",
+			"ava": {
+				"files": [
+					"test/**/*",
+					"!test/wpt"
+				],
+				"typescript": {
+					"compile": false,
+					"rewritePaths": {
+						"src/": "dist/"
+					}
+				}
+			},
+			"wireit": {
+				"test": {
+					"files": [
+						"test/**/*"
+					],
+					"watch": "test/**/*",
+					"command": "ava --fail-fast -s",
+					"dependencies": [
+						"prepFakeNodeModules",
+						"build"
+					]
+				},
+				"build": {
+					"dependencies": [
+						"copyTypeFiles"
+					]
+				},
+				"build:cjs": {
+					"files": [
+						"src/**/*"
+					],
+					"output": [
+						"dist/urlpattern.cjs"
+					],
+					"command": "esbuild --bundle --format=cjs src/url-pattern.ts --outfile=dist/urlpattern.cjs"
+				},
+				"build:esm": {
+					"files": [
+						"src/**/*"
+					],
+					"output": [
+						"dist/urlpattern.js"
+					],
+					"command": "esbuild --bundle --format=esm src/url-pattern.ts --outfile=dist/urlpattern.js"
+				},
+				"manual-test": {
+					"command": "npx http-server -o /index.html -p 4203",
+					"dependencies": [
+						"test"
+					]
+				},
+				"publish-dev": {
+					"command": "VERSION=${npm_package_version%-*}-dev.`git rev-parse --short HEAD` && npm version --no-git-tag-version $VERSION && npm publish --tag dev",
+					"dependencies": [
+						"test"
+					]
+				},
+				"copyTypeFiles": {
+					"output": [
+						"dist/index.d.ts",
+						"dist/types.d.ts"
+					],
+					"command": "cp ./src/index.d.ts ./src/types.d.ts ./dist",
+					"dependencies": [
+						"build:esm",
+						"build:cjs"
+					]
+				},
+				"prepFakeNodeModules": {
+					"command": "rm -rf node_modules/urlpattern-polyfill; ln -s $(pwd) node_modules/urlpattern-polyfill"
+				}
+			},
+			"_nodeVersion": "16.13.2",
+			"contributors": []
+		}
+	},
+	"time": {
+		"0.1.5": "2020-12-20T18:12:56.896Z",
+		"0.1.6": "2020-12-20T18:51:21.215Z",
+		"5.0.8": "2022-09-05T11:30:34.477Z",
+		"0.1.3": "2020-12-17T19:12:22.106Z",
+		"5.0.9": "2022-09-05T11:34:35.941Z",
+		"0.1.4": "2020-12-18T12:35:46.823Z",
+		"5.0.0-dev.4a67043": "2022-05-25T07:51:16.363Z",
+		"9.0.0": "2023-06-02T06:23:33.716Z",
+		"4.0.2": "2022-04-06T08:50:47.111Z",
+		"4.0.3": "2022-04-08T11:07:40.251Z",
+		"4.0.0": "2022-04-04T13:50:56.497Z",
+		"4.0.1": "2022-04-04T16:00:03.705Z",
+		"3.0.0-dev.2764da6": "2022-04-01T07:00:00.631Z",
+		"3.0.0": "2022-04-01T07:14:13.893Z",
+		"8.0.2": "2023-04-24T11:02:52.359Z",
+		"8.0.1": "2023-04-24T08:00:12.497Z",
+		"modified": "2025-05-08T07:14:15.409Z",
+		"0.1.2-dev.1af5421": "2020-12-17T18:38:01.284Z",
+		"created": "2020-12-17T18:38:01.146Z",
+		"7.0.0": "2023-04-11T15:43:30.948Z",
+		"1.0.0-dev.e1c1eca": "2021-07-05T11:50:12.596Z",
+		"6.0.2": "2022-11-17T10:59:08.566Z",
+		"10.1.0": "2025-05-08T07:14:15.238Z",
+		"10.0.0": "2024-01-23T13:47:38.732Z",
+		"6.0.1": "2022-09-28T19:18:38.889Z",
+		"1.0.0-rc4": "2022-01-20T07:22:56.040Z",
+		"5.0.0": "2022-05-23T08:42:42.509Z",
+		"1.0.0-rc2": "2022-01-13T13:15:21.458Z",
+		"5.0.1": "2022-05-25T08:51:42.622Z",
+		"1.0.0-rc1": "2021-07-05T11:52:04.857Z",
+		"5.0.2": "2022-05-27T08:23:14.980Z",
+		"5.0.3": "2022-05-27T09:03:21.811Z",
+		"5.0.4": "2022-07-15T19:10:34.297Z",
+		"5.0.5": "2022-07-15T19:42:56.414Z",
+		"1.0.0-rc5": "2022-01-21T09:24:23.170Z",
+		"5.0.6": "2022-08-11T09:17:14.568Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"dev": "5.0.8",
+		"latest": "10.1.0"
+	},
+	"_uplinks": {
+		"artifactory-sabadell": {
+			"etag": "51bcfe9537afc0bf9406b82bcedcfb90ac2c86ad",
+			"fetched": 1782459825130
+		}
+	},
+	"_distfiles": {
+		"urlpattern-polyfill-0.1.5.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-0.1.5.tgz",
+			"sha": "23e70326e169f49cee87958f9a3c295a752e64ef",
+			"registry": "artifactory-sabadell"
+		},
+		"urlpattern-polyfill-0.1.6.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-0.1.6.tgz",
+			"sha": "c2e66db826833482c5ccb36e4bf49f2b97536535",
+			"registry": "artifactory-sabadell"
+		},
+		"urlpattern-polyfill-5.0.8.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-5.0.8.tgz",
+			"sha": "a99c978b920885bc1ed5ae7b4b8dbdae35a64b75",
+			"registry": "artifactory-sabadell"
+		},
+		"urlpattern-polyfill-0.1.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-0.1.3.tgz",
+			"sha": "d383fc66339f97643d2b724c714b31c69110cd98",
+			"registry": "artifactory-sabadell"
+		},
+		"urlpattern-polyfill-5.0.9.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-5.0.9.tgz",
+			"sha": "99b1f88c770f04bcce6967ad705f7b45e3cf902f",
+			"registry": "artifactory-sabadell"
+		},
+		"urlpattern-polyfill-0.1.4.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-0.1.4.tgz",
+			"sha": "9f0e1e6da0f9c9d6be6491db212939d5984d342d",
+			"registry": "artifactory-sabadell"
+		},
+		"urlpattern-polyfill-5.0.0-dev.4a67043.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-5.0.0-dev.4a67043.tgz",
+			"sha": "8071085c8e3ba03ab7164769078a08edab1fd9c3",
+			"registry": "artifactory-sabadell"
+		},
+		"urlpattern-polyfill-9.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-9.0.0.tgz",
+			"sha": "bc7e386bb12fd7898b58d1509df21d3c29ab3460",
+			"registry": "artifactory-sabadell"
+		},
+		"urlpattern-polyfill-4.0.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-4.0.2.tgz",
+			"sha": "df0fe52e4bbd1f62ce857f050f3752383b00bf28",
+			"registry": "artifactory-sabadell"
+		},
+		"urlpattern-polyfill-4.0.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-4.0.3.tgz",
+			"sha": "c1fa7a73eb4e6c6a1ffb41b24cf31974f7392d3b",
+			"registry": "artifactory-sabadell"
+		},
+		"urlpattern-polyfill-4.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-4.0.0.tgz",
+			"sha": "2e09c3a9a58e24b6b91d76489526e872b358edeb",
+			"registry": "artifactory-sabadell"
+		},
+		"urlpattern-polyfill-4.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-4.0.1.tgz",
+			"sha": "f431f663de85bcaf3e6f984640c684190d4a6a51",
+			"registry": "artifactory-sabadell"
+		},
+		"urlpattern-polyfill-3.0.0-dev.2764da6.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-3.0.0-dev.2764da6.tgz",
+			"sha": "0678a2394ca383084168ba948af77ec0b4aa014f",
+			"registry": "artifactory-sabadell"
+		},
+		"urlpattern-polyfill-3.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-3.0.0.tgz",
+			"sha": "eabcf53b7e60241d631319e5450c3c06046b59ef",
+			"registry": "artifactory-sabadell"
+		},
+		"urlpattern-polyfill-8.0.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-8.0.2.tgz",
+			"sha": "99f096e35eff8bf4b5a2aa7d58a1523d6ebc7ce5",
+			"registry": "artifactory-sabadell"
+		},
+		"urlpattern-polyfill-8.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-8.0.1.tgz",
+			"sha": "aa302bf8d584d36fbbe90dac0c1a6c28bf914d6b",
+			"registry": "artifactory-sabadell"
+		},
+		"urlpattern-polyfill-0.1.2-dev.1af5421.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-0.1.2-dev.1af5421.tgz",
+			"sha": "1acc7b0125728b4979f38f272919385136d181f1",
+			"registry": "artifactory-sabadell"
+		},
+		"urlpattern-polyfill-7.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-7.0.0.tgz",
+			"sha": "dc9e5098efc492b4f09bc9fc6acfba545dfb149d",
+			"registry": "artifactory-sabadell"
+		},
+		"urlpattern-polyfill-1.0.0-dev.e1c1eca.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-1.0.0-dev.e1c1eca.tgz",
+			"sha": "47995faa533b49c23af83881421230714cf150c6",
+			"registry": "artifactory-sabadell"
+		},
+		"urlpattern-polyfill-6.0.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-6.0.2.tgz",
+			"sha": "a193fe773459865a2a5c93b246bb794b13d07256",
+			"registry": "artifactory-sabadell"
+		},
+		"urlpattern-polyfill-10.1.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-10.1.0.tgz",
+			"sha": "1b2517e614136c73ba32948d5e7a3a063cba8e74",
+			"registry": "artifactory-sabadell"
+		},
+		"urlpattern-polyfill-10.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-10.0.0.tgz",
+			"sha": "f0a03a97bfb03cdf33553e5e79a2aadd22cac8ec",
+			"registry": "artifactory-sabadell"
+		},
+		"urlpattern-polyfill-6.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-6.0.1.tgz",
+			"sha": "1d77f9ce21b0e5856ca5d801a9089db5555b26a7",
+			"registry": "artifactory-sabadell"
+		},
+		"urlpattern-polyfill-1.0.0-rc4.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-1.0.0-rc4.tgz",
+			"sha": "7cb62228bf96eb489e1c8f6d67b4ef659a4f8353",
+			"registry": "artifactory-sabadell"
+		},
+		"urlpattern-polyfill-5.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-5.0.0.tgz",
+			"sha": "78608921c82abc50d35870432395fd30fcbe6430",
+			"registry": "artifactory-sabadell"
+		},
+		"urlpattern-polyfill-1.0.0-rc2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-1.0.0-rc2.tgz",
+			"sha": "f2cd0f24f3fade1939d8e7f6735d1f6cb0e1de78",
+			"registry": "artifactory-sabadell"
+		},
+		"urlpattern-polyfill-5.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-5.0.1.tgz",
+			"sha": "770a1d2796d481d0c07871d7103c86d9740fea52",
+			"registry": "artifactory-sabadell"
+		},
+		"urlpattern-polyfill-1.0.0-rc1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-1.0.0-rc1.tgz",
+			"sha": "88b89983c5f3b2ea4b1d6c75862e19f902d72d3c",
+			"registry": "artifactory-sabadell"
+		},
+		"urlpattern-polyfill-5.0.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-5.0.2.tgz",
+			"sha": "ac6d07d68fc91fdfe7d9fb9fef1d42aacfe09fd6",
+			"registry": "artifactory-sabadell"
+		},
+		"urlpattern-polyfill-5.0.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-5.0.3.tgz",
+			"sha": "1464fd7b328de3464e7c371142c61d3975cf94cf",
+			"registry": "artifactory-sabadell"
+		},
+		"urlpattern-polyfill-5.0.4.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-5.0.4.tgz",
+			"sha": "edd5d61e46be9959f937bc8bef6c2ca1851138dd",
+			"registry": "artifactory-sabadell"
+		},
+		"urlpattern-polyfill-5.0.5.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-5.0.5.tgz",
+			"sha": "037adfd438161125f81d8199b9d493e91c5ce247",
+			"registry": "artifactory-sabadell"
+		},
+		"urlpattern-polyfill-1.0.0-rc5.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-1.0.0-rc5.tgz",
+			"sha": "ce23d459d51950fb78939a892621242852e2f2f8",
+			"registry": "artifactory-sabadell"
+		},
+		"urlpattern-polyfill-5.0.6.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/urlpattern-polyfill/-/urlpattern-polyfill-5.0.6.tgz",
+			"sha": "98b87986e2ee36609debb08be6f59fdd47342834",
+			"registry": "artifactory-sabadell"
+		}
+	},
+	"_attachments": {},
+	"_rev": "1-49593f913c472c99",
+	"_id": "urlpattern-polyfill",
+	"readme": "[![run-tests](https://github.com/kenchris/urlpattern-polyfill/actions/workflows/workflow.yml/badge.svg)](https://github.com/kenchris/urlpattern-polyfill/actions/workflows/workflow.yml)\n[![npm (tag)](https://img.shields.io/npm/v/urlpattern-polyfill/latest?style=flat-square)](https://www.npmjs.com/package/urlpattern-polyfill)\n![GitHub](https://img.shields.io/github/license/kenchris/urlpattern-polyfill?style=flat-square)\n\nURLPattern polyfills\n===\n\nURLPattern is a new web API for matching URLs. Its intended to both provide a convenient API for web developers and to be usable in other web APIs that need to match URLs; e.g. service workers. The [explainer](https://github.com/wanderview/service-worker-scope-pattern-matching/blob/master/explainer.md) discusses the motivating use cases.\n\nThis is a polyfill for the [URLPattern API](https://wicg.github.io/urlpattern/) so that  the feature is available in browsers that don't support it natively. This polyfill passes\nthe same web platform test suite.\n\nHow to load the polyfill\n---\nThe polyfill works in browsers (ESM module) and in Node.js either via import (ESM module) or via require (CJS module).\n\nThe polyfill will only be loaded if the URLPattern doesn't already exist on the global object, and in that case it will add it to the global object.\n\n## loading as ESM module\n\n```javascript\n// Conditional ESM module loading (Node.js and browser)\n// @ts-ignore: Property 'UrlPattern' does not exist \nif (!globalThis.URLPattern) { \n  await import(\"urlpattern-polyfill\");\n}\n/** \n * The above is the recommended way to load the ESM module, as it only\n * loads it on demand, thus when not natively supported by the runtime or\n * already polyfilled.\n */\nimport \"urlpattern-polyfill\";\n\n/** \n * In case you want to replace an existing implementation with the polyfill:\n */\nimport {URLPattern} from \"urlpattern-polyfill\";\nglobalThis.URLPattern = URLPattern\n```\n\n> ## Note:\n> The line with `// @ts-ignore: Property 'UrlPattern' does not exist ` is needed in some environments because before you load the polyfill it might not be available, and the feature-check in the if statement gives an TypeScript error. The whole idea is that it loads when its not there. \n\n## loading as CommonJs module\n\n```javascript\n// Conditional CJS module loading (Node.js)\nif (!globalThis.URLPattern) {\n   require(\"urlpattern-polyfill\");\n}\n/** \n * The above is the recommended way to load the CommonJs module, as it only\n * loads it on demand, thus when not natively supported by the runtime or\n * already polyfilled.\n */\nrequire(\"urlpattern-polyfill\");\n\n/** \n * In case you want to replace an existing implementation with the polyfill:\n */\nconst {URLPattern} = require(\"urlpattern-polyfill\");;\nglobalThis.URLPattern = URLPattern\n```\n\n> ## Note:\n> No matter how you load the polyfill, when there is no implementation in your environment, it will _always_ add it to the global object.\n\nBasic example\n---\n\n```javascript\nlet p = new URLPattern({ pathname: '/foo/:name' });\n\nlet r = p.exec('https://example.com/foo/bar');\nconsole.log(r.pathname.input); // \"/foo/bar\"\nconsole.log(r.pathname.groups.name); // \"bar\"\n\nlet r2 = p.exec({ pathname: '/foo/baz' });\nconsole.log(r2.pathname.groups.name); // \"baz\"\n```\n\nExample of matching same-origin JPG or PNG requests\n---\n\n```javascript\n// Match same-origin jpg or png URLs.\n// Note: This uses a named group to make it easier to access\n//       the result later.\nconst p = new URLPattern({\n  pathname: '/*.:filetype(jpg|png)',\n  baseURL: self.location\n});\n\nfor (let url in url_list) {\n  const r = p.exec(url);\n\n  // skip non-matches\n  if (!r) {\n    continue;\n  }\n\n  if (r.pathname.groups['filetype'] === 'jpg') {\n    // process jpg\n  } else if (r.pathname.groups['filetype'] === 'png') {\n    // process png\n  }\n}\n```\n\nThe pattern in this case can be made simpler without the origin check by leaving off the baseURL.\n\n```javascript\n// Match any URL ending with 'jpg' or 'png'.\nconst p = new URLPattern({ pathname: '/*.:filetype(jpg|png)' });\n```\n\nExample of Short Form Support\n---\nWe are planning to also support a \"short form\" for initializing URLPattern objects.\nThis is supported by the polyfill but not yet by the Chromium implementation.\n\nFor example:\n\n```javascript\nconst p = new URLPattern(\"https://*.example.com/foo/*\");\n```\n\nOr:\n\n```javascript\nconst p = new URLPattern(\"foo/*\", self.location);\n```\n\nAPI reference\n===\n\nAPI overview with typeScript type annotations is found below. Associated browser Web IDL can be found [here](https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/modules/url_pattern/).\n\n```ts\ntype URLPatternInput = URLPatternInit | string;\n\nclass URLPattern {\n  constructor(init?: URLPatternInput, baseURL?: string);\n\n  test(input?: URLPatternInput, baseURL?: string): boolean;\n\n  exec(input?: URLPatternInput, baseURL?: string): URLPatternResult | null;\n\n  readonly protocol: string;\n  readonly username: string;\n  readonly password: string;\n  readonly hostname: string;\n  readonly port: string;\n  readonly pathname: string;\n  readonly search: string;\n  readonly hash: string;\n}\n\ninterface URLPatternInit {\n  baseURL?: string;\n  username?: string;\n  password?: string;\n  protocol?: string;\n  hostname?: string;\n  port?: string;\n  pathname?: string;\n  search?: string;\n  hash?: string;\n}\n\ninterface URLPatternResult {\n  inputs: [URLPatternInput];\n  protocol: URLPatternComponentResult;\n  username: URLPatternComponentResult;\n  password: URLPatternComponentResult;\n  hostname: URLPatternComponentResult;\n  port: URLPatternComponentResult;\n  pathname: URLPatternComponentResult;\n  search: URLPatternComponentResult;\n  hash: URLPatternComponentResult;\n}\n\ninterface URLPatternComponentResult {\n  input: string;\n  groups: {\n      [key: string]: string | undefined;\n  };\n}\n\n```\n\nPattern syntax\n===\nThe pattern syntax here is based on what is used in the popular path-to-regexp library.\n\n* An understanding of a \"divider\" that separates segments of the string.  For the pathname this is typically the `\"/\"` character.\n* A regex group defined by an enclosed set of parentheses.  Inside of the parentheses a general regex may be defined.\n* A named group that matches characters until the next divider.  The named group begins with a `\":\"` character and then a name.  For example, `\"/:foo/:bar\"` has two named groups.\n* A custom regex for a named group.  In this case a set of parentheses with a regex immediately follows the named group; e.g. `\"/:foo(.*)\"` will override the default of matching to the next divider.\n* A modifier may optionally follow a regex or named group.  A modifier is a `\"?\"`, `\"*\"`, or `\"+\"` functions just as they do in regular expressions.  When a group is optional or repeated and it's preceded by a divider then the divider is also optional or repeated.  For example, `\"/foo/:bar?\"` will match `\"/foo\"`, `\"/foo/\"`, or `\"/foo/baz\"`.  Escaping the divider will make it required instead.\n* A way to greedily match characters, even across dividers, by using `\"(.*)\"` (so-called unnamed groups).\n\n\nCurrently we plan to have these known differences with path-to-regexp:\n\n* No support for custom prefixes and suffixes.\n\n\nCanonicalization\n===\n\nURLs have a canonical form that is based on ASCII, meaning that [internationalized domain names](https://en.wikipedia.org/wiki/Internationalized_domain_name) (hostnames) also have a canonical ASCII based representation, and that other components such as `hash`, `search` and `pathname` are encoded using [percent encoding](https://en.wikipedia.org/wiki/Percent-encoding).\n\nCurrently `URLPattern` does not perform any encoding or normalization of the patterns. So a developer would need to URL encode unicode characters before passing the pattern into the constructor. Similarly, the constructor does not do things like flattening pathnames such as /foo/../bar to /bar. Currently the pattern must be written to target canonical URL output manually.\n\nIt does, however, perform these operations for `test()` and `exec()` input.\n\nEncoding components can easily be done manually, but do not encoding the pattern syntax:\n\n```javascript\nencodeURIComponent(\"?q=æøå\")\n// \"%3Fq%3D%C3%A6%C3%B8%C3%A5\"\n```\n\n```javascript\nnew URL(\"https://ølerlækkernårdetermit.dk\").hostname\n// \"xn--lerlkkernrdetermit-dubo78a.dk\"\n```\n\nBreaking changes\n===\n- V9.0.0 drops support for NodeJS 14 and lower. NodeJS 15 or higher is required. This is due to using private class fields, so we can have better optimalizations. There is _No_ change in functionality, but we were able to reduce the size of the polyfill by ~2.5KB (~13%), thanks to a pr #118 from @jimmywarting.\n\nLearn more\n===\n\n- [Explainer](https://github.com/wanderview/service-worker-scope-pattern-matching/blob/master/explainer.md)\n- [Design Document](https://docs.google.com/document/d/17L6b3zlTHtyxQvOAvbK55gQOi5rrJLERwjt_sKXpzqc/edit#)\n\nReporting a security issue\n===\nIf you have information about a security issue or vulnerability with an Intel-maintained open source project on https://github.com/intel, please send an e-mail to secure@intel.com. Encrypt sensitive information using our PGP public key. For issues related to Intel products, please visit https://security-center.intel.com."
+}

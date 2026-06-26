@@ -23,4 +23,7 @@ public class PingamSessionStore {
 
     /** SSO Cookie value -> tokenId (mismo valor, se mantiene por claridad semántica) */
     public final Map<String, String> ssoCookieToTokenId = new ConcurrentHashMap<>();
+
+    /** responseId -> campos del POST SAML, consumidos una sola vez por la ACS Angular. */
+    public final Map<String, Map<String, String>> samlAcsResponses = new ConcurrentHashMap<>();
 }

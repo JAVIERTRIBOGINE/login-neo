@@ -14,13 +14,15 @@ import java.util.*;
  * Mock simplificado del árbol de autenticación PingAM (POST /authenticate).
  * Ver CONTEXT.md secc. 15.
  *
- * Solo se simula el CASO 4 (usuario + contraseña), ya que los Casos 1-3
- * (federación Entra ID y Kerberos) dependen de infraestructura externa real
- * que no es viable reproducir en local. Solo se aceptan las credenciales mock
- * jtribo / Sabadell_26.
+ * Simula el árbol completo de la POC sin exponer Kerberos al front:
+ * 1. PingAM intenta federación Entra ID con RedirectCallback.
+ * 2. PingAM simula error Entra ID internamente.
+ * 3. PingAM simula Kerberos ADGBS.com y Atenea internamente.
+ * 4. Al fallar ambos, devuelve NameCallback + PasswordCallback con 200 OK.
  *
- * Llamada 1 (sin authId)        -> NameCallback + PasswordCallback
- * Llamada 2 (con authId+creds)  -> ISuccessOtpRespone + Set-Cookie SSO
+ * Llamada 1 (sin authId)             -> RedirectCallback
+ * Llamada 2 (authId sin credenciales)-> NameCallback + PasswordCallback
+ * Llamada 3 (authId+creds)           -> ISuccessOtpRespone + Set-Cookie SSO
  */
 @RestController
 public class AuthenticateController {
@@ -61,6 +63,15 @@ public class AuthenticateController {
         String username = extractIdToken(callbacks, "NameCallback", "IDToken1");
         String password = extractIdToken(callbacks, "PasswordCallback", "IDToken2");
 
+        if (username == null && password == null) {
+            if ("AWAITING_ENTRA_ID".equals(stage)) {
+                store.authTrees.put(authId, "AWAITING_CREDENTIALS");
+                return ResponseEntity.ok(credentialsCallbacks(authId));
+            }
+
+            return ResponseEntity.ok(credentialsCallbacks(authId));
+        }
+
         if (!MOCK_USERNAME.equals(username) || !MOCK_PASSWORD.equals(password)) {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
         }
@@ -87,8 +98,23 @@ public class AuthenticateController {
 
     private Map<String, Object> startTree() {
         String authId = "mock-authid-" + UUID.randomUUID();
-        store.authTrees.put(authId, "AWAITING_CREDENTIALS");
+        store.authTrees.put(authId, "AWAITING_ENTRA_ID");
 
+        Map<String, Object> redirectCallback = new LinkedHashMap<>();
+        redirectCallback.put("type", "RedirectCallback");
+        redirectCallback.put("output", List.of(
+                Map.of("name", "redirectUrl", "value", "http://localhost:4300/mock-entra-id?authId=" + authId),
+                Map.of("name", "redirectMethod", "value", "GET")
+        ));
+        redirectCallback.put("input", List.of());
+
+        Map<String, Object> tree = new LinkedHashMap<>();
+        tree.put("authId", authId);
+        tree.put("callbacks", List.of(redirectCallback));
+        return tree;
+    }
+
+    private Map<String, Object> credentialsCallbacks(String authId) {
         Map<String, Object> nameCallback = new LinkedHashMap<>();
         nameCallback.put("type", "NameCallback");
         nameCallback.put("output", List.of(Map.of("name", "prompt", "value", "User Name")));

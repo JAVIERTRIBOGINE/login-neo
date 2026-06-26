@@ -7,8 +7,9 @@ import {  setAuthorization, storedTokens } from '@proteo/data-manager';
 import { LoginDataService } from '@app/login/application/services/login-data.service';
 import { LOGIN_EVENTS } from '@app/login/domain/constants/event.enum';
 import { END_SESSION_FN, GET_TOKENS_FN, REVOKE_FN } from '@app/login/domain/constants/global.constants';
-import { SAML_ROUTE_DATA } from '@app/saml-flow/domain/constants/path.constant';
 import { getTokensEndpoint } from '@app/login/application/services/oauth-endpoints';
+import { SamlRuntimeConfigService } from '@app/saml-flow/application/services/saml-runtime-config.service';
+import { SAML_ROUTE_DATA } from '@app/saml-flow/domain/constants/path.constant';
 
 
 @Component({
@@ -40,6 +41,7 @@ export class GetTokensComponent implements OnInit{
     error!: WritableSignal<boolean>;
     authorizeResponse!: TokensResponse;
     loginDataService!: LoginDataService;
+    samlRuntimeConfig = inject(SamlRuntimeConfigService);
     getTokens = inject(GET_TOKENS_FN);
     storedTokens = storedTokens;
     
@@ -65,8 +67,17 @@ export class GetTokensComponent implements OnInit{
       const code = this.route.snapshot.queryParamMap.get('code')??"";
       // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       const state = this.route.snapshot.queryParamMap.get('state')??"";
-      const clientId = window.BsAuthorizationConfig.clientID;
-      const redirectUri = window.BsAuthorizationConfig.redirectUri;
+      /*
+       * /authorize nos devuelve code/state por query params. Con esos datos y la
+       * misma configuracion OAuth se llama a /token para obtener OIDC/OAuth tokens.
+       */
+      const authConfig = this.getAuthorizationConfig();
+      if (!authConfig.clientId || !authConfig.redirectUri) {
+        this.publishService.publishEvent(LOGIN_EVENTS.ERROR);
+        return;
+      }
+      const clientId = authConfig.clientId;
+      const redirectUri = authConfig.redirectUri;
       const token_sso = this.loginDataService.successData().tokenId;
       const params: TokensRequest = {code, state, clientId, redirectUri};  
       const url = getTokensEndpoint();
@@ -74,12 +85,32 @@ export class GetTokensComponent implements OnInit{
       try {
         this.authorizeResponse =  (await this.getTokens(url, token_sso, params)).data as TokensResponse;
         
+        /*
+         * Los tokens se registran en data-manager para que el resto de la solucion
+         * global pueda consumirlos. Despues se rellama a /authnRequest para que
+         * NetScaler emita una SAMLRequest nueva y redirija a PingAM.
+         */
         setAuthorization({OIDC: this.authorizeResponse.id_token, OAUTH: this.authorizeResponse.access_token} as AuthorizationTokens)
         this.publishService.publishOauthEvent(LOGIN_EVENTS.TOKENS)
         this.processing.set(false);
-        this.router.navigate([SAML_ROUTE_DATA.RESOURCES]);
+        await this.samlRuntimeConfig.whenReady();
+        void this.router.navigate([SAML_ROUTE_DATA.AUTHORIZATION_REQUEST]);
       } catch (error) {
           this.publishService.publishEvent(LOGIN_EVENTS.ERROR) 
+      }
+    }
+
+    private getAuthorizationConfig(): { clientId?: string; redirectUri?: string } {
+      /*
+       * Mismo fallback que AuthorizeComponent: preferimos BsAuthorizationConfig,
+       * pero aceptamos la AUTH_CONFIG capturada por Application durante bootstrap.
+       */
+      const windowConfig = window.BsAuthorizationConfig;
+      const authConfig = window.NEO_LOGIN_AUTH_CONFIG as Record<string, unknown> | undefined;
+
+      return {
+        clientId: windowConfig?.clientID ?? authConfig?.['CLIENT_ID'] as string | undefined,
+        redirectUri: windowConfig?.redirectUri ?? authConfig?.['REDIRECT_URI'] as string | undefined,
       }
     }
 

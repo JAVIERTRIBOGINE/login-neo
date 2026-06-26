@@ -6720,6 +6720,288 @@
 					}
 				]
 			}
+		},
+		"5.0.0": {
+			"name": "js-yaml",
+			"description": "YAML 1.2 parser and serializer",
+			"version": "5.0.0",
+			"author": {
+				"name": "Vladimir Zapparov",
+				"email": "dervus.grim@gmail.com"
+			},
+			"homepage": "https://github.com/nodeca/js-yaml#readme",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/nodeca/js-yaml.git"
+			},
+			"contributors": [
+				{
+					"name": "Aleksey V Zapparov",
+					"email": "ixti@member.fsf.org",
+					"url": "http://www.ixti.net/"
+				},
+				{
+					"name": "Vitaly Puzrin",
+					"email": "vitaly@rcdesign.ru",
+					"url": "https://github.com/puzrin"
+				},
+				{
+					"name": "Martin Grenfell",
+					"email": "martin.grenfell@gmail.com",
+					"url": "http://got-ravings.blogspot.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/nodeca/js-yaml/issues"
+			},
+			"main": "./dist/js-yaml.cjs.js",
+			"dependencies": {
+				"argparse": "^2.0.1"
+			},
+			"devDependencies": {
+				"@streamparser/json": "^0.0.22",
+				"@types/node": "^24.12.2",
+				"c8": "^11.0.0",
+				"codemirror": "^5.65.21",
+				"eslint": "^9.39.4",
+				"fast-check": "^4.8.0",
+				"gh-pages": "^6.3.0",
+				"mitata": "^1.0.34",
+				"neostandard": "^0.13.0",
+				"rollup": "^4.62.2",
+				"rollup-plugin-dts": "^6.4.1",
+				"typescript": "^6.0.3",
+				"vite": "^8.0.14",
+				"vite-plugin-node-polyfills": "^0.28.0",
+				"vite-plugin-singlefile": "^2.3.3",
+				"workerpool": "^10.0.2"
+			},
+			"keywords": [
+				"yaml",
+				"parser",
+				"serializer",
+				"pyyaml"
+			],
+			"license": "MIT",
+			"bin": {
+				"js-yaml": "bin/js-yaml.mjs"
+			},
+			"maintainers": [
+				{
+					"name": "vitaly",
+					"email": "vitaly@rcopen.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint .",
+				"lint-fix": "eslint . --fix",
+				"type-check": "tsc --noEmit",
+				"test": "npm run lint && npm run build && npm run type-check && npm run test:examples && npm run spec:get && node --test 'test/core/**/*.test.mjs' 'test/spec/*.test.mjs'",
+				"test:examples": "node --test 'examples/*.mjs'",
+				"test:spec": "npm run build && npm run spec:get && node test/spec/spec.test.mjs",
+				"spec:get": "node support/get-yaml-test-suite.mjs",
+				"spec:update": "node support/get-yaml-test-suite.mjs update",
+				"coverage": "npm run build && npm run spec:get && c8 --include 'dist/js-yaml.mjs' --include 'src/**' -r text -r html -r lcov node --test 'test/core/**/*.test.mjs' 'test/spec/*.test.mjs'",
+				"build": "node support/build-dist.mjs",
+				"build:demo": "npm run lint && node support/build_demo.mjs",
+				"gh-demo": "npm run build:demo && gh-pages -d demo -f",
+				"benchmark:deps": "npm install --prefix benchmark/extra/",
+				"prepack": "npm test && npm run build && npm run build:demo",
+				"postpublish": "npm run gh-demo"
+			},
+			"lastModified": 0,
+			"funding": [
+				{
+					"type": "github",
+					"url": "https://github.com/sponsors/puzrin"
+				},
+				{
+					"type": "github",
+					"url": "https://github.com/sponsors/nodeca"
+				}
+			],
+			"_id": "js-yaml@5.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/js-yaml/-/js-yaml-5.0.0.tgz",
+				"shasum": "f8500ec24e26830f8f0f66f9df9cb909e22e82cc",
+				"integrity": "sha512-GSvaPUbk1U+FMZ7rJzF+F8e5YVtu7KnD40et/5rBXXRBv2jCO9L3qCewvIDDdudC0QycTFlf6EAA+h3kxBsuUw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEYCIQCgLkS0InAzwOlNlHFuw3ob6ILz0Fq4xclKMBB6IoX8AQIhAKsk23tHbY6Fk2SRh7AVodAUnXtE+toA+rW3ej/JVmIZ"
+					}
+				]
+			},
+			"_npmVersion": "11.13.0",
+			"_npmUser": {
+				"name": "vitaly",
+				"email": "vitaly@rcopen.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "75148bc4f5eb69b3d338e1c355d8bb2dba5bdf34",
+			"types": "./dist/js-yaml.d.ts",
+			"exports": {
+				".": {
+					"types": "./dist/js-yaml.d.ts",
+					"import": "./dist/js-yaml.mjs",
+					"require": "./dist/js-yaml.cjs.js"
+				},
+				"./browser": {
+					"types": "./dist/js-yaml.d.ts",
+					"import": "./dist/browser/js-yaml.esm.min.mjs",
+					"require": "./dist/browser/js-yaml.umd.min.js",
+					"default": "./dist/browser/js-yaml.umd.min.js"
+				},
+				"./package.json": "./package.json"
+			},
+			"module": "./dist/js-yaml.mjs",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages-npm-production",
+				"tmp": "tmp/js-yaml_5.0.0_1781976535274_0.18284058589057106"
+			},
+			"_nodeVersion": "24.16.0"
+		},
+		"5.1.0": {
+			"name": "js-yaml",
+			"description": "YAML 1.2 parser and serializer",
+			"version": "5.1.0",
+			"author": {
+				"name": "Vladimir Zapparov",
+				"email": "dervus.grim@gmail.com"
+			},
+			"homepage": "https://github.com/nodeca/js-yaml#readme",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/nodeca/js-yaml.git"
+			},
+			"contributors": [
+				{
+					"name": "Aleksey V Zapparov",
+					"email": "ixti@member.fsf.org",
+					"url": "http://www.ixti.net/"
+				},
+				{
+					"name": "Vitaly Puzrin",
+					"email": "vitaly@rcdesign.ru",
+					"url": "https://github.com/puzrin"
+				},
+				{
+					"name": "Martin Grenfell",
+					"email": "martin.grenfell@gmail.com",
+					"url": "http://got-ravings.blogspot.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/nodeca/js-yaml/issues"
+			},
+			"main": "./dist/js-yaml.cjs.js",
+			"dependencies": {
+				"argparse": "^2.0.1"
+			},
+			"devDependencies": {
+				"@streamparser/json": "^0.0.22",
+				"@types/node": "^24.12.2",
+				"c8": "^11.0.0",
+				"codemirror": "^5.65.21",
+				"eslint": "^9.39.4",
+				"fast-check": "^4.8.0",
+				"gh-pages": "^6.3.0",
+				"mitata": "^1.0.34",
+				"neostandard": "^0.13.0",
+				"rollup": "^4.62.2",
+				"rollup-plugin-dts": "^6.4.1",
+				"typescript": "^6.0.3",
+				"vite": "^8.0.14",
+				"vite-plugin-node-polyfills": "^0.28.0",
+				"vite-plugin-singlefile": "^2.3.3",
+				"workerpool": "^10.0.2"
+			},
+			"keywords": [
+				"yaml",
+				"parser",
+				"serializer",
+				"pyyaml"
+			],
+			"license": "MIT",
+			"bin": {
+				"js-yaml": "bin/js-yaml.mjs"
+			},
+			"maintainers": [
+				{
+					"name": "vitaly",
+					"email": "vitaly@rcopen.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint .",
+				"lint-fix": "eslint . --fix",
+				"type-check": "tsc --noEmit",
+				"test": "npm run lint && npm run build && npm run type-check && npm run test:examples && npm run spec:get && node --test 'test/core/**/*.test.mjs' 'test/spec/*.test.mjs'",
+				"test:examples": "node --test 'examples/*.mjs'",
+				"test:spec": "npm run build && npm run spec:get && node test/spec/spec.test.mjs",
+				"spec:get": "node support/get-yaml-test-suite.mjs",
+				"spec:update": "node support/get-yaml-test-suite.mjs update",
+				"coverage": "npm run build && npm run spec:get && c8 --include 'dist/js-yaml.mjs' --include 'src/**' -r text -r html -r lcov node --test 'test/core/**/*.test.mjs' 'test/spec/*.test.mjs'",
+				"build": "node support/build-dist.mjs",
+				"build:demo": "npm run lint && node support/build_demo.mjs",
+				"gh-demo": "npm run build:demo && gh-pages -d demo -f",
+				"benchmark:deps": "npm install --prefix benchmark/extra/",
+				"prepack": "npm test && npm run build && npm run build:demo",
+				"postpublish": "npm run gh-demo"
+			},
+			"lastModified": 0,
+			"funding": [
+				{
+					"type": "github",
+					"url": "https://github.com/sponsors/puzrin"
+				},
+				{
+					"type": "github",
+					"url": "https://github.com/sponsors/nodeca"
+				}
+			],
+			"_id": "js-yaml@5.1.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/js-yaml/-/js-yaml-5.1.0.tgz",
+				"shasum": "c084ac880197833810a69e9c7e51eae12ff35448",
+				"integrity": "sha512-s8VA5jkR8f22S3NAXmhKPFqGUduqZGlsufabVOgN14iTdw/RXcym7bKkbwjxLK9Yw2lEvvmJjFp119+KPeo8Kg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEYCIQDqRFi1aWb2zxu+PHj2ZMA/NEjYAsogksD24S3ePqIHhQIhAIFciuVTiB1mzulLAeGrw/C90+7nUzWaGkt42kv4n8x6"
+					}
+				]
+			},
+			"_npmVersion": "11.13.0",
+			"_npmUser": {
+				"name": "vitaly",
+				"email": "vitaly@rcopen.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "f1e45cd201de162cc388a5175717eddf0743d367",
+			"types": "./dist/js-yaml.d.ts",
+			"exports": {
+				".": {
+					"types": "./dist/js-yaml.d.ts",
+					"import": "./dist/js-yaml.mjs",
+					"require": "./dist/js-yaml.cjs.js"
+				},
+				"./browser": {
+					"types": "./dist/js-yaml.d.ts",
+					"import": "./dist/browser/js-yaml.esm.min.mjs",
+					"require": "./dist/browser/js-yaml.umd.min.js",
+					"default": "./dist/browser/js-yaml.umd.min.js"
+				},
+				"./package.json": "./package.json"
+			},
+			"module": "./dist/js-yaml.mjs",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages-npm-production",
+				"tmp": "tmp/js-yaml_5.1.0_1782165692464_0.18773893647774442"
+			},
+			"_nodeVersion": "24.16.0"
 		}
 	},
 	"time": {
@@ -6729,7 +7011,7 @@
 		"0.2.0": "2011-11-02T01:56:04.988Z",
 		"0.2.1": "2011-11-02T15:44:59.476Z",
 		"3.5.0": "2016-01-10T19:09:01.309Z",
-		"modified": "2026-06-04T13:18:06.292Z",
+		"modified": "2026-06-22T22:01:32.742Z",
 		"3.5.1": "2016-01-11T01:28:37.047Z",
 		"3.13.0": "2019-03-20T19:16:31.897Z",
 		"3.5.2": "2016-01-11T11:03:18.527Z",
@@ -6800,16 +7082,18 @@
 		"1.0.3": "2012-11-05T01:57:23.010Z",
 		"1.0.0": "2012-07-01T15:02:00.004Z",
 		"1.0.1": "2012-07-07T09:42:56.820Z",
-		"1.0.2": "2012-08-02T08:44:43.484Z"
+		"1.0.2": "2012-08-02T08:44:43.484Z",
+		"5.0.0": "2026-06-20T17:28:55.421Z",
+		"5.1.0": "2026-06-22T22:01:32.626Z"
 	},
 	"users": {},
 	"dist-tags": {
-		"latest": "4.2.0"
+		"latest": "5.1.0"
 	},
 	"_uplinks": {
 		"artifactory-sabadell": {
-			"etag": "387419bbe8b1f1a57a225e251eb6395c6bbd6070",
-			"fetched": 1781195707681
+			"etag": "301dea6236cba41db9c74d5493aa1efa3bed26cb",
+			"fetched": 1782459810904
 		}
 	},
 	"_distfiles": {
@@ -7187,10 +7471,20 @@
 			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/js-yaml/-/js-yaml-1.0.2.tgz",
 			"sha": "ee3f5cebdf1b62d721e573480879d12e919c80d0",
 			"registry": "artifactory-sabadell"
+		},
+		"js-yaml-5.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/js-yaml/-/js-yaml-5.0.0.tgz",
+			"sha": "f8500ec24e26830f8f0f66f9df9cb909e22e82cc",
+			"registry": "artifactory-sabadell"
+		},
+		"js-yaml-5.1.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/js-yaml/-/js-yaml-5.1.0.tgz",
+			"sha": "c084ac880197833810a69e9c7e51eae12ff35448",
+			"registry": "artifactory-sabadell"
 		}
 	},
 	"_attachments": {},
-	"_rev": "1-f752ad60a7174501",
+	"_rev": "3-b732265643e5b0b6",
 	"_id": "js-yaml",
-	"readme": "JS-YAML - YAML 1.2 parser / writer for JavaScript\n=================================================\n\n[![CI](https://github.com/nodeca/js-yaml/actions/workflows/ci.yml/badge.svg)](https://github.com/nodeca/js-yaml/actions/workflows/ci.yml)\n[![NPM version](https://img.shields.io/npm/v/js-yaml.svg)](https://www.npmjs.org/package/js-yaml)\n\n__[Online Demo](https://nodeca.github.io/js-yaml/)__\n\n\nThis is an implementation of [YAML](https://yaml.org/), a human-friendly data\nserialization language. Started as [PyYAML](https://pyyaml.org/) port, it was\ncompletely rewritten from scratch. Now it's very fast, and supports 1.2 spec.\n\n\nInstallation\n------------\n\n### YAML module for node.js\n\n```\nnpm install js-yaml\n```\n\n\n### CLI executable\n\nIf you want to inspect your YAML files from CLI, install js-yaml globally:\n\n```\nnpm install -g js-yaml\n```\n\n#### Usage\n\n```\nusage: js-yaml [-h] [-v] [-c] [-t] file\n\nPositional arguments:\n  file           File with YAML document(s)\n\nOptional arguments:\n  -h, --help     Show this help message and exit.\n  -v, --version  Show program's version number and exit.\n  -c, --compact  Display errors in compact mode\n  -t, --trace    Show stack trace on error\n```\n\n\nAPI\n---\n\nHere we cover the most 'useful' methods. If you need advanced details (creating\nyour own tags), see [examples](https://github.com/nodeca/js-yaml/tree/master/examples)\nfor more info.\n\n``` javascript\nconst yaml = require('js-yaml');\nconst fs   = require('fs');\n\n// Get document, or throw exception on error\ntry {\n  const doc = yaml.load(fs.readFileSync('/home/ixti/example.yml', 'utf8'));\n  console.log(doc);\n} catch (e) {\n  console.log(e);\n}\n```\n\n\n### load (string [ , options ])\n\nParses `string` as single YAML document. Returns either a\nplain object, a string, a number, `null` or `undefined`, or throws `YAMLException` on error. By default, does\nnot support regexps, functions and undefined.\n\noptions:\n\n- `filename` _(default: null)_ - string to be used as a file path in\n  error/warning messages.\n- `onWarning` _(default: null)_ - function to call on warning messages.\n  Loader will call this function with an instance of `YAMLException` for each warning.\n- `schema` _(default: `DEFAULT_SCHEMA`)_ - specifies a schema to use.\n  - `FAILSAFE_SCHEMA` - only strings, arrays and plain objects:\n    https://www.yaml.org/spec/1.2/spec.html#id2802346\n  - `JSON_SCHEMA` - all JSON-supported types:\n    https://www.yaml.org/spec/1.2/spec.html#id2803231\n  - `CORE_SCHEMA` - same as `JSON_SCHEMA`:\n    https://www.yaml.org/spec/1.2/spec.html#id2804923\n  - `DEFAULT_SCHEMA` - all supported YAML types.\n- `json` _(default: false)_ - compatibility with JSON.parse behaviour. If true, then duplicate keys in a mapping will override values rather than throwing an error.\n- `maxDepth` _(default: 100)_ - limits nesting depth for collections.\n- `maxMergeSeqLength` _(default: 20)_ - limits the number of elements in merge\n  (`<<`) sequences.\n\nNOTE: This function **does not** understand multi-document sources, it throws\nexception on those.\n\nNOTE: JS-YAML **does not** support schema-specific tag resolution restrictions.\nSo, the JSON schema is not as strictly defined in the YAML specification.\nIt allows numbers in any notation, use `Null` and `NULL` as `null`, etc.\nThe core schema also has no such restrictions. It allows binary notation for integers.\n\n\n### loadAll (string [, iterator] [, options ])\n\nSame as `load()`, but understands multi-document sources. Applies\n`iterator` to each document if specified, or returns array of documents.\n\n``` javascript\nconst yaml = require('js-yaml');\n\nyaml.loadAll(data, function (doc) {\n  console.log(doc);\n});\n```\n\n\n### dump (object [ , options ])\n\nSerializes `object` as a YAML document. Uses `DEFAULT_SCHEMA`, so it will\nthrow an exception if you try to dump regexps or functions. However, you can\ndisable exceptions by setting the `skipInvalid` option to `true`.\n\noptions:\n\n- `indent` _(default: 2)_ - indentation width to use (in spaces).\n- `noArrayIndent` _(default: false)_ - when true, will not add an indentation level to array elements\n- `skipInvalid` _(default: false)_ - do not throw on invalid types (like function\n  in the safe schema) and skip pairs and single values with such types.\n- `flowLevel` _(default: -1)_ - specifies level of nesting, when to switch from\n  block to flow style for collections. -1 means block style everwhere\n- `styles` - \"tag\" => \"style\" map. Each tag may have own set of styles.\n- `schema` _(default: `DEFAULT_SCHEMA`)_ specifies a schema to use.\n- `sortKeys` _(default: `false`)_ - if `true`, sort keys when dumping YAML. If a\n  function, use the function to sort the keys.\n- `lineWidth` _(default: `80`)_ - set max line width. Set `-1` for unlimited width.\n- `noRefs` _(default: `false`)_ - if `true`, don't convert duplicate objects into references\n- `noCompatMode` _(default: `false`)_ - if `true` don't try to be compatible with older\n  yaml versions. Currently: don't quote \"yes\", \"no\" and so on, as required for YAML 1.1\n- `condenseFlow` _(default: `false`)_ - if `true` flow sequences will be condensed, omitting the space between `a, b`. Eg. `'[a,b]'`, and omitting the space between `key: value` and quoting the key. Eg. `'{\"a\":b}'` Can be useful when using yaml for pretty URL query params as spaces are %-encoded.\n- `quotingType` _(`'` or `\"`, default: `'`)_ - strings will be quoted using this quoting style. If you specify single quotes, double quotes will still be used for non-printable characters.\n- `forceQuotes` _(default: `false`)_ - if `true`, all non-key strings will be quoted even if they normally don't need to.\n- `replacer` - callback `function (key, value)` called recursively on each key/value in source object (see `replacer` docs for `JSON.stringify`).\n\nThe following table show availlable styles (e.g. \"canonical\",\n\"binary\"...) available for each tag (.e.g. !!null, !!int ...). Yaml\noutput is shown on the right side after `=>` (default setting) or `->`:\n\n``` none\n!!null\n  \"canonical\"   -> \"~\"\n  \"lowercase\"   => \"null\"\n  \"uppercase\"   -> \"NULL\"\n  \"camelcase\"   -> \"Null\"\n  \"empty\"       -> \"\"\n\n!!int\n  \"binary\"      -> \"0b1\", \"0b101010\", \"0b1110001111010\"\n  \"octal\"       -> \"0o1\", \"0o52\", \"0o16172\"\n  \"decimal\"     => \"1\", \"42\", \"7290\"\n  \"hexadecimal\" -> \"0x1\", \"0x2A\", \"0x1C7A\"\n\n!!bool\n  \"lowercase\"   => \"true\", \"false\"\n  \"uppercase\"   -> \"TRUE\", \"FALSE\"\n  \"camelcase\"   -> \"True\", \"False\"\n\n!!float\n  \"lowercase\"   => \".nan\", '.inf'\n  \"uppercase\"   -> \".NAN\", '.INF'\n  \"camelcase\"   -> \".NaN\", '.Inf'\n```\n\nExample:\n\n``` javascript\ndump(object, {\n  'styles': {\n    '!!null': 'canonical' // dump null as ~\n  },\n  'sortKeys': true        // sort object keys\n});\n```\n\nSupported YAML types\n--------------------\n\nThe list of standard YAML tags and corresponding JavaScript types. See also\n[YAML tag discussion](https://pyyaml.org/wiki/YAMLTagDiscussion) and\n[YAML types repository](https://yaml.org/type/).\n\n```\n!!null ''                   # null\n!!bool 'yes'                # bool\n!!int '3...'                # number\n!!float '3.14...'           # number\n!!binary '...base64...'     # buffer\n!!timestamp 'YYYY-...'      # date\n!!omap [ ... ]              # array of key-value pairs\n!!pairs [ ... ]             # array or array pairs\n!!set { ... }               # array of objects with given keys and null values\n!!str '...'                 # string\n!!seq [ ... ]               # array\n!!map { ... }               # object\n```\n\n**JavaScript-specific tags**\n\nSee [js-yaml-js-types](https://github.com/nodeca/js-yaml-js-types) for\nextra types.\n\n\nCaveats\n-------\n\nNote, that you use arrays or objects as key in JS-YAML. JS does not allow objects\nor arrays as keys, and stringifies (by calling `toString()` method) them at the\nmoment of adding them.\n\n``` yaml\n---\n? [ foo, bar ]\n: - baz\n? { foo: bar }\n: - baz\n  - baz\n```\n\n``` javascript\n{ \"foo,bar\": [\"baz\"], \"[object Object]\": [\"baz\", \"baz\"] }\n```"
+	"readme": "JS-YAML - YAML 1.2 parser / writer for JavaScript\n=================================================\n\n[![CI](https://github.com/nodeca/js-yaml/actions/workflows/ci.yml/badge.svg)](https://github.com/nodeca/js-yaml/actions/workflows/ci.yml)\n[![NPM version](https://img.shields.io/npm/v/js-yaml.svg)](https://www.npmjs.org/package/js-yaml)\n\n__[Online Demo](https://nodeca.github.io/js-yaml/)__\n\n\nA fast and complete [YAML](https://yaml.org/) parser and writer for JavaScript.\nSupports both the 1.2 and 1.1 specs, and passes the entire\n[YAML Test Suite](https://github.com/yaml/yaml-test-suite).\n\n\nInstallation\n------------\n\n```\nnpm install js-yaml\n```\n\nUpgrading from v4? See the [v5 migration guide](docs/migrate_v4_to_v5.md).\n\n\nAPI\n---\n\nHere we cover the most useful methods. If you need advanced details (such as\ncreating your own tags), see the [examples](examples/) for more info.\n\n``` javascript\nimport { load } from 'js-yaml'\nimport { readFileSync } from 'node:fs'\n\n// Get document, or throw exception on error\ntry {\n  const doc = load(readFileSync('example.yml', 'utf8'))\n  console.log(doc)\n} catch (e) {\n  console.log(e)\n}\n```\n\n\n### load (string [ , options ])\n\nParses `string` as a single YAML document. Throws `YAMLException` on error.\nThis function **does not** understand multi-document or empty sources; it throws\nan exception on those.\n\n> [!WARNING]\n> When processing untrusted input, see the\n> [security considerations](docs/safety.md).\n\noptions:\n\n- `filename` _(default: null)_ - string to be used as a file path in\n  error/warning messages.\n- `schema` _(default: `CORE_SCHEMA`)_ - specifies a schema to use.\n  - `FAILSAFE_SCHEMA` - only strings, arrays and plain objects.\n  - `JSON_SCHEMA` - all JSON-supported types.\n  - `CORE_SCHEMA` - a superset of `JSON_SCHEMA`, accepting more notations for\n    the same types.\n  - `YAML11_SCHEMA` - adds the legacy YAML 1.1 types (`!!binary`, `!!timestamp`,\n    `!!omap`, `!!pairs`, `!!set`, merge keys `<<`, and the broader 1.1 scalar\n    notations).\n- `json` _(default: false)_ - compatibility with `JSON.parse` behaviour. If\n  `true`, duplicate keys in a mapping override values rather than throwing an\n  error.\n- `maxDepth` _(default: 100)_ - limits the nesting depth for collections (does\n  not take aliases into account).\n- `maxMergeSeqLength` _(default: 20)_ - limits the number of items in merge\n  (`<<`) sequences.\n\n> [!NOTE]\n>\n> The default `CORE_SCHEMA` comes without the `!!merge` tag. You can easily\n> enable it if needed:\n>\n> ``` javascript\n> import { load, CORE_SCHEMA, mergeTag } from 'js-yaml'\n>\n> load(data, { schema: CORE_SCHEMA.withTags(mergeTag) })\n> ```\n\n> [!WARNING]\n>\n> The default `mapTag` is `{}`-object based and does not allow complex keys\n> (objects, arrays and so on). That's an intentional choice for convenience.\n> Also, non-string scalar keys, such as `null`, numbers or booleans, are\n> converted to strings.\n>\n> In the rare cases where you really need complex keys, use `realMapTag` in the\n> schema instead. It stores any key exactly as provided, at the cost of less\n> convenient access.\n\nSee [examples](examples/) for advanced customization approaches.\n\n\n### loadAll (string [, options ])\n\nSame as `load()`, but understands multi-document sources. Returns an array of\ndocuments.\n\n``` javascript\nimport { loadAll } from 'js-yaml'\n\nconsole.log(loadAll(data))\n```\n\n\n### dump (object [ , options ])\n\nSerializes `object` as a YAML document. By default it can dump every supported\nYAML type, so it throws an exception if you try to dump regexps or functions.\nHowever, you can disable exceptions by setting the `skipInvalid` option to\n`true`.\n\noptions:\n\n- `indent` _(default: 2)_ - indentation width to use (in spaces).\n- `flowLevel` _(default: -1)_ - nesting level at which collections switch from\n  block to flow style (`-1` means never).\n- `seqNoIndent` _(default: false)_ - when `true`, does not add an indentation\n  level to array elements, `␣␣- 1` => `- 1`.\n- `seqInlineFirst` _(default: true)_ - when `true`, allows a nested collection\n  to start on the same line after `-`, `-\\n  - 1` => `- - 1`.\n- `skipInvalid` _(default: false)_ - do not throw on invalid types (such as a\n  function in the schema). Invalid mapping pairs and sequence items are skipped;\n  `undefined` sequence items are serialized as `null`.\n- `schema` _(default: a `YAML11_SCHEMA`-based schema)_ - specifies a schema to\n  use.\n- `sortKeys` _(default: `false`)_ - if `true`, sort keys when dumping YAML. If a\n  function, use the function to sort the keys.\n- `lineWidth` _(default: `80`)_ - sets the max line width. Set `-1` for unlimited\n  width.\n- `noRefs` _(default: `false`)_ - if `true`, don't convert duplicate objects into\n  references; inline them instead.\n- `quoteStyle` _(`single` or `double`, default: `single`)_ - quoting style to use\n  when a string needs quotes.\n- `forceQuotes` _(default: `false`)_ - if `true`, quote all non-key strings,\n  using `quoteStyle`.\n- `flowBracketPadding` _(default: `false`)_ - add spaces inside flow collection\n  brackets, `{a: 1}` => `{ a: 1 }`.\n- `flowSkipCommaSpace` _(default: `false`)_ - omit the space after commas in\n  flow collections, `[1, 2]` => `[1,2]`.\n- `flowSkipColonSpace` _(default: `false`)_ - omit the space after `:` in flow\n  mappings, `{a: 1}` => `{a:1}`.\n- `quoteFlowKeys` _(default: `false`)_ - quote flow mapping keys, `{a: 1}` =>\n  `{\"a\": 1}`.\n- `tagBeforeAnchor` _(default: `false`)_ - print an explicit tag before an\n  anchor, `&ref_0 !!set` => `!!set &ref_0`.\n- `transform` - a function `(documents: Document[]) => void` that can mutate the\n  generated AST before it is rendered.\n\nSee [examples](examples/) for advanced customization approaches.\n\n\nSupported YAML types\n--------------------\n\nThe list of standard YAML tags and corresponding JavaScript types. See also\n[YAML tag discussion](https://pyyaml.org/wiki/YAMLTagDiscussion) and\n[YAML types repository](https://yaml.org/type/).\n\n```\n!!null ''                   # null\n!!bool 'true'               # bool\n!!int '3...'                # number\n!!float '3.14...'           # number\n!!str '...'                 # string\n!!seq [ ... ]               # array\n!!map { ... }               # object (or Map)\n```\n\nThe types below are only available in `YAML11_SCHEMA` (not in the default\n`CORE_SCHEMA`):\n\n```\n!!binary '...base64...'     # Uint8Array\n!!timestamp 'YYYY-...'      # date\n!!set { ... }               # Set\n\n# Legacy YAML 1.1 compatibility only; these types cannot be dumped.\n!!omap [ ... ]              # array of key-value pairs\n!!pairs [ ... ]             # array of array pairs\n```\n\nTo preserve complex keys in the first position of a `!!pairs` item, replace\nthe default object-based map with `realMapTag` in the schema.\n\n**JavaScript-specific tags**\n\nSee [js-yaml-js-types](https://github.com/nodeca/js-yaml-js-types) for\nextra types.\n\n\nCLI\n---\n\nThis can be useful sometimes for a quick check.\n\n```\nnpx js-yaml -h\n```\n\nNote: the CLI script comes with minimal options, and there are no big plans to\nextend it."
 }

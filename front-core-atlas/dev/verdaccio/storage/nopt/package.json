@@ -1,0 +1,3143 @@
+{
+	"name": "nopt",
+	"versions": {
+		"9.0.0": {
+			"name": "nopt",
+			"description": "Option parsing for Node, supporting types, shorthands, etc. Used by npm.",
+			"version": "9.0.0",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/nopt#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/nopt.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/nopt/issues"
+			},
+			"engines": {
+				"node": "^20.17.0 || >=22.9.0"
+			},
+			"main": "lib/nopt.js",
+			"dependencies": {
+				"abbrev": "^4.0.0"
+			},
+			"devDependencies": {
+				"tap": "^16.3.0",
+				"@npmcli/template-oss": "4.27.1",
+				"@npmcli/eslint-config": "^5.0.0"
+			},
+			"license": "ISC",
+			"bin": {
+				"nopt": "bin/nopt.js"
+			},
+			"maintainers": [
+				{
+					"name": "gar",
+					"email": "gar+npm@danger.computer"
+				},
+				{
+					"name": "saquibkhan",
+					"email": "saquibkhan@github.com"
+				},
+				{
+					"name": "npm-cli-ops",
+					"email": "npm-cli+bot@github.com"
+				},
+				{
+					"name": "reggi",
+					"email": "reggi@github.com"
+				},
+				{
+					"name": "hashtagchris",
+					"email": "hashtagchris@github.com"
+				},
+				{
+					"name": "owlstronaut",
+					"email": "owlstronaut@github.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "npm run eslint",
+				"snap": "tap",
+				"test": "tap",
+				"eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
+				"lintfix": "npm run eslint -- --fix",
+				"postlint": "template-oss-check",
+				"posttest": "npm run lint",
+				"template-oss-apply": "template-oss-apply --force"
+			},
+			"lastModified": 0,
+			"_id": "nopt@9.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-9.0.0.tgz",
+				"shasum": "6bff0836b2964d24508b6b41b5a9a49c4f4a1f96",
+				"integrity": "sha512-Zhq3a+yFKrYwSBluL4H9XP3m3y5uvQkB/09CwDruCiRmR/UJYnn9W4R48ry0uGC70aeTPKLynBtscP9efFFcPw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEUCIQC+scca+QgHMXVcwU57Xwl+5+0VUCtt07KB6orug8aQbwIgCIaECscxrqlUkgla10VDC1nd4PSR+q9DrQq2d2iAeuo="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/nopt@9.0.0",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "11.6.2",
+			"_npmUser": {
+				"name": "GitHub Actions",
+				"email": "npm-oidc-no-reply@github.com",
+				"trustedPublisher": {
+					"id": "github",
+					"oidcConfigId": "oidc:a6a744fc-3d3f-4070-bc9e-6c13238ee24c"
+				}
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "9d8161aae17d52fce9f5122fd706856ded294940",
+			"tap": {
+				"nyc-arg": [
+					"--exclude",
+					"tap-snapshots/**"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/nopt_9.0.0_1761146835220_0.2647039460124998",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"templateOSS": {
+				"publish": true,
+				"version": "4.27.1",
+				"windowsCI": false,
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+			},
+			"_nodeVersion": "22.20.0",
+			"contributors": []
+		},
+		"1.0.10": {
+			"name": "nopt",
+			"description": "Option parsing for Node, supporting types, shorthands, etc. Used by npm.",
+			"version": "1.0.10",
+			"author": {
+				"url": "http://blog.izs.me/",
+				"name": "Isaac Z. Schlueter",
+				"email": "i@izs.me"
+			},
+			"repository": {
+				"url": "git://github.com/isaacs/nopt.git",
+				"type": "git"
+			},
+			"engines": {
+				"node": "*"
+			},
+			"main": "lib/nopt.js",
+			"dependencies": {
+				"abbrev": "1"
+			},
+			"devDependencies": {},
+			"license": {
+				"url": "https://github.com/isaacs/nopt/raw/master/LICENSE",
+				"type": "MIT"
+			},
+			"bin": {
+				"nopt": "./bin/nopt.js"
+			},
+			"maintainers": [
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "node lib/nopt.js"
+			},
+			"lastModified": 0,
+			"_id": "nopt@1.0.10",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-1.0.10.tgz",
+				"shasum": "6ddd21bd2a31417b92727dd585f8a6f37608ebee",
+				"integrity": "sha512-NWmpvLSqUrgrAC9HCuxEvb+PSloHpqVu+FqcO4eeF2h5qYRhA7ev6KvelyQAKtegUbC6RypJnlEOhd8vloNKYg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCICv5nqEW1F+gMq6T9pFC7pd7a+EHDE2ok1pSLvsqj2JcAiEAy/fM0T63GZkbmmYHKaCC1yvkmKWYOtJyU4BBTjuA0cc="
+					}
+				]
+			},
+			"_npmVersion": "1.0.93",
+			"_npmUser": {
+				"name": "isaacs",
+				"email": "i@izs.me"
+			},
+			"_defaultsLoaded": true,
+			"_engineSupported": true,
+			"_nodeVersion": "v0.5.9-pre",
+			"contributors": []
+		},
+		"4.0.2": {
+			"name": "nopt",
+			"description": "Option parsing for Node, supporting types, shorthands, etc. Used by npm.",
+			"version": "4.0.2",
+			"author": {
+				"url": "http://blog.izs.me/",
+				"name": "Isaac Z. Schlueter",
+				"email": "i@izs.me"
+			},
+			"homepage": "https://github.com/npm/nopt#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/nopt.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/nopt/issues"
+			},
+			"main": "lib/nopt.js",
+			"dependencies": {
+				"osenv": "^0.1.4",
+				"abbrev": "1"
+			},
+			"devDependencies": {
+				"tap": "^14.10.6"
+			},
+			"license": "ISC",
+			"bin": {
+				"nopt": "bin/nopt.js"
+			},
+			"maintainers": [
+				{
+					"name": "adam_baldwin",
+					"email": "evilpacket@gmail.com"
+				},
+				{
+					"name": "ahmadnassri",
+					"email": "ahmad@ahmadnassri.com"
+				},
+				{
+					"name": "claudiahdz",
+					"email": "cghr1990@gmail.com"
+				},
+				{
+					"name": "darcyclarke",
+					"email": "darcy@darcyclarke.me"
+				},
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				},
+				{
+					"name": "mikemimik",
+					"email": "mike@mikecorp.ca"
+				},
+				{
+					"name": "ruyadorno",
+					"email": "ruyadorno@hotmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap test/*.js",
+				"preversion": "npm test",
+				"postversion": "npm publish",
+				"prepublishOnly": "git push origin --follow-tags"
+			},
+			"lastModified": 0,
+			"_id": "nopt@4.0.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-4.0.2.tgz",
+				"shasum": "ccdb22d06b9990dab9704033bb31209dbd1f5b1e",
+				"integrity": "sha512-S+Q/CsNK7M1EFtMslCR/Xweq9WSuKy3O2fwITYEu9mtoBF/Du3yqKfiGfEdGBHhvN2BQUsPW+2fIg+7moyP6Rw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDNUKgacRLTBSwxWwt9XPQzG0rrdsKZ1RvsR3++RvoCzAIhAIQB5AVZmNXhiI1dOe1eidCRoXRpdC9/x1WShcLU3xzt"
+					}
+				]
+			},
+			"_npmVersion": "6.14.2",
+			"_npmUser": {
+				"name": "isaacs",
+				"email": "i@izs.me"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "53f158e3edf55fc44b5275a6270abe1b1a422c5a",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/nopt_4.0.2_1583704363758_0.020218475236866817",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "13.9.0",
+			"contributors": []
+		},
+		"4.0.3": {
+			"name": "nopt",
+			"description": "Option parsing for Node, supporting types, shorthands, etc. Used by npm.",
+			"version": "4.0.3",
+			"author": {
+				"url": "http://blog.izs.me/",
+				"name": "Isaac Z. Schlueter",
+				"email": "i@izs.me"
+			},
+			"homepage": "https://github.com/npm/nopt#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/nopt.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/nopt/issues"
+			},
+			"main": "lib/nopt.js",
+			"dependencies": {
+				"osenv": "^0.1.4",
+				"abbrev": "1"
+			},
+			"devDependencies": {
+				"tap": "^14.10.6"
+			},
+			"license": "ISC",
+			"bin": {
+				"nopt": "bin/nopt.js"
+			},
+			"maintainers": [
+				{
+					"name": "adam_baldwin",
+					"email": "evilpacket@gmail.com"
+				},
+				{
+					"name": "ahmadnassri",
+					"email": "ahmad@ahmadnassri.com"
+				},
+				{
+					"name": "claudiahdz",
+					"email": "cghr1990@gmail.com"
+				},
+				{
+					"name": "darcyclarke",
+					"email": "darcy@darcyclarke.me"
+				},
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				},
+				{
+					"name": "mikemimik",
+					"email": "mike@mikecorp.ca"
+				},
+				{
+					"name": "ruyadorno",
+					"email": "ruyadorno@hotmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap test/*.js",
+				"preversion": "npm test",
+				"postversion": "npm publish",
+				"prepublishOnly": "git push origin --follow-tags"
+			},
+			"lastModified": 0,
+			"_id": "nopt@4.0.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-4.0.3.tgz",
+				"shasum": "a375cad9d02fd921278d954c2254d5aa57e15e48",
+				"integrity": "sha512-CvaGwVMztSMJLOeXPrez7fyfObdZqNUK1cPAEzLHrTybIua9pMdmmPR5YwtfNftIOMv3DPUhFaxsZMNTQO20Kg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCICmFJU14Qvz1vhBhoY+KAnbg0U+NlLJPVkDjvHoZDIaiAiAcYsOsPBhtilxnycoVAFuZEUi3PCRLO5G7HcQXj0sQ7A=="
+					}
+				]
+			},
+			"_npmVersion": "6.14.2",
+			"_npmUser": {
+				"name": "isaacs",
+				"email": "i@izs.me"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "2b1ef35dfaaee7a79a7e1b5ed83dcda2853214d4",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/nopt_4.0.3_1583704435982_0.1350573274257274",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "13.9.0",
+			"contributors": []
+		},
+		"4.0.0": {
+			"name": "nopt",
+			"description": "Option parsing for Node, supporting types, shorthands, etc. Used by npm.",
+			"version": "4.0.0",
+			"author": {
+				"url": "http://blog.izs.me/",
+				"name": "Isaac Z. Schlueter",
+				"email": "i@izs.me"
+			},
+			"homepage": "https://github.com/npm/nopt#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/nopt.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/nopt/issues"
+			},
+			"main": "lib/nopt.js",
+			"dependencies": {
+				"osenv": "^0.1.4",
+				"abbrev": "1"
+			},
+			"devDependencies": {
+				"tap": "^8.0.1"
+			},
+			"license": "ISC",
+			"bin": {
+				"nopt": "./bin/nopt.js"
+			},
+			"maintainers": [
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				},
+				{
+					"name": "othiym23",
+					"email": "ogd@aoaioxxysz.net"
+				},
+				{
+					"name": "zkat",
+					"email": "kat@sykosomatic.org"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap test/*.js"
+			},
+			"lastModified": 0,
+			"_id": "nopt@4.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-4.0.0.tgz",
+				"shasum": "a4f9c541d2f84e0e2288057125fefe7329836694",
+				"integrity": "sha512-+iVDulYPQfPGupAup3iAmQJC+DKRqTCP3tBrnMkczFLp/VIMFQduspOmnWQzLIPsYpBCRfUvzlQU7YPTPqmQkg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCuHIKM3csQB0VO5Us6hgGKgfzLLI1ai9cmDbNmT0a6SwIgFFMfV9gVL6KEHySzYEWyDvLpeGWwnd0t6QxzYsC5ulk="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "4.0.5",
+			"_npmUser": {
+				"name": "othiym23",
+				"email": "ogd@aoaioxxysz.net"
+			},
+			"gitHead": "ae1fb2967063a47ad1f0b31a7cd335cef0f6dd6c",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/nopt-4.0.0.tgz_1481672322129_0.9774678370449692",
+				"host": "packages-12-west.internal.npmjs.com"
+			},
+			"_shasum": "a4f9c541d2f84e0e2288057125fefe7329836694",
+			"_nodeVersion": "7.2.0",
+			"contributors": []
+		},
+		"4.0.1": {
+			"name": "nopt",
+			"description": "Option parsing for Node, supporting types, shorthands, etc. Used by npm.",
+			"version": "4.0.1",
+			"author": {
+				"url": "http://blog.izs.me/",
+				"name": "Isaac Z. Schlueter",
+				"email": "i@izs.me"
+			},
+			"homepage": "https://github.com/npm/nopt#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/nopt.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/nopt/issues"
+			},
+			"main": "lib/nopt.js",
+			"dependencies": {
+				"osenv": "^0.1.4",
+				"abbrev": "1"
+			},
+			"devDependencies": {
+				"tap": "^8.0.1"
+			},
+			"license": "ISC",
+			"bin": {
+				"nopt": "./bin/nopt.js"
+			},
+			"maintainers": [
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				},
+				{
+					"name": "othiym23",
+					"email": "ogd@aoaioxxysz.net"
+				},
+				{
+					"name": "zkat",
+					"email": "kat@sykosomatic.org"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap test/*.js"
+			},
+			"lastModified": 0,
+			"_id": "nopt@4.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-4.0.1.tgz",
+				"shasum": "d0d4685afd5415193c8c7505602d0d17cd64474d",
+				"integrity": "sha512-+5XZFpQZEY0cg5JaxLwGxDlKNKYxuXwGt8/Oi3UXm5/4ymrJve9d2CURituxv3rSrVCGZj4m1U1JlHTdcKt2Ng==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIDMiR7+IrmP/ceoKN0oWo+Fq+ObHMVSlSW9nzdgGw/GsAiEAn9MmeEyBgqvr7ebUvqnhggncLdKlOPgA5VClKmxiFUg="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "4.0.5",
+			"_npmUser": {
+				"name": "othiym23",
+				"email": "ogd@aoaioxxysz.net"
+			},
+			"gitHead": "24921187dc52825d628042c9708bbd8e8734698c",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/nopt-4.0.1.tgz_1481739985863_0.18861285015009344",
+				"host": "packages-12-west.internal.npmjs.com"
+			},
+			"_shasum": "d0d4685afd5415193c8c7505602d0d17cd64474d",
+			"_nodeVersion": "7.2.0",
+			"contributors": []
+		},
+		"3.0.0": {
+			"name": "nopt",
+			"description": "Option parsing for Node, supporting types, shorthands, etc. Used by npm.",
+			"version": "3.0.0",
+			"author": {
+				"url": "http://blog.izs.me/",
+				"name": "Isaac Z. Schlueter",
+				"email": "i@izs.me"
+			},
+			"homepage": "https://github.com/isaacs/nopt",
+			"repository": {
+				"url": "http://github.com/isaacs/nopt",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/isaacs/nopt/issues"
+			},
+			"main": "lib/nopt.js",
+			"dependencies": {
+				"abbrev": "1"
+			},
+			"devDependencies": {
+				"tap": "~0.4.8"
+			},
+			"license": {
+				"url": "https://github.com/isaacs/nopt/raw/master/LICENSE",
+				"type": "MIT"
+			},
+			"bin": {
+				"nopt": "./bin/nopt.js"
+			},
+			"maintainers": [
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap test/*.js"
+			},
+			"lastModified": 0,
+			"_id": "nopt@3.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-3.0.0.tgz",
+				"shasum": "4fcf4bf09123d5ee6b2f70214a4d95789b875c79",
+				"integrity": "sha512-5Ixzt7GN/YCH8TeTfJN9LE91RZ4r5MnY/FWr7Nl37ZsBkEh7W3CNZxQA4Bt1/WmmZS2vb0ZLFIl7WF1u/oj+tg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDxUaFQdvlotlUfbGpnLHnTjQRLUB/PulA3PA4E9IQOyQIhAL0/9LcmeSBqXwKqYlVXGDRJPNHvbc0Jf28gMzpJ1qiO"
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "1.4.14",
+			"_npmUser": {
+				"name": "isaacs",
+				"email": "i@izs.me"
+			},
+			"gitHead": "b08ea1db39ca91cb5db37bc1b2fcf07e16386094",
+			"_shasum": "4fcf4bf09123d5ee6b2f70214a4d95789b875c79",
+			"contributors": []
+		},
+		"8.0.0": {
+			"name": "nopt",
+			"description": "Option parsing for Node, supporting types, shorthands, etc. Used by npm.",
+			"version": "8.0.0",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/nopt#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/nopt.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/nopt/issues"
+			},
+			"engines": {
+				"node": "^18.17.0 || >=20.5.0"
+			},
+			"main": "lib/nopt.js",
+			"dependencies": {
+				"abbrev": "^2.0.0"
+			},
+			"devDependencies": {
+				"tap": "^16.3.0",
+				"@npmcli/template-oss": "4.23.3",
+				"@npmcli/eslint-config": "^5.0.0"
+			},
+			"license": "ISC",
+			"bin": {
+				"nopt": "bin/nopt.js"
+			},
+			"maintainers": [
+				{
+					"name": "hashtagchris",
+					"email": "hashtagchris@github.com"
+				},
+				{
+					"name": "reggi",
+					"email": "reggi@github.com"
+				},
+				{
+					"name": "npm-cli-ops",
+					"email": "npm-cli+bot@github.com"
+				},
+				{
+					"name": "saquibkhan",
+					"email": "saquibkhan@github.com"
+				},
+				{
+					"name": "fritzy",
+					"email": "fritzy@github.com"
+				},
+				{
+					"name": "gar",
+					"email": "gar+npm@danger.computer"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "npm run eslint",
+				"snap": "tap",
+				"test": "tap",
+				"eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
+				"lintfix": "npm run eslint -- --fix",
+				"postlint": "template-oss-check",
+				"posttest": "npm run lint",
+				"template-oss-apply": "template-oss-apply --force"
+			},
+			"lastModified": 0,
+			"_id": "nopt@8.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-8.0.0.tgz",
+				"shasum": "644f1e78da564b70e3606ab8db4836b0e32e198a",
+				"integrity": "sha512-1L/fTJ4UmV/lUxT2Uf006pfZKTvAgCF+chz+0OgBHO8u2Z67pE7AaAUUj7CJy0lXqHmymUvGFt6NE9R3HER0yw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCICzSXe/kmq9q6ZkryrJvfla0DQkyKTocWcrKxEKtZnsmAiEAzQ1CCsHOkBRNvX2CNfT4Q2HpPynk7R4v+L5Rnr+IOK0="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/nopt@8.0.0",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "10.8.3",
+			"_npmUser": {
+				"name": "npm-cli-ops",
+				"email": "npm-cli+bot@github.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "a3b0bfc867502c4ca2faba36a217cb7af029227c",
+			"tap": {
+				"nyc-arg": [
+					"--exclude",
+					"tap-snapshots/**"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/nopt_8.0.0_1725487951412_0.24294595974179733",
+				"host": "s3://npm-registry-packages"
+			},
+			"templateOSS": {
+				"publish": true,
+				"version": "4.23.3",
+				"windowsCI": false,
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+			},
+			"_nodeVersion": "22.8.0",
+			"contributors": []
+		},
+		"8.1.0": {
+			"name": "nopt",
+			"description": "Option parsing for Node, supporting types, shorthands, etc. Used by npm.",
+			"version": "8.1.0",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/nopt#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/nopt.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/nopt/issues"
+			},
+			"engines": {
+				"node": "^18.17.0 || >=20.5.0"
+			},
+			"main": "lib/nopt.js",
+			"dependencies": {
+				"abbrev": "^3.0.0"
+			},
+			"devDependencies": {
+				"tap": "^16.3.0",
+				"@npmcli/template-oss": "4.23.6",
+				"@npmcli/eslint-config": "^5.0.0"
+			},
+			"license": "ISC",
+			"bin": {
+				"nopt": "bin/nopt.js"
+			},
+			"maintainers": [
+				{
+					"name": "fritzy",
+					"email": "fritzy@github.com"
+				},
+				{
+					"name": "gar",
+					"email": "gar+npm@danger.computer"
+				},
+				{
+					"name": "saquibkhan",
+					"email": "saquibkhan@github.com"
+				},
+				{
+					"name": "npm-cli-ops",
+					"email": "npm-cli+bot@github.com"
+				},
+				{
+					"name": "reggi",
+					"email": "reggi@github.com"
+				},
+				{
+					"name": "hashtagchris",
+					"email": "hashtagchris@github.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "npm run eslint",
+				"snap": "tap",
+				"test": "tap",
+				"eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
+				"lintfix": "npm run eslint -- --fix",
+				"postlint": "template-oss-check",
+				"posttest": "npm run lint",
+				"template-oss-apply": "template-oss-apply --force"
+			},
+			"lastModified": 0,
+			"_id": "nopt@8.1.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-8.1.0.tgz",
+				"shasum": "b11d38caf0f8643ce885818518064127f602eae3",
+				"integrity": "sha512-ieGu42u/Qsa4TFktmaKEwM6MQH0pOWnaB3htzh0JRtx84+Mebc0cbZYN5bC+6WTZ4+77xrL9Pn5m7CV6VIkV7A==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEUCIQCZL81e8uR+danfKFoFUHkO//R1eMRbfTZ0ROPeVoh7LAIgLoH5iRBtSGeZjMiid2sDN4WSnBEXqAnnOqUxDDnRRFg="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/nopt@8.1.0",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "11.0.0",
+			"_npmUser": {
+				"name": "npm-cli-ops",
+				"email": "npm-cli+bot@github.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "e8cc07120b4acb938a182fa7a1cc7453d0c4cbfa",
+			"tap": {
+				"nyc-arg": [
+					"--exclude",
+					"tap-snapshots/**"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/nopt_8.1.0_1737479745037_0.14450234149419994",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"templateOSS": {
+				"publish": true,
+				"version": "4.23.6",
+				"windowsCI": false,
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+			},
+			"_nodeVersion": "22.12.0",
+			"contributors": []
+		},
+		"3.0.5": {
+			"name": "nopt",
+			"description": "Option parsing for Node, supporting types, shorthands, etc. Used by npm.",
+			"version": "3.0.5",
+			"author": {
+				"url": "http://blog.izs.me/",
+				"name": "Isaac Z. Schlueter",
+				"email": "i@izs.me"
+			},
+			"homepage": "https://github.com/npm/nopt#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/nopt.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/nopt/issues"
+			},
+			"main": "lib/nopt.js",
+			"dependencies": {
+				"abbrev": "1"
+			},
+			"devDependencies": {
+				"tap": "^1.2.0"
+			},
+			"license": "ISC",
+			"bin": {
+				"nopt": "./bin/nopt.js"
+			},
+			"maintainers": [
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				},
+				{
+					"name": "othiym23",
+					"email": "ogd@aoaioxxysz.net"
+				},
+				{
+					"name": "zkat",
+					"email": "kat@sykosomatic.org"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap test/*.js"
+			},
+			"lastModified": 0,
+			"_id": "nopt@3.0.5",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-3.0.5.tgz",
+				"shasum": "34adf7482cf70b06d24693e094c2c1e2e7fab403",
+				"integrity": "sha512-JiJ1B7WkhiGhkdHXUrz5IOnrEqkXOxqhofyuK8t4LHKAmLcWj0JY0s2izJWEpuEi5h25S+k70EG45CKOoLvxlg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCsWyOU0jhTQgOwYUzbWdTG7/n6Lf3kvLLtBnA37pwZ0AIgEqiahq9XH9S0uGBY0+9aNGFSJcHg77YPmp/ktbTuKTo="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "2.14.10",
+			"_npmUser": {
+				"name": "othiym23",
+				"email": "ogd@aoaioxxysz.net"
+			},
+			"gitHead": "0af9e18228fff757bcc7dccf57623423719ca255",
+			"_shasum": "34adf7482cf70b06d24693e094c2c1e2e7fab403",
+			"_nodeVersion": "4.2.1",
+			"contributors": []
+		},
+		"3.0.6": {
+			"name": "nopt",
+			"description": "Option parsing for Node, supporting types, shorthands, etc. Used by npm.",
+			"version": "3.0.6",
+			"author": {
+				"url": "http://blog.izs.me/",
+				"name": "Isaac Z. Schlueter",
+				"email": "i@izs.me"
+			},
+			"homepage": "https://github.com/npm/nopt#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/nopt.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/nopt/issues"
+			},
+			"main": "lib/nopt.js",
+			"dependencies": {
+				"abbrev": "1"
+			},
+			"devDependencies": {
+				"tap": "^1.2.0"
+			},
+			"license": "ISC",
+			"bin": {
+				"nopt": "./bin/nopt.js"
+			},
+			"maintainers": [
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				},
+				{
+					"name": "othiym23",
+					"email": "ogd@aoaioxxysz.net"
+				},
+				{
+					"name": "zkat",
+					"email": "kat@sykosomatic.org"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap test/*.js"
+			},
+			"lastModified": 0,
+			"_id": "nopt@3.0.6",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-3.0.6.tgz",
+				"shasum": "c6465dbf08abcd4db359317f79ac68a646b28ff9",
+				"integrity": "sha512-4GUt3kSEYmk4ITxzB/b9vaIDfUVWN/Ml1Fwl11IlnIG2iaJ9O6WXZ9SrYM9NLI8OCBieN2Y8SWC2oJV0RQ7qYg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDAQveo4hCC5nqRoGHUV7/wOe+95EQRcc/LEVjoPWIuAwIgSAqvdOoaPh0NI3h+77OwDRd7wDr0wM4ADP6ppzRxzPU="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "2.14.10",
+			"_npmUser": {
+				"name": "othiym23",
+				"email": "ogd@aoaioxxysz.net"
+			},
+			"gitHead": "10a750c9bb99c1950160353459e733ac2aa18cb6",
+			"_shasum": "c6465dbf08abcd4db359317f79ac68a646b28ff9",
+			"_nodeVersion": "4.2.1",
+			"contributors": []
+		},
+		"3.0.1": {
+			"name": "nopt",
+			"description": "Option parsing for Node, supporting types, shorthands, etc. Used by npm.",
+			"version": "3.0.1",
+			"author": {
+				"url": "http://blog.izs.me/",
+				"name": "Isaac Z. Schlueter",
+				"email": "i@izs.me"
+			},
+			"homepage": "https://github.com/isaacs/nopt",
+			"repository": {
+				"url": "http://github.com/isaacs/nopt",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/isaacs/nopt/issues"
+			},
+			"main": "lib/nopt.js",
+			"dependencies": {
+				"abbrev": "1"
+			},
+			"devDependencies": {
+				"tap": "~0.4.8"
+			},
+			"license": {
+				"url": "https://github.com/isaacs/nopt/raw/master/LICENSE",
+				"type": "MIT"
+			},
+			"bin": {
+				"nopt": "./bin/nopt.js"
+			},
+			"maintainers": [
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap test/*.js"
+			},
+			"lastModified": 0,
+			"_id": "nopt@3.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-3.0.1.tgz",
+				"shasum": "bce5c42446a3291f47622a370abbf158fbbacbfd",
+				"integrity": "sha512-buf094p2Zp3BOwcjyI9V3zfZJVKkb/BpPl+3NHBoOqIv1vW6Bw24/ucbuO1zmbP+jPfdqvnq0lKB2FulpILeaA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCICXGHYan4xDtRyDJKD1lR9hS0cXoNZrvVVHeRSxT7fjRAiBBiJcI3oyFg9zPEAB0WZMUfnZsJoUygoSmg/noZ3g3jg=="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "1.4.18",
+			"_npmUser": {
+				"name": "isaacs",
+				"email": "i@izs.me"
+			},
+			"gitHead": "4296f7aba7847c198fea2da594f9e1bec02817ec",
+			"_shasum": "bce5c42446a3291f47622a370abbf158fbbacbfd",
+			"contributors": []
+		},
+		"3.0.2": {
+			"name": "nopt",
+			"description": "Option parsing for Node, supporting types, shorthands, etc. Used by npm.",
+			"version": "3.0.2",
+			"author": {
+				"url": "http://blog.izs.me/",
+				"name": "Isaac Z. Schlueter",
+				"email": "i@izs.me"
+			},
+			"homepage": "https://github.com/isaacs/nopt#readme",
+			"repository": {
+				"url": "git+ssh://git@github.com/isaacs/nopt.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/isaacs/nopt/issues"
+			},
+			"main": "lib/nopt.js",
+			"dependencies": {
+				"abbrev": "1"
+			},
+			"devDependencies": {
+				"tap": "~0.4.8"
+			},
+			"license": "ISC",
+			"bin": {
+				"nopt": "./bin/nopt.js"
+			},
+			"maintainers": [
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap test/*.js"
+			},
+			"lastModified": 0,
+			"_id": "nopt@3.0.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-3.0.2.tgz",
+				"shasum": "a82a87f9d8c3df140fe78fb29657a7a774403b5e",
+				"integrity": "sha512-WoB9oKq8r03hlIeU/PvXzsE2XaI97VQMSbw+8YoybgGI/Mow+qeFi7TDpVLCFEBaAhnp8uj5f7kQsuTgTCjRFA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQC68vClUcaWzDPGrR8VAd7sybjQrSW64nAXW8IxlIZe0gIgUwzNnElfeWFKaVKJfuGd040ma8g+1YrrNy20rgayJfM="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "2.10.0",
+			"_npmUser": {
+				"name": "isaacs",
+				"email": "isaacs@npmjs.com"
+			},
+			"gitHead": "a0ff8dcbb29ae9da68769c9f782bd4d70746b02d",
+			"_shasum": "a82a87f9d8c3df140fe78fb29657a7a774403b5e",
+			"_nodeVersion": "2.0.1",
+			"contributors": []
+		},
+		"3.0.3": {
+			"name": "nopt",
+			"description": "Option parsing for Node, supporting types, shorthands, etc. Used by npm.",
+			"version": "3.0.3",
+			"author": {
+				"url": "http://blog.izs.me/",
+				"name": "Isaac Z. Schlueter",
+				"email": "i@izs.me"
+			},
+			"homepage": "https://github.com/isaacs/nopt#readme",
+			"repository": {
+				"url": "git+ssh://git@github.com/isaacs/nopt.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/isaacs/nopt/issues"
+			},
+			"main": "lib/nopt.js",
+			"dependencies": {
+				"abbrev": "1"
+			},
+			"devDependencies": {
+				"tap": "^1.2.0"
+			},
+			"license": "ISC",
+			"bin": {
+				"nopt": "./bin/nopt.js"
+			},
+			"maintainers": [
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap test/*.js"
+			},
+			"lastModified": 0,
+			"_id": "nopt@3.0.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-3.0.3.tgz",
+				"shasum": "0e9978f33016bae0b75e3748c03bbbb71da5c530",
+				"integrity": "sha512-oCT64BXP373m3EApJPNCr6xHmIZtsVtlbj6gBq1YqRjNIrjGz7DRvDk8te7fwh4J1UHxsqYKpq4mwa+lyq9Vqw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIC2AulFputZ33fgFmtXFpepGd+RaVqF1sk5j1MmE5HTBAiB+udTWZ2o4LXWxniGKoTBewhuRABAi0+w5h0ojb8WgyQ=="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "2.12.0",
+			"_npmUser": {
+				"name": "isaacs",
+				"email": "isaacs@npmjs.com"
+			},
+			"gitHead": "f64a64cd48d9f2660dd4e59191ff46a26397d6b1",
+			"_shasum": "0e9978f33016bae0b75e3748c03bbbb71da5c530",
+			"_nodeVersion": "2.2.1",
+			"contributors": []
+		},
+		"3.0.4": {
+			"name": "nopt",
+			"description": "Option parsing for Node, supporting types, shorthands, etc. Used by npm.",
+			"version": "3.0.4",
+			"author": {
+				"url": "http://blog.izs.me/",
+				"name": "Isaac Z. Schlueter",
+				"email": "i@izs.me"
+			},
+			"homepage": "https://github.com/isaacs/nopt#readme",
+			"repository": {
+				"url": "git+ssh://git@github.com/isaacs/nopt.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/isaacs/nopt/issues"
+			},
+			"main": "lib/nopt.js",
+			"dependencies": {
+				"abbrev": "1"
+			},
+			"devDependencies": {
+				"tap": "^1.2.0"
+			},
+			"license": "ISC",
+			"bin": {
+				"nopt": "./bin/nopt.js"
+			},
+			"maintainers": [
+				{
+					"name": "isaacs",
+					"email": "isaacs@npmjs.com"
+				},
+				{
+					"name": "zkat",
+					"email": "kat@sykosomatic.org"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap test/*.js"
+			},
+			"lastModified": 0,
+			"_id": "nopt@3.0.4",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-3.0.4.tgz",
+				"shasum": "dd63bc9c72a6e4e85b85cdc0ca314598facede5e",
+				"integrity": "sha512-VNAVhwDn16LQ7mLE6jGGuF+sXNI3Go22oCVrwZiOYvweZkH6iUpd+y+BoFOSgOHdMl3u+bDkmJcejNFw/471GQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIAE7pI5vmGfvsu3Jnm2TIo6G3zybUCcfU8nQVUYP2ESdAiBMvm5WUgPXEwxZC9SHCZOxUKBIux/h3vzAkDS2bRiPUw=="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "2.14.3",
+			"_npmUser": {
+				"name": "zkat",
+				"email": "kat@sykosomatic.org"
+			},
+			"gitHead": "f52626631ea1afef5a6dd9acf23ddd1466831a08",
+			"_shasum": "dd63bc9c72a6e4e85b85cdc0ca314598facede5e",
+			"_nodeVersion": "2.2.2",
+			"contributors": []
+		},
+		"2.0.0": {
+			"name": "nopt",
+			"description": "Option parsing for Node, supporting types, shorthands, etc. Used by npm.",
+			"version": "2.0.0",
+			"author": {
+				"url": "http://blog.izs.me/",
+				"name": "Isaac Z. Schlueter",
+				"email": "i@izs.me"
+			},
+			"repository": {
+				"url": "http://github.com/isaacs/nopt",
+				"type": "git"
+			},
+			"main": "lib/nopt.js",
+			"dependencies": {
+				"abbrev": "1"
+			},
+			"license": {
+				"url": "https://github.com/isaacs/nopt/raw/master/LICENSE",
+				"type": "MIT"
+			},
+			"bin": {
+				"nopt": "./bin/nopt.js"
+			},
+			"maintainers": [
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "node lib/nopt.js"
+			},
+			"lastModified": 0,
+			"_id": "nopt@2.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-2.0.0.tgz",
+				"shasum": "ca7416f20a5e3f9c3b86180f96295fa3d0b52e0d",
+				"integrity": "sha512-uVTsuT8Hm3aN3VttY+BPKw4KU9lVpI0F22UAr/I1r6+kugMr3oyhMALkycikLcdfvGRsgzCYN48DYLBFcJEUVg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIHQ+xTjkMB1FvEL5mmE+e0ZmEAvMKFbEeY7MEo0iCDjLAiEArOCH0zUdB2M/b2y3kpXQ0M7nael0QsR7NxUptls+cXU="
+					}
+				]
+			},
+			"contributors": []
+		},
+		"7.1.0": {
+			"name": "nopt",
+			"description": "Option parsing for Node, supporting types, shorthands, etc. Used by npm.",
+			"version": "7.1.0",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/nopt#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/nopt.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/nopt/issues"
+			},
+			"engines": {
+				"node": "^14.17.0 || ^16.13.0 || >=18.0.0"
+			},
+			"main": "lib/nopt.js",
+			"dependencies": {
+				"abbrev": "^2.0.0"
+			},
+			"devDependencies": {
+				"tap": "^16.3.0",
+				"@npmcli/template-oss": "4.12.0",
+				"@npmcli/eslint-config": "^4.0.0"
+			},
+			"license": "ISC",
+			"bin": {
+				"nopt": "bin/nopt.js"
+			},
+			"maintainers": [
+				{
+					"name": "npm-cli-ops",
+					"email": "npm-cli+bot@github.com"
+				},
+				{
+					"name": "saquibkhan",
+					"email": "saquibkhan@github.com"
+				},
+				{
+					"name": "fritzy",
+					"email": "fritzy@github.com"
+				},
+				{
+					"name": "nlf",
+					"email": "quitlahok@gmail.com"
+				},
+				{
+					"name": "gar",
+					"email": "gar+npm@danger.computer"
+				},
+				{
+					"name": "lukekarrys",
+					"email": "luke@lukekarrys.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint \"**/*.js\"",
+				"snap": "tap",
+				"test": "tap",
+				"lintfix": "npm run lint -- --fix",
+				"postlint": "template-oss-check",
+				"posttest": "npm run lint",
+				"template-oss-apply": "template-oss-apply --force"
+			},
+			"lastModified": 0,
+			"_id": "nopt@7.1.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-7.1.0.tgz",
+				"shasum": "91f6a3366182176e72ecab93a09c19b63b485f28",
+				"integrity": "sha512-ZFPLe9Iu0tnx7oWhFxAo4s7QTn8+NNDDxYNaKLjE7Dp0tbakQ3M1QhQzsnzXHQBTUO3K9BmwaxnyO8Ayn2I95Q==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIG3tJnYBO4YfuraHWmbFvDkEmHknyGz0lh02V13YkNfUAiEAjXw1AViSTg4EOiHrVkTaSG6L1QBFV4C2uc9Hfa9HVCc="
+					}
+				]
+			},
+			"_npmVersion": "9.6.1",
+			"_npmUser": {
+				"name": "gar",
+				"email": "gar+npm@danger.computer"
+			},
+			"_hasShrinkwrap": false,
+			"tap": {
+				"lines": 91,
+				"nyc-arg": [
+					"--exclude",
+					"tap-snapshots/**"
+				],
+				"branches": 87,
+				"statements": 91
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/nopt_7.1.0_1679424527041_0.8887091932430908",
+				"host": "s3://npm-registry-packages"
+			},
+			"templateOSS": {
+				"version": "4.12.0",
+				"windowsCI": false,
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+			},
+			"_nodeVersion": "18.13.0",
+			"contributors": []
+		},
+		"2.1.0": {
+			"name": "nopt",
+			"description": "Option parsing for Node, supporting types, shorthands, etc. Used by npm.",
+			"version": "2.1.0",
+			"author": {
+				"url": "http://blog.izs.me/",
+				"name": "Isaac Z. Schlueter",
+				"email": "i@izs.me"
+			},
+			"repository": {
+				"url": "http://github.com/isaacs/nopt",
+				"type": "git"
+			},
+			"main": "lib/nopt.js",
+			"dependencies": {
+				"abbrev": "1"
+			},
+			"license": {
+				"url": "https://github.com/isaacs/nopt/raw/master/LICENSE",
+				"type": "MIT"
+			},
+			"bin": {
+				"nopt": "./bin/nopt.js"
+			},
+			"maintainers": [
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "node lib/nopt.js"
+			},
+			"lastModified": 0,
+			"_id": "nopt@2.1.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-2.1.0.tgz",
+				"shasum": "2334c03a00c1dcb22eb1c4a4c34ebde213ee49e2",
+				"integrity": "sha512-OV/WvjV0J3Fae1Kg/fFO3NhDR7IgefaDiuAvPx/KfK8zuDATjbEKEsMTLjz+bNl+ZzwH3RxaqL/+eiAPKurvOA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCK6BnlfYinqnUusf+YqFut/D7EfgRcUDNChKR0noEd5gIgcO83IoYNl75IDrr+Sw6dqPb9kiCbK6EAcKtvhKP0FCE="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "1.2.1",
+			"_npmUser": {
+				"name": "isaacs",
+				"email": "i@izs.me"
+			},
+			"contributors": []
+		},
+		"7.2.0": {
+			"name": "nopt",
+			"description": "Option parsing for Node, supporting types, shorthands, etc. Used by npm.",
+			"version": "7.2.0",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/nopt#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/nopt.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/nopt/issues"
+			},
+			"engines": {
+				"node": "^14.17.0 || ^16.13.0 || >=18.0.0"
+			},
+			"main": "lib/nopt.js",
+			"dependencies": {
+				"abbrev": "^2.0.0"
+			},
+			"devDependencies": {
+				"tap": "^16.3.0",
+				"@npmcli/template-oss": "4.15.1",
+				"@npmcli/eslint-config": "^4.0.0"
+			},
+			"license": "ISC",
+			"bin": {
+				"nopt": "bin/nopt.js"
+			},
+			"maintainers": [
+				{
+					"name": "npm-cli-ops",
+					"email": "npm-cli+bot@github.com"
+				},
+				{
+					"name": "saquibkhan",
+					"email": "saquibkhan@github.com"
+				},
+				{
+					"name": "fritzy",
+					"email": "fritzy@github.com"
+				},
+				{
+					"name": "nlf",
+					"email": "quitlahok@gmail.com"
+				},
+				{
+					"name": "gar",
+					"email": "gar+npm@danger.computer"
+				},
+				{
+					"name": "lukekarrys",
+					"email": "luke@lukekarrys.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint \"**/*.js\"",
+				"snap": "tap",
+				"test": "tap",
+				"lintfix": "npm run lint -- --fix",
+				"postlint": "template-oss-check",
+				"posttest": "npm run lint",
+				"template-oss-apply": "template-oss-apply --force"
+			},
+			"lastModified": 0,
+			"_id": "nopt@7.2.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-7.2.0.tgz",
+				"shasum": "067378c68116f602f552876194fd11f1292503d7",
+				"integrity": "sha512-CVDtwCdhYIvnAzFoJ6NJ6dX3oga9/HyciQDnG1vQDjSLMeKLJ4A93ZqYKDrgYSr1FBY5/hMYC+2VCi24pgpkGA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIBPMY2qIFCaF0E6r6R6cn/mmemO+fr8EvP+iKxM64XEOAiAYm4AnuEnNSlGxQRO9ej6Z38/Pks1qr1kaxUJwGBy8zQ=="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/nopt@7.2.0",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v0.2"
+					}
+				}
+			},
+			"_npmVersion": "9.7.1",
+			"_npmUser": {
+				"name": "npm-cli-ops",
+				"email": "npm-cli+bot@github.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "1d7f39b0dc94bd6ccd154907f2c64456759ae215",
+			"tap": {
+				"nyc-arg": [
+					"--exclude",
+					"tap-snapshots/**"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/nopt_7.2.0_1686845791390_0.5960965762719304",
+				"host": "s3://npm-registry-packages"
+			},
+			"templateOSS": {
+				"publish": true,
+				"version": "4.15.1",
+				"windowsCI": false,
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+			},
+			"_nodeVersion": "18.16.0",
+			"contributors": []
+		},
+		"7.2.1": {
+			"name": "nopt",
+			"description": "Option parsing for Node, supporting types, shorthands, etc. Used by npm.",
+			"version": "7.2.1",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/nopt#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/nopt.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/nopt/issues"
+			},
+			"engines": {
+				"node": "^14.17.0 || ^16.13.0 || >=18.0.0"
+			},
+			"main": "lib/nopt.js",
+			"dependencies": {
+				"abbrev": "^2.0.0"
+			},
+			"devDependencies": {
+				"tap": "^16.3.0",
+				"@npmcli/template-oss": "4.22.0",
+				"@npmcli/eslint-config": "^4.0.0"
+			},
+			"license": "ISC",
+			"bin": {
+				"nopt": "bin/nopt.js"
+			},
+			"maintainers": [
+				{
+					"name": "npm-cli-ops",
+					"email": "npm-cli+bot@github.com"
+				},
+				{
+					"name": "saquibkhan",
+					"email": "saquibkhan@github.com"
+				},
+				{
+					"name": "fritzy",
+					"email": "fritzy@github.com"
+				},
+				{
+					"name": "gar",
+					"email": "gar+npm@danger.computer"
+				},
+				{
+					"name": "lukekarrys",
+					"email": "luke@lukekarrys.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
+				"snap": "tap",
+				"test": "tap",
+				"lintfix": "npm run lint -- --fix",
+				"postlint": "template-oss-check",
+				"posttest": "npm run lint",
+				"template-oss-apply": "template-oss-apply --force"
+			},
+			"lastModified": 0,
+			"_id": "nopt@7.2.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-7.2.1.tgz",
+				"shasum": "1cac0eab9b8e97c9093338446eddd40b2c8ca1e7",
+				"integrity": "sha512-taM24ViiimT/XntxbPyJQzCG+p4EKOpgD3mxFwW38mGjVUrfERQOeY4EDHjdnptttfHuHQXFx+lTP08Q+mLa/w==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDsGsywXebnr3VNxXxSfSuZKiPrOTyj3J5TmMy6Wh+dIQIgOqooSxmxbTSlbegMSG8W/S9pHAsXDSFZAdCxO9OQqaU="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/nopt@7.2.1",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "10.7.0",
+			"_npmUser": {
+				"name": "npm-cli-ops",
+				"email": "npm-cli+bot@github.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "6d33cd7a772c9594d42417c69e7adeb497b16b03",
+			"tap": {
+				"nyc-arg": [
+					"--exclude",
+					"tap-snapshots/**"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/nopt_7.2.1_1714785037461_0.2372552074127241",
+				"host": "s3://npm-registry-packages"
+			},
+			"templateOSS": {
+				"publish": true,
+				"version": "4.22.0",
+				"windowsCI": false,
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+			},
+			"_nodeVersion": "22.1.0",
+			"contributors": []
+		},
+		"7.0.0": {
+			"name": "nopt",
+			"description": "Option parsing for Node, supporting types, shorthands, etc. Used by npm.",
+			"version": "7.0.0",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/nopt#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/nopt.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/nopt/issues"
+			},
+			"engines": {
+				"node": "^14.17.0 || ^16.13.0 || >=18.0.0"
+			},
+			"main": "lib/nopt.js",
+			"dependencies": {
+				"abbrev": "^2.0.0"
+			},
+			"devDependencies": {
+				"tap": "^16.3.0",
+				"@npmcli/template-oss": "4.8.0",
+				"@npmcli/eslint-config": "^4.0.0"
+			},
+			"license": "ISC",
+			"bin": {
+				"nopt": "bin/nopt.js"
+			},
+			"maintainers": [
+				{
+					"name": "fritzy",
+					"email": "fritzy@github.com"
+				},
+				{
+					"name": "darcyclarke",
+					"email": "darcy@darcyclarke.me"
+				},
+				{
+					"name": "nlf",
+					"email": "quitlahok@gmail.com"
+				},
+				{
+					"name": "gar",
+					"email": "gar+npm@danger.computer"
+				},
+				{
+					"name": "lukekarrys",
+					"email": "luke@lukekarrys.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint \"**/*.js\"",
+				"snap": "tap",
+				"test": "tap",
+				"lintfix": "npm run lint -- --fix",
+				"postlint": "template-oss-check",
+				"posttest": "npm run lint",
+				"template-oss-apply": "template-oss-apply --force"
+			},
+			"lastModified": 0,
+			"_id": "nopt@7.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-7.0.0.tgz",
+				"shasum": "09220f930c072109c98ef8aaf39e1d5f0ff9b0d4",
+				"integrity": "sha512-e6Qw1rcrGoSxEH0hQ4GBSdUjkMOtXGhGFXdNT/3ZR0S37eR9DMj5za3dEDWE6o1T3/DP8ZOsPP4MIiky0c3QeA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCICkdBH9faMr/4xRVU7k0ArDYn4gA08GMeDbKQQVEjxnkAiBeIudXPJE7knZpBdYAEhi75GuyFmnpTCNzQjEhR0trfQ=="
+					}
+				]
+			},
+			"_npmVersion": "9.0.1",
+			"_npmUser": {
+				"name": "gar",
+				"email": "gar+npm@danger.computer"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "d7a16ec25d568347269980153a65a19c0dfeace9",
+			"tap": {
+				"lines": 87,
+				"nyc-arg": [
+					"--exclude",
+					"tap-snapshots/**"
+				],
+				"branches": 81,
+				"functions": 91,
+				"statements": 87
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/nopt_7.0.0_1667399616072_0.9472621583883882",
+				"host": "s3://npm-registry-packages"
+			},
+			"templateOSS": {
+				"version": "4.8.0",
+				"windowsCI": false,
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+			},
+			"_nodeVersion": "18.12.0",
+			"contributors": []
+		},
+		"2.1.1": {
+			"name": "nopt",
+			"description": "Option parsing for Node, supporting types, shorthands, etc. Used by npm.",
+			"version": "2.1.1",
+			"author": {
+				"url": "http://blog.izs.me/",
+				"name": "Isaac Z. Schlueter",
+				"email": "i@izs.me"
+			},
+			"repository": {
+				"url": "http://github.com/isaacs/nopt",
+				"type": "git"
+			},
+			"main": "lib/nopt.js",
+			"dependencies": {
+				"abbrev": "1"
+			},
+			"license": {
+				"url": "https://github.com/isaacs/nopt/raw/master/LICENSE",
+				"type": "MIT"
+			},
+			"bin": {
+				"nopt": "./bin/nopt.js"
+			},
+			"maintainers": [
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "node lib/nopt.js"
+			},
+			"lastModified": 0,
+			"_id": "nopt@2.1.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-2.1.1.tgz",
+				"shasum": "91eb7c4b017e7c00adcad1fd6d63944d0fdb75c1",
+				"integrity": "sha512-iKfahTKYJbKlv1JeIV0UFT5kzNdbeKe6AY69GQWm9feJEs3/fZQkjs2fDw3T7494PDXf5U1nu1hoqwkRcLycAw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQCsZojATGtFL3Y/o9VkdcSYcbp3I9+v74rMdCBL5UxPmQIhAMAdhPv18xgRDKOqkJHW9CYZO3r2VejVxG8UolpkDlDK"
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "1.2.1",
+			"_npmUser": {
+				"name": "isaacs",
+				"email": "i@izs.me"
+			},
+			"contributors": []
+		},
+		"2.2.0": {
+			"name": "nopt",
+			"description": "Option parsing for Node, supporting types, shorthands, etc. Used by npm.",
+			"version": "2.2.0",
+			"author": {
+				"url": "http://blog.izs.me/",
+				"name": "Isaac Z. Schlueter",
+				"email": "i@izs.me"
+			},
+			"homepage": "https://github.com/isaacs/nopt",
+			"repository": {
+				"url": "http://github.com/isaacs/nopt",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/isaacs/nopt/issues"
+			},
+			"main": "lib/nopt.js",
+			"dependencies": {
+				"abbrev": "1"
+			},
+			"devDependencies": {
+				"tap": "~0.4.8"
+			},
+			"license": {
+				"url": "https://github.com/isaacs/nopt/raw/master/LICENSE",
+				"type": "MIT"
+			},
+			"bin": {
+				"nopt": "./bin/nopt.js"
+			},
+			"maintainers": [
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap test/*.js"
+			},
+			"lastModified": 0,
+			"_id": "nopt@2.2.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-2.2.0.tgz",
+				"shasum": "3d106676f3607ac466af9bf82bd707b1501d3bd5",
+				"integrity": "sha512-r0XnozFD291fNFB5BtCY/buz/6Zl+eei8m7El86awJkIF93NphAk1gkCG3R+ZTbygtSzznwyloGGQS0KzSnkjw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIFgVBkdiCnZpz+jsCPmEtUIkwrlG6cFDmT3FOdYLkeQNAiBY5b3SlybOJ3zTXLqbQwSdCkAX26Ubd2uOPD6foh+XuQ=="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "1.4.2",
+			"_npmUser": {
+				"name": "isaacs",
+				"email": "i@izs.me"
+			},
+			"contributors": []
+		},
+		"2.1.2": {
+			"name": "nopt",
+			"description": "Option parsing for Node, supporting types, shorthands, etc. Used by npm.",
+			"version": "2.1.2",
+			"author": {
+				"url": "http://blog.izs.me/",
+				"name": "Isaac Z. Schlueter",
+				"email": "i@izs.me"
+			},
+			"repository": {
+				"url": "http://github.com/isaacs/nopt",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/isaacs/nopt/issues"
+			},
+			"main": "lib/nopt.js",
+			"dependencies": {
+				"abbrev": "1"
+			},
+			"license": {
+				"url": "https://github.com/isaacs/nopt/raw/master/LICENSE",
+				"type": "MIT"
+			},
+			"bin": {
+				"nopt": "./bin/nopt.js"
+			},
+			"maintainers": [
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "node lib/nopt.js"
+			},
+			"lastModified": 0,
+			"_id": "nopt@2.1.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-2.1.2.tgz",
+				"shasum": "6cccd977b80132a07731d6e8ce58c2c8303cf9af",
+				"integrity": "sha512-x8vXm7BZ2jE1Txrxh/hO74HTuYZQEbo8edoRcANgdZ4+PCV+pbjd/xdummkmjjC7LU5EjPzlu8zEq/oxWylnKA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIHzLP3EX5XW3f8lyHB56v5kJ6ZV0BTbgdwIoBKJCnKZPAiEAiqwC3EY58PQNsWi6FwaYwRiJMyomWviJpdeNreYefOw="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "1.3.4",
+			"_npmUser": {
+				"name": "isaacs",
+				"email": "i@izs.me"
+			},
+			"contributors": []
+		},
+		"2.2.1": {
+			"name": "nopt",
+			"description": "Option parsing for Node, supporting types, shorthands, etc. Used by npm.",
+			"version": "2.2.1",
+			"author": {
+				"url": "http://blog.izs.me/",
+				"name": "Isaac Z. Schlueter",
+				"email": "i@izs.me"
+			},
+			"homepage": "https://github.com/isaacs/nopt",
+			"repository": {
+				"url": "http://github.com/isaacs/nopt",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/isaacs/nopt/issues"
+			},
+			"main": "lib/nopt.js",
+			"dependencies": {
+				"abbrev": "1"
+			},
+			"devDependencies": {
+				"tap": "~0.4.8"
+			},
+			"license": {
+				"url": "https://github.com/isaacs/nopt/raw/master/LICENSE",
+				"type": "MIT"
+			},
+			"bin": {
+				"nopt": "./bin/nopt.js"
+			},
+			"maintainers": [
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap test/*.js"
+			},
+			"lastModified": 0,
+			"_id": "nopt@2.2.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-2.2.1.tgz",
+				"shasum": "2aa09b7d1768487b3b89a9c5aa52335bff0baea7",
+				"integrity": "sha512-gIOTA/uJuhPwFqp+spY7VQ1satbnGlD+iQVZxI18K6hs8Evq4sX81Ml7BB5byP/LsbR2yBVtmvdEmhi7evJ6Aw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCICWoB/ensXlUIvhqwrSgl1aPSzBOfcZT7q8S8fbVEK0PAiEAyRwH1VsCFgmy25H00Yf/2lGYxeuITI+nYgC4Lgvc5Io="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "1.4.7",
+			"_npmUser": {
+				"name": "isaacs",
+				"email": "i@izs.me"
+			},
+			"_shasum": "2aa09b7d1768487b3b89a9c5aa52335bff0baea7",
+			"contributors": []
+		},
+		"1.0.3": {
+			"name": "nopt",
+			"description": "Option parsing for Node, supporting types, shorthands, etc. Used by npm.",
+			"version": "1.0.3",
+			"author": {
+				"url": "http://blog.izs.me/",
+				"name": "Isaac Z. Schlueter",
+				"email": "i@izs.me"
+			},
+			"repository": {
+				"url": "git://github.com/isaacs/nopt.git",
+				"type": "git"
+			},
+			"engines": {
+				"node": "*"
+			},
+			"main": "lib/nopt.js",
+			"dependencies": {
+				"abbrev": "1"
+			},
+			"directories": {},
+			"scripts": {
+				"test": "node lib/nopt.js"
+			},
+			"lastModified": 0,
+			"_id": "nopt@1.0.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-1.0.3.tgz",
+				"shasum": "a5557211e05f4baad09bbf8e9d798072bff69166",
+				"integrity": "sha512-0RPQ4srMGu3J+z7xLd+L/Any+79zazeN1KQsm2kT9UePl2yKCfpyoTmRtLtH3+zI/wda+Ghiw9clgsQJZN7Nrg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIGvQ8Wj3xYjO7mZZg+kyFY1cQOGJyFtyVf3qTAGW1w+LAiEAgEuA/QzrEY2CYLOQoIYD3KUTW86kPRp/pfxivcFwoxo="
+					}
+				]
+			},
+			"_npmVersion": "1.0.1rc3",
+			"_defaultsLoaded": true,
+			"_engineSupported": true,
+			"_nodeVersion": "v0.5.0-pre",
+			"contributors": []
+		},
+		"1.0.4": {
+			"name": "nopt",
+			"description": "Option parsing for Node, supporting types, shorthands, etc. Used by npm.",
+			"version": "1.0.4",
+			"author": {
+				"url": "http://blog.izs.me/",
+				"name": "Isaac Z. Schlueter",
+				"email": "i@izs.me"
+			},
+			"repository": {
+				"url": "git://github.com/isaacs/nopt.git",
+				"type": "git"
+			},
+			"engines": {
+				"node": "*"
+			},
+			"main": "lib/nopt.js",
+			"dependencies": {
+				"abbrev": "1"
+			},
+			"directories": {},
+			"scripts": {
+				"test": "node lib/nopt.js"
+			},
+			"lastModified": 0,
+			"_id": "nopt@1.0.4",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-1.0.4.tgz",
+				"shasum": "023fc93f439094e662e2e4186345bfabda8eceda",
+				"integrity": "sha512-LDtXvd1Iez7+aqoSpLS4s1eWpEqfheV5pBqRyqZd3akZsm0mkb9IYx8RLNpm5VO/6ZAO2q4DuFsKbKxZIQtq2Q==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCICXhSk0Xxh0qMrqRX649a/9xxl470GNnB1p/jW0wpmM1AiAl6iXJgBvMgVSHle91DpkgCmqsL+anT+oxc8VcE/O0fg=="
+					}
+				]
+			},
+			"_npmVersion": "1.0.1rc4",
+			"_defaultsLoaded": true,
+			"_engineSupported": true,
+			"_nodeVersion": "v0.5.0-pre",
+			"contributors": []
+		},
+		"1.0.5": {
+			"name": "nopt",
+			"description": "Option parsing for Node, supporting types, shorthands, etc. Used by npm.",
+			"version": "1.0.5",
+			"author": {
+				"url": "http://blog.izs.me/",
+				"name": "Isaac Z. Schlueter",
+				"email": "i@izs.me"
+			},
+			"repository": {
+				"url": "git://github.com/isaacs/nopt.git",
+				"type": "git"
+			},
+			"engines": {
+				"node": "*"
+			},
+			"main": "lib/nopt.js",
+			"dependencies": {
+				"abbrev": "1"
+			},
+			"devDependencies": {},
+			"directories": {},
+			"scripts": {
+				"test": "node lib/nopt.js"
+			},
+			"lastModified": 0,
+			"_id": "nopt@1.0.5",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-1.0.5.tgz",
+				"shasum": "fc79e34a4e8862e9c413d2e1cac07ee645ac4cc8",
+				"integrity": "sha512-pO8QRDGSBdY7SZSMLcL+P/VZddO/MT29MrDLHLVw86O/jWZRWPxnHeNjmKS7yjC+I7sNhuCpTdXcezhTXz4Ofg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDmI3/+TF4vzHhuKVOxgotuDTPfuI9RZ632k2uUjmucDQIhAICaIxRcF6ZZJq1VMgeIH3DFBVMzWSx0Tm74babHfqVX"
+					}
+				]
+			},
+			"_npmVersion": "1.0.1rcFINAL",
+			"_defaultsLoaded": true,
+			"_engineSupported": true,
+			"_nodeVersion": "v0.4.8-pre",
+			"contributors": []
+		},
+		"1.0.6": {
+			"name": "nopt",
+			"description": "Option parsing for Node, supporting types, shorthands, etc. Used by npm.",
+			"version": "1.0.6",
+			"author": {
+				"url": "http://blog.izs.me/",
+				"name": "Isaac Z. Schlueter",
+				"email": "i@izs.me"
+			},
+			"repository": {
+				"url": "git://github.com/isaacs/nopt.git",
+				"type": "git"
+			},
+			"engines": {
+				"node": "*"
+			},
+			"main": "lib/nopt.js",
+			"dependencies": {
+				"abbrev": "1"
+			},
+			"devDependencies": {},
+			"license": {
+				"url": "https://github.com/isaacs/nopt/raw/master/LICENSE",
+				"type": "MIT"
+			},
+			"bin": {
+				"nopt": "./bin/nopt.js"
+			},
+			"directories": {},
+			"scripts": {
+				"test": "node lib/nopt.js"
+			},
+			"lastModified": 0,
+			"_id": "nopt@1.0.6",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-1.0.6.tgz",
+				"shasum": "37307cafcdccf78b954ec06dcef31b936b4d03df",
+				"integrity": "sha512-dreXmuduYye7FMkIKxphhgi7V1bdAWCbaOWUfwz5Lpfyi+NQ0oazOOKa1YJGaXUlAr+28+8xw4D3VT5F+isAYg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIDBLWvaLY2Q1Pf9FKYVC6NsyD0YEQ0PBEoP2alicy1wbAiEAhV7PY9luUgLc+MJVWtsJWZhQtBXJl2sQM2MEujcmcz0="
+					}
+				]
+			},
+			"_npmVersion": "1.0.15",
+			"_npmJsonOpts": {
+				"file": "/Users/isaacs/.npm/nopt/1.0.6/package/package.json",
+				"wscript": false,
+				"serverjs": false,
+				"contributors": false
+			},
+			"_defaultsLoaded": true,
+			"_engineSupported": true,
+			"_nodeVersion": "v0.4.10-pre",
+			"contributors": []
+		},
+		"10.0.1": {
+			"name": "nopt",
+			"description": "Option parsing for Node, supporting types, shorthands, etc. Used by npm.",
+			"version": "10.0.1",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/nopt#readme",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/npm/nopt.git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/nopt/issues"
+			},
+			"engines": {
+				"node": "^22.22.2 || ^24.15.0 || >=26.0.0"
+			},
+			"main": "lib/nopt.js",
+			"dependencies": {
+				"abbrev": "^5.0.0"
+			},
+			"devDependencies": {
+				"@npmcli/eslint-config": "^7.0.0",
+				"@npmcli/template-oss": "5.1.0"
+			},
+			"license": "ISC",
+			"bin": {
+				"nopt": "bin/nopt.js"
+			},
+			"maintainers": [
+				{
+					"name": "saquibkhan",
+					"email": "saquibkhan@github.com"
+				},
+				{
+					"name": "npm-cli-ops",
+					"email": "npm-cli+bot@github.com"
+				},
+				{
+					"name": "reggi",
+					"email": "reggi@github.com"
+				},
+				{
+					"name": "owlstronaut",
+					"email": "owlstronaut@github.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "node --test './test/**/*.js'",
+				"lint": "npm run eslint",
+				"postlint": "template-oss-check",
+				"template-oss-apply": "template-oss-apply --force",
+				"lintfix": "npm run eslint -- --fix",
+				"snap": "node --test --test-update-snapshots './test/**/*.js'",
+				"posttest": "npm run lint",
+				"eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
+				"test:node20": "node --test test",
+				"test:cover": "node --test --experimental-test-coverage --test-timeout=3000 --test-coverage-lines=100 --test-coverage-functions=100 --test-coverage-branches=100 './test/**/*.js'"
+			},
+			"lastModified": 0,
+			"_id": "nopt@10.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-10.0.1.tgz",
+				"shasum": "2d53bfda504b31c447967648ba5ea1a44e594d05",
+				"integrity": "sha512-df3sBr/6ax9hSGuC3CspvLlbnX8cP5L5nZwXF8cGN8l0zSWR6BvzmQ6jPUKjvo6+/xdpkNvEcucBNUdBeeV13g==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEQCIF2mBQKR1W7VGJdNaSAbGyuMq8HaJNpcJzvJ30mFMWEtAiB4WZogdTbUFQYhQdI22XQj1bVvGGjUntjxeEsIq+RgYQ=="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/nopt@10.0.1",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "11.16.0",
+			"_npmUser": {
+				"name": "GitHub Actions",
+				"email": "npm-oidc-no-reply@github.com",
+				"trustedPublisher": {
+					"id": "github",
+					"oidcConfigId": "oidc:a6a744fc-3d3f-4070-bc9e-6c13238ee24c"
+				}
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "307cf92cf2a94c849a4eed7fb61586cb476ebaf4",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages-npm-production",
+				"tmp": "tmp/nopt_10.0.1_1780583733714_0.06585836708050286"
+			},
+			"templateOSS": {
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten.",
+				"windowsCI": false,
+				"version": "5.1.0",
+				"publish": true,
+				"testRunner": "node:test",
+				"latestCiVersion": 24,
+				"updateNpm": false
+			},
+			"_nodeVersion": "26.3.0",
+			"contributors": []
+		},
+		"1.0.7": {
+			"name": "nopt",
+			"description": "Option parsing for Node, supporting types, shorthands, etc. Used by npm.",
+			"version": "1.0.7",
+			"author": {
+				"url": "http://blog.izs.me/",
+				"name": "Isaac Z. Schlueter",
+				"email": "i@izs.me"
+			},
+			"repository": {
+				"url": "git://github.com/isaacs/nopt.git",
+				"type": "git"
+			},
+			"engines": {
+				"node": "*"
+			},
+			"main": "lib/nopt.js",
+			"dependencies": {
+				"abbrev": "1"
+			},
+			"devDependencies": {},
+			"license": {
+				"url": "https://github.com/isaacs/nopt/raw/master/LICENSE",
+				"type": "MIT"
+			},
+			"bin": {
+				"nopt": "./bin/nopt.js"
+			},
+			"maintainers": [
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "node lib/nopt.js"
+			},
+			"lastModified": 0,
+			"_id": "nopt@1.0.7",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-1.0.7.tgz",
+				"shasum": "cc72658b52a3f653a70883a1823dd8f3ddc57f75",
+				"integrity": "sha512-SH2lJYQRxmZw7Yg7DgH8JqN8Kut2c/SwT6xh5yMqZoIh+ZltZ+e9s8hQLZc4zFp8cd6LSQZ1LywJ9mNqD+bwnw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDoH66nikoruCi2BjBBdraLqZd6+VVg+Pwu2zKJCMMUegIhAMWFRlj+1oNQaZZ2qMFAbB4YxIyLL8/usUNFZBEU6IvD"
+					}
+				]
+			},
+			"_npmVersion": "1.0.28-pre-DEV-UNSTABLE",
+			"_npmJsonOpts": {
+				"file": "/Users/isaacs/.npm/nopt/1.0.7/package/package.json",
+				"wscript": false,
+				"serverjs": false,
+				"contributors": false
+			},
+			"_defaultsLoaded": true,
+			"_engineSupported": true,
+			"_nodeVersion": "v0.4.11",
+			"contributors": []
+		},
+		"6.0.0": {
+			"name": "nopt",
+			"description": "Option parsing for Node, supporting types, shorthands, etc. Used by npm.",
+			"version": "6.0.0",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/nopt#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/nopt.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/nopt/issues"
+			},
+			"engines": {
+				"node": "^12.13.0 || ^14.15.0 || >=16.0.0"
+			},
+			"main": "lib/nopt.js",
+			"dependencies": {
+				"abbrev": "^1.0.0"
+			},
+			"devDependencies": {
+				"tap": "^16.3.0",
+				"@npmcli/template-oss": "3.5.0",
+				"@npmcli/eslint-config": "^3.0.1"
+			},
+			"license": "ISC",
+			"bin": {
+				"nopt": "bin/nopt.js"
+			},
+			"maintainers": [
+				{
+					"name": "fritzy",
+					"email": "fritzy@github.com"
+				},
+				{
+					"name": "darcyclarke",
+					"email": "darcy@darcyclarke.me"
+				},
+				{
+					"name": "nlf",
+					"email": "quitlahok@gmail.com"
+				},
+				{
+					"name": "gar",
+					"email": "gar+npm@danger.computer"
+				},
+				{
+					"name": "lukekarrys",
+					"email": "luke@lukekarrys.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint \"**/*.js\"",
+				"snap": "tap",
+				"test": "tap",
+				"lintfix": "npm run lint -- --fix",
+				"postlint": "template-oss-check",
+				"posttest": "npm run lint",
+				"preversion": "npm test",
+				"postversion": "npm publish",
+				"prepublishOnly": "git push origin --follow-tags",
+				"template-oss-apply": "template-oss-apply --force"
+			},
+			"lastModified": 0,
+			"_id": "nopt@6.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-6.0.0.tgz",
+				"shasum": "245801d8ebf409c6df22ab9d95b65e1309cdb16d",
+				"integrity": "sha512-ZwLpbTgdhuZUnZzjd7nb1ZV+4DoiC6/sfiVKok72ym/4Tlf+DFdlHYmT2JPmcNNWV6Pi3SDf1kT+A4r9RTuT9g==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIDU1NVk8kMNveW2BV2+frDkfZTlQ7k0p8/Y47/1/ORt2AiAa5Y74MaA6iSbKq/SxcQSZ/WXa9RxNOnydDzxiwvk58A=="
+					}
+				]
+			},
+			"_npmVersion": "8.14.0",
+			"_npmUser": {
+				"name": "gar",
+				"email": "gar+npm@danger.computer"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "d4ad62dacb376e953bc61984e48998110cb37382",
+			"tap": {
+				"lines": 87,
+				"branches": 81,
+				"functions": 91,
+				"statements": 87
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/nopt_6.0.0_1658351894630_0.16149864199157515",
+				"host": "s3://npm-registry-packages"
+			},
+			"templateOSS": {
+				"version": "3.5.0",
+				"windowsCI": false,
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+			},
+			"_nodeVersion": "18.6.0",
+			"contributors": []
+		},
+		"10.0.0": {
+			"name": "nopt",
+			"description": "Option parsing for Node, supporting types, shorthands, etc. Used by npm.",
+			"version": "10.0.0",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/nopt#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/nopt.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/nopt/issues"
+			},
+			"engines": {
+				"node": "^22.22.2 || ^24.15.0 || >=26.0.0"
+			},
+			"main": "lib/nopt.js",
+			"dependencies": {
+				"abbrev": "^5.0.0"
+			},
+			"devDependencies": {
+				"@npmcli/template-oss": "5.1.0",
+				"@npmcli/eslint-config": "^6.0.0"
+			},
+			"license": "ISC",
+			"bin": {
+				"nopt": "bin/nopt.js"
+			},
+			"maintainers": [
+				{
+					"name": "saquibkhan",
+					"email": "saquibkhan@github.com"
+				},
+				{
+					"name": "npm-cli-ops",
+					"email": "npm-cli+bot@github.com"
+				},
+				{
+					"name": "reggi",
+					"email": "reggi@github.com"
+				},
+				{
+					"name": "owlstronaut",
+					"email": "owlstronaut@github.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "npm run eslint",
+				"snap": "node --test --test-update-snapshots './test/**/*.js'",
+				"test": "node --test './test/**/*.js'",
+				"eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
+				"lintfix": "npm run eslint -- --fix",
+				"postlint": "template-oss-check",
+				"posttest": "npm run lint",
+				"test:cover": "node --test --experimental-test-coverage --test-timeout=3000 --test-coverage-lines=100 --test-coverage-functions=100 --test-coverage-branches=100 './test/**/*.js'",
+				"test:node20": "node --test test",
+				"template-oss-apply": "template-oss-apply --force"
+			},
+			"lastModified": 0,
+			"_id": "nopt@10.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-10.0.0.tgz",
+				"shasum": "e696de0cdec185f08849f11cf43db3a45f085115",
+				"integrity": "sha512-+KTtw3y0UQl+h9zuQFXrrP7idJEM5HIWs9dnMO2CEeUl7ubpdthW8z7UE0qaKEdE7L5Lh7/Hs9ZzBKYHCqDwiQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEQCIC6lJhfip+yatziGG9CeLY4qMCe/wDf5tQahbxPAL45mAiAyI80SwPgLCShy4eNV1FNSRVVLhgI91+KgXeneh+zTPA=="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/nopt@10.0.0",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "11.13.0",
+			"_npmUser": {
+				"name": "GitHub Actions",
+				"email": "npm-oidc-no-reply@github.com",
+				"trustedPublisher": {
+					"id": "github",
+					"oidcConfigId": "oidc:a6a744fc-3d3f-4070-bc9e-6c13238ee24c"
+				}
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "6f22682903cd11df94f9506cd159b4f3c77d69d6",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/nopt_10.0.0_1778870765484_0.957418599826203",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"templateOSS": {
+				"publish": true,
+				"version": "5.1.0",
+				"updateNpm": false,
+				"windowsCI": false,
+				"testRunner": "node:test",
+				"latestCiVersion": 24,
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+			},
+			"_nodeVersion": "26.1.0",
+			"contributors": []
+		},
+		"1.0.8": {
+			"name": "nopt",
+			"description": "Option parsing for Node, supporting types, shorthands, etc. Used by npm.",
+			"version": "1.0.8",
+			"author": {
+				"url": "http://blog.izs.me/",
+				"name": "Isaac Z. Schlueter",
+				"email": "i@izs.me"
+			},
+			"repository": {
+				"url": "git://github.com/isaacs/nopt.git",
+				"type": "git"
+			},
+			"engines": {
+				"node": "*"
+			},
+			"main": "lib/nopt.js",
+			"dependencies": {
+				"abbrev": "1"
+			},
+			"devDependencies": {},
+			"license": {
+				"url": "https://github.com/isaacs/nopt/raw/master/LICENSE",
+				"type": "MIT"
+			},
+			"bin": {
+				"nopt": "./bin/nopt.js"
+			},
+			"maintainers": [
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "node lib/nopt.js"
+			},
+			"lastModified": 0,
+			"_id": "nopt@1.0.8",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-1.0.8.tgz",
+				"shasum": "d4ac752df307f1a02eb771c40ed23188e7ca44c6",
+				"integrity": "sha512-JgQN7eri0sfXcEtFCXEIuOevrUZcEmJsg7gQapD4MDJJcdrcpZCduPSc38k5Fsbunw1LaP/wE03a7Zk0eTzhiQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQCZt8mpNYwnBtfDKlM38sTfmKsY531j+24NMcEew2/eEwIhANBxzOOyR7riuBhpX5TDsTgtjd5CSjiM6ejZsB6YxYVO"
+					}
+				]
+			},
+			"_npmVersion": "1.0.28-pre-DEV-UNSTABLE",
+			"_npmJsonOpts": {
+				"file": "/Users/isaacs/.npm/nopt/1.0.8/package/package.json",
+				"wscript": false,
+				"serverjs": false,
+				"contributors": false
+			},
+			"_defaultsLoaded": true,
+			"_engineSupported": true,
+			"_nodeVersion": "v0.5.7-pre",
+			"contributors": []
+		},
+		"1.0.9": {
+			"name": "nopt",
+			"description": "Option parsing for Node, supporting types, shorthands, etc. Used by npm.",
+			"version": "1.0.9",
+			"author": {
+				"url": "http://blog.izs.me/",
+				"name": "Isaac Z. Schlueter",
+				"email": "i@izs.me"
+			},
+			"repository": {
+				"url": "git://github.com/isaacs/nopt.git",
+				"type": "git"
+			},
+			"engines": {
+				"node": "*"
+			},
+			"main": "lib/nopt.js",
+			"dependencies": {
+				"abbrev": "1"
+			},
+			"devDependencies": {},
+			"license": {
+				"url": "https://github.com/isaacs/nopt/raw/master/LICENSE",
+				"type": "MIT"
+			},
+			"bin": {
+				"nopt": "./bin/nopt.js"
+			},
+			"maintainers": [
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "node lib/nopt.js"
+			},
+			"lastModified": 0,
+			"_id": "nopt@1.0.9",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-1.0.9.tgz",
+				"shasum": "3bc0d7cba7bfb0d5a676dbed7c0ebe48a4fd454e",
+				"integrity": "sha512-CmUZ3rzN0/4kRHum5pGRiGkhmBMzgtEDxrZVHqRJDSv8qK6s+wzaig/xeyB22Due5aZQeTiEZg/nrmMH2tapDQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQCEyNPKcYZLkvhMJWXR56iZM6sxAlpGgqSIhLI+SjMExgIhAJfcEC/GT9iKxQAl8rm9kK1nDjFLgCDDMTZFLEItPmQw"
+					}
+				]
+			},
+			"_npmVersion": "1.0.30",
+			"_npmUser": {
+				"name": "isaacs",
+				"email": "i@izs.me"
+			},
+			"_defaultsLoaded": true,
+			"_engineSupported": true,
+			"_nodeVersion": "v0.5.8-pre",
+			"contributors": []
+		},
+		"5.0.0": {
+			"name": "nopt",
+			"description": "Option parsing for Node, supporting types, shorthands, etc. Used by npm.",
+			"version": "5.0.0",
+			"author": {
+				"url": "http://blog.izs.me/",
+				"name": "Isaac Z. Schlueter",
+				"email": "i@izs.me"
+			},
+			"homepage": "https://github.com/npm/nopt#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/nopt.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/nopt/issues"
+			},
+			"engines": {
+				"node": ">=6"
+			},
+			"main": "lib/nopt.js",
+			"dependencies": {
+				"abbrev": "1"
+			},
+			"devDependencies": {
+				"tap": "^14.10.6"
+			},
+			"license": "ISC",
+			"bin": {
+				"nopt": "bin/nopt.js"
+			},
+			"maintainers": [
+				{
+					"name": "adam_baldwin",
+					"email": "evilpacket@gmail.com"
+				},
+				{
+					"name": "claudiahdz",
+					"email": "cghr1990@gmail.com"
+				},
+				{
+					"name": "darcyclarke",
+					"email": "darcy@darcyclarke.me"
+				},
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				},
+				{
+					"name": "mylesborins",
+					"email": "myles.borins@gmail.com"
+				},
+				{
+					"name": "ruyadorno",
+					"email": "ruyadorno@hotmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap test/*.js",
+				"preversion": "npm test",
+				"postversion": "npm publish",
+				"prepublishOnly": "git push origin --follow-tags"
+			},
+			"lastModified": 0,
+			"_id": "nopt@5.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-5.0.0.tgz",
+				"shasum": "530942bb58a512fccafe53fe210f13a25355dc88",
+				"integrity": "sha512-Tbj67rffqceeLpcRXrT7vKAN8CwfPeIBgM7E6iBkmKLV7bEMwpGgYLGv0jACUsECaa/vuxP0IjEont6umdMgtQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQCPHXZMXpP4mpnnUMAdZglRWH8KUS6GvQ19QIdVghAPWQIhALtZwmltm4XJteZCbx3EI/7U9FRVzR/b8m0RZEUKCTwP"
+					}
+				]
+			},
+			"_npmVersion": "7.0.0-beta.4",
+			"_npmUser": {
+				"name": "isaacs",
+				"email": "i@izs.me"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "fee9d25fb8518cf202eb0bbdfa6e1c516ee8dff7",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/nopt_5.0.0_1597651591432_0.3563498258220257",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "14.8.0",
+			"contributors": []
+		},
+		"1.0.0": {
+			"name": "nopt",
+			"description": "Option parsing for Node, supporting types, shorthands, etc. Used by npm.",
+			"version": "1.0.0",
+			"author": {
+				"url": "http://blog.izs.me/",
+				"name": "Isaac Z. Schlueter",
+				"email": "i@izs.me"
+			},
+			"repository": {
+				"url": "git://github.com/isaacs/nopt.git",
+				"type": "git"
+			},
+			"engines": {
+				"node": "*"
+			},
+			"main": "lib/nopt.js",
+			"dependencies": {
+				"abbrev": "1"
+			},
+			"directories": {},
+			"scripts": {
+				"test": "node lib/optparse.js"
+			},
+			"lastModified": 0,
+			"_id": "nopt@1.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-1.0.0.tgz",
+				"shasum": "a786d439b09c142dca74b0b29ef1458da50e37d8",
+				"integrity": "sha512-g4yg1XbYuPnbiq4+ylgT+E2T0EPQB4RM0u/XBBspw2p8w/9ABkwCG2itNNX2TtX53ZncZySvPizS15oc0HE4JA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCgSGHL0t+Vt45KopZC988vh5t9blfQnz2w0Jc3HA1DCgIgcie7u3yijb7dcyvVHscJiFl9vqbliNyH3nPxbJDtiJY="
+					}
+				]
+			},
+			"_npmVersion": "1.0.1rc0",
+			"_defaultsLoaded": true,
+			"_engineSupported": true,
+			"_nodeVersion": "v0.5.0-pre",
+			"contributors": []
+		},
+		"1.0.1": {
+			"name": "nopt",
+			"description": "Option parsing for Node, supporting types, shorthands, etc. Used by npm.",
+			"version": "1.0.1",
+			"author": {
+				"url": "http://blog.izs.me/",
+				"name": "Isaac Z. Schlueter",
+				"email": "i@izs.me"
+			},
+			"repository": {
+				"url": "git://github.com/isaacs/nopt.git",
+				"type": "git"
+			},
+			"engines": {
+				"node": "*"
+			},
+			"main": "lib/nopt.js",
+			"dependencies": {
+				"abbrev": "1"
+			},
+			"directories": {},
+			"scripts": {
+				"test": "node lib/optparse.js"
+			},
+			"lastModified": 0,
+			"_id": "nopt@1.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-1.0.1.tgz",
+				"shasum": "585e38c61508b02b1ea2cc0028eef8c303079285",
+				"integrity": "sha512-5vYyxgk7nJ+GOifz3IKX6S1VqSzYCIey2Pf+8AApQvwr9OTi1KnenoYUB6f9cKDW9tavAnvvZAK4s10/Oh89gQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIExxO6u1ypJrjEDSSbD/lgpJvQoVtvK5+njIIf6yu3IYAiB/qadiCntpfSbtEvh3s9CWR/sFjUSUN0TRKpHbe6082g=="
+					}
+				]
+			},
+			"_npmVersion": "1.0.1rc2",
+			"_defaultsLoaded": true,
+			"_engineSupported": true,
+			"_nodeVersion": "v0.4.4",
+			"contributors": []
+		},
+		"1.0.2": {
+			"name": "nopt",
+			"description": "Option parsing for Node, supporting types, shorthands, etc. Used by npm.",
+			"version": "1.0.2",
+			"author": {
+				"url": "http://blog.izs.me/",
+				"name": "Isaac Z. Schlueter",
+				"email": "i@izs.me"
+			},
+			"repository": {
+				"url": "git://github.com/isaacs/nopt.git",
+				"type": "git"
+			},
+			"engines": {
+				"node": "*"
+			},
+			"main": "lib/nopt.js",
+			"dependencies": {
+				"abbrev": "1"
+			},
+			"directories": {},
+			"scripts": {
+				"test": "node lib/nopt.js"
+			},
+			"lastModified": 0,
+			"_id": "nopt@1.0.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-1.0.2.tgz",
+				"shasum": "bb26ab771fb09411f716b122c12cd98fdc98f4d1",
+				"integrity": "sha512-df/jPsj3IzBEpTJ5m30R6hjsYhlHytYK2rZqTqFcMIf0V4hkMp8H2++8nQ1GeG45osen1UtM0dXjQPbGPGDMyg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQD93MXPEgg/TD4Jwu+ohnNTZ+E12JUeUlyjAc0gOlREIgIhAOBP8hGhs4NFvtvsCEtF74muc4bnNeVNJMShJvJrRInv"
+					}
+				]
+			},
+			"_npmVersion": "1.0.1rc3",
+			"_defaultsLoaded": true,
+			"_engineSupported": true,
+			"_nodeVersion": "v0.5.0-pre",
+			"contributors": []
+		}
+	},
+	"time": {
+		"9.0.0": "2025-10-22T15:27:15.422Z",
+		"1.0.10": "2011-10-05T21:47:05.876Z",
+		"4.0.2": "2020-03-08T21:52:43.958Z",
+		"4.0.3": "2020-03-08T21:53:56.097Z",
+		"4.0.0": "2016-12-13T23:38:42.368Z",
+		"4.0.1": "2016-12-14T18:26:26.094Z",
+		"3.0.0": "2014-06-06T20:36:37.144Z",
+		"8.0.0": "2024-09-04T22:12:31.585Z",
+		"8.1.0": "2025-01-21T17:15:45.225Z",
+		"3.0.5": "2015-11-12T21:23:16.377Z",
+		"modified": "2026-06-04T14:35:34.216Z",
+		"3.0.6": "2015-11-12T21:58:26.454Z",
+		"3.0.1": "2014-07-01T17:12:00.014Z",
+		"3.0.2": "2015-05-19T01:38:16.099Z",
+		"3.0.3": "2015-06-23T01:16:18.259Z",
+		"3.0.4": "2015-09-10T01:29:59.419Z",
+		"2.0.0": "2012-07-23T22:36:57.179Z",
+		"7.1.0": "2023-03-21T18:48:47.189Z",
+		"2.1.0": "2013-01-17T20:23:13.858Z",
+		"7.2.0": "2023-06-15T16:16:31.586Z",
+		"7.2.1": "2024-05-04T01:10:37.691Z",
+		"created": "2011-03-30T03:23:55.464Z",
+		"7.0.0": "2022-11-02T14:33:36.290Z",
+		"2.1.1": "2013-01-18T16:26:25.780Z",
+		"2.2.0": "2014-02-16T20:54:31.122Z",
+		"2.1.2": "2013-07-17T15:24:56.574Z",
+		"2.2.1": "2014-04-28T21:59:11.261Z",
+		"1.0.3": "2011-03-31T01:12:32.481Z",
+		"1.0.4": "2011-03-31T04:42:56.217Z",
+		"1.0.5": "2011-04-29T19:50:02.032Z",
+		"1.0.6": "2011-07-06T03:49:31.397Z",
+		"10.0.1": "2026-06-04T14:35:33.859Z",
+		"1.0.7": "2011-09-08T17:49:45.337Z",
+		"6.0.0": "2022-07-20T21:18:14.824Z",
+		"10.0.0": "2026-05-15T18:46:05.681Z",
+		"1.0.8": "2011-09-15T21:26:19.372Z",
+		"1.0.9": "2011-09-22T21:20:18.314Z",
+		"5.0.0": "2020-08-17T08:06:31.528Z",
+		"1.0.0": "2011-03-30T03:23:56.092Z",
+		"1.0.1": "2011-03-30T06:58:18.917Z",
+		"1.0.2": "2011-03-31T01:07:58.593Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "10.0.1"
+	},
+	"_uplinks": {
+		"artifactory-sabadell": {
+			"etag": "f3a92989f7e2a08f1151e108247da6c67904ccff",
+			"fetched": 1782459826765
+		}
+	},
+	"_distfiles": {
+		"nopt-9.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-9.0.0.tgz",
+			"sha": "6bff0836b2964d24508b6b41b5a9a49c4f4a1f96",
+			"registry": "artifactory-sabadell"
+		},
+		"nopt-1.0.10.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-1.0.10.tgz",
+			"sha": "6ddd21bd2a31417b92727dd585f8a6f37608ebee",
+			"registry": "artifactory-sabadell"
+		},
+		"nopt-4.0.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-4.0.2.tgz",
+			"sha": "ccdb22d06b9990dab9704033bb31209dbd1f5b1e",
+			"registry": "artifactory-sabadell"
+		},
+		"nopt-4.0.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-4.0.3.tgz",
+			"sha": "a375cad9d02fd921278d954c2254d5aa57e15e48",
+			"registry": "artifactory-sabadell"
+		},
+		"nopt-4.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-4.0.0.tgz",
+			"sha": "a4f9c541d2f84e0e2288057125fefe7329836694",
+			"registry": "artifactory-sabadell"
+		},
+		"nopt-4.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-4.0.1.tgz",
+			"sha": "d0d4685afd5415193c8c7505602d0d17cd64474d",
+			"registry": "artifactory-sabadell"
+		},
+		"nopt-3.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-3.0.0.tgz",
+			"sha": "4fcf4bf09123d5ee6b2f70214a4d95789b875c79",
+			"registry": "artifactory-sabadell"
+		},
+		"nopt-8.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-8.0.0.tgz",
+			"sha": "644f1e78da564b70e3606ab8db4836b0e32e198a",
+			"registry": "artifactory-sabadell"
+		},
+		"nopt-8.1.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-8.1.0.tgz",
+			"sha": "b11d38caf0f8643ce885818518064127f602eae3",
+			"registry": "artifactory-sabadell"
+		},
+		"nopt-3.0.5.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-3.0.5.tgz",
+			"sha": "34adf7482cf70b06d24693e094c2c1e2e7fab403",
+			"registry": "artifactory-sabadell"
+		},
+		"nopt-3.0.6.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-3.0.6.tgz",
+			"sha": "c6465dbf08abcd4db359317f79ac68a646b28ff9",
+			"registry": "artifactory-sabadell"
+		},
+		"nopt-3.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-3.0.1.tgz",
+			"sha": "bce5c42446a3291f47622a370abbf158fbbacbfd",
+			"registry": "artifactory-sabadell"
+		},
+		"nopt-3.0.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-3.0.2.tgz",
+			"sha": "a82a87f9d8c3df140fe78fb29657a7a774403b5e",
+			"registry": "artifactory-sabadell"
+		},
+		"nopt-3.0.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-3.0.3.tgz",
+			"sha": "0e9978f33016bae0b75e3748c03bbbb71da5c530",
+			"registry": "artifactory-sabadell"
+		},
+		"nopt-3.0.4.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-3.0.4.tgz",
+			"sha": "dd63bc9c72a6e4e85b85cdc0ca314598facede5e",
+			"registry": "artifactory-sabadell"
+		},
+		"nopt-2.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-2.0.0.tgz",
+			"sha": "ca7416f20a5e3f9c3b86180f96295fa3d0b52e0d",
+			"registry": "artifactory-sabadell"
+		},
+		"nopt-7.1.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-7.1.0.tgz",
+			"sha": "91f6a3366182176e72ecab93a09c19b63b485f28",
+			"registry": "artifactory-sabadell"
+		},
+		"nopt-2.1.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-2.1.0.tgz",
+			"sha": "2334c03a00c1dcb22eb1c4a4c34ebde213ee49e2",
+			"registry": "artifactory-sabadell"
+		},
+		"nopt-7.2.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-7.2.0.tgz",
+			"sha": "067378c68116f602f552876194fd11f1292503d7",
+			"registry": "artifactory-sabadell"
+		},
+		"nopt-7.2.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-7.2.1.tgz",
+			"sha": "1cac0eab9b8e97c9093338446eddd40b2c8ca1e7",
+			"registry": "artifactory-sabadell"
+		},
+		"nopt-7.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-7.0.0.tgz",
+			"sha": "09220f930c072109c98ef8aaf39e1d5f0ff9b0d4",
+			"registry": "artifactory-sabadell"
+		},
+		"nopt-2.1.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-2.1.1.tgz",
+			"sha": "91eb7c4b017e7c00adcad1fd6d63944d0fdb75c1",
+			"registry": "artifactory-sabadell"
+		},
+		"nopt-2.2.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-2.2.0.tgz",
+			"sha": "3d106676f3607ac466af9bf82bd707b1501d3bd5",
+			"registry": "artifactory-sabadell"
+		},
+		"nopt-2.1.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-2.1.2.tgz",
+			"sha": "6cccd977b80132a07731d6e8ce58c2c8303cf9af",
+			"registry": "artifactory-sabadell"
+		},
+		"nopt-2.2.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-2.2.1.tgz",
+			"sha": "2aa09b7d1768487b3b89a9c5aa52335bff0baea7",
+			"registry": "artifactory-sabadell"
+		},
+		"nopt-1.0.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-1.0.3.tgz",
+			"sha": "a5557211e05f4baad09bbf8e9d798072bff69166",
+			"registry": "artifactory-sabadell"
+		},
+		"nopt-1.0.4.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-1.0.4.tgz",
+			"sha": "023fc93f439094e662e2e4186345bfabda8eceda",
+			"registry": "artifactory-sabadell"
+		},
+		"nopt-1.0.5.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-1.0.5.tgz",
+			"sha": "fc79e34a4e8862e9c413d2e1cac07ee645ac4cc8",
+			"registry": "artifactory-sabadell"
+		},
+		"nopt-1.0.6.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-1.0.6.tgz",
+			"sha": "37307cafcdccf78b954ec06dcef31b936b4d03df",
+			"registry": "artifactory-sabadell"
+		},
+		"nopt-10.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-10.0.1.tgz",
+			"sha": "2d53bfda504b31c447967648ba5ea1a44e594d05",
+			"registry": "artifactory-sabadell"
+		},
+		"nopt-1.0.7.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-1.0.7.tgz",
+			"sha": "cc72658b52a3f653a70883a1823dd8f3ddc57f75",
+			"registry": "artifactory-sabadell"
+		},
+		"nopt-6.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-6.0.0.tgz",
+			"sha": "245801d8ebf409c6df22ab9d95b65e1309cdb16d",
+			"registry": "artifactory-sabadell"
+		},
+		"nopt-10.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-10.0.0.tgz",
+			"sha": "e696de0cdec185f08849f11cf43db3a45f085115",
+			"registry": "artifactory-sabadell"
+		},
+		"nopt-1.0.8.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-1.0.8.tgz",
+			"sha": "d4ac752df307f1a02eb771c40ed23188e7ca44c6",
+			"registry": "artifactory-sabadell"
+		},
+		"nopt-1.0.9.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-1.0.9.tgz",
+			"sha": "3bc0d7cba7bfb0d5a676dbed7c0ebe48a4fd454e",
+			"registry": "artifactory-sabadell"
+		},
+		"nopt-5.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-5.0.0.tgz",
+			"sha": "530942bb58a512fccafe53fe210f13a25355dc88",
+			"registry": "artifactory-sabadell"
+		},
+		"nopt-1.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-1.0.0.tgz",
+			"sha": "a786d439b09c142dca74b0b29ef1458da50e37d8",
+			"registry": "artifactory-sabadell"
+		},
+		"nopt-1.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-1.0.1.tgz",
+			"sha": "585e38c61508b02b1ea2cc0028eef8c303079285",
+			"registry": "artifactory-sabadell"
+		},
+		"nopt-1.0.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nopt/-/nopt-1.0.2.tgz",
+			"sha": "bb26ab771fb09411f716b122c12cd98fdc98f4d1",
+			"registry": "artifactory-sabadell"
+		}
+	},
+	"_attachments": {},
+	"_rev": "1-a87685cbe55f735c",
+	"_id": "nopt",
+	"readme": "If you want to write an option parser, and have it be good, there are\ntwo ways to do it.  The Right Way, and the Wrong Way.\n\nThe Wrong Way is to sit down and write an option parser.  We've all done\nthat.\n\nThe Right Way is to write some complex configurable program with so many\noptions that you hit the limit of your frustration just trying to\nmanage them all, and defer it with duct-tape solutions until you see\nexactly to the core of the problem, and finally snap and write an\nawesome option parser.\n\nIf you want to write an option parser, don't write an option parser.\nWrite a package manager, or a source control system, or a service\nrestarter, or an operating system.  You probably won't end up with a\ngood one of those, but if you don't give up, and you are relentless and\ndiligent enough in your procrastination, you may just end up with a very\nnice option parser.\n\n## USAGE\n\n```javascript\n// my-program.js\nvar nopt = require(\"nopt\")\n  , Stream = require(\"stream\").Stream\n  , path = require(\"path\")\n  , knownOpts = { \"foo\" : [String, null]\n                , \"bar\" : [Stream, Number]\n                , \"baz\" : path\n                , \"bloo\" : [ \"big\", \"medium\", \"small\" ]\n                , \"flag\" : Boolean\n                , \"pick\" : Boolean\n                , \"many1\" : [String, Array]\n                , \"many2\" : [path, Array]\n                }\n  , shortHands = { \"foofoo\" : [\"--foo\", \"Mr. Foo\"]\n                 , \"b7\" : [\"--bar\", \"7\"]\n                 , \"m\" : [\"--bloo\", \"medium\"]\n                 , \"p\" : [\"--pick\"]\n                 , \"f\" : [\"--flag\"]\n                 }\n             // everything is optional.\n             // knownOpts and shorthands default to {}\n             // arg list defaults to process.argv\n             // slice defaults to 2\n  , parsed = nopt(knownOpts, shortHands, process.argv, 2)\nconsole.log(parsed)\n```\n\nThis would give you support for any of the following:\n\n```console\n$ node my-program.js --foo \"blerp\" --no-flag\n{ \"foo\" : \"blerp\", \"flag\" : false }\n\n$ node my-program.js ---bar 7 --foo \"Mr. Hand\" --flag\n{ bar: 7, foo: \"Mr. Hand\", flag: true }\n\n$ node my-program.js --foo \"blerp\" -f -----p\n{ foo: \"blerp\", flag: true, pick: true }\n\n$ node my-program.js -fp --foofoo\n{ foo: \"Mr. Foo\", flag: true, pick: true }\n\n$ node my-program.js --foofoo -- -fp  # -- stops the flag parsing.\n{ foo: \"Mr. Foo\", argv: { remain: [\"-fp\"] } }\n\n$ node my-program.js --blatzk -fp # unknown opts are ok.\n{ blatzk: true, flag: true, pick: true }\n\n$ node my-program.js --blatzk=1000 -fp # but you need to use = if they have a value\n{ blatzk: 1000, flag: true, pick: true }\n\n$ node my-program.js --no-blatzk -fp # unless they start with \"no-\"\n{ blatzk: false, flag: true, pick: true }\n\n$ node my-program.js --baz b/a/z # known paths are resolved.\n{ baz: \"/Users/isaacs/b/a/z\" }\n\n# if Array is one of the types, then it can take many\n# values, and will always be an array.  The other types provided\n# specify what types are allowed in the list.\n\n$ node my-program.js --many1 5 --many1 null --many1 foo\n{ many1: [\"5\", \"null\", \"foo\"] }\n\n$ node my-program.js --many2 foo --many2 bar\n{ many2: [\"/path/to/foo\", \"path/to/bar\"] }\n```\n\nRead the tests at the bottom of `lib/nopt.js` for more examples of\nwhat this puppy can do.\n\n## Types\n\nThe following types are supported, and defined on `nopt.typeDefs`\n\n* String: A normal string.  No parsing is done.\n* path: A file system path.  Gets resolved against cwd if not absolute.\n* url: A url.  If it doesn't parse, it isn't accepted.\n* Number: Must be numeric.\n* Date: Must parse as a date. If it does, and `Date` is one of the options,\n  then it will return a Date object, not a string.\n* Boolean: Must be either `true` or `false`.  If an option is a boolean,\n  then it does not need a value, and its presence will imply `true` as\n  the value.  To negate boolean flags, do `--no-whatever` or `--whatever\n  false`\n* NaN: Means that the option is strictly not allowed.  Any value will\n  fail.\n* Stream: An object matching the \"Stream\" class in node.  Valuable\n  for use when validating programmatically.  (npm uses this to let you\n  supply any WriteStream on the `outfd` and `logfd` config options.)\n* Array: If `Array` is specified as one of the types, then the value\n  will be parsed as a list of options.  This means that multiple values\n  can be specified, and that the value will always be an array.\n\nIf a type is an array of values not on this list, then those are\nconsidered valid values.  For instance, in the example above, the\n`--bloo` option can only be one of `\"big\"`, `\"medium\"`, or `\"small\"`,\nand any other value will be rejected.\n\nWhen parsing unknown fields, `\"true\"`, `\"false\"`, and `\"null\"` will be\ninterpreted as their JavaScript equivalents.\n\nYou can also mix types and values, or multiple types, in a list.  For\ninstance `{ blah: [Number, null] }` would allow a value to be set to\neither a Number or null.  When types are ordered, this implies a\npreference, and the first type that can be used to properly interpret\nthe value will be used.\n\nTo define a new type, add it to `nopt.typeDefs`.  Each item in that\nhash is an object with a `type` member and a `validate` method.  The\n`type` member is an object that matches what goes in the type list.  The\n`validate` method is a function that gets called with `validate(data,\nkey, val)`.  Validate methods should assign `data[key]` to the valid\nvalue of `val` if it can be handled properly, or return boolean\n`false` if it cannot.\n\nYou can also call `nopt.clean(data, types, typeDefs)` to clean up a\nconfig object and remove its invalid properties.\n\n## Error Handling\n\nYou can assign the following methods to `nopt` for notification of invalid, unknown, and expanding options:\n\n`nopt.invalidHandler(key, value, type, data)` - Called when a value is invalid for its option.\n`nopt.unknownHandler(key, next)` - Called when an option is found that has no configuration.  In certain situations the next option on the command line will be parsed on its own instead of as part of the unknown option. In this case `next` will contain that option.\n`nopt.abbrevHandler(short, long)` - Called when an option is automatically translated via abbreviations.\n\nYou can set any of these to `false` or leave them unset to skip that notification.\n\n## Abbreviations\n\nYes, they are supported.  If you define options like this:\n\n```javascript\n{ \"foolhardyelephants\" : Boolean\n, \"pileofmonkeys\" : Boolean }\n```\n\nThen this will work:\n\n```bash\nnode program.js --foolhar --pil\nnode program.js --no-f --pileofmon\n# etc.\n```\n\n## Shorthands\n\nShorthands are a hash of shorter option names to a snippet of args that\nthey expand to.\n\nIf multiple one-character shorthands are all combined, and the\ncombination does not unambiguously match any other option or shorthand,\nthen they will be broken up into their constituent parts.  For example:\n\n```json\n{ \"s\" : [\"--loglevel\", \"silent\"]\n, \"g\" : \"--global\"\n, \"f\" : \"--force\"\n, \"p\" : \"--parseable\"\n, \"l\" : \"--long\"\n}\n```\n\n```bash\nnpm ls -sgflp\n# just like doing this:\nnpm ls --loglevel silent --global --force --long --parseable\n```\n\n## The Rest of the args\n\nThe config object returned by nopt is given a special member called\n`argv`, which is an object with the following fields:\n\n* `remain`: The remaining args after all the parsing has occurred.\n* `original`: The args as they originally appeared.\n* `cooked`: The args after flags and shorthands are expanded.\n\n## Slicing\n\nNode programs are called with more or less the exact argv as it appears\nin C land, after the v8 and node-specific options have been plucked off.\nAs such, `argv[0]` is always `node` and `argv[1]` is always the\nJavaScript program being run.\n\nThat's usually not very useful to you.  So they're sliced off by\ndefault.  If you want them, then you can pass in `0` as the last\nargument, or any other number that you'd like to slice off the start of\nthe list."
+}

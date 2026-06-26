@@ -1,0 +1,1246 @@
+{
+	"name": "typed-array-length",
+	"versions": {
+		"1.0.3": {
+			"name": "typed-array-length",
+			"description": "Robustly get the length of a Typed Array",
+			"version": "1.0.3",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/inspect-js/typed-array-length#readme",
+			"repository": {
+				"url": "git+https://github.com/inspect-js/typed-array-length.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/inspect-js/typed-array-length/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"call-bind": "^1.0.0",
+				"is-typed-array": "^1.1.4"
+			},
+			"devDependencies": {
+				"aud": "^1.1.3",
+				"nyc": "^10.3.2",
+				"tape": "^5.0.1",
+				"eslint": "^7.15.0",
+				"evalmd": "^0.0.19",
+				"foreach": "^2.0.5",
+				"is-callable": "^1.2.2",
+				"auto-changelog": "^2.2.1",
+				"object-inspect": "^1.9.0",
+				"make-arrow-function": "^1.2.0",
+				"@ljharb/eslint-config": "^17.3.0",
+				"make-generator-function": "^2.0.0"
+			},
+			"keywords": [
+				"typed",
+				"array",
+				"length",
+				"robust",
+				"es",
+				"Int8Array",
+				"Uint8Array",
+				"Uint8ClampedArray",
+				"Int16Array",
+				"Uint16Array",
+				"Int32Array",
+				"Uint32Array",
+				"Float32Array",
+				"Float64Array"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint --ext=js,mjs .",
+				"test": "npm run tests-only && npm run test:harmony",
+				"prelint": "evalmd README.md",
+				"pretest": "npm run lint",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"posttest": "aud --production",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\"",
+				"test:harmony": "nyc node --harmony --es-staging test"
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "typed-array-length@1.0.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/typed-array-length/-/typed-array-length-1.0.3.tgz",
+				"shasum": "906691f06643eccd699c7e76565368fded1feed0",
+				"integrity": "sha512-HizAOfjM1PaVQ7HKUO0+0EOv4kG3MVRQ2H+/OVBv2XhQCW1yEo87O2iQw3lylZdzp6d5QDcH9Pkg5kHfezUkfA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDJFyYxfPNkRnBCNd/wGpi5Dr1lSXmQGCoEhMos9pRqBgIhAPplX+rMlaWq8rtLgcDRnLAjo+J3eVNtNeDGQR8s4nBn"
+					}
+				]
+			},
+			"_npmVersion": "6.14.8",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "2a4587274c5f734ce68298c05ec1f4dd402f65d8",
+			"exports": {
+				".": [
+					{
+						"default": "./index.js"
+					},
+					"./index.js"
+				],
+				"./package.json": "./package.json"
+			},
+			"testling": {
+				"files": "test/index.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/typed-array-length_1.0.3_1607232167811_0.16811548339615112",
+				"host": "s3://npm-registry-packages"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"hideCredit": true,
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false
+			},
+			"_nodeVersion": "14.15.1",
+			"contributors": []
+		},
+		"1.0.4": {
+			"name": "typed-array-length",
+			"description": "Robustly get the length of a Typed Array",
+			"version": "1.0.4",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/inspect-js/typed-array-length#readme",
+			"repository": {
+				"url": "git+https://github.com/inspect-js/typed-array-length.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/inspect-js/typed-array-length/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"for-each": "^0.3.3",
+				"call-bind": "^1.0.2",
+				"is-typed-array": "^1.1.9"
+			},
+			"devDependencies": {
+				"aud": "^2.0.0",
+				"nyc": "^10.3.2",
+				"tape": "^5.5.3",
+				"eslint": "=8.8.0",
+				"evalmd": "^0.0.19",
+				"npmignore": "^0.3.0",
+				"is-callable": "^1.2.4",
+				"auto-changelog": "^2.4.0",
+				"object-inspect": "^1.12.1",
+				"make-arrow-function": "^1.2.0",
+				"safe-publish-latest": "^2.0.0",
+				"@ljharb/eslint-config": "^21.0.0",
+				"make-generator-function": "^2.0.0"
+			},
+			"keywords": [
+				"typed",
+				"array",
+				"length",
+				"robust",
+				"es",
+				"Int8Array",
+				"Uint8Array",
+				"Uint8ClampedArray",
+				"Int16Array",
+				"Uint16Array",
+				"Int32Array",
+				"Uint32Array",
+				"Float32Array",
+				"Float64Array"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint --ext=js,mjs .",
+				"test": "npm run tests-only && npm run test:harmony",
+				"prelint": "evalmd README.md",
+				"prepack": "npmignore --auto --commentLines=autogenerated",
+				"pretest": "npm run lint",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"posttest": "aud --production",
+				"prepublish": "not-in-publish || npm run prepublishOnly",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\"",
+				"test:harmony": "nyc node --harmony --es-staging test",
+				"prepublishOnly": "safe-publish-latest"
+			},
+			"publishConfig": {
+				"ignore": [
+					".github/workflows"
+				]
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "typed-array-length@1.0.4",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/typed-array-length/-/typed-array-length-1.0.4.tgz",
+				"shasum": "89d83785e5c4098bec72e08b319651f0eac9c1bb",
+				"integrity": "sha512-KjZypGq+I/H7HI5HlOoGHkWUUGq+Q0TPhQurLbyrVrvnKTBgzLhIJ7j6J/XTQOi0d1RjyZ0wdas8bKs2p0x3Ng==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDsXXKUnIzu9q67hToSrm2CcVIxGdRW8H4c8endGSm3zQIgKX1FzWO+VEL7eveGKajnQ4uJ2lj9Np5MqqRSCtKJgVI="
+					}
+				]
+			},
+			"_npmVersion": "8.9.0",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "c30864c777e9d2565c5a459904f9a40976586bba",
+			"exports": {
+				".": "./index.js",
+				"./package.json": "./package.json"
+			},
+			"testling": {
+				"files": "test/index.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/typed-array-length_1.0.4_1653361034956_0.4048536140028338",
+				"host": "s3://npm-registry-packages"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"hideCredit": true,
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false
+			},
+			"_nodeVersion": "18.2.0",
+			"contributors": []
+		},
+		"1.0.5": {
+			"name": "typed-array-length",
+			"description": "Robustly get the length of a Typed Array",
+			"version": "1.0.5",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/inspect-js/typed-array-length#readme",
+			"repository": {
+				"url": "git+https://github.com/inspect-js/typed-array-length.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/inspect-js/typed-array-length/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"gopd": "^1.0.1",
+				"for-each": "^0.3.3",
+				"call-bind": "^1.0.7",
+				"has-proto": "^1.0.3",
+				"is-typed-array": "^1.1.13",
+				"possible-typed-array-names": "^1.0.0"
+			},
+			"devDependencies": {
+				"aud": "^2.0.4",
+				"nyc": "^10.3.2",
+				"tape": "^5.7.5",
+				"eslint": "=8.8.0",
+				"evalmd": "^0.0.19",
+				"npmignore": "^0.3.1",
+				"in-publish": "^2.0.1",
+				"typescript": "next",
+				"@types/gopd": "^1.0.3",
+				"@types/tape": "^5.6.4",
+				"is-callable": "^1.2.7",
+				"auto-changelog": "^2.4.0",
+				"object-inspect": "^1.13.1",
+				"@types/for-each": "^0.3.3",
+				"@types/call-bind": "^1.0.5",
+				"@types/is-callable": "^1.1.2",
+				"make-arrow-function": "^1.2.0",
+				"safe-publish-latest": "^2.0.0",
+				"@ljharb/eslint-config": "^21.1.0",
+				"@types/object-inspect": "^1.8.4",
+				"make-generator-function": "^2.0.0",
+				"@types/make-arrow-function": "^1.2.2",
+				"@types/make-generator-function": "^2.0.3"
+			},
+			"keywords": [
+				"typed",
+				"array",
+				"length",
+				"robust",
+				"es",
+				"Int8Array",
+				"Uint8Array",
+				"Uint8ClampedArray",
+				"Int16Array",
+				"Uint16Array",
+				"Int32Array",
+				"Uint32Array",
+				"Float32Array",
+				"Float64Array"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint --ext=js,mjs .",
+				"test": "npm run tests-only && npm run test:harmony",
+				"prelint": "evalmd README.md",
+				"prepack": "npmignore --auto --commentLines=autogenerated",
+				"pretest": "npm run lint",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"posttest": "aud --production",
+				"prepublish": "not-in-publish || npm run prepublishOnly",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\"",
+				"test:harmony": "nyc node --harmony --es-staging test",
+				"prepublishOnly": "safe-publish-latest"
+			},
+			"publishConfig": {
+				"ignore": [
+					".github/workflows"
+				]
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "typed-array-length@1.0.5",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/typed-array-length/-/typed-array-length-1.0.5.tgz",
+				"shasum": "57d44da160296d8663fd63180a1802ebf25905d5",
+				"integrity": "sha512-yMi0PlwuznKHxKmcpoOdeLwxBoVPkqZxd7q2FgMkmD3bNwvF5VW0+UlUQ1k1vmktTu4Yu13Q0RIxEP8+B+wloA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDN+N6CBclONNxX7szR4OuVGFVnTeX5PAVa7hJgafyKNwIgAYMEgPoBl5jG36Ll2D/+X1xP/wGfRUTQVs2YpBisB7k="
+					}
+				]
+			},
+			"_npmVersion": "10.2.4",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "913886cb32bc689e033d75bcc064b19b26c167a4",
+			"types": "./index.d.ts",
+			"exports": {
+				".": "./index.js",
+				"./package.json": "./package.json"
+			},
+			"testling": {
+				"files": "test/index.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/typed-array-length_1.0.5_1708450472801_0.2923518963194949",
+				"host": "s3://npm-registry-packages"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"hideCredit": true,
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false
+			},
+			"sideEffects": false,
+			"_nodeVersion": "21.6.2",
+			"contributors": []
+		},
+		"1.0.6": {
+			"name": "typed-array-length",
+			"description": "Robustly get the length of a Typed Array",
+			"version": "1.0.6",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/inspect-js/typed-array-length#readme",
+			"repository": {
+				"url": "git+https://github.com/inspect-js/typed-array-length.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/inspect-js/typed-array-length/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"gopd": "^1.0.1",
+				"for-each": "^0.3.3",
+				"call-bind": "^1.0.7",
+				"has-proto": "^1.0.3",
+				"is-typed-array": "^1.1.13",
+				"possible-typed-array-names": "^1.0.0"
+			},
+			"devDependencies": {
+				"aud": "^2.0.4",
+				"nyc": "^10.3.2",
+				"tape": "^5.7.5",
+				"eslint": "=8.8.0",
+				"evalmd": "^0.0.19",
+				"npmignore": "^0.3.1",
+				"in-publish": "^2.0.1",
+				"typescript": "next",
+				"@types/gopd": "^1.0.3",
+				"@types/tape": "^5.6.4",
+				"is-callable": "^1.2.7",
+				"auto-changelog": "^2.4.0",
+				"object-inspect": "^1.13.1",
+				"@types/for-each": "^0.3.3",
+				"@ljharb/tsconfig": "^0.2.0",
+				"@types/call-bind": "^1.0.5",
+				"@types/is-callable": "^1.1.2",
+				"make-arrow-function": "^1.2.0",
+				"safe-publish-latest": "^2.0.0",
+				"@arethetypeswrong/cli": "^0.15.2",
+				"@ljharb/eslint-config": "^21.1.0",
+				"@types/object-inspect": "^1.8.4",
+				"make-generator-function": "^2.0.0",
+				"@types/make-arrow-function": "^1.2.2",
+				"@types/make-generator-function": "^2.0.3"
+			},
+			"keywords": [
+				"typed",
+				"array",
+				"length",
+				"robust",
+				"es",
+				"Int8Array",
+				"Uint8Array",
+				"Uint8ClampedArray",
+				"Int16Array",
+				"Uint16Array",
+				"Int32Array",
+				"Uint32Array",
+				"Float32Array",
+				"Float64Array"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint --ext=js,mjs .",
+				"test": "npm run tests-only && npm run test:harmony",
+				"prelint": "evalmd README.md",
+				"prepack": "npmignore --auto --commentLines=autogenerated",
+				"pretest": "npm run lint",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"postlint": "tsc -p . && attw -P",
+				"posttest": "aud --production",
+				"prepublish": "not-in-publish || npm run prepublishOnly",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\"",
+				"test:harmony": "nyc node --harmony --es-staging test",
+				"prepublishOnly": "safe-publish-latest"
+			},
+			"publishConfig": {
+				"ignore": [
+					".github/workflows"
+				]
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "typed-array-length@1.0.6",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/typed-array-length/-/typed-array-length-1.0.6.tgz",
+				"shasum": "57155207c76e64a3457482dfdc1c9d1d3c4c73a3",
+				"integrity": "sha512-/OxDN6OtAk5KBpGb28T+HZc2M+ADtvRxXrKKbUwtsLgdoxgX13hyy7ek6bFRl5+aBs2yZzB0c4CnQfAtVypW/g==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIBiLc42tDQppSGlXSc6lymnh8bW8dUURsZcIb5cjiXXiAiBEF0evJe+gatnqqNZ7Pxby6tXZ4lS57uDlNuyfFC+zjA=="
+					}
+				]
+			},
+			"_npmVersion": "10.5.0",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "f68b4ff4445e696bbb4504f9662955dd988316ee",
+			"types": "./index.d.ts",
+			"exports": {
+				".": "./index.js",
+				"./package.json": "./package.json"
+			},
+			"testling": {
+				"files": "test/index.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/typed-array-length_1.0.6_1711055578346_0.7082282380254705",
+				"host": "s3://npm-registry-packages"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"hideCredit": true,
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false
+			},
+			"sideEffects": false,
+			"_nodeVersion": "21.7.0",
+			"contributors": []
+		},
+		"1.0.7": {
+			"name": "typed-array-length",
+			"description": "Robustly get the length of a Typed Array",
+			"version": "1.0.7",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/inspect-js/typed-array-length#readme",
+			"repository": {
+				"url": "git+https://github.com/inspect-js/typed-array-length.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/inspect-js/typed-array-length/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"gopd": "^1.0.1",
+				"for-each": "^0.3.3",
+				"call-bind": "^1.0.7",
+				"is-typed-array": "^1.1.13",
+				"reflect.getprototypeof": "^1.0.6",
+				"possible-typed-array-names": "^1.0.0"
+			},
+			"devDependencies": {
+				"nyc": "^10.3.2",
+				"tape": "^5.9.0",
+				"eslint": "=8.8.0",
+				"evalmd": "^0.0.19",
+				"npmignore": "^0.3.1",
+				"in-publish": "^2.0.1",
+				"typescript": "next",
+				"@types/gopd": "^1.0.3",
+				"@types/tape": "^5.6.4",
+				"is-callable": "^1.2.7",
+				"auto-changelog": "^2.5.0",
+				"object-inspect": "^1.13.3",
+				"@types/for-each": "^0.3.3",
+				"@ljharb/tsconfig": "^0.2.0",
+				"@types/call-bind": "^1.0.5",
+				"@types/is-callable": "^1.1.2",
+				"make-arrow-function": "^1.2.0",
+				"safe-publish-latest": "^2.0.0",
+				"@arethetypeswrong/cli": "^0.17.0",
+				"@ljharb/eslint-config": "^21.1.1",
+				"@types/object-inspect": "^1.13.0",
+				"make-generator-function": "^2.0.0",
+				"@types/make-arrow-function": "^1.2.2",
+				"@types/make-generator-function": "^2.0.3"
+			},
+			"keywords": [
+				"typed",
+				"array",
+				"length",
+				"robust",
+				"es",
+				"Int8Array",
+				"Uint8Array",
+				"Uint8ClampedArray",
+				"Int16Array",
+				"Uint16Array",
+				"Int32Array",
+				"Uint32Array",
+				"Float32Array",
+				"Float64Array"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint --ext=js,mjs .",
+				"test": "npm run tests-only && npm run test:harmony",
+				"prelint": "evalmd README.md",
+				"prepack": "npmignore --auto --commentLines=autogenerated",
+				"pretest": "npm run lint",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"postlint": "tsc -p . && attw -P",
+				"posttest": "npx npm@'>=10.2' audit --production",
+				"prepublish": "not-in-publish || npm run prepublishOnly",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\"",
+				"test:harmony": "nyc node --harmony --es-staging test",
+				"prepublishOnly": "safe-publish-latest"
+			},
+			"publishConfig": {
+				"ignore": [
+					".github/workflows",
+					"types"
+				]
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "typed-array-length@1.0.7",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/typed-array-length/-/typed-array-length-1.0.7.tgz",
+				"shasum": "ee4deff984b64be1e118b0de8c9c877d5ce73d3d",
+				"integrity": "sha512-3KS2b+kL7fsuk/eJZ7EQdnEmQoaho/r6KUef7hxvltNA5DR8NAUM+8wJMbJyZ4G9/7i3v5zPBIMN5aybAh2/Jg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDyNyyFhVycSxxE3x+Hik251zvHnh59FTXdGWoB2TnCNQIgQDTRkTyO7NYYmCfFHDMruGtqNP4onXVsWxCqwv+9Oc0="
+					}
+				]
+			},
+			"_npmVersion": "10.9.0",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "23e081f61580c39987373980673ad91486097ae3",
+			"types": "./index.d.ts",
+			"exports": {
+				".": "./index.js",
+				"./package.json": "./package.json"
+			},
+			"testling": {
+				"files": "test/index.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/typed-array-length_1.0.7_1732328819477_0.2475168921239317",
+				"host": "s3://npm-registry-packages"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"hideCredit": true,
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false
+			},
+			"sideEffects": false,
+			"_nodeVersion": "23.2.0",
+			"contributors": []
+		},
+		"1.0.8": {
+			"name": "typed-array-length",
+			"description": "Robustly get the length of a Typed Array",
+			"version": "1.0.8",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/inspect-js/typed-array-length#readme",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/inspect-js/typed-array-length.git"
+			},
+			"bugs": {
+				"url": "https://github.com/inspect-js/typed-array-length/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"call-bind": "^1.0.9",
+				"for-each": "^0.3.5",
+				"gopd": "^1.2.0",
+				"is-typed-array": "^1.1.15",
+				"possible-typed-array-names": "^1.1.0",
+				"reflect.getprototypeof": "^1.0.10"
+			},
+			"devDependencies": {
+				"@arethetypeswrong/cli": "^0.18.2",
+				"@ljharb/eslint-config": "^22.2.3",
+				"@ljharb/tsconfig": "^0.3.2",
+				"@types/call-bind": "^1.0.5",
+				"@types/for-each": "^0.3.3",
+				"@types/gopd": "^1.0.3",
+				"@types/is-callable": "^1.1.2",
+				"@types/make-arrow-function": "^1.2.2",
+				"@types/make-generator-function": "^2.0.3",
+				"@types/object-inspect": "^1.13.0",
+				"@types/tape": "^5.8.1",
+				"auto-changelog": "^2.5.1",
+				"eslint": "^10.4.0",
+				"evalmd": "^0.0.19",
+				"in-publish": "^2.0.1",
+				"is-callable": "^1.2.7",
+				"jiti": "^0.0.0",
+				"make-arrow-function": "^1.2.0",
+				"make-generator-function": "^2.1.0",
+				"npmignore": "^0.3.5",
+				"nyc": "^10.3.2",
+				"object-inspect": "^1.13.4",
+				"safe-publish-latest": "^2.0.0",
+				"tape": "^5.9.0",
+				"typescript": "next"
+			},
+			"keywords": [
+				"typed",
+				"array",
+				"length",
+				"robust",
+				"es",
+				"Int8Array",
+				"Uint8Array",
+				"Uint8ClampedArray",
+				"Int16Array",
+				"Uint16Array",
+				"Int32Array",
+				"Uint32Array",
+				"Float32Array",
+				"Float64Array"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"prepack": "npmignore --auto --commentLines=autogenerated",
+				"prepublishOnly": "safe-publish-latest",
+				"prepublish": "not-in-publish || npm run prepublishOnly",
+				"pretest": "npm run lint",
+				"prelint": "evalmd README.md",
+				"lint": "eslint .",
+				"postlint": "tsc -p . && attw -P",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"test:harmony": "nyc node --harmony --es-staging test",
+				"test": "npm run tests-only && npm run test:harmony",
+				"posttest": "npx npm@'>=10.2' audit --production",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\""
+			},
+			"publishConfig": {
+				"ignore": [
+					".github/workflows",
+					"types"
+				]
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "typed-array-length@1.0.8",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/typed-array-length/-/typed-array-length-1.0.8.tgz",
+				"shasum": "0b70e982c9e9dafe2def6d6458ff4b3f2d2b6d70",
+				"integrity": "sha512-phPGCwqr2+Qo0fwniCE8e4pKnGu/yFb5nD5Y8bf0EEeiI5GklnACYA9GFy/DrAeRrKHXvHn+1SUsOWgJp6RO+g==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEUCIFZTrH/2ymYp6ifCdQgGSvcAMJWNLs0qFpXWSmG4ncXzAiEAilHZVRwOe88GCUicswq56KSGRvi+tW7E17t2cG781JQ="
+					}
+				]
+			},
+			"_npmVersion": "11.13.0",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "a010b13975273ff20a96947fe51ebf59d4c48cc7",
+			"types": "./index.d.ts",
+			"exports": {
+				".": "./index.js",
+				"./package.json": "./package.json"
+			},
+			"testling": {
+				"files": "test/index.js"
+			},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages-npm-production",
+				"tmp": "tmp/typed-array-length_1.0.8_1779984643579_0.7811178887292867"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false,
+				"hideCredit": true
+			},
+			"sideEffects": false,
+			"_nodeVersion": "26.2.0",
+			"contributors": []
+		},
+		"1.0.0": {
+			"name": "typed-array-length",
+			"description": "Robustly get the length of a Typed Array",
+			"version": "1.0.0",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/inspect-js/typed-array-length#readme",
+			"repository": {
+				"url": "git+https://github.com/inspect-js/typed-array-length.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/inspect-js/typed-array-length/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"es-abstract": "^1.17.2",
+				"is-typed-array": "^1.1.1"
+			},
+			"devDependencies": {
+				"tape": "^5.0.0-next.4",
+				"eslint": "^6.8.0",
+				"foreach": "^2.0.5",
+				"auto-changelog": "^1.16.2",
+				"make-arrow-function": "^1.1.0",
+				"@ljharb/eslint-config": "^15.1.0",
+				"make-generator-function": "^1.1.0"
+			},
+			"keywords": [
+				"typed",
+				"array",
+				"length",
+				"robust",
+				"es",
+				"Int8Array",
+				"Uint8Array",
+				"Uint8ClampedArray",
+				"Int16Array",
+				"Uint16Array",
+				"Int32Array",
+				"Uint32Array",
+				"Float32Array",
+				"Float64Array"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint .",
+				"test": "npm run tests-only",
+				"pretest": "npm run lint",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"posttest": "npx aud",
+				"tests-only": "node test",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\""
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "typed-array-length@1.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/typed-array-length/-/typed-array-length-1.0.0.tgz",
+				"shasum": "51683ec9e9cc77d88cf70cd2bfdab9efb9a436d2",
+				"integrity": "sha512-5yd7aLg6A5CuO/WwRvUYHJKFVNHtfTH3DBMgMNBB5MSKOj1yLQE8COoFYKMlfidv0wE7UiQ/4gfSKV4KDJDxBQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDZWAyI5fhSYZjZBtmbXPEvWD8NL3PBhG2qh2HCRBVetAIhAJWz9eiVbwM1FEOqMLqqW4yqxYml0scoLyCN7EK+mGJ7"
+					}
+				]
+			},
+			"_npmVersion": "6.13.4",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "0bf31dfe447b8da451a0c9273652348bd7c0da6b",
+			"exports": {
+				".": [
+					{
+						".": "./index.js"
+					},
+					"./index.js"
+				]
+			},
+			"testling": {
+				"files": "test/index.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/typed-array-length_1.0.0_1579420173648_0.945642525060723",
+				"host": "s3://npm-registry-packages"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false
+			},
+			"_nodeVersion": "13.6.0",
+			"contributors": []
+		},
+		"1.0.1": {
+			"name": "typed-array-length",
+			"description": "Robustly get the length of a Typed Array",
+			"version": "1.0.1",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/inspect-js/typed-array-length#readme",
+			"repository": {
+				"url": "git+https://github.com/inspect-js/typed-array-length.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/inspect-js/typed-array-length/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"es-abstract": "^1.17.2",
+				"is-typed-array": "^1.1.1"
+			},
+			"devDependencies": {
+				"tape": "^5.0.0-next.4",
+				"eslint": "^6.8.0",
+				"evalmd": "^0.0.19",
+				"foreach": "^2.0.5",
+				"auto-changelog": "^1.16.2",
+				"make-arrow-function": "^1.1.0",
+				"@ljharb/eslint-config": "^15.1.0",
+				"make-generator-function": "^1.1.0"
+			},
+			"keywords": [
+				"typed",
+				"array",
+				"length",
+				"robust",
+				"es",
+				"Int8Array",
+				"Uint8Array",
+				"Uint8ClampedArray",
+				"Int16Array",
+				"Uint16Array",
+				"Int32Array",
+				"Uint32Array",
+				"Float32Array",
+				"Float64Array"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint .",
+				"test": "npm run tests-only",
+				"prelint": "evalmd README.md",
+				"pretest": "npm run lint",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"posttest": "npx aud",
+				"tests-only": "node test",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\""
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "typed-array-length@1.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/typed-array-length/-/typed-array-length-1.0.1.tgz",
+				"shasum": "638b88b27eedb7b4636e08d43f353e319004fece",
+				"integrity": "sha512-uz24JIc5A8KJhNC6coCofu1lobGaZWTh57bA/iJf2R83ShhrdIrAlMyimDY/yBVwdnHVxaCwzoRG/Sq+LVhQYQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIEhqYQQyFxlUeMZH8NFhoLl4viTbqwJKeaIMLNwP7b4dAiBhxogmlu/HDQ/0K+cerOn9swmue/2BtGdx8kjJEenmHA=="
+					}
+				]
+			},
+			"_npmVersion": "6.13.4",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "943bdbe97e523fa91c9ffe2c891620848c10c3c8",
+			"exports": {
+				".": [
+					{
+						"default": "./index.js"
+					},
+					"./index.js"
+				]
+			},
+			"testling": {
+				"files": "test/index.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/typed-array-length_1.0.1_1579453933944_0.5175736512232636",
+				"host": "s3://npm-registry-packages"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false
+			},
+			"_nodeVersion": "13.6.0",
+			"contributors": []
+		},
+		"1.0.2": {
+			"name": "typed-array-length",
+			"description": "Robustly get the length of a Typed Array",
+			"version": "1.0.2",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/inspect-js/typed-array-length#readme",
+			"repository": {
+				"url": "git+https://github.com/inspect-js/typed-array-length.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/inspect-js/typed-array-length/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"es-abstract": "^1.17.5",
+				"is-typed-array": "^1.1.3"
+			},
+			"devDependencies": {
+				"aud": "^1.1.1",
+				"tape": "^5.0.0-next.5",
+				"eslint": "^6.8.0",
+				"evalmd": "^0.0.19",
+				"foreach": "^2.0.5",
+				"auto-changelog": "^2.0.0",
+				"object-inspect": "^1.7.0",
+				"make-arrow-function": "^1.2.0",
+				"@ljharb/eslint-config": "^16.0.0",
+				"make-generator-function": "^2.0.0"
+			},
+			"keywords": [
+				"typed",
+				"array",
+				"length",
+				"robust",
+				"es",
+				"Int8Array",
+				"Uint8Array",
+				"Uint8ClampedArray",
+				"Int16Array",
+				"Uint16Array",
+				"Int32Array",
+				"Uint32Array",
+				"Float32Array",
+				"Float64Array"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint .",
+				"test": "npm run tests-only",
+				"prelint": "evalmd README.md",
+				"pretest": "npm run lint",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"posttest": "npx aud --production",
+				"tests-only": "node test",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\""
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "typed-array-length@1.0.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/typed-array-length/-/typed-array-length-1.0.2.tgz",
+				"shasum": "8d193ab32fb132405f97f494017214e5e291e781",
+				"integrity": "sha512-bcSzmyRo9Y8Rf0RZAndY+qM0vBBSJFAYEiBeVP8maBhzDo/QOCiJlEDCgBLx6eP7EDwmSHR59Rk5p09cHiDu9g==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDZM6Ws/bzO/dcJO2gHUB8NEdZysVQ8SzIttqyeA+iWdQIgOF7uIFnzlG3tS+zylTBjEcmOOHivmI+G8F5EeSEnYR8="
+					}
+				]
+			},
+			"_npmVersion": "6.14.4",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "4909028a4b6deda5e2ad9f2cbf76b4506e8252bc",
+			"exports": {
+				".": [
+					{
+						"default": "./index.js"
+					},
+					"./index.js"
+				],
+				"./package.json": "./package.json"
+			},
+			"testling": {
+				"files": "test/index.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/typed-array-length_1.0.2_1587623595474_0.5658233463078466",
+				"host": "s3://npm-registry-packages"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false
+			},
+			"_nodeVersion": "14.0.0",
+			"contributors": []
+		}
+	},
+	"time": {
+		"1.0.3": "2020-12-06T05:22:47.972Z",
+		"1.0.4": "2022-05-24T02:57:15.108Z",
+		"1.0.5": "2024-02-20T17:34:33.085Z",
+		"1.0.6": "2024-03-21T21:12:58.516Z",
+		"1.0.7": "2024-11-23T02:26:59.688Z",
+		"1.0.8": "2026-05-28T16:10:43.722Z",
+		"created": "2020-01-19T07:49:33.648Z",
+		"modified": "2026-05-28T16:10:43.859Z",
+		"1.0.0": "2020-01-19T07:49:33.798Z",
+		"1.0.1": "2020-01-19T17:12:14.035Z",
+		"1.0.2": "2020-04-23T06:33:15.660Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "1.0.8"
+	},
+	"_uplinks": {
+		"artifactory-sabadell": {
+			"etag": "d76f4b877052c31c27bbafb86b600f1fed6c97fe",
+			"fetched": 1782459825239
+		}
+	},
+	"_distfiles": {
+		"typed-array-length-1.0.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/typed-array-length/-/typed-array-length-1.0.3.tgz",
+			"sha": "906691f06643eccd699c7e76565368fded1feed0",
+			"registry": "artifactory-sabadell"
+		},
+		"typed-array-length-1.0.4.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/typed-array-length/-/typed-array-length-1.0.4.tgz",
+			"sha": "89d83785e5c4098bec72e08b319651f0eac9c1bb",
+			"registry": "artifactory-sabadell"
+		},
+		"typed-array-length-1.0.5.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/typed-array-length/-/typed-array-length-1.0.5.tgz",
+			"sha": "57d44da160296d8663fd63180a1802ebf25905d5",
+			"registry": "artifactory-sabadell"
+		},
+		"typed-array-length-1.0.6.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/typed-array-length/-/typed-array-length-1.0.6.tgz",
+			"sha": "57155207c76e64a3457482dfdc1c9d1d3c4c73a3",
+			"registry": "artifactory-sabadell"
+		},
+		"typed-array-length-1.0.7.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/typed-array-length/-/typed-array-length-1.0.7.tgz",
+			"sha": "ee4deff984b64be1e118b0de8c9c877d5ce73d3d",
+			"registry": "artifactory-sabadell"
+		},
+		"typed-array-length-1.0.8.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/typed-array-length/-/typed-array-length-1.0.8.tgz",
+			"sha": "0b70e982c9e9dafe2def6d6458ff4b3f2d2b6d70",
+			"registry": "artifactory-sabadell"
+		},
+		"typed-array-length-1.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/typed-array-length/-/typed-array-length-1.0.0.tgz",
+			"sha": "51683ec9e9cc77d88cf70cd2bfdab9efb9a436d2",
+			"registry": "artifactory-sabadell"
+		},
+		"typed-array-length-1.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/typed-array-length/-/typed-array-length-1.0.1.tgz",
+			"sha": "638b88b27eedb7b4636e08d43f353e319004fece",
+			"registry": "artifactory-sabadell"
+		},
+		"typed-array-length-1.0.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/typed-array-length/-/typed-array-length-1.0.2.tgz",
+			"sha": "8d193ab32fb132405f97f494017214e5e291e781",
+			"registry": "artifactory-sabadell"
+		}
+	},
+	"_attachments": {},
+	"_rev": "1-2d7a95a66014a3c1",
+	"_id": "typed-array-length",
+	"readme": "# typed-array-length <sup>[![Version Badge][2]][1]</sup>\n\n[![dependency status][5]][6]\n[![dev dependency status][7]][8]\n[![License][license-image]][license-url]\n[![Downloads][downloads-image]][downloads-url]\n\n[![npm badge][11]][1]\n\nRobustly get the length of a Typed Array, or `false` if it is not a Typed Array. Works cross-realm, in every engine, even if the `length` property is overridden.\n\n## Example\n\n```js\nvar typedArrayLength = require('typed-array-length');\nvar assert = require('assert');\n\nassert.equal(false, typedArrayLength(undefined));\nassert.equal(false, typedArrayLength(null));\nassert.equal(false, typedArrayLength(false));\nassert.equal(false, typedArrayLength(true));\nassert.equal(false, typedArrayLength([]));\nassert.equal(false, typedArrayLength({}));\nassert.equal(false, typedArrayLength(/a/g));\nassert.equal(false, typedArrayLength(new RegExp('a', 'g')));\nassert.equal(false, typedArrayLength(new Date()));\nassert.equal(false, typedArrayLength(42));\nassert.equal(false, typedArrayLength(NaN));\nassert.equal(false, typedArrayLength(Infinity));\nassert.equal(false, typedArrayLength(new Number(42)));\nassert.equal(false, typedArrayLength('foo'));\nassert.equal(false, typedArrayLength(Object('foo')));\nassert.equal(false, typedArrayLength(function () {}));\nassert.equal(false, typedArrayLength(function* () {}));\nassert.equal(false, typedArrayLength(x => x * x));\nassert.equal(false, typedArrayLength([]));\n\nassert.equal(1, typedArrayLength(new Int8Array(1)));\nassert.equal(2, typedArrayLength(new Uint8Array(2)));\nassert.equal(3, typedArrayLength(new Uint8ClampedArray(3)));\nassert.equal(4, typedArrayLength(new Int16Array(4)));\nassert.equal(5, typedArrayLength(new Uint16Array(5)));\nassert.equal(6, typedArrayLength(new Int32Array(6)));\nassert.equal(7, typedArrayLength(new Uint32Array(7)));\nassert.equal(8, typedArrayLength(new Float32Array(8)));\nassert.equal(9, typedArrayLength(new Float64Array(9)));\nassert.equal(10, typedArrayLength(new BigInt64Array(10)));\nassert.equal(11, typedArrayLength(new BigUint64Array(11)));\n```\n\n## Tests\nSimply clone the repo, `npm install`, and run `npm test`\n\n[1]: https://npmjs.org/package/typed-array-length\n[2]: https://versionbadg.es/inspect-js/typed-array-length.svg\n[5]: https://david-dm.org/inspect-js/typed-array-length.svg\n[6]: https://david-dm.org/inspect-js/typed-array-length\n[7]: https://david-dm.org/inspect-js/typed-array-length/dev-status.svg\n[8]: https://david-dm.org/inspect-js/typed-array-length#info=devDependencies\n[11]: https://nodei.co/npm/typed-array-length.png?downloads=true&stars=true\n[license-image]: http://img.shields.io/npm/l/typed-array-length.svg\n[license-url]: LICENSE\n[downloads-image]: http://img.shields.io/npm/dm/typed-array-length.svg\n[downloads-url]: http://npm-stat.com/charts.html?package=typed-array-length"
+}

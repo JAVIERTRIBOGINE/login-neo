@@ -1,0 +1,3115 @@
+{
+	"name": "array-includes",
+	"versions": {
+		"2.0.0": {
+			"name": "array-includes",
+			"description": "A spec-compliant `Array.prototype.includes` shim/polyfill/replacement that works as far down as ES3.",
+			"version": "2.0.0",
+			"author": {
+				"name": "Jordan Harband"
+			},
+			"homepage": "https://github.com/ljharb/array-includes#readme",
+			"repository": {
+				"url": "git://github.com/ljharb/array-includes.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/ljharb/array-includes/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"es-abstract": "^1.2.1",
+				"define-properties": "^1.0.1"
+			},
+			"devDependencies": {
+				"nsp": "^1.0.1",
+				"jscs": "^1.13.1",
+				"tape": "^4.0.0",
+				"covert": "^1.1.0",
+				"eslint": "^0.21.2",
+				"semver": "^4.3.4",
+				"foreach": "^2.0.5",
+				"indexof": "^0.0.1",
+				"replace": "^0.3.0",
+				"function-bind": "^1.0.2",
+				"editorconfig-tools": "^0.1.1"
+			},
+			"keywords": [
+				"Array.prototype.includes",
+				"includes",
+				"array",
+				"ES7",
+				"shim",
+				"polyfill",
+				"contains",
+				"Array.prototype.contains"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"jscs": "jscs test/*.js *.js",
+				"lint": "npm run jscs && npm run eslint",
+				"test": "npm run lint && npm run test:shimmed && npm run test:module && npm run security",
+				"eslint": "eslint test/*.js *.js",
+				"eccheck": "editorconfig-tools check *.js **/*.js > /dev/null",
+				"coverage": "covert test/*.js",
+				"security": "nsp package",
+				"test:module": "node test/index.js",
+				"test:shimmed": "node test/shimmed.js",
+				"coverage:quiet": "covert test/*.js --quiet"
+			},
+			"lastModified": 0,
+			"_id": "array-includes@2.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array-includes/-/array-includes-2.0.0.tgz",
+				"shasum": "4a95c73514066dc81213d7da45a4d712ccdc2ba6",
+				"integrity": "sha512-aLrtKO2aF8Op3cqO9Lpgrns/v/6mC/mnLus1lHZIqUN77FoYsKtbXABF0Mm0cOrygBzmV/OIKFUMxatEaFih8A==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQC7FMiEDIDeO3wA4i6b3kCW/1sFg5svZPeJuA570GM0MQIgY8t27qrXdoxSlo71Dta1LeBGCWJGA2P6mCCFWLjNXmg="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "2.9.0",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"gitHead": "8d994f6e8c42b488382436241af0168e936082ae",
+			"testling": {
+				"files": [
+					"test/index.js",
+					"test/shimmed.js"
+				],
+				"browsers": [
+					"iexplore/6.0..latest",
+					"firefox/3.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/10.0..latest",
+					"opera/next",
+					"safari/4.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_shasum": "4a95c73514066dc81213d7da45a4d712ccdc2ba6",
+			"_nodeVersion": "2.0.2",
+			"contributors": []
+		},
+		"3.1.8": {
+			"name": "array-includes",
+			"description": "An ES7/ES2016 spec-compliant `Array.prototype.includes` shim/polyfill/replacement that works as far down as ES3.",
+			"version": "3.1.8",
+			"author": {
+				"url": "http://ljharb.codes",
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/es-shims/array-includes#readme",
+			"repository": {
+				"url": "git://github.com/es-shims/array-includes.git",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"url": "http://ljharb.codes",
+					"name": "Jordan Harband",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/es-shims/array-includes/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"call-bind": "^1.0.7",
+				"is-string": "^1.0.7",
+				"es-abstract": "^1.23.2",
+				"get-intrinsic": "^1.2.4",
+				"es-object-atoms": "^1.0.0",
+				"define-properties": "^1.2.1"
+			},
+			"devDependencies": {
+				"aud": "^2.0.4",
+				"nyc": "^10.3.2",
+				"tape": "^5.7.5",
+				"eslint": "=8.8.0",
+				"evalmd": "^0.0.19",
+				"indexof": "^0.0.1",
+				"npmignore": "^0.3.1",
+				"in-publish": "^2.0.1",
+				"@es-shims/api": "^2.4.2",
+				"auto-changelog": "^2.4.0",
+				"has-strict-mode": "^1.0.1",
+				"safe-publish-latest": "^2.0.0",
+				"functions-have-names": "^1.2.3",
+				"@ljharb/eslint-config": "^21.1.0"
+			},
+			"keywords": [
+				"Array.prototype.includes",
+				"includes",
+				"array",
+				"ES7",
+				"shim",
+				"polyfill",
+				"contains",
+				"Array.prototype.contains",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint --ext=js,mjs .",
+				"test": "npm run --silent tests-only",
+				"prelint": "evalmd README.md",
+				"prepack": "npmignore --auto --commentLines=autogenerated",
+				"pretest": "npm run --silent lint",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"postlint": "es-shim-api --bound",
+				"posttest": "aud --production",
+				"prepublish": "not-in-publish || npm run prepublishOnly",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\"",
+				"prepublishOnly": "safe-publish-latest"
+			},
+			"publishConfig": {
+				"ignore": [
+					".github/workflows"
+				]
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "array-includes@3.1.8",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array-includes/-/array-includes-3.1.8.tgz",
+				"shasum": "5e370cbe172fdd5dd6530c1d4aadda25281ba97d",
+				"integrity": "sha512-itaWrbYbqpGXkGhZPGUulwnhVf5Hpy1xiCFsGqyIGglbBxmG5vSjxQen3/WGOjPpNEv1RtBLKxbmVXm8HpJStQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIC0YIELA/DRjEKO0G+i/fk5kUdHpuFwT5FlPXSPCAEZOAiEAqgGAOY4L3eAihSGbFDQbRjQMK2ZAJiPF6H3Z2d2SFRU="
+					}
+				]
+			},
+			"_npmVersion": "10.5.0",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "946a33a8f58c572356c01676fc2d0a6f1ef0ec3a",
+			"testling": {
+				"files": [
+					"test/index.js",
+					"test/implementation.js",
+					"test/shimmed.js"
+				],
+				"browsers": [
+					"iexplore/6.0..latest",
+					"firefox/3.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/10.0..latest",
+					"opera/next",
+					"safari/4.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/array-includes_3.1.8_1710967652258_0.1919690063893995",
+				"host": "s3://npm-registry-packages"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"hideCredit": true,
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false,
+				"startingVersion": "3.1.6"
+			},
+			"_nodeVersion": "21.7.0"
+		},
+		"3.1.9": {
+			"name": "array-includes",
+			"description": "An ES7/ES2016 spec-compliant `Array.prototype.includes` shim/polyfill/replacement that works as far down as ES3.",
+			"version": "3.1.9",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com",
+				"url": "http://ljharb.codes"
+			},
+			"homepage": "https://github.com/es-shims/array-includes#readme",
+			"repository": {
+				"type": "git",
+				"url": "git://github.com/es-shims/array-includes.git"
+			},
+			"contributors": [
+				{
+					"name": "Jordan Harband",
+					"email": "ljharb@gmail.com",
+					"url": "http://ljharb.codes"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/es-shims/array-includes/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"call-bind": "^1.0.8",
+				"call-bound": "^1.0.4",
+				"define-properties": "^1.2.1",
+				"es-abstract": "^1.24.0",
+				"es-object-atoms": "^1.1.1",
+				"get-intrinsic": "^1.3.0",
+				"is-string": "^1.1.1",
+				"math-intrinsics": "^1.1.0"
+			},
+			"devDependencies": {
+				"@es-shims/api": "^2.5.1",
+				"@ljharb/eslint-config": "^21.1.1",
+				"auto-changelog": "^2.5.0",
+				"encoding": "^0.1.13",
+				"eslint": "=8.8.0",
+				"evalmd": "^0.0.19",
+				"functions-have-names": "^1.2.3",
+				"has-strict-mode": "^1.1.0",
+				"in-publish": "^2.0.1",
+				"npmignore": "^0.3.1",
+				"nyc": "^10.3.2",
+				"safe-publish-latest": "^2.0.0",
+				"tape": "^5.9.0"
+			},
+			"keywords": [
+				"Array.prototype.includes",
+				"includes",
+				"array",
+				"ES7",
+				"shim",
+				"polyfill",
+				"contains",
+				"Array.prototype.contains",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"prepack": "npmignore --auto --commentLines=autogenerated",
+				"prepublish": "not-in-publish || npm run prepublishOnly",
+				"prepublishOnly": "safe-publish-latest",
+				"pretest": "npm run --silent lint",
+				"test": "npm run --silent tests-only",
+				"posttest": "npx npm@\">= 10.2\" audit --production",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"prelint": "evalmd README.md",
+				"lint": "eslint --ext=js,mjs .",
+				"postlint": "es-shim-api --bound",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\""
+			},
+			"publishConfig": {
+				"ignore": [
+					".github/workflows"
+				]
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "array-includes@3.1.9",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array-includes/-/array-includes-3.1.9.tgz",
+				"shasum": "1f0ccaa08e90cdbc3eb433210f903ad0f17c3f3a",
+				"integrity": "sha512-FmeCCAenzH0KH381SPT5FZmiA/TmpndpcaShhfgEN9eCVjnFBqq3l1xrI42y8+PPLI6hypzou4GXw00WHmPBLQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEYCIQDryaPBI38cvNXT6arNRQQw4Vp47a8LpgWvA8nTrGgRqAIhAPM2qy++rVdLuxS/x2TejU5CXMdiHnBP9nXPIlqV5Coy"
+					}
+				]
+			},
+			"_npmVersion": "11.3.0",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "afad86453393b4bde08e2ce692909078d5bccefa",
+			"testling": {
+				"files": [
+					"test/index.js",
+					"test/implementation.js",
+					"test/shimmed.js"
+				],
+				"browsers": [
+					"iexplore/6.0..latest",
+					"firefox/3.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/10.0..latest",
+					"opera/next",
+					"safari/4.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages-npm-production",
+				"tmp": "tmp/array-includes_3.1.9_1748840480784_0.5529761132026192"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false,
+				"hideCredit": true,
+				"startingVersion": "3.1.6"
+			},
+			"_nodeVersion": "24.1.0"
+		},
+		"1.0.3": {
+			"name": "array-includes",
+			"description": "A spec-compliant `Array.prototype.includes` shim/polyfill/replacement that works as far down as ES3.",
+			"version": "1.0.3",
+			"author": {
+				"name": "Jordan Harband"
+			},
+			"homepage": "https://github.com/ljharb/array-includes",
+			"repository": {
+				"url": "git://github.com/ljharb/array-includes.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/ljharb/array-includes/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"define-properties": "~1.0.1"
+			},
+			"devDependencies": {
+				"is": "~2.2.0",
+				"nsp": "~0.5.2",
+				"jscs": "~1.9.0",
+				"tape": "~3.0.3",
+				"covert": "1.0.0",
+				"eslint": "~0.11.0",
+				"foreach": "~2.0.5",
+				"indexof": "~0.0.1",
+				"function-bind": "~1.0.2",
+				"editorconfig-tools": "~0.0.1"
+			},
+			"keywords": [
+				"Array.prototype.includes",
+				"includes",
+				"array",
+				"ES7",
+				"shim",
+				"polyfill",
+				"contains",
+				"Array.prototype.contains"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"jscs": "jscs test/*.js *.js",
+				"lint": "npm run jscs && npm run eslint",
+				"test": "npm run lint && npm run test:shimmed && npm run test:module && npm run security",
+				"eslint": "eslint test/*.js *.js",
+				"eccheck": "editorconfig-tools check *.js **/*.js > /dev/null",
+				"coverage": "covert test/*.js",
+				"security": "nsp package",
+				"test:module": "node test/index.js",
+				"test:shimmed": "node test/shimmed.js",
+				"coverage:quiet": "covert test/*.js --quiet"
+			},
+			"lastModified": 0,
+			"_id": "array-includes@1.0.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array-includes/-/array-includes-1.0.3.tgz",
+				"shasum": "5f0ba6392212b9f0e9eabb0e94bda456affc3df5",
+				"integrity": "sha512-sNsPYvsXo25eiu4aPKL033BNps8wlfLiXqXFAjlH7w5N07Z7B+hH3ff6Os7FyfS/FugfmPu0zSXZ1xurPnChyw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQD9xpsQqmSh0GMx+tL5p69rsxFYDCmwOJPgW7ZyDkFYbAIhAIZgunQa5kMuhCeCA8VXnS//tMD2oBAuKgg/0ROWfz1Y"
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "1.4.28",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"gitHead": "3580f25bb70ea89dbcc458102f08cbbdeaf6862b",
+			"testling": {
+				"files": [
+					"test/index.js",
+					"test/shimmed.js"
+				],
+				"browsers": [
+					"iexplore/6.0..latest",
+					"firefox/3.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/10.0..latest",
+					"opera/next",
+					"safari/4.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_shasum": "5f0ba6392212b9f0e9eabb0e94bda456affc3df5",
+			"contributors": []
+		},
+		"1.0.4": {
+			"name": "array-includes",
+			"description": "A spec-compliant `Array.prototype.includes` shim/polyfill/replacement that works as far down as ES3.",
+			"version": "1.0.4",
+			"author": {
+				"name": "Jordan Harband"
+			},
+			"homepage": "https://github.com/ljharb/array-includes",
+			"repository": {
+				"url": "git://github.com/ljharb/array-includes.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/ljharb/array-includes/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"es-abstract": "~1.0.0",
+				"define-properties": "~1.0.1"
+			},
+			"devDependencies": {
+				"is": "~2.2.0",
+				"nsp": "~0.5.2",
+				"jscs": "~1.9.0",
+				"tape": "~3.0.3",
+				"covert": "1.0.0",
+				"eslint": "~0.11.0",
+				"foreach": "~2.0.5",
+				"indexof": "~0.0.1",
+				"function-bind": "~1.0.2",
+				"editorconfig-tools": "~0.0.1"
+			},
+			"keywords": [
+				"Array.prototype.includes",
+				"includes",
+				"array",
+				"ES7",
+				"shim",
+				"polyfill",
+				"contains",
+				"Array.prototype.contains"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"jscs": "jscs test/*.js *.js",
+				"lint": "npm run jscs && npm run eslint",
+				"test": "npm run lint && npm run test:shimmed && npm run test:module && npm run security",
+				"eslint": "eslint test/*.js *.js",
+				"eccheck": "editorconfig-tools check *.js **/*.js > /dev/null",
+				"coverage": "covert test/*.js",
+				"security": "nsp package",
+				"test:module": "node test/index.js",
+				"test:shimmed": "node test/shimmed.js",
+				"coverage:quiet": "covert test/*.js --quiet"
+			},
+			"lastModified": 0,
+			"_id": "array-includes@1.0.4",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array-includes/-/array-includes-1.0.4.tgz",
+				"shasum": "572e504cdfd78bc75ccc4dc7b4887d2423cdf229",
+				"integrity": "sha512-NyFywAR/DzdKdOu1V+xHkNPjQXnJC25r6fJvJ87N/pbe/eXd7mcx7AnWdKyHy47Z7mfvGZdlPVlIQM9mdANHyA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDqVDh6gzTLe8ISuwTdsCAyz6gBLtyCnJBSzjJnnjBy+gIhANqaXOIiRak+pqtEzn197FV+xeOdfSrMnPBwg36k2q6p"
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "1.4.28",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"gitHead": "e13e0b52b7c96b0abc9e40f0b2fdc989e798d767",
+			"testling": {
+				"files": [
+					"test/index.js",
+					"test/shimmed.js"
+				],
+				"browsers": [
+					"iexplore/6.0..latest",
+					"firefox/3.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/10.0..latest",
+					"opera/next",
+					"safari/4.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_shasum": "572e504cdfd78bc75ccc4dc7b4887d2423cdf229",
+			"contributors": []
+		},
+		"1.0.5": {
+			"name": "array-includes",
+			"description": "A spec-compliant `Array.prototype.includes` shim/polyfill/replacement that works as far down as ES3.",
+			"version": "1.0.5",
+			"author": {
+				"name": "Jordan Harband"
+			},
+			"homepage": "https://github.com/ljharb/array-includes",
+			"repository": {
+				"url": "git://github.com/ljharb/array-includes.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/ljharb/array-includes/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"es-abstract": "~1.0.1",
+				"define-properties": "~1.0.1"
+			},
+			"devDependencies": {
+				"is": "~2.2.0",
+				"nsp": "~1.0.0",
+				"jscs": "~1.10.0",
+				"tape": "~3.4.0",
+				"covert": "1.0.0",
+				"eslint": "~0.13.0",
+				"semver": "~4.2.0",
+				"foreach": "~2.0.5",
+				"indexof": "~0.0.1",
+				"function-bind": "~1.0.2",
+				"editorconfig-tools": "~0.0.1"
+			},
+			"keywords": [
+				"Array.prototype.includes",
+				"includes",
+				"array",
+				"ES7",
+				"shim",
+				"polyfill",
+				"contains",
+				"Array.prototype.contains"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"jscs": "jscs test/*.js *.js",
+				"lint": "npm run jscs && npm run eslint",
+				"test": "npm run lint && npm run test:shimmed && npm run test:module && npm run security",
+				"eslint": "eslint test/*.js *.js",
+				"eccheck": "editorconfig-tools check *.js **/*.js > /dev/null",
+				"coverage": "covert test/*.js",
+				"security": "nsp package",
+				"test:module": "node test/index.js",
+				"test:shimmed": "node test/shimmed.js",
+				"coverage:quiet": "covert test/*.js --quiet"
+			},
+			"lastModified": 0,
+			"_id": "array-includes@1.0.5",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array-includes/-/array-includes-1.0.5.tgz",
+				"shasum": "9a793ee9fdced5b74bb15d62a50b5e2ec424ee9d",
+				"integrity": "sha512-2zml5QjWWjiL+KI7UaG4f2rjDdwkvBkX3hT4i2RTZlSdXiNK8lewfIOmSBjrSWOhLou1Gso0brvR4RCMvjjaLQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIFPgjFPB3ymO2ZVOPJgLr2DCrjrinR5Ev3vVm4yLNSNHAiB42IRfQs/7L0bIwxih2iOWQLZBxNj4QUlh31hITmia/g=="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "2.3.0",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"gitHead": "40bdc017ac4ef1d89265612807f9055ac2f18abd",
+			"testling": {
+				"files": [
+					"test/index.js",
+					"test/shimmed.js"
+				],
+				"browsers": [
+					"iexplore/6.0..latest",
+					"firefox/3.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/10.0..latest",
+					"opera/next",
+					"safari/4.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_shasum": "9a793ee9fdced5b74bb15d62a50b5e2ec424ee9d",
+			"_nodeVersion": "1.0.4",
+			"contributors": []
+		},
+		"1.0.6": {
+			"name": "array-includes",
+			"description": "A spec-compliant `Array.prototype.includes` shim/polyfill/replacement that works as far down as ES3.",
+			"version": "1.0.6",
+			"author": {
+				"name": "Jordan Harband"
+			},
+			"homepage": "https://github.com/ljharb/array-includes",
+			"repository": {
+				"url": "git://github.com/ljharb/array-includes.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/ljharb/array-includes/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"es-abstract": "^1.1.0",
+				"define-properties": "^1.0.1"
+			},
+			"devDependencies": {
+				"nsp": "^1.0.0",
+				"jscs": "^1.11.3",
+				"tape": "^3.5.0",
+				"covert": "^1.0.1",
+				"eslint": "^0.14.1",
+				"semver": "^4.3.0",
+				"foreach": "^2.0.5",
+				"indexof": "^0.0.1",
+				"function-bind": "^1.0.2",
+				"editorconfig-tools": "^0.0.1"
+			},
+			"keywords": [
+				"Array.prototype.includes",
+				"includes",
+				"array",
+				"ES7",
+				"shim",
+				"polyfill",
+				"contains",
+				"Array.prototype.contains"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"jscs": "jscs test/*.js *.js",
+				"lint": "npm run jscs && npm run eslint",
+				"test": "npm run lint && npm run test:shimmed && npm run test:module && npm run security",
+				"eslint": "eslint test/*.js *.js",
+				"eccheck": "editorconfig-tools check *.js **/*.js > /dev/null",
+				"coverage": "covert test/*.js",
+				"security": "nsp package",
+				"test:module": "node test/index.js",
+				"test:shimmed": "node test/shimmed.js",
+				"coverage:quiet": "covert test/*.js --quiet"
+			},
+			"lastModified": 0,
+			"_id": "array-includes@1.0.6",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array-includes/-/array-includes-1.0.6.tgz",
+				"shasum": "e4ca089744a4cfd8b6f455ed54fe95998eab5866",
+				"integrity": "sha512-tRlsWo0MT31IwuBbCEPXRYhczEbGzVjh18+294bs0jhy4rbXNhQ6rDd1S6wveHCq87U6gyZpgx94+hdovtYvxA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIGw/nM42pM8qmY0/4eQfMXZ1p1OCKkEdn4OJ7ok/AyrjAiEAsOlXRzkpC3uiSaDPRHYi0N4ZhHuU2SACNYlQp1+F1e8="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "2.6.0",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"gitHead": "eb7df94b61c6e1b7023ef558b6f61bc644cc401e",
+			"testling": {
+				"files": [
+					"test/index.js",
+					"test/shimmed.js"
+				],
+				"browsers": [
+					"iexplore/6.0..latest",
+					"firefox/3.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/10.0..latest",
+					"opera/next",
+					"safari/4.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_shasum": "e4ca089744a4cfd8b6f455ed54fe95998eab5866",
+			"_nodeVersion": "1.2.0",
+			"contributors": []
+		},
+		"3.0.0": {
+			"name": "array-includes",
+			"description": "A spec-compliant `Array.prototype.includes` shim/polyfill/replacement that works as far down as ES3.",
+			"version": "3.0.0",
+			"author": {
+				"name": "Jordan Harband"
+			},
+			"homepage": "https://github.com/ljharb/array-includes#readme",
+			"repository": {
+				"url": "git://github.com/ljharb/array-includes.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/ljharb/array-includes/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"es-abstract": "^1.3.1",
+				"define-properties": "^1.1.1"
+			},
+			"devDependencies": {
+				"nsp": "^1.0.3",
+				"jscs": "^2.1.0",
+				"tape": "^4.2.0",
+				"covert": "^1.1.0",
+				"eslint": "^1.1.0",
+				"semver": "^5.0.1",
+				"foreach": "^2.0.5",
+				"indexof": "^0.0.1",
+				"replace": "^0.3.0",
+				"@es-shims/api": "^1.0.0",
+				"function-bind": "^1.0.2",
+				"editorconfig-tools": "^0.1.1",
+				"@ljharb/eslint-config": "^1.0.4"
+			},
+			"keywords": [
+				"Array.prototype.includes",
+				"includes",
+				"array",
+				"ES7",
+				"shim",
+				"polyfill",
+				"contains",
+				"Array.prototype.contains"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"jscs": "jscs test/*.js *.js",
+				"lint": "npm run jscs && npm run eslint",
+				"test": "npm run lint && es-shim-api --bound && npm run test:shimmed && npm run test:module && npm run security",
+				"eslint": "eslint test/*.js *.js",
+				"eccheck": "editorconfig-tools check *.js **/*.js > /dev/null",
+				"coverage": "covert test/*.js",
+				"security": "nsp package",
+				"test:module": "node test/index.js",
+				"test:shimmed": "node test/shimmed.js",
+				"coverage:quiet": "covert test/*.js --quiet"
+			},
+			"lastModified": 0,
+			"_id": "array-includes@3.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array-includes/-/array-includes-3.0.0.tgz",
+				"shasum": "95d0e95e1f0899a08b5e344da6116f66cb2fa1ae",
+				"integrity": "sha512-OIU6JnmjBRhR5+YKbAdOsw5HjBGv4OjX/frRWzbuLSAMi2sDad16gM29L7Q35fEVBeMtk6+Odbhbw0IgwHPxrQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDIhymMElRtMp2OCHC35egChCrVj1u04CdD75nuDVha5gIhAMcF91syr4YAeaCW12delFfGSOhAjdrXomggk+wt8P0Z"
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "2.13.3",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"gitHead": "97b8909c94639aec806547dfef3a883e49e24949",
+			"testling": {
+				"files": [
+					"test/index.js",
+					"test/shimmed.js"
+				],
+				"browsers": [
+					"iexplore/6.0..latest",
+					"firefox/3.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/10.0..latest",
+					"opera/next",
+					"safari/4.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_shasum": "95d0e95e1f0899a08b5e344da6116f66cb2fa1ae",
+			"_nodeVersion": "3.0.0",
+			"contributors": []
+		},
+		"3.1.4": {
+			"name": "array-includes",
+			"description": "An ES7/ES2016 spec-compliant `Array.prototype.includes` shim/polyfill/replacement that works as far down as ES3.",
+			"version": "3.1.4",
+			"author": {
+				"url": "http://ljharb.codes",
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/es-shims/array-includes#readme",
+			"repository": {
+				"url": "git://github.com/es-shims/array-includes.git",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"url": "http://ljharb.codes",
+					"name": "Jordan Harband",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/es-shims/array-includes/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"call-bind": "^1.0.2",
+				"is-string": "^1.0.7",
+				"es-abstract": "^1.19.1",
+				"get-intrinsic": "^1.1.1",
+				"define-properties": "^1.1.3"
+			},
+			"devDependencies": {
+				"aud": "^1.1.5",
+				"nyc": "^10.3.2",
+				"tape": "^5.3.1",
+				"eslint": "^7.32.0",
+				"evalmd": "^0.0.19",
+				"foreach": "^2.0.5",
+				"indexof": "^0.0.1",
+				"@es-shims/api": "^2.2.2",
+				"function-bind": "^1.1.1",
+				"has-strict-mode": "^1.0.1",
+				"safe-publish-latest": "^1.1.4",
+				"functions-have-names": "^1.2.2",
+				"@ljharb/eslint-config": "^18.0.0"
+			},
+			"keywords": [
+				"Array.prototype.includes",
+				"includes",
+				"array",
+				"ES7",
+				"shim",
+				"polyfill",
+				"contains",
+				"Array.prototype.contains",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint .",
+				"test": "npm run --silent tests-only",
+				"pretest": "npm run --silent lint && evalmd README.md",
+				"postlint": "es-shim-api --bound",
+				"posttest": "npx aud --production",
+				"prepublish": "not-in-publish || npm run prepublishOnly",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"prepublishOnly": "safe-publish-latest"
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "array-includes@3.1.4",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array-includes/-/array-includes-3.1.4.tgz",
+				"shasum": "f5b493162c760f3539631f005ba2bb46acb45ba9",
+				"integrity": "sha512-ZTNSQkmWumEbiHO2GF4GmWxYVTiQyJy2XOTa15sdQSrvKn7l+180egQMqlrMOUMCyLMD7pmyQe4mMDUT6Behrw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIDBJGzVUNWjdq+J82NFKbyEolrk8Ty4odR/LiKG9goVdAiEA+na5RKdAeEjWV7iSPWnOlNdm0NV77uLGZWbcI6umZvs="
+					}
+				]
+			},
+			"_npmVersion": "7.24.0",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "e3a7b0a9565b6e9328ca3ecdd30042d982f7c9f4",
+			"testling": {
+				"files": [
+					"test/index.js",
+					"test/implementation.js",
+					"test/shimmed.js"
+				],
+				"browsers": [
+					"iexplore/6.0..latest",
+					"firefox/3.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/10.0..latest",
+					"opera/next",
+					"safari/4.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/array-includes_3.1.4_1633411503581_0.3306455658004297",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "16.10.0"
+		},
+		"3.1.5": {
+			"name": "array-includes",
+			"description": "An ES7/ES2016 spec-compliant `Array.prototype.includes` shim/polyfill/replacement that works as far down as ES3.",
+			"version": "3.1.5",
+			"author": {
+				"url": "http://ljharb.codes",
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/es-shims/array-includes#readme",
+			"repository": {
+				"url": "git://github.com/es-shims/array-includes.git",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"url": "http://ljharb.codes",
+					"name": "Jordan Harband",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/es-shims/array-includes/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"call-bind": "^1.0.2",
+				"is-string": "^1.0.7",
+				"es-abstract": "^1.19.5",
+				"get-intrinsic": "^1.1.1",
+				"define-properties": "^1.1.4"
+			},
+			"devDependencies": {
+				"aud": "^2.0.0",
+				"nyc": "^10.3.2",
+				"tape": "^5.5.3",
+				"eslint": "=8.8.0",
+				"evalmd": "^0.0.19",
+				"foreach": "^2.0.5",
+				"indexof": "^0.0.1",
+				"@es-shims/api": "^2.2.3",
+				"function-bind": "^1.1.1",
+				"has-strict-mode": "^1.0.1",
+				"safe-publish-latest": "^2.0.0",
+				"functions-have-names": "^1.2.3",
+				"@ljharb/eslint-config": "^21.0.0"
+			},
+			"keywords": [
+				"Array.prototype.includes",
+				"includes",
+				"array",
+				"ES7",
+				"shim",
+				"polyfill",
+				"contains",
+				"Array.prototype.contains",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint --ext=js,mjs .",
+				"test": "npm run --silent tests-only",
+				"prelint": "evalmd README.md",
+				"pretest": "npm run --silent lint",
+				"postlint": "es-shim-api --bound",
+				"posttest": "aud --production",
+				"prepublish": "not-in-publish || npm run prepublishOnly",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"prepublishOnly": "safe-publish-latest"
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "array-includes@3.1.5",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array-includes/-/array-includes-3.1.5.tgz",
+				"shasum": "2c320010db8d31031fd2a5f6b3bbd4b1aad31bdb",
+				"integrity": "sha512-iSDYZMMyTPkiFasVqfuAQnWAYcvO/SeBSCGKePoEthjp4LEMTe4uLc7b025o4jAZpHhihh8xPo99TNWUWWkGDQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDPabeGoQ9xE4yuVjbNgRyAxTaWdfCWH8jXWor+fYrnzwIhALwEM6/28vQTmRUTaJBufpHzty4rKljIgBMGnLptBVnZ"
+					}
+				]
+			},
+			"_npmVersion": "8.3.1",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "6c7dd5974567ed4b69b2ee10f37ac449007d0bbd",
+			"testling": {
+				"files": [
+					"test/index.js",
+					"test/implementation.js",
+					"test/shimmed.js"
+				],
+				"browsers": [
+					"iexplore/6.0..latest",
+					"firefox/3.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/10.0..latest",
+					"opera/next",
+					"safari/4.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/array-includes_3.1.5_1651612632682_0.5364479378545259",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "18.0.0"
+		},
+		"3.1.6": {
+			"name": "array-includes",
+			"description": "An ES7/ES2016 spec-compliant `Array.prototype.includes` shim/polyfill/replacement that works as far down as ES3.",
+			"version": "3.1.6",
+			"author": {
+				"url": "http://ljharb.codes",
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/es-shims/array-includes#readme",
+			"repository": {
+				"url": "git://github.com/es-shims/array-includes.git",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"url": "http://ljharb.codes",
+					"name": "Jordan Harband",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/es-shims/array-includes/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"call-bind": "^1.0.2",
+				"is-string": "^1.0.7",
+				"es-abstract": "^1.20.4",
+				"get-intrinsic": "^1.1.3",
+				"define-properties": "^1.1.4"
+			},
+			"devDependencies": {
+				"aud": "^2.0.1",
+				"nyc": "^10.3.2",
+				"tape": "^5.6.1",
+				"eslint": "=8.8.0",
+				"evalmd": "^0.0.19",
+				"indexof": "^0.0.1",
+				"npmignore": "^0.3.0",
+				"in-publish": "^2.0.1",
+				"@es-shims/api": "^2.2.3",
+				"function-bind": "^1.1.1",
+				"auto-changelog": "^2.4.0",
+				"has-strict-mode": "^1.0.1",
+				"safe-publish-latest": "^2.0.0",
+				"functions-have-names": "^1.2.3",
+				"@ljharb/eslint-config": "^21.0.0"
+			},
+			"keywords": [
+				"Array.prototype.includes",
+				"includes",
+				"array",
+				"ES7",
+				"shim",
+				"polyfill",
+				"contains",
+				"Array.prototype.contains",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint --ext=js,mjs .",
+				"test": "npm run --silent tests-only",
+				"prelint": "evalmd README.md",
+				"prepack": "npmignore --auto --commentLines=autogenerated",
+				"pretest": "npm run --silent lint",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"postlint": "es-shim-api --bound",
+				"posttest": "aud --production",
+				"prepublish": "not-in-publish || npm run prepublishOnly",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\"",
+				"prepublishOnly": "safe-publish-latest"
+			},
+			"publishConfig": {
+				"ignore": [
+					".github/workflows"
+				]
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "array-includes@3.1.6",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array-includes/-/array-includes-3.1.6.tgz",
+				"shasum": "9e9e720e194f198266ba9e18c29e6a9b0e4b225f",
+				"integrity": "sha512-sgTbLvL6cNnw24FnbaDyjmvddQ2ML8arZsgaJhoABMoplz/4QRhtrYS+alr1BUM1Bwp6dhx8vVCBSLG+StwOFw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDVvRBZ2oWOUjvBiPrwbviaPqqt9WXl8o8hG0w0B8LUnQIgBWepq85Jvp0005rW6IFpA1M25r7JDemRBZPbwteeAFE="
+					}
+				]
+			},
+			"_npmVersion": "8.19.2",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "4b1922ef553490e4b28008f5d0b0b629122fb04b",
+			"testling": {
+				"files": [
+					"test/index.js",
+					"test/implementation.js",
+					"test/shimmed.js"
+				],
+				"browsers": [
+					"iexplore/6.0..latest",
+					"firefox/3.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/10.0..latest",
+					"opera/next",
+					"safari/4.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/array-includes_3.1.6_1667873056075_0.7913909118583771",
+				"host": "s3://npm-registry-packages"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"hideCredit": true,
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false,
+				"startingVersion": "3.1.6"
+			},
+			"_nodeVersion": "19.0.1"
+		},
+		"3.1.7": {
+			"name": "array-includes",
+			"description": "An ES7/ES2016 spec-compliant `Array.prototype.includes` shim/polyfill/replacement that works as far down as ES3.",
+			"version": "3.1.7",
+			"author": {
+				"url": "http://ljharb.codes",
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/es-shims/array-includes#readme",
+			"repository": {
+				"url": "git://github.com/es-shims/array-includes.git",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"url": "http://ljharb.codes",
+					"name": "Jordan Harband",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/es-shims/array-includes/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"call-bind": "^1.0.2",
+				"is-string": "^1.0.7",
+				"es-abstract": "^1.22.1",
+				"get-intrinsic": "^1.2.1",
+				"define-properties": "^1.2.0"
+			},
+			"devDependencies": {
+				"aud": "^2.0.3",
+				"nyc": "^10.3.2",
+				"tape": "^5.6.6",
+				"eslint": "=8.8.0",
+				"evalmd": "^0.0.19",
+				"indexof": "^0.0.1",
+				"npmignore": "^0.3.0",
+				"in-publish": "^2.0.1",
+				"@es-shims/api": "^2.4.2",
+				"function-bind": "^1.1.1",
+				"auto-changelog": "^2.4.0",
+				"has-strict-mode": "^1.0.1",
+				"safe-publish-latest": "^2.0.0",
+				"functions-have-names": "^1.2.3",
+				"@ljharb/eslint-config": "^21.1.0"
+			},
+			"keywords": [
+				"Array.prototype.includes",
+				"includes",
+				"array",
+				"ES7",
+				"shim",
+				"polyfill",
+				"contains",
+				"Array.prototype.contains",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint --ext=js,mjs .",
+				"test": "npm run --silent tests-only",
+				"prelint": "evalmd README.md",
+				"prepack": "npmignore --auto --commentLines=autogenerated",
+				"pretest": "npm run --silent lint",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"postlint": "es-shim-api --bound",
+				"posttest": "aud --production",
+				"prepublish": "not-in-publish || npm run prepublishOnly",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\"",
+				"prepublishOnly": "safe-publish-latest"
+			},
+			"publishConfig": {
+				"ignore": [
+					".github/workflows"
+				]
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "array-includes@3.1.7",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array-includes/-/array-includes-3.1.7.tgz",
+				"shasum": "8cd2e01b26f7a3086cbc87271593fe921c62abda",
+				"integrity": "sha512-dlcsNBIiWhPkHdOEEKnehA+RNUWDc4UqFtnIXU4uuYDPtA4LDkr7qip2p0VvFAEXNDr0yWZ9PJyIRiGjRLQzwQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEMCH1j5+7WfwcPEqdQu+MxPa/whOpaSv6i3ynlJlJZzNNwCID35TMF4RHFB0KoCtNp4CH+vdGkrYqXrIDPVuTDcVDlP"
+					}
+				]
+			},
+			"_npmVersion": "9.8.0",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "11c6a1d9341671ec48c68306167f9ab1dd617a6f",
+			"testling": {
+				"files": [
+					"test/index.js",
+					"test/implementation.js",
+					"test/shimmed.js"
+				],
+				"browsers": [
+					"iexplore/6.0..latest",
+					"firefox/3.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/10.0..latest",
+					"opera/next",
+					"safari/4.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/array-includes_3.1.7_1693769694345_0.3214088485865785",
+				"host": "s3://npm-registry-packages"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"hideCredit": true,
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false,
+				"startingVersion": "3.1.6"
+			},
+			"_nodeVersion": "20.5.1"
+		},
+		"3.0.1": {
+			"name": "array-includes",
+			"description": "A spec-compliant `Array.prototype.includes` shim/polyfill/replacement that works as far down as ES3.",
+			"version": "3.0.1",
+			"author": {
+				"name": "Jordan Harband"
+			},
+			"homepage": "https://github.com/ljharb/array-includes#readme",
+			"repository": {
+				"url": "git://github.com/ljharb/array-includes.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/ljharb/array-includes/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"es-abstract": "^1.3.1",
+				"define-properties": "^1.1.1"
+			},
+			"devDependencies": {
+				"nsp": "^1.0.3",
+				"jscs": "^2.1.0",
+				"tape": "^4.2.0",
+				"covert": "^1.1.0",
+				"eslint": "^1.1.0",
+				"semver": "^5.0.1",
+				"foreach": "^2.0.5",
+				"indexof": "^0.0.1",
+				"replace": "^0.3.0",
+				"@es-shims/api": "^1.0.0",
+				"function-bind": "^1.0.2",
+				"editorconfig-tools": "^0.1.1",
+				"@ljharb/eslint-config": "^1.0.4"
+			},
+			"keywords": [
+				"Array.prototype.includes",
+				"includes",
+				"array",
+				"ES7",
+				"shim",
+				"polyfill",
+				"contains",
+				"Array.prototype.contains",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"jscs": "jscs test/*.js *.js",
+				"lint": "npm run jscs && npm run eslint",
+				"test": "npm run lint && es-shim-api --bound && npm run test:shimmed && npm run test:module && npm run security",
+				"eslint": "eslint test/*.js *.js",
+				"eccheck": "editorconfig-tools check *.js **/*.js > /dev/null",
+				"coverage": "covert test/*.js",
+				"security": "nsp package",
+				"test:module": "node test/index.js",
+				"test:shimmed": "node test/shimmed.js",
+				"coverage:quiet": "covert test/*.js --quiet"
+			},
+			"lastModified": 0,
+			"_id": "array-includes@3.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array-includes/-/array-includes-3.0.1.tgz",
+				"shasum": "0a9e740b4d7b8bd7e2dfed15398dca899b3a52f8",
+				"integrity": "sha512-GkdSeHECGKmnf4isDPH/lNnJURvKd61MClFPW24ifivePnjDNE+VEdHALvmUBYXNsEPeeiG0Tatk767MucGJpQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIBCrHNgm2bresnEOtoc/iNkTsQBMcQlE2kWlq0PGw84PAiAwB6vEnNQRuIixIxME8GyEW8hgVt54fY8R0OJKaWcjbw=="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "2.13.3",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"gitHead": "4230dd3f32ce8816f9de5faca39358d9c4b31e94",
+			"testling": {
+				"files": [
+					"test/index.js",
+					"test/shimmed.js"
+				],
+				"browsers": [
+					"iexplore/6.0..latest",
+					"firefox/3.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/10.0..latest",
+					"opera/next",
+					"safari/4.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_shasum": "0a9e740b4d7b8bd7e2dfed15398dca899b3a52f8",
+			"_nodeVersion": "3.0.0",
+			"contributors": []
+		},
+		"3.1.0": {
+			"name": "array-includes",
+			"description": "An ES7/ES2016 spec-compliant `Array.prototype.includes` shim/polyfill/replacement that works as far down as ES3.",
+			"version": "3.1.0",
+			"author": {
+				"url": "http://ljharb.codes",
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/es-shims/array-includes#readme",
+			"repository": {
+				"url": "git://github.com/es-shims/array-includes.git",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"url": "http://ljharb.codes",
+					"name": "Jordan Harband",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/es-shims/array-includes/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"es-abstract": "^1.17.0-next.0",
+				"define-properties": "^1.1.3"
+			},
+			"devDependencies": {
+				"tape": "^4.11.0",
+				"covert": "^1.1.1",
+				"eslint": "^6.7.2",
+				"evalmd": "0.0.19",
+				"semver": "^6.3.0",
+				"foreach": "^2.0.5",
+				"indexof": "^0.0.1",
+				"replace": "^1.1.1",
+				"@es-shims/api": "^2.1.2",
+				"function-bind": "^1.1.1",
+				"functions-have-names": "^1.2.0",
+				"@ljharb/eslint-config": "^15.0.2"
+			},
+			"keywords": [
+				"Array.prototype.includes",
+				"includes",
+				"array",
+				"ES7",
+				"shim",
+				"polyfill",
+				"contains",
+				"Array.prototype.contains",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "es-shims-owner",
+					"email": "ljharb+esshims@gmail.com"
+				},
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint .",
+				"test": "npm run --silent tests-only",
+				"pretest": "npm run --silent lint && evalmd README.md",
+				"coverage": "covert test/*.js",
+				"posttest": "npx aud",
+				"tests-only": "es-shim-api --bound && npm run --silent test:shimmed && npm run --silent test:module",
+				"test:module": "node test/index.js",
+				"test:shimmed": "node test/shimmed.js",
+				"coverage:quiet": "covert test/*.js --quiet"
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "array-includes@3.1.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array-includes/-/array-includes-3.1.0.tgz",
+				"shasum": "48a929ef4c6bb1fa6dc4a92c9b023a261b0ca404",
+				"integrity": "sha512-ONOEQoKrvXPKk7Su92Co0YMqYO32FfqJTzkKU9u2UpIXyYZIzLSvpdg4AwvSw4mSUW0czu6inK+zby6Oj6gDjQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCID+9eWfCfrADOzGRQQ2LzRutpNEt7rtGESG14VoUxzZ1AiAFeGLuiDMoslhxIH/QSLTy7q5cFJTeDzwAJh4xQGiQow=="
+					}
+				]
+			},
+			"_npmVersion": "6.13.1",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "2f4135386e4f99461fa80366fafa3a11a02d5524",
+			"testling": {
+				"files": [
+					"test/index.js",
+					"test/shimmed.js"
+				],
+				"browsers": [
+					"iexplore/6.0..latest",
+					"firefox/3.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/10.0..latest",
+					"opera/next",
+					"safari/4.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/array-includes_3.1.0_1576125303706_0.3866903955062253",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "13.3.0"
+		},
+		"1.0.0": {
+			"name": "array-includes",
+			"description": "A spec-compliant `Array.prototype.includes` shim/polyfill/replacement that works as far down as ES3.",
+			"version": "1.0.0",
+			"author": {
+				"name": "Jordan Harband"
+			},
+			"homepage": "https://github.com/ljharb/array-includes",
+			"repository": {
+				"url": "git://github.com/ljharb/array-includes.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/ljharb/array-includes/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"define-properties": "~1.0.0"
+			},
+			"devDependencies": {
+				"is": "~2.2.0",
+				"nsp": "~0.5.2",
+				"jscs": "~1.9.0",
+				"tape": "~3.0.3",
+				"covert": "1.0.0",
+				"eslint": "~0.11.0",
+				"foreach": "~2.0.5",
+				"indexof": "~0.0.1",
+				"editorconfig-tools": "~0.0.1"
+			},
+			"keywords": [
+				"Array.prototype.includes",
+				"includes",
+				"array",
+				"ES7",
+				"shim",
+				"polyfill",
+				"contains",
+				"Array.prototype.contains"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"jscs": "jscs test/*.js *.js",
+				"lint": "npm run jscs && npm run eslint",
+				"test": "npm run lint && npm run test:shimmed && npm run test:module && npm run security",
+				"eslint": "eslint test/*.js *.js",
+				"eccheck": "editorconfig-tools check *.js **/*.js > /dev/null",
+				"coverage": "covert test/*.js",
+				"security": "nsp package",
+				"test:module": "node test/index.js",
+				"test:shimmed": "node test/shimmed.js",
+				"coverage:quiet": "covert test/*.js --quiet"
+			},
+			"lastModified": 0,
+			"deprecated": "v1 mistakenly auto-modified the global environment.",
+			"_id": "array-includes@1.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array-includes/-/array-includes-1.0.0.tgz",
+				"shasum": "87024d26fa2d9210a3dd45624d25467eead91bfb",
+				"integrity": "sha512-Fq18UQrYKlPX74JPDADe7BUCAhRf6ywlD5gQGWL4U1fTd+lVQqZUoFufNPbf6VXBhcKO8UihTEmjNK/0V8VavQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDcqf1PmB0TZ+FhRxxqSDqu354HmGu7XR/Q0Lz0dkRbzwIhANJTx7KJOV/B6DIn16y6h9bMiPnBIueeW3UZSA0ZvpFS"
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "1.4.28",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"gitHead": "df88285af5a622119a0f0d844f6d36d5107f1ad1",
+			"testling": {
+				"files": "test/index.js",
+				"browsers": [
+					"iexplore/6.0..latest",
+					"firefox/3.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/10.0..latest",
+					"opera/next",
+					"safari/4.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_shasum": "87024d26fa2d9210a3dd45624d25467eead91bfb",
+			"contributors": []
+		},
+		"3.0.2": {
+			"name": "array-includes",
+			"description": "An ES7/ES2016 spec-compliant `Array.prototype.includes` shim/polyfill/replacement that works as far down as ES3.",
+			"version": "3.0.2",
+			"author": {
+				"url": "http://ljharb.codes",
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/ljharb/array-includes#readme",
+			"repository": {
+				"url": "git://github.com/ljharb/array-includes.git",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"url": "http://ljharb.codes",
+					"name": "Jordan Harband",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/ljharb/array-includes/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"es-abstract": "^1.5.0",
+				"define-properties": "^1.1.2"
+			},
+			"devDependencies": {
+				"nsp": "^2.2.0",
+				"jscs": "^2.9.0",
+				"tape": "^4.4.0",
+				"covert": "^1.1.0",
+				"eslint": "^1.10.3",
+				"evalmd": "^0.0.16",
+				"semver": "^5.1.0",
+				"foreach": "^2.0.5",
+				"indexof": "^0.0.1",
+				"replace": "^0.3.0",
+				"@es-shims/api": "^1.0.0",
+				"function-bind": "^1.0.2",
+				"editorconfig-tools": "^0.1.1",
+				"@ljharb/eslint-config": "^1.6.1"
+			},
+			"keywords": [
+				"Array.prototype.includes",
+				"includes",
+				"array",
+				"ES7",
+				"shim",
+				"polyfill",
+				"contains",
+				"Array.prototype.contains",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"jscs": "jscs test/*.js *.js",
+				"lint": "npm run jscs && npm run eslint",
+				"test": "npm run lint && evalmd README.md && npm run tests-only && npm run security",
+				"eslint": "eslint test/*.js *.js",
+				"eccheck": "editorconfig-tools check *.js **/*.js > /dev/null",
+				"coverage": "covert test/*.js",
+				"security": "nsp check",
+				"tests-only": "es-shim-api --bound && npm run test:shimmed && npm run test:module",
+				"test:module": "node test/index.js",
+				"test:shimmed": "node test/shimmed.js",
+				"coverage:quiet": "covert test/*.js --quiet"
+			},
+			"lastModified": 0,
+			"_id": "array-includes@3.0.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array-includes/-/array-includes-3.0.2.tgz",
+				"shasum": "7c867b4d1235c2b5687c874f3344bff4e002beba",
+				"integrity": "sha512-xzKmFvWGtlW+JF8ouhg45Sl8uQw98Wz8lRj5Qlm+oEu/j9ihqvgnEJz8eMkti7WXhq8qlwxrEhB9l2Xol7OyyA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDtvIM63S2M5cp5ZqG3H8iKr5Cz7wc0oE/cfiKlSXDI+wIhAPYvywLgItNClH4cysPGciSsv8/awIu1SbNfCRd2+0pu"
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "3.3.12",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"gitHead": "d33b9aa8e6621978597d8a4c3cc4a21a59ec099b",
+			"testling": {
+				"files": [
+					"test/index.js",
+					"test/shimmed.js"
+				],
+				"browsers": [
+					"iexplore/6.0..latest",
+					"firefox/3.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/10.0..latest",
+					"opera/next",
+					"safari/4.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/array-includes-3.0.2.tgz_1454752384031_0.04244031338021159",
+				"host": "packages-5-east.internal.npmjs.com"
+			},
+			"_shasum": "7c867b4d1235c2b5687c874f3344bff4e002beba",
+			"_nodeVersion": "5.5.0"
+		},
+		"3.1.1": {
+			"name": "array-includes",
+			"description": "An ES7/ES2016 spec-compliant `Array.prototype.includes` shim/polyfill/replacement that works as far down as ES3.",
+			"version": "3.1.1",
+			"author": {
+				"url": "http://ljharb.codes",
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/es-shims/array-includes#readme",
+			"repository": {
+				"url": "git://github.com/es-shims/array-includes.git",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"url": "http://ljharb.codes",
+					"name": "Jordan Harband",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/es-shims/array-includes/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"is-string": "^1.0.5",
+				"es-abstract": "^1.17.0",
+				"define-properties": "^1.1.3"
+			},
+			"devDependencies": {
+				"tape": "^4.12.0",
+				"covert": "^1.1.1",
+				"eslint": "^6.8.0",
+				"evalmd": "0.0.19",
+				"foreach": "^2.0.5",
+				"indexof": "^0.0.1",
+				"@es-shims/api": "^2.1.2",
+				"function-bind": "^1.1.1",
+				"functions-have-names": "^1.2.0",
+				"@ljharb/eslint-config": "^15.1.0"
+			},
+			"keywords": [
+				"Array.prototype.includes",
+				"includes",
+				"array",
+				"ES7",
+				"shim",
+				"polyfill",
+				"contains",
+				"Array.prototype.contains",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "es-shims-owner",
+					"email": "ljharb+esshims@gmail.com"
+				},
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint .",
+				"test": "npm run --silent tests-only",
+				"pretest": "npm run --silent lint && evalmd README.md",
+				"coverage": "covert test/*.js",
+				"posttest": "npx aud",
+				"tests-only": "es-shim-api --bound && npm run --silent test:shimmed && npm run --silent test:module",
+				"test:module": "node test/index.js",
+				"test:shimmed": "node test/shimmed.js",
+				"coverage:quiet": "covert test/*.js --quiet"
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "array-includes@3.1.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array-includes/-/array-includes-3.1.1.tgz",
+				"shasum": "cdd67e6852bdf9c1215460786732255ed2459348",
+				"integrity": "sha512-c2VXaCHl7zPsvpkFsw4nxvFie4fh1ur9bpcgsVkIjqn0H/Xwdg+7fv3n2r/isyS8EBj5b06M9kHyZuIr4El6WQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCJ9sqUwzuO9XtGyb9m+cF6IWMFhFTo27x08In2CLS7EAIgCv9gQcDXEDi6rYT4k1rqRALFctdo36p7umTzu8M00jI="
+					}
+				]
+			},
+			"_npmVersion": "6.13.4",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "b83a70df057b7bcf03f51fcf6741620539024952",
+			"testling": {
+				"files": [
+					"test/index.js",
+					"test/shimmed.js"
+				],
+				"browsers": [
+					"iexplore/6.0..latest",
+					"firefox/3.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/10.0..latest",
+					"opera/next",
+					"safari/4.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/array-includes_3.1.1_1576945936271_0.1619216171488329",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "13.5.0"
+		},
+		"1.0.1": {
+			"name": "array-includes",
+			"description": "A spec-compliant `Array.prototype.includes` shim/polyfill/replacement that works as far down as ES3.",
+			"version": "1.0.1",
+			"author": {
+				"name": "Jordan Harband"
+			},
+			"homepage": "https://github.com/ljharb/array-includes",
+			"repository": {
+				"url": "git://github.com/ljharb/array-includes.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/ljharb/array-includes/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"define-properties": "~1.0.0"
+			},
+			"devDependencies": {
+				"is": "~2.2.0",
+				"nsp": "~0.5.2",
+				"jscs": "~1.9.0",
+				"tape": "~3.0.3",
+				"covert": "1.0.0",
+				"eslint": "~0.11.0",
+				"foreach": "~2.0.5",
+				"indexof": "~0.0.1",
+				"editorconfig-tools": "~0.0.1"
+			},
+			"keywords": [
+				"Array.prototype.includes",
+				"includes",
+				"array",
+				"ES7",
+				"shim",
+				"polyfill",
+				"contains",
+				"Array.prototype.contains"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"jscs": "jscs test/*.js *.js",
+				"lint": "npm run jscs && npm run eslint",
+				"test": "npm run lint && npm run test:shimmed && npm run test:module && npm run security",
+				"eslint": "eslint test/*.js *.js",
+				"eccheck": "editorconfig-tools check *.js **/*.js > /dev/null",
+				"coverage": "covert test/*.js",
+				"security": "nsp package",
+				"test:module": "node test/index.js",
+				"test:shimmed": "node test/shimmed.js",
+				"coverage:quiet": "covert test/*.js --quiet"
+			},
+			"lastModified": 0,
+			"_id": "array-includes@1.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array-includes/-/array-includes-1.0.1.tgz",
+				"shasum": "8e3ebc861cbb14c7e0c145e1f92fbd27af9c6d8b",
+				"integrity": "sha512-Kr4UBIqfEccZ5214BvjaF5mic8RgmfSG/QLMP56qrdTi59oHO/FjqgTSQ6UG2slF0ceEucHlgCmGw4Al0ibnPQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIA9nzp3p+fS7z+GZPCO21AKOKRC/cL7t5VmYmgVixeFYAiEA9VqfRoPh8mkbJjaMeFA/BJNeR29vng0kgabWlqqUPls="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "1.4.28",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"gitHead": "f962d4e87d7789de2b1c21f684569d24cfd305ae",
+			"testling": {
+				"files": "test/index.js",
+				"browsers": [
+					"iexplore/6.0..latest",
+					"firefox/3.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/10.0..latest",
+					"opera/next",
+					"safari/4.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_shasum": "8e3ebc861cbb14c7e0c145e1f92fbd27af9c6d8b",
+			"contributors": []
+		},
+		"1.1.0": {
+			"name": "array-includes",
+			"description": "A spec-compliant `Array.prototype.includes` shim/polyfill/replacement that works as far down as ES3.",
+			"version": "1.1.0",
+			"author": {
+				"name": "Jordan Harband"
+			},
+			"homepage": "https://github.com/ljharb/array-includes",
+			"repository": {
+				"url": "git://github.com/ljharb/array-includes.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/ljharb/array-includes/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"es-abstract": "^1.2.0",
+				"define-properties": "^1.0.1"
+			},
+			"devDependencies": {
+				"nsp": "^1.0.1",
+				"jscs": "^1.11.3",
+				"tape": "^3.5.0",
+				"covert": "^1.0.1",
+				"eslint": "^0.17.1",
+				"semver": "^4.3.1",
+				"foreach": "^2.0.5",
+				"indexof": "^0.0.1",
+				"replace": "^0.3.0",
+				"function-bind": "^1.0.2",
+				"editorconfig-tools": "^0.1.1"
+			},
+			"keywords": [
+				"Array.prototype.includes",
+				"includes",
+				"array",
+				"ES7",
+				"shim",
+				"polyfill",
+				"contains",
+				"Array.prototype.contains"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"jscs": "jscs test/*.js *.js",
+				"lint": "npm run jscs && npm run eslint",
+				"test": "npm run lint && npm run test:shimmed && npm run test:module && npm run security",
+				"eslint": "eslint test/*.js *.js",
+				"eccheck": "editorconfig-tools check *.js **/*.js > /dev/null",
+				"coverage": "covert test/*.js",
+				"security": "nsp package",
+				"test:module": "node test/index.js",
+				"test:shimmed": "node test/shimmed.js",
+				"coverage:quiet": "covert test/*.js --quiet"
+			},
+			"lastModified": 0,
+			"_id": "array-includes@1.1.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array-includes/-/array-includes-1.1.0.tgz",
+				"shasum": "f3d597a7e3dc23d4a4a5703bc78cfe8092412a8c",
+				"integrity": "sha512-XEbo/MM1U35BWJjIA8VjlTfrS195Iemg2P5MRLaZkIkO7rS4H7ZaYz8/KBGWFZ37bRW8z7KCPdIYDHLx0Ljt4Q==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDlx3KyBUSNPJ2ENmKcIv6q8qqOdODU8aL0CdfvI29kcQIgQFOAMswCZKRI3aMtCsNs+6L58d6U0+AEZc40mZogN/I="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "2.7.2",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"gitHead": "de426f5ca7fb84621bc0f23921ec7c129fe8b7e3",
+			"testling": {
+				"files": [
+					"test/index.js",
+					"test/shimmed.js"
+				],
+				"browsers": [
+					"iexplore/6.0..latest",
+					"firefox/3.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/10.0..latest",
+					"opera/next",
+					"safari/4.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_shasum": "f3d597a7e3dc23d4a4a5703bc78cfe8092412a8c",
+			"_nodeVersion": "1.5.1",
+			"contributors": []
+		},
+		"3.0.3": {
+			"name": "array-includes",
+			"description": "An ES7/ES2016 spec-compliant `Array.prototype.includes` shim/polyfill/replacement that works as far down as ES3.",
+			"version": "3.0.3",
+			"author": {
+				"url": "http://ljharb.codes",
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/ljharb/array-includes#readme",
+			"repository": {
+				"url": "git://github.com/ljharb/array-includes.git",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"url": "http://ljharb.codes",
+					"name": "Jordan Harband",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/ljharb/array-includes/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"es-abstract": "^1.7.0",
+				"define-properties": "^1.1.2"
+			},
+			"devDependencies": {
+				"nsp": "^2.6.3",
+				"jscs": "^3.0.7",
+				"tape": "^4.6.3",
+				"covert": "^1.1.0",
+				"eslint": "^3.19.0",
+				"evalmd": "^0.0.17",
+				"semver": "^5.3.0",
+				"foreach": "^2.0.5",
+				"indexof": "^0.0.1",
+				"replace": "^0.3.0",
+				"@es-shims/api": "^1.2.0",
+				"function-bind": "^1.1.0",
+				"@ljharb/eslint-config": "^11.0.0"
+			},
+			"keywords": [
+				"Array.prototype.includes",
+				"includes",
+				"array",
+				"ES7",
+				"shim",
+				"polyfill",
+				"contains",
+				"Array.prototype.contains",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"jscs": "jscs test/*.js *.js",
+				"lint": "npm run --silent jscs && npm run --silent eslint",
+				"test": "npm run --silent tests-only",
+				"eslint": "eslint test/*.js *.js",
+				"pretest": "npm run --silent lint && evalmd README.md",
+				"coverage": "covert test/*.js",
+				"posttest": "npm run --silent security",
+				"security": "nsp check",
+				"tests-only": "es-shim-api --bound && npm run --silent test:shimmed && npm run --silent test:module",
+				"test:module": "node test/index.js",
+				"test:shimmed": "node test/shimmed.js",
+				"coverage:quiet": "covert test/*.js --quiet"
+			},
+			"lastModified": 0,
+			"_id": "array-includes@3.0.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array-includes/-/array-includes-3.0.3.tgz",
+				"shasum": "184b48f62d92d7452bb31b323165c7f8bd02266d",
+				"integrity": "sha512-mRVEsI0s5MycUKtZtn8i5co54WKxL5gH3gAcCjtUbECNwdDL2gsBwjLqswM3c6fjcuWFQ9hoS4C+EhjxQmEyHQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCID0JMI0Q5bxCXq7u4PC36KOpIH6YwPcl/bJV7aJMDLa1AiEA6okB/cE43wLUQaMlo0+estUCmhWyklHel+YclmJaVSU="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "4.2.0",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"gitHead": "b9917e420980b2373898a8ed912e44d4c3d20bd0",
+			"testling": {
+				"files": [
+					"test/index.js",
+					"test/shimmed.js"
+				],
+				"browsers": [
+					"iexplore/6.0..latest",
+					"firefox/3.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/10.0..latest",
+					"opera/next",
+					"safari/4.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/array-includes-3.0.3.tgz_1492584332066_0.8674911158159375",
+				"host": "packages-12-west.internal.npmjs.com"
+			},
+			"_shasum": "184b48f62d92d7452bb31b323165c7f8bd02266d",
+			"_nodeVersion": "7.9.0"
+		},
+		"3.1.2": {
+			"name": "array-includes",
+			"description": "An ES7/ES2016 spec-compliant `Array.prototype.includes` shim/polyfill/replacement that works as far down as ES3.",
+			"version": "3.1.2",
+			"author": {
+				"url": "http://ljharb.codes",
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/es-shims/array-includes#readme",
+			"repository": {
+				"url": "git://github.com/es-shims/array-includes.git",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"url": "http://ljharb.codes",
+					"name": "Jordan Harband",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/es-shims/array-includes/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"call-bind": "^1.0.0",
+				"is-string": "^1.0.5",
+				"es-abstract": "^1.18.0-next.1",
+				"get-intrinsic": "^1.0.1",
+				"define-properties": "^1.1.3"
+			},
+			"devDependencies": {
+				"aud": "^1.1.3",
+				"nyc": "^10.3.2",
+				"tape": "^5.0.1",
+				"eslint": "^7.14.0",
+				"evalmd": "0.0.19",
+				"foreach": "^2.0.5",
+				"indexof": "^0.0.1",
+				"@es-shims/api": "^2.1.2",
+				"function-bind": "^1.1.1",
+				"has-strict-mode": "^1.0.0",
+				"safe-publish-latest": "^1.1.4",
+				"functions-have-names": "^1.2.1",
+				"@ljharb/eslint-config": "^17.3.0"
+			},
+			"keywords": [
+				"Array.prototype.includes",
+				"includes",
+				"array",
+				"ES7",
+				"shim",
+				"polyfill",
+				"contains",
+				"Array.prototype.contains",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint .",
+				"test": "npm run --silent tests-only",
+				"pretest": "npm run --silent lint && evalmd README.md",
+				"postlint": "es-shim-api --bound",
+				"posttest": "npx aud --production",
+				"prepublish": "safe-publish-latest",
+				"tests-only": "nyc tape 'test/**/*.js'"
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "array-includes@3.1.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array-includes/-/array-includes-3.1.2.tgz",
+				"shasum": "a8db03e0b88c8c6aeddc49cb132f9bcab4ebf9c8",
+				"integrity": "sha512-w2GspexNQpx+PutG3QpT437/BenZBj0M/MZGn5mzv/MofYqo0xmRHzn4lFsoDlWJ+THYsGJmFlW68WlDFx7VRw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQD5Ap2jYRcyBvibKmwfJZDnRseieRmScVtnQwzrVUodKwIhAN+bTeeoXdKT4cVR6ha0MFCEG2n2Q/jEX6b+Obhq0ItG"
+					}
+				]
+			},
+			"_npmVersion": "6.14.8",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "835ee590174eb51f516e5d3ff06e01d41eb17e33",
+			"testling": {
+				"files": [
+					"test/index.js",
+					"test/implementation.js",
+					"test/shimmed.js"
+				],
+				"browsers": [
+					"iexplore/6.0..latest",
+					"firefox/3.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/10.0..latest",
+					"opera/next",
+					"safari/4.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/array-includes_3.1.2_1606265020192_0.5799224050877121",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "14.15.0"
+		},
+		"1.0.2": {
+			"name": "array-includes",
+			"description": "A spec-compliant `Array.prototype.includes` shim/polyfill/replacement that works as far down as ES3.",
+			"version": "1.0.2",
+			"author": {
+				"name": "Jordan Harband"
+			},
+			"homepage": "https://github.com/ljharb/array-includes",
+			"repository": {
+				"url": "git://github.com/ljharb/array-includes.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/ljharb/array-includes/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"define-properties": "~1.0.0"
+			},
+			"devDependencies": {
+				"is": "~2.2.0",
+				"nsp": "~0.5.2",
+				"jscs": "~1.9.0",
+				"tape": "~3.0.3",
+				"covert": "1.0.0",
+				"eslint": "~0.11.0",
+				"foreach": "~2.0.5",
+				"indexof": "~0.0.1",
+				"editorconfig-tools": "~0.0.1"
+			},
+			"keywords": [
+				"Array.prototype.includes",
+				"includes",
+				"array",
+				"ES7",
+				"shim",
+				"polyfill",
+				"contains",
+				"Array.prototype.contains"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"jscs": "jscs test/*.js *.js",
+				"lint": "npm run jscs && npm run eslint",
+				"test": "npm run lint && npm run test:shimmed && npm run test:module && npm run security",
+				"eslint": "eslint test/*.js *.js",
+				"eccheck": "editorconfig-tools check *.js **/*.js > /dev/null",
+				"coverage": "covert test/*.js",
+				"security": "nsp package",
+				"test:module": "node test/index.js",
+				"test:shimmed": "node test/shimmed.js",
+				"coverage:quiet": "covert test/*.js --quiet"
+			},
+			"lastModified": 0,
+			"_id": "array-includes@1.0.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array-includes/-/array-includes-1.0.2.tgz",
+				"shasum": "3de978b8ab6f8e941b5a5bd26d07d039d86e4594",
+				"integrity": "sha512-06/mMlzULhJhDfE2Jf226yBh8gVwLCITDkb1cQ8XIka9xSdQ4fxFZGXirisnrxcfBqVsRu8wRdEWtfUtcLUOOQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDBHyOBsX86YdUx4eqwiKucGjeL4EwSvCmWci01dOtbIAIhANe5XKS22ASOgzKb6ur7XZsdR2uRiOdw4Tt2T7qDmfUH"
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "1.4.28",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"gitHead": "bd27f6432e1a3d11872f87faeb503c8fef6cb441",
+			"testling": {
+				"files": "test/index.js",
+				"browsers": [
+					"iexplore/6.0..latest",
+					"firefox/3.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/10.0..latest",
+					"opera/next",
+					"safari/4.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_shasum": "3de978b8ab6f8e941b5a5bd26d07d039d86e4594",
+			"contributors": []
+		},
+		"1.1.1": {
+			"name": "array-includes",
+			"description": "A spec-compliant `Array.prototype.includes` shim/polyfill/replacement that works as far down as ES3.",
+			"version": "1.1.1",
+			"author": {
+				"name": "Jordan Harband"
+			},
+			"homepage": "https://github.com/ljharb/array-includes#readme",
+			"repository": {
+				"url": "git://github.com/ljharb/array-includes.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/ljharb/array-includes/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"es-abstract": "^1.2.1",
+				"define-properties": "^1.0.1"
+			},
+			"devDependencies": {
+				"nsp": "^1.0.1",
+				"jscs": "^1.13.1",
+				"tape": "^4.0.0",
+				"covert": "^1.1.0",
+				"eslint": "^0.21.2",
+				"semver": "^4.3.4",
+				"foreach": "^2.0.5",
+				"indexof": "^0.0.1",
+				"replace": "^0.3.0",
+				"function-bind": "^1.0.2",
+				"editorconfig-tools": "^0.1.1"
+			},
+			"keywords": [
+				"Array.prototype.includes",
+				"includes",
+				"array",
+				"ES7",
+				"shim",
+				"polyfill",
+				"contains",
+				"Array.prototype.contains"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"jscs": "jscs test/*.js *.js",
+				"lint": "npm run jscs && npm run eslint",
+				"test": "npm run lint && npm run test:shimmed && npm run test:module && npm run security",
+				"eslint": "eslint test/*.js *.js",
+				"eccheck": "editorconfig-tools check *.js **/*.js > /dev/null",
+				"coverage": "covert test/*.js",
+				"security": "nsp package",
+				"test:module": "node test/index.js",
+				"test:shimmed": "node test/shimmed.js",
+				"coverage:quiet": "covert test/*.js --quiet"
+			},
+			"lastModified": 0,
+			"_id": "array-includes@1.1.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array-includes/-/array-includes-1.1.1.tgz",
+				"shasum": "095a8243eb4b6598d3ea83057d6c12c0d592d09f",
+				"integrity": "sha512-egLJgCmXH7V9aM9I2KBGl1OHyEycD1m9NUQ/XWKbBNXI0wDVLqt6s/xJ2Blyd9tYHpafH9ladMYirNNwUiaUaw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQCzRBSIxzsAvLnvQ/4WUuKUXd0P02jT3B+1qmQSk3bdpgIhANhPIb9D38IrcJHm6xNA5HvlalW8kXIgaXppligkA5Pj"
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "2.9.0",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"gitHead": "3c07aa5da39f6bea387cc55f5614da16b69eb8b4",
+			"testling": {
+				"files": [
+					"test/index.js",
+					"test/shimmed.js"
+				],
+				"browsers": [
+					"iexplore/6.0..latest",
+					"firefox/3.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/10.0..latest",
+					"opera/next",
+					"safari/4.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_shasum": "095a8243eb4b6598d3ea83057d6c12c0d592d09f",
+			"_nodeVersion": "2.0.2",
+			"contributors": []
+		},
+		"3.1.3": {
+			"name": "array-includes",
+			"description": "An ES7/ES2016 spec-compliant `Array.prototype.includes` shim/polyfill/replacement that works as far down as ES3.",
+			"version": "3.1.3",
+			"author": {
+				"url": "http://ljharb.codes",
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/es-shims/array-includes#readme",
+			"repository": {
+				"url": "git://github.com/es-shims/array-includes.git",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"url": "http://ljharb.codes",
+					"name": "Jordan Harband",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/es-shims/array-includes/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"call-bind": "^1.0.2",
+				"is-string": "^1.0.5",
+				"es-abstract": "^1.18.0-next.2",
+				"get-intrinsic": "^1.1.1",
+				"define-properties": "^1.1.3"
+			},
+			"devDependencies": {
+				"aud": "^1.1.4",
+				"nyc": "^10.3.2",
+				"tape": "^5.2.0",
+				"eslint": "^7.20.0",
+				"evalmd": "0.0.19",
+				"foreach": "^2.0.5",
+				"indexof": "^0.0.1",
+				"@es-shims/api": "^2.1.2",
+				"function-bind": "^1.1.1",
+				"has-strict-mode": "^1.0.1",
+				"safe-publish-latest": "^1.1.4",
+				"functions-have-names": "^1.2.2",
+				"@ljharb/eslint-config": "^17.5.1"
+			},
+			"keywords": [
+				"Array.prototype.includes",
+				"includes",
+				"array",
+				"ES7",
+				"shim",
+				"polyfill",
+				"contains",
+				"Array.prototype.contains",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint .",
+				"test": "npm run --silent tests-only",
+				"pretest": "npm run --silent lint && evalmd README.md",
+				"postlint": "es-shim-api --bound",
+				"posttest": "npx aud --production",
+				"prepublish": "safe-publish-latest",
+				"tests-only": "nyc tape 'test/**/*.js'"
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "array-includes@3.1.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array-includes/-/array-includes-3.1.3.tgz",
+				"shasum": "c7f619b382ad2afaf5326cddfdc0afc61af7690a",
+				"integrity": "sha512-gcem1KlBU7c9rB+Rq8/3PPKsK2kjqeEBa3bD5kkQo4nYlOHQCJqIJFqBXDEfwaRuYTT4E+FxA9xez7Gf/e3Q7A==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDh+8WFjRXfD9r/9U9GgnlFe1q3O9wTCGdL+/6kuW9SogIhAMTnxjP1w5hXBCundQy2isvXs1JxArR2zN7ksXnF7uUk"
+					}
+				]
+			},
+			"_npmVersion": "6.14.11",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "96c8dc669642a16209212ea7b1d95e3fe9521947",
+			"testling": {
+				"files": [
+					"test/index.js",
+					"test/implementation.js",
+					"test/shimmed.js"
+				],
+				"browsers": [
+					"iexplore/6.0..latest",
+					"firefox/3.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/10.0..latest",
+					"opera/next",
+					"safari/4.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/array-includes_3.1.3_1613857329452_0.24315068436051956",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "14.15.5"
+		}
+	},
+	"time": {
+		"3.0.0": "2015-08-16T05:51:30.287Z",
+		"3.1.4": "2021-10-05T05:25:03.711Z",
+		"modified": "2025-06-02T05:01:21.174Z",
+		"3.1.5": "2022-05-03T21:17:12.832Z",
+		"3.1.6": "2022-11-08T02:04:16.318Z",
+		"3.1.7": "2023-09-03T19:34:54.507Z",
+		"3.0.1": "2015-08-16T19:30:52.692Z",
+		"3.1.0": "2019-12-12T04:35:03.866Z",
+		"3.0.2": "2016-02-06T09:53:06.343Z",
+		"3.1.1": "2019-12-21T16:32:16.521Z",
+		"3.0.3": "2017-04-19T06:45:34.094Z",
+		"3.1.2": "2020-11-25T00:43:40.460Z",
+		"3.1.3": "2021-02-20T21:42:09.594Z",
+		"2.0.0": "2015-05-24T03:01:56.892Z",
+		"3.1.8": "2024-03-20T20:47:32.396Z",
+		"3.1.9": "2025-06-02T05:01:20.983Z",
+		"created": "2015-01-04T09:18:18.192Z",
+		"1.0.3": "2015-01-07T00:22:14.775Z",
+		"1.0.4": "2015-01-11T03:19:02.714Z",
+		"1.0.5": "2015-01-30T09:59:19.813Z",
+		"1.0.6": "2015-02-17T10:59:16.880Z",
+		"1.0.0": "2015-01-04T09:18:18.192Z",
+		"1.0.1": "2015-01-04T09:54:24.431Z",
+		"1.1.0": "2015-03-19T10:06:40.476Z",
+		"1.0.2": "2015-01-06T07:20:03.498Z",
+		"1.1.1": "2015-05-23T23:30:49.693Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "3.1.9"
+	},
+	"_uplinks": {
+		"artifactory-sabadell": {
+			"etag": "f4fd9331d59395e008c684a866e1d0f090865189",
+			"fetched": 1782459811293
+		}
+	},
+	"_distfiles": {
+		"array-includes-2.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array-includes/-/array-includes-2.0.0.tgz",
+			"sha": "4a95c73514066dc81213d7da45a4d712ccdc2ba6",
+			"registry": "artifactory-sabadell"
+		},
+		"array-includes-3.1.8.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array-includes/-/array-includes-3.1.8.tgz",
+			"sha": "5e370cbe172fdd5dd6530c1d4aadda25281ba97d",
+			"registry": "artifactory-sabadell"
+		},
+		"array-includes-3.1.9.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array-includes/-/array-includes-3.1.9.tgz",
+			"sha": "1f0ccaa08e90cdbc3eb433210f903ad0f17c3f3a",
+			"registry": "artifactory-sabadell"
+		},
+		"array-includes-1.0.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array-includes/-/array-includes-1.0.3.tgz",
+			"sha": "5f0ba6392212b9f0e9eabb0e94bda456affc3df5",
+			"registry": "artifactory-sabadell"
+		},
+		"array-includes-1.0.4.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array-includes/-/array-includes-1.0.4.tgz",
+			"sha": "572e504cdfd78bc75ccc4dc7b4887d2423cdf229",
+			"registry": "artifactory-sabadell"
+		},
+		"array-includes-1.0.5.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array-includes/-/array-includes-1.0.5.tgz",
+			"sha": "9a793ee9fdced5b74bb15d62a50b5e2ec424ee9d",
+			"registry": "artifactory-sabadell"
+		},
+		"array-includes-1.0.6.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array-includes/-/array-includes-1.0.6.tgz",
+			"sha": "e4ca089744a4cfd8b6f455ed54fe95998eab5866",
+			"registry": "artifactory-sabadell"
+		},
+		"array-includes-3.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array-includes/-/array-includes-3.0.0.tgz",
+			"sha": "95d0e95e1f0899a08b5e344da6116f66cb2fa1ae",
+			"registry": "artifactory-sabadell"
+		},
+		"array-includes-3.1.4.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array-includes/-/array-includes-3.1.4.tgz",
+			"sha": "f5b493162c760f3539631f005ba2bb46acb45ba9",
+			"registry": "artifactory-sabadell"
+		},
+		"array-includes-3.1.5.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array-includes/-/array-includes-3.1.5.tgz",
+			"sha": "2c320010db8d31031fd2a5f6b3bbd4b1aad31bdb",
+			"registry": "artifactory-sabadell"
+		},
+		"array-includes-3.1.6.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array-includes/-/array-includes-3.1.6.tgz",
+			"sha": "9e9e720e194f198266ba9e18c29e6a9b0e4b225f",
+			"registry": "artifactory-sabadell"
+		},
+		"array-includes-3.1.7.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array-includes/-/array-includes-3.1.7.tgz",
+			"sha": "8cd2e01b26f7a3086cbc87271593fe921c62abda",
+			"registry": "artifactory-sabadell"
+		},
+		"array-includes-3.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array-includes/-/array-includes-3.0.1.tgz",
+			"sha": "0a9e740b4d7b8bd7e2dfed15398dca899b3a52f8",
+			"registry": "artifactory-sabadell"
+		},
+		"array-includes-3.1.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array-includes/-/array-includes-3.1.0.tgz",
+			"sha": "48a929ef4c6bb1fa6dc4a92c9b023a261b0ca404",
+			"registry": "artifactory-sabadell"
+		},
+		"array-includes-1.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array-includes/-/array-includes-1.0.0.tgz",
+			"sha": "87024d26fa2d9210a3dd45624d25467eead91bfb",
+			"registry": "artifactory-sabadell"
+		},
+		"array-includes-3.0.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array-includes/-/array-includes-3.0.2.tgz",
+			"sha": "7c867b4d1235c2b5687c874f3344bff4e002beba",
+			"registry": "artifactory-sabadell"
+		},
+		"array-includes-3.1.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array-includes/-/array-includes-3.1.1.tgz",
+			"sha": "cdd67e6852bdf9c1215460786732255ed2459348",
+			"registry": "artifactory-sabadell"
+		},
+		"array-includes-1.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array-includes/-/array-includes-1.0.1.tgz",
+			"sha": "8e3ebc861cbb14c7e0c145e1f92fbd27af9c6d8b",
+			"registry": "artifactory-sabadell"
+		},
+		"array-includes-1.1.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array-includes/-/array-includes-1.1.0.tgz",
+			"sha": "f3d597a7e3dc23d4a4a5703bc78cfe8092412a8c",
+			"registry": "artifactory-sabadell"
+		},
+		"array-includes-3.0.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array-includes/-/array-includes-3.0.3.tgz",
+			"sha": "184b48f62d92d7452bb31b323165c7f8bd02266d",
+			"registry": "artifactory-sabadell"
+		},
+		"array-includes-3.1.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array-includes/-/array-includes-3.1.2.tgz",
+			"sha": "a8db03e0b88c8c6aeddc49cb132f9bcab4ebf9c8",
+			"registry": "artifactory-sabadell"
+		},
+		"array-includes-1.0.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array-includes/-/array-includes-1.0.2.tgz",
+			"sha": "3de978b8ab6f8e941b5a5bd26d07d039d86e4594",
+			"registry": "artifactory-sabadell"
+		},
+		"array-includes-1.1.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array-includes/-/array-includes-1.1.1.tgz",
+			"sha": "095a8243eb4b6598d3ea83057d6c12c0d592d09f",
+			"registry": "artifactory-sabadell"
+		},
+		"array-includes-3.1.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array-includes/-/array-includes-3.1.3.tgz",
+			"sha": "c7f619b382ad2afaf5326cddfdc0afc61af7690a",
+			"registry": "artifactory-sabadell"
+		}
+	},
+	"_attachments": {},
+	"_rev": "1-2994a227bce7d1c8",
+	"_id": "array-includes",
+	"readme": "# array-includes <sup>[![Version Badge][npm-version-svg]][package-url]</sup>\n\n[![github actions][actions-image]][actions-url]\n[![coverage][codecov-image]][codecov-url]\n[![dependency status][deps-svg]][deps-url]\n[![dev dependency status][dev-deps-svg]][dev-deps-url]\n[![License][license-image]][license-url]\n[![Downloads][downloads-image]][downloads-url]\n\n[![npm badge][npm-badge-png]][package-url]\n\nAn ES7/ES2016 spec-compliant `Array.prototype.includes` shim/polyfill/replacement that works as far down as ES3.\n\nThis package implements the [es-shim API](https://github.com/es-shims/api) interface. It works in an ES3-supported environment and complies with the proposed [spec](https://262.ecma-international.org/6.0/).\n\nBecause `Array.prototype.includes` depends on a receiver (the `this` value), the main export takes the array to operate on as the first argument.\n\nEngines that need this package include:\n - IE (all versions)\n - Safari < 9\n - Firefox < 43, and 99-101\n - Chrome < 47\n - Edge < 14\n - node < 6\n\n## Getting started\n\n```sh\nnpm install --save array-includes\n```\n\n## Usage\n\nBasic usage: **includes(array, value[, fromIndex=0])**\n\n```js\nvar includes = require('array-includes');\nvar assert = require('assert');\nvar arr = [ 'one', 'two' ];\n\nincludes(arr, 'one'); // true\nincludes(arr, 'three'); // false\nincludes(arr, 'one', 1); // false\n```\n\n\n\n## Example\n\n```js\nvar arr = [\n\t1,\n\t'foo',\n\tNaN,\n\t-0\n];\n\nassert.equal(arr.indexOf(0) > -1, true);\nassert.equal(arr.indexOf(-0) > -1, true);\nassert.equal(includes(arr, 0), true);\nassert.equal(includes(arr, -0), true);\n\nassert.equal(arr.indexOf(NaN) > -1, false);\nassert.equal(includes(arr, NaN), true);\n\nassert.equal(includes(arr, 'foo', 0), true);\nassert.equal(includes(arr, 'foo', 1), true);\nassert.equal(includes(arr, 'foo', 2), false);\n```\n\n```js\n/* when Array#includes is not present */\ndelete Array.prototype.includes;\nvar shimmedIncludes = includes.shim();\n\nassert.equal(shimmedIncludes, includes.getPolyfill());\nassert.equal(arr.includes('foo', 1), includes(arr, 'foo', 1));\n```\n\n```js\n/* when Array#includes is present */\nvar shimmedIncludes = includes.shim();\n\nassert.equal(shimmedIncludes, Array.prototype.includes);\nassert.equal(arr.includes(1, 'foo'), includes(arr, 1, 'foo'));\n```\n\n## Tests\nSimply clone the repo, `npm install`, and run `npm test`\n\n[package-url]: https://npmjs.org/package/array-includes\n[npm-version-svg]: https://versionbadg.es/es-shims/array-includes.svg\n[deps-svg]: https://david-dm.org/es-shims/array-includes.svg\n[deps-url]: https://david-dm.org/es-shims/array-includes\n[dev-deps-svg]: https://david-dm.org/es-shims/array-includes/dev-status.svg\n[dev-deps-url]: https://david-dm.org/es-shims/array-includes#info=devDependencies\n[npm-badge-png]: https://nodei.co/npm/array-includes.png?downloads=true&stars=true\n[license-image]: https://img.shields.io/npm/l/array-includes.svg\n[license-url]: LICENSE\n[downloads-image]: https://img.shields.io/npm/dm/array-includes.svg\n[downloads-url]: https://npm-stat.com/charts.html?package=array-includes\n[codecov-image]: https://codecov.io/gh/es-shims/array-includes/branch/main/graphs/badge.svg\n[codecov-url]: https://app.codecov.io/gh/es-shims/array-includes/\n[actions-image]: https://img.shields.io/endpoint?url=https://github-actions-badge-u3jn4tfpocch.runkit.sh/es-shims/array-includes\n[actions-url]: https://github.com/es-shims/array-includes/actions"
+}

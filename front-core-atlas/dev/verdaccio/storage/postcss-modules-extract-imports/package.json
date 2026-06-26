@@ -1,0 +1,1861 @@
+{
+	"name": "postcss-modules-extract-imports",
+	"versions": {
+		"0.0.6": {
+			"name": "postcss-modules-extract-imports",
+			"description": "A CSS Modules transform to extract local aliases for inline imports",
+			"version": "0.0.6",
+			"author": {
+				"name": "Glen Maddern"
+			},
+			"homepage": "https://github.com/css-modules/postcss-modules-extract-imports",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/css-modules/postcss-modules-extract-imports.git"
+			},
+			"bugs": {
+				"url": "https://github.com/css-modules/postcss-modules-extract-imports/issues"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"postcss": "^4.1.11"
+			},
+			"devDependencies": {
+				"babel": "^5.4.7",
+				"babel-eslint": "^3.1.9",
+				"babel-istanbul": "^0.2.10",
+				"babelify": "^6.1.2",
+				"chokidar-cli": "^0.2.1",
+				"codecov.io": "^0.1.2",
+				"coveralls": "^2.11.2",
+				"eslint": "^0.22.1",
+				"mocha": "^2.2.5"
+			},
+			"keywords": [
+				"css-modules",
+				"postcss",
+				"plugin"
+			],
+			"license": "ISC",
+			"files": [
+				"lib"
+			],
+			"maintainers": [
+				{
+					"name": "geelen",
+					"email": "hi@glenmaddern.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint src",
+				"build": "babel --out-dir lib src",
+				"watch": "chokidar src -c 'npm run build'",
+				"posttest": "npm run lint && npm run build",
+				"test": "mocha --compilers js:babel/register",
+				"autotest": "chokidar src test -c 'npm test'",
+				"precover": "npm run lint && npm run build",
+				"cover": "babel-istanbul cover node_modules/.bin/_mocha",
+				"travis": "npm run cover -- --report lcovonly",
+				"prepublish": "npm run build"
+			},
+			"lastModified": 0,
+			"_id": "postcss-modules-extract-imports@0.0.6",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/postcss-modules-extract-imports/-/postcss-modules-extract-imports-0.0.6.tgz",
+				"shasum": "a8cccb46b063e87669c9bf5785006a374bd3088c",
+				"integrity": "sha512-bZ/t1T9xpqYa9kIzanMOqsblhTNAuYwl0g/lm1aN+YWjikll5S9wswp27Hfp/tDxZ38+j/bGjhkhVmBeqv5zBw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIF9MpOECKck05OSn3omFopLvhHQ05MGG9jtZ5fyF8CbLAiEA//BPZA3RPgyzQlb14Y8fiezML2HiA+6HHjdddNXyc/4="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "2.13.1",
+			"_npmUser": {
+				"name": "geelen",
+				"email": "hi@glenmaddern.com"
+			},
+			"gitHead": "b297a4b804e9e1438a88cf6c94c94c3e605d1bed",
+			"_shasum": "a8cccb46b063e87669c9bf5785006a374bd3088c",
+			"_nodeVersion": "0.12.2",
+			"contributors": []
+		},
+		"2.0.0": {
+			"name": "postcss-modules-extract-imports",
+			"description": "A CSS Modules transform to extract local aliases for inline imports",
+			"version": "2.0.0",
+			"author": {
+				"name": "Glen Maddern"
+			},
+			"homepage": "https://github.com/css-modules/postcss-modules-extract-imports",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/css-modules/postcss-modules-extract-imports.git"
+			},
+			"bugs": {
+				"url": "https://github.com/css-modules/postcss-modules-extract-imports/issues"
+			},
+			"engines": {
+				"node": ">= 6"
+			},
+			"main": "src/index.js",
+			"dependencies": {
+				"postcss": "^7.0.5"
+			},
+			"devDependencies": {
+				"codecov.io": "^0.1.2",
+				"coveralls": "^2.11.2",
+				"husky": "^0.13.3",
+				"jest": "^20.0.3",
+				"lint-staged": "^3.4.2",
+				"prettier": "^1.3.1"
+			},
+			"keywords": [
+				"css-modules",
+				"postcss",
+				"plugin"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"email": "sheo13666q@gmail.com",
+					"name": "evilebottnawi"
+				},
+				{
+					"email": "hi@glenmaddern.com",
+					"name": "geelen"
+				},
+				{
+					"email": "mark.john.dalgleish@gmail.com",
+					"name": "markdalgleish"
+				},
+				{
+					"email": "tobias.koppers@googlemail.com",
+					"name": "sokra"
+				},
+				{
+					"email": "iamhoneyboy@gmail.com",
+					"name": "sullenor"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "jest --coverage",
+				"precommit": "lint-staged",
+				"prepublish": "yarn run test"
+			},
+			"lastModified": 0,
+			"_id": "postcss-modules-extract-imports@2.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/postcss-modules-extract-imports/-/postcss-modules-extract-imports-2.0.0.tgz",
+				"shasum": "818719a1ae1da325f9832446b01136eeb493cd7e",
+				"integrity": "sha512-LaYLDNS4SG8Q5WAWqIJgdHPJrDDr/Lv775rMBFUbgjTz6j34lUznACHcdRWroPvXANP2Vj7yNK57vp9eFqzLWQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCOuGInpordawXSPsYaFEG2uZzI5BZ20wdJYcC1gHAFcQIgG5ByTOdYdPYOJ3xe4Plz1u7pbKuTMdr+aQzfAY98JPA="
+					}
+				]
+			},
+			"_npmVersion": "5.10.0",
+			"_npmUser": {
+				"name": "sullenor",
+				"email": "iamhoneyboy@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"lint-staged": {
+				"*.js": [
+					"prettier --single-quote --no-semi --write",
+					"git add"
+				]
+			},
+			"gitHead": "797d678bcc6cc7e07dbbc8323b3e9eec8e68b805",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/postcss-modules-extract-imports_2.0.0_1540901983084_0.5060482205150338"
+			},
+			"_nodeVersion": "10.8.0",
+			"contributors": []
+		},
+		"0.0.4": {
+			"name": "postcss-modules-extract-imports",
+			"description": "A CSS Modules transform to extract local aliases for inline imports",
+			"version": "0.0.4",
+			"author": {
+				"name": "Glen Maddern"
+			},
+			"homepage": "https://github.com/css-modules/postcss-modules-extract-imports",
+			"repository": {
+				"type": "git",
+				"url": "https://github.com/css-modules/postcss-modules-extract-imports.git"
+			},
+			"bugs": {
+				"url": "https://github.com/css-modules/postcss-modules-extract-imports/issues"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"postcss": "^4.1.11"
+			},
+			"devDependencies": {
+				"babel": "^5.4.7",
+				"babel-eslint": "^3.1.9",
+				"babelify": "^6.1.2",
+				"chokidar-cli": "^0.2.1",
+				"codecov.io": "^0.1.2",
+				"coveralls": "^2.11.2",
+				"eslint": "^0.22.1",
+				"istanbul": "^0.3.14",
+				"mocha": "^2.2.5"
+			},
+			"keywords": [
+				"css-modules",
+				"postcss",
+				"plugin"
+			],
+			"license": "ISC",
+			"files": [
+				"lib"
+			],
+			"maintainers": [
+				{
+					"name": "geelen",
+					"email": "hi@glenmaddern.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint src",
+				"build": "babel --out-dir lib src",
+				"watch": "chokidar src -c 'npm run build'",
+				"pretest": "npm run lint && npm run build",
+				"test": "mocha",
+				"autotest": "chokidar src test -c 'npm test'",
+				"precover": "npm run lint && npm run build",
+				"cover": "istanbul cover node_modules/mocha/bin/_mocha",
+				"travis": "npm run cover -- --report lcovonly",
+				"prepublish": "npm run build"
+			},
+			"lastModified": 0,
+			"_id": "postcss-modules-extract-imports@0.0.4",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/postcss-modules-extract-imports/-/postcss-modules-extract-imports-0.0.4.tgz",
+				"shasum": "62bbaefe6e78df99425cd6dd171a4a28119e6746",
+				"integrity": "sha512-2BQoTJluKfzIQ75FY71/Tvtrrwf3Crz3XA9tFA9DJp2lxltZ4Cy8a9QxvNJfI0Z2GI0rWjpm7C7/+ZKo1JAB+Q==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDNKbEVNHc1DVk5CM92Y9D/bvw/zEy2VexW9kIJYblc7AIgMWzdXriVCPXWLBpAGZbOm8CyjiXR4yo0+vKHXPQV9fY="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "2.7.6",
+			"_npmUser": {
+				"name": "geelen",
+				"email": "hi@glenmaddern.com"
+			},
+			"gitHead": "48d2d7f297f63ccbdb4df8e035a5d42d32e5be41",
+			"_shasum": "62bbaefe6e78df99425cd6dd171a4a28119e6746",
+			"_nodeVersion": "0.12.2",
+			"contributors": []
+		},
+		"0.0.5": {
+			"name": "postcss-modules-extract-imports",
+			"description": "A CSS Modules transform to extract local aliases for inline imports",
+			"version": "0.0.5",
+			"author": {
+				"name": "Glen Maddern"
+			},
+			"homepage": "https://github.com/css-modules/postcss-modules-extract-imports",
+			"repository": {
+				"type": "git",
+				"url": "https://github.com/css-modules/postcss-modules-extract-imports.git"
+			},
+			"bugs": {
+				"url": "https://github.com/css-modules/postcss-modules-extract-imports/issues"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"postcss": "^4.1.11"
+			},
+			"devDependencies": {
+				"babel": "^5.4.7",
+				"babel-eslint": "^3.1.9",
+				"babelify": "^6.1.2",
+				"chokidar-cli": "^0.2.1",
+				"codecov.io": "^0.1.2",
+				"coveralls": "^2.11.2",
+				"eslint": "^0.22.1",
+				"istanbul": "^0.3.14",
+				"mocha": "^2.2.5"
+			},
+			"keywords": [
+				"css-modules",
+				"postcss",
+				"plugin"
+			],
+			"license": "ISC",
+			"files": [
+				"lib"
+			],
+			"maintainers": [
+				{
+					"name": "geelen",
+					"email": "hi@glenmaddern.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint src",
+				"build": "babel --out-dir lib src",
+				"watch": "chokidar src -c 'npm run build'",
+				"pretest": "npm run lint && npm run build",
+				"test": "mocha",
+				"autotest": "chokidar src test -c 'npm test'",
+				"precover": "npm run lint && npm run build",
+				"cover": "istanbul cover node_modules/mocha/bin/_mocha",
+				"travis": "npm run cover -- --report lcovonly",
+				"prepublish": "npm run build"
+			},
+			"lastModified": 0,
+			"_id": "postcss-modules-extract-imports@0.0.5",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/postcss-modules-extract-imports/-/postcss-modules-extract-imports-0.0.5.tgz",
+				"shasum": "ccccb40b3dd2985999384a1dba60c62c960a6da0",
+				"integrity": "sha512-5aDf1iigEVDSOZVk6yqrfNl2R2oFlgvxs3vuClg7feV3r+ETcwuWEiJdzxMPdzfYq7psJ1QFUYcWOC8Q3+Rh1w==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIHo/AXVzXUENj9B9hhHXBIFkExk/0ABRB7Z+uJbhiiUnAiEApHkqL+a3cNmZ1GdPU6/kzY+MTkIPQRIUNMjz07L+2Jk="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "2.7.6",
+			"_npmUser": {
+				"name": "geelen",
+				"email": "hi@glenmaddern.com"
+			},
+			"gitHead": "cd8b992ac707c66f3a37637d1d4e5c97f5f431d0",
+			"_shasum": "ccccb40b3dd2985999384a1dba60c62c960a6da0",
+			"_nodeVersion": "0.12.2",
+			"contributors": []
+		},
+		"1.0.0-beta1": {
+			"name": "postcss-modules-extract-imports",
+			"description": "A CSS Modules transform to extract local aliases for inline imports",
+			"version": "1.0.0-beta1",
+			"author": {
+				"name": "Glen Maddern"
+			},
+			"homepage": "https://github.com/css-modules/postcss-modules-extract-imports",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/css-modules/postcss-modules-extract-imports.git"
+			},
+			"bugs": {
+				"url": "https://github.com/css-modules/postcss-modules-extract-imports/issues"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"postcss": "^4.1.11"
+			},
+			"devDependencies": {
+				"babel": "^5.4.7",
+				"babel-eslint": "^3.1.9",
+				"babel-istanbul": "^0.2.10",
+				"babelify": "^6.1.2",
+				"chokidar-cli": "^0.2.1",
+				"codecov.io": "^0.1.2",
+				"coveralls": "^2.11.2",
+				"eslint": "^0.22.1",
+				"mocha": "^2.2.5"
+			},
+			"keywords": [
+				"css-modules",
+				"postcss",
+				"plugin"
+			],
+			"license": "ISC",
+			"files": [
+				"lib"
+			],
+			"maintainers": [
+				{
+					"name": "geelen",
+					"email": "hi@glenmaddern.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint src",
+				"build": "babel --out-dir lib src",
+				"watch": "chokidar src -c 'npm run build'",
+				"posttest": "npm run lint && npm run build",
+				"test": "mocha --compilers js:babel/register",
+				"autotest": "chokidar src test -c 'npm test'",
+				"precover": "npm run lint && npm run build",
+				"cover": "babel-istanbul cover node_modules/.bin/_mocha",
+				"travis": "npm run cover -- --report lcovonly",
+				"prepublish": "npm run build"
+			},
+			"lastModified": 0,
+			"_id": "postcss-modules-extract-imports@1.0.0-beta1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/postcss-modules-extract-imports/-/postcss-modules-extract-imports-1.0.0-beta1.tgz",
+				"shasum": "c60e428bab9734c4e1ea8da050f73d44ac32739b",
+				"integrity": "sha512-sFsJjVODjxIZz4/J0JFJHhXed183k8VwBv3IDFZmvKeoly4uyjg8Dxjz71tiXmzitzUY4nSXZyPrbGHaa36zsw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIFBMxE+Vxl+9ksUDQZaPonCep5Zs+iMFNgxXnqyH5BaxAiAlcfxKeOb8CBn6Pay/AF/95wCxSgvoqlib3WhNQrQKdg=="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "2.13.1",
+			"_npmUser": {
+				"name": "geelen",
+				"email": "hi@glenmaddern.com"
+			},
+			"gitHead": "e39f583751171abfcb8a0502ad7f005283e5b884",
+			"_shasum": "c60e428bab9734c4e1ea8da050f73d44ac32739b",
+			"_nodeVersion": "0.12.2",
+			"contributors": []
+		},
+		"1.0.0-beta2": {
+			"name": "postcss-modules-extract-imports",
+			"description": "A CSS Modules transform to extract local aliases for inline imports",
+			"version": "1.0.0-beta2",
+			"author": {
+				"name": "Glen Maddern"
+			},
+			"homepage": "https://github.com/css-modules/postcss-modules-extract-imports",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/css-modules/postcss-modules-extract-imports.git"
+			},
+			"bugs": {
+				"url": "https://github.com/css-modules/postcss-modules-extract-imports/issues"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"postcss": "^5.0.4"
+			},
+			"devDependencies": {
+				"babel": "^5.4.7",
+				"babel-eslint": "^4.1.3",
+				"babel-istanbul": "^0.3.20",
+				"babelify": "^6.1.2",
+				"chokidar-cli": "^1.0.1",
+				"codecov.io": "^0.1.2",
+				"coveralls": "^2.11.2",
+				"eslint": "^1.5.0",
+				"mocha": "^2.2.5"
+			},
+			"keywords": [
+				"css-modules",
+				"postcss",
+				"plugin"
+			],
+			"license": "ISC",
+			"files": [
+				"lib"
+			],
+			"maintainers": [
+				{
+					"name": "geelen",
+					"email": "hi@glenmaddern.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint src",
+				"build": "babel --out-dir lib src",
+				"watch": "chokidar src -c 'npm run build'",
+				"posttest": "npm run lint && npm run build",
+				"test": "mocha --compilers js:babel/register",
+				"autotest": "chokidar src test -c 'npm test'",
+				"precover": "npm run lint && npm run build",
+				"cover": "babel-istanbul cover node_modules/.bin/_mocha",
+				"travis": "npm run cover -- --report lcovonly",
+				"prepublish": "npm run build"
+			},
+			"lastModified": 0,
+			"_id": "postcss-modules-extract-imports@1.0.0-beta2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/postcss-modules-extract-imports/-/postcss-modules-extract-imports-1.0.0-beta2.tgz",
+				"shasum": "f1d3533eea3fe79dffa97a2371cc916393401dc5",
+				"integrity": "sha512-BALkN1RVvLVj/FifXJmBScL2elWG6e6G3DWRzDO7JHdamBlCKIEqMMrd+d4ruQbVCOUHn3ERNPr2eLlKZhmLsg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCID4SE8RBaicQnXCMM+9UzwrX/GlZ5fLWatDn5c+3YWxtAiEAut0nnSxE6kd9RMFP7FuTLOMkROmc7MHoQniL7n09DQE="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "2.13.1",
+			"_npmUser": {
+				"name": "geelen",
+				"email": "hi@glenmaddern.com"
+			},
+			"gitHead": "14a199c0e6265652e629f99c9de028dcbcf88b8b",
+			"_shasum": "f1d3533eea3fe79dffa97a2371cc916393401dc5",
+			"_nodeVersion": "0.12.2",
+			"contributors": []
+		},
+		"0.0.2": {
+			"name": "postcss-modules-extract-imports",
+			"description": "A CSS Modules transform to extract local aliases for inline imports",
+			"version": "0.0.2",
+			"author": {
+				"name": "Glen Maddern"
+			},
+			"homepage": "https://github.com/css-modules/postcss-modules-extract-imports",
+			"repository": {
+				"type": "git",
+				"url": "https://github.com/css-modules/postcss-modules-extract-imports.git"
+			},
+			"bugs": {
+				"url": "https://github.com/css-modules/postcss-modules-extract-imports/issues"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"postcss": "^4.1.11"
+			},
+			"devDependencies": {
+				"babel": "^5.4.7",
+				"babel-eslint": "^3.1.9",
+				"babelify": "^6.1.2",
+				"chokidar-cli": "^0.2.1",
+				"codecov.io": "^0.1.2",
+				"coveralls": "^2.11.2",
+				"eslint": "^0.22.1",
+				"istanbul": "^0.3.14",
+				"mocha": "^2.2.5"
+			},
+			"keywords": [
+				"css-modules",
+				"postcss",
+				"plugin"
+			],
+			"license": "ISC",
+			"files": [
+				"lib"
+			],
+			"maintainers": [
+				{
+					"name": "geelen",
+					"email": "hi@glenmaddern.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint src",
+				"build": "babel --out-dir lib src",
+				"watch": "chokidar src -c 'npm run build'",
+				"pretest": "npm run lint && npm run build",
+				"test": "mocha",
+				"autotest": "chokidar src test -c 'npm test'",
+				"precover": "npm run lint && npm run build",
+				"cover": "istanbul cover node_modules/mocha/bin/_mocha",
+				"travis": "npm run cover -- --report lcovonly",
+				"prepublish": "npm run build"
+			},
+			"lastModified": 0,
+			"_id": "postcss-modules-extract-imports@0.0.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/postcss-modules-extract-imports/-/postcss-modules-extract-imports-0.0.2.tgz",
+				"shasum": "fb35456954c070033852ff8b68d0dc6a564b9286",
+				"integrity": "sha512-WDvGdzlPNA0f1H4yqFvE3fZq6jWMMQErk6cpTku60Unq1gA0RbEUdH6MQ3IUFz7leE+PJR5twla6moKT6CyJXg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIHhgkqMRX6UrwgzRYGwfPDzLJwmIWDvnF0iptIn4UDnEAiBBC+KRjq2l/d02pMNFpW+wL1VJd/F2Kk4CUr3TcYIOQQ=="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "2.7.6",
+			"_npmUser": {
+				"name": "geelen",
+				"email": "hi@glenmaddern.com"
+			},
+			"gitHead": "95243caca6e2b62d1fa1bb2eb8c65cca6870deb7",
+			"_shasum": "fb35456954c070033852ff8b68d0dc6a564b9286",
+			"_nodeVersion": "0.12.2",
+			"contributors": []
+		},
+		"0.0.3": {
+			"name": "postcss-modules-extract-imports",
+			"description": "A CSS Modules transform to extract local aliases for inline imports",
+			"version": "0.0.3",
+			"author": {
+				"name": "Glen Maddern"
+			},
+			"homepage": "https://github.com/css-modules/postcss-modules-extract-imports",
+			"repository": {
+				"type": "git",
+				"url": "https://github.com/css-modules/postcss-modules-extract-imports.git"
+			},
+			"bugs": {
+				"url": "https://github.com/css-modules/postcss-modules-extract-imports/issues"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"postcss": "^4.1.11"
+			},
+			"devDependencies": {
+				"babel": "^5.4.7",
+				"babel-eslint": "^3.1.9",
+				"babelify": "^6.1.2",
+				"chokidar-cli": "^0.2.1",
+				"codecov.io": "^0.1.2",
+				"coveralls": "^2.11.2",
+				"eslint": "^0.22.1",
+				"istanbul": "^0.3.14",
+				"mocha": "^2.2.5"
+			},
+			"keywords": [
+				"css-modules",
+				"postcss",
+				"plugin"
+			],
+			"license": "ISC",
+			"files": [
+				"lib"
+			],
+			"maintainers": [
+				{
+					"name": "geelen",
+					"email": "hi@glenmaddern.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint src",
+				"build": "babel --out-dir lib src",
+				"watch": "chokidar src -c 'npm run build'",
+				"pretest": "npm run lint && npm run build",
+				"test": "mocha",
+				"autotest": "chokidar src test -c 'npm test'",
+				"precover": "npm run lint && npm run build",
+				"cover": "istanbul cover node_modules/mocha/bin/_mocha",
+				"travis": "npm run cover -- --report lcovonly",
+				"prepublish": "npm run build"
+			},
+			"lastModified": 0,
+			"_id": "postcss-modules-extract-imports@0.0.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/postcss-modules-extract-imports/-/postcss-modules-extract-imports-0.0.3.tgz",
+				"shasum": "65018fcc6a2f30a9293d60e4a95bd75155222f29",
+				"integrity": "sha512-eUBg5+CmUQdZ/XjAUZrXTYE6BWz4gRSR3joIFyx6tN5XrVHVkShA+29Pxusg4wMHGFjuK4Li12r0PHAOS2d5cA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDpe2mE0KFlZ9JkLJyZPp5kiAg8z44FbYUYEpHUd9Xc3gIhAKWWNUXy6YIdBVbDdV+93D06FoI07qlC4FCoBPKZTFNr"
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "2.7.6",
+			"_npmUser": {
+				"name": "geelen",
+				"email": "hi@glenmaddern.com"
+			},
+			"gitHead": "dd2ae0ebeff2e91ea2060609e45886e89af94a1f",
+			"_shasum": "65018fcc6a2f30a9293d60e4a95bd75155222f29",
+			"_nodeVersion": "0.12.2",
+			"contributors": []
+		},
+		"0.0.1": {
+			"name": "postcss-modules-extract-imports",
+			"description": "A CSS Modules transform to extract local aliases for inline imports",
+			"version": "0.0.1",
+			"author": {
+				"name": "Glen Maddern"
+			},
+			"homepage": "https://github.com/geelen/postcss-modules-extract-imports",
+			"repository": {
+				"type": "git",
+				"url": "https://github.com/geelen/postcss-modules-extract-imports.git"
+			},
+			"bugs": {
+				"url": "https://github.com/geelen/postcss-modules-extract-imports/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"postcss": "^4.1.11"
+			},
+			"devDependencies": {
+				"babel": "^5.4.7",
+				"babelify": "^6.1.2",
+				"chokidar-cli": "^0.2.1",
+				"mocha": "^2.2.5"
+			},
+			"keywords": [
+				"css-modules",
+				"postcss",
+				"plugin"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "geelen",
+					"email": "hi@glenmaddern.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"watch": "chokidar index.src.js -c 'npm run build'",
+				"build": "babel -o index.js index.src.js",
+				"test": "mocha --compilers js:babel/register",
+				"autotest": "chokidar index.src.js test.js -c 'npm test'"
+			},
+			"lastModified": 0,
+			"_id": "postcss-modules-extract-imports@0.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/postcss-modules-extract-imports/-/postcss-modules-extract-imports-0.0.1.tgz",
+				"shasum": "5f70f576ea0478833b17d9891735d6ddfbd80b15",
+				"integrity": "sha512-t+FLKe+3J9MKDq2pLXXMDw89TGfbEdbc4Ku7Ou3QsWM4f5PItpHLOU9KYZ5yyO2i3SjgG/S1Jy/CJqaFhfu2WA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQD7T0P9VcsjQb9Oa5mW+UYqZCM4xKSpDE69HZU7SFB7xAIhAPeeH2oBqTD4bjKSUkOv5z+kOGzNVxwtHE116DMtDAm5"
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "2.7.6",
+			"_npmUser": {
+				"name": "geelen",
+				"email": "hi@glenmaddern.com"
+			},
+			"gitHead": "d24e671e428abf547ce2492cd98f1ef6087c9e49",
+			"_shasum": "5f70f576ea0478833b17d9891735d6ddfbd80b15",
+			"_nodeVersion": "0.12.2",
+			"contributors": []
+		},
+		"1.2.1": {
+			"name": "postcss-modules-extract-imports",
+			"description": "A CSS Modules transform to extract local aliases for inline imports",
+			"version": "1.2.1",
+			"author": {
+				"name": "Glen Maddern"
+			},
+			"homepage": "https://github.com/css-modules/postcss-modules-extract-imports",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/css-modules/postcss-modules-extract-imports.git"
+			},
+			"bugs": {
+				"url": "https://github.com/css-modules/postcss-modules-extract-imports/issues"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"postcss": "^6.0.1"
+			},
+			"devDependencies": {
+				"babel-cli": "^6.24.1",
+				"babel-eslint": "^7.2.2",
+				"babel-jest": "^20.0.3",
+				"babel-preset-env": "^1.5.1",
+				"codecov.io": "^0.1.2",
+				"coveralls": "^2.11.2",
+				"husky": "^0.13.3",
+				"jest": "^20.0.3",
+				"lint-staged": "^3.4.2",
+				"prettier": "^1.3.1"
+			},
+			"keywords": [
+				"css-modules",
+				"postcss",
+				"plugin"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"email": "sheo13666q@gmail.com",
+					"name": "evilebottnawi"
+				},
+				{
+					"email": "hi@glenmaddern.com",
+					"name": "geelen"
+				},
+				{
+					"email": "mark.john.dalgleish@gmail.com",
+					"name": "markdalgleish"
+				},
+				{
+					"email": "tobias.koppers@googlemail.com",
+					"name": "sokra"
+				},
+				{
+					"email": "iamhoneyboy@gmail.com",
+					"name": "sullenor"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"build": "babel --out-dir lib src",
+				"test": "jest --coverage",
+				"precommit": "lint-staged",
+				"prepublish": "yarn run test && yarn run build"
+			},
+			"lastModified": 0,
+			"_id": "postcss-modules-extract-imports@1.2.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/postcss-modules-extract-imports/-/postcss-modules-extract-imports-1.2.1.tgz",
+				"shasum": "dc87e34148ec7eab5f791f7cd5849833375b741a",
+				"integrity": "sha512-6jt9XZwUhwmRUhb/CkyJY020PYaPJsCyt3UjbaWo6XEbH/94Hmv6MP7fG2C5NDU/BcHzyGYxNtHvM+LTf9HrYw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQCA78TjGrXZwSX/wve8vlYxZwe20xMNnxtM3fLtKP+ddAIhAOgljTUzdyPIBV7mQIMD2phSOvbHA/gKgsmUGR2jsMn2"
+					}
+				]
+			},
+			"_npmVersion": "5.10.0",
+			"_npmUser": {
+				"name": "sullenor",
+				"email": "iamhoneyboy@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"lint-staged": {
+				"*.js": [
+					"prettier --single-quote --no-semi --write",
+					"git add"
+				]
+			},
+			"gitHead": "e286adaddec379056e4f567e16a60c75747bf96a",
+			"babel": {
+				"presets": [
+					[
+						"env",
+						{
+							"targets": {
+								"node": 4
+							}
+						}
+					]
+				]
+			},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/postcss-modules-extract-imports_1.2.1_1540898565605_0.0415591043970851"
+			},
+			"readmeFilename": "README.md",
+			"_nodeVersion": "10.8.0",
+			"contributors": []
+		},
+		"3.0.0-rc.3": {
+			"name": "postcss-modules-extract-imports",
+			"description": "A CSS Modules transform to extract local aliases for inline imports",
+			"version": "3.0.0-rc.3",
+			"author": {
+				"name": "Glen Maddern"
+			},
+			"homepage": "https://github.com/css-modules/postcss-modules-extract-imports",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/css-modules/postcss-modules-extract-imports.git"
+			},
+			"bugs": {
+				"url": "https://github.com/css-modules/postcss-modules-extract-imports/issues"
+			},
+			"engines": {
+				"node": "^10 || ^12 || >= 14"
+			},
+			"main": "src/index.js",
+			"devDependencies": {
+				"coveralls": "^3.1.0",
+				"eslint": "^7.10.0",
+				"eslint-config-prettier": "^6.12.0",
+				"husky": "^4.3.0",
+				"jest": "^26.5.2",
+				"lint-staged": "^10.4.0",
+				"postcss": "^8.1.1",
+				"prettier": "^2.1.2"
+			},
+			"peerDependencies": {
+				"postcss": "^8.1.0"
+			},
+			"keywords": [
+				"css-modules",
+				"postcss",
+				"plugin"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "markdalgleish",
+					"email": "mark.john.dalgleish@gmail.com"
+				},
+				{
+					"name": "sokra",
+					"email": "tobias.koppers@googlemail.com"
+				},
+				{
+					"name": "sullenor",
+					"email": "iamhoneyboy@gmail.com"
+				},
+				{
+					"name": "geelen",
+					"email": "glen@glenmaddern.com"
+				},
+				{
+					"name": "evilebottnawi",
+					"email": "sheo13666q@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"prettier": "prettier -l --ignore-path .gitignore . \"!test/test-cases\"",
+				"eslint": "eslint --ignore-path .gitignore .",
+				"lint": "yarn eslint && yarn prettier",
+				"test:only": "jest",
+				"test:watch": "jest --watch",
+				"test:coverage": "jest --coverage --collectCoverageFrom=\"src/**/*\"",
+				"pretest": "yarn lint",
+				"test": "yarn test:coverage",
+				"prepublishOnly": "yarn test"
+			},
+			"lastModified": 0,
+			"_id": "postcss-modules-extract-imports@3.0.0-rc.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/postcss-modules-extract-imports/-/postcss-modules-extract-imports-3.0.0-rc.3.tgz",
+				"shasum": "ea43316e20638f2247a037d536d63b1b54c9c5a9",
+				"integrity": "sha512-+k5sHzkdwn/72afnH6rHJRoPdQ3cHgUyUOaHdAFtwha4wMkwLq3mFL05HEg9vuXxW6St2/ffbHEcuFtTOabswQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDSxN2SYgyma9ttWS8iO8iktAcJqOwP2CtLXNiGqaXxBAIgDhgjepbBlNwW2yygGKeE06jlFTwCql1Zx5fJ0yfZF3U="
+					}
+				]
+			},
+			"_npmVersion": "6.14.8",
+			"_npmUser": {
+				"name": "evilebottnawi",
+				"email": "sheo13666q@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "564c37c0d08b2819893c842622a8fd0b63f4e73a",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/postcss-modules-extract-imports_3.0.0-rc.3_1602450923739_0.6927943695938734"
+			},
+			"readmeFilename": "README.md",
+			"_nodeVersion": "10.15.2",
+			"contributors": []
+		},
+		"3.0.0": {
+			"name": "postcss-modules-extract-imports",
+			"description": "A CSS Modules transform to extract local aliases for inline imports",
+			"version": "3.0.0",
+			"author": {
+				"name": "Glen Maddern"
+			},
+			"homepage": "https://github.com/css-modules/postcss-modules-extract-imports",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/css-modules/postcss-modules-extract-imports.git"
+			},
+			"bugs": {
+				"url": "https://github.com/css-modules/postcss-modules-extract-imports/issues"
+			},
+			"engines": {
+				"node": "^10 || ^12 || >= 14"
+			},
+			"main": "src/index.js",
+			"devDependencies": {
+				"coveralls": "^3.1.0",
+				"eslint": "^7.10.0",
+				"eslint-config-prettier": "^6.12.0",
+				"husky": "^4.3.0",
+				"jest": "^26.5.2",
+				"lint-staged": "^10.4.0",
+				"postcss": "^8.1.1",
+				"prettier": "^2.1.2"
+			},
+			"peerDependencies": {
+				"postcss": "^8.1.0"
+			},
+			"keywords": [
+				"css-modules",
+				"postcss",
+				"plugin"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "markdalgleish",
+					"email": "mark.john.dalgleish@gmail.com"
+				},
+				{
+					"name": "sokra",
+					"email": "tobias.koppers@googlemail.com"
+				},
+				{
+					"name": "sullenor",
+					"email": "iamhoneyboy@gmail.com"
+				},
+				{
+					"name": "geelen",
+					"email": "glen@glenmaddern.com"
+				},
+				{
+					"name": "evilebottnawi",
+					"email": "sheo13666q@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"prettier": "prettier -l --ignore-path .gitignore . \"!test/test-cases\"",
+				"eslint": "eslint --ignore-path .gitignore .",
+				"lint": "yarn eslint && yarn prettier",
+				"test:only": "jest",
+				"test:watch": "jest --watch",
+				"test:coverage": "jest --coverage --collectCoverageFrom=\"src/**/*\"",
+				"pretest": "yarn lint",
+				"test": "yarn test:coverage",
+				"prepublishOnly": "yarn test"
+			},
+			"lastModified": 0,
+			"_id": "postcss-modules-extract-imports@3.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/postcss-modules-extract-imports/-/postcss-modules-extract-imports-3.0.0.tgz",
+				"shasum": "cda1f047c0ae80c97dbe28c3e76a43b88025741d",
+				"integrity": "sha512-bdHleFnP3kZ4NYDhuGlVK+CMrQ/pqUm8bx/oGL93K6gVwiclvX5x0n76fYMKuIGKzlABOy13zsvqjb0f92TEXw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCICRXGbFm2/yHGkNin640CQYibQ+J4JiqHFkZejWrAdzVAiApc5WD3wqojJ/xC2G7rsaax6yRlFsjZdOWNTlOojnQKA=="
+					}
+				]
+			},
+			"_npmVersion": "6.14.8",
+			"_npmUser": {
+				"name": "evilebottnawi",
+				"email": "sheo13666q@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "df00cb05cb9666b39e8f4d53f0fbdc794c98952b",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/postcss-modules-extract-imports_3.0.0_1602589979450_0.08778682254562398"
+			},
+			"_nodeVersion": "10.15.2",
+			"contributors": []
+		},
+		"3.0.0-rc.0": {
+			"name": "postcss-modules-extract-imports",
+			"description": "A CSS Modules transform to extract local aliases for inline imports",
+			"version": "3.0.0-rc.0",
+			"author": {
+				"name": "Glen Maddern"
+			},
+			"homepage": "https://github.com/css-modules/postcss-modules-extract-imports",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/css-modules/postcss-modules-extract-imports.git"
+			},
+			"bugs": {
+				"url": "https://github.com/css-modules/postcss-modules-extract-imports/issues"
+			},
+			"engines": {
+				"node": ">= 10.13.0 || >= 12.13.0 || >= 14"
+			},
+			"main": "src/index.js",
+			"devDependencies": {
+				"codecov.io": "^0.1.6",
+				"coveralls": "^3.1.0",
+				"eslint": "^7.9.0",
+				"husky": "^4.3.0",
+				"jest": "^26.4.2",
+				"lint-staged": "^10.4.0",
+				"postcss": "^8.0.6",
+				"prettier": "^2.1.2"
+			},
+			"peerDependencies": {
+				"postcss": "^8.0.6"
+			},
+			"keywords": [
+				"css-modules",
+				"postcss",
+				"plugin"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "markdalgleish",
+					"email": "mark.john.dalgleish@gmail.com"
+				},
+				{
+					"name": "sokra",
+					"email": "tobias.koppers@googlemail.com"
+				},
+				{
+					"name": "sullenor",
+					"email": "iamhoneyboy@gmail.com"
+				},
+				{
+					"name": "geelen",
+					"email": "glen@glenmaddern.com"
+				},
+				{
+					"name": "evilebottnawi",
+					"email": "sheo13666q@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"prettier": "prettier -l --ignore-path .gitignore . \"!test/test-cases\"",
+				"eslint": "eslint --ignore-path .gitignore .",
+				"lint": "yarn eslint && yarn prettier",
+				"pretest": "yarn lint",
+				"test": "jest --coverage",
+				"autotest": "jest --coverage --watch",
+				"cover": "jest --coverage",
+				"ci": "yarn pretest && yarn cover",
+				"prepublishOnly": "yarn test"
+			},
+			"lastModified": 0,
+			"_id": "postcss-modules-extract-imports@3.0.0-rc.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/postcss-modules-extract-imports/-/postcss-modules-extract-imports-3.0.0-rc.0.tgz",
+				"shasum": "dd3b194e16b56001a59452fc972944037e205501",
+				"integrity": "sha512-/F5dTsAt7mvfGJRtTaneD9Of47vJZRv5Ba/98jEqgjaF2eHs7Uw+EIEiBogsLbYcbhBPqGKPz2ZR7FQmhq2/gQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQC5cRzv81AnTGuzjAoGuuJQxljg5TcFVuoeUMadk7XrdAIhAPapKwuokKJ9PZnMHIo7QNF5f2632cfIgXGnLb6msUMu"
+					}
+				]
+			},
+			"_npmVersion": "6.14.8",
+			"_npmUser": {
+				"name": "evilebottnawi",
+				"email": "sheo13666q@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "e8200837eb11d3d3192ab792019c36b8f61a1ecc",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/postcss-modules-extract-imports_3.0.0-rc.0_1600705620410_0.640936108994784"
+			},
+			"readmeFilename": "README.md",
+			"_nodeVersion": "10.15.2",
+			"contributors": []
+		},
+		"3.0.0-rc.1": {
+			"name": "postcss-modules-extract-imports",
+			"description": "A CSS Modules transform to extract local aliases for inline imports",
+			"version": "3.0.0-rc.1",
+			"author": {
+				"name": "Glen Maddern"
+			},
+			"homepage": "https://github.com/css-modules/postcss-modules-extract-imports",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/css-modules/postcss-modules-extract-imports.git"
+			},
+			"bugs": {
+				"url": "https://github.com/css-modules/postcss-modules-extract-imports/issues"
+			},
+			"engines": {
+				"node": ">= 10.13.0 || >= 12.13.0 || >= 14"
+			},
+			"main": "src/index.js",
+			"devDependencies": {
+				"coveralls": "^3.1.0",
+				"eslint": "^7.9.0",
+				"husky": "^4.3.0",
+				"jest": "^26.4.2",
+				"lint-staged": "^10.4.0",
+				"postcss": "^8.0.7",
+				"prettier": "^2.1.2"
+			},
+			"peerDependencies": {
+				"postcss": "^8.0.0"
+			},
+			"keywords": [
+				"css-modules",
+				"postcss",
+				"plugin"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "markdalgleish",
+					"email": "mark.john.dalgleish@gmail.com"
+				},
+				{
+					"name": "sokra",
+					"email": "tobias.koppers@googlemail.com"
+				},
+				{
+					"name": "sullenor",
+					"email": "iamhoneyboy@gmail.com"
+				},
+				{
+					"name": "geelen",
+					"email": "glen@glenmaddern.com"
+				},
+				{
+					"name": "evilebottnawi",
+					"email": "sheo13666q@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"prettier": "prettier -l --ignore-path .gitignore . \"!test/test-cases\"",
+				"eslint": "eslint --ignore-path .gitignore .",
+				"lint": "yarn eslint && yarn prettier",
+				"test:only": "jest",
+				"test:watch": "jest --watch",
+				"test:coverage": "jest --coverage --collectCoverageFrom=\"src/**/*\"",
+				"pretest": "yarn lint",
+				"test": "yarn test:coverage",
+				"prepublishOnly": "yarn test"
+			},
+			"lastModified": 0,
+			"_id": "postcss-modules-extract-imports@3.0.0-rc.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/postcss-modules-extract-imports/-/postcss-modules-extract-imports-3.0.0-rc.1.tgz",
+				"shasum": "33816ab8975b528885cf878abf13040237ec70f6",
+				"integrity": "sha512-JPZMMUY0OCtNIqxRYKMNY727g3q82Xf/XTUbiqXs6aZVw9Lyet7HeUQEc1govFp45pcCERsqnjQs4ARd+JZMOg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIEwUGxraLuKDp0SJNCgP4LFCr3kbFahcLchqGbyuyVGyAiATQbNaN0FV95WfPWu6KR3R62O7ufmWuyIh6ENjIqAayw=="
+					}
+				]
+			},
+			"_npmVersion": "6.14.8",
+			"_npmUser": {
+				"name": "evilebottnawi",
+				"email": "sheo13666q@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "f17f36816d980353402fb922bfd355eab3baeb00",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/postcss-modules-extract-imports_3.0.0-rc.1_1600777816241_0.365377131775249"
+			},
+			"readmeFilename": "README.md",
+			"_nodeVersion": "10.15.2",
+			"contributors": []
+		},
+		"3.1.0": {
+			"name": "postcss-modules-extract-imports",
+			"description": "A CSS Modules transform to extract local aliases for inline imports",
+			"version": "3.1.0",
+			"author": {
+				"name": "Glen Maddern"
+			},
+			"homepage": "https://github.com/css-modules/postcss-modules-extract-imports",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/css-modules/postcss-modules-extract-imports.git"
+			},
+			"bugs": {
+				"url": "https://github.com/css-modules/postcss-modules-extract-imports/issues"
+			},
+			"engines": {
+				"node": "^10 || ^12 || >= 14"
+			},
+			"main": "src/index.js",
+			"devDependencies": {
+				"coveralls": "^3.1.0",
+				"eslint": "^7.10.0",
+				"eslint-config-prettier": "^6.12.0",
+				"husky": "^4.3.0",
+				"jest": "^26.5.2",
+				"lint-staged": "^10.4.0",
+				"postcss": "^8.1.1",
+				"prettier": "^2.1.2"
+			},
+			"peerDependencies": {
+				"postcss": "^8.1.0"
+			},
+			"keywords": [
+				"css-modules",
+				"postcss",
+				"plugin"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "markdalgleish",
+					"email": "mark.john.dalgleish@gmail.com"
+				},
+				{
+					"name": "sokra",
+					"email": "tobias.koppers@googlemail.com"
+				},
+				{
+					"name": "geelen",
+					"email": "glen@glenmaddern.com"
+				},
+				{
+					"name": "evilebottnawi",
+					"email": "sheo13666q@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"prettier": "prettier -l --ignore-path .gitignore . \"!test/test-cases\"",
+				"eslint": "eslint --ignore-path .gitignore .",
+				"lint": "yarn eslint && yarn prettier",
+				"test:only": "jest",
+				"test:watch": "jest --watch",
+				"test:coverage": "jest --coverage --collectCoverageFrom=\"src/**/*\"",
+				"pretest": "yarn lint",
+				"test": "yarn test:coverage",
+				"prepublishOnly": "yarn test"
+			},
+			"lastModified": 0,
+			"_id": "postcss-modules-extract-imports@3.1.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/postcss-modules-extract-imports/-/postcss-modules-extract-imports-3.1.0.tgz",
+				"shasum": "b4497cb85a9c0c4b5aabeb759bb25e8d89f15002",
+				"integrity": "sha512-k3kNe0aNFQDAZGbin48pL2VNidTF0w4/eASDsxlyspobzU3wZQLOGj7L9gfRe0Jo9/4uud09DsjFNH7winGv8Q==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIGl0btH8wFpa5ckUouM4uyw1AjmvcTSuIu8wp1jf3bEfAiAxEE27LLPxYwsoFFJWqXBMGMEusnecgBUl96lfWeWMkg=="
+					}
+				]
+			},
+			"_npmVersion": "10.2.3",
+			"_npmUser": {
+				"name": "evilebottnawi",
+				"email": "sheo13666q@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "b558cab05a31271a555c3b1e9d7e5a767ae02b2d",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/postcss-modules-extract-imports_3.1.0_1712150975841_0.9668933302706422"
+			},
+			"_nodeVersion": "18.19.0",
+			"contributors": []
+		},
+		"1.0.0": {
+			"name": "postcss-modules-extract-imports",
+			"description": "A CSS Modules transform to extract local aliases for inline imports",
+			"version": "1.0.0",
+			"author": {
+				"name": "Glen Maddern"
+			},
+			"homepage": "https://github.com/css-modules/postcss-modules-extract-imports",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/css-modules/postcss-modules-extract-imports.git"
+			},
+			"bugs": {
+				"url": "https://github.com/css-modules/postcss-modules-extract-imports/issues"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"postcss": "^5.0.4"
+			},
+			"devDependencies": {
+				"babel": "^5.4.7",
+				"babel-eslint": "^4.1.3",
+				"babel-istanbul": "^0.3.20",
+				"babelify": "^6.1.2",
+				"chokidar-cli": "^1.0.1",
+				"codecov.io": "^0.1.2",
+				"coveralls": "^2.11.2",
+				"eslint": "^1.5.0",
+				"mocha": "^2.2.5"
+			},
+			"keywords": [
+				"css-modules",
+				"postcss",
+				"plugin"
+			],
+			"license": "ISC",
+			"files": [
+				"lib"
+			],
+			"maintainers": [
+				{
+					"name": "geelen",
+					"email": "hi@glenmaddern.com"
+				},
+				{
+					"name": "markdalgleish",
+					"email": "mark.john.dalgleish@gmail.com"
+				},
+				{
+					"name": "sokra",
+					"email": "tobias.koppers@googlemail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint src",
+				"build": "babel --out-dir lib src",
+				"watch": "chokidar src -c 'npm run build'",
+				"posttest": "npm run lint && npm run build",
+				"test": "mocha --compilers js:babel/register",
+				"autotest": "chokidar src test -c 'npm test'",
+				"precover": "npm run lint && npm run build",
+				"cover": "babel-istanbul cover node_modules/.bin/_mocha",
+				"travis": "npm run cover -- --report lcovonly",
+				"prepublish": "npm run build"
+			},
+			"lastModified": 0,
+			"_id": "postcss-modules-extract-imports@1.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/postcss-modules-extract-imports/-/postcss-modules-extract-imports-1.0.0.tgz",
+				"shasum": "5b07f368e350cda6fd5c8844b79123a7bd3e37be",
+				"integrity": "sha512-FzZhi2nFnACRWY32VRwylPo5OShd7+AmXRXJW8d4HwxJQty+5RXK9N1B8R68dmAocS/nrnrLYvLggUFdx3oRTQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQCxL8UEv6LdHTbGQmzOF2tPLWCf4E+eYT1Yve1v/n/zMgIhALMFVoBCMno3bJBm1rs7IW2aEH29LtL8+jTkXGPyqB5z"
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "2.13.1",
+			"_npmUser": {
+				"name": "geelen",
+				"email": "hi@glenmaddern.com"
+			},
+			"gitHead": "50821222f1e8922148ee2922744235c20c9ebae7",
+			"_shasum": "5b07f368e350cda6fd5c8844b79123a7bd3e37be",
+			"_nodeVersion": "0.12.2",
+			"contributors": []
+		},
+		"1.0.1": {
+			"name": "postcss-modules-extract-imports",
+			"description": "A CSS Modules transform to extract local aliases for inline imports",
+			"version": "1.0.1",
+			"author": {
+				"name": "Glen Maddern"
+			},
+			"homepage": "https://github.com/css-modules/postcss-modules-extract-imports",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/css-modules/postcss-modules-extract-imports.git"
+			},
+			"bugs": {
+				"url": "https://github.com/css-modules/postcss-modules-extract-imports/issues"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"postcss": "^5.0.4"
+			},
+			"devDependencies": {
+				"babel": "^5.4.7",
+				"babel-eslint": "^4.1.3",
+				"babel-istanbul": "^0.4.0",
+				"babelify": "^6.1.2",
+				"chokidar-cli": "^1.0.1",
+				"codecov.io": "^0.1.2",
+				"coveralls": "^2.11.2",
+				"eslint": "^1.5.0",
+				"mocha": "^2.2.5"
+			},
+			"keywords": [
+				"css-modules",
+				"postcss",
+				"plugin"
+			],
+			"license": "ISC",
+			"files": [
+				"lib"
+			],
+			"maintainers": [
+				{
+					"name": "geelen",
+					"email": "hi@glenmaddern.com"
+				},
+				{
+					"name": "markdalgleish",
+					"email": "mark.john.dalgleish@gmail.com"
+				},
+				{
+					"name": "sokra",
+					"email": "tobias.koppers@googlemail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint src",
+				"build": "babel --out-dir lib src",
+				"watch": "chokidar src -c 'npm run build'",
+				"posttest": "npm run lint && npm run build",
+				"test": "mocha --compilers js:babel/register",
+				"autotest": "chokidar src test -c 'npm test'",
+				"precover": "npm run lint && npm run build",
+				"cover": "babel-istanbul cover node_modules/.bin/_mocha",
+				"travis": "npm run cover -- --report lcovonly",
+				"prepublish": "npm run build"
+			},
+			"lastModified": 0,
+			"_id": "postcss-modules-extract-imports@1.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/postcss-modules-extract-imports/-/postcss-modules-extract-imports-1.0.1.tgz",
+				"shasum": "8fb3fef9a6dd0420d3f6d4353cf1ff73f2b2a341",
+				"integrity": "sha512-4uroo/dSAZqz35phEYL4eAQ5dw1urNrHX/Xbbiq9OU28G4WB/si1hejmWESosR+E8ICa1OEM+tojbFFAdy+rrA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEMCHwtdiRWWWjYAg1E9Cm141SiIg+IiXJGzp3xw7YbdmhoCIEGQyQDFN0RliyH/2f2W0yRHi4Rf+XQWbYvBQeBe36Zq"
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "2.13.1",
+			"_npmUser": {
+				"name": "geelen",
+				"email": "hi@glenmaddern.com"
+			},
+			"gitHead": "33751a9c82d40caf55e1b1061a622f7c8ce98c3f",
+			"_npmOperationalInternal": {
+				"host": "packages-16-east.internal.npmjs.com",
+				"tmp": "tmp/postcss-modules-extract-imports-1.0.1.tgz_1463042276596_0.4591533588245511"
+			},
+			"_shasum": "8fb3fef9a6dd0420d3f6d4353cf1ff73f2b2a341",
+			"_nodeVersion": "5.3.0",
+			"contributors": []
+		},
+		"1.1.0": {
+			"name": "postcss-modules-extract-imports",
+			"description": "A CSS Modules transform to extract local aliases for inline imports",
+			"version": "1.1.0",
+			"author": {
+				"name": "Glen Maddern"
+			},
+			"homepage": "https://github.com/css-modules/postcss-modules-extract-imports",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/css-modules/postcss-modules-extract-imports.git"
+			},
+			"bugs": {
+				"url": "https://github.com/css-modules/postcss-modules-extract-imports/issues"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"postcss": "^6.0.1"
+			},
+			"devDependencies": {
+				"babel": "^5.4.7",
+				"babel-eslint": "^7.2.2",
+				"babel-istanbul": "^0.4.0",
+				"babelify": "^7.3.0",
+				"chokidar-cli": "^1.0.1",
+				"codecov.io": "^0.1.2",
+				"coveralls": "^2.11.2",
+				"eslint": "^1.5.0",
+				"mocha": "^3.1.2"
+			},
+			"keywords": [
+				"css-modules",
+				"postcss",
+				"plugin"
+			],
+			"license": "ISC",
+			"files": [
+				"lib"
+			],
+			"maintainers": [
+				{
+					"name": "geelen",
+					"email": "hi@glenmaddern.com"
+				},
+				{
+					"name": "markdalgleish",
+					"email": "mark.john.dalgleish@gmail.com"
+				},
+				{
+					"name": "sokra",
+					"email": "tobias.koppers@googlemail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint src",
+				"build": "babel --out-dir lib src",
+				"watch": "chokidar src -c 'npm run build'",
+				"posttest": "npm run lint && npm run build",
+				"test": "mocha --compilers js:babel/register",
+				"autotest": "chokidar src test -c 'npm test'",
+				"precover": "npm run lint && npm run build",
+				"cover": "babel-istanbul cover node_modules/.bin/_mocha",
+				"travis": "npm run cover -- --report lcovonly",
+				"prepublish": "npm run build"
+			},
+			"lastModified": 0,
+			"_id": "postcss-modules-extract-imports@1.1.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/postcss-modules-extract-imports/-/postcss-modules-extract-imports-1.1.0.tgz",
+				"shasum": "b614c9720be6816eaee35fb3a5faa1dba6a05ddb",
+				"integrity": "sha512-zF9+UIEvtpeqMGxhpeT9XaIevQSrBBCz9fi7SwfkmjVacsSj8DY5eFVgn+wY8I9vvdDDwK5xC8Myq4UkoLFIkA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIF4MKIbARFB6tZolY4ImHUDN5cRAtvyb+7s4h1lDh3geAiEAgWgd72qEI7OXJHVz+77J50br8Bbyx2P4PJMQ4FAEPFk="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "4.1.2",
+			"_npmUser": {
+				"name": "geelen",
+				"email": "hi@glenmaddern.com"
+			},
+			"gitHead": "c2c40a2a4bccaad0545014ae312d48730b922a18",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/postcss-modules-extract-imports-1.1.0.tgz_1495407403404_0.6651193597353995"
+			},
+			"_shasum": "b614c9720be6816eaee35fb3a5faa1dba6a05ddb",
+			"_nodeVersion": "7.6.0",
+			"contributors": []
+		},
+		"1.2.0": {
+			"name": "postcss-modules-extract-imports",
+			"description": "A CSS Modules transform to extract local aliases for inline imports",
+			"version": "1.2.0",
+			"author": {
+				"name": "Glen Maddern"
+			},
+			"homepage": "https://github.com/css-modules/postcss-modules-extract-imports",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/css-modules/postcss-modules-extract-imports.git"
+			},
+			"bugs": {
+				"url": "https://github.com/css-modules/postcss-modules-extract-imports/issues"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"postcss": "^6.0.1"
+			},
+			"devDependencies": {
+				"babel": "^5.4.7",
+				"babel-eslint": "^7.2.2",
+				"babel-istanbul": "^0.4.0",
+				"babelify": "^7.3.0",
+				"chokidar-cli": "^1.0.1",
+				"codecov.io": "^0.1.2",
+				"coveralls": "^2.11.2",
+				"eslint": "^1.5.0",
+				"mocha": "^3.1.2"
+			},
+			"keywords": [
+				"css-modules",
+				"postcss",
+				"plugin"
+			],
+			"license": "ISC",
+			"files": [
+				"lib"
+			],
+			"maintainers": [
+				{
+					"email": "iamhoneyboy@gmail.com",
+					"name": "sullenor"
+				},
+				{
+					"email": "tobias.koppers@googlemail.com",
+					"name": "sokra"
+				},
+				{
+					"email": "mark.john.dalgleish@gmail.com",
+					"name": "markdalgleish"
+				},
+				{
+					"email": "hi@glenmaddern.com",
+					"name": "geelen"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint src",
+				"build": "babel --out-dir lib src",
+				"watch": "chokidar src -c 'npm run build'",
+				"posttest": "npm run lint && npm run build",
+				"test": "mocha --compilers js:babel/register",
+				"autotest": "chokidar src test -c 'npm test'",
+				"precover": "npm run lint && npm run build",
+				"cover": "babel-istanbul cover node_modules/.bin/_mocha",
+				"travis": "npm run cover -- --report lcovonly",
+				"prepublish": "npm run build"
+			},
+			"lastModified": 0,
+			"_id": "postcss-modules-extract-imports@1.2.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/postcss-modules-extract-imports/-/postcss-modules-extract-imports-1.2.0.tgz",
+				"shasum": "66140ecece38ef06bf0d3e355d69bf59d141ea85",
+				"integrity": "sha512-CEHnFsuVww4nEAXdZ1tYBxlhImsNut61PFX4zqi0vXHqE2CckvggCi6llrLjGj2hA1rSHJsibBOdPPxrZLT2KA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIEPlfHwPdcIsRDl1xHeOrpTahIP+ZlUblk4kJ4DOWpgAAiEAw+b0OObcxNaAd5uKmlHnQIcCgCj6Tpa+tXAf5IK9zng="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "4.1.2",
+			"_npmUser": {
+				"name": "sullenor",
+				"email": "iamhoneyboy@gmail.com"
+			},
+			"gitHead": "7f4028cdd764aaa7a1b458567fe1febe555cdcd7",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/postcss-modules-extract-imports-1.2.0.tgz_1495435497746_0.4886398036032915"
+			},
+			"_shasum": "66140ecece38ef06bf0d3e355d69bf59d141ea85",
+			"_nodeVersion": "6.10.0",
+			"contributors": []
+		}
+	},
+	"time": {
+		"0.0.6": "2015-09-13T14:44:15.442Z",
+		"2.0.0": "2018-10-30T12:19:43.243Z",
+		"0.0.4": "2015-06-11T22:18:50.425Z",
+		"0.0.5": "2015-06-18T05:27:59.931Z",
+		"1.0.0-beta1": "2015-08-15T03:13:09.083Z",
+		"created": "2015-05-27T03:39:14.968Z",
+		"1.0.0-beta2": "2015-09-19T15:01:35.014Z",
+		"0.0.2": "2015-05-31T02:44:12.409Z",
+		"0.0.3": "2015-06-07T03:33:48.505Z",
+		"0.0.1": "2015-05-27T03:39:14.968Z",
+		"1.2.1": "2018-10-30T11:22:45.752Z",
+		"3.0.0-rc.3": "2020-10-11T21:15:23.880Z",
+		"3.0.0": "2020-10-13T11:52:59.634Z",
+		"3.0.0-rc.0": "2020-09-21T16:27:00.571Z",
+		"3.0.0-rc.1": "2020-09-22T12:30:16.385Z",
+		"modified": "2024-04-03T13:29:36.187Z",
+		"3.1.0": "2024-04-03T13:29:36.010Z",
+		"1.0.0": "2015-10-21T09:51:58.901Z",
+		"1.0.1": "2016-05-12T08:37:58.203Z",
+		"1.1.0": "2017-05-21T22:56:43.472Z",
+		"1.2.0": "2017-05-22T06:44:58.658Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"next": "3.0.0-rc.3",
+		"beta": "1.0.0-beta1",
+		"latest": "3.1.0"
+	},
+	"_uplinks": {
+		"artifactory-sabadell": {
+			"etag": "780a1bb7f2c439e913a02a78a7255efa46190892",
+			"fetched": 1782459820633
+		}
+	},
+	"_distfiles": {
+		"postcss-modules-extract-imports-0.0.6.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/postcss-modules-extract-imports/-/postcss-modules-extract-imports-0.0.6.tgz",
+			"sha": "a8cccb46b063e87669c9bf5785006a374bd3088c",
+			"registry": "artifactory-sabadell"
+		},
+		"postcss-modules-extract-imports-2.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/postcss-modules-extract-imports/-/postcss-modules-extract-imports-2.0.0.tgz",
+			"sha": "818719a1ae1da325f9832446b01136eeb493cd7e",
+			"registry": "artifactory-sabadell"
+		},
+		"postcss-modules-extract-imports-0.0.4.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/postcss-modules-extract-imports/-/postcss-modules-extract-imports-0.0.4.tgz",
+			"sha": "62bbaefe6e78df99425cd6dd171a4a28119e6746",
+			"registry": "artifactory-sabadell"
+		},
+		"postcss-modules-extract-imports-0.0.5.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/postcss-modules-extract-imports/-/postcss-modules-extract-imports-0.0.5.tgz",
+			"sha": "ccccb40b3dd2985999384a1dba60c62c960a6da0",
+			"registry": "artifactory-sabadell"
+		},
+		"postcss-modules-extract-imports-1.0.0-beta1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/postcss-modules-extract-imports/-/postcss-modules-extract-imports-1.0.0-beta1.tgz",
+			"sha": "c60e428bab9734c4e1ea8da050f73d44ac32739b",
+			"registry": "artifactory-sabadell"
+		},
+		"postcss-modules-extract-imports-1.0.0-beta2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/postcss-modules-extract-imports/-/postcss-modules-extract-imports-1.0.0-beta2.tgz",
+			"sha": "f1d3533eea3fe79dffa97a2371cc916393401dc5",
+			"registry": "artifactory-sabadell"
+		},
+		"postcss-modules-extract-imports-0.0.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/postcss-modules-extract-imports/-/postcss-modules-extract-imports-0.0.2.tgz",
+			"sha": "fb35456954c070033852ff8b68d0dc6a564b9286",
+			"registry": "artifactory-sabadell"
+		},
+		"postcss-modules-extract-imports-0.0.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/postcss-modules-extract-imports/-/postcss-modules-extract-imports-0.0.3.tgz",
+			"sha": "65018fcc6a2f30a9293d60e4a95bd75155222f29",
+			"registry": "artifactory-sabadell"
+		},
+		"postcss-modules-extract-imports-0.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/postcss-modules-extract-imports/-/postcss-modules-extract-imports-0.0.1.tgz",
+			"sha": "5f70f576ea0478833b17d9891735d6ddfbd80b15",
+			"registry": "artifactory-sabadell"
+		},
+		"postcss-modules-extract-imports-1.2.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/postcss-modules-extract-imports/-/postcss-modules-extract-imports-1.2.1.tgz",
+			"sha": "dc87e34148ec7eab5f791f7cd5849833375b741a",
+			"registry": "artifactory-sabadell"
+		},
+		"postcss-modules-extract-imports-3.0.0-rc.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/postcss-modules-extract-imports/-/postcss-modules-extract-imports-3.0.0-rc.3.tgz",
+			"sha": "ea43316e20638f2247a037d536d63b1b54c9c5a9",
+			"registry": "artifactory-sabadell"
+		},
+		"postcss-modules-extract-imports-3.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/postcss-modules-extract-imports/-/postcss-modules-extract-imports-3.0.0.tgz",
+			"sha": "cda1f047c0ae80c97dbe28c3e76a43b88025741d",
+			"registry": "artifactory-sabadell"
+		},
+		"postcss-modules-extract-imports-3.0.0-rc.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/postcss-modules-extract-imports/-/postcss-modules-extract-imports-3.0.0-rc.0.tgz",
+			"sha": "dd3b194e16b56001a59452fc972944037e205501",
+			"registry": "artifactory-sabadell"
+		},
+		"postcss-modules-extract-imports-3.0.0-rc.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/postcss-modules-extract-imports/-/postcss-modules-extract-imports-3.0.0-rc.1.tgz",
+			"sha": "33816ab8975b528885cf878abf13040237ec70f6",
+			"registry": "artifactory-sabadell"
+		},
+		"postcss-modules-extract-imports-3.1.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/postcss-modules-extract-imports/-/postcss-modules-extract-imports-3.1.0.tgz",
+			"sha": "b4497cb85a9c0c4b5aabeb759bb25e8d89f15002",
+			"registry": "artifactory-sabadell"
+		},
+		"postcss-modules-extract-imports-1.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/postcss-modules-extract-imports/-/postcss-modules-extract-imports-1.0.0.tgz",
+			"sha": "5b07f368e350cda6fd5c8844b79123a7bd3e37be",
+			"registry": "artifactory-sabadell"
+		},
+		"postcss-modules-extract-imports-1.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/postcss-modules-extract-imports/-/postcss-modules-extract-imports-1.0.1.tgz",
+			"sha": "8fb3fef9a6dd0420d3f6d4353cf1ff73f2b2a341",
+			"registry": "artifactory-sabadell"
+		},
+		"postcss-modules-extract-imports-1.1.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/postcss-modules-extract-imports/-/postcss-modules-extract-imports-1.1.0.tgz",
+			"sha": "b614c9720be6816eaee35fb3a5faa1dba6a05ddb",
+			"registry": "artifactory-sabadell"
+		},
+		"postcss-modules-extract-imports-1.2.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/postcss-modules-extract-imports/-/postcss-modules-extract-imports-1.2.0.tgz",
+			"sha": "66140ecece38ef06bf0d3e355d69bf59d141ea85",
+			"registry": "artifactory-sabadell"
+		}
+	},
+	"_attachments": {},
+	"_rev": "2-c8b163a42e02bed0",
+	"_id": "postcss-modules-extract-imports",
+	"readme": "# CSS Modules: Extract Imports\n\n[![Build Status](https://travis-ci.org/css-modules/postcss-modules-extract-imports.svg?branch=master)](https://travis-ci.org/css-modules/postcss-modules-extract-imports)\n\nTransforms:\n\n```css\n:local(.continueButton) {\n  composes: button from \"library/button.css\";\n  color: green;\n}\n```\n\ninto:\n\n```css\n:import(\"library/button.css\") {\n  button: __tmp_487387465fczSDGHSABb;\n}\n:local(.continueButton) {\n  composes: __tmp_487387465fczSDGHSABb;\n  color: green;\n}\n```\n\n## Specification\n\n- Only a certain whitelist of properties are inspected. Currently, that whitelist is `['composes']` alone.\n- An extend-import has the following format:\n\n```\ncomposes: className [... className] from \"path/to/file.css\",  className [... className], className [... className] from global;\n```\n\n## Options\n\n- `failOnWrongOrder` `bool` generates exception for unpredictable imports order.\n\n```css\n.aa {\n  composes: b from \"./b.css\";\n  composes: c from \"./c.css\";\n}\n\n.bb {\n  /* \"b.css\" should be before \"c.css\" in this case */\n  composes: c from \"./c.css\";\n  composes: b from \"./b.css\";\n}\n```\n\n## Building\n\n```\nnpm install\nnpm test\n```\n\n[![Build Status](https://travis-ci.org/css-modules/postcss-modules-extract-imports.svg?branch=master)](https://travis-ci.org/css-modules/postcss-modules-extract-imports)\n\n- Lines: [![Coverage Status](https://coveralls.io/repos/css-modules/postcss-modules-extract-imports/badge.svg?branch=master)](https://coveralls.io/r/css-modules/postcss-modules-extract-imports?branch=master)\n- Statements: [![codecov.io](http://codecov.io/github/css-modules/postcss-modules-extract-imports/coverage.svg?branch=master)](http://codecov.io/github/css-modules/postcss-modules-extract-imports?branch=master)\n\n## License\n\nISC\n\n## With thanks\n\n- Mark Dalgleish\n- Tobias Koppers\n- Guy Bedford\n\n---\n\nGlen Maddern, 2015."
+}

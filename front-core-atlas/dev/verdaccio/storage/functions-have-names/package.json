@@ -1,0 +1,661 @@
+{
+	"name": "functions-have-names",
+	"versions": {
+		"1.2.1": {
+			"name": "functions-have-names",
+			"description": "Does this JS environment support the `name` property on functions?",
+			"version": "1.2.1",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/ljharb/functions-have-names#readme",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/ljharb/functions-have-names.git"
+			},
+			"bugs": {
+				"url": "https://github.com/ljharb/functions-have-names/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"@ljharb/eslint-config": "^15.1.0",
+				"auto-changelog": "^1.16.2",
+				"eslint": "^6.8.0",
+				"safe-publish-latest": "^1.1.4",
+				"tape": "^5.0.0-next.4"
+			},
+			"keywords": [
+				"function",
+				"name",
+				"es5",
+				"names",
+				"functions",
+				"ie"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"email": "ljharb@gmail.com",
+					"name": "ljharb"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"prepublish": "safe-publish-latest",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\"",
+				"lint": "eslint .",
+				"pretest": "npm run lint",
+				"tests-only": "node test",
+				"test": "npm run tests-only",
+				"posttest": "npx aud"
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "functions-have-names@1.2.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/functions-have-names/-/functions-have-names-1.2.1.tgz",
+				"shasum": "a981ac397fa0c9964551402cdc5533d7a4d52f91",
+				"integrity": "sha512-j48B/ZI7VKs3sgeI2cZp7WXWmZXu7Iq5pl5/vptV5N2mq+DGFuS/ulaDjtaoLpYzuD6u8UgrUKHfgo7fDTSiBA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQClj0I6kv5trBorY7GxnRSPsqJqYwhJ9CGwiaJd76ZJqgIhAPCNUOYMeJXv/7jyuU+DMpwgGI5UWRr5w71rW0YdNTO0"
+					}
+				]
+			},
+			"_npmVersion": "6.13.4",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "3c35e021f8228fc802f78384ff70a5395bb042d4",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/functions-have-names_1.2.1_1579491998400_0.998646132034126"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false
+			},
+			"_nodeVersion": "13.6.0",
+			"contributors": []
+		},
+		"1.2.2": {
+			"name": "functions-have-names",
+			"description": "Does this JS environment support the `name` property on functions?",
+			"version": "1.2.2",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/inspect-js/functions-have-names#readme",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/inspect-js/functions-have-names.git"
+			},
+			"bugs": {
+				"url": "https://github.com/inspect-js/functions-have-names/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"@ljharb/eslint-config": "^17.3.0",
+				"aud": "^1.1.3",
+				"auto-changelog": "^2.2.1",
+				"eslint": "^7.15.0",
+				"nyc": "^10.3.2",
+				"safe-publish-latest": "^1.1.4",
+				"tape": "^5.0.1"
+			},
+			"keywords": [
+				"function",
+				"name",
+				"es5",
+				"names",
+				"functions",
+				"ie"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"prepublish": "safe-publish-latest",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\"",
+				"lint": "eslint --ext=js,mjs .",
+				"pretest": "npm run lint",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"test": "npm run tests-only",
+				"posttest": "aud --production"
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "functions-have-names@1.2.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/functions-have-names/-/functions-have-names-1.2.2.tgz",
+				"shasum": "98d93991c39da9361f8e50b337c4f6e41f120e21",
+				"integrity": "sha512-bLgc3asbWdwPbx2mNk2S49kmJCuQeu0nfmaOgbs8WIyzzkw3r4htszdIi9Q9EMezDPTYuJx2wvjZ/EwgAthpnA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQD8QcKu5eIYNDzzipTaG2uytZMXzqIpEtvBDTp7KeZonQIgdpMZyJkLM0sChy6+KwJZCcFeYYVWsN9XT0JCad+fzMs="
+					}
+				]
+			},
+			"_npmVersion": "6.14.8",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "4e0c4904d5eb99d7b30b371371c890a3d92de20a",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/functions-have-names_1.2.2_1607985409732_0.44451598576801743"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false,
+				"hideCredit": true
+			},
+			"_nodeVersion": "14.15.1",
+			"contributors": []
+		},
+		"1.2.3": {
+			"name": "functions-have-names",
+			"description": "Does this JS environment support the `name` property on functions?",
+			"version": "1.2.3",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/inspect-js/functions-have-names#readme",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/inspect-js/functions-have-names.git"
+			},
+			"bugs": {
+				"url": "https://github.com/inspect-js/functions-have-names/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"@ljharb/eslint-config": "^21.0.0",
+				"aud": "^2.0.0",
+				"auto-changelog": "^2.4.0",
+				"eslint": "=8.8.0",
+				"nyc": "^10.3.2",
+				"safe-publish-latest": "^2.0.0",
+				"tape": "^5.5.3"
+			},
+			"keywords": [
+				"function",
+				"name",
+				"es5",
+				"names",
+				"functions",
+				"ie"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"prepublish": "not-in-publish || npm run prepublishOnly",
+				"prepublishOnly": "safe-publish-latest",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\"",
+				"lint": "eslint --ext=js,mjs .",
+				"pretest": "npm run lint",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"test": "npm run tests-only",
+				"posttest": "aud --production"
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "functions-have-names@1.2.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/functions-have-names/-/functions-have-names-1.2.3.tgz",
+				"shasum": "0404fe4ee2ba2f607f0e0ec3c80bae994133b834",
+				"integrity": "sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDnNp/V0tmDq952jUbzEnl3RCpwvV0Aw2N8ZioeAsEDNQIgA2sElx2n7sVxNBIG28fgIJet38VpATyI7ATWHiy8P+k="
+					}
+				]
+			},
+			"_npmVersion": "8.3.1",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "3ac881daaf2066bff7c422fd606271f4976efa8f",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/functions-have-names_1.2.3_1650390293261_0.17004319693476"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false,
+				"hideCredit": true
+			},
+			"_nodeVersion": "17.9.0",
+			"contributors": []
+		},
+		"1.0.0": {
+			"name": "functions-have-names",
+			"description": "Does this JS environment support the `name` property on functions?",
+			"version": "1.0.0",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/ljharb/functions-have-names#readme",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/ljharb/functions-have-names.git"
+			},
+			"bugs": {
+				"url": "https://github.com/ljharb/functions-have-names/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"@ljharb/eslint-config": "^13.1.1",
+				"auto-changelog": "^1.14.1",
+				"eslint": "^5.16.0",
+				"tape": "^4.11.0"
+			},
+			"keywords": [
+				"function",
+				"name",
+				"es5",
+				"names",
+				"functions",
+				"ie"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\"",
+				"lint": "eslint .",
+				"pretest": "npm run lint",
+				"tests-only": "node test",
+				"test": "npm run tests-only",
+				"posttest": "npx aud"
+			},
+			"lastModified": 0,
+			"_id": "functions-have-names@1.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/functions-have-names/-/functions-have-names-1.0.0.tgz",
+				"shasum": "883f3295f82d311e7d66fde96c8b00c93ed64c7c",
+				"integrity": "sha512-Kj/Lkj0QrXGtgxXuHRdRTj1YYL+NJ/WDJak0PAPWwGetWRvyW0db5s7mBRlzMUHNCQrIRkMAous5qngB5K3cmw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIBeKQJqmyQ8hgp27BMKh8XZxL5+H4j82yfgr6+rFmCCgAiBtqK+5ThttKqoPkJRebEn7SezU8QN4qStnQvujoe4fMA=="
+					}
+				]
+			},
+			"_npmVersion": "6.9.0",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "836819cbfe022801a63c05152ee6b01b7cfa63e2",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/functions-have-names_1.0.0_1563863422598_0.9162368257567872"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false
+			},
+			"_nodeVersion": "12.6.0",
+			"contributors": []
+		},
+		"1.1.0": {
+			"name": "functions-have-names",
+			"description": "Does this JS environment support the `name` property on functions?",
+			"version": "1.1.0",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/ljharb/functions-have-names#readme",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/ljharb/functions-have-names.git"
+			},
+			"bugs": {
+				"url": "https://github.com/ljharb/functions-have-names/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"@ljharb/eslint-config": "^13.1.1",
+				"auto-changelog": "^1.14.1",
+				"eslint": "^5.16.0",
+				"tape": "^4.11.0"
+			},
+			"keywords": [
+				"function",
+				"name",
+				"es5",
+				"names",
+				"functions",
+				"ie"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\"",
+				"lint": "eslint .",
+				"pretest": "npm run lint",
+				"tests-only": "node test",
+				"test": "npm run tests-only",
+				"posttest": "npx aud"
+			},
+			"lastModified": 0,
+			"_id": "functions-have-names@1.1.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/functions-have-names/-/functions-have-names-1.1.0.tgz",
+				"shasum": "ed5ed6a574ff6acd6d8f3a9181d35fcd6abbd2fb",
+				"integrity": "sha512-JybK7HbxvvEaphOTDs46DTo4erQ0SWwBwSIHfEsCjKcIHAQk3z7HvGTSIWeJPuHgjN9S39Kh3aXsJKVIQ7zy0A==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDfoohnSXaHNCQXWgeSe6S4RVo3FniCMioLd6X7ZRm9+AIgBam5W9eVH8TuDaL8wBCpW6gzCCthiOjWDkG+ARSQisE="
+					}
+				]
+			},
+			"_npmVersion": "6.9.0",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "12a3d1c38a18efe8d4b373a8d240512465f5fb23",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/functions-have-names_1.1.0_1563904928955_0.259192563162733"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false
+			},
+			"_nodeVersion": "12.6.0",
+			"contributors": []
+		},
+		"1.1.1": {
+			"name": "functions-have-names",
+			"description": "Does this JS environment support the `name` property on functions?",
+			"version": "1.1.1",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/ljharb/functions-have-names#readme",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/ljharb/functions-have-names.git"
+			},
+			"bugs": {
+				"url": "https://github.com/ljharb/functions-have-names/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"@ljharb/eslint-config": "^13.1.1",
+				"auto-changelog": "^1.14.1",
+				"eslint": "^5.16.0",
+				"tape": "^4.11.0"
+			},
+			"keywords": [
+				"function",
+				"name",
+				"es5",
+				"names",
+				"functions",
+				"ie"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\"",
+				"lint": "eslint .",
+				"pretest": "npm run lint",
+				"tests-only": "node test",
+				"test": "npm run tests-only",
+				"posttest": "npx aud"
+			},
+			"lastModified": 0,
+			"_id": "functions-have-names@1.1.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/functions-have-names/-/functions-have-names-1.1.1.tgz",
+				"shasum": "79d35927f07b8e7103d819fed475b64ccf7225ea",
+				"integrity": "sha512-U0kNHUoxwPNPWOJaMG7Z00d4a/qZVrFtzWJRaK8V9goaVOCXBSQSJpt3MYGNtkScKEBKovxLjnNdC9MlXwo5Pw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIFHe1GSNAHvTEiyrWWsyuguS8xz9gUdFHLI306lpAIg3AiBiR+PTtjjLKlpMHxFz8mFNv6ygnYXFTmAXyrP3dhAL8w=="
+					}
+				]
+			},
+			"_npmVersion": "6.10.0",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "1dd3b0103a84eabc11992bd0ec4fe8598c729530",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/functions-have-names_1.1.1_1564003549701_0.20301168907471645"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false
+			},
+			"_nodeVersion": "12.7.0",
+			"contributors": []
+		},
+		"1.2.0": {
+			"name": "functions-have-names",
+			"description": "Does this JS environment support the `name` property on functions?",
+			"version": "1.2.0",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/ljharb/functions-have-names#readme",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/ljharb/functions-have-names.git"
+			},
+			"bugs": {
+				"url": "https://github.com/ljharb/functions-have-names/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"@ljharb/eslint-config": "^14.1.0",
+				"auto-changelog": "^1.16.1",
+				"eslint": "^6.5.1",
+				"tape": "^4.11.0"
+			},
+			"keywords": [
+				"function",
+				"name",
+				"es5",
+				"names",
+				"functions",
+				"ie"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"email": "ljharb@gmail.com",
+					"name": "ljharb"
+				},
+				{
+					"email": "substack@gmail.com",
+					"name": "substack"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\"",
+				"lint": "eslint .",
+				"pretest": "npm run lint",
+				"tests-only": "node test",
+				"test": "npm run tests-only",
+				"posttest": "npx aud"
+			},
+			"lastModified": 0,
+			"_id": "functions-have-names@1.2.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/functions-have-names/-/functions-have-names-1.2.0.tgz",
+				"shasum": "83da7583e4ea0c9ac5ff530f73394b033e0bf77d",
+				"integrity": "sha512-zKXyzksTeaCSw5wIX79iCA40YAa6CJMJgNg9wdkU/ERBrIdPSimPICYiLp65lRbSBqtiHql/HZfS2DyI/AH6tQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDHGSaJxBEODvRxKwITYTyF+/s2URjcvkFTUsKaPFFlsAIhANqlzCbLqnsFBVj67vX+Ju8A7ekLbn8JPawb/6uAxHil"
+					}
+				]
+			},
+			"_npmVersion": "6.11.3",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "bd0dfeaaeac821d7d35c48d5401f3fe035ad3bf0",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/functions-have-names_1.2.0_1571640958974_0.3953173595085666"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false
+			},
+			"_nodeVersion": "12.12.0",
+			"contributors": []
+		}
+	},
+	"time": {
+		"1.2.1": "2020-01-20T03:46:38.570Z",
+		"1.2.2": "2020-12-14T22:36:49.892Z",
+		"1.2.3": "2022-04-19T17:44:53.457Z",
+		"created": "2019-07-23T06:30:22.597Z",
+		"modified": "2023-07-12T19:05:02.835Z",
+		"1.0.0": "2019-07-23T06:30:22.741Z",
+		"1.1.0": "2019-07-23T18:02:09.061Z",
+		"1.1.1": "2019-07-24T21:25:50.114Z",
+		"1.2.0": "2019-10-21T06:55:59.086Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "1.2.3"
+	},
+	"_uplinks": {
+		"artifactory-sabadell": {
+			"etag": "82391a4cc999264b480816a430fb2207dab7c41f",
+			"fetched": 1782459826722
+		}
+	},
+	"_distfiles": {
+		"functions-have-names-1.2.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/functions-have-names/-/functions-have-names-1.2.1.tgz",
+			"sha": "a981ac397fa0c9964551402cdc5533d7a4d52f91",
+			"registry": "artifactory-sabadell"
+		},
+		"functions-have-names-1.2.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/functions-have-names/-/functions-have-names-1.2.2.tgz",
+			"sha": "98d93991c39da9361f8e50b337c4f6e41f120e21",
+			"registry": "artifactory-sabadell"
+		},
+		"functions-have-names-1.2.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/functions-have-names/-/functions-have-names-1.2.3.tgz",
+			"sha": "0404fe4ee2ba2f607f0e0ec3c80bae994133b834",
+			"registry": "artifactory-sabadell"
+		},
+		"functions-have-names-1.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/functions-have-names/-/functions-have-names-1.0.0.tgz",
+			"sha": "883f3295f82d311e7d66fde96c8b00c93ed64c7c",
+			"registry": "artifactory-sabadell"
+		},
+		"functions-have-names-1.1.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/functions-have-names/-/functions-have-names-1.1.0.tgz",
+			"sha": "ed5ed6a574ff6acd6d8f3a9181d35fcd6abbd2fb",
+			"registry": "artifactory-sabadell"
+		},
+		"functions-have-names-1.1.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/functions-have-names/-/functions-have-names-1.1.1.tgz",
+			"sha": "79d35927f07b8e7103d819fed475b64ccf7225ea",
+			"registry": "artifactory-sabadell"
+		},
+		"functions-have-names-1.2.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/functions-have-names/-/functions-have-names-1.2.0.tgz",
+			"sha": "83da7583e4ea0c9ac5ff530f73394b033e0bf77d",
+			"registry": "artifactory-sabadell"
+		}
+	},
+	"_attachments": {},
+	"_rev": "1-d7ef6303aad4b6bb",
+	"_id": "functions-have-names",
+	"readme": "# functions-have-names <sup>[![Version Badge][npm-version-svg]][package-url]</sup>\n\n[![github actions][actions-image]][actions-url]\n[![coverage][codecov-image]][codecov-url]\n[![dependency status][deps-svg]][deps-url]\n[![dev dependency status][dev-deps-svg]][dev-deps-url]\n[![License][license-image]][license-url]\n[![Downloads][downloads-image]][downloads-url]\n\n[![npm badge][npm-badge-png]][package-url]\n\nDoes this JS environment support the `name` property on functions?\n\n## Example\n\n```js\nvar functionsHaveNames = require('functions-have-names');\nvar assert = require('assert');\n\nassert.equal(functionsHaveNames(), true); // will be `false` in IE 6-8\n```\n\n## Tests\nSimply clone the repo, `npm install`, and run `npm test`\n\n[package-url]: https://npmjs.org/package/functions-have-names\n[npm-version-svg]: https://versionbadg.es/inspect-js/functions-have-names.svg\n[deps-svg]: https://david-dm.org/inspect-js/functions-have-names.svg\n[deps-url]: https://david-dm.org/inspect-js/functions-have-names\n[dev-deps-svg]: https://david-dm.org/inspect-js/functions-have-names/dev-status.svg\n[dev-deps-url]: https://david-dm.org/inspect-js/functions-have-names#info=devDependencies\n[npm-badge-png]: https://nodei.co/npm/functions-have-names.png?downloads=true&stars=true\n[license-image]: https://img.shields.io/npm/l/functions-have-names.svg\n[license-url]: LICENSE\n[downloads-image]: https://img.shields.io/npm/dm/functions-have-names.svg\n[downloads-url]: https://npm-stat.com/charts.html?package=functions-have-names\n[codecov-image]: https://codecov.io/gh/inspect-js/functions-have-names/branch/main/graphs/badge.svg\n[codecov-url]: https://app.codecov.io/gh/inspect-js/functions-have-names/\n[actions-image]: https://img.shields.io/endpoint?url=https://github-actions-badge-u3jn4tfpocch.runkit.sh/inspect-js/functions-have-names\n[actions-url]: https://github.com/inspect-js/functions-have-names/actions"
+}

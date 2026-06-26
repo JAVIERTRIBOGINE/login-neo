@@ -1,0 +1,97 @@
+{
+	"name": "unpipe",
+	"versions": {
+		"1.0.0": {
+			"name": "unpipe",
+			"description": "Unpipe a stream from all destinations",
+			"version": "1.0.0",
+			"author": {
+				"name": "Douglas Christopher Wilson",
+				"email": "doug@somethingdoug.com"
+			},
+			"homepage": "https://github.com/stream-utils/unpipe",
+			"repository": {
+				"url": "https://github.com/stream-utils/unpipe",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/stream-utils/unpipe/issues"
+			},
+			"engines": {
+				"node": ">= 0.8"
+			},
+			"devDependencies": {
+				"mocha": "2.2.5",
+				"istanbul": "0.3.15",
+				"readable-stream": "1.1.13"
+			},
+			"license": "MIT",
+			"files": [
+				"HISTORY.md",
+				"LICENSE",
+				"README.md",
+				"index.js"
+			],
+			"maintainers": [
+				{
+					"name": "dougwilson",
+					"email": "doug@somethingdoug.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "mocha --reporter spec --bail --check-leaks test/",
+				"test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot --check-leaks test/",
+				"test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks test/"
+			},
+			"lastModified": 0,
+			"_id": "unpipe@1.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/unpipe/-/unpipe-1.0.0.tgz",
+				"shasum": "b2bf4ee8514aae6165b4817829d21b2ef49904ec",
+				"integrity": "sha512-pjy2bYhSsufwWlKwPc+l3cN7+wuJlK6uz0YdJEOlQDbl6jo/YlPi4mb8agUkVC8BF7V8NuzeyPNqRksA3hztKQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCpHTDHxnotr5w+1aU3oaIHKAxwWRTz9kK5GCVBEr+AVQIgKFywOVOCTQZagzU6GZnJ7osVKEcYBRle7WxR5cEns6U="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "1.4.28",
+			"_npmUser": {
+				"name": "dougwilson",
+				"email": "doug@somethingdoug.com"
+			},
+			"gitHead": "d2df901c06487430e78dca62b6edb8bb2fc5e99d",
+			"_shasum": "b2bf4ee8514aae6165b4817829d21b2ef49904ec",
+			"contributors": []
+		}
+	},
+	"time": {
+		"created": "2015-06-14T20:30:19.934Z",
+		"modified": "2026-02-03T04:12:37.504Z",
+		"1.0.0": "2015-06-14T20:30:19.934Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "1.0.0"
+	},
+	"_uplinks": {
+		"artifactory-sabadell": {
+			"etag": "501270de59c3af106295ac01b7422fdce524ecfb",
+			"fetched": 1782459821574
+		}
+	},
+	"_distfiles": {
+		"unpipe-1.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/unpipe/-/unpipe-1.0.0.tgz",
+			"sha": "b2bf4ee8514aae6165b4817829d21b2ef49904ec",
+			"registry": "artifactory-sabadell"
+		}
+	},
+	"_attachments": {},
+	"_rev": "1-a225f164b9205835",
+	"_id": "unpipe",
+	"readme": "# unpipe\n\n[![NPM Version][npm-image]][npm-url]\n[![NPM Downloads][downloads-image]][downloads-url]\n[![Node.js Version][node-image]][node-url]\n[![Build Status][travis-image]][travis-url]\n[![Test Coverage][coveralls-image]][coveralls-url]\n\nUnpipe a stream from all destinations.\n\n## Installation\n\n```sh\n$ npm install unpipe\n```\n\n## API\n\n```js\nvar unpipe = require('unpipe')\n```\n\n### unpipe(stream)\n\nUnpipes all destinations from a given stream. With stream 2+, this is\nequivalent to `stream.unpipe()`. When used with streams 1 style streams\n(typically Node.js 0.8 and below), this module attempts to undo the\nactions done in `stream.pipe(dest)`.\n\n## License\n\n[MIT](LICENSE)\n\n[npm-image]: https://img.shields.io/npm/v/unpipe.svg\n[npm-url]: https://npmjs.org/package/unpipe\n[node-image]: https://img.shields.io/node/v/unpipe.svg\n[node-url]: http://nodejs.org/download/\n[travis-image]: https://img.shields.io/travis/stream-utils/unpipe.svg\n[travis-url]: https://travis-ci.org/stream-utils/unpipe\n[coveralls-image]: https://img.shields.io/coveralls/stream-utils/unpipe.svg\n[coveralls-url]: https://coveralls.io/r/stream-utils/unpipe?branch=master\n[downloads-image]: https://img.shields.io/npm/dm/unpipe.svg\n[downloads-url]: https://npmjs.org/package/unpipe"
+}

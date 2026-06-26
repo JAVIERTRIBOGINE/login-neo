@@ -1,0 +1,841 @@
+{
+	"name": "npm-normalize-package-bin",
+	"versions": {
+		"2.0.0": {
+			"name": "npm-normalize-package-bin",
+			"description": "Turn any flavor of allowable package.json bin into a normalized object",
+			"version": "2.0.0",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/npm-normalize-package-bin#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/npm-normalize-package-bin.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-normalize-package-bin/issues"
+			},
+			"engines": {
+				"node": "^12.13.0 || ^14.15.0 || >=16.0.0"
+			},
+			"main": "lib/index.js",
+			"devDependencies": {
+				"tap": "^16.3.0",
+				"@npmcli/template-oss": "3.5.0",
+				"@npmcli/eslint-config": "^3.1.0"
+			},
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "fritzy",
+					"email": "fritzy@github.com"
+				},
+				{
+					"name": "darcyclarke",
+					"email": "darcy@darcyclarke.me"
+				},
+				{
+					"name": "nlf",
+					"email": "quitlahok@gmail.com"
+				},
+				{
+					"name": "gar",
+					"email": "gar+npm@danger.computer"
+				},
+				{
+					"name": "lukekarrys",
+					"email": "luke@lukekarrys.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint \"**/*.js\"",
+				"snap": "tap",
+				"test": "tap",
+				"lintfix": "npm run lint -- --fix",
+				"postlint": "template-oss-check",
+				"posttest": "npm run lint",
+				"preversion": "npm test",
+				"postpublish": "git push origin --follow-tags",
+				"postversion": "npm publish",
+				"prepublishOnly": "git push origin --follow-tags",
+				"template-oss-apply": "template-oss-apply --force"
+			},
+			"lastModified": 0,
+			"_id": "npm-normalize-package-bin@2.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-normalize-package-bin/-/npm-normalize-package-bin-2.0.0.tgz",
+				"shasum": "9447a1adaaf89d8ad0abe24c6c84ad614a675fff",
+				"integrity": "sha512-awzfKUO7v0FscrSpRoogyNm0sajikhBWpU0QMrW09AMi9n1PoKU6WaIqUzuJSQnpciZZmJ/jMZ2Egfmb/9LiWQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQD+1CvbArG7F5AvTsnF1r5rBcsCiuIvFFykvv1+jRVynwIhAM/3Cntav+kmZMWtG+2h2nU4XShT63mwBrUhApavsah+"
+					}
+				]
+			},
+			"_npmVersion": "8.18.0",
+			"_npmUser": {
+				"name": "lukekarrys",
+				"email": "luke@lukekarrys.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "3a177d6b0d0063855612510c81ff9e2191517cde",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-normalize-package-bin_2.0.0_1661209218971_0.8074207735827665",
+				"host": "s3://npm-registry-packages"
+			},
+			"templateOSS": {
+				"version": "3.5.0",
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+			},
+			"_nodeVersion": "18.7.0",
+			"contributors": []
+		},
+		"3.0.0": {
+			"name": "npm-normalize-package-bin",
+			"description": "Turn any flavor of allowable package.json bin into a normalized object",
+			"version": "3.0.0",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/npm-normalize-package-bin#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/npm-normalize-package-bin.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-normalize-package-bin/issues"
+			},
+			"engines": {
+				"node": "^14.17.0 || ^16.13.0 || >=18.0.0"
+			},
+			"main": "lib/index.js",
+			"devDependencies": {
+				"tap": "^16.3.0",
+				"@npmcli/template-oss": "4.5.1",
+				"@npmcli/eslint-config": "^3.1.0"
+			},
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "fritzy",
+					"email": "fritzy@github.com"
+				},
+				{
+					"name": "darcyclarke",
+					"email": "darcy@darcyclarke.me"
+				},
+				{
+					"name": "nlf",
+					"email": "quitlahok@gmail.com"
+				},
+				{
+					"name": "gar",
+					"email": "gar+npm@danger.computer"
+				},
+				{
+					"name": "lukekarrys",
+					"email": "luke@lukekarrys.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint \"**/*.js\"",
+				"snap": "tap",
+				"test": "tap",
+				"lintfix": "npm run lint -- --fix",
+				"postlint": "template-oss-check",
+				"posttest": "npm run lint",
+				"template-oss-apply": "template-oss-apply --force"
+			},
+			"lastModified": 0,
+			"_id": "npm-normalize-package-bin@3.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-normalize-package-bin/-/npm-normalize-package-bin-3.0.0.tgz",
+				"shasum": "6097436adb4ef09e2628b59a7882576fe53ce485",
+				"integrity": "sha512-g+DPQSkusnk7HYXr75NtzkIP4+N81i3RPsGFidF3DzHd9MT9wWngmqoeg/fnHFz5MNdtG4w03s+QnhewSLTT2Q==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIAhzM69+X31xwewwXz2emgnA+FG0ztzfxLINpisac412AiBgJyEqhNZiMMK140+F4qPZByvpjvVooUknqJIQCLeDtQ=="
+					}
+				]
+			},
+			"_npmVersion": "8.19.2",
+			"_npmUser": {
+				"name": "lukekarrys",
+				"email": "luke@lukekarrys.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "f3db0cf9c67c5446b84d13052da0437f212e3f87",
+			"tap": {
+				"nyc-arg": [
+					"--exclude",
+					"tap-snapshots/**"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-normalize-package-bin_3.0.0_1665724991246_0.4581128291666525",
+				"host": "s3://npm-registry-packages"
+			},
+			"templateOSS": {
+				"version": "4.5.1",
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+			},
+			"_nodeVersion": "18.10.0",
+			"contributors": []
+		},
+		"6.0.0": {
+			"name": "npm-normalize-package-bin",
+			"description": "Turn any flavor of allowable package.json bin into a normalized object",
+			"version": "6.0.0",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/npm-normalize-package-bin#readme",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/npm/npm-normalize-package-bin.git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-normalize-package-bin/issues"
+			},
+			"engines": {
+				"node": "^22.22.2 || ^24.15.0 || >=26.0.0"
+			},
+			"main": "lib/index.js",
+			"devDependencies": {
+				"@npmcli/eslint-config": "^6.0.0",
+				"@npmcli/template-oss": "5.0.0"
+			},
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "saquibkhan",
+					"email": "saquibkhan@github.com"
+				},
+				{
+					"name": "npm-cli-ops",
+					"email": "npm-cli+bot@github.com"
+				},
+				{
+					"name": "reggi",
+					"email": "reggi@github.com"
+				},
+				{
+					"name": "owlstronaut",
+					"email": "owlstronaut@github.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "node --test './test/**/*.js'",
+				"snap": "node --test --test-update-snapshots './test/**/*.js'",
+				"lint": "npm run eslint",
+				"postlint": "template-oss-check",
+				"template-oss-apply": "template-oss-apply --force",
+				"lintfix": "npm run eslint -- --fix",
+				"posttest": "npm run lint",
+				"eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
+				"test:node20": "node --test test",
+				"test:cover": "node --test --experimental-test-coverage --test-timeout=3000 --test-coverage-lines=100 --test-coverage-functions=100 --test-coverage-branches=100 './test/**/*.js'"
+			},
+			"lastModified": 0,
+			"_id": "npm-normalize-package-bin@6.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-normalize-package-bin/-/npm-normalize-package-bin-6.0.0.tgz",
+				"shasum": "d8cc44d7a9eff2a2a210e9b2442edf3824f2d227",
+				"integrity": "sha512-tdt4aFn9QamlhdN3HV2D2ccpBwO5/fyjjbXUxYA6uBjyekMZcZvDq0aSj9t5Jo+tih6AYFnt/cuIRn9013e0Uw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEYCIQCY46VXO2yQSNSeMB1l2eiGSLdhVU31ADobAWPJMzPvewIhALcoPJa/uXMzgL71haeNJDAC7dVSMHnzS7BuKYcHMvcd"
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/npm-normalize-package-bin@6.0.0",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "11.14.1",
+			"_npmUser": {
+				"name": "GitHub Actions",
+				"email": "npm-oidc-no-reply@github.com",
+				"trustedPublisher": {
+					"id": "github",
+					"oidcConfigId": "oidc:9a591f63-bc8a-425c-9108-47a93896d563"
+				}
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "71889f9ae83125e03de04bd16a8a63843121fde8",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages-npm-production",
+				"tmp": "tmp/npm-normalize-package-bin_6.0.0_1778265304672_0.18698455528804092"
+			},
+			"templateOSS": {
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten.",
+				"version": "5.0.0",
+				"publish": "true",
+				"testRunner": "node:test",
+				"latestCiVersion": 24
+			},
+			"_nodeVersion": "26.1.0",
+			"contributors": []
+		},
+		"5.0.0": {
+			"name": "npm-normalize-package-bin",
+			"description": "Turn any flavor of allowable package.json bin into a normalized object",
+			"version": "5.0.0",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/npm-normalize-package-bin#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/npm-normalize-package-bin.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-normalize-package-bin/issues"
+			},
+			"engines": {
+				"node": "^20.17.0 || >=22.9.0"
+			},
+			"main": "lib/index.js",
+			"devDependencies": {
+				"tap": "^16.3.0",
+				"@npmcli/template-oss": "4.27.1",
+				"@npmcli/eslint-config": "^5.0.0"
+			},
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "gar",
+					"email": "gar+npm@danger.computer"
+				},
+				{
+					"name": "saquibkhan",
+					"email": "saquibkhan@github.com"
+				},
+				{
+					"name": "npm-cli-ops",
+					"email": "npm-cli+bot@github.com"
+				},
+				{
+					"name": "reggi",
+					"email": "reggi@github.com"
+				},
+				{
+					"name": "hashtagchris",
+					"email": "hashtagchris@github.com"
+				},
+				{
+					"name": "owlstronaut",
+					"email": "owlstronaut@github.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "npm run eslint",
+				"snap": "tap",
+				"test": "tap",
+				"eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
+				"lintfix": "npm run eslint -- --fix",
+				"postlint": "template-oss-check",
+				"posttest": "npm run lint",
+				"template-oss-apply": "template-oss-apply --force"
+			},
+			"lastModified": 0,
+			"_id": "npm-normalize-package-bin@5.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-normalize-package-bin/-/npm-normalize-package-bin-5.0.0.tgz",
+				"shasum": "2b207ff260f2e525ddce93356614e2f736728f89",
+				"integrity": "sha512-CJi3OS4JLsNMmr2u07OJlhcrPxCeOeP/4xq67aWNai6TNWWbTrlNDgl8NcFKVlcBKp18GPj+EzbNIgrBfZhsag==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEYCIQC6+UxOC43dfSVmHwzMViTvDBJFi8JRJB19/NWGwfmQ6gIhAIiV6QFGTa5UKKh5fpdxeZ5Ziq4cDTVgOuff0cvgwPl6"
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/npm-normalize-package-bin@5.0.0",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "11.6.2",
+			"_npmUser": {
+				"name": "GitHub Actions",
+				"email": "npm-oidc-no-reply@github.com",
+				"trustedPublisher": {
+					"id": "github",
+					"oidcConfigId": "oidc:9a591f63-bc8a-425c-9108-47a93896d563"
+				}
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "c766b99440e11de15fa842d82fbc4fc653853b38",
+			"tap": {
+				"nyc-arg": [
+					"--exclude",
+					"tap-snapshots/**"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-normalize-package-bin_5.0.0_1761147059376_0.7461613959039268",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"templateOSS": {
+				"publish": "true",
+				"version": "4.27.1",
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+			},
+			"_nodeVersion": "22.20.0",
+			"contributors": []
+		},
+		"4.0.0": {
+			"name": "npm-normalize-package-bin",
+			"description": "Turn any flavor of allowable package.json bin into a normalized object",
+			"version": "4.0.0",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/npm-normalize-package-bin#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/npm-normalize-package-bin.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-normalize-package-bin/issues"
+			},
+			"engines": {
+				"node": "^18.17.0 || >=20.5.0"
+			},
+			"main": "lib/index.js",
+			"devDependencies": {
+				"tap": "^16.3.0",
+				"@npmcli/template-oss": "4.23.3",
+				"@npmcli/eslint-config": "^5.0.0"
+			},
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "hashtagchris",
+					"email": "hashtagchris@github.com"
+				},
+				{
+					"name": "reggi",
+					"email": "reggi@github.com"
+				},
+				{
+					"name": "npm-cli-ops",
+					"email": "npm-cli+bot@github.com"
+				},
+				{
+					"name": "saquibkhan",
+					"email": "saquibkhan@github.com"
+				},
+				{
+					"name": "fritzy",
+					"email": "fritzy@github.com"
+				},
+				{
+					"name": "gar",
+					"email": "gar+npm@danger.computer"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "npm run eslint",
+				"snap": "tap",
+				"test": "tap",
+				"eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
+				"lintfix": "npm run eslint -- --fix",
+				"postlint": "template-oss-check",
+				"posttest": "npm run lint",
+				"template-oss-apply": "template-oss-apply --force"
+			},
+			"lastModified": 0,
+			"_id": "npm-normalize-package-bin@4.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-normalize-package-bin/-/npm-normalize-package-bin-4.0.0.tgz",
+				"shasum": "df79e70cd0a113b77c02d1fe243c96b8e618acb1",
+				"integrity": "sha512-TZKxPvItzai9kN9H/TkmCtx/ZN/hvr3vUycjlfmH0ootY9yFBzNOpiXAdIn1Iteqsvk4lQn6B5PTrt+n6h8k/w==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIBheboNvkKscyqapzTzy7a92JNSoVPO9M5jDkMDXFuf/AiBQ56LQZE32ZSrHfwdIv13qZdkvGDrKJ9FHmwB/9SpB0Q=="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/npm-normalize-package-bin@4.0.0",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "10.8.3",
+			"_npmUser": {
+				"name": "npm-cli-ops",
+				"email": "npm-cli+bot@github.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "4594c6855a937f2d1296fe5b61adf318a9bf529b",
+			"tap": {
+				"nyc-arg": [
+					"--exclude",
+					"tap-snapshots/**"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-normalize-package-bin_4.0.0_1725495569017_0.7050804973997362",
+				"host": "s3://npm-registry-packages"
+			},
+			"templateOSS": {
+				"publish": "true",
+				"version": "4.23.3",
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+			},
+			"_nodeVersion": "22.8.0",
+			"contributors": []
+		},
+		"3.0.1": {
+			"name": "npm-normalize-package-bin",
+			"description": "Turn any flavor of allowable package.json bin into a normalized object",
+			"version": "3.0.1",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/npm-normalize-package-bin#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/npm-normalize-package-bin.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-normalize-package-bin/issues"
+			},
+			"engines": {
+				"node": "^14.17.0 || ^16.13.0 || >=18.0.0"
+			},
+			"main": "lib/index.js",
+			"devDependencies": {
+				"tap": "^16.3.0",
+				"@npmcli/template-oss": "4.14.1",
+				"@npmcli/eslint-config": "^4.0.0"
+			},
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "npm-cli-ops",
+					"email": "npm-cli+bot@github.com"
+				},
+				{
+					"name": "saquibkhan",
+					"email": "saquibkhan@github.com"
+				},
+				{
+					"name": "fritzy",
+					"email": "fritzy@github.com"
+				},
+				{
+					"name": "nlf",
+					"email": "quitlahok@gmail.com"
+				},
+				{
+					"name": "gar",
+					"email": "gar+npm@danger.computer"
+				},
+				{
+					"name": "lukekarrys",
+					"email": "luke@lukekarrys.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint \"**/*.js\"",
+				"snap": "tap",
+				"test": "tap",
+				"lintfix": "npm run lint -- --fix",
+				"postlint": "template-oss-check",
+				"posttest": "npm run lint",
+				"template-oss-apply": "template-oss-apply --force"
+			},
+			"lastModified": 0,
+			"_id": "npm-normalize-package-bin@3.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-normalize-package-bin/-/npm-normalize-package-bin-3.0.1.tgz",
+				"shasum": "25447e32a9a7de1f51362c61a559233b89947832",
+				"integrity": "sha512-dMxCf+zZ+3zeQZXKxmyuCKlIDPGuv8EF940xbkC4kQVDTtqoh6rJFO+JTKSA6/Rwi0getWmtuy4Itup0AMcaDQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCH3B9f714kCf9NhmBVaTlPC0pYwu3gHgnAYpDtgyyCVECIQCMktqP8W1hJlRmZGyf9OzXyYAYmfLjL+Bss0qjIjwqJw=="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/npm-normalize-package-bin@3.0.1",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v0.2"
+					}
+				}
+			},
+			"_npmVersion": "9.6.5",
+			"_npmUser": {
+				"name": "npm-cli-ops",
+				"email": "npm-cli+bot@github.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "8d11759818e4224c053be0810326918980c90a6d",
+			"tap": {
+				"nyc-arg": [
+					"--exclude",
+					"tap-snapshots/**"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-normalize-package-bin_3.0.1_1683060624197_0.6113286668602453",
+				"host": "s3://npm-registry-packages"
+			},
+			"templateOSS": {
+				"publish": "true",
+				"version": "4.14.1",
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+			},
+			"_nodeVersion": "18.16.0",
+			"contributors": []
+		},
+		"1.0.0": {
+			"name": "npm-normalize-package-bin",
+			"description": "Turn any flavor of allowable package.json bin into a normalized object",
+			"version": "1.0.0",
+			"author": {
+				"url": "https://izs.me",
+				"name": "Isaac Z. Schlueter",
+				"email": "i@izs.me"
+			},
+			"homepage": "https://github.com/npm/npm-normalize-package-bin#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/npm-normalize-package-bin.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-normalize-package-bin/issues"
+			},
+			"devDependencies": {
+				"tap": "^14.10.2"
+			},
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"snap": "tap",
+				"test": "tap",
+				"preversion": "npm test",
+				"postpublish": "git push origin --follow-tags",
+				"postversion": "npm publish"
+			},
+			"lastModified": 0,
+			"_id": "npm-normalize-package-bin@1.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-normalize-package-bin/-/npm-normalize-package-bin-1.0.0.tgz",
+				"shasum": "c05ea346d29087efb34181adae00c667950aa163",
+				"integrity": "sha512-q5spmGV/CMb/glA+ziZT3ZNbZKnua8SRQLWxQK5cpQik+l4YxgElAw72z6ZrwMrnJtzoEs259Vl3neEfxKQmDw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIBkYMvUOEYLqxxaVyrLNb+5ICWgUVmwn5GLyi64jyxoAAiEA1mGrTLczIsg00EQ5h+qc+WnGz4/NSTWElRUxekIRaCI="
+					}
+				]
+			},
+			"_npmVersion": "6.13.2",
+			"_npmUser": {
+				"name": "isaacs",
+				"email": "i@izs.me"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "f2b2b3467d6f91384598898b52b5d9490035fbad",
+			"tap": {
+				"check-coverage": true
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-normalize-package-bin_1.0.0_1575932420747_0.056471445051378355",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "12.12.0",
+			"contributors": []
+		},
+		"1.0.1": {
+			"name": "npm-normalize-package-bin",
+			"description": "Turn any flavor of allowable package.json bin into a normalized object",
+			"version": "1.0.1",
+			"author": {
+				"url": "https://izs.me",
+				"name": "Isaac Z. Schlueter",
+				"email": "i@izs.me"
+			},
+			"homepage": "https://github.com/npm/npm-normalize-package-bin#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/npm-normalize-package-bin.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-normalize-package-bin/issues"
+			},
+			"devDependencies": {
+				"tap": "^14.10.2"
+			},
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "adam_baldwin",
+					"email": "evilpacket@gmail.com"
+				},
+				{
+					"name": "ahmadnassri",
+					"email": "ahmad@ahmadnassri.com"
+				},
+				{
+					"name": "annekimsey",
+					"email": "anne@npmjs.com"
+				},
+				{
+					"name": "billatnpm",
+					"email": "billatnpm@gmail.com"
+				},
+				{
+					"name": "claudiahdz",
+					"email": "cghr1990@gmail.com"
+				},
+				{
+					"name": "darcyclarke",
+					"email": "darcy@darcyclarke.me"
+				},
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				},
+				{
+					"name": "mikemimik",
+					"email": "mike@mikecorp.ca"
+				},
+				{
+					"name": "ruyadorno",
+					"email": "ruyadorno@hotmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"snap": "tap",
+				"test": "tap",
+				"preversion": "npm test",
+				"postpublish": "git push origin --follow-tags",
+				"postversion": "npm publish"
+			},
+			"lastModified": 0,
+			"_id": "npm-normalize-package-bin@1.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-normalize-package-bin/-/npm-normalize-package-bin-1.0.1.tgz",
+				"shasum": "6e79a41f23fd235c0623218228da7d9c23b8f6e2",
+				"integrity": "sha512-EPfafl6JL5/rU+ot6P3gRSCpPDW5VmIzX959Ob1+ySFUuuYHWHekXpwdUZcKP5C+DS4GEtdJluwBjnsNDl+fSA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIEBEaMWlLwVcLRLgX5jkdxFqb/oQYD/kfWw0KjryoR5LAiBAlgbyp2cqh/pDjKhPTcuHQsM2F6tjqvUSTKickfv3MQ=="
+					}
+				]
+			},
+			"_npmVersion": "6.13.2",
+			"_npmUser": {
+				"name": "isaacs",
+				"email": "i@izs.me"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "812e4af8749ee8acaa78e4d9e9ce3983897227ea",
+			"tap": {
+				"check-coverage": true
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-normalize-package-bin_1.0.1_1575934928937_0.7548793808830665",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "12.12.0",
+			"contributors": []
+		}
+	},
+	"time": {
+		"2.0.0": "2022-08-22T23:00:19.157Z",
+		"3.0.0": "2022-10-14T05:23:11.458Z",
+		"6.0.0": "2026-05-08T18:35:04.804Z",
+		"created": "2019-12-09T23:00:20.720Z",
+		"modified": "2026-05-08T18:35:05.185Z",
+		"5.0.0": "2025-10-22T15:30:59.587Z",
+		"4.0.0": "2024-09-05T00:19:29.155Z",
+		"3.0.1": "2023-05-02T20:50:24.353Z",
+		"1.0.0": "2019-12-09T23:00:20.938Z",
+		"1.0.1": "2019-12-09T23:42:09.030Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "6.0.0"
+	},
+	"_uplinks": {
+		"artifactory-sabadell": {
+			"etag": "958ae0b26d17cfe83f995bab4aa7dafb0f67f329",
+			"fetched": 1782459821695
+		}
+	},
+	"_distfiles": {
+		"npm-normalize-package-bin-2.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-normalize-package-bin/-/npm-normalize-package-bin-2.0.0.tgz",
+			"sha": "9447a1adaaf89d8ad0abe24c6c84ad614a675fff",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-normalize-package-bin-3.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-normalize-package-bin/-/npm-normalize-package-bin-3.0.0.tgz",
+			"sha": "6097436adb4ef09e2628b59a7882576fe53ce485",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-normalize-package-bin-6.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-normalize-package-bin/-/npm-normalize-package-bin-6.0.0.tgz",
+			"sha": "d8cc44d7a9eff2a2a210e9b2442edf3824f2d227",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-normalize-package-bin-5.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-normalize-package-bin/-/npm-normalize-package-bin-5.0.0.tgz",
+			"sha": "2b207ff260f2e525ddce93356614e2f736728f89",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-normalize-package-bin-4.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-normalize-package-bin/-/npm-normalize-package-bin-4.0.0.tgz",
+			"sha": "df79e70cd0a113b77c02d1fe243c96b8e618acb1",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-normalize-package-bin-3.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-normalize-package-bin/-/npm-normalize-package-bin-3.0.1.tgz",
+			"sha": "25447e32a9a7de1f51362c61a559233b89947832",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-normalize-package-bin-1.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-normalize-package-bin/-/npm-normalize-package-bin-1.0.0.tgz",
+			"sha": "c05ea346d29087efb34181adae00c667950aa163",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-normalize-package-bin-1.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-normalize-package-bin/-/npm-normalize-package-bin-1.0.1.tgz",
+			"sha": "6e79a41f23fd235c0623218228da7d9c23b8f6e2",
+			"registry": "artifactory-sabadell"
+		}
+	},
+	"_attachments": {},
+	"_rev": "1-bbb295f27e9ec83f",
+	"_id": "npm-normalize-package-bin",
+	"readme": "# npm-normalize-package-bin\n\nTurn any flavor of allowable package.json bin into a normalized object.\n\n## API\n\n```js\nconst normalize = require('npm-normalize-package-bin')\nconst pkg = {name: 'foo', bin: 'bar'}\nconsole.log(normalize(pkg)) // {name:'foo', bin:{foo: 'bar'}}\n```\n\nAlso strips out weird dots and slashes to prevent accidental and/or\nmalicious bad behavior when the package is installed."
+}

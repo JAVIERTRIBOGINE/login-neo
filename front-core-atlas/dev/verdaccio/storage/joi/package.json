@@ -20628,6 +20628,305 @@
 			"_shasum": "2e43af9bf24d2d5745852e9ab968c85be357bd6a",
 			"_nodeVersion": "6.9.1",
 			"contributors": []
+		},
+		"17.13.4": {
+			"name": "joi",
+			"description": "Object schema validation",
+			"version": "17.13.4",
+			"homepage": "https://github.com/hapijs/joi#readme",
+			"repository": {
+				"url": "git://github.com/hapijs/joi.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/hapijs/joi/issues"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"@hapi/hoek": "^9.3.0",
+				"@hapi/topo": "^5.1.0",
+				"@sideway/address": "^4.1.5",
+				"@sideway/formula": "^3.0.1",
+				"@sideway/pinpoint": "^2.0.0"
+			},
+			"devDependencies": {
+				"@hapi/lab": "^25.1.3",
+				"@hapi/code": "8.x.x",
+				"typescript": "4.3.x",
+				"@types/node": "^14.18.63",
+				"@hapi/bourne": "2.x.x",
+				"@hapi/joi-legacy-test": "npm:@hapi/joi@15.x.x"
+			},
+			"keywords": [
+				"schema",
+				"validation"
+			],
+			"license": "BSD-3-Clause",
+			"maintainers": [
+				{
+					"name": "marsup",
+					"email": "nicolas@morel.io"
+				},
+				{
+					"name": "nlf",
+					"email": "quitlahok@gmail.com"
+				},
+				{
+					"name": "nargonath",
+					"email": "xt47tezpk@mozmail.com"
+				},
+				{
+					"name": "devinivy",
+					"email": "devinivy@gmail.com"
+				},
+				{
+					"name": "wyatt",
+					"email": "wpreul@gmail.com"
+				},
+				{
+					"name": "hueniverse",
+					"email": "eran@hammer.io"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "lab -t 100 -a @hapi/code -L -Y",
+				"test-cov-html": "lab -r html -o coverage.html -a @hapi/code",
+				"prepublishOnly": "cd browser && npm install && npm run build"
+			},
+			"lastModified": 0,
+			"_id": "joi@17.13.4",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/joi/-/joi-17.13.4.tgz",
+				"shasum": "ad6153d97ce558eb3a3b593e0d43eab51df1c474",
+				"integrity": "sha512-1RuuER6kmt8K8I3nIWvPZKi5RQCb568ZPyY4Pwjlua+yo+63ZTmIwxLZH0heBmiKN4uxjvCiarDrjaeH84xicQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEQCIBhgBLJ8SlAljwG3Yg623Riws8jKdjKq+MIz1loYI6NnAiBLpmCxvjhjv8bD2xcESrxQbhQHFvKysDLroDAiCWVgOg=="
+					}
+				]
+			},
+			"_npmVersion": "11.13.0",
+			"_npmUser": {
+				"name": "marsup",
+				"email": "nicolas@morel.io"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "3d3ab76fad0170e97bdd72e96be7ce32330cde8f",
+			"types": "lib/index.d.ts",
+			"browser": "dist/joi-browser.min.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/joi_17.13.4_1781256006749_0.6978358871462143",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"readmeFilename": "README.md",
+			"_nodeVersion": "24.16.0",
+			"contributors": []
+		},
+		"18.2.2": {
+			"name": "joi",
+			"description": "Object schema validation",
+			"version": "18.2.2",
+			"homepage": "https://github.com/hapijs/joi#readme",
+			"repository": {
+				"url": "git://github.com/hapijs/joi.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/hapijs/joi/issues"
+			},
+			"engines": {
+				"node": ">= 20"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"@hapi/hoek": "^11.0.7",
+				"@hapi/tlds": "^1.1.1",
+				"@hapi/topo": "^6.0.2",
+				"@hapi/address": "^5.1.1",
+				"@hapi/formula": "^3.0.2",
+				"@hapi/pinpoint": "^2.0.1",
+				"@standard-schema/spec": "^1.1.0"
+			},
+			"devDependencies": {
+				"ajv": "^8.18.0",
+				"@hapi/lab": "^26.0.0",
+				"@hapi/code": "^9.0.3",
+				"typescript": "^5.8.3",
+				"@types/node": "^20.17.47",
+				"ajv-formats": "^3.0.1",
+				"@hapi/bourne": "^3.0.0",
+				"@hapi/eslint-plugin": "^7.0.0",
+				"@hapi/joi-legacy-test": "npm:@hapi/joi@15.x.x"
+			},
+			"keywords": [
+				"schema",
+				"validation"
+			],
+			"license": "BSD-3-Clause",
+			"maintainers": [
+				{
+					"name": "marsup",
+					"email": "nicolas@morel.io"
+				},
+				{
+					"name": "nlf",
+					"email": "quitlahok@gmail.com"
+				},
+				{
+					"name": "nargonath",
+					"email": "xt47tezpk@mozmail.com"
+				},
+				{
+					"name": "devinivy",
+					"email": "devinivy@gmail.com"
+				},
+				{
+					"name": "wyatt",
+					"email": "wpreul@gmail.com"
+				},
+				{
+					"name": "hueniverse",
+					"email": "eran@hammer.io"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "lab -t 100 -a @hapi/code -L -Y",
+				"test-cov-html": "lab -r html -o coverage.html -a @hapi/code",
+				"prepublishOnly": "cd browser && npm install && npm run build"
+			},
+			"lastModified": 0,
+			"_id": "joi@18.2.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/joi/-/joi-18.2.2.tgz",
+				"shasum": "164f61a5cf7fb7ae2992f5bffbcee6a6dcc91276",
+				"integrity": "sha512-STrV933NPLPME2nfPo+lFIfgCff9T/vhObpoRtFb/vNlLQynrUJPBCS3OePJ4Lunu/Egw9lqtNms72xbPbxrxw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEUCIEdoqc6P59ona4JEJ2sSNQsBT0gx1ssCK7NsFgVrRpVxAiEAvHrx5st7EURk+Gc96+fNaQT45RemRPUnRAWGSRNuGzI="
+					}
+				]
+			},
+			"_npmVersion": "11.16.0",
+			"_npmUser": {
+				"name": "marsup",
+				"email": "nicolas@morel.io"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "87d3a6282a0ea94e2be6238534fcb3b589552742",
+			"types": "lib/index.d.ts",
+			"browser": "dist/joi-browser.min.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/joi_18.2.2_1781691519992_0.29886766170574863",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"_nodeVersion": "26.3.0",
+			"contributors": []
+		},
+		"18.2.3": {
+			"name": "joi",
+			"description": "Object schema validation",
+			"version": "18.2.3",
+			"homepage": "https://github.com/hapijs/joi#readme",
+			"repository": {
+				"url": "git://github.com/hapijs/joi.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/hapijs/joi/issues"
+			},
+			"engines": {
+				"node": ">= 20"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"@hapi/address": "^5.1.1",
+				"@hapi/formula": "^3.0.2",
+				"@hapi/hoek": "^11.0.7",
+				"@hapi/pinpoint": "^2.0.1",
+				"@hapi/tlds": "^1.1.1",
+				"@hapi/topo": "^6.0.2",
+				"@standard-schema/spec": "^1.1.0"
+			},
+			"devDependencies": {
+				"@hapi/bourne": "^3.0.0",
+				"@hapi/code": "^9.0.3",
+				"@hapi/eslint-plugin": "^7.0.0",
+				"@hapi/joi-legacy-test": "npm:@hapi/joi@15.x.x",
+				"@hapi/lab": "^26.0.0",
+				"@types/node": "^20.17.47",
+				"ajv": "^8.18.0",
+				"ajv-formats": "^3.0.1",
+				"typescript": "^5.8.3"
+			},
+			"keywords": [
+				"schema",
+				"validation"
+			],
+			"license": "BSD-3-Clause",
+			"maintainers": [
+				{
+					"name": "marsup",
+					"email": "nicolas@morel.io"
+				},
+				{
+					"name": "nlf",
+					"email": "quitlahok@gmail.com"
+				},
+				{
+					"name": "nargonath",
+					"email": "xt47tezpk@mozmail.com"
+				},
+				{
+					"name": "devinivy",
+					"email": "devinivy@gmail.com"
+				},
+				{
+					"name": "wyatt",
+					"email": "wpreul@gmail.com"
+				},
+				{
+					"name": "hueniverse",
+					"email": "eran@hammer.io"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"prepublishOnly": "cd browser && npm install && npm run build",
+				"test": "lab -t 100 -a @hapi/code -L -Y",
+				"test-cov-html": "lab -r html -o coverage.html -a @hapi/code"
+			},
+			"lastModified": 0,
+			"_id": "joi@18.2.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/joi/-/joi-18.2.3.tgz",
+				"shasum": "efdd1311496cd585730633fc57253a45641a3e85",
+				"integrity": "sha512-N5A3KTWQpPWT4ExxxPlUx7WmykGXRzhNidWhV41d6Abu9YfI2NyWCJuxdPnslJCPWtbRpSVOWSnSS6GakLM/Rg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEYCIQCsYLbIn5PDoBBc5ln0zYxlZw5U8QTWlj41h2wlx3ueUwIhALSi25xOFZo7PirXk8LEz5H2PbVb8qDDHLEnDMhMq11J"
+					}
+				]
+			},
+			"_npmVersion": "11.16.0",
+			"_npmUser": {
+				"name": "marsup",
+				"email": "nicolas@morel.io"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "c86ddc0b6143a0e8cec0f1c6047c4b62db8cb0c2",
+			"types": "lib/index.d.ts",
+			"browser": "dist/joi-browser.min.js",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages-npm-production",
+				"tmp": "tmp/joi_18.2.3_1781715299299_0.7349323044383307"
+			},
+			"_nodeVersion": "26.3.0",
+			"contributors": []
 		}
 	},
 	"time": {
@@ -20843,7 +21142,7 @@
 		"17.4.0": "2021-02-08T01:06:15.638Z",
 		"8.2.1": "2016-05-28T15:34:28.182Z",
 		"17.4.1": "2021-07-11T05:04:12.623Z",
-		"modified": "2026-05-04T16:10:25.633Z",
+		"modified": "2026-06-17T16:54:59.724Z",
 		"3.1.0": "2014-04-11T01:41:59.855Z",
 		"18.1.0": "2026-03-23T17:04:03.461Z",
 		"18.1.1": "2026-03-23T17:52:52.910Z",
@@ -20883,19 +21182,23 @@
 		"9.0.3": "2016-07-24T14:29:25.257Z",
 		"9.0.4": "2016-07-24T18:35:02.877Z",
 		"10.0.6": "2016-12-14T13:27:06.764Z",
-		"10.0.5": "2016-12-05T16:48:46.973Z"
+		"10.0.5": "2016-12-05T16:48:46.973Z",
+		"17.13.4": "2026-06-12T09:20:06.977Z",
+		"18.2.2": "2026-06-17T10:18:40.297Z",
+		"18.2.3": "2026-06-17T16:54:59.526Z"
 	},
 	"users": {},
 	"dist-tags": {
 		"node-0.x": "6.10.1",
 		"9-beta": "9.0.0-9",
 		"v12-legacy": "12.1.1",
-		"latest": "18.2.1"
+		"latest": "18.2.3",
+		"latest-17": "17.13.4"
 	},
 	"_uplinks": {
 		"artifactory-sabadell": {
-			"etag": "5dabb7d4a6081be81f819c710d04e80aade135fb",
-			"fetched": 1781195707955
+			"etag": "3a2731efcf36b1d77f52f49aa4d29cb885e7f9c8",
+			"fetched": 1782459821439
 		}
 	},
 	"_distfiles": {
@@ -22128,10 +22431,25 @@
 			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/joi/-/joi-10.0.5.tgz",
 			"sha": "2e43af9bf24d2d5745852e9ab968c85be357bd6a",
 			"registry": "artifactory-sabadell"
+		},
+		"joi-17.13.4.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/joi/-/joi-17.13.4.tgz",
+			"sha": "ad6153d97ce558eb3a3b593e0d43eab51df1c474",
+			"registry": "artifactory-sabadell"
+		},
+		"joi-18.2.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/joi/-/joi-18.2.2.tgz",
+			"sha": "164f61a5cf7fb7ae2992f5bffbcee6a6dcc91276",
+			"registry": "artifactory-sabadell"
+		},
+		"joi-18.2.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/joi/-/joi-18.2.3.tgz",
+			"sha": "efdd1311496cd585730633fc57253a45641a3e85",
+			"registry": "artifactory-sabadell"
 		}
 	},
 	"_attachments": {},
-	"_rev": "1-1e5188ea4ad205a8",
+	"_rev": "3-14b30aac955ca5e1",
 	"_id": "joi",
 	"readme": "# joi\n\n#### The most powerful schema description language and data validator for JavaScript.\n\n## Installation\n`npm install joi`\n\n### Visit the [joi.dev](https://joi.dev) Developer Portal for tutorials, documentation, and support\n\n## Useful resources\n\n- [Documentation and API](https://joi.dev/api/)\n- [Versions status](https://joi.dev/resources/status/#joi)\n- [Changelog](https://joi.dev/resources/changelog/)\n- [Project policies](https://joi.dev/policies/)"
 }

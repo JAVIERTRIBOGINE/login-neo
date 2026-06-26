@@ -39,7 +39,8 @@ module.exports = {
         './GetTokensComponent': './src/app/login/presentation/pages/get-tokens/get-tokens.component.ts',
         './LoginComponent': './src/app/login/presentation/pages/login/login.component.ts',
         './SamlMfe': './src/app/saml-flow/presentation/pages/resources/resources.component.ts',
-        './SamlResponseComponent': './src/app/saml-flow/presentation/pages/saml-response/saml-response.component.ts',
+        './ACSComponent': './src/app/saml-flow/presentation/pages/acs/acs.component.ts',
+        './GetAuthorizationRequestComponent': './src/app/saml-flow/presentation/pages/get-authorization-request/get-authorization-request.component.ts',
       },
 
       // For hosts (please adjust)

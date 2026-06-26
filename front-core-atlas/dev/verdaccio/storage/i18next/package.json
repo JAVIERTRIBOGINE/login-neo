@@ -87769,6 +87769,167 @@
 			},
 			"_nodeVersion": "18.16.1",
 			"contributors": []
+		},
+		"26.3.2": {
+			"name": "i18next",
+			"description": "i18next internationalization framework",
+			"version": "26.3.2",
+			"author": {
+				"name": "Jan Mühlemann",
+				"email": "jan.muehlemann@gmail.com",
+				"url": "https://github.com/jamuhl"
+			},
+			"homepage": "https://www.i18next.com",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/i18next/i18next.git"
+			},
+			"bugs": {
+				"url": "https://github.com/i18next/i18next/issues"
+			},
+			"main": "./dist/cjs/i18next.js",
+			"devDependencies": {
+				"@arktype/attest": "^0.56.0",
+				"@babel/core": "^7.29.0",
+				"@babel/plugin-transform-async-generator-functions": "^7.29.0",
+				"@babel/plugin-transform-modules-commonjs": "^7.28.6",
+				"@babel/preset-env": "^7.29.2",
+				"@babel/preset-react": "^7.28.5",
+				"@babel/register": "^7.28.6",
+				"@rollup/plugin-babel": "^7.0.0",
+				"@rollup/plugin-commonjs": "^29.0.2",
+				"@rollup/plugin-node-resolve": "^16.0.3",
+				"@rollup/plugin-terser": "^1.0.0",
+				"@types/node": "^25.6.0",
+				"@typescript-eslint/eslint-plugin": "^8.57.2",
+				"@typescript-eslint/parser": "^8.58.2",
+				"@vitest/coverage-v8": "4.1.4",
+				"babelify": "^10.0.0",
+				"coveralls": "^3.1.1",
+				"cpy-cli": "^7.0.0",
+				"eslint": "9.39.4",
+				"gh-release": "^7.0.2",
+				"husky": "^9.1.7",
+				"i18next-browser-languagedetector": "^8.2.1",
+				"i18next-fs-backend": "^2.6.3",
+				"i18next-http-backend": "^3.0.4",
+				"i18next-localstorage-cache": "^1.1.1",
+				"i18next-sprintf-postprocessor": "^0.2.2",
+				"lint-staged": "^16.4.0",
+				"neostandard": "^0.13.0",
+				"prettier": "^3.8.3",
+				"rimraf": "^6.1.3",
+				"rollup": "^4.60.2",
+				"sinon": "^19.0.5",
+				"typescript": "^6.0.3",
+				"typescript-eslint": "^8.58.2",
+				"vitest": "4.1.4"
+			},
+			"peerDependencies": {
+				"typescript": "^5 || ^6"
+			},
+			"keywords": [
+				"i18next",
+				"internationalization",
+				"i18n",
+				"translation",
+				"localization",
+				"l10n",
+				"globalization",
+				"gettext"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "adrai",
+					"email": "adriano@raiano.ch"
+				},
+				{
+					"name": "jamuhl",
+					"email": "jan.muehlemann@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint src typescript test \"./*.{ts,mts,mjs}\"",
+				"format": "prettier \"{,**/}*.{ts,tsx,mts,js,mjs,json,md}\" --check",
+				"format:fix": "prettier \"{,**/}*.{ts,tsx,mts,js,mjs,json,md}\" --write",
+				"test": "vitest --run",
+				"test:coverage": "vitest --coverage --run",
+				"test:runtime": "vitest --project runtime",
+				"test:compatibility": "vitest --project compatibility",
+				"test:typescript": "vitest --config vitest.workspace.typescript.mts",
+				"test:local": "vitest --config vitest.workspace.local.mts",
+				"build": "rimraf dist && rollup -c && echo '{\"type\":\"module\"}' > dist/esm/package.json && cpy \"./dist/umd/*.js\" ./",
+				"fix_dist_package": "node -e 'console.log(`{\"type\":\"module\",\"version\":\"${process.env.npm_package_version}\"}`)' > dist/esm/package.json",
+				"preversion": "npm run test && npm run build && git push",
+				"postversion": "npm run fix_dist_package && git push && git push --tags && npm run release",
+				"prepare": "husky",
+				"release": "gh-release"
+			},
+			"lastModified": 0,
+			"peerDependenciesMeta": {
+				"typescript": {
+					"optional": true
+				}
+			},
+			"funding": [
+				{
+					"type": "individual",
+					"url": "https://www.locize.com/i18next"
+				},
+				{
+					"type": "individual",
+					"url": "https://www.i18next.com/how-to/faq#i18next-is-awesome.-how-can-i-support-the-project"
+				},
+				{
+					"type": "individual",
+					"url": "https://www.locize.com"
+				}
+			],
+			"_id": "i18next@26.3.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/i18next/-/i18next-26.3.2.tgz",
+				"shasum": "1800dd8cbeddd47ee87208c47aeb7f7816b51a6d",
+				"integrity": "sha512-QQkXAM1sPDHqhxMQuBeHVMUn6mJchF+wdpOoQerciLAFqO3ZYdxO0EUbeEhruyutnNwpUQIITDVzLjwnNL0T1w==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEYCIQDCyi0a5fvavgNLbP7mxxm8iwdMS40vIH4KfhTFAjeDBQIhAKbS4zHuTNCcq3sgATrX5M94PN0h/s7l/+Fx1WVd+QWO"
+					}
+				]
+			},
+			"_npmVersion": "11.9.0",
+			"_npmUser": {
+				"name": "adrai",
+				"email": "adriano@raiano.ch"
+			},
+			"_hasShrinkwrap": false,
+			"lint-staged": {
+				"*": "prettier --write --ignore-unknown"
+			},
+			"gitHead": "3b047122f5ad5b99a29f9138bb8542de125c8783",
+			"types": "./index.d.ts",
+			"exports": {
+				"./package.json": "./package.json",
+				".": {
+					"import": {
+						"types": "./index.d.mts",
+						"default": "./dist/esm/i18next.js"
+					},
+					"require": {
+						"types": "./index.d.ts",
+						"default": "./dist/cjs/i18next.js"
+					}
+				}
+			},
+			"module": "./dist/esm/i18next.js",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages-npm-production",
+				"tmp": "tmp/i18next_26.3.2_1782276859785_0.01648853616211965"
+			},
+			"_nodeVersion": "24.14.0",
+			"contributors": []
 		}
 	},
 	"time": {
@@ -88008,7 +88169,7 @@
 		"0.0.1": "2012-01-03T13:06:12.544Z",
 		"8.2.0": "2017-05-09T19:01:19.638Z",
 		"8.2.1": "2017-05-10T10:02:35.763Z",
-		"modified": "2026-06-03T14:14:17.488Z",
+		"modified": "2026-06-24T04:54:20.044Z",
 		"25.8.0": "2026-01-20T16:43:51.530Z",
 		"21.1.0": "2021-09-24T13:54:29.403Z",
 		"21.1.1": "2021-09-27T12:25:35.548Z",
@@ -88373,16 +88534,17 @@
 		"23.4.2": "2023-08-06T19:15:36.352Z",
 		"10.0.6": "2017-10-30T07:46:05.358Z",
 		"10.0.5": "2017-10-29T19:33:27.028Z",
-		"23.4.0": "2023-07-29T06:19:28.439Z"
+		"23.4.0": "2023-07-29T06:19:28.439Z",
+		"26.3.2": "2026-06-24T04:54:19.923Z"
 	},
 	"users": {},
 	"dist-tags": {
-		"latest": "26.3.1"
+		"latest": "26.3.2"
 	},
 	"_uplinks": {
 		"artifactory-sabadell": {
-			"etag": "e1af0c6003caff394915ea86258e98b0c093823c",
-			"fetched": 1781195758058
+			"etag": "049c4658907e5458b406b8c4f984843f2854c9c1",
+			"fetched": 1782459812690
 		}
 	},
 	"_distfiles": {
@@ -91385,10 +91547,15 @@
 			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/i18next/-/i18next-23.4.0.tgz",
 			"sha": "eb6ca15f20e56743f57c9da4827e2ff962753659",
 			"registry": "artifactory-sabadell"
+		},
+		"i18next-26.3.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/i18next/-/i18next-26.3.2.tgz",
+			"sha": "1800dd8cbeddd47ee87208c47aeb7f7816b51a6d",
+			"registry": "artifactory-sabadell"
 		}
 	},
 	"_attachments": {},
-	"_rev": "1-82633d09b7946459",
+	"_rev": "3-9d204f2bd9fe37ae",
 	"_id": "i18next",
-	"readme": "# i18next: learn once - translate everywhere [![Post](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://x.com/intent/tweet?text=Awesome%20i18next:%20learn%20once%20-%20translate%20everywhere%20-%20the%20internationalization%20ecosystem%20&url=https://github.com/i18next/i18next&via=jamuhl&hashtags=i18n,javascript,dev)\n\n[![CI](https://github.com/i18next/i18next/actions/workflows/CI.yml/badge.svg)](https://github.com/i18next/i18next/actions/workflows/CI.yml)\n[![Coveralls](https://img.shields.io/coveralls/i18next/i18next/master.svg?style=flat-square)](https://coveralls.io/github/i18next/i18next)\n[![Package Quality](https://packagequality.com/shield/i18next.svg)](https://packagequality.com/#?package=i18next)\n[![cdnjs version](https://img.shields.io/cdnjs/v/i18next.svg?style=flat-square)](https://cdnjs.com/libraries/i18next)\n[![npm version](https://img.shields.io/npm/v/i18next.svg?style=flat-square)](https://www.npmjs.com/package/i18next)\n![npm](https://img.shields.io/npm/dw/i18next)\n[![Gurubase](https://img.shields.io/badge/Gurubase-Ask%20i18next%20Guru-006BFF)](https://gurubase.io/g/i18next)\n\ni18next is a very popular internationalization framework for browser or any other javascript environment (eg. Node.js, Deno).\n\n![ecosystem](https://raw.githubusercontent.com/i18next/i18next/master/assets/i18next-ecosystem.jpg)\n\ni18next provides:\n\n- Flexible connection to [backend](https://www.i18next.com/overview/plugins-and-utils#backends) (loading translations via xhr, ...)\n- Optional [caching](https://www.i18next.com/how-to/caching), user [language detection](https://www.i18next.com/overview/plugins-and-utils#language-detector), ...\n- Proper [pluralizations](https://www.i18next.com/translation-function/plurals)\n- Translation [context](https://www.i18next.com/translation-function/context)\n- [Nesting](https://www.i18next.com/translation-function/nesting), [Variable replacement](https://www.i18next.com/translation-function/interpolation)\n- Flexibility: [Use it everywhere](https://www.i18next.com/overview/supported-frameworks)\n- Extensibility: eg. [sprintf](https://www.i18next.com/overview/plugins-and-utils#post-processors)\n- ...\n\n> **Pro Tip:** Looking for a way to manage your translations? [Locize](https://www.locize.com?utm_source=i18next_readme&utm_medium=github&utm_campaign=readme) is the official service by i18next's creators — drop in [`i18next-locize-backend`](https://github.com/locize/i18next-locize-backend) for CDN delivery, AI translation, and no redeploys for copy changes. **[Free plan](https://www.locize.com/pricing?utm_source=i18next_readme&utm_medium=github&utm_campaign=readme)** available for small projects.\n\nFor more information visit the website:\n\n- [Getting started](https://www.i18next.com/overview/getting-started)\n- [Translation Functionality](https://www.i18next.com/translation-function/essentials)\n- [API](https://www.i18next.com/overview/api)\n\nOur focus is providing the core to building a booming ecosystem. Independent of the building blocks you choose, be it react, angular or even good old jquery proper translation capabilities are just [one step away](https://www.i18next.com/overview/supported-frameworks).\n\n### Documentation\n\nThe general i18next documentation is published on [www.i18next.com](https://www.i18next.com) and PR changes can be supplied [here](https://github.com/i18next/i18next-gitbook).\n\nThe react specific documentation is published on [react.i18next.com](https://react.i18next.com) and PR changes can be supplied [here](https://github.com/i18next/react-i18next-gitbook).\n\n---\n\n<h3 align=\"center\">Gold Sponsors</h3>\n\n<p align=\"center\">\n  <a href=\"https://www.locize.com/?utm_source=i18next_readme&utm_medium=github&utm_campaign=readme\" target=\"_blank\">\n    <img src=\"https://raw.githubusercontent.com/i18next/i18next/master/assets/locize_sponsor_240.gif\" width=\"240px\">\n  </a>\n</p>\n\n---\n\n**From the creators of i18next: localization as a service - [Locize](https://www.locize.com?utm_source=i18next_readme&utm_medium=github&utm_campaign=readme)**\n\nA translation management system built around the i18next ecosystem - [Locize](https://www.locize.com?utm_source=i18next_readme&utm_medium=github&utm_campaign=readme).\n\n**Now with a [Free plan](https://www.locize.com/pricing?utm_source=i18next_readme&utm_medium=github&utm_campaign=readme) for small projects!** Perfect for hobbyists or getting started.\n\n![Locize](https://www.locize.com/img/ads/github_locize.png)\n\nWith using [Locize](https://www.locize.com/?utm_source=i18next_readme&utm_medium=github&utm_campaign=readme) you directly support the future of i18next.\n\n---"
+	"readme": "# i18next: learn once - translate everywhere [![Post](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://x.com/intent/tweet?text=Awesome%20i18next:%20learn%20once%20-%20translate%20everywhere%20-%20the%20internationalization%20ecosystem%20&url=https://github.com/i18next/i18next&via=jamuhl&hashtags=i18n,javascript,dev)\n\n[![CI](https://github.com/i18next/i18next/actions/workflows/CI.yml/badge.svg)](https://github.com/i18next/i18next/actions/workflows/CI.yml)\n[![Coveralls](https://img.shields.io/coveralls/i18next/i18next/master.svg?style=flat-square)](https://coveralls.io/github/i18next/i18next)\n[![Package Quality](https://packagequality.com/shield/i18next.svg)](https://packagequality.com/#?package=i18next)\n[![cdnjs version](https://img.shields.io/cdnjs/v/i18next.svg?style=flat-square)](https://cdnjs.com/libraries/i18next)\n[![npm version](https://img.shields.io/npm/v/i18next.svg?style=flat-square)](https://www.npmjs.com/package/i18next)\n![npm](https://img.shields.io/npm/dw/i18next)\n[![Gurubase](https://img.shields.io/badge/Gurubase-Ask%20i18next%20Guru-006BFF)](https://gurubase.io/g/i18next)\n\ni18next is a very popular internationalization framework for browser or any other javascript environment (eg. Node.js, Deno).\n\n![ecosystem](https://raw.githubusercontent.com/i18next/i18next/master/assets/i18next-ecosystem.jpg)\n\ni18next provides:\n\n- Flexible connection to [backend](https://www.i18next.com/overview/plugins-and-utils#backends) (loading translations via xhr, ...)\n- Optional [caching](https://www.i18next.com/how-to/caching), user [language detection](https://www.i18next.com/overview/plugins-and-utils#language-detector), ...\n- Proper [pluralizations](https://www.i18next.com/translation-function/plurals)\n- Translation [context](https://www.i18next.com/translation-function/context)\n- [Nesting](https://www.i18next.com/translation-function/nesting), [Variable replacement](https://www.i18next.com/translation-function/interpolation)\n- Flexibility: [Use it everywhere](https://www.i18next.com/overview/supported-frameworks)\n- Extensibility: eg. [sprintf](https://www.i18next.com/overview/plugins-and-utils#post-processors)\n- ...\n\n> **Pro Tip:** Looking for a way to manage your translations? [Locize](https://www.locize.com?utm_source=i18next_readme&utm_medium=github&utm_campaign=readme) is the official service by i18next's creators — drop in [`i18next-locize-backend`](https://github.com/locize/i18next-locize-backend) for CDN delivery, AI translation, and no redeploys for copy changes. **[Free plan](https://www.locize.com/pricing?utm_source=i18next_readme&utm_medium=github&utm_campaign=readme)** available for small projects.\n>\n> **Starting from zero?** `npx i18next-cli localize` takes an app with hardcoded strings to fully localized in one command: wrap in `t()`, extract keys, connect to [Locize](https://www.locize.com?from=i18next_readme__localize) and AI-translate. [Read the launch post](https://www.locize.com/blog/i18next-cli-localize?from=i18next_readme__localize).\n\nFor more information visit the website:\n\n- [Getting started](https://www.i18next.com/overview/getting-started)\n- [Translation Functionality](https://www.i18next.com/translation-function/essentials)\n- [API](https://www.i18next.com/overview/api)\n\nOur focus is providing the core to building a booming ecosystem. Independent of the building blocks you choose, be it react, angular or even good old jquery proper translation capabilities are just [one step away](https://www.i18next.com/overview/supported-frameworks).\n\n### Documentation\n\nThe general i18next documentation is published on [www.i18next.com](https://www.i18next.com) and PR changes can be supplied [here](https://github.com/i18next/i18next-gitbook).\n\nThe react specific documentation is published on [react.i18next.com](https://react.i18next.com) and PR changes can be supplied [here](https://github.com/i18next/react-i18next-gitbook).\n\n---\n\n<h3 align=\"center\">Gold Sponsors</h3>\n\n<p align=\"center\">\n  <a href=\"https://www.locize.com/?utm_source=i18next_readme&utm_medium=github&utm_campaign=readme\" target=\"_blank\">\n    <img src=\"https://raw.githubusercontent.com/i18next/i18next/master/assets/locize_sponsor_240.gif\" width=\"240px\">\n  </a>\n</p>\n\n---\n\n**From the creators of i18next: localization as a service - [Locize](https://www.locize.com?utm_source=i18next_readme&utm_medium=github&utm_campaign=readme)**\n\nA translation management system built around the i18next ecosystem - [Locize](https://www.locize.com?utm_source=i18next_readme&utm_medium=github&utm_campaign=readme).\n\n**Now with a [Free plan](https://www.locize.com/pricing?utm_source=i18next_readme&utm_medium=github&utm_campaign=readme) for small projects!** Perfect for hobbyists or getting started.\n\n![Locize](https://www.locize.com/img/ads/github_locize.png)\n\nWith using [Locize](https://www.locize.com/?utm_source=i18next_readme&utm_medium=github&utm_campaign=readme) you directly support the future of i18next.\n\n---"
 }

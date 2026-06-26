@@ -1,0 +1,112 @@
+{
+	"name": "@xtuc/ieee754",
+	"versions": {
+		"1.2.0": {
+			"name": "@xtuc/ieee754",
+			"description": "Read/write IEEE754 floating point numbers from/to a Buffer or array-like object",
+			"version": "1.2.0",
+			"author": {
+				"name": "Feross Aboukhadijeh",
+				"email": "feross@feross.org",
+				"url": "http://feross.org"
+			},
+			"homepage": "https://github.com/feross/ieee754#readme",
+			"repository": {
+				"type": "git",
+				"url": "git://github.com/feross/ieee754.git"
+			},
+			"contributors": [
+				{
+					"name": "Romain Beauxis",
+					"email": "toots@rastageeks.org"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/feross/ieee754/issues"
+			},
+			"main": "dist/index.cjs.js",
+			"devDependencies": {
+				"airtap": "0.0.7",
+				"standard": "*",
+				"tape": "^4.0.0",
+				"@babel/cli": "^7.0.0-beta.54",
+				"@babel/core": "^7.0.0-beta.54",
+				"@babel/plugin-transform-modules-commonjs": "^7.0.0-beta.54"
+			},
+			"keywords": [
+				"IEEE 754",
+				"buffer",
+				"convert",
+				"floating point",
+				"ieee754"
+			],
+			"license": "BSD-3-Clause",
+			"maintainers": [
+				{
+					"name": "xtuc",
+					"email": "contact@xtuc.fr"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "standard && npm run test-node && npm run test-browser",
+				"test-browser": "airtap -- test/*.js",
+				"test-browser-local": "airtap --local -- test/*.js",
+				"test-node": "tape test/*.js"
+			},
+			"lastModified": 0,
+			"_id": "@xtuc/ieee754@1.2.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@xtuc/ieee754/-/ieee754-1.2.0.tgz",
+				"shasum": "eef014a3145ae477a1cbc00cd1e552336dceb790",
+				"integrity": "sha512-DX8nKgqcGwsc0eJSqYt5lwP4DH5FlHnmuWWBRy7X0NcaGR0ZtuyeESgMwTYVEtxmsNGY+qit4QYT/MIYTOTPeA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQC443hI6c8XxzN84UO773+n8YiIU0LpHSPL3r+5zPUNGgIhAMhGOUhe6/vMQn4q7Ds/DVRNPP8sd+7ofLEArkEUvofL"
+					}
+				]
+			},
+			"_npmVersion": "5.5.1",
+			"_npmUser": {
+				"name": "xtuc",
+				"email": "contact@xtuc.fr"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "25da4f98d46eb47072792e23adfd92d02c16c6d7",
+			"prepublish": "babel --plugins @babel/plugin-transform-modules-commonjs index.js -o dist/index.cjs.js",
+			"module": "index.js",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/ieee754_1.2.0_1532016645902_0.15972107691013826"
+			},
+			"_nodeVersion": "9.3.0"
+		}
+	},
+	"time": {
+		"created": "2018-07-19T16:10:45.654Z",
+		"modified": "2022-04-11T10:47:48.912Z",
+		"1.2.0": "2018-07-19T16:10:45.976Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "1.2.0"
+	},
+	"_uplinks": {
+		"artifactory-sabadell": {
+			"etag": "783644f3eb46fccd88600e3d889debfc7ce447c8",
+			"fetched": 1782459826486
+		}
+	},
+	"_distfiles": {
+		"ieee754-1.2.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@xtuc/ieee754/-/ieee754-1.2.0.tgz",
+			"sha": "eef014a3145ae477a1cbc00cd1e552336dceb790",
+			"registry": "artifactory-sabadell"
+		}
+	},
+	"_attachments": {},
+	"_rev": "1-75163924ed8f4760",
+	"_id": "@xtuc/ieee754",
+	"readme": "# ieee754 [![travis][travis-image]][travis-url] [![npm][npm-image]][npm-url] [![downloads][downloads-image]][downloads-url] [![javascript style guide][standard-image]][standard-url]\n\n[travis-image]: https://img.shields.io/travis/feross/ieee754/master.svg\n[travis-url]: https://travis-ci.org/feross/ieee754\n[npm-image]: https://img.shields.io/npm/v/ieee754.svg\n[npm-url]: https://npmjs.org/package/ieee754\n[downloads-image]: https://img.shields.io/npm/dm/ieee754.svg\n[downloads-url]: https://npmjs.org/package/ieee754\n[standard-image]: https://img.shields.io/badge/code_style-standard-brightgreen.svg\n[standard-url]: https://standardjs.com\n\n[![saucelabs][saucelabs-image]][saucelabs-url]\n\n[saucelabs-image]: https://saucelabs.com/browser-matrix/ieee754.svg\n[saucelabs-url]: https://saucelabs.com/u/ieee754\n\n### Read/write IEEE754 floating point numbers from/to a Buffer or array-like object.\n\n## install\n\n```\nnpm install ieee754\n```\n\n## methods\n\n`var ieee754 = require('ieee754')`\n\nThe `ieee754` object has the following functions:\n\n```\nieee754.read = function (buffer, offset, isLE, mLen, nBytes)\nieee754.write = function (buffer, value, offset, isLE, mLen, nBytes)\n```\n\nThe arguments mean the following:\n\n- buffer = the buffer\n- offset = offset into the buffer\n- value = value to set (only for `write`)\n- isLe = is little endian?\n- mLen = mantissa length\n- nBytes = number of bytes\n\n## what is ieee754?\n\nThe IEEE Standard for Floating-Point Arithmetic (IEEE 754) is a technical standard for floating-point computation. [Read more](http://en.wikipedia.org/wiki/IEEE_floating_point).\n\n## license\n\nBSD 3 Clause. Copyright (c) 2008, Fair Oaks Labs, Inc."
+}

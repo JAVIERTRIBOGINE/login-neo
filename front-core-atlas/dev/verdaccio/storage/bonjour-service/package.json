@@ -1,0 +1,2134 @@
+{
+	"name": "bonjour-service",
+	"versions": {
+		"1.0.12": {
+			"name": "bonjour-service",
+			"description": "A Bonjour/Zeroconf implementation in TypeScript",
+			"version": "1.0.12",
+			"author": {
+				"url": "https://labs.onlx.ltd",
+				"name": "ON LX Lited",
+				"email": "team@onlx.ltd"
+			},
+			"homepage": "https://github.com/onlxltd/bonjour-service",
+			"repository": {
+				"url": "git+https://github.com/onlxltd/bonjour-service.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/onlxltd/bonjour-service/issues"
+			},
+			"main": "./dist/index.js",
+			"dependencies": {
+				"dns-equal": "^1.0.0",
+				"array-flatten": "^2.1.2",
+				"multicast-dns": "^7.2.4",
+				"fast-deep-equal": "^3.1.3"
+			},
+			"devDependencies": {
+				"tape": "^5.2.2",
+				"eslint": "^8.13.0",
+				"standard": "^17.0.0",
+				"after-all": "^2.0.2",
+				"typescript": "^4.4.4",
+				"@types/node": "^14.14.35",
+				"ts-node-dev": "^1.1.8",
+				"@typescript-eslint/parser": "^4.19.0",
+				"@typescript-eslint/eslint-plugin": "^4.19.0"
+			},
+			"keywords": [
+				"bonjour",
+				"zeroconf",
+				"zero",
+				"configuration",
+				"mdns",
+				"dns",
+				"service",
+				"discovery",
+				"multicast",
+				"broadcast",
+				"dns-sd"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "mdidon",
+					"email": "dev@onlx.ltd"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"dev": "ts-node-dev --respawn --transpile-only ./src/index.ts",
+				"test": "standard --fix && tape test/*.js",
+				"build": "tsc --removeComments true",
+				"example:simple": "node examples/simple"
+			},
+			"lastModified": 0,
+			"_id": "bonjour-service@1.0.12",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/bonjour-service/-/bonjour-service-1.0.12.tgz",
+				"shasum": "28fbd4683f5f2e36feedb833e24ba661cac960c3",
+				"integrity": "sha512-pMmguXYCu63Ug37DluMKEHdxc+aaIf/ay4YbF8Gxtba+9d3u+rmEWy61VK3Z3hp8Rskok3BunHYnG0dUHAsblw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIFleipSHzz5JiXEJtehN8xpytVTVE+w/Nwsklmvsc7l3AiBWEY/jR+0n7BBDPVLGoM/BmUDzA2ahWHQAzlUytJWZFw=="
+					}
+				]
+			},
+			"_npmVersion": "6.14.16",
+			"_npmUser": {
+				"name": "mdidon",
+				"email": "dev@onlx.ltd"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "6751d04609b8fbc88258a841d4d9504c3e915924",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/bonjour-service_1.0.12_1650617937643_0.5546950064898577",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "14.19.1",
+			"contributors": []
+		},
+		"1.0.13": {
+			"name": "bonjour-service",
+			"description": "A Bonjour/Zeroconf implementation in TypeScript",
+			"version": "1.0.13",
+			"author": {
+				"url": "https://labs.onlx.ltd",
+				"name": "ON LX Lited",
+				"email": "team@onlx.ltd"
+			},
+			"homepage": "https://github.com/onlxltd/bonjour-service",
+			"repository": {
+				"url": "git+https://github.com/onlxltd/bonjour-service.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/onlxltd/bonjour-service/issues"
+			},
+			"main": "./dist/index.js",
+			"dependencies": {
+				"dns-equal": "^1.0.0",
+				"array-flatten": "^2.1.2",
+				"multicast-dns": "^7.2.5",
+				"fast-deep-equal": "^3.1.3"
+			},
+			"devDependencies": {
+				"tape": "^5.2.2",
+				"eslint": "^8.15.0",
+				"standard": "^17.0.0",
+				"after-all": "^2.0.2",
+				"typescript": "^4.4.4",
+				"@types/node": "^14.14.35",
+				"ts-node-dev": "^1.1.8",
+				"@typescript-eslint/parser": "^5.22.0",
+				"@typescript-eslint/eslint-plugin": "^5.22.0"
+			},
+			"keywords": [
+				"bonjour",
+				"zeroconf",
+				"zero",
+				"configuration",
+				"mdns",
+				"dns",
+				"service",
+				"discovery",
+				"multicast",
+				"broadcast",
+				"dns-sd"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "mdidon",
+					"email": "dev@onlx.ltd"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"dev": "ts-node-dev --respawn --transpile-only ./src/index.ts",
+				"test": "standard --fix && tape test/*.js",
+				"build": "tsc --removeComments true",
+				"example:simple": "node examples/simple"
+			},
+			"lastModified": 0,
+			"_id": "bonjour-service@1.0.13",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/bonjour-service/-/bonjour-service-1.0.13.tgz",
+				"shasum": "4ac003dc1626023252d58adf2946f57e5da450c1",
+				"integrity": "sha512-LWKRU/7EqDUC9CTAQtuZl5HzBALoCYwtLhffW3et7vZMwv3bWLpJf8bRYlMD5OCcDpTfnPgNCV4yo9ZIaJGMiA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDJAkQyM62F/7ePAdBh++4jG2jj4tMaLFsbb4u6+xt1VwIgbRWPrhwmmLoBcAvKvUZI25jnGaz8Mm6XTD5TuaK06RQ="
+					}
+				]
+			},
+			"_npmVersion": "6.14.17",
+			"_npmUser": {
+				"name": "mdidon",
+				"email": "dev@onlx.ltd"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "a1275bce2724fe565953919e08263292f64dc7a6",
+			"types": "./dist/index.d.ts",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/bonjour-service_1.0.13_1654598721954_0.6121717658609176",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "14.19.3",
+			"contributors": []
+		},
+		"1.0.14": {
+			"name": "bonjour-service",
+			"description": "A Bonjour/Zeroconf implementation in TypeScript",
+			"version": "1.0.14",
+			"author": {
+				"url": "https://labs.onlx.ltd",
+				"name": "ON LX Lited",
+				"email": "team@onlx.ltd"
+			},
+			"homepage": "https://github.com/onlxltd/bonjour-service",
+			"repository": {
+				"url": "git+https://github.com/onlxltd/bonjour-service.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/onlxltd/bonjour-service/issues"
+			},
+			"main": "./dist/index.js",
+			"dependencies": {
+				"dns-equal": "^1.0.0",
+				"array-flatten": "^2.1.2",
+				"multicast-dns": "^7.2.5",
+				"fast-deep-equal": "^3.1.3"
+			},
+			"devDependencies": {
+				"tape": "^5.2.2",
+				"eslint": "^8.15.0",
+				"standard": "^17.0.0",
+				"after-all": "^2.0.2",
+				"typescript": "^4.4.4",
+				"@types/node": "^14.14.35",
+				"ts-node-dev": "^1.1.8",
+				"@typescript-eslint/parser": "^5.22.0",
+				"@typescript-eslint/eslint-plugin": "^5.22.0"
+			},
+			"keywords": [
+				"bonjour",
+				"zeroconf",
+				"zero",
+				"configuration",
+				"mdns",
+				"dns",
+				"service",
+				"discovery",
+				"multicast",
+				"broadcast",
+				"dns-sd"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "mdidon",
+					"email": "dev@onlx.ltd"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"dev": "ts-node-dev --respawn --transpile-only ./src/index.ts",
+				"test": "standard --fix && tape test/*.js",
+				"build": "tsc --removeComments true",
+				"example:simple": "node examples/simple"
+			},
+			"lastModified": 0,
+			"_id": "bonjour-service@1.0.14",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/bonjour-service/-/bonjour-service-1.0.14.tgz",
+				"shasum": "c346f5bc84e87802d08f8d5a60b93f758e514ee7",
+				"integrity": "sha512-HIMbgLnk1Vqvs6B4Wq5ep7mxvj9sGz5d1JJyDNSGNIdA/w2MCz6GTjWTdjqOJV1bEPj+6IkxDvWNFKEBxNt4kQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDUlSSSgbKi+b45pJTsMKjFLiW4F6MVbdzoENbaHlhP/QIgcmO8zgrMATdUg21e5sDa8IrM1zBWm3LOmVN127eBeAw="
+					}
+				]
+			},
+			"_npmVersion": "6.14.17",
+			"_npmUser": {
+				"name": "mdidon",
+				"email": "dev@onlx.ltd"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "0010e27293aead3698692dbe40ddd2a4bb3c493d",
+			"types": "./dist/index.d.ts",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/bonjour-service_1.0.14_1661964582890_0.505479470019808",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "14.20.0",
+			"contributors": []
+		},
+		"1.0.10": {
+			"name": "bonjour-service",
+			"description": "A Bonjour/Zeroconf implementation in TypeScript",
+			"version": "1.0.10",
+			"author": {
+				"url": "https://labs.onlx.ltd",
+				"name": "ON LX Lited",
+				"email": "team@onlx.ltd"
+			},
+			"homepage": "https://github.com/onlxltd/bonjour-service",
+			"repository": {
+				"url": "git+https://github.com/onlxltd/bonjour-service.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/onlxltd/bonjour-service/issues"
+			},
+			"main": "./dist/index.js",
+			"dependencies": {
+				"dns-equal": "^1.0.0",
+				"array-flatten": "^2.1.2",
+				"multicast-dns": "^7.2.4",
+				"fast-deep-equal": "^3.1.3"
+			},
+			"devDependencies": {
+				"tape": "^5.2.2",
+				"eslint": "^7.22.0",
+				"standard": "^11.0.0",
+				"after-all": "^2.0.2",
+				"typescript": "^4.4.4",
+				"@types/node": "^14.14.35",
+				"ts-node-dev": "^1.1.8",
+				"@typescript-eslint/parser": "^4.19.0",
+				"@typescript-eslint/eslint-plugin": "^4.19.0"
+			},
+			"keywords": [
+				"bonjour",
+				"zeroconf",
+				"zero",
+				"configuration",
+				"mdns",
+				"dns",
+				"service",
+				"discovery",
+				"multicast",
+				"broadcast",
+				"dns-sd"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "mdidon",
+					"email": "dev@onlx.ltd"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"dev": "ts-node-dev --respawn --transpile-only ./src/index.ts",
+				"test": "standard --fix && tape test/*.js",
+				"build": "tsc --removeComments true",
+				"example:simple": "node examples/simple"
+			},
+			"lastModified": 0,
+			"_id": "bonjour-service@1.0.10",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/bonjour-service/-/bonjour-service-1.0.10.tgz",
+				"shasum": "11de2a51d2e07bcd2ae65fc41c42abfd36c6f37f",
+				"integrity": "sha512-oFJkVGhVUrlRxIdQmNjbvRCld13QVBaJBZiQIzsZXqudCYNgDcFJhbgu9PqgpiFqCkPmQNDF2FfGgfayEIx5qw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDRPALzgzvg4/WsK71tIzt7mosLL+Y29sNTHl72mBKjIwIhAJCV+/LbG2miGR0lsPvkeJ59w3c9y4mS3mIRNJlB4C/U"
+					}
+				]
+			},
+			"_npmVersion": "6.14.15",
+			"_npmUser": {
+				"name": "mdidon",
+				"email": "dev@onlx.ltd"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "e3aafdfd310bcbff568c6cd8cd1a58bdda3272aa",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/bonjour-service_1.0.10_1639659392137_0.9088573741618873",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "14.18.2",
+			"contributors": []
+		},
+		"1.0.11": {
+			"name": "bonjour-service",
+			"description": "A Bonjour/Zeroconf implementation in TypeScript",
+			"version": "1.0.11",
+			"author": {
+				"url": "https://labs.onlx.ltd",
+				"name": "ON LX Lited",
+				"email": "team@onlx.ltd"
+			},
+			"homepage": "https://github.com/onlxltd/bonjour-service",
+			"repository": {
+				"url": "git+https://github.com/onlxltd/bonjour-service.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/onlxltd/bonjour-service/issues"
+			},
+			"main": "./dist/index.js",
+			"dependencies": {
+				"dns-equal": "^1.0.0",
+				"array-flatten": "^2.1.2",
+				"multicast-dns": "^7.2.4",
+				"fast-deep-equal": "^3.1.3"
+			},
+			"devDependencies": {
+				"tape": "^5.2.2",
+				"eslint": "^7.22.0",
+				"standard": "^11.0.0",
+				"after-all": "^2.0.2",
+				"typescript": "^4.4.4",
+				"@types/node": "^14.14.35",
+				"ts-node-dev": "^1.1.8",
+				"@typescript-eslint/parser": "^4.19.0",
+				"@typescript-eslint/eslint-plugin": "^4.19.0"
+			},
+			"keywords": [
+				"bonjour",
+				"zeroconf",
+				"zero",
+				"configuration",
+				"mdns",
+				"dns",
+				"service",
+				"discovery",
+				"multicast",
+				"broadcast",
+				"dns-sd"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "mdidon",
+					"email": "dev@onlx.ltd"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"dev": "ts-node-dev --respawn --transpile-only ./src/index.ts",
+				"test": "standard --fix && tape test/*.js",
+				"build": "tsc --removeComments true",
+				"example:simple": "node examples/simple"
+			},
+			"lastModified": 0,
+			"_id": "bonjour-service@1.0.11",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/bonjour-service/-/bonjour-service-1.0.11.tgz",
+				"shasum": "5418e5c1ac91c89a406f853a942e7892829c0d89",
+				"integrity": "sha512-drMprzr2rDTCtgEE3VgdA9uUFaUHF+jXduwYSThHJnKMYM+FhI9Z3ph+TX3xy0LtgYHae6CHYPJ/2UnK8nQHcA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDFeYAW2Pl19taoWnpAXN3iA1EwT6eEvqk4cnO0C51xhQIgdbhTUh1HpXTLTG3s8175R8gmduAa4t83MyW039oV/GQ="
+					}
+				]
+			},
+			"_npmVersion": "6.14.15",
+			"_npmUser": {
+				"name": "mdidon",
+				"email": "dev@onlx.ltd"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "9f54eb328f6c5369fcc97265cb922cb04b06c13c",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/bonjour-service_1.0.11_1643648843528_0.4397170754672004",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "14.18.3",
+			"contributors": []
+		},
+		"1.0.3": {
+			"name": "bonjour-service",
+			"description": "A Bonjour/Zeroconf implementation in TypeScript",
+			"version": "1.0.3",
+			"author": {
+				"url": "https://labs.onlx.ltd",
+				"name": "ON LX Lited",
+				"email": "team@onlx.ltd"
+			},
+			"homepage": "https://github.com/onlxltd/bonjour-service",
+			"repository": {
+				"url": "git+https://github.com/onlxltd/bonjour-service.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/onlxltd/bonjour-service/issues"
+			},
+			"main": "./dist/index.js",
+			"dependencies": {
+				"dns-txt": "^2.0.2",
+				"dns-equal": "^1.0.0",
+				"array-flatten": "^2.1.0",
+				"multicast-dns": "^6.0.1",
+				"fast-deep-equal": "^3.1.3"
+			},
+			"devDependencies": {
+				"tape": "^4.5.1",
+				"standard": "^7.0.1",
+				"after-all": "^2.0.2",
+				"typescript": "^4.2.3",
+				"@types/node": "^14.14.35",
+				"ts-node-dev": "^1.1.6"
+			},
+			"keywords": [
+				"bonjour",
+				"zeroconf",
+				"zero",
+				"configuration",
+				"mdns",
+				"dns",
+				"service",
+				"discovery",
+				"multicast",
+				"broadcast",
+				"dns-sd"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "mdidon",
+					"email": "dev@onlx.ltd"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"dev": "ts-node-dev --respawn --transpile-only ./src/index.ts",
+				"test": "standard --fix && tape test/*.js",
+				"build": "tsc --removeComments true",
+				"example:simple": "node examples/simple"
+			},
+			"lastModified": 0,
+			"_id": "bonjour-service@1.0.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/bonjour-service/-/bonjour-service-1.0.3.tgz",
+				"shasum": "f421b8499bc64c51c2fefd7d0ea4c021f4f2e86b",
+				"integrity": "sha512-fz2Z+iWv8dubWzAfFOp+qplIaWZe8FWdPqTwae1zbeiK1jPEK+qA9zTsBt7rRsXaD6KQHkuzN9sCMcUgf9e4Lw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCWSy8oElLGwLiczEWymB79SRdh8nfhhFDf/Zh7It5XWAIgGEZYQxiavpYPrbSm/taQkukr5hACrkX4qWkZeKQKAGU="
+					}
+				]
+			},
+			"_npmVersion": "6.14.11",
+			"_npmUser": {
+				"name": "mdidon",
+				"email": "dev@onlx.ltd"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "894a38e22947386f1765564c29358946c9d822f9",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/bonjour-service_1.0.3_1616417294378_0.20124564967437664",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "14.16.0",
+			"contributors": []
+		},
+		"1.2.1": {
+			"name": "bonjour-service",
+			"description": "A Bonjour/Zeroconf implementation in TypeScript",
+			"version": "1.2.1",
+			"author": {
+				"url": "https://labs.onlx.ltd",
+				"name": "ON LX Lited",
+				"email": "team@onlx.ltd"
+			},
+			"homepage": "https://github.com/onlxltd/bonjour-service",
+			"repository": {
+				"url": "git+https://github.com/onlxltd/bonjour-service.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/onlxltd/bonjour-service/issues"
+			},
+			"main": "./dist/index.js",
+			"dependencies": {
+				"multicast-dns": "^7.2.5",
+				"fast-deep-equal": "^3.1.3"
+			},
+			"devDependencies": {
+				"tape": "^5.2.2",
+				"eslint": "^8.15.0",
+				"standard": "^17.0.0",
+				"after-all": "^2.0.2",
+				"typescript": "^4.4.4",
+				"@types/node": "^16.18.11",
+				"ts-node-dev": "^2.0.0",
+				"@typescript-eslint/parser": "^5.22.0",
+				"@typescript-eslint/eslint-plugin": "^5.22.0"
+			},
+			"keywords": [
+				"bonjour",
+				"zeroconf",
+				"zero",
+				"configuration",
+				"mdns",
+				"dns",
+				"service",
+				"discovery",
+				"multicast",
+				"broadcast",
+				"dns-sd"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "mdidon",
+					"email": "dev@onlx.ltd"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"dev": "ts-node-dev --respawn --transpile-only ./src/index.ts",
+				"test": "standard --fix && tape test/*.js",
+				"build": "tsc --removeComments true",
+				"example:simple": "node examples/simple"
+			},
+			"lastModified": 0,
+			"_id": "bonjour-service@1.2.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/bonjour-service/-/bonjour-service-1.2.1.tgz",
+				"shasum": "eb41b3085183df3321da1264719fbada12478d02",
+				"integrity": "sha512-oSzCS2zV14bh2kji6vNe7vrpJYCHGvcZnlffFQ1MEoX/WOeQ/teD8SYWKR942OI3INjq8OMNJlbPK5LLLUxFDw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQCLwO8i1ZNNAg40I8BheSYpJ5ooHIhJiMxo1xmH4OQDMAIhAIcj+JN6U/NdeEucVGCPwLuqZRj6II2x/49NRKv9zcOI"
+					}
+				]
+			},
+			"_npmVersion": "8.19.4",
+			"_npmUser": {
+				"name": "mdidon",
+				"email": "dev@onlx.ltd"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "d128549bdd146102e0f0aefc9649eb533bb70463",
+			"types": "./dist/index.d.ts",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/bonjour-service_1.2.1_1704719113220_0.41571194097122444",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "16.20.2",
+			"contributors": []
+		},
+		"1.3.0": {
+			"name": "bonjour-service",
+			"description": "A Bonjour/Zeroconf implementation in TypeScript",
+			"version": "1.3.0",
+			"author": {
+				"url": "https://onlx.ltd",
+				"name": "ON LX Lited",
+				"email": "team@onlx.ltd"
+			},
+			"homepage": "https://github.com/onlxltd/bonjour-service",
+			"repository": {
+				"url": "git+https://github.com/onlxltd/bonjour-service.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/onlxltd/bonjour-service/issues"
+			},
+			"main": "./dist/index.js",
+			"dependencies": {
+				"multicast-dns": "^7.2.5",
+				"fast-deep-equal": "^3.1.3"
+			},
+			"devDependencies": {
+				"tape": "^5.9.0",
+				"eslint": "^8.57.1",
+				"standard": "^17.1.2",
+				"after-all": "^2.0.2",
+				"typescript": "^5.6.3",
+				"@types/node": "^22.9.0",
+				"ts-node-dev": "^2.0.0",
+				"@typescript-eslint/parser": "^5.62.0",
+				"@typescript-eslint/eslint-plugin": "^5.62.0"
+			},
+			"keywords": [
+				"bonjour",
+				"zeroconf",
+				"zero",
+				"configuration",
+				"mdns",
+				"dns",
+				"service",
+				"discovery",
+				"multicast",
+				"broadcast",
+				"dns-sd"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "mdidon",
+					"email": "dev@onlx.ltd"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"dev": "ts-node-dev --respawn --transpile-only ./src/index.ts",
+				"test": "standard --fix && tape test/*.js",
+				"build": "tsc --removeComments true",
+				"example:simple": "node examples/simple"
+			},
+			"lastModified": 0,
+			"_id": "bonjour-service@1.3.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/bonjour-service/-/bonjour-service-1.3.0.tgz",
+				"shasum": "80d867430b5a0da64e82a8047fc1e355bdb71722",
+				"integrity": "sha512-3YuAUiSkWykd+2Azjgyxei8OWf8thdn8AITIog2M4UICzoqfjlqr64WIjEXZllf/W6vK1goqleSR6brGomxQqA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIA5Ni02TBV/qRFwXbFV1YNhgfkuM/mgbQYADv9y9Y+IOAiBXJfEJ8b1WV2eBMfiw9QOBE2+cDjt2ykiCOHhehdpjQQ=="
+					}
+				]
+			},
+			"_npmVersion": "10.9.0",
+			"_npmUser": {
+				"name": "mdidon",
+				"email": "dev@onlx.ltd"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "6ac91c016bd31efdf0544e14c6fb0315cb3c8aa4",
+			"types": "./dist/index.d.ts",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/bonjour-service_1.3.0_1731936235504_0.5515018887662404",
+				"host": "s3://npm-registry-packages"
+			},
+			"packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e",
+			"_nodeVersion": "22.11.0",
+			"contributors": []
+		},
+		"1.0.4": {
+			"name": "bonjour-service",
+			"description": "A Bonjour/Zeroconf implementation in TypeScript",
+			"version": "1.0.4",
+			"author": {
+				"url": "https://labs.onlx.ltd",
+				"name": "ON LX Lited",
+				"email": "team@onlx.ltd"
+			},
+			"homepage": "https://github.com/onlxltd/bonjour-service",
+			"repository": {
+				"url": "git+https://github.com/onlxltd/bonjour-service.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/onlxltd/bonjour-service/issues"
+			},
+			"main": "./dist/index.js",
+			"dependencies": {
+				"dns-txt": "^2.0.2",
+				"dns-equal": "^1.0.0",
+				"array-flatten": "^2.1.0",
+				"multicast-dns": "^6.0.1",
+				"fast-deep-equal": "^3.1.3"
+			},
+			"devDependencies": {
+				"tape": "^4.5.1",
+				"standard": "^7.0.1",
+				"after-all": "^2.0.2",
+				"typescript": "^4.2.3",
+				"@types/node": "^14.14.35",
+				"ts-node-dev": "^1.1.6"
+			},
+			"keywords": [
+				"bonjour",
+				"zeroconf",
+				"zero",
+				"configuration",
+				"mdns",
+				"dns",
+				"service",
+				"discovery",
+				"multicast",
+				"broadcast",
+				"dns-sd"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "mdidon",
+					"email": "dev@onlx.ltd"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"dev": "ts-node-dev --respawn --transpile-only ./src/index.ts",
+				"test": "standard --fix && tape test/*.js",
+				"build": "tsc --removeComments true",
+				"example:simple": "node examples/simple"
+			},
+			"lastModified": 0,
+			"_id": "bonjour-service@1.0.4",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/bonjour-service/-/bonjour-service-1.0.4.tgz",
+				"shasum": "b4c1127eb7a0052e764eb1d5d4f0015a0c945802",
+				"integrity": "sha512-B+0nLigk8UyVyGwfEljX1itU9/gyJq5QbpQCwIkAXxKGuv2EJQpxhOF+wVXcFw3c3vALvSAtbUkaA/vOAdu16A==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCGddOMQESoc6ndfp6GDhuLW4/WuqxQKiVzNdShakrqEQIgfLf0Y5xsm6j3GDnThXBfBYjFDxpFYb9hPjTgfb3r2o4="
+					}
+				]
+			},
+			"_npmVersion": "6.14.11",
+			"_npmUser": {
+				"name": "mdidon",
+				"email": "dev@onlx.ltd"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "b9c9561c268505611d90f48b9f1e07e8ae39a7b3",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/bonjour-service_1.0.4_1616500221906_0.07485726713983398",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "14.16.0",
+			"contributors": []
+		},
+		"1.4.0": {
+			"name": "bonjour-service",
+			"description": "A Bonjour/Zeroconf implementation in TypeScript",
+			"version": "1.4.0",
+			"author": {
+				"url": "https://onlx.ltd",
+				"name": "ON LX Lited",
+				"email": "team@onlx.ltd"
+			},
+			"homepage": "https://github.com/onlxltd/bonjour-service",
+			"repository": {
+				"url": "git+https://github.com/onlxltd/bonjour-service.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/onlxltd/bonjour-service/issues"
+			},
+			"main": "./dist/index.js",
+			"dependencies": {
+				"multicast-dns": "^7.2.5",
+				"fast-deep-equal": "^3.1.3"
+			},
+			"devDependencies": {
+				"tape": "^5.9.0",
+				"eslint": "^10.4.0",
+				"standard": "^17.1.2",
+				"after-all": "^2.0.2",
+				"typescript": "^6.0.3",
+				"@types/node": "^25.9.1",
+				"ts-node-dev": "^2.0.0",
+				"@types/multicast-dns": "^7.2.4",
+				"@typescript-eslint/parser": "^8.59.4",
+				"@typescript-eslint/eslint-plugin": "^8.59.4"
+			},
+			"keywords": [
+				"bonjour",
+				"zeroconf",
+				"zero",
+				"configuration",
+				"mdns",
+				"dns",
+				"service",
+				"discovery",
+				"multicast",
+				"broadcast",
+				"dns-sd"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "mdidon",
+					"email": "dev@onlx.ltd"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"dev": "ts-node-dev --respawn --transpile-only ./src/index.ts",
+				"test": "standard --fix && tape test/*.js",
+				"build": "rm -rf ./dist && tsc --removeComments true",
+				"example:simple": "node examples/simple"
+			},
+			"lastModified": 0,
+			"_id": "bonjour-service@1.4.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/bonjour-service/-/bonjour-service-1.4.0.tgz",
+				"shasum": "6d7cfbb5a8f630b41bb44dcd73585eaedf6ef93c",
+				"integrity": "sha512-fGQtj1qdR9vIKjFiWPQd52qIqwjaYqhcI40JEiDuvlZ86E7ZBPBwY9fPgHy9r2rYGIjiRfctNPYz6OQU73ww2w==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEUCIEyuZDSF3OShspa2Px8jyVHuDfvon2S9vz39ev9Y/nuNAiEAqbMIg91zt85BrhyWXo1RKUQfPQKhiUHI4HvRYbID9Tw="
+					}
+				]
+			},
+			"_npmVersion": "11.12.1",
+			"_npmUser": {
+				"name": "mdidon",
+				"email": "dev@onlx.ltd"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "56f4c8ff12b689650725dd247708ec83a724ce4c",
+			"types": "./dist/index.d.ts",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/bonjour-service_1.4.0_1779394115129_0.9023747430803568",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"resolutions": {
+				"flatted": "^3.4.2",
+				"js-yaml": "^4.1.1",
+				"minimatch": "^3.1.3",
+				"picomatch": "^2.3.2",
+				"brace-expansion": "^1.1.14"
+			},
+			"packageManager": "yarn@4.15.0",
+			"_nodeVersion": "24.15.0",
+			"contributors": []
+		},
+		"1.0.5": {
+			"name": "bonjour-service",
+			"description": "A Bonjour/Zeroconf implementation in TypeScript",
+			"version": "1.0.5",
+			"author": {
+				"url": "https://labs.onlx.ltd",
+				"name": "ON LX Lited",
+				"email": "team@onlx.ltd"
+			},
+			"homepage": "https://github.com/onlxltd/bonjour-service",
+			"repository": {
+				"url": "git+https://github.com/onlxltd/bonjour-service.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/onlxltd/bonjour-service/issues"
+			},
+			"main": "./dist/index.js",
+			"dependencies": {
+				"dns-txt": "^2.0.2",
+				"dns-equal": "^1.0.0",
+				"array-flatten": "^2.1.2",
+				"multicast-dns": "^6.2.3",
+				"fast-deep-equal": "^3.1.3"
+			},
+			"devDependencies": {
+				"tape": "^5.2.2",
+				"standard": "^11.0.0",
+				"after-all": "^2.0.2",
+				"typescript": "^4.2.3",
+				"@types/node": "^14.14.35",
+				"ts-node-dev": "^1.1.6"
+			},
+			"keywords": [
+				"bonjour",
+				"zeroconf",
+				"zero",
+				"configuration",
+				"mdns",
+				"dns",
+				"service",
+				"discovery",
+				"multicast",
+				"broadcast",
+				"dns-sd"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "mdidon",
+					"email": "dev@onlx.ltd"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"dev": "ts-node-dev --respawn --transpile-only ./src/index.ts",
+				"test": "standard --fix && tape test/*.js",
+				"build": "tsc --removeComments true",
+				"example:simple": "node examples/simple"
+			},
+			"lastModified": 0,
+			"_id": "bonjour-service@1.0.5",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/bonjour-service/-/bonjour-service-1.0.5.tgz",
+				"shasum": "56e28545fb8f32156b749718b5fef884ec8b9246",
+				"integrity": "sha512-D7FX6zvnQnM1UL4FjES+KbbyuU52OUYWcPyLKl6oZFJhM4OygCJz5V8hEtWzfeOlmQvhF1X6sssprmvAlM3SSA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQC5hN/HRG2fDKSezSPkuRWmdJv+J4LJoz1lyafLNz+dmwIhAMOK/UX38/UOu9WdBo58kQxlxeHP+7LFYKYv98umU4ms"
+					}
+				]
+			},
+			"_npmVersion": "6.14.11",
+			"_npmUser": {
+				"name": "mdidon",
+				"email": "dev@onlx.ltd"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "140b358ee4b91e7cc27d13b62dd9da1c87284141",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/bonjour-service_1.0.5_1616585033130_0.24047089618185846",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "14.16.0",
+			"contributors": []
+		},
+		"1.4.1": {
+			"name": "bonjour-service",
+			"description": "A Bonjour/Zeroconf implementation in TypeScript",
+			"version": "1.4.1",
+			"author": {
+				"url": "https://onlx.ltd",
+				"name": "ON LX Lited",
+				"email": "team@onlx.ltd"
+			},
+			"homepage": "https://github.com/onlxltd/bonjour-service",
+			"repository": {
+				"url": "git+https://github.com/onlxltd/bonjour-service.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/onlxltd/bonjour-service/issues"
+			},
+			"main": "./dist/index.js",
+			"dependencies": {
+				"multicast-dns": "^7.2.5",
+				"fast-deep-equal": "^3.1.3"
+			},
+			"devDependencies": {
+				"tape": "^5.9.0",
+				"eslint": "^10.4.0",
+				"standard": "^17.1.2",
+				"after-all": "^2.0.2",
+				"typescript": "^6.0.3",
+				"@types/node": "^25.9.1",
+				"ts-node-dev": "^2.0.0",
+				"@types/multicast-dns": "^7.2.4",
+				"@typescript-eslint/parser": "^8.59.4",
+				"@typescript-eslint/eslint-plugin": "^8.59.4"
+			},
+			"keywords": [
+				"bonjour",
+				"zeroconf",
+				"zero",
+				"configuration",
+				"mdns",
+				"dns",
+				"service",
+				"discovery",
+				"multicast",
+				"broadcast",
+				"dns-sd"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "mdidon",
+					"email": "dev@onlx.ltd"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"dev": "ts-node-dev --respawn --transpile-only ./src/index.ts",
+				"test": "standard --fix && tape test/*.js",
+				"build": "rm -rf ./dist && tsc --removeComments true",
+				"example:simple": "node examples/simple"
+			},
+			"lastModified": 0,
+			"_id": "bonjour-service@1.4.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/bonjour-service/-/bonjour-service-1.4.1.tgz",
+				"shasum": "67d0d4e50523a90b1d4b445c490cafdf10b99f58",
+				"integrity": "sha512-9KM4QMPKnaJqaja1v7gYO/+TXZGLtzPA05NmUTqDAJjcsWeVoOXKMvU9g0gfuuoYTQqJZ924hivICd5R/bCJbA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEQCIFkXZwYFVr0jmvCl25PVWmaFFDpR7aHVjks+hmtUHtydAiB5N9i5iYSUDAhbX0Hgl//M1cafswJrc6dY1H3nYLCVyA=="
+					}
+				]
+			},
+			"_npmVersion": "11.13.0",
+			"_npmUser": {
+				"name": "mdidon",
+				"email": "dev@onlx.ltd"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "bb330d1d3f964ed34cf73703ed97bc8ddf7b563e",
+			"types": "./dist/index.d.ts",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/bonjour-service_1.4.1_1781083404630_0.3218941729184155",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"resolutions": {
+				"flatted": "^3.4.2",
+				"js-yaml": "^4.1.1",
+				"minimatch": "^3.1.3",
+				"picomatch": "^2.3.2",
+				"brace-expansion": "^1.1.14"
+			},
+			"packageManager": "yarn@4.15.0",
+			"_nodeVersion": "24.16.0",
+			"contributors": []
+		},
+		"1.0.6": {
+			"name": "bonjour-service",
+			"description": "A Bonjour/Zeroconf implementation in TypeScript",
+			"version": "1.0.6",
+			"author": {
+				"url": "https://labs.onlx.ltd",
+				"name": "ON LX Lited",
+				"email": "team@onlx.ltd"
+			},
+			"homepage": "https://github.com/onlxltd/bonjour-service",
+			"repository": {
+				"url": "git+https://github.com/onlxltd/bonjour-service.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/onlxltd/bonjour-service/issues"
+			},
+			"main": "./dist/index.js",
+			"dependencies": {
+				"dns-txt": "^2.0.2",
+				"dns-equal": "^1.0.0",
+				"array-flatten": "^2.1.2",
+				"multicast-dns": "^6.2.3",
+				"fast-deep-equal": "^3.1.3"
+			},
+			"devDependencies": {
+				"tape": "^5.2.2",
+				"eslint": "^7.22.0",
+				"standard": "^11.0.0",
+				"after-all": "^2.0.2",
+				"typescript": "^4.2.3",
+				"@types/node": "^14.14.35",
+				"ts-node-dev": "^1.1.6",
+				"@typescript-eslint/parser": "^4.19.0",
+				"@typescript-eslint/eslint-plugin": "^4.19.0"
+			},
+			"keywords": [
+				"bonjour",
+				"zeroconf",
+				"zero",
+				"configuration",
+				"mdns",
+				"dns",
+				"service",
+				"discovery",
+				"multicast",
+				"broadcast",
+				"dns-sd"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "mdidon",
+					"email": "dev@onlx.ltd"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"dev": "ts-node-dev --respawn --transpile-only ./src/index.ts",
+				"test": "standard --fix && tape test/*.js",
+				"build": "tsc --removeComments true",
+				"example:simple": "node examples/simple"
+			},
+			"lastModified": 0,
+			"_id": "bonjour-service@1.0.6",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/bonjour-service/-/bonjour-service-1.0.6.tgz",
+				"shasum": "494aebd3de9ad52bd8e70b6ec37e99fe7cf9fb29",
+				"integrity": "sha512-Efhqg5tXz+oI1NDpqykKLsvlszNSzzeQW66r3/aPSdikvuB/cDYN1hev+9Dl8Ap8ni3Dn8snztOiFgX3N2g3AQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQCbZwf8PHTOq3woHuG4isfNIkHDvTljO/DmmGJZGsjOMwIhAO5hfl4+DQxM+aPm+6sMsqjU94DTxS8YXRtTw5OIjWBu"
+					}
+				]
+			},
+			"_npmVersion": "6.14.11",
+			"_npmUser": {
+				"name": "mdidon",
+				"email": "dev@onlx.ltd"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "4eec1812fdbb699bacb17a9a90af25dffdf735b7",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/bonjour-service_1.0.6_1617727574974_0.031097692821341116",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "14.16.0",
+			"contributors": []
+		},
+		"1.4.2": {
+			"name": "bonjour-service",
+			"description": "A Bonjour/Zeroconf implementation in TypeScript",
+			"version": "1.4.2",
+			"author": {
+				"name": "ON LX Lited",
+				"email": "team@onlx.ltd",
+				"url": "https://onlx.ltd"
+			},
+			"homepage": "https://github.com/onlxltd/bonjour-service",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/onlxltd/bonjour-service.git"
+			},
+			"bugs": {
+				"url": "https://github.com/onlxltd/bonjour-service/issues"
+			},
+			"main": "./dist/index.js",
+			"dependencies": {
+				"fast-deep-equal": "^3.1.3",
+				"multicast-dns": "^7.2.5"
+			},
+			"devDependencies": {
+				"@types/multicast-dns": "^7.2.4",
+				"@types/node": "^25.9.1",
+				"@typescript-eslint/eslint-plugin": "^8.59.4",
+				"@typescript-eslint/parser": "^8.59.4",
+				"after-all": "^2.0.2",
+				"eslint": "^10.4.0",
+				"standard": "^17.1.2",
+				"tape": "^5.9.0",
+				"ts-node-dev": "^2.0.0",
+				"typescript": "^6.0.3"
+			},
+			"keywords": [
+				"bonjour",
+				"zeroconf",
+				"zero",
+				"configuration",
+				"mdns",
+				"dns",
+				"service",
+				"discovery",
+				"multicast",
+				"broadcast",
+				"dns-sd"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "mdidon",
+					"email": "dev@onlx.ltd"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "standard --fix && tape test/*.js",
+				"build": "rm -rf ./dist && tsc --removeComments true",
+				"dev": "ts-node-dev --respawn --transpile-only ./src/index.ts",
+				"example:simple": "node examples/simple"
+			},
+			"lastModified": 0,
+			"_id": "bonjour-service@1.4.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/bonjour-service/-/bonjour-service-1.4.2.tgz",
+				"shasum": "33ce18eddf13047e5eeb08939018b20bae1a1473",
+				"integrity": "sha512-lMskhnsW70yWHr4PhPeh2rvaIkLSaDpp+nmtbXBZaNKTXwxL73QOkW6HhbzqTImXjevn9TreGT4GACGBCGP9nQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEQCIAUhlsWYVTnjLkb1KqnQMS+f9W6dNc3DFD0N5MB+UMGXAiAksLkD02yRwiVHwep6yfUc4+iliiOYRnuxbIpucS5Wyw=="
+					}
+				]
+			},
+			"_npmVersion": "11.13.0",
+			"_npmUser": {
+				"name": "mdidon",
+				"email": "dev@onlx.ltd"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "8ff1a8bedd937a003420cf6c3558790539ed6324",
+			"types": "./dist/index.d.ts",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages-npm-production",
+				"tmp": "tmp/bonjour-service_1.4.2_1782297203815_0.24744689372517947"
+			},
+			"resolutions": {
+				"js-yaml": "^4.2.0",
+				"minimatch": "^3.1.3",
+				"flatted": "^3.4.2",
+				"picomatch": "^2.3.2",
+				"brace-expansion": "^1.1.14"
+			},
+			"packageManager": "yarn@4.17.0",
+			"_nodeVersion": "24.16.0",
+			"contributors": []
+		},
+		"1.0.7": {
+			"name": "bonjour-service",
+			"description": "A Bonjour/Zeroconf implementation in TypeScript",
+			"version": "1.0.7",
+			"author": {
+				"url": "https://labs.onlx.ltd",
+				"name": "ON LX Lited",
+				"email": "team@onlx.ltd"
+			},
+			"homepage": "https://github.com/onlxltd/bonjour-service",
+			"repository": {
+				"url": "git+https://github.com/onlxltd/bonjour-service.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/onlxltd/bonjour-service/issues"
+			},
+			"main": "./dist/index.js",
+			"dependencies": {
+				"dns-txt": "^2.0.2",
+				"dns-equal": "^1.0.0",
+				"array-flatten": "^2.1.2",
+				"multicast-dns": "^6.2.3",
+				"fast-deep-equal": "^3.1.3"
+			},
+			"devDependencies": {
+				"tape": "^5.2.2",
+				"eslint": "^7.22.0",
+				"standard": "^11.0.0",
+				"after-all": "^2.0.2",
+				"typescript": "^4.2.3",
+				"@types/node": "^14.14.35",
+				"ts-node-dev": "^1.1.6",
+				"@typescript-eslint/parser": "^4.19.0",
+				"@typescript-eslint/eslint-plugin": "^4.19.0"
+			},
+			"keywords": [
+				"bonjour",
+				"zeroconf",
+				"zero",
+				"configuration",
+				"mdns",
+				"dns",
+				"service",
+				"discovery",
+				"multicast",
+				"broadcast",
+				"dns-sd"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "mdidon",
+					"email": "dev@onlx.ltd"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"dev": "ts-node-dev --respawn --transpile-only ./src/index.ts",
+				"test": "standard --fix && tape test/*.js",
+				"build": "tsc --removeComments true",
+				"example:simple": "node examples/simple"
+			},
+			"lastModified": 0,
+			"_id": "bonjour-service@1.0.7",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/bonjour-service/-/bonjour-service-1.0.7.tgz",
+				"shasum": "075be48ad261fd4b6254e30ac06417723d9cb50c",
+				"integrity": "sha512-poQ/pZ7xJ41/xKFWaq/qsHjYsOh8DqAbqQ4BYY0UT0WywsZgOOBK3WIAZTXEnMowbec7Flp2n5Jg3qg2vuVDMQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIFWCvOKA6tMYPoqj1fMa+2BeDy88aPbYtXR0BlmJ+N3oAiEAoMvwMoq0QZV3dHjNNcsP+k3SiX3vvNRybisIJKoBjYo="
+					}
+				]
+			},
+			"_npmVersion": "6.14.12",
+			"_npmUser": {
+				"name": "mdidon",
+				"email": "dev@onlx.ltd"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "cb99891ece286b46b47ddf8446431acf83788bc2",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/bonjour-service_1.0.7_1621095137167_0.040748270845632595",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "14.16.1",
+			"contributors": []
+		},
+		"1.0.8": {
+			"name": "bonjour-service",
+			"description": "A Bonjour/Zeroconf implementation in TypeScript",
+			"version": "1.0.8",
+			"author": {
+				"url": "https://labs.onlx.ltd",
+				"name": "ON LX Lited",
+				"email": "team@onlx.ltd"
+			},
+			"homepage": "https://github.com/onlxltd/bonjour-service",
+			"repository": {
+				"url": "git+https://github.com/onlxltd/bonjour-service.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/onlxltd/bonjour-service/issues"
+			},
+			"main": "./dist/index.js",
+			"dependencies": {
+				"dns-equal": "^1.0.0",
+				"array-flatten": "^2.1.2",
+				"multicast-dns": "^7.2.3",
+				"fast-deep-equal": "^3.1.3"
+			},
+			"devDependencies": {
+				"tape": "^5.2.2",
+				"eslint": "^7.22.0",
+				"standard": "^11.0.0",
+				"after-all": "^2.0.2",
+				"typescript": "^4.2.3",
+				"@types/node": "^14.14.35",
+				"ts-node-dev": "^1.1.6",
+				"@typescript-eslint/parser": "^4.19.0",
+				"@typescript-eslint/eslint-plugin": "^4.19.0"
+			},
+			"keywords": [
+				"bonjour",
+				"zeroconf",
+				"zero",
+				"configuration",
+				"mdns",
+				"dns",
+				"service",
+				"discovery",
+				"multicast",
+				"broadcast",
+				"dns-sd"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "mdidon",
+					"email": "dev@onlx.ltd"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"dev": "ts-node-dev --respawn --transpile-only ./src/index.ts",
+				"test": "standard --fix && tape test/*.js",
+				"build": "tsc --removeComments true",
+				"example:simple": "node examples/simple"
+			},
+			"lastModified": 0,
+			"_id": "bonjour-service@1.0.8",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/bonjour-service/-/bonjour-service-1.0.8.tgz",
+				"shasum": "9ba2677bfa7f5ca290fb10ddb5479bf629948188",
+				"integrity": "sha512-fpdP5u/CGeEdFvtxg8PEXUmCbY3tkEB+79maI8GCdocVLM5xtIX8YgOHWnhO7Qh7WDgJoOibVoZWg+aNBJPVHw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIAs84eBRermz67addirDjAbbYcDeS50o2XzPLvkwJm03AiEAtPFZR69TnGkFIhdhTnyQjLsxzKVGWC8q1vnJeaBwnC8="
+					}
+				]
+			},
+			"_npmVersion": "6.14.13",
+			"_npmUser": {
+				"name": "mdidon",
+				"email": "dev@onlx.ltd"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "0974de0e260be56aec6307b16c021f12f39a9fc1",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/bonjour-service_1.0.8_1622111740194_0.3507725262273984",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "14.17.0",
+			"contributors": []
+		},
+		"1.0.9": {
+			"name": "bonjour-service",
+			"description": "A Bonjour/Zeroconf implementation in TypeScript",
+			"version": "1.0.9",
+			"author": {
+				"url": "https://labs.onlx.ltd",
+				"name": "ON LX Lited",
+				"email": "team@onlx.ltd"
+			},
+			"homepage": "https://github.com/onlxltd/bonjour-service",
+			"repository": {
+				"url": "git+https://github.com/onlxltd/bonjour-service.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/onlxltd/bonjour-service/issues"
+			},
+			"main": "./dist/index.js",
+			"dependencies": {
+				"dns-equal": "^1.0.0",
+				"array-flatten": "^2.1.2",
+				"multicast-dns": "^7.2.4",
+				"fast-deep-equal": "^3.1.3"
+			},
+			"devDependencies": {
+				"tape": "^5.2.2",
+				"eslint": "^7.22.0",
+				"standard": "^11.0.0",
+				"after-all": "^2.0.2",
+				"typescript": "^4.4.4",
+				"@types/node": "^14.14.35",
+				"ts-node-dev": "^1.1.8",
+				"@typescript-eslint/parser": "^4.19.0",
+				"@typescript-eslint/eslint-plugin": "^4.19.0"
+			},
+			"keywords": [
+				"bonjour",
+				"zeroconf",
+				"zero",
+				"configuration",
+				"mdns",
+				"dns",
+				"service",
+				"discovery",
+				"multicast",
+				"broadcast",
+				"dns-sd"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "mdidon",
+					"email": "dev@onlx.ltd"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"dev": "ts-node-dev --respawn --transpile-only ./src/index.ts",
+				"test": "standard --fix && tape test/*.js",
+				"build": "tsc --removeComments true",
+				"example:simple": "node examples/simple"
+			},
+			"lastModified": 0,
+			"_id": "bonjour-service@1.0.9",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/bonjour-service/-/bonjour-service-1.0.9.tgz",
+				"shasum": "f3dd44f53d612764b39b18223552ee025e100269",
+				"integrity": "sha512-JhoLulFpp2Ar3s92VgnEDrqT456lYQ6p2KRTdxhKoNcw63bItt6sUl12t9ou2IQ0mAXUvKULa0LrEYuXtNGPMA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCICIH/udqbtTuv+fU+f+NhKF7xPjc+pm+Erz/kMHwfPL6AiEA7lcYsLG+rHxKM3UEPolJXrONNlJPfzD6OeeWmTUcYZo="
+					}
+				]
+			},
+			"_npmVersion": "6.14.15",
+			"_npmUser": {
+				"name": "mdidon",
+				"email": "dev@onlx.ltd"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "ef149850177aa2944a8efd43937b148bdd6a7ffb",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/bonjour-service_1.0.9_1634641144324_0.3398307781283143",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "14.18.0",
+			"contributors": []
+		},
+		"1.0.0": {
+			"name": "bonjour-service",
+			"description": "A Bonjour/Zeroconf implementation in TypeScript",
+			"version": "1.0.0",
+			"author": {
+				"url": "https://labs.onlx.ltd",
+				"name": "ON LX Lited",
+				"email": "team@onlx.ltd"
+			},
+			"homepage": "https://github.com/onlxltd/bonjour-service",
+			"repository": {
+				"url": "git+https://github.com/onlxltd/bonjour-service.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/onlxltd/bonjour-service/issues"
+			},
+			"main": "./dist/index.js",
+			"dependencies": {
+				"dns-txt": "^2.0.2",
+				"dns-equal": "^1.0.0",
+				"typescript": "^4.2.3",
+				"array-flatten": "^2.1.0",
+				"multicast-dns": "^6.0.1",
+				"fast-deep-equal": "^3.1.3"
+			},
+			"devDependencies": {
+				"tape": "^4.5.1",
+				"standard": "^7.0.1",
+				"after-all": "^2.0.2",
+				"@types/node": "^14.14.35",
+				"ts-node-dev": "^1.1.6"
+			},
+			"keywords": [
+				"bonjour",
+				"zeroconf",
+				"zero",
+				"configuration",
+				"mdns",
+				"dns",
+				"service",
+				"discovery",
+				"multicast",
+				"broadcast",
+				"dns-sd"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "mdidon",
+					"email": "dev@onlx.ltd"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"dev": "ts-node-dev --respawn --transpile-only ./src/index.ts",
+				"test": "standard --fix && tape test/*.js",
+				"build": "tsc --removeComments true",
+				"example:simple": "node examples/simple"
+			},
+			"lastModified": 0,
+			"_id": "bonjour-service@1.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/bonjour-service/-/bonjour-service-1.0.0.tgz",
+				"shasum": "0a5db7aa8b1e4c7dea9e5e1de79a59eb52b0026c",
+				"integrity": "sha512-DdVfBhutaVuywUCZi9bWcqbkGABU5x+R8AJ1snnEU1FKchjYf6lrzfXftvxwfbMaXIQqQA362J1OaWTYWMgXwA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDbGoNsYt3OH/5plcfk061dt3bGKTqp+8zraBzSIb9GiAIgHty5rZyYIW+NUFNOsHiaVx1y45xWZqDXpuoTpKXmHFk="
+					}
+				]
+			},
+			"_npmVersion": "6.14.11",
+			"_npmUser": {
+				"name": "mdidon",
+				"email": "dev@onlx.ltd"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "83e34a2704b0e65b477582695edb6b86a2db6d32",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/bonjour-service_1.0.0_1616195929806_0.2920781160385546",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "14.16.0",
+			"contributors": []
+		},
+		"1.1.0": {
+			"name": "bonjour-service",
+			"description": "A Bonjour/Zeroconf implementation in TypeScript",
+			"version": "1.1.0",
+			"author": {
+				"url": "https://labs.onlx.ltd",
+				"name": "ON LX Lited",
+				"email": "team@onlx.ltd"
+			},
+			"homepage": "https://github.com/onlxltd/bonjour-service",
+			"repository": {
+				"url": "git+https://github.com/onlxltd/bonjour-service.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/onlxltd/bonjour-service/issues"
+			},
+			"main": "./dist/index.js",
+			"dependencies": {
+				"dns-equal": "^1.0.0",
+				"array-flatten": "^2.1.2",
+				"multicast-dns": "^7.2.5",
+				"fast-deep-equal": "^3.1.3"
+			},
+			"devDependencies": {
+				"tape": "^5.2.2",
+				"eslint": "^8.15.0",
+				"standard": "^17.0.0",
+				"after-all": "^2.0.2",
+				"typescript": "^4.4.4",
+				"@types/node": "^16.18.11",
+				"ts-node-dev": "^2.0.0",
+				"@typescript-eslint/parser": "^5.22.0",
+				"@typescript-eslint/eslint-plugin": "^5.22.0"
+			},
+			"keywords": [
+				"bonjour",
+				"zeroconf",
+				"zero",
+				"configuration",
+				"mdns",
+				"dns",
+				"service",
+				"discovery",
+				"multicast",
+				"broadcast",
+				"dns-sd"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "mdidon",
+					"email": "dev@onlx.ltd"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"dev": "ts-node-dev --respawn --transpile-only ./src/index.ts",
+				"test": "standard --fix && tape test/*.js",
+				"build": "tsc --removeComments true",
+				"example:simple": "node examples/simple"
+			},
+			"lastModified": 0,
+			"_id": "bonjour-service@1.1.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/bonjour-service/-/bonjour-service-1.1.0.tgz",
+				"shasum": "424170268d68af26ff83a5c640b95def01803a13",
+				"integrity": "sha512-LVRinRB3k1/K0XzZ2p58COnWvkQknIY6sf0zF2rpErvcJXpMBttEPQSxK+HEXSS9VmpZlDoDnQWv8ftJT20B0Q==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIEOfYCYdKOK0aMMh2DGERvbaLp2kCIsE3hAfAFPoGB+WAiEA1g923xQW3vrZCzmPBTKJZjH48F+Gb4VXSAGN4dK8Wms="
+					}
+				]
+			},
+			"_npmVersion": "6.14.17",
+			"_npmUser": {
+				"name": "mdidon",
+				"email": "dev@onlx.ltd"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "05c9e93896d4dfe5cf94d7ece3212f0ba6e8e574",
+			"types": "./dist/index.d.ts",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/bonjour-service_1.1.0_1673437914390_0.2742915583784149",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "14.21.2",
+			"contributors": []
+		},
+		"1.0.2": {
+			"name": "bonjour-service",
+			"description": "A Bonjour/Zeroconf implementation in TypeScript",
+			"version": "1.0.2",
+			"author": {
+				"url": "https://labs.onlx.ltd",
+				"name": "ON LX Lited",
+				"email": "team@onlx.ltd"
+			},
+			"homepage": "https://github.com/onlxltd/bonjour-service",
+			"repository": {
+				"url": "git+https://github.com/onlxltd/bonjour-service.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/onlxltd/bonjour-service/issues"
+			},
+			"main": "./dist/index.js",
+			"dependencies": {
+				"dns-txt": "^2.0.2",
+				"dns-equal": "^1.0.0",
+				"array-flatten": "^2.1.0",
+				"multicast-dns": "^6.0.1",
+				"fast-deep-equal": "^3.1.3"
+			},
+			"devDependencies": {
+				"tape": "^4.5.1",
+				"standard": "^7.0.1",
+				"after-all": "^2.0.2",
+				"typescript": "^4.2.3",
+				"@types/node": "^14.14.35",
+				"ts-node-dev": "^1.1.6"
+			},
+			"keywords": [
+				"bonjour",
+				"zeroconf",
+				"zero",
+				"configuration",
+				"mdns",
+				"dns",
+				"service",
+				"discovery",
+				"multicast",
+				"broadcast",
+				"dns-sd"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "mdidon",
+					"email": "dev@onlx.ltd"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"dev": "ts-node-dev --respawn --transpile-only ./src/index.ts",
+				"test": "standard --fix && tape test/*.js",
+				"build": "tsc --removeComments true",
+				"example:simple": "node examples/simple"
+			},
+			"lastModified": 0,
+			"_id": "bonjour-service@1.0.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/bonjour-service/-/bonjour-service-1.0.2.tgz",
+				"shasum": "ee7065165f082749522da51865a1a759c91f9145",
+				"integrity": "sha512-ELSlhQw9ZkCuPhc9AXz/XUm0MLelaGbo+qwx5t0kQNSeK0DhjleHXTbcfkSeOECdvxlM6wFlQAv/DPOL76ZtQg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQCYuIZ8j7AlxJVrJNCrgdlQtgUdXJfI+3hl285/8exBpgIhAOPZLEaViNLz3IdkOtGtgDYlFG0H0HXTaBgK+ZVzzeWL"
+					}
+				]
+			},
+			"_npmVersion": "6.14.11",
+			"_npmUser": {
+				"name": "mdidon",
+				"email": "dev@onlx.ltd"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "897008795a84e6ed8c82c6f7753c6763de4e8d12",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/bonjour-service_1.0.2_1616196981956_0.5156255864878612",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "14.16.0",
+			"contributors": []
+		},
+		"1.1.1": {
+			"name": "bonjour-service",
+			"description": "A Bonjour/Zeroconf implementation in TypeScript",
+			"version": "1.1.1",
+			"author": {
+				"url": "https://labs.onlx.ltd",
+				"name": "ON LX Lited",
+				"email": "team@onlx.ltd"
+			},
+			"homepage": "https://github.com/onlxltd/bonjour-service",
+			"repository": {
+				"url": "git+https://github.com/onlxltd/bonjour-service.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/onlxltd/bonjour-service/issues"
+			},
+			"main": "./dist/index.js",
+			"dependencies": {
+				"dns-equal": "^1.0.0",
+				"array-flatten": "^2.1.2",
+				"multicast-dns": "^7.2.5",
+				"fast-deep-equal": "^3.1.3"
+			},
+			"devDependencies": {
+				"tape": "^5.2.2",
+				"eslint": "^8.15.0",
+				"standard": "^17.0.0",
+				"after-all": "^2.0.2",
+				"typescript": "^4.4.4",
+				"@types/node": "^16.18.11",
+				"ts-node-dev": "^2.0.0",
+				"@typescript-eslint/parser": "^5.22.0",
+				"@typescript-eslint/eslint-plugin": "^5.22.0"
+			},
+			"keywords": [
+				"bonjour",
+				"zeroconf",
+				"zero",
+				"configuration",
+				"mdns",
+				"dns",
+				"service",
+				"discovery",
+				"multicast",
+				"broadcast",
+				"dns-sd"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "mdidon",
+					"email": "dev@onlx.ltd"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"dev": "ts-node-dev --respawn --transpile-only ./src/index.ts",
+				"test": "standard --fix && tape test/*.js",
+				"build": "tsc --removeComments true",
+				"example:simple": "node examples/simple"
+			},
+			"lastModified": 0,
+			"_id": "bonjour-service@1.1.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/bonjour-service/-/bonjour-service-1.1.1.tgz",
+				"shasum": "960948fa0e0153f5d26743ab15baf8e33752c135",
+				"integrity": "sha512-Z/5lQRMOG9k7W+FkeGTNjh7htqn/2LMnfOvBZ8pynNZCM9MwkQkI3zeI4oz09uWdcgmgHugVvBqxGg4VQJ5PCg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDX6MHfE+HOPdY75cyXh29k7CaN1ysVw23zCZITjdDLDwIhAMNBHxZeutScYvotHUjFGShnxrGMXpavHbJ7M1EE2hLb"
+					}
+				]
+			},
+			"_npmVersion": "6.14.18",
+			"_npmUser": {
+				"name": "mdidon",
+				"email": "dev@onlx.ltd"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "37e5936adcbed5560b697135a2eed68d562fee72",
+			"types": "./dist/index.d.ts",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/bonjour-service_1.1.1_1679402431747_0.0034084947873016525",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "14.21.3",
+			"contributors": []
+		},
+		"1.2.0": {
+			"name": "bonjour-service",
+			"description": "A Bonjour/Zeroconf implementation in TypeScript",
+			"version": "1.2.0",
+			"author": {
+				"url": "https://labs.onlx.ltd",
+				"name": "ON LX Lited",
+				"email": "team@onlx.ltd"
+			},
+			"homepage": "https://github.com/onlxltd/bonjour-service",
+			"repository": {
+				"url": "git+https://github.com/onlxltd/bonjour-service.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/onlxltd/bonjour-service/issues"
+			},
+			"main": "./dist/index.js",
+			"dependencies": {
+				"multicast-dns": "^7.2.5",
+				"fast-deep-equal": "^3.1.3"
+			},
+			"devDependencies": {
+				"tape": "^5.2.2",
+				"eslint": "^8.15.0",
+				"standard": "^17.0.0",
+				"after-all": "^2.0.2",
+				"typescript": "^4.4.4",
+				"@types/node": "^16.18.11",
+				"ts-node-dev": "^2.0.0",
+				"@typescript-eslint/parser": "^5.22.0",
+				"@typescript-eslint/eslint-plugin": "^5.22.0"
+			},
+			"keywords": [
+				"bonjour",
+				"zeroconf",
+				"zero",
+				"configuration",
+				"mdns",
+				"dns",
+				"service",
+				"discovery",
+				"multicast",
+				"broadcast",
+				"dns-sd"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "mdidon",
+					"email": "dev@onlx.ltd"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"dev": "ts-node-dev --respawn --transpile-only ./src/index.ts",
+				"test": "standard --fix && tape test/*.js",
+				"build": "tsc --removeComments true",
+				"example:simple": "node examples/simple"
+			},
+			"lastModified": 0,
+			"_id": "bonjour-service@1.2.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/bonjour-service/-/bonjour-service-1.2.0.tgz",
+				"shasum": "1c56da07a76e33b049ba7d865859abee5297f55a",
+				"integrity": "sha512-xdzMA6JGckxyJzZByjEWRcfKmDxXaGXZWVftah3FkCqdlePNS9DjHSUN5zkP4oEfz/t0EXXlro88EIhzwMB4zA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIFHZz8BTqNwPs6IOj9iAgH6zKhFnwUBWQlOcvCca9VMHAiB30TD7T6DbgdIMY/2vwN1FMuy/WszfDEyPl0j4ciArmA=="
+					}
+				]
+			},
+			"_npmVersion": "8.19.4",
+			"_npmUser": {
+				"name": "mdidon",
+				"email": "dev@onlx.ltd"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "8c905967811deea60d53aacb333c3300ade10406",
+			"types": "./dist/index.d.ts",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/bonjour-service_1.2.0_1704275564597_0.6505946802089582",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "16.20.2",
+			"contributors": []
+		}
+	},
+	"time": {
+		"1.0.12": "2022-04-22T08:58:57.811Z",
+		"1.0.13": "2022-06-07T10:45:22.120Z",
+		"1.0.14": "2022-08-31T16:49:43.084Z",
+		"1.0.10": "2021-12-16T12:56:32.604Z",
+		"1.0.11": "2022-01-31T17:07:23.638Z",
+		"modified": "2026-06-24T10:33:24.093Z",
+		"created": "2021-03-19T23:18:49.806Z",
+		"1.0.3": "2021-03-22T12:48:14.693Z",
+		"1.2.1": "2024-01-08T13:05:13.429Z",
+		"1.3.0": "2024-11-18T13:23:55.699Z",
+		"1.0.4": "2021-03-23T11:50:22.040Z",
+		"1.4.0": "2026-05-21T20:08:35.323Z",
+		"1.0.5": "2021-03-24T11:23:53.460Z",
+		"1.4.1": "2026-06-10T09:23:24.818Z",
+		"1.0.6": "2021-04-06T16:46:15.177Z",
+		"1.4.2": "2026-06-24T10:33:23.963Z",
+		"1.0.7": "2021-05-15T16:12:17.275Z",
+		"1.0.8": "2021-05-27T10:35:40.333Z",
+		"1.0.9": "2021-10-19T10:59:04.476Z",
+		"1.0.0": "2021-03-19T23:18:49.988Z",
+		"1.0.1": "2021-03-18T23:10:14.900Z",
+		"1.1.0": "2023-01-11T11:51:54.597Z",
+		"1.0.2": "2021-03-19T23:36:22.108Z",
+		"1.1.1": "2023-03-21T12:40:31.961Z",
+		"1.2.0": "2024-01-03T09:52:44.771Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "1.4.2"
+	},
+	"_uplinks": {
+		"artifactory-sabadell": {
+			"etag": "bda57791bf809bf082ac5870343e16a3eacbec24",
+			"fetched": 1782459821403
+		}
+	},
+	"_distfiles": {
+		"bonjour-service-1.0.12.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/bonjour-service/-/bonjour-service-1.0.12.tgz",
+			"sha": "28fbd4683f5f2e36feedb833e24ba661cac960c3",
+			"registry": "artifactory-sabadell"
+		},
+		"bonjour-service-1.0.13.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/bonjour-service/-/bonjour-service-1.0.13.tgz",
+			"sha": "4ac003dc1626023252d58adf2946f57e5da450c1",
+			"registry": "artifactory-sabadell"
+		},
+		"bonjour-service-1.0.14.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/bonjour-service/-/bonjour-service-1.0.14.tgz",
+			"sha": "c346f5bc84e87802d08f8d5a60b93f758e514ee7",
+			"registry": "artifactory-sabadell"
+		},
+		"bonjour-service-1.0.10.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/bonjour-service/-/bonjour-service-1.0.10.tgz",
+			"sha": "11de2a51d2e07bcd2ae65fc41c42abfd36c6f37f",
+			"registry": "artifactory-sabadell"
+		},
+		"bonjour-service-1.0.11.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/bonjour-service/-/bonjour-service-1.0.11.tgz",
+			"sha": "5418e5c1ac91c89a406f853a942e7892829c0d89",
+			"registry": "artifactory-sabadell"
+		},
+		"bonjour-service-1.0.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/bonjour-service/-/bonjour-service-1.0.3.tgz",
+			"sha": "f421b8499bc64c51c2fefd7d0ea4c021f4f2e86b",
+			"registry": "artifactory-sabadell"
+		},
+		"bonjour-service-1.2.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/bonjour-service/-/bonjour-service-1.2.1.tgz",
+			"sha": "eb41b3085183df3321da1264719fbada12478d02",
+			"registry": "artifactory-sabadell"
+		},
+		"bonjour-service-1.3.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/bonjour-service/-/bonjour-service-1.3.0.tgz",
+			"sha": "80d867430b5a0da64e82a8047fc1e355bdb71722",
+			"registry": "artifactory-sabadell"
+		},
+		"bonjour-service-1.0.4.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/bonjour-service/-/bonjour-service-1.0.4.tgz",
+			"sha": "b4c1127eb7a0052e764eb1d5d4f0015a0c945802",
+			"registry": "artifactory-sabadell"
+		},
+		"bonjour-service-1.4.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/bonjour-service/-/bonjour-service-1.4.0.tgz",
+			"sha": "6d7cfbb5a8f630b41bb44dcd73585eaedf6ef93c",
+			"registry": "artifactory-sabadell"
+		},
+		"bonjour-service-1.0.5.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/bonjour-service/-/bonjour-service-1.0.5.tgz",
+			"sha": "56e28545fb8f32156b749718b5fef884ec8b9246",
+			"registry": "artifactory-sabadell"
+		},
+		"bonjour-service-1.4.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/bonjour-service/-/bonjour-service-1.4.1.tgz",
+			"sha": "67d0d4e50523a90b1d4b445c490cafdf10b99f58",
+			"registry": "artifactory-sabadell"
+		},
+		"bonjour-service-1.0.6.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/bonjour-service/-/bonjour-service-1.0.6.tgz",
+			"sha": "494aebd3de9ad52bd8e70b6ec37e99fe7cf9fb29",
+			"registry": "artifactory-sabadell"
+		},
+		"bonjour-service-1.4.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/bonjour-service/-/bonjour-service-1.4.2.tgz",
+			"sha": "33ce18eddf13047e5eeb08939018b20bae1a1473",
+			"registry": "artifactory-sabadell"
+		},
+		"bonjour-service-1.0.7.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/bonjour-service/-/bonjour-service-1.0.7.tgz",
+			"sha": "075be48ad261fd4b6254e30ac06417723d9cb50c",
+			"registry": "artifactory-sabadell"
+		},
+		"bonjour-service-1.0.8.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/bonjour-service/-/bonjour-service-1.0.8.tgz",
+			"sha": "9ba2677bfa7f5ca290fb10ddb5479bf629948188",
+			"registry": "artifactory-sabadell"
+		},
+		"bonjour-service-1.0.9.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/bonjour-service/-/bonjour-service-1.0.9.tgz",
+			"sha": "f3dd44f53d612764b39b18223552ee025e100269",
+			"registry": "artifactory-sabadell"
+		},
+		"bonjour-service-1.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/bonjour-service/-/bonjour-service-1.0.0.tgz",
+			"sha": "0a5db7aa8b1e4c7dea9e5e1de79a59eb52b0026c",
+			"registry": "artifactory-sabadell"
+		},
+		"bonjour-service-1.1.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/bonjour-service/-/bonjour-service-1.1.0.tgz",
+			"sha": "424170268d68af26ff83a5c640b95def01803a13",
+			"registry": "artifactory-sabadell"
+		},
+		"bonjour-service-1.0.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/bonjour-service/-/bonjour-service-1.0.2.tgz",
+			"sha": "ee7065165f082749522da51865a1a759c91f9145",
+			"registry": "artifactory-sabadell"
+		},
+		"bonjour-service-1.1.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/bonjour-service/-/bonjour-service-1.1.1.tgz",
+			"sha": "960948fa0e0153f5d26743ab15baf8e33752c135",
+			"registry": "artifactory-sabadell"
+		},
+		"bonjour-service-1.2.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/bonjour-service/-/bonjour-service-1.2.0.tgz",
+			"sha": "1c56da07a76e33b049ba7d865859abee5297f55a",
+			"registry": "artifactory-sabadell"
+		}
+	},
+	"_attachments": {},
+	"_rev": "1-58550ddd0a781674",
+	"_id": "bonjour-service",
+	"readme": "# bonjour-service\n![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/onlxltd/bonjour-service/build-and-test.yml?style=flat-square)\n ![npm bundle size](https://img.shields.io/bundlephobia/min/bonjour-service?style=flat-square) ![GitHub Release Date](https://img.shields.io/github/release-date/onlxltd/bonjour-service?style=flat-square) ![npm](https://img.shields.io/npm/dw/bonjour-service?color=%23888&style=flat-square) ![GitHub](https://img.shields.io/github/license/onlxltd/bonjour-service?style=flat-square) [![DeepScan grade](https://deepscan.io/api/teams/13435/projects/16430/branches/352351/badge/grade.svg?style=flat-square)](https://deepscan.io/dashboard#view=project&tid=13435&pid=16430&bid=352351)\n\nA Bonjour/Zeroconf protocol implementation in TypeScript. Publish\nservices on the local network or discover existing services using\nmulticast DNS.\n\nThis is a rewrite of the project Bonjour (https://github.com/watson/bonjour) into modern TypeScript.\n\nbonjour-service is supported by [ON LX Limited](https://onlx.ltd/?src=bonjour-service). Check out our projects such as [Ctrl Suite](https://onlx.ltd/ctrl-suite?src=bonjour-service) and [Ctrl for iPad](https://onlx.ltd/ctrl-for-ipad?src=bonjour-service).\n\n\n\n## Installation\nAdd to your project dependencies using Yarn or NPM.\n\n#### Install with Yarn\n```\nyarn add bonjour-service\n```\n#### Install with NPM\n```\nnpm install bonjour-service\n```\n\n## Usage\n\n```js\nimport Bonjour from 'bonjour-service'\n// or import { Bonjour } from 'bonjour-service'\n\nconst instance = new Bonjour()\n\n// advertise an HTTP server on port 3000\ninstance.publish({ name: 'My Web Server', type: 'http', port: 3000 })\n\n// browse for all http services\ninstance.find({ type: 'http' }, function (service) {\n  console.log('Found an HTTP server:', service)\n})\n```\n\n## API\n\n### Initializing\n\n```js\nconst instance = new Bonjour({ options }, errorCallback)\n```\n\nThe `options` are optional and will be used when initializing the\nunderlying multicast-dns server. For details see [the multicast-dns\ndocumentation](https://github.com/mafintosh/multicast-dns#mdns--multicastdnsoptions).\n\n`errorCallback` is an optional callback used to gracefully handle errors that would otherwise\ncrash the process. While not being strictly required, providing this is highly recommended\n\n### Publishing\n\n#### `const service = bonjour.publish(options)`\n\nPublishes a new service.\n\nOptions are:\n\n- `name` (string)\n- `host` (string, optional) - defaults to local hostname\n- `port` (number)\n- `type` (string)\n- `subtypes` (array of strings, optional)\n- `protocol` (string, optional) - `udp` or `tcp` (default)\n- `txt` (object, optional) - a key/value object to broadcast as the TXT\n  record\n- `disableIPv6` (boolean, optional) disble IPv6 addresses\n\nIANA maintains a [list of official service types and port\nnumbers](http://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml).\n\n#### `bonjour.unpublishAll([callback])`\n\nUnpublish all services. The optional `callback` will be called when the\nservices have been unpublished.\n\n#### `bonjour.destroy()`\n\nDestroy the mdns instance. Closes the udp socket.\n\n### Browser\n\n#### `const browser = bonjour.find(options[, onup])`\n\nListen for services advertised on the network. An optional callback can\nbe provided as the 2nd argument and will be added as an event listener\nfor the `up` event.\n\nOptions (all optional):\n\n- `type` (string)\n- `subtypes` (array of strings)\n- `protocol` (string) - defaults to `tcp`\n- `txt` (object) - passed into [dns-txt\n  module](https://github.com/watson/dns-txt) contructor. Set to `{\n  binary: true }` if you want to keep the TXT records in binary\n\n#### `const browser = bonjour.findOne(options[, callback])`\n\nListen for and call the `callback` with the first instance of a service\nmatching the `options`. If no `callback` is given, it's expected that\nyou listen for the `up` event. The returned `browser` will automatically\nstop it self after the first matching service.\n\nOptions are the same as given in the `browser.find` function.\n\n#### `Event: up`\n\nEmitted every time a new service is found that matches the browser.\n\n#### `Event: down`\n\nEmitted every time an existing service emmits a goodbye message.\n\n#### `Event: srv-update`\n\nEmitted every time an existing service does a new announcement with an updated SRV record.\n\n#### `Event: txt-update`\n\nEmitted every time an existing service does a new announcement with an updated TXT record.\n\n#### `browser.services()`\n\nAn array of services known by the browser to be online.\n\n#### `browser.start()`\n\nStart looking for matching services.\n\n#### `browser.stop()`\n\nStop looking for matching services.\n\n#### `browser.update()`\n\nBroadcast the query again.\n\n#### `browser.expire()`\n\nCheck any services for an expired TTL and emit stop events.\n\n### Service\n\n#### `Event: up`\n\nEmitted when the service is up.\n\n#### `Event: error`\n\nEmitted if an error occurrs while publishing the service.\n\n#### `service.stop([callback])`\n\nUnpublish the service. The optional `callback` will be called when the\nservice have been unpublished.\n\n#### `service.start()`\n\nPublish the service.\n\n#### `service.name`\n\nThe name of the service, e.g. `Apple TV`.\n\n#### `service.type`\n\nThe type of the service, e.g. `http`.\n\n#### `service.subtypes`\n\nAn array of subtypes. Note that this property might be `null`.\n\n#### `service.protocol`\n\nThe protocol used by the service, e.g. `tcp`.\n\n#### `service.host`\n\nThe hostname or ip address where the service resides.\n\n#### `service.port`\n\nThe port on which the service listens, e.g. `5000`.\n\n#### `service.fqdn`\n\nThe fully qualified domain name of the service. E.g. if given the name\n`Foo Bar`, the type `http` and the protocol `tcp`, the `service.fqdn`\nproperty will be `Foo Bar._http._tcp.local`.\n\n#### `service.txt`\n\nThe TXT record advertised by the service (a key/value object). Note that\nthis property might be `null`.\n\n#### `service.published`\n\nA boolean indicating if the service is currently published.\n\n## License\n\nMIT"
+}

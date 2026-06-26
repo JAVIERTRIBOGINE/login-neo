@@ -1,0 +1,413 @@
+{
+	"name": "has-bigints",
+	"versions": {
+		"1.0.0": {
+			"name": "has-bigints",
+			"description": "Determine if the JS environment has BigInt support.",
+			"version": "1.0.0",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/ljharb/has-bigints#readme",
+			"repository": {
+				"url": "git+https://github.com/ljharb/has-bigints.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/ljharb/has-bigints/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"tape": "^4.11.0",
+				"eslint": "^6.1.0",
+				"in-publish": "^2.0.0",
+				"auto-changelog": "^1.14.1",
+				"safe-publish-latest": "^1.1.2",
+				"@ljharb/eslint-config": "^14.0.2"
+			},
+			"keywords": [
+				"BigInt",
+				"bigints",
+				"typeof",
+				"ES2020"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint .",
+				"test": "npm run tests-only",
+				"pretest": "npm run lint",
+				"posttest": "npx aud",
+				"prepublish": "not-in-publish || safe-publish-latest",
+				"tests-only": "node test"
+			},
+			"lastModified": 0,
+			"_id": "has-bigints@1.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/has-bigints/-/has-bigints-1.0.0.tgz",
+				"shasum": "d9b2100824195e39a0c343c127f389d66a5e27dc",
+				"integrity": "sha512-hAPBcRduTXGpL+fDy/v6CSxr0IVaAU+PZfgIh96162O0QihBtsjchQAV7uprvCvR9JV8sorWIk15cDR/FrIfQg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQCT49TzjOL3A6ybgPf9fH2UCEa7FmYtl3kqpjukG1pwSgIhAIhU1sSeyQghhe7l2pHCGjrZa9vVBEjAccAIvk/TV3DJ"
+					}
+				]
+			},
+			"_npmVersion": "6.10.2",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "536dd610a18022c2279a61717ca1ef3ebca339c0",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/has-bigints_1.0.0_1565502842842_0.011489990151226648",
+				"host": "s3://npm-registry-packages"
+			},
+			"auto-changelog": {
+				"template": "keepachangelog",
+				"commitLimit": false,
+				"backfillLimit": false
+			},
+			"_nodeVersion": "12.8.0",
+			"contributors": []
+		},
+		"1.0.1": {
+			"name": "has-bigints",
+			"description": "Determine if the JS environment has BigInt support.",
+			"version": "1.0.1",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/ljharb/has-bigints#readme",
+			"repository": {
+				"url": "git+https://github.com/ljharb/has-bigints.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/ljharb/has-bigints/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"aud": "^1.1.3",
+				"nyc": "^10.3.2",
+				"tape": "^5.0.1",
+				"eslint": "^7.15.0",
+				"in-publish": "^2.0.1",
+				"auto-changelog": "^2.2.1",
+				"safe-publish-latest": "^1.1.4",
+				"@ljharb/eslint-config": "^17.3.0"
+			},
+			"keywords": [
+				"BigInt",
+				"bigints",
+				"typeof",
+				"ES2020"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint --ext=js,mjs .",
+				"test": "npm run tests-only",
+				"pretest": "npm run lint",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"posttest": "aud --production",
+				"prepublish": "not-in-publish || safe-publish-latest",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\""
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "has-bigints@1.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/has-bigints/-/has-bigints-1.0.1.tgz",
+				"shasum": "64fe6acb020673e3b78db035a5af69aa9d07b113",
+				"integrity": "sha512-LSBS2LjbNBTf6287JEbEzvJgftkF5qFkmCo9hDRpAzKhUOlJ+hx8dd4USs00SgsUNwc4617J9ki5YtEClM2ffA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCbu4bVjN5UNzbTeWOhcmd0r7cDs29nNPBSLTd2aYutaQIgfbhm77w4I9rNXzXFU2wN01M/snzTxJqVuKrzld5uk60="
+					}
+				]
+			},
+			"_npmVersion": "6.14.8",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "02979e38cb513890d26729d495a41970e0299d6c",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/has-bigints_1.0.1_1607930238621_0.927674170432017",
+				"host": "s3://npm-registry-packages"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"hideCredit": true,
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false
+			},
+			"_nodeVersion": "14.15.1",
+			"contributors": []
+		},
+		"1.1.0": {
+			"name": "has-bigints",
+			"description": "Determine if the JS environment has BigInt support.",
+			"version": "1.1.0",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/ljharb/has-bigints#readme",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/ljharb/has-bigints.git"
+			},
+			"bugs": {
+				"url": "https://github.com/ljharb/has-bigints/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"@arethetypeswrong/cli": "^0.17.1",
+				"@ljharb/eslint-config": "^21.1.1",
+				"@ljharb/tsconfig": "^0.2.2",
+				"@types/tape": "^5.8.0",
+				"auto-changelog": "^2.5.0",
+				"encoding": "^0.1.13",
+				"eslint": "=8.8.0",
+				"in-publish": "^2.0.1",
+				"npmignore": "^0.3.1",
+				"nyc": "^10.3.2",
+				"safe-publish-latest": "^2.0.0",
+				"tape": "^5.9.0",
+				"typescript": "next"
+			},
+			"keywords": [
+				"BigInt",
+				"bigints",
+				"typeof",
+				"ES2020"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"prepack": "npmignore --auto --commentLines=autogenerated",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\"",
+				"prepublishOnly": "safe-publish-latest",
+				"prepublish": "not-in-publish || npm run prepublishOnly",
+				"lint": "eslint --ext=js,mjs .",
+				"postlint": "tsc && attw -P",
+				"pretest": "npm run lint",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"test": "npm run tests-only",
+				"posttest": "npx npm@'>= 10.2' audit --production"
+			},
+			"publishConfig": {
+				"ignore": [
+					".github/workflows"
+				]
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "has-bigints@1.1.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/has-bigints/-/has-bigints-1.1.0.tgz",
+				"shasum": "28607e965ac967e03cd2a2c70a2636a1edad49fe",
+				"integrity": "sha512-R3pbpkcIqv2Pm3dUwgjclDRVmWpTJW2DcMzcIhEXEx1oh/CEMObMm3KLmRJOdvhM7o4uQBnwr8pzRK2sJWIqfg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIBLsvEDpmB2ngZPaOddUy+oZJSE8tBzYMlHqJvYD9PvjAiBn7MWBe9pQ8rC3yQxlQNGP3a6Lk11tfh/5WMwmWHgKRw=="
+					}
+				]
+			},
+			"_npmVersion": "10.9.2",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "04a90ef8412dbf7499868ee60d680c683c88e4aa",
+			"types": "./index.d.ts",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages-npm-production",
+				"tmp": "tmp/has-bigints_1.1.0_1734543453131_0.43815554318545136"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false,
+				"hideCredit": true
+			},
+			"_nodeVersion": "23.4.0",
+			"contributors": []
+		},
+		"1.0.2": {
+			"name": "has-bigints",
+			"description": "Determine if the JS environment has BigInt support.",
+			"version": "1.0.2",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/ljharb/has-bigints#readme",
+			"repository": {
+				"url": "git+https://github.com/ljharb/has-bigints.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/ljharb/has-bigints/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"aud": "^2.0.0",
+				"nyc": "^10.3.2",
+				"tape": "^5.5.3",
+				"eslint": "=8.8.0",
+				"in-publish": "^2.0.1",
+				"auto-changelog": "^2.4.0",
+				"safe-publish-latest": "^2.0.0",
+				"@ljharb/eslint-config": "^21.0.0"
+			},
+			"keywords": [
+				"BigInt",
+				"bigints",
+				"typeof",
+				"ES2020"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint --ext=js,mjs .",
+				"test": "npm run tests-only",
+				"pretest": "npm run lint",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"posttest": "aud --production",
+				"prepublish": "not-in-publish || npm run prepublishOnly",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\"",
+				"prepublishOnly": "safe-publish-latest"
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "has-bigints@1.0.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/has-bigints/-/has-bigints-1.0.2.tgz",
+				"shasum": "0871bd3e3d51626f6ca0966668ba35d5602d6eaa",
+				"integrity": "sha512-tSvCKtBr9lkF0Ex0aQiP9N+OpV4zi2r/Nee5VkRDbaqv35RLYMzbwQfFSZZH0kR+Rd6302UJZ2p/bJCEoR3VoQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCQof9ViAFgLyvRE3MmLvBeFHDbTN0lWB0kI3Em3hqiKgIgTtUAEzoTVyAq8zS766hatBxyX2U54VDKG7HEh7FT8qQ="
+					}
+				]
+			},
+			"_npmVersion": "8.3.1",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "6aa1ab523edade31d6c558d57d34204639318633",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/has-bigints_1.0.2_1650408603159_0.0605676568044613",
+				"host": "s3://npm-registry-packages"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"hideCredit": true,
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false
+			},
+			"_nodeVersion": "18.0.0",
+			"contributors": []
+		}
+	},
+	"time": {
+		"created": "2019-08-11T05:54:02.842Z",
+		"modified": "2024-12-18T17:37:33.548Z",
+		"1.0.0": "2019-08-11T05:54:02.979Z",
+		"1.0.1": "2020-12-14T07:17:18.835Z",
+		"1.1.0": "2024-12-18T17:37:33.322Z",
+		"1.0.2": "2022-04-19T22:50:03.324Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "1.1.0"
+	},
+	"_uplinks": {
+		"artifactory-sabadell": {
+			"etag": "a2219c26125e0293d0ad0a545390abaa1846049d",
+			"fetched": 1782459826756
+		}
+	},
+	"_distfiles": {
+		"has-bigints-1.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/has-bigints/-/has-bigints-1.0.0.tgz",
+			"sha": "d9b2100824195e39a0c343c127f389d66a5e27dc",
+			"registry": "artifactory-sabadell"
+		},
+		"has-bigints-1.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/has-bigints/-/has-bigints-1.0.1.tgz",
+			"sha": "64fe6acb020673e3b78db035a5af69aa9d07b113",
+			"registry": "artifactory-sabadell"
+		},
+		"has-bigints-1.1.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/has-bigints/-/has-bigints-1.1.0.tgz",
+			"sha": "28607e965ac967e03cd2a2c70a2636a1edad49fe",
+			"registry": "artifactory-sabadell"
+		},
+		"has-bigints-1.0.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/has-bigints/-/has-bigints-1.0.2.tgz",
+			"sha": "0871bd3e3d51626f6ca0966668ba35d5602d6eaa",
+			"registry": "artifactory-sabadell"
+		}
+	},
+	"_attachments": {},
+	"_rev": "1-1cdea6d2f3cf0b8d",
+	"_id": "has-bigints",
+	"readme": "# has-bigints <sup>[![Version Badge][npm-version-svg]][package-url]</sup>\n\n[![github actions][actions-image]][actions-url]\n[![coverage][codecov-image]][codecov-url]\n[![dependency status][deps-svg]][deps-url]\n[![dev dependency status][dev-deps-svg]][dev-deps-url]\n[![License][license-image]][license-url]\n[![Downloads][downloads-image]][downloads-url]\n\n[![npm badge][npm-badge-png]][package-url]\n\nDetermine if the JS environment has BigInt support.\n\n## Example\n\n```js\nvar hasBigInts = require('has-bigints');\n\nhasBigInts() === true; // if the environment has native BigInt support. Not polyfillable, not forgeable.\n```\n\n## Tests\nSimply clone the repo, `npm install`, and run `npm test`\n\n[package-url]: https://npmjs.org/package/has-bigints\n[npm-version-svg]: https://versionbadg.es/inspect-js/has-bigints.svg\n[deps-svg]: https://david-dm.org/inspect-js/has-bigints.svg\n[deps-url]: https://david-dm.org/inspect-js/has-bigints\n[dev-deps-svg]: https://david-dm.org/inspect-js/has-bigints/dev-status.svg\n[dev-deps-url]: https://david-dm.org/inspect-js/has-bigints#info=devDependencies\n[npm-badge-png]: https://nodei.co/npm/has-bigints.png?downloads=true&stars=true\n[license-image]: https://img.shields.io/npm/l/has-bigints.svg\n[license-url]: LICENSE\n[downloads-image]: https://img.shields.io/npm/dm/has-bigints.svg\n[downloads-url]: https://npm-stat.com/charts.html?package=has-bigints\n[codecov-image]: https://codecov.io/gh/inspect-js/has-bigints/branch/main/graphs/badge.svg\n[codecov-url]: https://app.codecov.io/gh/inspect-js/has-bigints/\n[actions-image]: https://img.shields.io/endpoint?url=https://github-actions-badge-u3jn4tfpocch.runkit.sh/inspect-js/has-bigints\n[actions-url]: https://github.com/inspect-js/has-bigints/actions"
+}

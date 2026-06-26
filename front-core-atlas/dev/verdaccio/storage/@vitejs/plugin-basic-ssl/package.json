@@ -1639,7 +1639,7 @@
 	"_uplinks": {
 		"artifactory-sabadell": {
 			"etag": "3d6a82dd18e0d83d57fd503a8cb67ecdbfd92d61",
-			"fetched": 1781195711559
+			"fetched": 1782459810107
 		}
 	},
 	"_distfiles": {
@@ -1715,7 +1715,7 @@
 		}
 	},
 	"_attachments": {},
-	"_rev": "1-74e5400c5ea1f99d",
+	"_rev": "3-89c4de1e5213851c",
 	"_id": "@vitejs/plugin-basic-ssl",
 	"readme": "# @vitejs/plugin-basic-ssl [![npm](https://img.shields.io/npm/v/@vitejs/plugin-basic-ssl.svg)](https://npmjs.com/package/@vitejs/plugin-basic-ssl)\n\nA plugin to generate untrusted certificates which still allows to access the page after proceeding a wall with warning.\n\nIn most scenarios, it is recommended to generate a secure trusted certificate instead and use it to configure [`server.https`](https://vitejs.dev/config/server-options.html#server-https)\n\n## Usage\n\n```js\n// vite.config.js\nimport basicSsl from '@vitejs/plugin-basic-ssl'\n\nexport default {\n  plugins: [\n    basicSsl({\n      /** name of certification */\n      name: 'test',\n      /** custom trust domains */\n      domains: ['*.custom.com'],\n      /** optional, days before certificate expires */\n      ttlDays: 30,\n      /** custom certification directory */\n      certDir: '/Users/.../.devServer/cert',\n    }),\n  ],\n}\n```\n\n## License\n\nMIT"
 }

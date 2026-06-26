@@ -1,0 +1,1151 @@
+{
+	"name": "proc-log",
+	"versions": {
+		"2.0.0": {
+			"name": "proc-log",
+			"description": "just emit 'log' events on the process object",
+			"version": "2.0.0",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/proc-log#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/proc-log.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/proc-log/issues"
+			},
+			"engines": {
+				"node": "^12.13.0 || ^14.15.0 || >=16"
+			},
+			"main": "lib/index.js",
+			"devDependencies": {
+				"tap": "^15.1.6",
+				"@npmcli/template-oss": "^2.7.1"
+			},
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "lukekarrys",
+					"email": "luke@lukekarrys.com"
+				},
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint '**/*.js'",
+				"snap": "tap",
+				"test": "tap",
+				"lintfix": "npm run lint -- --fix",
+				"postlint": "npm-template-check",
+				"postsnap": "eslint index.js test/*.js --fix",
+				"posttest": "npm run lint",
+				"preversion": "npm test",
+				"postversion": "npm publish",
+				"template-copy": "npm-template-copy --force",
+				"prepublishOnly": "git push origin --follow-tags"
+			},
+			"lastModified": 0,
+			"_id": "proc-log@2.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/proc-log/-/proc-log-2.0.0.tgz",
+				"shasum": "25f8cb346a5d08e27f2422b3ca6ba8379bcbf8ba",
+				"integrity": "sha512-I/35MfCX2H8jBUhKN8JB8nmqvQo/nKdrBodBY7L3RhDSPPyvOHwLYNmPuhwuJq7a7C3vgFKWGQM+ecPStcvOHA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQCmzPjw2wVqirypeTHp4A8J+M+qFnCigZqN/XwnDD0CSwIhAIdbP6hRh1n7QwT9hG0cedF2ubqUIFYdVtcCkSWzN9rU"
+					}
+				]
+			},
+			"_npmVersion": "8.4.1",
+			"_npmUser": {
+				"name": "lukekarrys",
+				"email": "luke@lukekarrys.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "adccecc2bf5e77427e3fefe826a8e5a1a57640d7",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/proc-log_2.0.0_1644522698587_0.5470729257783982",
+				"host": "s3://npm-registry-packages"
+			},
+			"templateOSS": {
+				"version": "2.7.1"
+			},
+			"_nodeVersion": "16.14.0",
+			"contributors": []
+		},
+		"2.0.1": {
+			"name": "proc-log",
+			"description": "just emit 'log' events on the process object",
+			"version": "2.0.1",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/proc-log#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/proc-log.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/proc-log/issues"
+			},
+			"engines": {
+				"node": "^12.13.0 || ^14.15.0 || >=16.0.0"
+			},
+			"main": "lib/index.js",
+			"devDependencies": {
+				"tap": "^16.0.1",
+				"@npmcli/template-oss": "3.2.0",
+				"@npmcli/eslint-config": "^3.0.1"
+			},
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "gar",
+					"email": "gar+npm@danger.computer"
+				},
+				{
+					"name": "lukekarrys",
+					"email": "luke@lukekarrys.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint \"**/*.js\"",
+				"snap": "tap",
+				"test": "tap",
+				"lintfix": "npm run lint -- --fix",
+				"postlint": "template-oss-check",
+				"postsnap": "eslint index.js test/*.js --fix",
+				"posttest": "npm run lint",
+				"preversion": "npm test",
+				"postversion": "npm publish",
+				"prepublishOnly": "git push origin --follow-tags",
+				"template-oss-apply": "template-oss-apply --force"
+			},
+			"lastModified": 0,
+			"_id": "proc-log@2.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/proc-log/-/proc-log-2.0.1.tgz",
+				"shasum": "8f3f69a1f608de27878f91f5c688b225391cb685",
+				"integrity": "sha512-Kcmo2FhfDTXdcbfDH76N7uBYHINxc/8GW7UAVuVP9I+Va3uHSerrnKV6dLooga/gh7GlgzuCCr/eoldnL1muGw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIDovd0CjshDX0XUBoW2m0P5CxXoS056rKA2wOzSUXArHAiABuCWVbFcNC9Jsd0Q3IeAt6JjawcDRz3R0qEBZ9qBNMg=="
+					}
+				]
+			},
+			"_npmVersion": "8.5.0",
+			"_npmUser": {
+				"name": "gar",
+				"email": "gar+npm@danger.computer"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "71042352b67eb0a81e8cfea9b5e51966b9a84ead",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/proc-log_2.0.1_1648500620397_0.38798423133177296",
+				"host": "s3://npm-registry-packages"
+			},
+			"templateOSS": {
+				"version": "3.2.0",
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+			},
+			"_nodeVersion": "16.14.2",
+			"contributors": []
+		},
+		"3.0.0": {
+			"name": "proc-log",
+			"description": "just emit 'log' events on the process object",
+			"version": "3.0.0",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/proc-log#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/proc-log.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/proc-log/issues"
+			},
+			"engines": {
+				"node": "^14.17.0 || ^16.13.0 || >=18.0.0"
+			},
+			"main": "lib/index.js",
+			"devDependencies": {
+				"tap": "^16.0.1",
+				"@npmcli/template-oss": "4.5.1",
+				"@npmcli/eslint-config": "^3.0.1"
+			},
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "fritzy",
+					"email": "fritzy@github.com"
+				},
+				{
+					"name": "darcyclarke",
+					"email": "darcy@darcyclarke.me"
+				},
+				{
+					"name": "nlf",
+					"email": "quitlahok@gmail.com"
+				},
+				{
+					"name": "gar",
+					"email": "gar+npm@danger.computer"
+				},
+				{
+					"name": "lukekarrys",
+					"email": "luke@lukekarrys.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint \"**/*.js\"",
+				"snap": "tap",
+				"test": "tap",
+				"lintfix": "npm run lint -- --fix",
+				"postlint": "template-oss-check",
+				"postsnap": "eslint index.js test/*.js --fix",
+				"posttest": "npm run lint",
+				"template-oss-apply": "template-oss-apply --force"
+			},
+			"lastModified": 0,
+			"_id": "proc-log@3.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/proc-log/-/proc-log-3.0.0.tgz",
+				"shasum": "fb05ef83ccd64fd7b20bbe9c8c1070fc08338dd8",
+				"integrity": "sha512-++Vn7NS4Xf9NacaU9Xq3URUuqZETPsf8L4j5/ckhaRYsfPeRyzGw+iDjFhV/Jr3uNmTvvddEJFWh5R1gRgUH8A==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIHifbHgF6M3IpbNVu8XNpsbTUeNJM3qIs5XF1g0YLliHAiEAuptlCUzpR9akldhsbgMLMxeuPC7hOWXL8fkpJ1WgP7E="
+					}
+				]
+			},
+			"_npmVersion": "8.19.2",
+			"_npmUser": {
+				"name": "lukekarrys",
+				"email": "luke@lukekarrys.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "a3318aac6541572d897f404c1db7d905016c5cfe",
+			"tap": {
+				"nyc-arg": [
+					"--exclude",
+					"tap-snapshots/**"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/proc-log_3.0.0_1665724986606_0.6562993514020836",
+				"host": "s3://npm-registry-packages"
+			},
+			"templateOSS": {
+				"version": "4.5.1",
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+			},
+			"_nodeVersion": "18.10.0",
+			"contributors": []
+		},
+		"6.0.0": {
+			"name": "proc-log",
+			"description": "just emit 'log' events on the process object",
+			"version": "6.0.0",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/proc-log#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/proc-log.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/proc-log/issues"
+			},
+			"engines": {
+				"node": "^20.17.0 || >=22.9.0"
+			},
+			"main": "lib/index.js",
+			"devDependencies": {
+				"tap": "^16.0.1",
+				"@npmcli/template-oss": "4.27.1",
+				"@npmcli/eslint-config": "^5.0.0"
+			},
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "gar",
+					"email": "gar+npm@danger.computer"
+				},
+				{
+					"name": "saquibkhan",
+					"email": "saquibkhan@github.com"
+				},
+				{
+					"name": "npm-cli-ops",
+					"email": "npm-cli+bot@github.com"
+				},
+				{
+					"name": "reggi",
+					"email": "reggi@github.com"
+				},
+				{
+					"name": "hashtagchris",
+					"email": "hashtagchris@github.com"
+				},
+				{
+					"name": "owlstronaut",
+					"email": "owlstronaut@github.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "npm run eslint",
+				"snap": "tap",
+				"test": "tap",
+				"eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
+				"lintfix": "npm run eslint -- --fix",
+				"postlint": "template-oss-check",
+				"postsnap": "eslint index.js test/*.js --fix",
+				"posttest": "npm run lint",
+				"template-oss-apply": "template-oss-apply --force"
+			},
+			"lastModified": 0,
+			"_id": "proc-log@6.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/proc-log/-/proc-log-6.0.0.tgz",
+				"shasum": "a75b516bc4437b1e07df6771450588f57a0a6548",
+				"integrity": "sha512-KG/XsTDN901PNfPfAMmj6N/Ywg9tM+bHK8pAz+27fS4N4Pcr+4zoYBOcGSBu6ceXYNPxkLpa4ohtfxV1XcLAfA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEUCIE5t6LWdmKFGotJnzuUTKptUwKItHmPWvGWpUV0XXU2QAiEA/qSgRUzlqrHA3q72ii+plov0eqf9xbvf26acc/Uw+2w="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/proc-log@6.0.0",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "11.6.2",
+			"_npmUser": {
+				"name": "GitHub Actions",
+				"email": "npm-oidc-no-reply@github.com",
+				"trustedPublisher": {
+					"id": "github",
+					"oidcConfigId": "oidc:99c79d0e-8dd4-475b-9d8f-fb2b2f9d2386"
+				}
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "fd4997f38a6a8d510ad3cb87846df408305d9c78",
+			"tap": {
+				"nyc-arg": [
+					"--exclude",
+					"tap-snapshots/**"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/proc-log_6.0.0_1761146729311_0.8120270383137678",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"templateOSS": {
+				"publish": true,
+				"version": "4.27.1",
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+			},
+			"_nodeVersion": "22.20.0",
+			"contributors": []
+		},
+		"6.1.0": {
+			"name": "proc-log",
+			"description": "just emit 'log' events on the process object",
+			"version": "6.1.0",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/proc-log#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/proc-log.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/proc-log/issues"
+			},
+			"engines": {
+				"node": "^20.17.0 || >=22.9.0"
+			},
+			"main": "lib/index.js",
+			"devDependencies": {
+				"tap": "^16.0.1",
+				"@npmcli/template-oss": "4.28.1",
+				"@npmcli/eslint-config": "^6.0.0"
+			},
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "gar",
+					"email": "gar+npm@danger.computer"
+				},
+				{
+					"name": "saquibkhan",
+					"email": "saquibkhan@github.com"
+				},
+				{
+					"name": "npm-cli-ops",
+					"email": "npm-cli+bot@github.com"
+				},
+				{
+					"name": "reggi",
+					"email": "reggi@github.com"
+				},
+				{
+					"name": "hashtagchris",
+					"email": "hashtagchris@github.com"
+				},
+				{
+					"name": "owlstronaut",
+					"email": "owlstronaut@github.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "npm run eslint",
+				"snap": "tap",
+				"test": "tap",
+				"eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
+				"lintfix": "npm run eslint -- --fix",
+				"postlint": "template-oss-check",
+				"postsnap": "eslint index.js test/*.js --fix",
+				"posttest": "npm run lint",
+				"template-oss-apply": "template-oss-apply --force"
+			},
+			"lastModified": 0,
+			"_id": "proc-log@6.1.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/proc-log/-/proc-log-6.1.0.tgz",
+				"shasum": "18519482a37d5198e231133a70144a50f21f0215",
+				"integrity": "sha512-iG+GYldRf2BQ0UDUAd6JQ/RwzaQy6mXmsk/IzlYyal4A4SNFw54MeH4/tLkF4I5WoWG9SQwuqWzS99jaFQHBuQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEUCIFlaQM1/TeB/rGAam0BvZHdJUzE1VlZpzJwJaYHuaRWHAiEAxAygddtdLRkjku4LLOMWyXoX8kGK35P40FMaz9lZ8d8="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/proc-log@6.1.0",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "11.6.3",
+			"_npmUser": {
+				"name": "GitHub Actions",
+				"email": "npm-oidc-no-reply@github.com",
+				"trustedPublisher": {
+					"id": "github",
+					"oidcConfigId": "oidc:99c79d0e-8dd4-475b-9d8f-fb2b2f9d2386"
+				}
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "9a6975d69bda1a1b2123b79d290dfefc245ab050",
+			"tap": {
+				"nyc-arg": [
+					"--exclude",
+					"tap-snapshots/**"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/proc-log_6.1.0_1764090819681_0.3211188673989027",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"templateOSS": {
+				"publish": true,
+				"version": "4.28.1",
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+			},
+			"_nodeVersion": "22.21.1",
+			"contributors": []
+		},
+		"7.0.0": {
+			"name": "proc-log",
+			"description": "just emit 'log' events on the process object",
+			"version": "7.0.0",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/proc-log#readme",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/npm/proc-log.git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/proc-log/issues"
+			},
+			"engines": {
+				"node": "^22.22.2 || ^24.15.0 || >=26.0.0"
+			},
+			"main": "lib/index.js",
+			"devDependencies": {
+				"@npmcli/eslint-config": "^6.0.0",
+				"@npmcli/template-oss": "5.0.0",
+				"tap": "^16.0.1"
+			},
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "saquibkhan",
+					"email": "saquibkhan@github.com"
+				},
+				{
+					"name": "npm-cli-ops",
+					"email": "npm-cli+bot@github.com"
+				},
+				{
+					"name": "reggi",
+					"email": "reggi@github.com"
+				},
+				{
+					"name": "owlstronaut",
+					"email": "owlstronaut@github.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap",
+				"snap": "tap",
+				"posttest": "npm run lint",
+				"postsnap": "eslint index.js test/*.js --fix",
+				"lint": "npm run eslint",
+				"postlint": "template-oss-check",
+				"lintfix": "npm run eslint -- --fix",
+				"template-oss-apply": "template-oss-apply --force",
+				"eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\""
+			},
+			"lastModified": 0,
+			"_id": "proc-log@7.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/proc-log/-/proc-log-7.0.0.tgz",
+				"shasum": "46c9cc943ed4127272b49b34faa8855b44e3a976",
+				"integrity": "sha512-FYgfaA69XZ93zaXLoMNQ+ViDXGGBgR8aLh03txzcFhV+9xOXx7+8DLCULrKKpR9+GsH9ZfHm82aSUPpozX0Ztg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEQCIA9+fT7QFn3R9l7Et54LXDFsx8whwn6ElqNdaa8UotBDAiBwB6tQh72FRvtUaMwRng0b4wSxG9ljlifFKyEghp2J6w=="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/proc-log@7.0.0",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "11.14.1",
+			"_npmUser": {
+				"name": "GitHub Actions",
+				"email": "npm-oidc-no-reply@github.com",
+				"trustedPublisher": {
+					"id": "github",
+					"oidcConfigId": "oidc:99c79d0e-8dd4-475b-9d8f-fb2b2f9d2386"
+				}
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "1419b08192c0dd60155e5b86e0eee273ac69875a",
+			"tap": {
+				"nyc-arg": [
+					"--exclude",
+					"tap-snapshots/**"
+				]
+			},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages-npm-production",
+				"tmp": "tmp/proc-log_7.0.0_1778265209007_0.7150100482621249"
+			},
+			"templateOSS": {
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten.",
+				"version": "5.0.0",
+				"publish": true
+			},
+			"_nodeVersion": "26.1.0",
+			"contributors": []
+		},
+		"4.2.0": {
+			"name": "proc-log",
+			"description": "just emit 'log' events on the process object",
+			"version": "4.2.0",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/proc-log#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/proc-log.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/proc-log/issues"
+			},
+			"engines": {
+				"node": "^14.17.0 || ^16.13.0 || >=18.0.0"
+			},
+			"main": "lib/index.js",
+			"devDependencies": {
+				"tap": "^16.0.1",
+				"@npmcli/template-oss": "4.21.3",
+				"@npmcli/eslint-config": "^4.0.0"
+			},
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "npm-cli-ops",
+					"email": "npm-cli+bot@github.com"
+				},
+				{
+					"name": "saquibkhan",
+					"email": "saquibkhan@github.com"
+				},
+				{
+					"name": "fritzy",
+					"email": "fritzy@github.com"
+				},
+				{
+					"name": "gar",
+					"email": "gar+npm@danger.computer"
+				},
+				{
+					"name": "lukekarrys",
+					"email": "luke@lukekarrys.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
+				"snap": "tap",
+				"test": "tap",
+				"lintfix": "npm run lint -- --fix",
+				"postlint": "template-oss-check",
+				"postsnap": "eslint index.js test/*.js --fix",
+				"posttest": "npm run lint",
+				"template-oss-apply": "template-oss-apply --force"
+			},
+			"lastModified": 0,
+			"_id": "proc-log@4.2.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/proc-log/-/proc-log-4.2.0.tgz",
+				"shasum": "b6f461e4026e75fdfe228b265e9f7a00779d7034",
+				"integrity": "sha512-g8+OnU/L2v+wyiVK+D5fA34J7EH8jZ8DDlvwhRCMxmMj7UCBvxiO1mGeN+36JXIKF4zevU4kRBd8lVgG9vLelA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCNStNROA4yNJ9PelPPE2Zu/qXkWLycFqs2cUlUrvGcfQIgQloGakWeTeBxeHy8tAlNpXjvlDF+X8/oZk7PB1DfNrQ="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/proc-log@4.2.0",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "10.5.2",
+			"_npmUser": {
+				"name": "npm-cli-ops",
+				"email": "npm-cli+bot@github.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "953e6035670f9afe2ec93f6286d76db2828854d6",
+			"tap": {
+				"nyc-arg": [
+					"--exclude",
+					"tap-snapshots/**"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/proc-log_4.2.0_1713300592930_0.14959539526116528",
+				"host": "s3://npm-registry-packages"
+			},
+			"templateOSS": {
+				"publish": true,
+				"version": "4.21.3",
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+			},
+			"_nodeVersion": "20.12.1",
+			"contributors": []
+		},
+		"5.0.0": {
+			"name": "proc-log",
+			"description": "just emit 'log' events on the process object",
+			"version": "5.0.0",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/proc-log#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/proc-log.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/proc-log/issues"
+			},
+			"engines": {
+				"node": "^18.17.0 || >=20.5.0"
+			},
+			"main": "lib/index.js",
+			"devDependencies": {
+				"tap": "^16.0.1",
+				"@npmcli/template-oss": "4.23.3",
+				"@npmcli/eslint-config": "^5.0.0"
+			},
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "hashtagchris",
+					"email": "hashtagchris@github.com"
+				},
+				{
+					"name": "reggi",
+					"email": "reggi@github.com"
+				},
+				{
+					"name": "npm-cli-ops",
+					"email": "npm-cli+bot@github.com"
+				},
+				{
+					"name": "saquibkhan",
+					"email": "saquibkhan@github.com"
+				},
+				{
+					"name": "fritzy",
+					"email": "fritzy@github.com"
+				},
+				{
+					"name": "gar",
+					"email": "gar+npm@danger.computer"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "npm run eslint",
+				"snap": "tap",
+				"test": "tap",
+				"eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
+				"lintfix": "npm run eslint -- --fix",
+				"postlint": "template-oss-check",
+				"postsnap": "eslint index.js test/*.js --fix",
+				"posttest": "npm run lint",
+				"template-oss-apply": "template-oss-apply --force"
+			},
+			"lastModified": 0,
+			"_id": "proc-log@5.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/proc-log/-/proc-log-5.0.0.tgz",
+				"shasum": "e6c93cf37aef33f835c53485f314f50ea906a9d8",
+				"integrity": "sha512-Azwzvl90HaF0aCz1JrDdXQykFakSSNPaPoiZ9fm5qJIMHioDZEi7OAdRwSm6rSoPtY3Qutnm3L7ogmg3dc+wbQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIBDwbtbw4ZO3G0Ar3DKMzs/lxt6nkwOZJQqQjCNhmP+ZAiB/lBILWDPgnRuP5QJD+aNySwJjefjFDP8tVNyJPgOQKQ=="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/proc-log@5.0.0",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "10.8.3",
+			"_npmUser": {
+				"name": "npm-cli-ops",
+				"email": "npm-cli+bot@github.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "8105dea8ca31296f5826e62683e63539401d6a8e",
+			"tap": {
+				"nyc-arg": [
+					"--exclude",
+					"tap-snapshots/**"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/proc-log_5.0.0_1725495681824_0.5708126841081362",
+				"host": "s3://npm-registry-packages"
+			},
+			"templateOSS": {
+				"publish": true,
+				"version": "4.23.3",
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+			},
+			"_nodeVersion": "22.8.0",
+			"contributors": []
+		},
+		"4.0.0": {
+			"name": "proc-log",
+			"description": "just emit 'log' events on the process object",
+			"version": "4.0.0",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/proc-log#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/proc-log.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/proc-log/issues"
+			},
+			"engines": {
+				"node": "^14.17.0 || ^16.13.0 || >=18.0.0"
+			},
+			"main": "lib/index.js",
+			"devDependencies": {
+				"tap": "^16.0.1",
+				"@npmcli/template-oss": "4.21.3",
+				"@npmcli/eslint-config": "^4.0.0"
+			},
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "npm-cli-ops",
+					"email": "npm-cli+bot@github.com"
+				},
+				{
+					"name": "saquibkhan",
+					"email": "saquibkhan@github.com"
+				},
+				{
+					"name": "fritzy",
+					"email": "fritzy@github.com"
+				},
+				{
+					"name": "gar",
+					"email": "gar+npm@danger.computer"
+				},
+				{
+					"name": "lukekarrys",
+					"email": "luke@lukekarrys.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
+				"snap": "tap",
+				"test": "tap",
+				"lintfix": "npm run lint -- --fix",
+				"postlint": "template-oss-check",
+				"postsnap": "eslint index.js test/*.js --fix",
+				"posttest": "npm run lint",
+				"template-oss-apply": "template-oss-apply --force"
+			},
+			"lastModified": 0,
+			"_id": "proc-log@4.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/proc-log/-/proc-log-4.0.0.tgz",
+				"shasum": "b8aac7609599a5aea22c23a7544523bc1ff85eda",
+				"integrity": "sha512-v1lzmYxGDs2+OZnmYtYZK3DG8zogt+CbQ+o/iqqtTfpyCmGWulCTEQu5GIbivf7OjgIkH2Nr8SH8UxAGugZNbg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIDOPLHGvLEa/XkGjJD3bD9V1Nz7QSQZXZOuJ49mtjWmMAiEAs0FYXQI5Y+YLkS+j4RQ+ZgguYidV3P8JFwRRD8bEzN8="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/proc-log@4.0.0",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "10.5.2",
+			"_npmUser": {
+				"name": "npm-cli-ops",
+				"email": "npm-cli+bot@github.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "ad99316a9f70e3beced2f0a0709649b6fd7b3e52",
+			"tap": {
+				"nyc-arg": [
+					"--exclude",
+					"tap-snapshots/**"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/proc-log_4.0.0_1712941001450_0.09906957453402687",
+				"host": "s3://npm-registry-packages"
+			},
+			"templateOSS": {
+				"publish": true,
+				"version": "4.21.3",
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+			},
+			"_nodeVersion": "20.12.1",
+			"contributors": []
+		},
+		"4.1.0": {
+			"name": "proc-log",
+			"description": "just emit 'log' events on the process object",
+			"version": "4.1.0",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/proc-log#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/proc-log.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/proc-log/issues"
+			},
+			"engines": {
+				"node": "^14.17.0 || ^16.13.0 || >=18.0.0"
+			},
+			"main": "lib/index.js",
+			"devDependencies": {
+				"tap": "^16.0.1",
+				"@npmcli/template-oss": "4.21.3",
+				"@npmcli/eslint-config": "^4.0.0"
+			},
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "npm-cli-ops",
+					"email": "npm-cli+bot@github.com"
+				},
+				{
+					"name": "saquibkhan",
+					"email": "saquibkhan@github.com"
+				},
+				{
+					"name": "fritzy",
+					"email": "fritzy@github.com"
+				},
+				{
+					"name": "gar",
+					"email": "gar+npm@danger.computer"
+				},
+				{
+					"name": "lukekarrys",
+					"email": "luke@lukekarrys.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
+				"snap": "tap",
+				"test": "tap",
+				"lintfix": "npm run lint -- --fix",
+				"postlint": "template-oss-check",
+				"postsnap": "eslint index.js test/*.js --fix",
+				"posttest": "npm run lint",
+				"template-oss-apply": "template-oss-apply --force"
+			},
+			"lastModified": 0,
+			"_id": "proc-log@4.1.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/proc-log/-/proc-log-4.1.0.tgz",
+				"shasum": "ab6c1552b454e9e467cb58119179e4557d109b34",
+				"integrity": "sha512-dmQ2iPw2nJMi9/4dpaG1wd0m1GE+K5kW7RGbjy5hoEEGnhPIzsm+klBO5RGGdcoYbWsNtU2KSNAdEldts+icLg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDFjto5R5AGTaZnse3SonjBcvLLaZFQ2e+mNOCO99xviAIgenDJJxSG2+oBTE9kd/Q4r8oOMM4wFsg0lY8jvPvduEE="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/proc-log@4.1.0",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "10.5.2",
+			"_npmUser": {
+				"name": "npm-cli-ops",
+				"email": "npm-cli+bot@github.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "3dbd032fc792e66ab4987265eb9c3c1bd7667386",
+			"tap": {
+				"nyc-arg": [
+					"--exclude",
+					"tap-snapshots/**"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/proc-log_4.1.0_1713198992922_0.0027306484928157904",
+				"host": "s3://npm-registry-packages"
+			},
+			"templateOSS": {
+				"publish": true,
+				"version": "4.21.3",
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+			},
+			"_nodeVersion": "20.12.1",
+			"contributors": []
+		},
+		"1.0.0": {
+			"name": "proc-log",
+			"description": "just emit 'log' events on the process object",
+			"version": "1.0.0",
+			"author": {
+				"url": "https://izs.me",
+				"name": "Isaac Z. Schlueter",
+				"email": "i@izs.me"
+			},
+			"homepage": "https://github.com/npm/proc-log#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/proc-log.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/proc-log/issues"
+			},
+			"devDependencies": {
+				"tap": "^15.0.2",
+				"eslint": "^7.9.0",
+				"eslint-plugin-node": "^11.1.0",
+				"eslint-plugin-import": "^2.22.0",
+				"eslint-plugin-promise": "^4.2.1",
+				"eslint-plugin-standard": "^4.0.1"
+			},
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"snap": "tap",
+				"test": "tap",
+				"postsnap": "eslint index.js test/*.js --fix",
+				"posttest": "eslint index.js test/*.js",
+				"preversion": "npm test",
+				"postversion": "npm publish",
+				"prepublishOnly": "git push origin --follow-tags"
+			},
+			"lastModified": 0,
+			"_id": "proc-log@1.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/proc-log/-/proc-log-1.0.0.tgz",
+				"shasum": "0d927307401f69ed79341e83a0b2c9a13395eb77",
+				"integrity": "sha512-aCk8AO51s+4JyuYGg3Q/a6gnrlDO09NpVWePtjp7xwphcoQ04x5WAfCyugcsbLooWcMJ87CLkD4+604IckEdhg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCICtxishmKTpuYKh0gwKbmM49wQx+z77fV5SoZxa/x9PVAiB1bReA9q+TPxNknpXQIQ6Pj627lfD8VOExt75KtLD+Uw=="
+					}
+				]
+			},
+			"_npmVersion": "7.9.0",
+			"_npmUser": {
+				"name": "isaacs",
+				"email": "i@izs.me"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "a3ebf6f6588c1a89ba573b498bfdfa21b71b4aef",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/proc-log_1.0.0_1618515808246_0.33636671349896585",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "15.3.0",
+			"contributors": []
+		}
+	},
+	"time": {
+		"2.0.0": "2022-02-10T19:51:38.758Z",
+		"2.0.1": "2022-03-28T20:50:20.548Z",
+		"created": "2021-04-15T19:43:28.190Z",
+		"7.0.0": "2026-05-08T18:33:29.152Z",
+		"4.2.0": "2024-04-16T20:49:53.093Z",
+		"4.0.0": "2024-04-12T16:56:41.595Z",
+		"4.1.0": "2024-04-15T16:36:33.064Z",
+		"3.0.0": "2022-10-14T05:23:06.806Z",
+		"6.0.0": "2025-10-22T15:25:29.494Z",
+		"6.1.0": "2025-11-25T17:13:39.862Z",
+		"modified": "2026-05-08T18:33:29.565Z",
+		"5.0.0": "2024-09-05T00:21:21.957Z",
+		"1.0.0": "2021-04-15T19:43:28.370Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "7.0.0"
+	},
+	"_uplinks": {
+		"artifactory-sabadell": {
+			"etag": "d799e23fee8a4cbc1b9669c8924d1fee57b9a50e",
+			"fetched": 1782459821598
+		}
+	},
+	"_distfiles": {
+		"proc-log-2.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/proc-log/-/proc-log-2.0.0.tgz",
+			"sha": "25f8cb346a5d08e27f2422b3ca6ba8379bcbf8ba",
+			"registry": "artifactory-sabadell"
+		},
+		"proc-log-2.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/proc-log/-/proc-log-2.0.1.tgz",
+			"sha": "8f3f69a1f608de27878f91f5c688b225391cb685",
+			"registry": "artifactory-sabadell"
+		},
+		"proc-log-3.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/proc-log/-/proc-log-3.0.0.tgz",
+			"sha": "fb05ef83ccd64fd7b20bbe9c8c1070fc08338dd8",
+			"registry": "artifactory-sabadell"
+		},
+		"proc-log-6.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/proc-log/-/proc-log-6.0.0.tgz",
+			"sha": "a75b516bc4437b1e07df6771450588f57a0a6548",
+			"registry": "artifactory-sabadell"
+		},
+		"proc-log-6.1.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/proc-log/-/proc-log-6.1.0.tgz",
+			"sha": "18519482a37d5198e231133a70144a50f21f0215",
+			"registry": "artifactory-sabadell"
+		},
+		"proc-log-7.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/proc-log/-/proc-log-7.0.0.tgz",
+			"sha": "46c9cc943ed4127272b49b34faa8855b44e3a976",
+			"registry": "artifactory-sabadell"
+		},
+		"proc-log-4.2.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/proc-log/-/proc-log-4.2.0.tgz",
+			"sha": "b6f461e4026e75fdfe228b265e9f7a00779d7034",
+			"registry": "artifactory-sabadell"
+		},
+		"proc-log-5.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/proc-log/-/proc-log-5.0.0.tgz",
+			"sha": "e6c93cf37aef33f835c53485f314f50ea906a9d8",
+			"registry": "artifactory-sabadell"
+		},
+		"proc-log-4.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/proc-log/-/proc-log-4.0.0.tgz",
+			"sha": "b8aac7609599a5aea22c23a7544523bc1ff85eda",
+			"registry": "artifactory-sabadell"
+		},
+		"proc-log-4.1.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/proc-log/-/proc-log-4.1.0.tgz",
+			"sha": "ab6c1552b454e9e467cb58119179e4557d109b34",
+			"registry": "artifactory-sabadell"
+		},
+		"proc-log-1.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/proc-log/-/proc-log-1.0.0.tgz",
+			"sha": "0d927307401f69ed79341e83a0b2c9a13395eb77",
+			"registry": "artifactory-sabadell"
+		}
+	},
+	"_attachments": {},
+	"_rev": "1-35eacd410454f350",
+	"_id": "proc-log",
+	"readme": "# proc-log\n\nEmits events on the process object which a listener can consume and print to the terminal or log file.\n\nThis is used by various modules within the npm CLI stack in order to send log events that can be consumed by a listener on the process object.\n\nCurrently emits `log`, `output`, `input`, and `time` events.\n\n## API\n\n```js\nconst { log, output, input, time } = require('proc-log')\n```\n\n#### output\n* `output.standard(...args)` calls `process.emit('output', 'standard', ...args)`\n  \n  This is for general standard output.  Consumers will typically show this on stdout (after optionally formatting or filtering it).\n\n* `output.error(...args)` calls `process.emit('output', 'error', ...args)`\n  \n  This is for general error output.  Consumers will typically show this on stderr (after optionally formatting or filtering it).\n\n* `output.buffer(...args)` calls `process.emit('output', 'buffer', ...args)`\n  \n  This is for buffered output.  Consumers will typically buffer this until they are ready to display.\n\n* `output.flush(...args)` calls `process.emit('output', 'flush', ...args)`\n  \n  This is to indicate that the output buffer should be flushed.\n\n* `output.LEVELS` an array of strings of all output method names\n\n#### log\n* `log.error(...args)` calls `process.emit('log', 'error', ...args)`\n  \n  The highest log level.  For printing extremely serious errors that indicate something went wrong.\n\n* `log.warn(...args)` calls `process.emit('log', 'warn', ...args)`\n  \n  A fairly high log level.  Things that the user needs to be aware of, but which won't necessarily cause improper functioning of the system.\n\n* `log.notice(...args)` calls `process.emit('log', 'notice', ...args)`\n  \n  Notices which are important, but not necessarily dangerous or a cause for excess concern.\n\n* `log.info(...args)` calls `process.emit('log', 'info', ...args)`\n  \n  Informative messages that may benefit the user, but aren't particularly important.\n\n* `log.verbose(...args)` calls `process.emit('log', 'verbose', ...args)`\n  \n  Noisy output that is more detail that most users will care about.\n\n* `log.silly(...args)` calls `process.emit('log', 'silly', ...args)`\n  \n  Extremely noisy excessive logging messages that are typically only useful for debugging.\n\n* `log.http(...args)` calls `process.emit('log', 'http', ...args)`\n  \n  Information about HTTP requests made and/or completed.\n\n* `log.timing(...args)` calls `process.emit('log', 'timing', ...args)`\n  \n  Timing information.\n\n* `log.pause()` calls `process.emit('log', 'pause')`\n  \n  Used to tell the consumer to stop printing messages.\n\n* `log.resume()` calls `process.emit('log', 'resume')`\n  \n  Used to tell the consumer that it is ok to print messages again.\n\n* `log.LEVELS` an array of strings of all log method names\n\n#### input\n\n* `input.start(...args)` calls `process.emit('input', 'start', ...args)`\n\n  Used to tell the consumer that the terminal is going to begin reading user input. Returns a function that will call `input.end(...args)` for convenience.\n  \n  If the first argument is a function, it will be used as a callback which runs `input.end()` on its completion. If the callback returns a `Promise` then `input.end(...args)` will be run during `finally()`.\n\n* `input.end(...args)` calls `process.emit('input', 'end', ...args)`\n\n  Used to tell the consumer that the terminal has stopped reading user input.\n\n* `input.read(...args): Promise` calls `process.emit('input', 'read', resolve, reject, ...args)`\n\n  Used to tell the consumer that the terminal is reading user input and returns a `Promise` that the producer can `await` until the consumer has finished its async action.\n  \n  This emits `resolve` and `reject` functions (in addition to all passed in arguments) which the consumer must use to resolve the returned `Promise`.\n\n#### time\n\n* `time.start(timerName, fn?)` calls `process.emit('time', 'start', 'timerName')`\n\n  Used to start a timer with the specified name. Returns a function that will call `time.end()` for convenience.\n  \n  This also takes an optional callback which will run `time.end()` on its completion. If the callback returns a `Promise` then `time.end()` will be run during `finally()`.\n\n* `time.end(timerName)` calls `process.emit('time', 'end', timeName)`\n\n  Used to tell the consumer to stop a timer with the specified name.\n\n## Examples\n\n### log\n\nEvery `log` method calls `process.emit('log', level, ...otherArgs)` internally.  So in order to consume those events you need to do `process.on('log', fn)`.\n\n#### Colorize based on level\n\nHere's an example of how to consume `proc-log` log events and colorize them based on level:\n\n```js\nconst chalk = require('chalk')\n\nprocess.on('log', (level, ...args) => {\n  if (level === 'error') {\n    console.log(chalk.red(level), ...args)\n  } else {\n    console.log(chalk.blue(level), ...args)\n  }\n})\n```\n\n#### Pause and resume\n\n`log.pause` and `log.resume` are included so you have the ability to tell your consumer that you want to pause or resume your display of logs. In the npm CLI we use this to buffer all logs on init until we know the correct loglevel to display.  But we also setup a second handler that writes everything to a file even if paused.\n\n```js\nlet paused = true\nconst buffer = []\n\n// this handler will buffer and replay logs only after `procLog.resume()` is called\nprocess.on('log', (level, ...args) => {\n  if (level === 'resume') {\n    buffer.forEach((item) => console.log(...item))\n    paused = false\n    return\n  } \n\n  if (paused) {\n    buffer.push([level, ...args])\n  } else {\n    console.log(level, ...args)\n  }\n})\n\n// this handler will write everything to a file\nprocess.on('log', (...args) => {\n  fs.appendFileSync('debug.log', args.join(' '))\n})\n```\n\n### input\n\n### `start` and `end`\n\n**producer.js**\n```js\nconst { output, input } = require('proc-log')\nconst { readFromUserInput } = require('./my-read')\n\n// Using callback passed to `start`\ntry {\n  const res = await input.start(\n    readFromUserInput({ prompt: 'OK?', default: 'y' })\n  )\n  output.standard(`User said ${res}`)\n} catch (err) {\n  output.error(`User cancelled: ${err}`)\n}\n\n// Manually calling `start` and `end`\ntry {\n  input.start()\n  const res = await readFromUserInput({ prompt: 'OK?', default: 'y' })\n  output.standard(`User said ${res}`)\n} catch (err) {\n  output.error(`User cancelled: ${err}`)\n} finally {\n  input.end()\n}\n```\n\n**consumer.js**\n```js\nconst { read } = require('read')\n\nprocess.on('input', (level) => {\n  if (level === 'start') {\n    // Hide UI to make room for user input being read\n  } else if (level === 'end') {\n    // Restore UI now that reading is ended\n  }\n})\n```\n\n### Using `read` to call `read()`\n\n**producer.js**\n```js\nconst { output, input } = require('proc-log')\n\ntry {\n  const res = await input.read({ prompt: 'OK?', default: 'y' })\n  output.standard(`User said ${res}`)\n} catch (err) {\n  output.error(`User cancelled: ${err}`)\n}\n```\n\n**consumer.js**\n```js\nconst { read } = require('read')\n\nprocess.on('input', (level, ...args) => {\n  if (level === 'read') {\n    const [res, rej, opts] = args\n    read(opts).then(res).catch(rej)\n  }\n})\n```"
+}

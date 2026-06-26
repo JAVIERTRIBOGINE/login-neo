@@ -23,20 +23,38 @@ cd mock-citrix && mvn spring-boot:run   # puerto 8082
 
 | Endpoint | Método | Descripción |
 |---|---|---|
-| `/digital/party-authentication/v4/light-users/authenticate`<br>`/digital/party-authentication/v4/employees/authenticate` | POST | Árbol de autenticación simplificado: solo Caso 4 (NameCallback+PasswordCallback). Cualquier user/pass no vacíos son válidos. Devuelve `{authId, callbacks}` la 1ª vez, y `{successUrl, tokenId, realm}` + `Set-Cookie PA_SSO` la 2ª. |
+| `/digital/party-authentication/v4/light-users/authenticate`<br>`/digital/party-authentication/v4/employees/authenticate` | POST | Árbol de autenticación POC: 1ª llamada devuelve `RedirectCallback`; la reanudación con `authId` simula internamente error Entra ID + fallo Kerberos ADGBS.com/Atenea y devuelve `200 OK` con `NameCallback`+`PasswordCallback`; el POST con credenciales mock válidas devuelve `{successUrl, tokenId, realm}` + `Set-Cookie PA_SSO`. |
 | `/digital/party-authentication/v4/oauth2/authorize` | POST | Requiere cookie `PA_SSO` + `csrf` (=tokenId). Responde `302` a `redirectUri?code=...&state=...`. |
 | `/digital/party-authentication/v4/oauth2/token` | POST | Intercambia `code` por `{access_token, id_token}` (JWT falsos, sin firma). Refresca `PA_SSO`. |
-| `/SSORedirect` | GET | SSO endpoint SAML (llamada 3). Si `PA_SSO` es válida, devuelve HTML con form auto-enviado (`SAMLResponse`+`RelayState`) a la ACS URL de NEO. Si no, `401` HTML (sin form) — simula SSO Cookie inválida. |
+| `/SSORedirect` | GET | SSO endpoint SAML (llamada 3). Si `PA_SSO` es válida, devuelve HTML con form auto-enviado (`SAMLResponse`+`RelayState`) a la ACS URL de NEO. Si no, redirige a `/login?samlSso=unauthorized` en la Shell para registrar el rechazo e iniciar el fallback OAuth. |
 
-**Casos 1-3 (Entra ID / Kerberos) NO se simulan todavía**. En la POC actual el mock salta directamente al Caso 4, devolviendo `NameCallback` + `PasswordCallback` en la primera llamada a `/authenticate`.
+Respuesta exacta del fallback local cuando no existe una SSO Cookie activa:
 
-Pendiente para una simulación más fiel del árbol PingAM:
+```http
+HTTP/1.1 303 See Other
+Location: http://localhost:4300/login?samlSso=unauthorized
+```
+
+Esta URL es parte del contrato con PingAM/Apigee: en otros entornos debe sustituirse el host local, pero conservar una ruta resoluble por la Shell y el indicador funcional acordado.
+
+El mock simula Entra ID y Kerberos como lógica interna de PingAM: no expone
+`HttpCallback` al front ni devuelve `401` para caer a credenciales. La caída se
+modela como respuesta funcional:
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{ "authId": "...", "callbacks": [NameCallback, PasswordCallback] }
+```
+
+Secuencia POC del árbol:
 
 1. Primera llamada vacía a `/authenticate` → `RedirectCallback` (Entra ID).
-2. Retorno/fallo simulado de Entra ID → continuación con `authId`.
-3. POST con `{ authId }` → `HttpCallback` (Kerberos).
-4. POST con `{ authId, callbacks }` + credenciales de navegador → fallo controlado `401`.
-5. Caída final al formulario (`NameCallback` + `PasswordCallback`).
+2. El front local reanuda con `{ authId }` para simular la vuelta de Entra ID.
+3. PingAM mock simula internamente: Entra ID error → Kerberos ADGBS.com error → Kerberos Atenea error.
+4. PingAM mock devuelve `200 OK` con `NameCallback` + `PasswordCallback`.
+5. POST con `{ authId, callbacks }` rellenando `IDToken1`/`IDToken2` → `{successUrl, tokenId, realm}` + `Set-Cookie PA_SSO`.
 
 ## mock-citrix (puerto 8082) — NetScaler/StoreFront
 
@@ -48,10 +66,12 @@ Pendiente para una simulación más fiel del árbol PingAM:
 
 ## Configuración (`application.yml` de cada proyecto)
 
-- `mock.pingam.acs-neo-url` → ACS URL de NEO (`SamlResponseComponent`), por defecto `http://localhost:4500/saml/acs`.
-- `mock.citrix.return-url` → ruta de retorno tras la llamada 5, por defecto `http://localhost:4500/saml/resources`.
+- `mock.pingam.acs-neo-url` → adaptador HTTP receptor del Form POST, por defecto `http://localhost:8081/saml/acs`.
+- `mock.pingam.neo-acs-return-url` → ACS Angular en la Shell, por defecto `http://localhost:4300/saml/acs`.
+- `mock.pingam.neo-login-url` → fallback SSO → OAuth, por defecto `http://localhost:4300/login?samlSso=unauthorized`.
+- `mock.citrix.return-url` → ruta de retorno tras la llamada 5, por defecto `http://localhost:4300/saml/resources`.
 - `mock.citrix.pingam-sso-url` → `http://localhost:8081/SSORedirect`.
-- `mock.cors.allowed-origin` → origen del front, por defecto `http://localhost:4500`.
+- `mock.cors.allowed-origins` → orígenes permitidos, por defecto `http://localhost:4300,http://localhost:4500`.
 
 Ajustar estos valores y los de `front-app-login/src/environments/environment.ts`
 (`endpoints.*` → `http://localhost:8081/...`, `saml.*` → `http://localhost:8082/...`)

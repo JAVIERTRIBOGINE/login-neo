@@ -1,0 +1,2253 @@
+{
+	"name": "regexp.prototype.flags",
+	"versions": {
+		"1.3.0": {
+			"name": "regexp.prototype.flags",
+			"description": "ES6 spec-compliant RegExp.prototype.flags shim.",
+			"version": "1.3.0",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/es-shims/RegExp.prototype.flags#readme",
+			"repository": {
+				"url": "git://github.com/es-shims/RegExp.prototype.flags.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/es-shims/RegExp.prototype.flags/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"es-abstract": "^1.17.0-next.1",
+				"define-properties": "^1.1.3"
+			},
+			"devDependencies": {
+				"has": "^1.0.3",
+				"tape": "^4.11.0",
+				"covert": "^1.1.1",
+				"eclint": "^2.8.1",
+				"eslint": "^6.7.2",
+				"@es-shims/api": "^2.1.2",
+				"@ljharb/eslint-config": "^15.0.2"
+			},
+			"keywords": [
+				"RegExp.prototype.flags",
+				"regex",
+				"regular expression",
+				"ES6",
+				"shim",
+				"flag",
+				"flags",
+				"regexp",
+				"RegExp#flags",
+				"polyfill",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "es-shims-owner",
+					"email": "ljharb+esshims@gmail.com"
+				},
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint .",
+				"test": "npm run tests-only",
+				"eccheck": "eclint check *.js **/*.js > /dev/null",
+				"pretest": "npm run lint",
+				"coverage": "covert test/*.js",
+				"posttest": "npx aud",
+				"tests-only": "es-shim-api --bound && node --harmony --es-staging test/index.js",
+				"coverage-quiet": "covert test/*.js --quiet"
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "regexp.prototype.flags@1.3.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/regexp.prototype.flags/-/regexp.prototype.flags-1.3.0.tgz",
+				"shasum": "7aba89b3c13a64509dabcf3ca8d9fbb9bdf5cb75",
+				"integrity": "sha512-2+Q0C5g951OlYlJz6yu5/M33IcsESLlLfsyIaLJaG4FA2r4yP8MvVMJUUP/fVBkSpbbbZlS5gynbEWLipiiXiQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCjWPL5PqTJSWD0qoKwaSHgnWbCq5wkoHnDsz2YIWhKKwIgXkStGk5d5HaJwRtvYUVkPK2HoTSHTLuDMSyGRrsiEWU="
+					}
+				]
+			},
+			"_npmVersion": "6.13.1",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "f1b1ec0c2e036840204766ecbc8a3a1ff095f163",
+			"testling": {
+				"files": "test/index.js",
+				"browsers": [
+					"iexplore/9.0..latest",
+					"firefox/4.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/11.6..latest",
+					"opera/next",
+					"safari/5.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/regexp.prototype.flags_1.3.0_1576385849027_0.23217087361572486",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "13.3.0",
+			"contributors": []
+		},
+		"1.3.1": {
+			"name": "regexp.prototype.flags",
+			"description": "ES6 spec-compliant RegExp.prototype.flags shim.",
+			"version": "1.3.1",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/es-shims/RegExp.prototype.flags#readme",
+			"repository": {
+				"url": "git://github.com/es-shims/RegExp.prototype.flags.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/es-shims/RegExp.prototype.flags/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"call-bind": "^1.0.2",
+				"define-properties": "^1.1.3"
+			},
+			"devDependencies": {
+				"aud": "^1.1.3",
+				"has": "^1.0.3",
+				"nyc": "^10.3.2",
+				"tape": "^5.1.1",
+				"covert": "^1.1.1",
+				"eclint": "^2.8.1",
+				"eslint": "^7.17.0",
+				"@es-shims/api": "^2.1.2",
+				"auto-changelog": "^2.2.1",
+				"object-inspect": "^1.9.0",
+				"has-strict-mode": "^1.0.1",
+				"safe-publish-latest": "^1.1.4",
+				"functions-have-names": "^1.2.2",
+				"@ljharb/eslint-config": "^17.3.0"
+			},
+			"keywords": [
+				"RegExp.prototype.flags",
+				"regex",
+				"regular expression",
+				"ES6",
+				"shim",
+				"flag",
+				"flags",
+				"regexp",
+				"RegExp#flags",
+				"polyfill",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint .",
+				"test": "npm run tests-only",
+				"eccheck": "eclint check *.js **/*.js > /dev/null",
+				"pretest": "npm run lint",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"postlint": "es-shim-api --bound",
+				"posttest": "aud --production",
+				"prepublish": "safe-publish-latest",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\""
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "regexp.prototype.flags@1.3.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/regexp.prototype.flags/-/regexp.prototype.flags-1.3.1.tgz",
+				"shasum": "7ef352ae8d159e758c0eadca6f8fcb4eef07be26",
+				"integrity": "sha512-JiBdRBq91WlY7uRJ0ds7R+dU02i6LKi8r3BuQhNXn+kmeLN+EfHhfjqMRis1zJxnlu88hq/4dx0P2OP3APRTOA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIHJaHfToMal8SJepok0t4+H8DpFmErnMIzMGr/up+pw6AiBwEdFZzls45wOKz4Da57Hc6R8MZ7RG0dEd7jhy4yBYZQ=="
+					}
+				]
+			},
+			"_npmVersion": "6.14.10",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "e4ba14753c062536f445fb6fa9c462bcb1306319",
+			"testling": {
+				"files": "test/index.js",
+				"browsers": [
+					"iexplore/9.0..latest",
+					"firefox/4.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/11.6..latest",
+					"opera/next",
+					"safari/5.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/regexp.prototype.flags_1.3.1_1610727553905_0.4452370744314351",
+				"host": "s3://npm-registry-packages"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"hideCredit": true,
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false
+			},
+			"_nodeVersion": "14.15.4",
+			"contributors": []
+		},
+		"1.4.0": {
+			"name": "regexp.prototype.flags",
+			"description": "ES6 spec-compliant RegExp.prototype.flags shim.",
+			"version": "1.4.0",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/es-shims/RegExp.prototype.flags#readme",
+			"repository": {
+				"url": "git://github.com/es-shims/RegExp.prototype.flags.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/es-shims/RegExp.prototype.flags/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"call-bind": "^1.0.2",
+				"define-properties": "^1.1.3"
+			},
+			"devDependencies": {
+				"aud": "^2.0.0",
+				"has": "^1.0.3",
+				"nyc": "^10.3.2",
+				"tape": "^5.4.0",
+				"covert": "^1.1.1",
+				"eclint": "^2.8.1",
+				"eslint": "^8.6.0",
+				"foreach": "^2.0.5",
+				"@es-shims/api": "^2.2.3",
+				"auto-changelog": "^2.3.0",
+				"object-inspect": "^1.12.0",
+				"has-strict-mode": "^1.0.1",
+				"safe-publish-latest": "^2.0.0",
+				"functions-have-names": "^1.2.2",
+				"@ljharb/eslint-config": "^20.2.0",
+				"available-regexp-flags": "^1.0.0"
+			},
+			"keywords": [
+				"RegExp.prototype.flags",
+				"regex",
+				"regular expression",
+				"ES6",
+				"shim",
+				"flag",
+				"flags",
+				"regexp",
+				"RegExp#flags",
+				"polyfill",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint --ext=js,mjs .",
+				"test": "npm run tests-only",
+				"prelint": "eclint check $(git ls-files | xargs find 2> /dev/null | grep -vE 'node_modules|\\.git')",
+				"pretest": "npm run lint",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"postlint": "es-shim-api --bound",
+				"posttest": "aud --production",
+				"prepublish": "not-in-publish || npm run prepublishOnly",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\"",
+				"prepublishOnly": "safe-publish-latest"
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "regexp.prototype.flags@1.4.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/regexp.prototype.flags/-/regexp.prototype.flags-1.4.0.tgz",
+				"shasum": "320e3ccb61ebb74daebffd1c09e484ea3c67070b",
+				"integrity": "sha512-OE85RadmCYZJzYgIcWd2Qum/wJ20WwY5Z6Bfv5FeBPU46uPD01s3pe2LNoi0etmr83ibsFidC0ZiKXmPY5UpmQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQD+bZuVE/JpHYremJ3Z1GeR4AdmZcicyOPGxLXKQHSYEAIhALBiChYvQdjDp5NXmj951kNoOErlgthoAhZ6bJA4WrLK"
+					}
+				]
+			},
+			"_npmVersion": "8.3.0",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "3ce4dd6a05a6bdf58374652ff79a4fcc637da1e9",
+			"testling": {
+				"files": "test/index.js",
+				"browsers": [
+					"iexplore/9.0..latest",
+					"firefox/4.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/11.6..latest",
+					"opera/next",
+					"safari/5.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/regexp.prototype.flags_1.4.0_1642136060918_0.8199974239403245",
+				"host": "s3://npm-registry-packages"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"hideCredit": true,
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false
+			},
+			"_nodeVersion": "17.3.1",
+			"contributors": []
+		},
+		"1.3.2": {
+			"name": "regexp.prototype.flags",
+			"description": "ES6 spec-compliant RegExp.prototype.flags shim.",
+			"version": "1.3.2",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/es-shims/RegExp.prototype.flags#readme",
+			"repository": {
+				"url": "git://github.com/es-shims/RegExp.prototype.flags.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/es-shims/RegExp.prototype.flags/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"call-bind": "^1.0.2",
+				"define-properties": "^1.1.3"
+			},
+			"devDependencies": {
+				"aud": "^2.0.0",
+				"has": "^1.0.3",
+				"nyc": "^10.3.2",
+				"tape": "^5.4.0",
+				"covert": "^1.1.1",
+				"eclint": "^2.8.1",
+				"eslint": "^8.6.0",
+				"@es-shims/api": "^2.2.3",
+				"auto-changelog": "^2.3.0",
+				"object-inspect": "^1.12.0",
+				"has-strict-mode": "^1.0.1",
+				"safe-publish-latest": "^2.0.0",
+				"functions-have-names": "^1.2.2",
+				"@ljharb/eslint-config": "^20.2.0"
+			},
+			"keywords": [
+				"RegExp.prototype.flags",
+				"regex",
+				"regular expression",
+				"ES6",
+				"shim",
+				"flag",
+				"flags",
+				"regexp",
+				"RegExp#flags",
+				"polyfill",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint --ext=js,mjs .",
+				"test": "npm run tests-only",
+				"prelint": "eclint check $(git ls-files | xargs find 2> /dev/null | grep -vE 'node_modules|\\.git')",
+				"pretest": "npm run lint",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"postlint": "es-shim-api --bound",
+				"posttest": "aud --production",
+				"prepublish": "not-in-publish || npm run prepublishOnly",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\"",
+				"prepublishOnly": "safe-publish-latest"
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "regexp.prototype.flags@1.3.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/regexp.prototype.flags/-/regexp.prototype.flags-1.3.2.tgz",
+				"shasum": "ea664a0cf7fecf6bf811a84a06ba88c52b38a5a6",
+				"integrity": "sha512-uaro52GSI5be7+ssxjxxnLlleDBN3VHIWQHvBhfeeSXRQkuV/0Jo/hBU+omYH6NUkM+LYpTHnRRf2W/v+x7LzQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIE1Xh1yoG5qe4Bv5sw4ndnr3grp660sfD/V1i2aQ8FBdAiEAj+D93NsppXwhgGEsU2Gx3idnXwySCwra/E2JVeg7Gt4="
+					}
+				]
+			},
+			"_npmVersion": "8.3.0",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "45b78d54fbaf80d2ff0649fffffcdcc452adc6fc",
+			"testling": {
+				"files": "test/index.js",
+				"browsers": [
+					"iexplore/9.0..latest",
+					"firefox/4.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/11.6..latest",
+					"opera/next",
+					"safari/5.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/regexp.prototype.flags_1.3.2_1642106515274_0.4401661191169741",
+				"host": "s3://npm-registry-packages"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"hideCredit": true,
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false
+			},
+			"_nodeVersion": "17.3.1",
+			"contributors": []
+		},
+		"1.4.1": {
+			"name": "regexp.prototype.flags",
+			"description": "ES6 spec-compliant RegExp.prototype.flags shim.",
+			"version": "1.4.1",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/es-shims/RegExp.prototype.flags#readme",
+			"repository": {
+				"url": "git://github.com/es-shims/RegExp.prototype.flags.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/es-shims/RegExp.prototype.flags/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"call-bind": "^1.0.2",
+				"define-properties": "^1.1.3"
+			},
+			"devDependencies": {
+				"aud": "^2.0.0",
+				"has": "^1.0.3",
+				"nyc": "^10.3.2",
+				"tape": "^5.4.0",
+				"covert": "^1.1.1",
+				"eclint": "^2.8.1",
+				"eslint": "^8.6.0",
+				"foreach": "^2.0.5",
+				"@es-shims/api": "^2.2.3",
+				"auto-changelog": "^2.3.0",
+				"object-inspect": "^1.12.0",
+				"has-strict-mode": "^1.0.1",
+				"safe-publish-latest": "^2.0.0",
+				"functions-have-names": "^1.2.2",
+				"@ljharb/eslint-config": "^20.2.0",
+				"available-regexp-flags": "^1.0.0"
+			},
+			"keywords": [
+				"RegExp.prototype.flags",
+				"regex",
+				"regular expression",
+				"ES6",
+				"shim",
+				"flag",
+				"flags",
+				"regexp",
+				"RegExp#flags",
+				"polyfill",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint --ext=js,mjs .",
+				"test": "npm run tests-only",
+				"prelint": "eclint check $(git ls-files | xargs find 2> /dev/null | grep -vE 'node_modules|\\.git')",
+				"pretest": "npm run lint",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"postlint": "es-shim-api --bound",
+				"posttest": "aud --production",
+				"prepublish": "not-in-publish || npm run prepublishOnly",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\"",
+				"prepublishOnly": "safe-publish-latest"
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "regexp.prototype.flags@1.4.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/regexp.prototype.flags/-/regexp.prototype.flags-1.4.1.tgz",
+				"shasum": "b3f4c0059af9e47eca9f3f660e51d81307e72307",
+				"integrity": "sha512-pMR7hBVUUGI7PMA37m2ofIdQCsomVnas+Jn5UPGAHQ+/LlwKm/aTLJHdasmHRzlfeZwHiAOaRSo2rbBDm3nNUQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQCxNlckUYcovtXJHIJdx7yPlDTjWMhX5KGzdsYDMi0i9QIhAOV8MvPx+AKu9fZjdf+CTc3szY3Q6iIwzXNvZJUZ1u7X"
+					}
+				]
+			},
+			"_npmVersion": "8.3.0",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "81d3adc11ae344cc2b85d643b8df07de5fefba29",
+			"testling": {
+				"files": "test/index.js",
+				"browsers": [
+					"iexplore/9.0..latest",
+					"firefox/4.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/11.6..latest",
+					"opera/next",
+					"safari/5.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/regexp.prototype.flags_1.4.1_1642145222930_0.049692340395019574",
+				"host": "s3://npm-registry-packages"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"hideCredit": true,
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false
+			},
+			"_nodeVersion": "17.3.1",
+			"contributors": []
+		},
+		"1.5.0": {
+			"name": "regexp.prototype.flags",
+			"description": "ES6 spec-compliant RegExp.prototype.flags shim.",
+			"version": "1.5.0",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/es-shims/RegExp.prototype.flags#readme",
+			"repository": {
+				"url": "git://github.com/es-shims/RegExp.prototype.flags.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/es-shims/RegExp.prototype.flags/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"call-bind": "^1.0.2",
+				"define-properties": "^1.2.0",
+				"functions-have-names": "^1.2.3"
+			},
+			"devDependencies": {
+				"aud": "^2.0.2",
+				"has": "^1.0.3",
+				"nyc": "^10.3.2",
+				"tape": "^5.6.3",
+				"covert": "^1.1.1",
+				"eclint": "^2.8.1",
+				"eslint": "=8.8.0",
+				"for-each": "^0.3.3",
+				"npmignore": "^0.3.0",
+				"in-publish": "^2.0.1",
+				"@es-shims/api": "^2.3.1",
+				"auto-changelog": "^2.4.0",
+				"object-inspect": "^1.12.3",
+				"has-strict-mode": "^1.0.1",
+				"safe-publish-latest": "^2.0.0",
+				"@ljharb/eslint-config": "^21.0.1",
+				"available-regexp-flags": "^1.0.1"
+			},
+			"keywords": [
+				"RegExp.prototype.flags",
+				"regex",
+				"regular expression",
+				"ES6",
+				"shim",
+				"flag",
+				"flags",
+				"regexp",
+				"RegExp#flags",
+				"polyfill",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint --ext=js,mjs .",
+				"test": "npm run tests-only",
+				"prelint": "eclint check $(git ls-files | xargs find 2> /dev/null | grep -vE 'node_modules|\\.git')",
+				"prepack": "npmignore --auto --commentLines=autogenerated",
+				"pretest": "npm run lint",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"postlint": "es-shim-api --bound",
+				"posttest": "aud --production",
+				"prepublish": "not-in-publish || npm run prepublishOnly",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\"",
+				"prepublishOnly": "safe-publish-latest"
+			},
+			"publishConfig": {
+				"ignore": [
+					".github/workflows"
+				]
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "regexp.prototype.flags@1.5.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/regexp.prototype.flags/-/regexp.prototype.flags-1.5.0.tgz",
+				"shasum": "fe7ce25e7e4cca8db37b6634c8a2c7009199b9cb",
+				"integrity": "sha512-0SutC3pNudRKgquxGoRGIz946MZVHqbNfPjBdxeOhBrdgDKlRoXmYLQN9xRbrR09ZXWeGAdPuif7egofn6v5LA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIF8nFBMksqgFgUDpY3N9M/xVcQByYGrDUK99r+qsRB/nAiA7o6OvlRpJ4/YhG+HpT3s3+l45xY8+EqGTF/cNvpSK8g=="
+					}
+				]
+			},
+			"_npmVersion": "9.6.4",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "0edc251db52a5e7889ff4b44c7ea5273687ce410",
+			"testling": {
+				"files": "test/index.js",
+				"browsers": [
+					"iexplore/9.0..latest",
+					"firefox/4.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/11.6..latest",
+					"opera/next",
+					"safari/5.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/regexp.prototype.flags_1.5.0_1681887473099_0.9588566361064341",
+				"host": "s3://npm-registry-packages"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"hideCredit": true,
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false
+			},
+			"_nodeVersion": "20.0.0",
+			"contributors": []
+		},
+		"1.4.2": {
+			"name": "regexp.prototype.flags",
+			"description": "ES6 spec-compliant RegExp.prototype.flags shim.",
+			"version": "1.4.2",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/es-shims/RegExp.prototype.flags#readme",
+			"repository": {
+				"url": "git://github.com/es-shims/RegExp.prototype.flags.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/es-shims/RegExp.prototype.flags/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"call-bind": "^1.0.2",
+				"define-properties": "^1.1.3"
+			},
+			"devDependencies": {
+				"aud": "^2.0.0",
+				"has": "^1.0.3",
+				"nyc": "^10.3.2",
+				"tape": "^5.5.3",
+				"covert": "^1.1.1",
+				"eclint": "^2.8.1",
+				"eslint": "=8.8.0",
+				"foreach": "^2.0.5",
+				"@es-shims/api": "^2.2.3",
+				"auto-changelog": "^2.4.0",
+				"object-inspect": "^1.12.0",
+				"has-strict-mode": "^1.0.1",
+				"safe-publish-latest": "^2.0.0",
+				"functions-have-names": "^1.2.2",
+				"@ljharb/eslint-config": "^21.0.0",
+				"available-regexp-flags": "^1.0.0"
+			},
+			"keywords": [
+				"RegExp.prototype.flags",
+				"regex",
+				"regular expression",
+				"ES6",
+				"shim",
+				"flag",
+				"flags",
+				"regexp",
+				"RegExp#flags",
+				"polyfill",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint --ext=js,mjs .",
+				"test": "npm run tests-only",
+				"prelint": "eclint check $(git ls-files | xargs find 2> /dev/null | grep -vE 'node_modules|\\.git')",
+				"pretest": "npm run lint",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"postlint": "es-shim-api --bound",
+				"posttest": "aud --production",
+				"prepublish": "not-in-publish || npm run prepublishOnly",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\"",
+				"prepublishOnly": "safe-publish-latest"
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "regexp.prototype.flags@1.4.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/regexp.prototype.flags/-/regexp.prototype.flags-1.4.2.tgz",
+				"shasum": "bf635117a2f4b755595ebb0c0ee2d2a49b2084db",
+				"integrity": "sha512-Ynz8fTQW5/1elh+jWU2EDDzeoNbD0OQ0R+D1VJU5ATOkUaro4A9YEkdN2ODQl/8UQFPPpZNw91fOcLFamM7Pww==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQD+WdWbySTnTrsDZbyVrmUcfHuGLRwPsdD8y7L1Qbf9LAIhAOTfdeVupeaLeO4lvlrivLz3TIvb5r1Irp/WzbcMT+UL"
+					}
+				]
+			},
+			"_npmVersion": "8.3.1",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "cc38017efaf0ac9ebe857e25bc08499c9916fc7a",
+			"testling": {
+				"files": "test/index.js",
+				"browsers": [
+					"iexplore/9.0..latest",
+					"firefox/4.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/11.6..latest",
+					"opera/next",
+					"safari/5.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/regexp.prototype.flags_1.4.2_1649825757541_0.5553101015907627",
+				"host": "s3://npm-registry-packages"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"hideCredit": true,
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false
+			},
+			"_nodeVersion": "17.9.0",
+			"contributors": []
+		},
+		"1.5.1": {
+			"name": "regexp.prototype.flags",
+			"description": "ES6 spec-compliant RegExp.prototype.flags shim.",
+			"version": "1.5.1",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/es-shims/RegExp.prototype.flags#readme",
+			"repository": {
+				"url": "git://github.com/es-shims/RegExp.prototype.flags.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/es-shims/RegExp.prototype.flags/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"call-bind": "^1.0.2",
+				"define-properties": "^1.2.0",
+				"set-function-name": "^2.0.0"
+			},
+			"devDependencies": {
+				"aud": "^2.0.3",
+				"has": "^1.0.3",
+				"nyc": "^10.3.2",
+				"tape": "^5.6.6",
+				"covert": "^1.1.1",
+				"eclint": "^2.8.1",
+				"eslint": "=8.8.0",
+				"for-each": "^0.3.3",
+				"npmignore": "^0.3.0",
+				"in-publish": "^2.0.1",
+				"@es-shims/api": "^2.4.2",
+				"auto-changelog": "^2.4.0",
+				"object-inspect": "^1.12.3",
+				"has-strict-mode": "^1.0.1",
+				"safe-publish-latest": "^2.0.0",
+				"functions-have-names": "^1.2.3",
+				"@ljharb/eslint-config": "^21.1.0",
+				"available-regexp-flags": "^1.0.2"
+			},
+			"keywords": [
+				"RegExp.prototype.flags",
+				"regex",
+				"regular expression",
+				"ES6",
+				"shim",
+				"flag",
+				"flags",
+				"regexp",
+				"RegExp#flags",
+				"polyfill",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint --ext=js,mjs .",
+				"test": "npm run tests-only",
+				"prelint": "eclint check $(git ls-files | xargs find 2> /dev/null | grep -vE 'node_modules|\\.git')",
+				"prepack": "npmignore --auto --commentLines=autogenerated",
+				"pretest": "npm run lint",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"postlint": "es-shim-api --bound",
+				"posttest": "aud --production",
+				"prepublish": "not-in-publish || npm run prepublishOnly",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\"",
+				"prepublishOnly": "safe-publish-latest"
+			},
+			"publishConfig": {
+				"ignore": [
+					".github/workflows"
+				]
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "regexp.prototype.flags@1.5.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/regexp.prototype.flags/-/regexp.prototype.flags-1.5.1.tgz",
+				"shasum": "90ce989138db209f81492edd734183ce99f9677e",
+				"integrity": "sha512-sy6TXMN+hnP/wMy+ISxg3krXx7BAtWVO4UouuCN/ziM9UEne0euamVNafDfvC83bRNr95y0V5iijeDQFUNpvrg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQCUtZpsFw5Q5PL4/PMrEr1dpgKN0NBop7CyT3X+9mqRmQIhAKNErENmMNP1SdBR3dHxt3ZoRNuhvGFcq4romVPRlLq6"
+					}
+				]
+			},
+			"_npmVersion": "9.8.1",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "ffb75fa85d009ebb5f581a4bf9bbd34458ccd8e4",
+			"testling": {
+				"files": "test/index.js",
+				"browsers": [
+					"iexplore/9.0..latest",
+					"firefox/4.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/11.6..latest",
+					"opera/next",
+					"safari/5.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/regexp.prototype.flags_1.5.1_1694582947788_0.5421140672482339",
+				"host": "s3://npm-registry-packages"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"hideCredit": true,
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false
+			},
+			"_nodeVersion": "20.6.0",
+			"contributors": []
+		},
+		"1.4.3": {
+			"name": "regexp.prototype.flags",
+			"description": "ES6 spec-compliant RegExp.prototype.flags shim.",
+			"version": "1.4.3",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/es-shims/RegExp.prototype.flags#readme",
+			"repository": {
+				"url": "git://github.com/es-shims/RegExp.prototype.flags.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/es-shims/RegExp.prototype.flags/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"call-bind": "^1.0.2",
+				"define-properties": "^1.1.3",
+				"functions-have-names": "^1.2.2"
+			},
+			"devDependencies": {
+				"aud": "^2.0.0",
+				"has": "^1.0.3",
+				"nyc": "^10.3.2",
+				"tape": "^5.5.3",
+				"covert": "^1.1.1",
+				"eclint": "^2.8.1",
+				"eslint": "=8.8.0",
+				"foreach": "^2.0.5",
+				"@es-shims/api": "^2.2.3",
+				"auto-changelog": "^2.4.0",
+				"object-inspect": "^1.12.0",
+				"has-strict-mode": "^1.0.1",
+				"safe-publish-latest": "^2.0.0",
+				"@ljharb/eslint-config": "^21.0.0",
+				"available-regexp-flags": "^1.0.0"
+			},
+			"keywords": [
+				"RegExp.prototype.flags",
+				"regex",
+				"regular expression",
+				"ES6",
+				"shim",
+				"flag",
+				"flags",
+				"regexp",
+				"RegExp#flags",
+				"polyfill",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint --ext=js,mjs .",
+				"test": "npm run tests-only",
+				"prelint": "eclint check $(git ls-files | xargs find 2> /dev/null | grep -vE 'node_modules|\\.git')",
+				"pretest": "npm run lint",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"postlint": "es-shim-api --bound",
+				"posttest": "aud --production",
+				"prepublish": "not-in-publish || npm run prepublishOnly",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\"",
+				"prepublishOnly": "safe-publish-latest"
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "regexp.prototype.flags@1.4.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/regexp.prototype.flags/-/regexp.prototype.flags-1.4.3.tgz",
+				"shasum": "87cab30f80f66660181a3bb7bf5981a872b367ac",
+				"integrity": "sha512-fjggEOO3slI6Wvgjwflkc4NFRCTZAu5CnNfBd5qOMYhWdn67nJBBu34/TkD++eeFmd8C9r9jfXJ27+nSiRkSUA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIDZ9uI6Yr8FIbQCsU/uVf+8X/se7P6NeedHyzzoQyiQ6AiB7Vss0thvWJp08+XgxCHYHe//tCLHhsWCxF2jzabo/KQ=="
+					}
+				]
+			},
+			"_npmVersion": "8.3.1",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "0ed48d003353a0157f14ca8f2b5e3034830dd179",
+			"testling": {
+				"files": "test/index.js",
+				"browsers": [
+					"iexplore/9.0..latest",
+					"firefox/4.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/11.6..latest",
+					"opera/next",
+					"safari/5.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/regexp.prototype.flags_1.4.3_1649993605741_0.33023018068904175",
+				"host": "s3://npm-registry-packages"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"hideCredit": true,
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false
+			},
+			"_nodeVersion": "17.9.0",
+			"contributors": []
+		},
+		"1.5.2": {
+			"name": "regexp.prototype.flags",
+			"description": "ES6 spec-compliant RegExp.prototype.flags shim.",
+			"version": "1.5.2",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/es-shims/RegExp.prototype.flags#readme",
+			"repository": {
+				"url": "git://github.com/es-shims/RegExp.prototype.flags.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/es-shims/RegExp.prototype.flags/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"call-bind": "^1.0.6",
+				"es-errors": "^1.3.0",
+				"define-properties": "^1.2.1",
+				"set-function-name": "^2.0.1"
+			},
+			"devDependencies": {
+				"aud": "^2.0.4",
+				"nyc": "^10.3.2",
+				"tape": "^5.7.4",
+				"eclint": "^2.8.1",
+				"eslint": "=8.8.0",
+				"hasown": "^2.0.1",
+				"for-each": "^0.3.3",
+				"npmignore": "^0.3.1",
+				"in-publish": "^2.0.1",
+				"@es-shims/api": "^2.4.2",
+				"auto-changelog": "^2.4.0",
+				"object-inspect": "^1.13.1",
+				"has-strict-mode": "^1.0.1",
+				"es-value-fixtures": "^1.4.2",
+				"safe-publish-latest": "^2.0.0",
+				"functions-have-names": "^1.2.3",
+				"@ljharb/eslint-config": "^21.1.0",
+				"available-regexp-flags": "^1.0.2"
+			},
+			"keywords": [
+				"RegExp.prototype.flags",
+				"regex",
+				"regular expression",
+				"ES6",
+				"shim",
+				"flag",
+				"flags",
+				"regexp",
+				"RegExp#flags",
+				"polyfill",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint --ext=js,mjs .",
+				"test": "npm run tests-only",
+				"prelint": "eclint check $(git ls-files | xargs find 2> /dev/null | grep -vE 'node_modules|\\.git')",
+				"prepack": "npmignore --auto --commentLines=autogenerated",
+				"pretest": "npm run lint",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"postlint": "es-shim-api --bound",
+				"posttest": "aud --production",
+				"prepublish": "not-in-publish || npm run prepublishOnly",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\"",
+				"prepublishOnly": "safe-publish-latest"
+			},
+			"publishConfig": {
+				"ignore": [
+					".github/workflows"
+				]
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "regexp.prototype.flags@1.5.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/regexp.prototype.flags/-/regexp.prototype.flags-1.5.2.tgz",
+				"shasum": "138f644a3350f981a858c44f6bb1a61ff59be334",
+				"integrity": "sha512-NcDiDkTLuPR+++OCKB0nWafEmhg/Da8aUPLPMQbK+bxKKCm1/S5he+AqYa4PlMCVBalb4/yxIRub6qkEx5yJbw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIHGmJmkJcXA1Ds1JCitREokUeJ6rVvE0G+/leJioGqa2AiEA7jtjC+EO/dZQ5pkSaWuQ6TqyqvT6nA2iLaKAVyWa3fA="
+					}
+				]
+			},
+			"_npmVersion": "10.2.4",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "b1d53b17a24bab677103b9e1bff83d97caae8e9a",
+			"testling": {
+				"files": "test/index.js",
+				"browsers": [
+					"iexplore/9.0..latest",
+					"firefox/4.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/11.6..latest",
+					"opera/next",
+					"safari/5.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/regexp.prototype.flags_1.5.2_1707673877306_0.09844798967529989",
+				"host": "s3://npm-registry-packages"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"hideCredit": true,
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false
+			},
+			"_nodeVersion": "21.6.0",
+			"contributors": []
+		},
+		"1.5.3": {
+			"name": "regexp.prototype.flags",
+			"description": "ES6 spec-compliant RegExp.prototype.flags shim.",
+			"version": "1.5.3",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/es-shims/RegExp.prototype.flags#readme",
+			"repository": {
+				"url": "git://github.com/es-shims/RegExp.prototype.flags.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/es-shims/RegExp.prototype.flags/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"call-bind": "^1.0.7",
+				"es-errors": "^1.3.0",
+				"define-properties": "^1.2.1",
+				"set-function-name": "^2.0.2"
+			},
+			"devDependencies": {
+				"nyc": "^10.3.2",
+				"tape": "^5.9.0",
+				"eclint": "^2.8.1",
+				"eslint": "=8.8.0",
+				"evalmd": "^0.0.19",
+				"hasown": "^2.0.2",
+				"encoding": "^0.1.13",
+				"for-each": "^0.3.3",
+				"npmignore": "^0.3.1",
+				"in-publish": "^2.0.1",
+				"@es-shims/api": "^2.5.1",
+				"auto-changelog": "^2.5.0",
+				"object-inspect": "^1.13.2",
+				"has-strict-mode": "^1.0.1",
+				"es-value-fixtures": "^1.5.0",
+				"safe-publish-latest": "^2.0.0",
+				"functions-have-names": "^1.2.3",
+				"@ljharb/eslint-config": "^21.1.1",
+				"available-regexp-flags": "^1.0.4"
+			},
+			"keywords": [
+				"RegExp.prototype.flags",
+				"regex",
+				"regular expression",
+				"ES6",
+				"shim",
+				"flag",
+				"flags",
+				"regexp",
+				"RegExp#flags",
+				"polyfill",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint --ext=js,mjs .",
+				"test": "npm run tests-only",
+				"prelint": "eclint check $(git ls-files | xargs find 2> /dev/null | grep -vE 'node_modules|\\.git')",
+				"prepack": "npmignore --auto --commentLines=autogenerated",
+				"pretest": "npm run lint",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"postlint": "evalmd README.md && es-shim-api --bound",
+				"posttest": "npx npm@'>=10.2' audit --production",
+				"prepublish": "not-in-publish || npm run prepublishOnly",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\"",
+				"prepublishOnly": "safe-publish-latest"
+			},
+			"publishConfig": {
+				"ignore": [
+					".github/workflows"
+				]
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "regexp.prototype.flags@1.5.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/regexp.prototype.flags/-/regexp.prototype.flags-1.5.3.tgz",
+				"shasum": "b3ae40b1d2499b8350ab2c3fe6ef3845d3a96f42",
+				"integrity": "sha512-vqlC04+RQoFalODCbCumG2xIOvapzVMHwsyIGM/SIE8fRhFFsXeH8/QQ+s0T0kDAhKc4k30s73/0ydkHQz6HlQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIB2eHSQ7Vg8TqkYGS/VYKO3lOqz74DeCYstiCyPR7dttAiEAqJLcy1dc3d2pybM/WRvw7CSwYdtUlKX4EKO0FFb/iWQ="
+					}
+				]
+			},
+			"_npmVersion": "10.8.3",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "1ab57aad4a58f9f86bef3f2e6af671bb3c80a4af",
+			"testling": {
+				"files": "test/index.js",
+				"browsers": [
+					"iexplore/9.0..latest",
+					"firefox/4.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/11.6..latest",
+					"opera/next",
+					"safari/5.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/regexp.prototype.flags_1.5.3_1727927983749_0.7084273013748432",
+				"host": "s3://npm-registry-packages"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"hideCredit": true,
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false
+			},
+			"_nodeVersion": "22.9.0",
+			"contributors": []
+		},
+		"1.5.4": {
+			"name": "regexp.prototype.flags",
+			"description": "ES6 spec-compliant RegExp.prototype.flags shim.",
+			"version": "1.5.4",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/es-shims/RegExp.prototype.flags#readme",
+			"repository": {
+				"type": "git",
+				"url": "git://github.com/es-shims/RegExp.prototype.flags.git"
+			},
+			"bugs": {
+				"url": "https://github.com/es-shims/RegExp.prototype.flags/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"call-bind": "^1.0.8",
+				"define-properties": "^1.2.1",
+				"es-errors": "^1.3.0",
+				"get-proto": "^1.0.1",
+				"gopd": "^1.2.0",
+				"set-function-name": "^2.0.2"
+			},
+			"devDependencies": {
+				"@es-shims/api": "^2.5.1",
+				"@ljharb/eslint-config": "^21.1.1",
+				"auto-changelog": "^2.5.0",
+				"available-regexp-flags": "^1.0.4",
+				"eclint": "^2.8.1",
+				"encoding": "^0.1.13",
+				"es-value-fixtures": "^1.5.0",
+				"eslint": "=8.8.0",
+				"evalmd": "^0.0.19",
+				"for-each": "^0.3.3",
+				"functions-have-names": "^1.2.3",
+				"has-strict-mode": "^1.0.1",
+				"hasown": "^2.0.2",
+				"in-publish": "^2.0.1",
+				"npmignore": "^0.3.1",
+				"nyc": "^10.3.2",
+				"object-inspect": "^1.13.3",
+				"safe-publish-latest": "^2.0.0",
+				"tape": "^5.9.0"
+			},
+			"keywords": [
+				"RegExp.prototype.flags",
+				"regex",
+				"regular expression",
+				"ES6",
+				"shim",
+				"flag",
+				"flags",
+				"regexp",
+				"RegExp#flags",
+				"polyfill",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"prepack": "npmignore --auto --commentLines=autogenerated",
+				"prepublish": "not-in-publish || npm run prepublishOnly",
+				"prepublishOnly": "safe-publish-latest",
+				"pretest": "npm run lint",
+				"test": "npm run tests-only",
+				"posttest": "npx npm@'>=10.2' audit --production",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"prelint": "eclint check $(git ls-files | xargs find 2> /dev/null | grep -vE 'node_modules|\\.git')",
+				"lint": "eslint --ext=js,mjs .",
+				"postlint": "evalmd README.md && es-shim-api --bound",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\""
+			},
+			"publishConfig": {
+				"ignore": [
+					".github/workflows"
+				]
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "regexp.prototype.flags@1.5.4",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/regexp.prototype.flags/-/regexp.prototype.flags-1.5.4.tgz",
+				"shasum": "1ad6c62d44a259007e55b3970e00f746efbcaa19",
+				"integrity": "sha512-dYqgNSZbDwkaJ2ceRd9ojCGjBq+mOm9LmtXnAnEGyHhN/5R7iDW2TRw3h+o/jCFxus3P2LfWIIiwowAjANm7IA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIBohNMANim5vaGmigomBCSnRsjxYE8gWDbjJEp5mHIfsAiEA94XmKdn75sWf4VSBaHZ6z3/pocEIucvK8Sh4minI6Tg="
+					}
+				]
+			},
+			"_npmVersion": "10.9.2",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "36fcf221a351d8451d02bcdf91e63cf3ee83b1db",
+			"testling": {
+				"files": "test/index.js",
+				"browsers": [
+					"iexplore/9.0..latest",
+					"firefox/4.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/11.6..latest",
+					"opera/next",
+					"safari/5.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages-npm-production",
+				"tmp": "tmp/regexp.prototype.flags_1.5.4_1735864832885_0.6431442628571149"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false,
+				"hideCredit": true
+			},
+			"_nodeVersion": "23.5.0",
+			"contributors": []
+		},
+		"1.0.0": {
+			"name": "regexp.prototype.flags",
+			"description": "ES6 spec-compliant RegExp.prototype.flags shim.",
+			"version": "1.0.0",
+			"author": {
+				"name": "Jordan Harband"
+			},
+			"homepage": "https://github.com/es-shims/RegExp.prototype.flags",
+			"repository": {
+				"url": "git://github.com/es-shims/RegExp.prototype.flags.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/es-shims/RegExp.prototype.flags/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {},
+			"devDependencies": {
+				"nsp": "~0.5.2",
+				"jscs": "~1.8.1",
+				"tape": "~3.0.3",
+				"covert": "1.0.0",
+				"eslint": "~0.10.1",
+				"editorconfig-tools": "~0.0.1"
+			},
+			"keywords": [
+				"RegExp.prototype.flags",
+				"regex",
+				"ES6",
+				"shim",
+				"flags",
+				"regexp",
+				"RegExp#flags",
+				"polyfill"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"jscs": "jscs test/*.js *.js",
+				"lint": "npm run jscs",
+				"test": "npm run lint && node test/index.js && npm run security",
+				"eslint": "eslint --env=node test/*.js *.js",
+				"eccheck": "editorconfig-tools check *.js **/*.js > /dev/null",
+				"coverage": "covert test/*.js",
+				"security": "nsp package",
+				"coverage-quiet": "covert test/*.js --quiet"
+			},
+			"lastModified": 0,
+			"_id": "regexp.prototype.flags@1.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/regexp.prototype.flags/-/regexp.prototype.flags-1.0.0.tgz",
+				"shasum": "088904e2a540aa77b55e5344561d5e24d7145594",
+				"integrity": "sha512-gP/7VRqc9RRsJCt7m51lmKg4wboWkg5UIn6jKkdLDnIEtHH2xaRZURLD4zhDtglt4YYQOPSjb/WjaMhNYdZ05g==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDcYjQxofr0aORkADlKKVi5aPmIRlk6TEFHmbhCj7WL1QIhALd8DxP495VMdr+vi/m2lv3ng1S6ThuO6MqWDyCfE5gG"
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "1.4.28",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"gitHead": "0e13fc12df09f3a7ac30116ef13bba820c220730",
+			"testling": {
+				"files": "test/index.js",
+				"browsers": [
+					"iexplore/9.0..latest",
+					"firefox/4.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/11.6..latest",
+					"opera/next",
+					"safari/5.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_shasum": "088904e2a540aa77b55e5344561d5e24d7145594",
+			"contributors": []
+		},
+		"1.0.1": {
+			"name": "regexp.prototype.flags",
+			"description": "ES6 spec-compliant RegExp.prototype.flags shim.",
+			"version": "1.0.1",
+			"author": {
+				"name": "Jordan Harband"
+			},
+			"homepage": "https://github.com/es-shims/RegExp.prototype.flags",
+			"repository": {
+				"url": "git://github.com/es-shims/RegExp.prototype.flags.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/es-shims/RegExp.prototype.flags/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {},
+			"devDependencies": {
+				"nsp": "~0.5.2",
+				"jscs": "~1.8.1",
+				"tape": "~3.0.3",
+				"covert": "1.0.0",
+				"eslint": "~0.10.1",
+				"editorconfig-tools": "~0.0.1"
+			},
+			"keywords": [
+				"RegExp.prototype.flags",
+				"regex",
+				"ES6",
+				"shim",
+				"flags",
+				"regexp",
+				"RegExp#flags",
+				"polyfill"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"jscs": "jscs test/*.js *.js",
+				"lint": "npm run jscs",
+				"test": "npm run lint && node test/index.js && npm run security",
+				"eslint": "eslint --env=node test/*.js *.js",
+				"eccheck": "editorconfig-tools check *.js **/*.js > /dev/null",
+				"coverage": "covert test/*.js",
+				"security": "nsp package",
+				"coverage-quiet": "covert test/*.js --quiet"
+			},
+			"lastModified": 0,
+			"_id": "regexp.prototype.flags@1.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/regexp.prototype.flags/-/regexp.prototype.flags-1.0.1.tgz",
+				"shasum": "54a06afd02cf5892de05ec73f5b7ad4b71c2682f",
+				"integrity": "sha512-oi7VF8qviteIaruBliW4x3nf3AG2eWx1IQQkbxYDcpdTxx66ijf68VG9XYRgQGpFtFbASI6qtawvECCHW3bT/w==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQC25MDRShpF9nP4iJmiVL6vQzm/M9xFLu/5JOU18iKEmAIhAJvzZYQpqxCS9Idob3dxKzIuMWXA7bqrmZPM3upRiL7X"
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "1.4.28",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"gitHead": "aa57c95172cd6059fc412b90f25d9cfc52180a40",
+			"testling": {
+				"files": "test/index.js",
+				"browsers": [
+					"iexplore/9.0..latest",
+					"firefox/4.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/11.6..latest",
+					"opera/next",
+					"safari/5.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_shasum": "54a06afd02cf5892de05ec73f5b7ad4b71c2682f",
+			"contributors": []
+		},
+		"1.1.0": {
+			"name": "regexp.prototype.flags",
+			"description": "ES6 spec-compliant RegExp.prototype.flags shim.",
+			"version": "1.1.0",
+			"author": {
+				"name": "Jordan Harband"
+			},
+			"homepage": "https://github.com/es-shims/RegExp.prototype.flags#readme",
+			"repository": {
+				"url": "git://github.com/es-shims/RegExp.prototype.flags.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/es-shims/RegExp.prototype.flags/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"define-properties": "^1.1.1"
+			},
+			"devDependencies": {
+				"nsp": "^1.0.3",
+				"jscs": "^2.1.0",
+				"tape": "^4.2.0",
+				"covert": "^1.1.0",
+				"eslint": "^1.1.0",
+				"@es-shims/api": "^1.0.0",
+				"editorconfig-tools": "^0.1.1",
+				"@ljharb/eslint-config": "^1.0.4"
+			},
+			"keywords": [
+				"RegExp.prototype.flags",
+				"regex",
+				"ES6",
+				"shim",
+				"flags",
+				"regexp",
+				"RegExp#flags",
+				"polyfill"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"jscs": "jscs test/*.js *.js",
+				"lint": "npm run jscs && npm run eslint",
+				"test": "npm run lint && es-shim-api --bound && node test/index.js && npm run security",
+				"eslint": "eslint test/*.js *.js",
+				"eccheck": "editorconfig-tools check *.js **/*.js > /dev/null",
+				"coverage": "covert test/*.js",
+				"security": "nsp package",
+				"coverage-quiet": "covert test/*.js --quiet"
+			},
+			"lastModified": 0,
+			"_id": "regexp.prototype.flags@1.1.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/regexp.prototype.flags/-/regexp.prototype.flags-1.1.0.tgz",
+				"shasum": "79e7b15c70505b295d20711a7cad580a43d97d7f",
+				"integrity": "sha512-ave6lx0uUygr7lEPGu+gA/MoP1DGB7/88Hy79u1AXb2Z/ohF+KE/qffNBEuoU2gWnw4jH9K+LUbNt7eU5kZrCg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDBTw98ipAojp9xvJlJFa7681lcBC1Y7G7O/qYNJETUfAIgbidmu4o9w2hlkGs2jN3g631BDxgXquRHu2XiUiEGAUU="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "2.14.0",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"gitHead": "cf59c1814d6a9e2039d09f046d24d1549bf613aa",
+			"testling": {
+				"files": "test/index.js",
+				"browsers": [
+					"iexplore/9.0..latest",
+					"firefox/4.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/11.6..latest",
+					"opera/next",
+					"safari/5.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_shasum": "79e7b15c70505b295d20711a7cad580a43d97d7f",
+			"_nodeVersion": "3.0.0",
+			"contributors": []
+		},
+		"1.1.1": {
+			"name": "regexp.prototype.flags",
+			"description": "ES6 spec-compliant RegExp.prototype.flags shim.",
+			"version": "1.1.1",
+			"author": {
+				"name": "Jordan Harband"
+			},
+			"homepage": "https://github.com/es-shims/RegExp.prototype.flags#readme",
+			"repository": {
+				"url": "git://github.com/es-shims/RegExp.prototype.flags.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/es-shims/RegExp.prototype.flags/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"define-properties": "^1.1.1"
+			},
+			"devDependencies": {
+				"nsp": "^1.0.3",
+				"jscs": "^2.1.0",
+				"tape": "^4.2.0",
+				"covert": "^1.1.0",
+				"eslint": "^1.1.0",
+				"@es-shims/api": "^1.0.0",
+				"editorconfig-tools": "^0.1.1",
+				"@ljharb/eslint-config": "^1.0.4"
+			},
+			"keywords": [
+				"RegExp.prototype.flags",
+				"regex",
+				"regular expression",
+				"ES6",
+				"shim",
+				"flag",
+				"flags",
+				"regexp",
+				"RegExp#flags",
+				"polyfill",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"jscs": "jscs test/*.js *.js",
+				"lint": "npm run jscs && npm run eslint",
+				"test": "npm run lint && es-shim-api --bound && node test/index.js && npm run security",
+				"eslint": "eslint test/*.js *.js",
+				"eccheck": "editorconfig-tools check *.js **/*.js > /dev/null",
+				"coverage": "covert test/*.js",
+				"security": "nsp package",
+				"coverage-quiet": "covert test/*.js --quiet"
+			},
+			"lastModified": 0,
+			"_id": "regexp.prototype.flags@1.1.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/regexp.prototype.flags/-/regexp.prototype.flags-1.1.1.tgz",
+				"shasum": "4b45162251d73bbd1a73555ad2f109be1f4c2f4a",
+				"integrity": "sha512-+Vj34msbzURlTpzYnrcawDEJc67XV6IBUEztdn7CRCnZrWU+rYBx3D5Qy8TM03QTRoEs9fOPPKln3IPFNbzOgQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIARiDuov9HYA4WXc6UHc23Q2cw5jmnuzPGZf1IRFugy+AiBTFEoMZ5A2E7v0mlOmkNdHk95EtiWaxIqSBjPspdqvGQ=="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "2.13.3",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"gitHead": "de150bb4e689785a11d6898eefefcc1875bd0b4e",
+			"testling": {
+				"files": "test/index.js",
+				"browsers": [
+					"iexplore/9.0..latest",
+					"firefox/4.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/11.6..latest",
+					"opera/next",
+					"safari/5.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_shasum": "4b45162251d73bbd1a73555ad2f109be1f4c2f4a",
+			"_nodeVersion": "3.0.0",
+			"contributors": []
+		},
+		"1.2.0": {
+			"name": "regexp.prototype.flags",
+			"description": "ES6 spec-compliant RegExp.prototype.flags shim.",
+			"version": "1.2.0",
+			"author": {
+				"name": "Jordan Harband"
+			},
+			"homepage": "https://github.com/es-shims/RegExp.prototype.flags#readme",
+			"repository": {
+				"url": "git://github.com/es-shims/RegExp.prototype.flags.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/es-shims/RegExp.prototype.flags/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"define-properties": "^1.1.2"
+			},
+			"devDependencies": {
+				"has": "^1.0.1",
+				"nsp": "^2.8.1",
+				"jscs": "^3.0.7",
+				"tape": "^4.8.0",
+				"covert": "^1.1.0",
+				"eslint": "^4.9.0",
+				"@es-shims/api": "^1.3.0",
+				"editorconfig-tools": "^0.1.1",
+				"@ljharb/eslint-config": "^12.2.1"
+			},
+			"keywords": [
+				"RegExp.prototype.flags",
+				"regex",
+				"regular expression",
+				"ES6",
+				"shim",
+				"flag",
+				"flags",
+				"regexp",
+				"RegExp#flags",
+				"polyfill",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"jscs": "jscs test/*.js *.js",
+				"lint": "npm run --silent jscs && npm run --silent eslint",
+				"test": "npm run --silent tests-only",
+				"eslint": "eslint test/*.js *.js",
+				"eccheck": "editorconfig-tools check *.js **/*.js > /dev/null",
+				"pretest": "npm run --silent lint",
+				"coverage": "covert test/*.js",
+				"posttest": "npm run --silent security",
+				"security": "nsp check",
+				"tests-only": "es-shim-api --bound && node --harmony --es-staging test/index.js",
+				"coverage-quiet": "covert test/*.js --quiet"
+			},
+			"lastModified": 0,
+			"_id": "regexp.prototype.flags@1.2.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/regexp.prototype.flags/-/regexp.prototype.flags-1.2.0.tgz",
+				"shasum": "6b30724e306a27833eeb171b66ac8890ba37e41c",
+				"integrity": "sha512-ztaw4M1VqgMwl9HlPpOuiYgItcHlunW0He2fE6eNfT6E/CF2FtYi9ofOYe4mKntstYk0Fyh/rDRBdS3AnxjlrA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIFmnLXY2yjq4Q4sQwykUs9GzxLtiY3K3eEp1qqeLLd0+AiBKxpBGInfaQzNdR9F+k0hEzg+bt3k3w7AfhZDh2zzklA=="
+					}
+				]
+			},
+			"_npmVersion": "5.5.1",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"gitHead": "e629ce3d469060bdfff837eb556bfa94bc80c092",
+			"testling": {
+				"files": "test/index.js",
+				"browsers": [
+					"iexplore/9.0..latest",
+					"firefox/4.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/11.6..latest",
+					"opera/next",
+					"safari/5.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/regexp.prototype.flags-1.2.0.tgz_1508908451848_0.3062057360075414",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "8.8.0",
+			"contributors": []
+		}
+	},
+	"time": {
+		"created": "2014-12-10T10:13:36.850Z",
+		"1.3.0": "2019-12-15T04:57:29.158Z",
+		"1.3.1": "2021-01-15T16:19:14.219Z",
+		"1.4.0": "2022-01-14T04:54:21.063Z",
+		"1.3.2": "2022-01-13T20:41:55.475Z",
+		"1.4.1": "2022-01-14T07:27:03.135Z",
+		"1.5.0": "2023-04-19T06:57:53.284Z",
+		"1.4.2": "2022-04-13T04:55:57.705Z",
+		"1.5.1": "2023-09-13T05:29:08.020Z",
+		"1.4.3": "2022-04-15T03:33:25.998Z",
+		"1.5.2": "2024-02-11T17:51:17.530Z",
+		"1.5.3": "2024-10-03T03:59:43.895Z",
+		"1.5.4": "2025-01-03T00:40:33.153Z",
+		"modified": "2025-01-03T00:40:33.352Z",
+		"1.0.0": "2014-12-10T10:13:36.850Z",
+		"1.0.1": "2014-12-13T09:55:25.846Z",
+		"1.1.0": "2015-08-16T09:08:44.729Z",
+		"1.1.1": "2015-08-16T19:55:02.345Z",
+		"1.2.0": "2017-10-25T05:14:12.819Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "1.5.4"
+	},
+	"_uplinks": {
+		"artifactory-sabadell": {
+			"etag": "4329cfaa3205ea1c8f4f3439bc17e8f0005b81ca",
+			"fetched": 1782459825250
+		}
+	},
+	"_distfiles": {
+		"regexp.prototype.flags-1.3.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/regexp.prototype.flags/-/regexp.prototype.flags-1.3.0.tgz",
+			"sha": "7aba89b3c13a64509dabcf3ca8d9fbb9bdf5cb75",
+			"registry": "artifactory-sabadell"
+		},
+		"regexp.prototype.flags-1.3.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/regexp.prototype.flags/-/regexp.prototype.flags-1.3.1.tgz",
+			"sha": "7ef352ae8d159e758c0eadca6f8fcb4eef07be26",
+			"registry": "artifactory-sabadell"
+		},
+		"regexp.prototype.flags-1.4.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/regexp.prototype.flags/-/regexp.prototype.flags-1.4.0.tgz",
+			"sha": "320e3ccb61ebb74daebffd1c09e484ea3c67070b",
+			"registry": "artifactory-sabadell"
+		},
+		"regexp.prototype.flags-1.3.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/regexp.prototype.flags/-/regexp.prototype.flags-1.3.2.tgz",
+			"sha": "ea664a0cf7fecf6bf811a84a06ba88c52b38a5a6",
+			"registry": "artifactory-sabadell"
+		},
+		"regexp.prototype.flags-1.4.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/regexp.prototype.flags/-/regexp.prototype.flags-1.4.1.tgz",
+			"sha": "b3f4c0059af9e47eca9f3f660e51d81307e72307",
+			"registry": "artifactory-sabadell"
+		},
+		"regexp.prototype.flags-1.5.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/regexp.prototype.flags/-/regexp.prototype.flags-1.5.0.tgz",
+			"sha": "fe7ce25e7e4cca8db37b6634c8a2c7009199b9cb",
+			"registry": "artifactory-sabadell"
+		},
+		"regexp.prototype.flags-1.4.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/regexp.prototype.flags/-/regexp.prototype.flags-1.4.2.tgz",
+			"sha": "bf635117a2f4b755595ebb0c0ee2d2a49b2084db",
+			"registry": "artifactory-sabadell"
+		},
+		"regexp.prototype.flags-1.5.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/regexp.prototype.flags/-/regexp.prototype.flags-1.5.1.tgz",
+			"sha": "90ce989138db209f81492edd734183ce99f9677e",
+			"registry": "artifactory-sabadell"
+		},
+		"regexp.prototype.flags-1.4.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/regexp.prototype.flags/-/regexp.prototype.flags-1.4.3.tgz",
+			"sha": "87cab30f80f66660181a3bb7bf5981a872b367ac",
+			"registry": "artifactory-sabadell"
+		},
+		"regexp.prototype.flags-1.5.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/regexp.prototype.flags/-/regexp.prototype.flags-1.5.2.tgz",
+			"sha": "138f644a3350f981a858c44f6bb1a61ff59be334",
+			"registry": "artifactory-sabadell"
+		},
+		"regexp.prototype.flags-1.5.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/regexp.prototype.flags/-/regexp.prototype.flags-1.5.3.tgz",
+			"sha": "b3ae40b1d2499b8350ab2c3fe6ef3845d3a96f42",
+			"registry": "artifactory-sabadell"
+		},
+		"regexp.prototype.flags-1.5.4.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/regexp.prototype.flags/-/regexp.prototype.flags-1.5.4.tgz",
+			"sha": "1ad6c62d44a259007e55b3970e00f746efbcaa19",
+			"registry": "artifactory-sabadell"
+		},
+		"regexp.prototype.flags-1.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/regexp.prototype.flags/-/regexp.prototype.flags-1.0.0.tgz",
+			"sha": "088904e2a540aa77b55e5344561d5e24d7145594",
+			"registry": "artifactory-sabadell"
+		},
+		"regexp.prototype.flags-1.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/regexp.prototype.flags/-/regexp.prototype.flags-1.0.1.tgz",
+			"sha": "54a06afd02cf5892de05ec73f5b7ad4b71c2682f",
+			"registry": "artifactory-sabadell"
+		},
+		"regexp.prototype.flags-1.1.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/regexp.prototype.flags/-/regexp.prototype.flags-1.1.0.tgz",
+			"sha": "79e7b15c70505b295d20711a7cad580a43d97d7f",
+			"registry": "artifactory-sabadell"
+		},
+		"regexp.prototype.flags-1.1.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/regexp.prototype.flags/-/regexp.prototype.flags-1.1.1.tgz",
+			"sha": "4b45162251d73bbd1a73555ad2f109be1f4c2f4a",
+			"registry": "artifactory-sabadell"
+		},
+		"regexp.prototype.flags-1.2.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/regexp.prototype.flags/-/regexp.prototype.flags-1.2.0.tgz",
+			"sha": "6b30724e306a27833eeb171b66ac8890ba37e41c",
+			"registry": "artifactory-sabadell"
+		}
+	},
+	"_attachments": {},
+	"_rev": "1-b744d331f71d8072",
+	"_id": "regexp.prototype.flags",
+	"readme": "RegExp.prototype.flags <sup>[![Version Badge][npm-version-svg]][package-url]</sup>\n\n[![Build Status][travis-svg]][travis-url]\n[![dependency status][deps-svg]][deps-url]\n[![dev dependency status][dev-deps-svg]][dev-deps-url]\n[![License][license-image]][license-url]\n[![Downloads][downloads-image]][downloads-url]\n\n[![npm badge][npm-badge-png]][package-url]\n\n[![browser support][testling-svg]][testling-url]\n\nAn ES6 spec-compliant `RegExp.prototype.flags` shim. Invoke its \"shim\" method to shim RegExp.prototype.flags if it is unavailable.\n*Note*: `RegExp#flags` requires a true ES5 environment - specifically, one with ES5 getters.\n\nThis package implements the [es-shim API](https://github.com/es-shims/api) interface. It works in an ES5-supported environment and complies with the [spec](http://www.ecma-international.org/ecma-262/6.0/#sec-get-regexp.prototype.flags).\n\nMost common usage:\n```js\nvar flags = require('regexp.prototype.flags');\nvar assert = require('assert');\n\nassert(flags(/a/) === '');\nassert(flags(new RegExp('a')) === '');\nassert(flags(/a/mig) === 'gim');\nassert(flags(new RegExp('a', 'mig')) === 'gim');\n\nif (!RegExp.prototype.flags) {\n\tflags.shim();\n}\n\nassert(flags(/a/) === /a/.flags);\nassert(flags(new RegExp('a')) === new RegExp('a').flags);\nassert(flags(/a/mig) === /a/mig.flags);\nassert(flags(new RegExp('a', 'mig')) === new RegExp('a', 'mig').flags);\n```\n\n## Tests\nSimply clone the repo, `npm install`, and run `npm test`\n\n[package-url]: https://npmjs.com/package/regexp.prototype.flags\n[npm-version-svg]: http://versionbadg.es/es-shims/RegExp.prototype.flags.svg\n[travis-svg]: https://travis-ci.org/es-shims/RegExp.prototype.flags.svg\n[travis-url]: https://travis-ci.org/es-shims/RegExp.prototype.flags\n[deps-svg]: https://david-dm.org/es-shims/RegExp.prototype.flags.svg\n[deps-url]: https://david-dm.org/es-shims/RegExp.prototype.flags\n[dev-deps-svg]: https://david-dm.org/es-shims/RegExp.prototype.flags/dev-status.svg\n[dev-deps-url]: https://david-dm.org/es-shims/RegExp.prototype.flags#info=devDependencies\n[testling-svg]: https://ci.testling.com/es-shims/RegExp.prototype.flags.png\n[testling-url]: https://ci.testling.com/es-shims/RegExp.prototype.flags\n[npm-badge-png]: https://nodei.co/npm/regexp.prototype.flags.png?downloads=true&stars=true\n[license-image]: http://img.shields.io/npm/l/regexp.prototype.flags.svg\n[license-url]: LICENSE\n[downloads-image]: http://img.shields.io/npm/dm/regexp.prototype.flags.svg\n[downloads-url]: http://npm-stat.com/charts.html?package=regexp.prototype.flags"
+}

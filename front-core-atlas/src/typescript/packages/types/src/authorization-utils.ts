@@ -15,6 +15,15 @@ export type AuthConfig = {
   CLIENT_SECRET?: string;
 };
 
+/** SAML endpoints supplied by the Shell to authentication-capable MFEs. */
+export type SamlConfig = {
+  RESOURCES_URL: string;
+  AUTHN_REQUEST_URL: string;
+  NETSCALER_ACS_URL: string;
+  ACS_RESPONSE_URL: string;
+  AUTHN_REQUEST_METHOD: 'GET' | 'POST';
+};
+
 export type WindowAuthConfig = {
   type: AuthenticationType;
   url: AuthorizationUrls;
@@ -22,6 +31,7 @@ export type WindowAuthConfig = {
   clientID: string;
   scopes?: string[];
   redirectUri: string;
+  saml?: SamlConfig;
 };
 
 /**

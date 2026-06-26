@@ -3,6 +3,19 @@
   "version": 1,
   "newProjectRoot": "packages",
   "projects": {
+    "auth-manager": {
+      "projectType": "library",
+      "root": "src/angular/packages/auth-manager",
+      "sourceRoot": "src/angular/packages/auth-manager/src",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "src/angular/packages/auth-manager/ng-package.json"
+          }
+        }
+      }
+    },
     "ng-bootstrap": {
       "projectType": "library",
       "root": "src/angular/packages/ng-bootstrap",

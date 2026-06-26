@@ -116493,6 +116493,634 @@
 			"_integrity": "sha512-CDbkasBz3fnWRKSFs6mmaRepM2pa+tbZkrqhPWifFfIkJDidtVW40p6OnquTvPXyPAszCnDZRnZT14xyvNmKPQ==",
 			"_nodeVersion": "22.21.1",
 			"contributors": []
+		},
+		"10.59.0": {
+			"name": "@sentry/node",
+			"description": "Sentry Node SDK using OpenTelemetry for performance instrumentation",
+			"version": "10.59.0",
+			"author": {
+				"name": "Sentry"
+			},
+			"homepage": "https://github.com/getsentry/sentry-javascript/tree/master/packages/node",
+			"repository": {
+				"type": "git",
+				"url": "git://github.com/getsentry/sentry-javascript.git"
+			},
+			"bugs": {
+				"url": "https://github.com/getsentry/sentry-javascript/issues"
+			},
+			"engines": {
+				"node": ">=18"
+			},
+			"main": "build/cjs/index.js",
+			"dependencies": {
+				"@opentelemetry/api": "^1.9.1",
+				"@opentelemetry/core": "^2.6.1",
+				"@opentelemetry/instrumentation": "^0.214.0",
+				"@opentelemetry/sdk-trace-base": "^2.6.1",
+				"@opentelemetry/semantic-conventions": "^1.40.0",
+				"@sentry/core": "10.59.0",
+				"@sentry/node-core": "10.59.0",
+				"@sentry/opentelemetry": "10.59.0",
+				"@sentry/server-utils": "10.59.0",
+				"import-in-the-middle": "^3.0.0"
+			},
+			"devDependencies": {
+				"@types/node": "^18.19.1"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "sentry-bot",
+					"email": "accounts@sentry.io"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"build": "run-p build:transpile build:types",
+				"build:dev": "yarn build",
+				"build:transpile": "rollup -c rollup.npm.config.mjs",
+				"build:types": "run-s build:types:core build:types:downlevel",
+				"build:types:core": "tsc -p tsconfig.types.json",
+				"build:types:downlevel": "yarn downlevel-dts build/types build/types-ts3.8 --to ts3.8",
+				"build:watch": "run-p build:transpile:watch",
+				"build:dev:watch": "yarn build:watch",
+				"build:transpile:watch": "rollup -c rollup.npm.config.mjs --watch",
+				"build:tarball": "npm pack",
+				"circularDepCheck": "madge --circular src/index.ts",
+				"clean": "rimraf build coverage sentry-node-*.tgz",
+				"lint:fix": "OXLINT_TSGOLINT_DANGEROUSLY_SUPPRESS_PROGRAM_DIAGNOSTICS=true oxlint . --fix --type-aware",
+				"lint": "OXLINT_TSGOLINT_DANGEROUSLY_SUPPRESS_PROGRAM_DIAGNOSTICS=true oxlint . --type-aware",
+				"lint:es-compatibility": "es-check es2022 ./build/cjs/*.js && es-check es2022 ./build/esm/*.js --module",
+				"test": "yarn test:unit",
+				"test:unit": "vitest run",
+				"test:watch": "vitest --watch",
+				"yalc:publish": "yalc publish --push --sig"
+			},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@sentry/node@10.59.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@sentry/node/-/node-10.59.0.tgz",
+				"shasum": "57138686ae34d6ef2f950ef7f48e76937af4874b",
+				"integrity": "sha512-qzqbP6OVoMijlDBUxWtbvVF5j73+vyzGFi+yFIslhVvzBj97TFkIeP3TpBLsmu/0L5ZvxpQCCEmzJ677tFkq/g==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEUCIEC5y/lGJN08/IZR4tZQETGaJ9fNdyoE9g6nEDTtXc04AiEA20VaJk0wY4UxLIdSxITCVUw9E5EdMA5tugSUHS/DJus="
+					}
+				]
+			},
+			"_from": "file:/tmp/craft-7t7QNG/sentry-node-10.59.0.tgz",
+			"_npmVersion": "10.9.8",
+			"_npmUser": {
+				"name": "sentry-bot",
+				"email": "accounts@sentry.io"
+			},
+			"_hasShrinkwrap": false,
+			"typesVersions": {
+				"<5.0": {
+					"build/types/index.d.ts": [
+						"build/types-ts3.8/index.d.ts"
+					]
+				}
+			},
+			"types": "build/types/index.d.ts",
+			"volta": {
+				"extends": "../../package.json"
+			},
+			"exports": {
+				"./package.json": "./package.json",
+				".": {
+					"import": {
+						"types": "./build/types/index.d.ts",
+						"default": "./build/esm/index.js"
+					},
+					"require": {
+						"types": "./build/types/index.d.ts",
+						"default": "./build/cjs/index.js"
+					}
+				},
+				"./import": {
+					"import": {
+						"default": "./build/import-hook.mjs"
+					}
+				},
+				"./loader": {
+					"import": {
+						"default": "./build/loader-hook.mjs"
+					}
+				},
+				"./init": {
+					"import": {
+						"default": "./build/esm/init.js"
+					},
+					"require": {
+						"default": "./build/cjs/init.js"
+					}
+				},
+				"./preload": {
+					"import": {
+						"default": "./build/esm/preload.js"
+					},
+					"require": {
+						"default": "./build/cjs/preload.js"
+					}
+				}
+			},
+			"module": "build/esm/index.js",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages-npm-production",
+				"tmp": "tmp/node_10.59.0_1781873517431_0.5171924406412258"
+			},
+			"nx": {
+				"targets": {
+					"build:transpile": {
+						"outputs": [
+							"{projectRoot}/build/esm",
+							"{projectRoot}/build/cjs",
+							"{projectRoot}/build/npm/esm",
+							"{projectRoot}/build/npm/cjs",
+							"{projectRoot}/build/import-hook.mjs",
+							"{projectRoot}/build/loader-hook.mjs"
+						]
+					}
+				}
+			},
+			"_resolved": "/tmp/craft-7t7QNG/sentry-node-10.59.0.tgz",
+			"sideEffects": false,
+			"_integrity": "sha512-qzqbP6OVoMijlDBUxWtbvVF5j73+vyzGFi+yFIslhVvzBj97TFkIeP3TpBLsmu/0L5ZvxpQCCEmzJ677tFkq/g==",
+			"_nodeVersion": "22.22.3",
+			"contributors": []
+		},
+		"10.58.0": {
+			"name": "@sentry/node",
+			"description": "Sentry Node SDK using OpenTelemetry for performance instrumentation",
+			"version": "10.58.0",
+			"author": {
+				"name": "Sentry"
+			},
+			"homepage": "https://github.com/getsentry/sentry-javascript/tree/master/packages/node",
+			"repository": {
+				"url": "git://github.com/getsentry/sentry-javascript.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/getsentry/sentry-javascript/issues"
+			},
+			"engines": {
+				"node": ">=18"
+			},
+			"main": "build/cjs/index.js",
+			"dependencies": {
+				"@sentry/core": "10.58.0",
+				"@sentry/node-core": "10.58.0",
+				"@opentelemetry/api": "^1.9.1",
+				"@opentelemetry/core": "^2.6.1",
+				"@sentry/server-utils": "10.58.0",
+				"import-in-the-middle": "^3.0.0",
+				"@sentry/opentelemetry": "10.58.0",
+				"@opentelemetry/sdk-trace-base": "^2.6.1",
+				"@opentelemetry/instrumentation": "^0.214.0",
+				"@opentelemetry/semantic-conventions": "^1.40.0"
+			},
+			"devDependencies": {
+				"@types/node": "^18.19.1"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "sentry-bot",
+					"email": "accounts@sentry.io"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "OXLINT_TSGOLINT_DANGEROUSLY_SUPPRESS_PROGRAM_DIAGNOSTICS=true oxlint . --type-aware",
+				"test": "yarn test:unit",
+				"build": "run-p build:transpile build:types",
+				"clean": "rimraf build coverage sentry-node-*.tgz",
+				"lint:fix": "OXLINT_TSGOLINT_DANGEROUSLY_SUPPRESS_PROGRAM_DIAGNOSTICS=true oxlint . --fix --type-aware",
+				"build:dev": "yarn build",
+				"test:unit": "vitest run",
+				"test:watch": "vitest --watch",
+				"build:types": "run-s build:types:core build:types:downlevel",
+				"build:watch": "run-p build:transpile:watch",
+				"yalc:publish": "yalc publish --push --sig",
+				"build:tarball": "npm pack",
+				"build:dev:watch": "yarn build:watch",
+				"build:transpile": "rollup -c rollup.npm.config.mjs",
+				"build:types:core": "tsc -p tsconfig.types.json",
+				"circularDepCheck": "madge --circular src/index.ts",
+				"build:transpile:watch": "rollup -c rollup.npm.config.mjs --watch",
+				"build:types:downlevel": "yarn downlevel-dts build/types build/types-ts3.8 --to ts3.8",
+				"lint:es-compatibility": "es-check es2022 ./build/cjs/*.js && es-check es2022 ./build/esm/*.js --module"
+			},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@sentry/node@10.58.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@sentry/node/-/node-10.58.0.tgz",
+				"shasum": "0304b8c91fadadad8fab7df17adacfbef4901a52",
+				"integrity": "sha512-KICgacBS+I/eWzFlAembutSwFwy0WVSrGp8UMV9n1XZqqu4EBTlALRsbLNlDSv61UgH85L9L3vk91tgq6nJXAA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEUCIHwkJ364LNkOxZ7RX/wqoI3s+201MCwpLCRr2yLn6KkdAiEAzyCCdfNa2suai8uITf8G4WO43kHNMGJOSIFi7+RxkWA="
+					}
+				]
+			},
+			"_from": "file:/tmp/craft-yBEMVt/sentry-node-10.58.0.tgz",
+			"_npmVersion": "10.9.8",
+			"_npmUser": {
+				"name": "sentry-bot",
+				"email": "accounts@sentry.io"
+			},
+			"_hasShrinkwrap": false,
+			"typesVersions": {
+				"<5.0": {
+					"build/types/index.d.ts": [
+						"build/types-ts3.8/index.d.ts"
+					]
+				}
+			},
+			"types": "build/types/index.d.ts",
+			"volta": {
+				"extends": "../../package.json"
+			},
+			"exports": {
+				".": {
+					"import": {
+						"types": "./build/types/index.d.ts",
+						"default": "./build/esm/index.js"
+					},
+					"require": {
+						"types": "./build/types/index.d.ts",
+						"default": "./build/cjs/index.js"
+					}
+				},
+				"./init": {
+					"import": {
+						"default": "./build/esm/init.js"
+					},
+					"require": {
+						"default": "./build/cjs/init.js"
+					}
+				},
+				"./import": {
+					"import": {
+						"default": "./build/import-hook.mjs"
+					}
+				},
+				"./loader": {
+					"import": {
+						"default": "./build/loader-hook.mjs"
+					}
+				},
+				"./preload": {
+					"import": {
+						"default": "./build/esm/preload.js"
+					},
+					"require": {
+						"default": "./build/cjs/preload.js"
+					}
+				},
+				"./package.json": "./package.json"
+			},
+			"module": "build/esm/index.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/node_10.58.0_1781526503057_0.9991254317430105",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"_resolved": "/tmp/craft-yBEMVt/sentry-node-10.58.0.tgz",
+			"sideEffects": false,
+			"_integrity": "sha512-KICgacBS+I/eWzFlAembutSwFwy0WVSrGp8UMV9n1XZqqu4EBTlALRsbLNlDSv61UgH85L9L3vk91tgq6nJXAA==",
+			"_nodeVersion": "22.22.3",
+			"contributors": []
+		},
+		"10.61.0": {
+			"name": "@sentry/node",
+			"description": "Sentry Node SDK using OpenTelemetry for performance instrumentation",
+			"version": "10.61.0",
+			"author": {
+				"name": "Sentry"
+			},
+			"homepage": "https://github.com/getsentry/sentry-javascript/tree/master/packages/node",
+			"repository": {
+				"type": "git",
+				"url": "git://github.com/getsentry/sentry-javascript.git"
+			},
+			"bugs": {
+				"url": "https://github.com/getsentry/sentry-javascript/issues"
+			},
+			"engines": {
+				"node": ">=18"
+			},
+			"main": "build/cjs/index.js",
+			"dependencies": {
+				"@opentelemetry/api": "^1.9.1",
+				"@opentelemetry/instrumentation": "^0.214.0",
+				"@opentelemetry/sdk-trace-base": "^2.6.1",
+				"@opentelemetry/semantic-conventions": "^1.40.0",
+				"@sentry/core": "10.61.0",
+				"@sentry/node-core": "10.61.0",
+				"@sentry/opentelemetry": "10.61.0",
+				"@sentry/server-utils": "10.61.0",
+				"import-in-the-middle": "^3.0.0"
+			},
+			"devDependencies": {
+				"@types/node": "^18.19.1"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "sentry-bot",
+					"email": "accounts@sentry.io"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"build": "run-p build:transpile build:types",
+				"build:dev": "yarn build",
+				"build:transpile": "rollup -c rollup.npm.config.mjs",
+				"build:types": "run-s build:types:core build:types:downlevel",
+				"build:types:core": "tsc -p tsconfig.types.json",
+				"build:types:downlevel": "yarn downlevel-dts build/types build/types-ts3.8 --to ts3.8",
+				"build:watch": "run-p build:transpile:watch",
+				"build:dev:watch": "yarn build:watch",
+				"build:transpile:watch": "rollup -c rollup.npm.config.mjs --watch",
+				"build:tarball": "npm pack",
+				"circularDepCheck": "madge --circular src/index.ts",
+				"clean": "rimraf build coverage sentry-node-*.tgz",
+				"lint:fix": "OXLINT_TSGOLINT_DANGEROUSLY_SUPPRESS_PROGRAM_DIAGNOSTICS=true oxlint . --fix --type-aware",
+				"lint": "OXLINT_TSGOLINT_DANGEROUSLY_SUPPRESS_PROGRAM_DIAGNOSTICS=true oxlint . --type-aware",
+				"lint:es-compatibility": "es-check es2022 ./build/cjs/*.js && es-check es2022 ./build/esm/*.js --module",
+				"test": "yarn test:unit",
+				"test:unit": "vitest run",
+				"test:watch": "vitest --watch",
+				"yalc:publish": "yalc publish --push --sig"
+			},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@sentry/node@10.61.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@sentry/node/-/node-10.61.0.tgz",
+				"shasum": "3841edd5ef8676efd6a43927e9884f0a4f6c1867",
+				"integrity": "sha512-nct3VqOIuPBnsvqHHWkPG6Ta7QwJftxWXQzHt0+soNcWBoh5WU8hEzIPVEXzxTThJ9AOkF/df3ApWUX4i6ylqQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEQCIAeV/cUqNAWXaqqB9xCVQ1dFA/HLJsJqswpj1sRsxKKYAiBKfNORZ5QlDXy0qzda/nk1ah8HNU1P44GrmrS7XFAv7g=="
+					}
+				]
+			},
+			"_from": "file:/tmp/craft-Daf8ib/sentry-node-10.61.0.tgz",
+			"_npmVersion": "10.9.8",
+			"_npmUser": {
+				"name": "sentry-bot",
+				"email": "accounts@sentry.io"
+			},
+			"_hasShrinkwrap": false,
+			"typesVersions": {
+				"<5.0": {
+					"build/types/index.d.ts": [
+						"build/types-ts3.8/index.d.ts"
+					]
+				}
+			},
+			"types": "build/types/index.d.ts",
+			"volta": {
+				"extends": "../../package.json"
+			},
+			"exports": {
+				"./package.json": "./package.json",
+				".": {
+					"import": {
+						"types": "./build/types/index.d.ts",
+						"default": "./build/esm/index.js"
+					},
+					"require": {
+						"types": "./build/types/index.d.ts",
+						"default": "./build/cjs/index.js"
+					}
+				},
+				"./import": {
+					"import": {
+						"default": "./build/import-hook.mjs"
+					}
+				},
+				"./loader": {
+					"import": {
+						"default": "./build/loader-hook.mjs"
+					}
+				},
+				"./init": {
+					"import": {
+						"default": "./build/esm/init.js"
+					},
+					"require": {
+						"default": "./build/cjs/init.js"
+					}
+				},
+				"./preload": {
+					"import": {
+						"default": "./build/esm/preload.js"
+					},
+					"require": {
+						"default": "./build/cjs/preload.js"
+					}
+				}
+			},
+			"module": "build/esm/index.js",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages-npm-production",
+				"tmp": "tmp/node_10.61.0_1782380958226_0.8789757077719325"
+			},
+			"nx": {
+				"targets": {
+					"build:transpile": {
+						"outputs": [
+							"{projectRoot}/build/esm",
+							"{projectRoot}/build/cjs",
+							"{projectRoot}/build/npm/esm",
+							"{projectRoot}/build/npm/cjs",
+							"{projectRoot}/build/import-hook.mjs",
+							"{projectRoot}/build/loader-hook.mjs"
+						]
+					}
+				}
+			},
+			"_resolved": "/tmp/craft-Daf8ib/sentry-node-10.61.0.tgz",
+			"sideEffects": false,
+			"_integrity": "sha512-nct3VqOIuPBnsvqHHWkPG6Ta7QwJftxWXQzHt0+soNcWBoh5WU8hEzIPVEXzxTThJ9AOkF/df3ApWUX4i6ylqQ==",
+			"_nodeVersion": "22.23.1",
+			"contributors": []
+		},
+		"10.60.0": {
+			"name": "@sentry/node",
+			"description": "Sentry Node SDK using OpenTelemetry for performance instrumentation",
+			"version": "10.60.0",
+			"author": {
+				"name": "Sentry"
+			},
+			"homepage": "https://github.com/getsentry/sentry-javascript/tree/master/packages/node",
+			"repository": {
+				"url": "git://github.com/getsentry/sentry-javascript.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/getsentry/sentry-javascript/issues"
+			},
+			"engines": {
+				"node": ">=18"
+			},
+			"main": "build/cjs/index.js",
+			"dependencies": {
+				"@sentry/core": "10.60.0",
+				"@sentry/node-core": "10.60.0",
+				"@opentelemetry/api": "^1.9.1",
+				"@sentry/server-utils": "10.60.0",
+				"import-in-the-middle": "^3.0.0",
+				"@sentry/opentelemetry": "10.60.0",
+				"@opentelemetry/sdk-trace-base": "^2.6.1",
+				"@opentelemetry/instrumentation": "^0.214.0",
+				"@opentelemetry/semantic-conventions": "^1.40.0"
+			},
+			"devDependencies": {
+				"@types/node": "^18.19.1"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "sentry-bot",
+					"email": "accounts@sentry.io"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "OXLINT_TSGOLINT_DANGEROUSLY_SUPPRESS_PROGRAM_DIAGNOSTICS=true oxlint . --type-aware",
+				"test": "yarn test:unit",
+				"build": "run-p build:transpile build:types",
+				"clean": "rimraf build coverage sentry-node-*.tgz",
+				"lint:fix": "OXLINT_TSGOLINT_DANGEROUSLY_SUPPRESS_PROGRAM_DIAGNOSTICS=true oxlint . --fix --type-aware",
+				"build:dev": "yarn build",
+				"test:unit": "vitest run",
+				"test:watch": "vitest --watch",
+				"build:types": "run-s build:types:core build:types:downlevel",
+				"build:watch": "run-p build:transpile:watch",
+				"yalc:publish": "yalc publish --push --sig",
+				"build:tarball": "npm pack",
+				"build:dev:watch": "yarn build:watch",
+				"build:transpile": "rollup -c rollup.npm.config.mjs",
+				"build:types:core": "tsc -p tsconfig.types.json",
+				"circularDepCheck": "madge --circular src/index.ts",
+				"build:transpile:watch": "rollup -c rollup.npm.config.mjs --watch",
+				"build:types:downlevel": "yarn downlevel-dts build/types build/types-ts3.8 --to ts3.8",
+				"lint:es-compatibility": "es-check es2022 ./build/cjs/*.js && es-check es2022 ./build/esm/*.js --module"
+			},
+			"publishConfig": {
+				"access": "public"
+			},
+			"lastModified": 0,
+			"_id": "@sentry/node@10.60.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@sentry/node/-/node-10.60.0.tgz",
+				"shasum": "ac315d4049a65cc3540a095ef096c20f47146bca",
+				"integrity": "sha512-u//paUrkKaCr0oNn7r7UulGydkYMSkU1wQOIpG/P/jf7psZWnyXhgeszHzUfZXo6pCdxXG9z9viPvzGjqPQN7A==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEQCIGGR70ReydaWACUCi8/8YG6DM0/ZSQsf1in4Nx55rjfOAiABXxMFQN4fkquFHOmHa/wJzOg/S97Ja4g+ppQ+VMl8HA=="
+					}
+				]
+			},
+			"_from": "file:/tmp/craft-IBbmOi/sentry-node-10.60.0.tgz",
+			"_npmVersion": "10.9.8",
+			"_npmUser": {
+				"name": "sentry-bot",
+				"email": "accounts@sentry.io"
+			},
+			"_hasShrinkwrap": false,
+			"typesVersions": {
+				"<5.0": {
+					"build/types/index.d.ts": [
+						"build/types-ts3.8/index.d.ts"
+					]
+				}
+			},
+			"types": "build/types/index.d.ts",
+			"volta": {
+				"extends": "../../package.json"
+			},
+			"exports": {
+				".": {
+					"import": {
+						"types": "./build/types/index.d.ts",
+						"default": "./build/esm/index.js"
+					},
+					"require": {
+						"types": "./build/types/index.d.ts",
+						"default": "./build/cjs/index.js"
+					}
+				},
+				"./init": {
+					"import": {
+						"default": "./build/esm/init.js"
+					},
+					"require": {
+						"default": "./build/cjs/init.js"
+					}
+				},
+				"./import": {
+					"import": {
+						"default": "./build/import-hook.mjs"
+					}
+				},
+				"./loader": {
+					"import": {
+						"default": "./build/loader-hook.mjs"
+					}
+				},
+				"./preload": {
+					"import": {
+						"default": "./build/esm/preload.js"
+					},
+					"require": {
+						"default": "./build/cjs/preload.js"
+					}
+				},
+				"./package.json": "./package.json"
+			},
+			"module": "build/esm/index.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/node_10.60.0_1782208299366_0.4188508522593526",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"nx": {
+				"targets": {
+					"build:transpile": {
+						"outputs": [
+							"{projectRoot}/build/esm",
+							"{projectRoot}/build/cjs",
+							"{projectRoot}/build/npm/esm",
+							"{projectRoot}/build/npm/cjs",
+							"{projectRoot}/build/import-hook.mjs",
+							"{projectRoot}/build/loader-hook.mjs"
+						]
+					}
+				}
+			},
+			"_resolved": "/tmp/craft-IBbmOi/sentry-node-10.60.0.tgz",
+			"sideEffects": false,
+			"_integrity": "sha512-u//paUrkKaCr0oNn7r7UulGydkYMSkU1wQOIpG/P/jf7psZWnyXhgeszHzUfZXo6pCdxXG9z9viPvzGjqPQN7A==",
+			"_nodeVersion": "22.22.3",
+			"contributors": []
 		}
 	},
 	"time": {
@@ -116758,7 +117386,7 @@
 		"8.2.0": "2024-05-16T15:30:15.650Z",
 		"8.2.1": "2024-05-16T16:44:25.449Z",
 		"8.23.0": "2024-08-05T14:20:20.400Z",
-		"modified": "2026-06-09T09:44:47.168Z",
+		"modified": "2026-06-25T09:49:18.534Z",
 		"7.28.1": "2022-12-22T09:08:48.805Z",
 		"7.5.0": "2022-07-04T13:45:19.769Z",
 		"9.19.0": "2025-05-14T12:07:27.883Z",
@@ -117206,7 +117834,11 @@
 		"7.107.0": "2024-03-14T09:31:35.146Z",
 		"9.8.0": "2025-03-21T10:01:43.138Z",
 		"9.47.0": "2025-11-17T13:16:19.448Z",
-		"9.47.1": "2025-11-17T14:46:29.604Z"
+		"9.47.1": "2025-11-17T14:46:29.604Z",
+		"10.59.0": "2026-06-19T12:51:57.703Z",
+		"10.58.0": "2026-06-15T12:28:23.221Z",
+		"10.61.0": "2026-06-25T09:49:18.398Z",
+		"10.60.0": "2026-06-23T09:51:39.533Z"
 	},
 	"users": {},
 	"dist-tags": {
@@ -117214,12 +117846,12 @@
 		"v7": "7.120.4",
 		"v8": "8.55.2",
 		"v9": "9.47.1",
-		"latest": "10.57.0"
+		"latest": "10.61.0"
 	},
 	"_uplinks": {
 		"artifactory-sabadell": {
-			"etag": "ee468979385da9b684491a26841bf9b61ae320bc",
-			"fetched": 1781195761137
+			"etag": "20150f19a1c01f3061c93565fe83c87677158a5f",
+			"fetched": 1782459823761
 		}
 	},
 	"_distfiles": {
@@ -120757,10 +121389,30 @@
 			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@sentry/node/-/node-9.47.1.tgz",
 			"sha": "955b1956a885e487bdf8592d4515880d608036aa",
 			"registry": "artifactory-sabadell"
+		},
+		"node-10.59.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@sentry/node/-/node-10.59.0.tgz",
+			"sha": "57138686ae34d6ef2f950ef7f48e76937af4874b",
+			"registry": "artifactory-sabadell"
+		},
+		"node-10.58.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@sentry/node/-/node-10.58.0.tgz",
+			"sha": "0304b8c91fadadad8fab7df17adacfbef4901a52",
+			"registry": "artifactory-sabadell"
+		},
+		"node-10.61.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@sentry/node/-/node-10.61.0.tgz",
+			"sha": "3841edd5ef8676efd6a43927e9884f0a4f6c1867",
+			"registry": "artifactory-sabadell"
+		},
+		"node-10.60.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@sentry/node/-/node-10.60.0.tgz",
+			"sha": "ac315d4049a65cc3540a095ef096c20f47146bca",
+			"registry": "artifactory-sabadell"
 		}
 	},
 	"_attachments": {},
-	"_rev": "1-24a7c9728c8bb155",
+	"_rev": "3-2d1bca1fe21654d3",
 	"_id": "@sentry/node",
 	"readme": "<p align=\"center\">\n  <a href=\"https://sentry.io/?utm_source=github&utm_medium=logo\" target=\"_blank\">\n    <img src=\"https://sentry-brand.storage.googleapis.com/sentry-wordmark-dark-280x84.png\" alt=\"Sentry\" width=\"280\" height=\"84\">\n  </a>\n</p>\n\n# Official Sentry SDK for Node\n\n[![npm version](https://img.shields.io/npm/v/@sentry/node.svg)](https://www.npmjs.com/package/@sentry/node)\n[![npm dm](https://img.shields.io/npm/dm/@sentry/node.svg)](https://www.npmjs.com/package/@sentry/node)\n[![npm dt](https://img.shields.io/npm/dt/@sentry/node.svg)](https://www.npmjs.com/package/@sentry/node)\n\n## Installation\n\n```bash\nnpm install @sentry/node\n\n# Or yarn\nyarn add @sentry/node\n```\n\n## Usage\n\nSentry should be initialized as early in your app as possible. It is essential that you call `Sentry.init` before you\nrequire any other modules in your application, otherwise auto-instrumentation of these modules will **not** work.\n\nYou need to create a file named `instrument.js` that imports and initializes Sentry:\n\n```js\n// CJS Syntax\nconst Sentry = require('@sentry/node');\n// ESM Syntax\nimport * as Sentry from '@sentry/node';\n\nSentry.init({\n  dsn: '__DSN__',\n  // ...\n});\n```\n\nYou need to require or import the `instrument.js` file before importing any other modules in your application. This is\nnecessary to ensure that Sentry can automatically instrument all modules in your application:\n\n```js\n// Import this first!\nimport './instrument';\n\n// Now import other modules\nimport http from 'http';\n\n// Your application code goes here\n```\n\n### ESM Support\n\nWhen running your application in ESM mode, you should use the Node.js\n[`--import`](https://nodejs.org/api/cli.html#--importmodule) command line option to ensure that Sentry is loaded before\nthe application code is evaluated.\n\nAdjust the Node.js call for your application to use the `--import` parameter and point it at `instrument.js`, which\ncontains your `Sentry.init`() code:\n\n```bash\n# Note: This is only available for Node v18.19.0 onwards.\nnode --import ./instrument.mjs app.mjs\n```\n\nIf it is not possible for you to pass the `--import` flag to the Node.js binary, you can alternatively use the\n`NODE_OPTIONS` environment variable as follows:\n\n```bash\nNODE_OPTIONS=\"--import ./instrument.mjs\" npm run start\n```\n\n## Links\n\n- [Official SDK Docs](https://docs.sentry.io/quickstart/)"
 }

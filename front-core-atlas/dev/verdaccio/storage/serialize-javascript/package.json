@@ -2330,12 +2330,99 @@
 			"_shasum": "82af5ebe9c05adbdd8343a4f8bb9455112f5dd8c",
 			"_nodeVersion": "5.5.0",
 			"contributors": []
+		},
+		"7.0.6": {
+			"name": "serialize-javascript",
+			"description": "Serialize JavaScript to a superset of JSON that includes regular expressions and functions.",
+			"version": "7.0.6",
+			"author": {
+				"name": "Eric Ferraiuolo",
+				"email": "edf@ericf.me"
+			},
+			"homepage": "https://github.com/yahoo/serialize-javascript",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/yahoo/serialize-javascript.git"
+			},
+			"bugs": {
+				"url": "https://github.com/yahoo/serialize-javascript/issues"
+			},
+			"engines": {
+				"node": ">=20.0.0"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"benchmark": "^2.1.4"
+			},
+			"keywords": [
+				"serialize",
+				"serialization",
+				"javascript",
+				"js",
+				"json"
+			],
+			"license": "BSD-3-Clause",
+			"maintainers": [
+				{
+					"name": "okuryu",
+					"email": "okuryu@okuryu.com"
+				},
+				{
+					"name": "ericf",
+					"email": "eferraiuolo@gmail.com"
+				},
+				{
+					"name": "redonkulus",
+					"email": "seth@bertalotto.net"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"benchmark": "node -v && node test/benchmark/serialize.js",
+				"test": "node --test test/unit/*.js"
+			},
+			"lastModified": 0,
+			"_id": "serialize-javascript@7.0.6",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/serialize-javascript/-/serialize-javascript-7.0.6.tgz",
+				"shasum": "f2f20c8af0757e4d8fa329d0210636da0682ddef",
+				"integrity": "sha512-ATTK5Q4gFVg0YDp1my2vqygyvhcklD/UV5GIlYHooGTn/NogJqIzpetkD6E5kmuVULqz/S9inUL25XcAgDRJQg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEQCIC/2um7/Yyefg5aZvEdr14wtXCq7VFvQjb7qT1uAdBUAAiBQGi35lTtn731RvZMUPbM91PhLkCeTWV4/y1lDX7rITw=="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/serialize-javascript@7.0.6",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "11.13.0",
+			"_npmUser": {
+				"name": "GitHub Actions",
+				"email": "npm-oidc-no-reply@github.com",
+				"trustedPublisher": {
+					"id": "github",
+					"oidcConfigId": "oidc:56d1949c-2e63-4e52-81c0-f17b57228c0f"
+				}
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "153eb437d45310f34f4b8414a4ac1f8658a622dd",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages-npm-production",
+				"tmp": "tmp/serialize-javascript_7.0.6_1781740707492_0.9759207714894622"
+			},
+			"_nodeVersion": "24.16.0",
+			"contributors": []
 		}
 	},
 	"time": {
 		"4.0.0": "2020-06-08T13:40:07.872Z",
 		"3.0.0": "2020-02-16T13:39:50.439Z",
-		"modified": "2026-03-25T14:24:37.080Z",
+		"modified": "2026-06-17T23:58:27.873Z",
 		"3.1.0": "2020-05-28T11:37:37.428Z",
 		"7.0.5": "2026-03-25T14:24:36.784Z",
 		"2.0.0": "2019-09-04T12:09:08.164Z",
@@ -2366,16 +2453,17 @@
 		"1.0.0": "2014-09-16T16:06:10.211Z",
 		"1.1.0": "2015-08-26T20:21:45.311Z",
 		"1.1.1": "2015-08-27T20:24:51.017Z",
-		"1.2.0": "2016-02-29T23:35:46.071Z"
+		"1.2.0": "2016-02-29T23:35:46.071Z",
+		"7.0.6": "2026-06-17T23:58:27.617Z"
 	},
 	"users": {},
 	"dist-tags": {
-		"latest": "7.0.5"
+		"latest": "7.0.6"
 	},
 	"_uplinks": {
 		"artifactory-sabadell": {
-			"etag": "283e5834720d516848d989ddb525acb2636f9d60",
-			"fetched": 1781195707880
+			"etag": "dd9d0afe5d78ed8e905c1b314590842429d86a52",
+			"fetched": 1782459821363
 		}
 	},
 	"_distfiles": {
@@ -2528,10 +2616,15 @@
 			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/serialize-javascript/-/serialize-javascript-1.2.0.tgz",
 			"sha": "82af5ebe9c05adbdd8343a4f8bb9455112f5dd8c",
 			"registry": "artifactory-sabadell"
+		},
+		"serialize-javascript-7.0.6.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/serialize-javascript/-/serialize-javascript-7.0.6.tgz",
+			"sha": "f2f20c8af0757e4d8fa329d0210636da0682ddef",
+			"registry": "artifactory-sabadell"
 		}
 	},
 	"_attachments": {},
-	"_rev": "1-a8d477eb58e25ef6",
+	"_rev": "3-e90635b53900494d",
 	"_id": "serialize-javascript",
 	"readme": "Serialize JavaScript\n====================\n\nSerialize JavaScript to a _superset_ of JSON that includes regular expressions, dates and functions.\n\n[![npm Version][npm-badge]][npm]\n![Test](https://github.com/yahoo/serialize-javascript/workflows/Test/badge.svg)\n\n## Overview\n\nThe code in this package began its life as an internal module to [express-state][]. To expand its usefulness, it now lives as `serialize-javascript` — an independent package on npm.\n\nYou're probably wondering: **What about `JSON.stringify()`!?** We've found that sometimes we need to serialize JavaScript **functions**, **regexps**, **dates**, **sets** or **maps**. A great example is a web app that uses client-side URL routing where the route definitions are regexps that need to be shared from the server to the client.\n\nThe string returned from this package's single export function is literal JavaScript which can be saved to a `.js` file, or be embedded into an HTML document by making the content of a `<script>` element.\n\n> **HTML characters and JavaScript line terminators are escaped automatically.**\n\nPlease note that serialization for ES6 Sets & Maps requires support for `Array.from` (not available in IE or Node < 0.12), or an `Array.from` polyfill.\n\n> [!WARNING]\n> It may be tempting to use this package as a way to pass arbitrary functions into [worker threads][], since you cannot pass them directly via `postMessage()`. However, passing functions between worker threads is not possible in the general case. This package lets you serialize *some* functions, but it has limitations.\n>\n> For instance, if a function references something from outside the function body, it will not run properly if serialized and deserialized. This could include [closed-over variables][] or imports from other packages. For a serialized function to run properly, it must be entirely self-contained.\n>\n> In general, it is not possible to send arbitrary JavaScript to a worker thread, and pretend it's running the same way it would run on the main thread. This package doesn't let you do that.\n\n## Installation\n\nInstall using npm:\n\n```shell\n$ npm install serialize-javascript\n```\n\n## Usage\n\n```js\nvar serialize = require('serialize-javascript');\n\nserialize({\n    str  : 'string',\n    num  : 0,\n    obj  : {foo: 'foo'},\n    arr  : [1, 2, 3],\n    bool : true,\n    nil  : null,\n    undef: undefined,\n    inf  : Infinity,\n    date : new Date(\"Thu, 28 Apr 2016 22:02:17 GMT\"),\n    map  : new Map([['hello', 'world']]),\n    set  : new Set([123, 456]),\n    fn   : function echo(arg) { return arg; },\n    re   : /([^\\s]+)/g,\n    big  : BigInt(10),\n    url  : new URL('https://example.com/'),\n});\n```\n\nThe above will produce the following string output:\n\n```js\n'{\"str\":\"string\",\"num\":0,\"obj\":{\"foo\":\"foo\"},\"arr\":[1,2,3],\"bool\":true,\"nil\":null,\"undef\":undefined,\"inf\":Infinity,\"date\":new Date(\"2016-04-28T22:02:17.000Z\"),\"map\":new Map([[\"hello\",\"world\"]]),\"set\":new Set([123,456]),\"fn\":function echo(arg) { return arg; },\"re\":new RegExp(\"([^\\\\\\\\s]+)\", \"g\"),\"big\":BigInt(\"10\"),\"url\":new URL(\"https://example.com/\")}'\n```\n\nNote: to produce a beautified string, you can pass an optional second argument to `serialize()` to define the number of spaces to be used for the indentation.\n\n### Automatic Escaping of HTML Characters\n\nA primary feature of this package is to serialize code to a string of literal JavaScript which can be embedded in an HTML document by adding it as the contents of the `<script>` element. In order to make this safe, HTML characters and JavaScript line terminators are escaped automatically.\n\n```js\nserialize({\n    haxorXSS: '</script>'\n});\n```\n\nThe above will produce the following string, HTML-escaped output which is safe to put into an HTML document as it will not cause the inline script element to terminate:\n\n```js\n'{\"haxorXSS\":\"\\\\u003C\\\\u002Fscript\\\\u003E\"}'\n```\n\n> You can pass an optional `unsafe` argument to `serialize()` for straight serialization.\n\n### Options\n\nThe `serialize()` function accepts an `options` object as its second argument. All options are being defaulted to `undefined`:\n\n#### `options.space`\n\nThis option is the same as the `space` argument that can be passed to [`JSON.stringify`][JSON.stringify]. It can be used to add whitespace and indentation to the serialized output to make it more readable.\n\n```js\nserialize(obj, {space: 2});\n```\n\n#### `options.isJSON`\n\nThis option is a signal to `serialize()` that the object being serialized does not contain any function or regexps values. This enables a hot-path that allows serialization to be over 3x faster. If you're serializing a lot of data, and know its pure JSON, then you can enable this option for a speed-up.\n\n**Note:** That when using this option, the output will still be escaped to protect against XSS.\n\n```js\nserialize(obj, {isJSON: true});\n```\n\n#### `options.unsafe`\n\nThis option is to signal `serialize()` that we want to do a straight conversion, without the XSS protection. This options needs to be explicitly set to `true`. HTML characters and JavaScript line terminators will not be escaped. You will have to roll your own.\n\n```js\nserialize(obj, {unsafe: true});\n```\n\n#### `options.ignoreFunction`\n\nThis option is to signal `serialize()` that we do not want serialize JavaScript function. \nJust treat function like `JSON.stringify` do, but other features will work as expected.\n\n```js\nserialize(obj, {ignoreFunction: true});\n```\n\n## Deserializing\n\nFor some use cases you might also need to deserialize the string. This is explicitly not part of this module. However, you can easily write it yourself:\n\n```js\nfunction deserialize(serializedJavascript){\n  return eval('(' + serializedJavascript + ')');\n}\n```\n\n**Note:** Don't forget the parentheses around the serialized javascript, as the opening bracket `{` will be considered to be the start of a body.\n\n## License\n\nThis software is free to use under the Yahoo! Inc. BSD license.\nSee the [LICENSE file][LICENSE] for license text and copyright information.\n\n\n[npm]: https://www.npmjs.org/package/serialize-javascript\n[npm-badge]: https://img.shields.io/npm/v/serialize-javascript.svg?style=flat-square\n[express-state]: https://github.com/yahoo/express-state\n[JSON.stringify]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify\n[LICENSE]: https://github.com/yahoo/serialize-javascript/blob/main/LICENSE\n[worker threads]: https://nodejs.org/api/worker_threads.html\n[closed-over variables]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures"
 }

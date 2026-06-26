@@ -5,10 +5,12 @@ mock:
   pingam:
     # Cookie SSO emitida tras /authenticate y /token (ver CONTEXT.md secc. 3 Fase 1)
     sso-cookie-name: PA_SSO
-    # ACS URL de NEO (SamlResponseComponent) -- ver context-SAML.md secc. 9
-    acs-neo-url: http://localhost:4500/saml/acs
+    # Adaptador HTTP que recibe el Form POST antes de devolver el control a Angular.
+    acs-neo-url: http://localhost:8081/saml/acs
+    neo-acs-return-url: http://localhost:4300/saml/acs
+    neo-login-url: http://localhost:4300/login?samlSso=unauthorized
   cors:
-    allowed-origin: http://localhost:4500
+    allowed-origins: http://localhost:4300,http://localhost:4500
 
 logging:
   level:

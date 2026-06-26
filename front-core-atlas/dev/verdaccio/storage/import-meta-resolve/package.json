@@ -1,0 +1,2673 @@
+{
+	"name": "import-meta-resolve",
+	"versions": {
+		"2.0.0": {
+			"name": "import-meta-resolve",
+			"description": "Resolve things like Node.js  ponyfill for `import.meta.resolve`",
+			"version": "2.0.0",
+			"author": {
+				"url": "https://wooorm.com",
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com"
+			},
+			"homepage": "https://github.com/wooorm/import-meta-resolve#readme",
+			"repository": {
+				"url": "git+https://github.com/wooorm/import-meta-resolve.git",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"url": "https://wooorm.com",
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/wooorm/import-meta-resolve/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"builtins": "^5.0.0"
+			},
+			"devDependencies": {
+				"c8": "^7.0.0",
+				"xo": "^0.49.0",
+				"tape": "^5.0.0",
+				"rimraf": "^3.0.0",
+				"prettier": "^2.0.0",
+				"remark-cli": "^10.0.0",
+				"typescript": "^4.0.0",
+				"@types/node": "^17.0.0",
+				"@types/tape": "^4.0.0",
+				"@types/semver": "^7.0.0",
+				"type-coverage": "^2.0.0",
+				"remark-preset-wooorm": "^9.0.0"
+			},
+			"keywords": [
+				"resolve",
+				"node",
+				"esm",
+				"module"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run generate && npm run build && npm run format && npm run test-coverage",
+				"build": "rimraf \"{lib/**,test/**,}*.d.ts\" && tsc && type-coverage",
+				"format": "remark . -qfo && prettier . -w --loglevel warn && xo --fix",
+				"prepack": "npm run build && npm run format",
+				"generate": "node script.js",
+				"test-api": "node --experimental-import-meta-resolve test/baseline.js && node test/index.js",
+				"test-coverage": "node --experimental-import-meta-resolve test/baseline.js && c8 --check-coverage --branches 75 --functions 75 --lines 75 --statements 75 --reporter lcov node test/index.js"
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/wooorm",
+				"type": "github"
+			},
+			"_id": "import-meta-resolve@2.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/import-meta-resolve/-/import-meta-resolve-2.0.0.tgz",
+				"shasum": "5f5783c2d95910c1bab38fe41838e4f86add2347",
+				"integrity": "sha512-ewOJfk7qhBFybH0gKcrZlLqU+kWeRm1imDFS2/ONGRbUn6SepnYlLIx+AXldio78lcEBJRw/XLSqNQA4+AgwVQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDbZG/8nl7NVEe7YOHkPcBMelSffDNSOgY/iylWC8edLQIhALmUAJ+r6j7d47ducNzZgBuEdPg1jQMmfyw2KCRqdrxq"
+					}
+				]
+			},
+			"_npmVersion": "8.9.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "9f5958fffba9349643949ed19df24eb9d4fe1267",
+			"types": "index.d.ts",
+			"xo": {
+				"rules": {
+					"no-new": "off",
+					"max-depth": "off",
+					"complexity": "off",
+					"max-params": "off",
+					"no-constant-condition": "off",
+					"prefer-arrow-callback": "off"
+				},
+				"ignore": [
+					"test/node_modules/"
+				],
+				"prettier": true
+			},
+			"typeCoverage": {
+				"detail": true,
+				"strict": true,
+				"atLeast": 100,
+				"ignoreCatch": true,
+				"ignoreFiles": [
+					"lib/errors.d.ts"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/import-meta-resolve_2.0.0_1653249181860_0.5519794636794815",
+				"host": "s3://npm-registry-packages"
+			},
+			"type": "module",
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm",
+					[
+						"remark-lint-maximum-heading-length",
+						false
+					]
+				]
+			},
+			"sideEffects": false,
+			"prettier": {
+				"semi": false,
+				"useTabs": false,
+				"tabWidth": 2,
+				"singleQuote": true,
+				"trailingComma": "none",
+				"bracketSpacing": false
+			},
+			"_nodeVersion": "18.2.0"
+		},
+		"2.0.1": {
+			"name": "import-meta-resolve",
+			"description": "Resolve things like Node.js  ponyfill for `import.meta.resolve`",
+			"version": "2.0.1",
+			"author": {
+				"url": "https://wooorm.com",
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com"
+			},
+			"homepage": "https://github.com/wooorm/import-meta-resolve#readme",
+			"repository": {
+				"url": "git+https://github.com/wooorm/import-meta-resolve.git",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"url": "https://wooorm.com",
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/wooorm/import-meta-resolve/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"builtins": "^5.0.0"
+			},
+			"devDependencies": {
+				"c8": "^7.0.0",
+				"xo": "^0.49.0",
+				"tape": "^5.0.0",
+				"rimraf": "^3.0.0",
+				"prettier": "^2.0.0",
+				"remark-cli": "^10.0.0",
+				"typescript": "^4.0.0",
+				"@types/node": "^17.0.0",
+				"@types/tape": "^4.0.0",
+				"@types/semver": "^7.0.0",
+				"type-coverage": "^2.0.0",
+				"remark-preset-wooorm": "^9.0.0"
+			},
+			"keywords": [
+				"resolve",
+				"node",
+				"esm",
+				"module"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run generate && npm run build && npm run format && npm run test-coverage",
+				"build": "rimraf \"{lib/**,test/**,}*.d.ts\" && tsc && type-coverage",
+				"format": "remark . -qfo && prettier . -w --loglevel warn && xo --fix",
+				"prepack": "npm run build && npm run format",
+				"generate": "node script.js",
+				"test-api": "node --experimental-import-meta-resolve test/baseline.js && node test/index.js",
+				"test-coverage": "node --experimental-import-meta-resolve test/baseline.js && c8 --check-coverage --branches 75 --functions 75 --lines 75 --statements 75 --reporter lcov node test/index.js"
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/wooorm",
+				"type": "github"
+			},
+			"_id": "import-meta-resolve@2.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/import-meta-resolve/-/import-meta-resolve-2.0.1.tgz",
+				"shasum": "d45dee70046d26a77e14a918cb195c5cc48750a9",
+				"integrity": "sha512-WgX4VB4mWNhLTipUWqSh7LB/cyjM4g5fSWLBRvKctmJsYx8dQ1U8ShS2PzJEbBmFnEI2wrtCOYE7GlBmQOCqqA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIHLZjF/UKM2eKes3bJQIFm8o1rWilCanMoIM1VZl5VrCAiEAtzLn7aY+t3RneaCgwgw6BuJAeCOW6DhwylSfNqSTYto="
+					}
+				]
+			},
+			"_npmVersion": "8.9.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "fa57c62867ec2e2b8dca2bc78801fc351f6975f4",
+			"types": "index.d.ts",
+			"xo": {
+				"rules": {
+					"no-new": "off",
+					"max-depth": "off",
+					"complexity": "off",
+					"max-params": "off",
+					"no-constant-condition": "off",
+					"prefer-arrow-callback": "off"
+				},
+				"ignore": [
+					"test/node_modules/"
+				],
+				"prettier": true
+			},
+			"typeCoverage": {
+				"detail": true,
+				"strict": true,
+				"atLeast": 100,
+				"ignoreCatch": true,
+				"ignoreFiles": [
+					"lib/errors.d.ts"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/import-meta-resolve_2.0.1_1653381779028_0.49363427244668756",
+				"host": "s3://npm-registry-packages"
+			},
+			"type": "module",
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm",
+					[
+						"remark-lint-maximum-heading-length",
+						false
+					]
+				]
+			},
+			"sideEffects": false,
+			"prettier": {
+				"semi": false,
+				"useTabs": false,
+				"tabWidth": 2,
+				"singleQuote": true,
+				"trailingComma": "none",
+				"bracketSpacing": false
+			},
+			"_nodeVersion": "18.2.0"
+		},
+		"2.1.0": {
+			"name": "import-meta-resolve",
+			"description": "Resolve things like Node.js  ponyfill for `import.meta.resolve`",
+			"version": "2.1.0",
+			"author": {
+				"url": "https://wooorm.com",
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com"
+			},
+			"homepage": "https://github.com/wooorm/import-meta-resolve#readme",
+			"repository": {
+				"url": "git+https://github.com/wooorm/import-meta-resolve.git",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"url": "https://wooorm.com",
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/wooorm/import-meta-resolve/issues"
+			},
+			"main": "index.js",
+			"dependencies": {},
+			"devDependencies": {
+				"c8": "^7.0.0",
+				"xo": "^0.51.0",
+				"tape": "^5.0.0",
+				"rimraf": "^3.0.0",
+				"prettier": "^2.0.0",
+				"remark-cli": "^11.0.0",
+				"typescript": "^4.0.0",
+				"@types/node": "^18.0.0",
+				"@types/tape": "^4.0.0",
+				"@types/semver": "^7.0.0",
+				"type-coverage": "^2.0.0",
+				"remark-preset-wooorm": "^9.0.0"
+			},
+			"keywords": [
+				"resolve",
+				"node",
+				"esm",
+				"module"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run generate && npm run build && npm run format && npm run test-coverage",
+				"build": "rimraf \"{lib/**,test/**,}*.d.ts\" && tsc && type-coverage",
+				"format": "remark . -qfo && prettier . -w --loglevel warn && xo --fix",
+				"prepack": "npm run build && npm run format",
+				"generate": "node script.js",
+				"test-api": "node --experimental-import-meta-resolve test/baseline.js && node test/index.js",
+				"test-coverage": "node --experimental-import-meta-resolve test/baseline.js && c8 --check-coverage --branches 75 --functions 75 --lines 75 --statements 75 --reporter lcov node test/index.js"
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/wooorm",
+				"type": "github"
+			},
+			"_id": "import-meta-resolve@2.1.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/import-meta-resolve/-/import-meta-resolve-2.1.0.tgz",
+				"shasum": "c8952d331ed6e9bb6ad524a7549deb3d34af41ce",
+				"integrity": "sha512-yG9pxkWJVTy4cmRsNWE3ztFdtFuYIV8G4N+cbCkO8b+qngkLyIUhxQFuZ0qJm67+0nUOxjMPT7nfksPKza1v2g==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIDOEXE9OapASxrDmrbljV0Jgl3wYKWnfTSjTODHgKDY7AiAsjQjgBlw+xcZPdJwfgSy2qsfFyVct4PNU47E1pYU85w=="
+					}
+				]
+			},
+			"_npmVersion": "8.13.2",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "ef50015beeed644603220be23eb17ca8323f4412",
+			"types": "index.d.ts",
+			"xo": {
+				"rules": {
+					"no-new": "off",
+					"max-depth": "off",
+					"complexity": "off",
+					"max-params": "off",
+					"no-constant-condition": "off",
+					"prefer-arrow-callback": "off"
+				},
+				"ignore": [
+					"test/node_modules/"
+				],
+				"prettier": true
+			},
+			"typeCoverage": {
+				"detail": true,
+				"strict": true,
+				"atLeast": 100,
+				"ignoreCatch": true,
+				"ignoreFiles": [
+					"lib/errors.d.ts"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/import-meta-resolve_2.1.0_1660513644812_0.5241617237931886",
+				"host": "s3://npm-registry-packages"
+			},
+			"type": "module",
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm",
+					[
+						"remark-lint-maximum-heading-length",
+						false
+					]
+				]
+			},
+			"sideEffects": false,
+			"prettier": {
+				"semi": false,
+				"useTabs": false,
+				"tabWidth": 2,
+				"singleQuote": true,
+				"trailingComma": "none",
+				"bracketSpacing": false
+			},
+			"_nodeVersion": "18.2.0"
+		},
+		"4.2.0": {
+			"name": "import-meta-resolve",
+			"description": "Resolve things like Node.js  ponyfill for `import.meta.resolve`",
+			"version": "4.2.0",
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"homepage": "https://github.com/wooorm/import-meta-resolve#readme",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/import-meta-resolve.git"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/wooorm/import-meta-resolve/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"@types/node": "^24.0.0",
+				"@types/semver": "^7.0.0",
+				"c8": "^10.0.0",
+				"f-ck": "^2.0.0",
+				"prettier": "^3.0.0",
+				"remark-cli": "^12.0.0",
+				"remark-preset-wooorm": "^11.0.0",
+				"semver": "^7.0.0",
+				"type-coverage": "^2.0.0",
+				"typescript": "^5.0.0",
+				"xo": "^1.0.0"
+			},
+			"keywords": [
+				"esm",
+				"module",
+				"node",
+				"resolve"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"build": "tsc --build --clean && tsc --build && type-coverage",
+				"format": "remark --frail --quiet --output -- . && prettier --write --log-level warn -- . && xo --fix",
+				"generate": "node --conditions development script.js",
+				"prepack": "npm run generate && npm run build && npm run format",
+				"test-api": "node --experimental-import-meta-resolve test/baseline.js && node --experimental-import-meta-resolve test/baseline-async.js && node test/index.js",
+				"test-coverage": "c8 --branches 75 --functions 75 --lines 75 --statements 75 --reporter lcov -- npm run test-api",
+				"test": "npm run generate && npm run build && npm run format && npm run test-coverage"
+			},
+			"lastModified": 0,
+			"funding": {
+				"type": "github",
+				"url": "https://github.com/sponsors/wooorm"
+			},
+			"_id": "import-meta-resolve@4.2.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/import-meta-resolve/-/import-meta-resolve-4.2.0.tgz",
+				"shasum": "08cb85b5bd37ecc8eb1e0f670dc2767002d43734",
+				"integrity": "sha512-Iqv2fzaTQN28s/FwZAoFq0ZSs/7hMAHJVX+w8PZl3cY19Pxk6jFFalxQoIfW2826i/fDLXv8IiEZRIT0lDuWcg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEUCIQCTVeflmv6K9KQq2YDXNNZvh7r1wlb0b/rAttZwWMLC5AIgNYgKVGg4z/HqNPv/U2M6ihXL1zSsAtYRfalIszF3F4M="
+					}
+				]
+			},
+			"_npmVersion": "11.5.2",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "88a0e387cb4617c0f03217026adef2208018d41a",
+			"types": "index.d.ts",
+			"typeCoverage": {
+				"atLeast": 100,
+				"strict": true,
+				"ignoreFiles": [
+					"lib/errors.d.ts"
+				]
+			},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages-npm-production",
+				"tmp": "tmp/import-meta-resolve_4.2.0_1756493175291_0.7616787395243945"
+			},
+			"remarkConfig": {
+				"plugins": [
+					"remark-preset-wooorm",
+					[
+						"remark-lint-maximum-heading-length",
+						false
+					]
+				]
+			},
+			"type": "module",
+			"sideEffects": false,
+			"prettier": {
+				"bracketSpacing": false,
+				"semi": false,
+				"singleQuote": true,
+				"tabWidth": 2,
+				"trailingComma": "none",
+				"useTabs": false
+			},
+			"_nodeVersion": "23.9.0"
+		},
+		"4.0.0": {
+			"name": "import-meta-resolve",
+			"description": "Resolve things like Node.js  ponyfill for `import.meta.resolve`",
+			"version": "4.0.0",
+			"author": {
+				"url": "https://wooorm.com",
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com"
+			},
+			"homepage": "https://github.com/wooorm/import-meta-resolve#readme",
+			"repository": {
+				"url": "git+https://github.com/wooorm/import-meta-resolve.git",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"url": "https://wooorm.com",
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/wooorm/import-meta-resolve/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"c8": "^8.0.0",
+				"xo": "^0.56.0",
+				"semver": "^7.0.0",
+				"prettier": "^3.0.0",
+				"remark-cli": "^11.0.0",
+				"typescript": "^5.0.0",
+				"@types/node": "^20.0.0",
+				"@types/semver": "^7.0.0",
+				"type-coverage": "^2.0.0",
+				"remark-preset-wooorm": "^9.0.0"
+			},
+			"keywords": [
+				"resolve",
+				"node",
+				"esm",
+				"module"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run generate && npm run build && npm run format && npm run test-coverage",
+				"build": "tsc --build --clean && tsc --build && type-coverage",
+				"format": "remark . -qfo && prettier . -w --log-level warn && xo --fix",
+				"prepack": "npm run generate && npm run build && npm run format",
+				"generate": "node --conditions development script.js",
+				"test-api": "node --experimental-import-meta-resolve test/baseline.js && node --experimental-import-meta-resolve test/baseline-async.js && node test/index.js",
+				"test-coverage": "c8 --check-coverage --branches 75 --functions 75 --lines 75 --statements 75 --reporter lcov npm run test-api"
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/wooorm",
+				"type": "github"
+			},
+			"_id": "import-meta-resolve@4.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/import-meta-resolve/-/import-meta-resolve-4.0.0.tgz",
+				"shasum": "0b1195915689f60ab00f830af0f15cc841e8919e",
+				"integrity": "sha512-okYUR7ZQPH+efeuMJGlq4f8ubUgO50kByRPyt/Cy1Io4PSRsPjxME+YlVaCOx+NIToW7hCsZNFJyTPFFKepRSA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDhppRWnRWVAE/aZODRNt3WCPBj+GIQ2yYxBc0cTFzUsgIgQ28BTL0WL2U+lL9daztOAZ8D38HbQpq2ZyD4AYCPSSc="
+					}
+				]
+			},
+			"_npmVersion": "10.2.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "411516aaefa86bbe4d8566a98e79370f78f48338",
+			"types": "index.d.ts",
+			"xo": {
+				"rules": {
+					"no-new": "off",
+					"max-depth": "off",
+					"complexity": "off",
+					"max-params": "off",
+					"unicorn/prefer-at": "off",
+					"no-constant-condition": "off",
+					"prefer-arrow-callback": "off",
+					"unicorn/prefer-string-replace-all": "off"
+				},
+				"ignore": [
+					"test/node_modules/"
+				],
+				"prettier": true
+			},
+			"typeCoverage": {
+				"detail": true,
+				"strict": true,
+				"atLeast": 100,
+				"ignoreCatch": true,
+				"ignoreFiles": [
+					"lib/errors.d.ts"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/import-meta-resolve_4.0.0_1698939884773_0.1389793257559775",
+				"host": "s3://npm-registry-packages"
+			},
+			"type": "module",
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm",
+					[
+						"remark-lint-maximum-heading-length",
+						false
+					]
+				]
+			},
+			"sideEffects": false,
+			"prettier": {
+				"semi": false,
+				"useTabs": false,
+				"tabWidth": 2,
+				"singleQuote": true,
+				"trailingComma": "none",
+				"bracketSpacing": false
+			},
+			"_nodeVersion": "21.0.0"
+		},
+		"4.1.0": {
+			"name": "import-meta-resolve",
+			"description": "Resolve things like Node.js  ponyfill for `import.meta.resolve`",
+			"version": "4.1.0",
+			"author": {
+				"url": "https://wooorm.com",
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com"
+			},
+			"homepage": "https://github.com/wooorm/import-meta-resolve#readme",
+			"repository": {
+				"url": "git+https://github.com/wooorm/import-meta-resolve.git",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"url": "https://wooorm.com",
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/wooorm/import-meta-resolve/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"c8": "^9.0.0",
+				"xo": "^0.58.0",
+				"f-ck": "^2.0.0",
+				"semver": "^7.0.0",
+				"prettier": "^3.0.0",
+				"remark-cli": "^12.0.0",
+				"typescript": "^5.0.0",
+				"@types/node": "^20.0.0",
+				"@types/semver": "^7.0.0",
+				"type-coverage": "^2.0.0",
+				"remark-preset-wooorm": "^10.0.0"
+			},
+			"keywords": [
+				"resolve",
+				"node",
+				"esm",
+				"module"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run generate && npm run build && npm run format && npm run test-coverage",
+				"build": "tsc --build --clean && tsc --build && type-coverage",
+				"format": "remark . -qfo && prettier . -w --log-level warn && xo --fix",
+				"prepack": "npm run generate && npm run build && npm run format",
+				"generate": "node --conditions development script.js",
+				"test-api": "node --experimental-import-meta-resolve test/baseline.js && node --experimental-import-meta-resolve test/baseline-async.js && node test/index.js",
+				"test-coverage": "c8 --check-coverage --branches 75 --functions 75 --lines 75 --statements 75 --reporter lcov npm run test-api"
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/wooorm",
+				"type": "github"
+			},
+			"_id": "import-meta-resolve@4.1.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/import-meta-resolve/-/import-meta-resolve-4.1.0.tgz",
+				"shasum": "f9db8bead9fafa61adb811db77a2bf22c5399706",
+				"integrity": "sha512-I6fiaX09Xivtk+THaMfAwnA3MVA5Big1WHF1Dfx9hFuvNIWpXnorlkzhcQf6ehrqQiiZECRt1poOAkPmer3ruw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDz/tlgWpSKqWdQXugmUGDpBESKYwfw+0jPx8nYN7PvcQIgPlIgdDkOcULawMmNnOL2fEsqNwQJQJbD/MvsbX4g/5c="
+					}
+				]
+			},
+			"_npmVersion": "10.6.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "c0478902c641bebbb680017276f6e8427c252c01",
+			"types": "index.d.ts",
+			"xo": {
+				"rules": {
+					"no-new": "off",
+					"max-depth": "off",
+					"complexity": "off",
+					"max-params": "off",
+					"unicorn/prefer-at": "off",
+					"no-constant-condition": "off",
+					"prefer-arrow-callback": "off",
+					"unicorn/prefer-string-replace-all": "off"
+				},
+				"ignore": [
+					"test/node_modules/"
+				],
+				"prettier": true
+			},
+			"typeCoverage": {
+				"detail": true,
+				"strict": true,
+				"atLeast": 100,
+				"ignoreCatch": true,
+				"ignoreFiles": [
+					"lib/errors.d.ts"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/import-meta-resolve_4.1.0_1714390070802_0.902009350225101",
+				"host": "s3://npm-registry-packages"
+			},
+			"type": "module",
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm",
+					[
+						"remark-lint-maximum-heading-length",
+						false
+					]
+				]
+			},
+			"sideEffects": false,
+			"prettier": {
+				"semi": false,
+				"useTabs": false,
+				"tabWidth": 2,
+				"singleQuote": true,
+				"trailingComma": "none",
+				"bracketSpacing": false
+			},
+			"_nodeVersion": "21.7.1"
+		},
+		"2.2.2": {
+			"name": "import-meta-resolve",
+			"description": "Resolve things like Node.js  ponyfill for `import.meta.resolve`",
+			"version": "2.2.2",
+			"author": {
+				"url": "https://wooorm.com",
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com"
+			},
+			"homepage": "https://github.com/wooorm/import-meta-resolve#readme",
+			"repository": {
+				"url": "git+https://github.com/wooorm/import-meta-resolve.git",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"url": "https://wooorm.com",
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/wooorm/import-meta-resolve/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"c8": "^7.0.0",
+				"xo": "^0.53.0",
+				"semver": "^7.0.0",
+				"prettier": "^2.0.0",
+				"remark-cli": "^11.0.0",
+				"typescript": "^4.0.0",
+				"@types/node": "^18.0.0",
+				"@types/semver": "^7.0.0",
+				"type-coverage": "^2.0.0",
+				"remark-preset-wooorm": "^9.0.0"
+			},
+			"keywords": [
+				"resolve",
+				"node",
+				"esm",
+				"module"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run generate && npm run build && npm run format && npm run test-coverage",
+				"build": "tsc --build --clean && tsc --build && type-coverage",
+				"format": "remark . -qfo && prettier . -w --loglevel warn && xo --fix",
+				"prepack": "npm run generate && npm run build && npm run format",
+				"generate": "node --conditions development script.js",
+				"test-api": "node --experimental-import-meta-resolve test/baseline.js && node test/index.js",
+				"test-coverage": "c8 --check-coverage --branches 75 --functions 75 --lines 75 --statements 75 --reporter lcov npm run test-api"
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/wooorm",
+				"type": "github"
+			},
+			"_id": "import-meta-resolve@2.2.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/import-meta-resolve/-/import-meta-resolve-2.2.2.tgz",
+				"shasum": "75237301e72d1f0fbd74dbc6cca9324b164c2cc9",
+				"integrity": "sha512-f8KcQ1D80V7RnqVm+/lirO9zkOxjGxhaTC1IPrBGd3MEfNgmNG67tSUO9gTi2F3Blr2Az6g1vocaxzkVnWl9MA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIFb0Q5cQ7mS1Q7rJvHyw2IURnKgjA93EdhwMJypMDyBfAiEAnFFIvyyhPJAAkPkjARoSjgV8O8h0IiVXhtk9NfOTH6w="
+					}
+				]
+			},
+			"_npmVersion": "9.6.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "4831612957ab3465cd7c3c1b6fc4db85984de979",
+			"types": "index.d.ts",
+			"xo": {
+				"rules": {
+					"no-new": "off",
+					"max-depth": "off",
+					"complexity": "off",
+					"max-params": "off",
+					"no-constant-condition": "off",
+					"prefer-arrow-callback": "off"
+				},
+				"ignore": [
+					"test/node_modules/"
+				],
+				"prettier": true
+			},
+			"typeCoverage": {
+				"detail": true,
+				"strict": true,
+				"atLeast": 100,
+				"ignoreCatch": true,
+				"ignoreFiles": [
+					"lib/errors.d.ts"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/import-meta-resolve_2.2.2_1678530710107_0.1716987583657763",
+				"host": "s3://npm-registry-packages"
+			},
+			"type": "module",
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm",
+					[
+						"remark-lint-maximum-heading-length",
+						false
+					]
+				]
+			},
+			"sideEffects": false,
+			"prettier": {
+				"semi": false,
+				"useTabs": false,
+				"tabWidth": 2,
+				"singleQuote": true,
+				"trailingComma": "none",
+				"bracketSpacing": false
+			},
+			"_nodeVersion": "19.3.0"
+		},
+		"2.0.2": {
+			"name": "import-meta-resolve",
+			"description": "Resolve things like Node.js  ponyfill for `import.meta.resolve`",
+			"version": "2.0.2",
+			"author": {
+				"url": "https://wooorm.com",
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com"
+			},
+			"homepage": "https://github.com/wooorm/import-meta-resolve#readme",
+			"repository": {
+				"url": "git+https://github.com/wooorm/import-meta-resolve.git",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"url": "https://wooorm.com",
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/wooorm/import-meta-resolve/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"builtins": "^5.0.0"
+			},
+			"devDependencies": {
+				"c8": "^7.0.0",
+				"xo": "^0.49.0",
+				"tape": "^5.0.0",
+				"rimraf": "^3.0.0",
+				"prettier": "^2.0.0",
+				"remark-cli": "^10.0.0",
+				"typescript": "^4.0.0",
+				"@types/node": "^17.0.0",
+				"@types/tape": "^4.0.0",
+				"@types/semver": "^7.0.0",
+				"type-coverage": "^2.0.0",
+				"remark-preset-wooorm": "^9.0.0"
+			},
+			"keywords": [
+				"resolve",
+				"node",
+				"esm",
+				"module"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run generate && npm run build && npm run format && npm run test-coverage",
+				"build": "rimraf \"{lib/**,test/**,}*.d.ts\" && tsc && type-coverage",
+				"format": "remark . -qfo && prettier . -w --loglevel warn && xo --fix",
+				"prepack": "npm run build && npm run format",
+				"generate": "node script.js",
+				"test-api": "node --experimental-import-meta-resolve test/baseline.js && node test/index.js",
+				"test-coverage": "node --experimental-import-meta-resolve test/baseline.js && c8 --check-coverage --branches 75 --functions 75 --lines 75 --statements 75 --reporter lcov node test/index.js"
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/wooorm",
+				"type": "github"
+			},
+			"_id": "import-meta-resolve@2.0.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/import-meta-resolve/-/import-meta-resolve-2.0.2.tgz",
+				"shasum": "25a8de8521df7a26775f2ac9c5198f339b9200d7",
+				"integrity": "sha512-e53F4xWZr/pCeLRJreOIJrpKvo9Bm3K1pJSp+xhI6yeuWqSDW1xRiML/VclnSXvke96VCzMkza9avmvd9l9ixA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQC86Pawv5Jc44OtbJ2ITbHi9w2n664wS5lztv1nJPqUyQIhAJudr6b6Kb3tBKvllPcvdbxAJ0oJDUwpGDtRcbth2lp4"
+					}
+				]
+			},
+			"_npmVersion": "8.9.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "937d3f33413bf61d2e85e866d4650cb38ebd94cb",
+			"types": "index.d.ts",
+			"xo": {
+				"rules": {
+					"no-new": "off",
+					"max-depth": "off",
+					"complexity": "off",
+					"max-params": "off",
+					"no-constant-condition": "off",
+					"prefer-arrow-callback": "off"
+				},
+				"ignore": [
+					"test/node_modules/"
+				],
+				"prettier": true
+			},
+			"typeCoverage": {
+				"detail": true,
+				"strict": true,
+				"atLeast": 100,
+				"ignoreCatch": true,
+				"ignoreFiles": [
+					"lib/errors.d.ts"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/import-meta-resolve_2.0.2_1653501284628_0.4828846318330906",
+				"host": "s3://npm-registry-packages"
+			},
+			"type": "module",
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm",
+					[
+						"remark-lint-maximum-heading-length",
+						false
+					]
+				]
+			},
+			"sideEffects": false,
+			"prettier": {
+				"semi": false,
+				"useTabs": false,
+				"tabWidth": 2,
+				"singleQuote": true,
+				"trailingComma": "none",
+				"bracketSpacing": false
+			},
+			"_nodeVersion": "18.2.0"
+		},
+		"2.2.0": {
+			"name": "import-meta-resolve",
+			"description": "Resolve things like Node.js  ponyfill for `import.meta.resolve`",
+			"version": "2.2.0",
+			"author": {
+				"url": "https://wooorm.com",
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com"
+			},
+			"homepage": "https://github.com/wooorm/import-meta-resolve#readme",
+			"repository": {
+				"url": "git+https://github.com/wooorm/import-meta-resolve.git",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"url": "https://wooorm.com",
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/wooorm/import-meta-resolve/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"c8": "^7.0.0",
+				"xo": "^0.53.0",
+				"semver": "^7.0.0",
+				"prettier": "^2.0.0",
+				"remark-cli": "^11.0.0",
+				"typescript": "^4.0.0",
+				"@types/node": "^18.0.0",
+				"@types/semver": "^7.0.0",
+				"type-coverage": "^2.0.0",
+				"remark-preset-wooorm": "^9.0.0"
+			},
+			"keywords": [
+				"resolve",
+				"node",
+				"esm",
+				"module"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run generate && npm run build && npm run format && npm run test-coverage",
+				"build": "tsc --build --clean && tsc --build && type-coverage",
+				"format": "remark . -qfo && prettier . -w --loglevel warn && xo --fix",
+				"prepack": "npm run generate && npm run build && npm run format",
+				"generate": "node --conditions development script.js",
+				"test-api": "node --experimental-import-meta-resolve test/baseline.js && node test/index.js",
+				"test-coverage": "c8 --check-coverage --branches 75 --functions 75 --lines 75 --statements 75 --reporter lcov npm run test-api"
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/wooorm",
+				"type": "github"
+			},
+			"_id": "import-meta-resolve@2.2.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/import-meta-resolve/-/import-meta-resolve-2.2.0.tgz",
+				"shasum": "701aa29a044954bd135214049294745ac70dd607",
+				"integrity": "sha512-CpPOtiCHxP9HdtDM5F45tNiAe66Cqlv3f5uHoJjt+KlaLrUh9/Wz9vepADZ78SlqEo62aDWZtj9ydMGXV+CPnw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDX+MHDn6XG0Z8uSyiYS8OrmXJLVnFq2IT9G1N2IQJpNwIgeXEv1HfKHBgQBzBhbJxwzfxN7GHuKEBOy0k/OeJZZ1o="
+					}
+				]
+			},
+			"_npmVersion": "8.19.2",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "01476440e0dbcdeec588ef65031e7fb8b80fcb53",
+			"types": "index.d.ts",
+			"xo": {
+				"rules": {
+					"no-new": "off",
+					"max-depth": "off",
+					"complexity": "off",
+					"max-params": "off",
+					"no-constant-condition": "off",
+					"prefer-arrow-callback": "off"
+				},
+				"ignore": [
+					"test/node_modules/"
+				],
+				"prettier": true
+			},
+			"typeCoverage": {
+				"detail": true,
+				"strict": true,
+				"atLeast": 100,
+				"ignoreCatch": true,
+				"ignoreFiles": [
+					"lib/errors.d.ts"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/import-meta-resolve_2.2.0_1669222248538_0.2407882054868491",
+				"host": "s3://npm-registry-packages"
+			},
+			"type": "module",
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm",
+					[
+						"remark-lint-maximum-heading-length",
+						false
+					]
+				]
+			},
+			"sideEffects": false,
+			"prettier": {
+				"semi": false,
+				"useTabs": false,
+				"tabWidth": 2,
+				"singleQuote": true,
+				"trailingComma": "none",
+				"bracketSpacing": false
+			},
+			"_nodeVersion": "19.0.0"
+		},
+		"0.1.0": {
+			"name": "import-meta-resolve",
+			"description": "Resolve paths in node when using es modules (or commonjs). Ponyfill for import.meta.resolve as it is behind a flag",
+			"version": "0.1.0",
+			"author": {
+				"name": "Thomas Allmer",
+				"email": "d4kmor@gmail.com"
+			},
+			"engines": {
+				"node": ">=10.0.0"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"chai": "^4.2.0",
+				"husky": "^1.0.0",
+				"mocha": "^8.1.1",
+				"eslint": "^7.5.0",
+				"prettier": "^2.0.5",
+				"typescript": "^4.0.0",
+				"@types/chai": "^4.2.11",
+				"@types/node": "^14.6.0",
+				"lint-staged": "^8.0.0",
+				"@types/mocha": "^8.0.01",
+				"eslint-config-prettier": "^6.11.0",
+				"prettier-plugin-package": "^1.0.0",
+				"@typescript-eslint/parser": "^3.7.0",
+				"@typescript-eslint/eslint-plugin": "^3.7.0"
+			},
+			"keywords": [
+				"import",
+				"meta",
+				"resolve"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "d4kmor",
+					"email": "d4kmor@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "npm run lint:eslint && npm run lint:prettier",
+				"test": "mocha test/**/*.test.js test/*.test.js",
+				"build": "rm tsconfig.tsbuildinfo && tsc",
+				"format": "npm run format:eslint && npm run format:prettier",
+				"lint:md": "remark ./docs",
+				"prepublish": "npm run build",
+				"test:watch": "mocha test/**/*.test.js --watch",
+				"lint:eslint": "eslint --ext .ts,.js,.mjs,.cjs .",
+				"format:eslint": "eslint --ext .ts,.js,.mjs,.cjs . --fix",
+				"lint:prettier": "node node_modules/prettier/bin-prettier.js \"**/*.{ts,js,mjs,cjs,md}\" --check --ignore-path .eslintignore",
+				"format:prettier": "node node_modules/prettier/bin-prettier.js \"**/*.{ts,js,mjs,cjs,md}\" \"**/package.json\" --write --ignore-path .eslintignore",
+				"install-puppeteer-firefox": "cd node_modules/puppeteer && PUPPETEER_PRODUCT=firefox node install.js"
+			},
+			"lastModified": 0,
+			"_id": "import-meta-resolve@0.1.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/import-meta-resolve/-/import-meta-resolve-0.1.0.tgz",
+				"shasum": "027220eaa2298589d8d29b437a92a22db1bec6b2",
+				"integrity": "sha512-Fmrdns/Ckw/fpzxiUu3Bv6UDzASh3ZW6TpvyWU6RpZ4xQl0YmCyfA4mcifG3QRUrPUk+iQm3upQSM1SBvlHrTw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDvlBrnk++XLBwQINLol4tT/3xQI9kkVezCuipiOW1RQQIgU8L+pJfIKdarUO23o4sUx78/eaG5gDUyk7Jf+OL4zxE="
+					}
+				]
+			},
+			"_npmVersion": "6.14.8",
+			"_npmUser": {
+				"name": "d4kmor",
+				"email": "d4kmor@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"lint-staged": {
+				"*.js": [
+					"eslint --fix",
+					"prettier --write --ignore-path .eslintignore",
+					"git add"
+				]
+			},
+			"gitHead": "3c1f1d7fb0194c8048188ad4921ba97b3c9181fc",
+			"types": "dist/importMetaResolve.d.ts",
+			"husky": {
+				"hooks": {
+					"pre-commit": "lint-staged"
+				}
+			},
+			"exports": {
+				".": {
+					"import": "./index.mjs",
+					"require": "./index.js"
+				}
+			},
+			"module": "index.mjs",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/import-meta-resolve_0.1.0_1599003572797_0.06215230816644768",
+				"host": "s3://npm-registry-packages"
+			},
+			"eslintConfig": {
+				"env": {
+					"node": true,
+					"mocha": true,
+					"es2020": true,
+					"browser": true
+				},
+				"rules": {
+					"@typescript-eslint/no-unused-vars": "error",
+					"@typescript-eslint/no-explicit-any": "off",
+					"@typescript-eslint/no-var-requires": "off",
+					"@typescript-eslint/no-empty-interface": "off",
+					"@typescript-eslint/no-non-null-assertion": "off",
+					"@typescript-eslint/explicit-module-boundary-types": "off"
+				},
+				"parser": "@typescript-eslint/parser",
+				"extends": [
+					"eslint:recommended",
+					"eslint-config-prettier",
+					"plugin:@typescript-eslint/recommended"
+				],
+				"plugins": [
+					"@typescript-eslint"
+				]
+			},
+			"prettier": {
+				"printWidth": 100,
+				"arrowParens": "avoid",
+				"singleQuote": true,
+				"trailingComma": "all"
+			},
+			"_nodeVersion": "14.9.0",
+			"contributors": []
+		},
+		"2.0.3": {
+			"name": "import-meta-resolve",
+			"description": "Resolve things like Node.js  ponyfill for `import.meta.resolve`",
+			"version": "2.0.3",
+			"author": {
+				"url": "https://wooorm.com",
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com"
+			},
+			"homepage": "https://github.com/wooorm/import-meta-resolve#readme",
+			"repository": {
+				"url": "git+https://github.com/wooorm/import-meta-resolve.git",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"url": "https://wooorm.com",
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/wooorm/import-meta-resolve/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"builtins": "^5.0.0"
+			},
+			"devDependencies": {
+				"c8": "^7.0.0",
+				"xo": "^0.50.0",
+				"tape": "^5.0.0",
+				"rimraf": "^3.0.0",
+				"prettier": "^2.0.0",
+				"remark-cli": "^10.0.0",
+				"typescript": "^4.0.0",
+				"@types/node": "^17.0.0",
+				"@types/tape": "^4.0.0",
+				"@types/semver": "^7.0.0",
+				"type-coverage": "^2.0.0",
+				"remark-preset-wooorm": "^9.0.0"
+			},
+			"keywords": [
+				"resolve",
+				"node",
+				"esm",
+				"module"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run generate && npm run build && npm run format && npm run test-coverage",
+				"build": "rimraf \"{lib/**,test/**,}*.d.ts\" && tsc && type-coverage",
+				"format": "remark . -qfo && prettier . -w --loglevel warn && xo --fix",
+				"prepack": "npm run build && npm run format",
+				"generate": "node script.js",
+				"test-api": "node --experimental-import-meta-resolve test/baseline.js && node test/index.js",
+				"test-coverage": "node --experimental-import-meta-resolve test/baseline.js && c8 --check-coverage --branches 75 --functions 75 --lines 75 --statements 75 --reporter lcov node test/index.js"
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/wooorm",
+				"type": "github"
+			},
+			"_id": "import-meta-resolve@2.0.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/import-meta-resolve/-/import-meta-resolve-2.0.3.tgz",
+				"shasum": "117f3dc9a6415e82c32530545e1cf91be5c0a5d1",
+				"integrity": "sha512-fpAppnBpZ3ymQ/dPP97TNsco1HB5+V9SYJ3chY50PP8xn4U/w+Y6ovWBmTImB/prmGsTjzPh8pQYY+EVBlr9mw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIFmO/lY8e10s3YwDT8hIQldvry9XV7ESuWU0NhfJTpKLAiEAgnJTDGA4y13DIElN1kCzzGhCIW8STd9kUYO2ilRBS7Y="
+					}
+				]
+			},
+			"_npmVersion": "8.9.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "5762f21813e93f6110a982d95d4f049bd3922dd9",
+			"types": "index.d.ts",
+			"xo": {
+				"rules": {
+					"no-new": "off",
+					"max-depth": "off",
+					"complexity": "off",
+					"max-params": "off",
+					"no-constant-condition": "off",
+					"prefer-arrow-callback": "off"
+				},
+				"ignore": [
+					"test/node_modules/"
+				],
+				"prettier": true
+			},
+			"typeCoverage": {
+				"detail": true,
+				"strict": true,
+				"atLeast": 100,
+				"ignoreCatch": true,
+				"ignoreFiles": [
+					"lib/errors.d.ts"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/import-meta-resolve_2.0.3_1654954886325_0.6250620962176794",
+				"host": "s3://npm-registry-packages"
+			},
+			"type": "module",
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm",
+					[
+						"remark-lint-maximum-heading-length",
+						false
+					]
+				]
+			},
+			"sideEffects": false,
+			"prettier": {
+				"semi": false,
+				"useTabs": false,
+				"tabWidth": 2,
+				"singleQuote": true,
+				"trailingComma": "none",
+				"bracketSpacing": false
+			},
+			"_nodeVersion": "18.2.0"
+		},
+		"2.2.1": {
+			"name": "import-meta-resolve",
+			"description": "Resolve things like Node.js  ponyfill for `import.meta.resolve`",
+			"version": "2.2.1",
+			"author": {
+				"url": "https://wooorm.com",
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com"
+			},
+			"homepage": "https://github.com/wooorm/import-meta-resolve#readme",
+			"repository": {
+				"url": "git+https://github.com/wooorm/import-meta-resolve.git",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"url": "https://wooorm.com",
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/wooorm/import-meta-resolve/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"c8": "^7.0.0",
+				"xo": "^0.53.0",
+				"semver": "^7.0.0",
+				"prettier": "^2.0.0",
+				"remark-cli": "^11.0.0",
+				"typescript": "^4.0.0",
+				"@types/node": "^18.0.0",
+				"@types/semver": "^7.0.0",
+				"type-coverage": "^2.0.0",
+				"remark-preset-wooorm": "^9.0.0"
+			},
+			"keywords": [
+				"resolve",
+				"node",
+				"esm",
+				"module"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run generate && npm run build && npm run format && npm run test-coverage",
+				"build": "tsc --build --clean && tsc --build && type-coverage",
+				"format": "remark . -qfo && prettier . -w --loglevel warn && xo --fix",
+				"prepack": "npm run generate && npm run build && npm run format",
+				"generate": "node --conditions development script.js",
+				"test-api": "node --experimental-import-meta-resolve test/baseline.js && node test/index.js",
+				"test-coverage": "c8 --check-coverage --branches 75 --functions 75 --lines 75 --statements 75 --reporter lcov npm run test-api"
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/wooorm",
+				"type": "github"
+			},
+			"_id": "import-meta-resolve@2.2.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/import-meta-resolve/-/import-meta-resolve-2.2.1.tgz",
+				"shasum": "80fdeddbc15d7f3992c37425023ffb4aca7cb583",
+				"integrity": "sha512-C6lLL7EJPY44kBvA80gq4uMsVFw5x3oSKfuMl1cuZ2RkI5+UJqQXgn+6hlUew0y4ig7Ypt4CObAAIzU53Nfpuw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIGVxe+LxBPt1o3H2xPRXs/M5WBn0pa87tFGur58PXdq+AiBLYfgbyHQbpnX2mmGpaJBxhxhbxifYFIFnA+4ZUrhfbQ=="
+					}
+				]
+			},
+			"_npmVersion": "9.2.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "cf9de8953a0bd7d7f2f21fec710871af2485080a",
+			"types": "index.d.ts",
+			"xo": {
+				"rules": {
+					"no-new": "off",
+					"max-depth": "off",
+					"complexity": "off",
+					"max-params": "off",
+					"no-constant-condition": "off",
+					"prefer-arrow-callback": "off"
+				},
+				"ignore": [
+					"test/node_modules/"
+				],
+				"prettier": true
+			},
+			"typeCoverage": {
+				"detail": true,
+				"strict": true,
+				"atLeast": 100,
+				"ignoreCatch": true,
+				"ignoreFiles": [
+					"lib/errors.d.ts"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/import-meta-resolve_2.2.1_1673004844450_0.8100683140568399",
+				"host": "s3://npm-registry-packages"
+			},
+			"type": "module",
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm",
+					[
+						"remark-lint-maximum-heading-length",
+						false
+					]
+				]
+			},
+			"sideEffects": false,
+			"prettier": {
+				"semi": false,
+				"useTabs": false,
+				"tabWidth": 2,
+				"singleQuote": true,
+				"trailingComma": "none",
+				"bracketSpacing": false
+			},
+			"_nodeVersion": "19.3.0"
+		},
+		"3.0.0": {
+			"name": "import-meta-resolve",
+			"description": "Resolve things like Node.js  ponyfill for `import.meta.resolve`",
+			"version": "3.0.0",
+			"author": {
+				"url": "https://wooorm.com",
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com"
+			},
+			"homepage": "https://github.com/wooorm/import-meta-resolve#readme",
+			"repository": {
+				"url": "git+https://github.com/wooorm/import-meta-resolve.git",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"url": "https://wooorm.com",
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/wooorm/import-meta-resolve/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"c8": "^7.0.0",
+				"xo": "^0.54.0",
+				"semver": "^7.0.0",
+				"prettier": "^2.0.0",
+				"remark-cli": "^11.0.0",
+				"typescript": "^5.0.0",
+				"@types/node": "^18.0.0",
+				"@types/semver": "^7.0.0",
+				"type-coverage": "^2.0.0",
+				"remark-preset-wooorm": "^9.0.0"
+			},
+			"keywords": [
+				"resolve",
+				"node",
+				"esm",
+				"module"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run generate && npm run build && npm run format && npm run test-coverage",
+				"build": "tsc --build --clean && tsc --build && type-coverage",
+				"format": "remark . -qfo && prettier . -w --loglevel warn && xo --fix",
+				"prepack": "npm run generate && npm run build && npm run format",
+				"generate": "node --conditions development script.js",
+				"test-api": "node --experimental-import-meta-resolve test/baseline.js && node --experimental-import-meta-resolve test/baseline-async.js && node test/index.js",
+				"test-coverage": "c8 --check-coverage --branches 75 --functions 75 --lines 75 --statements 75 --reporter lcov npm run test-api"
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/wooorm",
+				"type": "github"
+			},
+			"_id": "import-meta-resolve@3.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/import-meta-resolve/-/import-meta-resolve-3.0.0.tgz",
+				"shasum": "94a6aabc623874fbc2f3525ec1300db71c6cbc11",
+				"integrity": "sha512-4IwhLhNNA8yy445rPjD/lWh++7hMDOml2eHtd58eG7h+qK3EryMuuRbsHGPikCoAgIkkDnckKfWSk2iDla/ejg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCcrK4962aqHktPdnMCyLuDp8Uu4Pd5BXt3it38DiDfRQIgIaLdGa/4j47+1poY2tnBO+v+WHzGlSpHxf9v2KiXwhM="
+					}
+				]
+			},
+			"_npmVersion": "9.5.1",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "4db9f0f67f67cbff10830e35674d2e30688dc311",
+			"types": "index.d.ts",
+			"xo": {
+				"rules": {
+					"no-new": "off",
+					"max-depth": "off",
+					"complexity": "off",
+					"max-params": "off",
+					"no-constant-condition": "off",
+					"prefer-arrow-callback": "off"
+				},
+				"ignore": [
+					"test/node_modules/"
+				],
+				"prettier": true
+			},
+			"typeCoverage": {
+				"detail": true,
+				"strict": true,
+				"atLeast": 100,
+				"ignoreCatch": true,
+				"ignoreFiles": [
+					"lib/errors.d.ts"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/import-meta-resolve_3.0.0_1682332588772_0.18645900950823502",
+				"host": "s3://npm-registry-packages"
+			},
+			"type": "module",
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm",
+					[
+						"remark-lint-maximum-heading-length",
+						false
+					]
+				]
+			},
+			"sideEffects": false,
+			"prettier": {
+				"semi": false,
+				"useTabs": false,
+				"tabWidth": 2,
+				"singleQuote": true,
+				"trailingComma": "none",
+				"bracketSpacing": false
+			},
+			"_nodeVersion": "19.8.1"
+		},
+		"3.1.0": {
+			"name": "import-meta-resolve",
+			"description": "Resolve things like Node.js  ponyfill for `import.meta.resolve`",
+			"version": "3.1.0",
+			"author": {
+				"url": "https://wooorm.com",
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com"
+			},
+			"homepage": "https://github.com/wooorm/import-meta-resolve#readme",
+			"repository": {
+				"url": "git+https://github.com/wooorm/import-meta-resolve.git",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"url": "https://wooorm.com",
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/wooorm/import-meta-resolve/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"c8": "^8.0.0",
+				"xo": "^0.56.0",
+				"semver": "^7.0.0",
+				"prettier": "^3.0.0",
+				"remark-cli": "^11.0.0",
+				"typescript": "^5.0.0",
+				"@types/node": "^20.0.0",
+				"@types/semver": "^7.0.0",
+				"type-coverage": "^2.0.0",
+				"remark-preset-wooorm": "^9.0.0"
+			},
+			"keywords": [
+				"resolve",
+				"node",
+				"esm",
+				"module"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run generate && npm run build && npm run format && npm run test-coverage",
+				"build": "tsc --build --clean && tsc --build && type-coverage",
+				"format": "remark . -qfo && prettier . -w --log-level warn && xo --fix",
+				"prepack": "npm run generate && npm run build && npm run format",
+				"generate": "node --conditions development script.js",
+				"test-api": "node --experimental-import-meta-resolve test/baseline.js && node --experimental-import-meta-resolve test/baseline-async.js && node test/index.js",
+				"test-coverage": "c8 --check-coverage --branches 75 --functions 75 --lines 75 --statements 75 --reporter lcov npm run test-api"
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/wooorm",
+				"type": "github"
+			},
+			"_id": "import-meta-resolve@3.1.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/import-meta-resolve/-/import-meta-resolve-3.1.0.tgz",
+				"shasum": "995a5ada781d1c0730911f2251f6f8108acb9b28",
+				"integrity": "sha512-Vc30SCKXMGwNUY57H6a7sZA0SRK6SylVYQNuDmnpS6Hg9kUj1+H/H8a1z8vM0c8fqZS7qmBHtTbKNWnaNRgpvQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQC8BpK/jL4GoTHeduQ/ZTHZrXvJ+H36qrM0vjAUSzGf+AIhAIkgiDsMN6CjNiOMsKKlPoWyDiEWcLCr0lxLWyKGWxjm"
+					}
+				]
+			},
+			"_npmVersion": "10.2.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "38659a69f01e0a39eaa5ad9373f5ea94b220bd7c",
+			"types": "index.d.ts",
+			"xo": {
+				"rules": {
+					"no-new": "off",
+					"max-depth": "off",
+					"complexity": "off",
+					"max-params": "off",
+					"unicorn/prefer-at": "off",
+					"no-constant-condition": "off",
+					"prefer-arrow-callback": "off",
+					"unicorn/prefer-string-replace-all": "off"
+				},
+				"ignore": [
+					"test/node_modules/"
+				],
+				"prettier": true
+			},
+			"typeCoverage": {
+				"detail": true,
+				"strict": true,
+				"atLeast": 100,
+				"ignoreCatch": true,
+				"ignoreFiles": [
+					"lib/errors.d.ts"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/import-meta-resolve_3.1.0_1698939057325_0.8678192252577781",
+				"host": "s3://npm-registry-packages"
+			},
+			"type": "module",
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm",
+					[
+						"remark-lint-maximum-heading-length",
+						false
+					]
+				]
+			},
+			"sideEffects": false,
+			"prettier": {
+				"semi": false,
+				"useTabs": false,
+				"tabWidth": 2,
+				"singleQuote": true,
+				"trailingComma": "none",
+				"bracketSpacing": false
+			},
+			"_nodeVersion": "21.0.0"
+		},
+		"1.0.0": {
+			"name": "import-meta-resolve",
+			"description": "Resolve things like Node.js  ponyfill for `import.meta.resolve`",
+			"version": "1.0.0",
+			"author": {
+				"url": "https://wooorm.com",
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com"
+			},
+			"homepage": "https://github.com/wooorm/import-meta-resolve#readme",
+			"repository": {
+				"url": "git+https://github.com/wooorm/import-meta-resolve.git",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"url": "https://wooorm.com",
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/wooorm/import-meta-resolve/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"builtins": "^4.0.0"
+			},
+			"devDependencies": {
+				"c8": "^7.0.0",
+				"xo": "^0.39.0",
+				"tape": "^5.0.0",
+				"rimraf": "^3.0.0",
+				"prettier": "^2.0.0",
+				"remark-cli": "^9.0.0",
+				"typescript": "^4.0.0",
+				"@types/node": "^15.0.0",
+				"@types/tape": "^4.0.0",
+				"type-coverage": "^2.0.0",
+				"remark-preset-wooorm": "^8.0.0"
+			},
+			"keywords": [
+				"resolve",
+				"node",
+				"esm",
+				"module"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run generate && npm run build && npm run format && npm run test-coverage",
+				"build": "rimraf \"{lib/**,}*.d.ts\" && tsc && type-coverage",
+				"format": "remark . -qfo && prettier . -w --loglevel warn && xo --fix",
+				"prepack": "npm run build && npm run format",
+				"generate": "node script.js",
+				"test-api": "node --experimental-import-meta-resolve test/baseline.js && node test/index.js",
+				"test-coverage": "node --experimental-import-meta-resolve test/baseline.js && c8 --check-coverage --branches 75 --functions 75 --lines 75 --statements 75 --reporter lcov node test/index.js"
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/wooorm",
+				"type": "github"
+			},
+			"_id": "import-meta-resolve@1.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/import-meta-resolve/-/import-meta-resolve-1.0.0.tgz",
+				"shasum": "29c1a7f9efc5adb2c29e9c8967a63ddbd47b3799",
+				"integrity": "sha512-Jz8bzDCmCH4iGhSdflZa721kXk8H3Od1Q8bSL+9UBq1zR5qsGiPcNjMN6uOEuC9iBtnBQUdeWBrPI8FHYpuDFg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDtlnzs2j8d40dskNlrTCNrKdY3UmQayjn9ufDKd9pmtgIhAJFKLvE3WyH7IpavvTF+uOPcaFn8vxC1x4aMxaMdd5Ox"
+					}
+				]
+			},
+			"_npmVersion": "7.12.1",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "e2c22fb6f4832d9cfff8972998080d910f635a3c",
+			"types": "index.d.ts",
+			"xo": {
+				"rules": {
+					"no-new": "off",
+					"max-depth": "off",
+					"complexity": "off",
+					"max-params": "off",
+					"no-constant-condition": "off",
+					"prefer-arrow-callback": "off"
+				},
+				"ignore": [
+					"test/node_modules/"
+				],
+				"prettier": true
+			},
+			"typeCoverage": {
+				"detail": true,
+				"strict": true,
+				"atLeast": 100,
+				"ignoreCatch": true
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/import-meta-resolve_1.0.0_1620986644202_0.5338063993797049",
+				"host": "s3://npm-registry-packages"
+			},
+			"type": "module",
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"sideEffects": false,
+			"prettier": {
+				"semi": false,
+				"useTabs": false,
+				"tabWidth": 2,
+				"singleQuote": true,
+				"trailingComma": "none",
+				"bracketSpacing": false
+			},
+			"_nodeVersion": "16.1.0"
+		},
+		"3.1.1": {
+			"name": "import-meta-resolve",
+			"description": "Resolve things like Node.js  ponyfill for `import.meta.resolve`",
+			"version": "3.1.1",
+			"author": {
+				"url": "https://wooorm.com",
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com"
+			},
+			"homepage": "https://github.com/wooorm/import-meta-resolve#readme",
+			"repository": {
+				"url": "git+https://github.com/wooorm/import-meta-resolve.git",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"url": "https://wooorm.com",
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/wooorm/import-meta-resolve/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"c8": "^8.0.0",
+				"xo": "^0.56.0",
+				"semver": "^7.0.0",
+				"prettier": "^3.0.0",
+				"remark-cli": "^11.0.0",
+				"typescript": "^5.0.0",
+				"@types/node": "^20.0.0",
+				"@types/semver": "^7.0.0",
+				"type-coverage": "^2.0.0",
+				"remark-preset-wooorm": "^9.0.0"
+			},
+			"keywords": [
+				"resolve",
+				"node",
+				"esm",
+				"module"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run generate && npm run build && npm run format && npm run test-coverage",
+				"build": "tsc --build --clean && tsc --build && type-coverage",
+				"format": "remark . -qfo && prettier . -w --log-level warn && xo --fix",
+				"prepack": "npm run generate && npm run build && npm run format",
+				"generate": "node --conditions development script.js",
+				"test-api": "node --experimental-import-meta-resolve test/baseline.js && node --experimental-import-meta-resolve test/baseline-async.js && node test/index.js",
+				"test-coverage": "c8 --check-coverage --branches 75 --functions 75 --lines 75 --statements 75 --reporter lcov npm run test-api"
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/wooorm",
+				"type": "github"
+			},
+			"_id": "import-meta-resolve@3.1.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/import-meta-resolve/-/import-meta-resolve-3.1.1.tgz",
+				"shasum": "75d194ae465d17c15736f414734310c87d4c45d7",
+				"integrity": "sha512-qeywsE/KC3w9Fd2ORrRDUw6nS/nLwZpXgfrOc2IILvZYnCaEMd+D56Vfg9k4G29gIeVi3XKql1RQatME8iYsiw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDwVSD9g2styr5rqUzAg3pRe/a4cyQe+EXamSf0STh3PQIhANTANRh4vS8wQh0v0eiUCXLMLRVe4xGgK1a++Sf+NJfC"
+					}
+				]
+			},
+			"_npmVersion": "10.2.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "43af8adb088b31f0018ac748d914120ca958712b",
+			"types": "index.d.ts",
+			"xo": {
+				"rules": {
+					"no-new": "off",
+					"max-depth": "off",
+					"complexity": "off",
+					"max-params": "off",
+					"unicorn/prefer-at": "off",
+					"no-constant-condition": "off",
+					"prefer-arrow-callback": "off",
+					"unicorn/prefer-string-replace-all": "off"
+				},
+				"ignore": [
+					"test/node_modules/"
+				],
+				"prettier": true
+			},
+			"typeCoverage": {
+				"detail": true,
+				"strict": true,
+				"atLeast": 100,
+				"ignoreCatch": true,
+				"ignoreFiles": [
+					"lib/errors.d.ts"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/import-meta-resolve_3.1.1_1698939727666_0.5448682157741922",
+				"host": "s3://npm-registry-packages"
+			},
+			"type": "module",
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm",
+					[
+						"remark-lint-maximum-heading-length",
+						false
+					]
+				]
+			},
+			"sideEffects": false,
+			"prettier": {
+				"semi": false,
+				"useTabs": false,
+				"tabWidth": 2,
+				"singleQuote": true,
+				"trailingComma": "none",
+				"bracketSpacing": false
+			},
+			"_nodeVersion": "21.0.0"
+		},
+		"1.0.1": {
+			"name": "import-meta-resolve",
+			"description": "Resolve things like Node.js  ponyfill for `import.meta.resolve`",
+			"version": "1.0.1",
+			"author": {
+				"url": "https://wooorm.com",
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com"
+			},
+			"homepage": "https://github.com/wooorm/import-meta-resolve#readme",
+			"repository": {
+				"url": "git+https://github.com/wooorm/import-meta-resolve.git",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"url": "https://wooorm.com",
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/wooorm/import-meta-resolve/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"builtins": "^4.0.0"
+			},
+			"devDependencies": {
+				"c8": "^7.0.0",
+				"xo": "^0.39.0",
+				"tape": "^5.0.0",
+				"rimraf": "^3.0.0",
+				"prettier": "^2.0.0",
+				"remark-cli": "^9.0.0",
+				"typescript": "^4.0.0",
+				"@types/node": "^15.0.0",
+				"@types/tape": "^4.0.0",
+				"type-coverage": "^2.0.0",
+				"remark-preset-wooorm": "^8.0.0"
+			},
+			"keywords": [
+				"resolve",
+				"node",
+				"esm",
+				"module"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run generate && npm run build && npm run format && npm run test-coverage",
+				"build": "rimraf \"{lib/**,}*.d.ts\" && tsc && type-coverage",
+				"format": "remark . -qfo && prettier . -w --loglevel warn && xo --fix",
+				"prepack": "npm run build && npm run format",
+				"generate": "node script.js",
+				"test-api": "node --experimental-import-meta-resolve test/baseline.js && node test/index.js",
+				"test-coverage": "node --experimental-import-meta-resolve test/baseline.js && c8 --check-coverage --branches 75 --functions 75 --lines 75 --statements 75 --reporter lcov node test/index.js"
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/wooorm",
+				"type": "github"
+			},
+			"_id": "import-meta-resolve@1.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/import-meta-resolve/-/import-meta-resolve-1.0.1.tgz",
+				"shasum": "dff5c941c9e42be3932bdce39e4adc0cc549ac40",
+				"integrity": "sha512-9I7gLbveVwULtbwLN7JnVpKKQS/nvdl7PoU2NrRSbVCZdWqZ5AV7R8Lri3aUqwgGNGottrAq347VFEHBlnrDFw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIDlseNxB0Y7g0TQT6gLrywjiMczNRXPyLJAolNBbhGznAiEA5m9TcxhpotXfWLT3uPgUAlf+G1UhvQo2R8qOt2fNgY8="
+					}
+				]
+			},
+			"_npmVersion": "7.12.1",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "0cd9c497f5753c81cafa225bfeb477a1fb68b6bd",
+			"types": "index.d.ts",
+			"xo": {
+				"rules": {
+					"no-new": "off",
+					"max-depth": "off",
+					"complexity": "off",
+					"max-params": "off",
+					"no-constant-condition": "off",
+					"prefer-arrow-callback": "off"
+				},
+				"ignore": [
+					"test/node_modules/"
+				],
+				"prettier": true
+			},
+			"typeCoverage": {
+				"detail": true,
+				"strict": true,
+				"atLeast": 100,
+				"ignoreCatch": true
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/import-meta-resolve_1.0.1_1620987128464_0.815217795873683",
+				"host": "s3://npm-registry-packages"
+			},
+			"type": "module",
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"sideEffects": false,
+			"prettier": {
+				"semi": false,
+				"useTabs": false,
+				"tabWidth": 2,
+				"singleQuote": true,
+				"trailingComma": "none",
+				"bracketSpacing": false
+			},
+			"_nodeVersion": "16.1.0"
+		},
+		"1.1.0": {
+			"name": "import-meta-resolve",
+			"description": "Resolve things like Node.js  ponyfill for `import.meta.resolve`",
+			"version": "1.1.0",
+			"author": {
+				"url": "https://wooorm.com",
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com"
+			},
+			"homepage": "https://github.com/wooorm/import-meta-resolve#readme",
+			"repository": {
+				"url": "git+https://github.com/wooorm/import-meta-resolve.git",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"url": "https://wooorm.com",
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/wooorm/import-meta-resolve/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"builtins": "^4.0.0"
+			},
+			"devDependencies": {
+				"c8": "^7.0.0",
+				"xo": "^0.39.0",
+				"tape": "^5.0.0",
+				"rimraf": "^3.0.0",
+				"prettier": "^2.0.0",
+				"remark-cli": "^9.0.0",
+				"typescript": "^4.0.0",
+				"@types/node": "^15.0.0",
+				"@types/tape": "^4.0.0",
+				"@types/semver": "^7.0.0",
+				"type-coverage": "^2.0.0",
+				"remark-preset-wooorm": "^8.0.0"
+			},
+			"keywords": [
+				"resolve",
+				"node",
+				"esm",
+				"module"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run generate && npm run build && npm run format && npm run test-coverage",
+				"build": "rimraf \"{lib/**,test/**,}*.d.ts\" && tsc && type-coverage",
+				"format": "remark . -qfo && prettier . -w --loglevel warn && xo --fix",
+				"prepack": "npm run build && npm run format",
+				"generate": "node script.js",
+				"test-api": "node --experimental-import-meta-resolve test/baseline.js && node test/index.js",
+				"test-coverage": "node --experimental-import-meta-resolve test/baseline.js && c8 --check-coverage --branches 75 --functions 75 --lines 75 --statements 75 --reporter lcov node test/index.js"
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/wooorm",
+				"type": "github"
+			},
+			"_id": "import-meta-resolve@1.1.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/import-meta-resolve/-/import-meta-resolve-1.1.0.tgz",
+				"shasum": "27265485e65b029cdac9f95402ea952baad36517",
+				"integrity": "sha512-jMmy9w/9Uk4KDfxbGfy4qomFePGc+QFWAkoAeVsc72W7VG1M+u/ytE0H4MDUEp2rtvxw3sEFnY44nh5DRzRIQQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQCjXPyJ4ga/3JGkPwQqkLg37xre0FjteIrKddfo4BuiyQIhAMWtZqZ+qQr7SeUn2zNkB/b81PnZqGp3N44tW5q/eiWp"
+					}
+				]
+			},
+			"_npmVersion": "7.12.1",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "7359d59d27587c0a0efd711e376a5a983aa8dfab",
+			"types": "index.d.ts",
+			"xo": {
+				"rules": {
+					"no-new": "off",
+					"max-depth": "off",
+					"complexity": "off",
+					"max-params": "off",
+					"no-constant-condition": "off",
+					"prefer-arrow-callback": "off"
+				},
+				"ignore": [
+					"test/node_modules/"
+				],
+				"prettier": true
+			},
+			"typeCoverage": {
+				"detail": true,
+				"strict": true,
+				"atLeast": 100,
+				"ignoreCatch": true
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/import-meta-resolve_1.1.0_1621188118033_0.47777926935662784",
+				"host": "s3://npm-registry-packages"
+			},
+			"type": "module",
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"sideEffects": false,
+			"prettier": {
+				"semi": false,
+				"useTabs": false,
+				"tabWidth": 2,
+				"singleQuote": true,
+				"trailingComma": "none",
+				"bracketSpacing": false
+			},
+			"_nodeVersion": "16.1.0"
+		},
+		"1.1.1": {
+			"name": "import-meta-resolve",
+			"description": "Resolve things like Node.js  ponyfill for `import.meta.resolve`",
+			"version": "1.1.1",
+			"author": {
+				"url": "https://wooorm.com",
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com"
+			},
+			"homepage": "https://github.com/wooorm/import-meta-resolve#readme",
+			"repository": {
+				"url": "git+https://github.com/wooorm/import-meta-resolve.git",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"url": "https://wooorm.com",
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/wooorm/import-meta-resolve/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"builtins": "^4.0.0"
+			},
+			"devDependencies": {
+				"c8": "^7.0.0",
+				"xo": "^0.39.0",
+				"tape": "^5.0.0",
+				"rimraf": "^3.0.0",
+				"prettier": "^2.0.0",
+				"remark-cli": "^9.0.0",
+				"typescript": "^4.0.0",
+				"@types/node": "^15.0.0",
+				"@types/tape": "^4.0.0",
+				"@types/semver": "^7.0.0",
+				"type-coverage": "^2.0.0",
+				"remark-preset-wooorm": "^8.0.0"
+			},
+			"keywords": [
+				"resolve",
+				"node",
+				"esm",
+				"module"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run generate && npm run build && npm run format && npm run test-coverage",
+				"build": "rimraf \"{lib/**,test/**,}*.d.ts\" && tsc && type-coverage",
+				"format": "remark . -qfo && prettier . -w --loglevel warn && xo --fix",
+				"prepack": "npm run build && npm run format",
+				"generate": "node script.js",
+				"test-api": "node --experimental-import-meta-resolve test/baseline.js && node test/index.js",
+				"test-coverage": "node --experimental-import-meta-resolve test/baseline.js && c8 --check-coverage --branches 75 --functions 75 --lines 75 --statements 75 --reporter lcov node test/index.js"
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/wooorm",
+				"type": "github"
+			},
+			"_id": "import-meta-resolve@1.1.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/import-meta-resolve/-/import-meta-resolve-1.1.1.tgz",
+				"shasum": "244fd542fd1fae73550d4f8b3cde3bba1d7b2b18",
+				"integrity": "sha512-JiTuIvVyPaUg11eTrNDx5bgQ/yMKMZffc7YSjvQeSMXy58DO2SQ8BtAf3xteZvmzvjYh14wnqNjL8XVeDy2o9A==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQD+3kI2PG7dxGJcfpwUmbor0N9fJzDJg4BJIb/9hYvHDQIgH23eAwziTg+qmY3vjPc/Sa4HumawJ082fzi+k4rpKtY="
+					}
+				]
+			},
+			"_npmVersion": "7.14.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "4dc54e351c2eec50cd769933fba0b8d1f2377dc3",
+			"types": "index.d.ts",
+			"xo": {
+				"rules": {
+					"no-new": "off",
+					"max-depth": "off",
+					"complexity": "off",
+					"max-params": "off",
+					"no-constant-condition": "off",
+					"prefer-arrow-callback": "off"
+				},
+				"ignore": [
+					"test/node_modules/"
+				],
+				"prettier": true
+			},
+			"typeCoverage": {
+				"detail": true,
+				"strict": true,
+				"atLeast": 100,
+				"ignoreCatch": true
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/import-meta-resolve_1.1.1_1621596849672_0.9468087227208584",
+				"host": "s3://npm-registry-packages"
+			},
+			"type": "module",
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"sideEffects": false,
+			"prettier": {
+				"semi": false,
+				"useTabs": false,
+				"tabWidth": 2,
+				"singleQuote": true,
+				"trailingComma": "none",
+				"bracketSpacing": false
+			},
+			"_nodeVersion": "16.1.0"
+		}
+	},
+	"time": {
+		"2.0.0": "2022-05-22T19:53:02.011Z",
+		"2.0.1": "2022-05-24T08:42:59.159Z",
+		"2.1.0": "2022-08-14T21:47:24.964Z",
+		"created": "2020-09-01T23:39:32.797Z",
+		"4.2.0": "2025-08-29T18:46:15.488Z",
+		"4.0.0": "2023-11-02T15:44:44.953Z",
+		"4.1.0": "2024-04-29T11:27:50.991Z",
+		"2.2.2": "2023-03-11T10:31:50.289Z",
+		"2.0.2": "2022-05-25T17:54:44.847Z",
+		"2.2.0": "2022-11-23T16:50:48.767Z",
+		"0.1.0": "2020-09-01T23:39:32.929Z",
+		"2.0.3": "2022-06-11T13:41:26.554Z",
+		"2.2.1": "2023-01-06T11:34:04.608Z",
+		"3.0.0": "2023-04-24T10:36:28.964Z",
+		"modified": "2025-08-29T18:46:15.649Z",
+		"3.1.0": "2023-11-02T15:30:57.578Z",
+		"1.0.0": "2021-05-14T10:04:04.434Z",
+		"3.1.1": "2023-11-02T15:42:07.833Z",
+		"1.0.1": "2021-05-14T10:12:08.608Z",
+		"1.1.0": "2021-05-16T18:01:58.164Z",
+		"1.1.1": "2021-05-21T11:34:09.860Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "4.2.0"
+	},
+	"_uplinks": {
+		"artifactory-sabadell": {
+			"etag": "fb7c063968f2588b92fb6bc86232f6a76656c1eb",
+			"fetched": 1782459825177
+		}
+	},
+	"_distfiles": {
+		"import-meta-resolve-2.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/import-meta-resolve/-/import-meta-resolve-2.0.0.tgz",
+			"sha": "5f5783c2d95910c1bab38fe41838e4f86add2347",
+			"registry": "artifactory-sabadell"
+		},
+		"import-meta-resolve-2.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/import-meta-resolve/-/import-meta-resolve-2.0.1.tgz",
+			"sha": "d45dee70046d26a77e14a918cb195c5cc48750a9",
+			"registry": "artifactory-sabadell"
+		},
+		"import-meta-resolve-2.1.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/import-meta-resolve/-/import-meta-resolve-2.1.0.tgz",
+			"sha": "c8952d331ed6e9bb6ad524a7549deb3d34af41ce",
+			"registry": "artifactory-sabadell"
+		},
+		"import-meta-resolve-4.2.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/import-meta-resolve/-/import-meta-resolve-4.2.0.tgz",
+			"sha": "08cb85b5bd37ecc8eb1e0f670dc2767002d43734",
+			"registry": "artifactory-sabadell"
+		},
+		"import-meta-resolve-4.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/import-meta-resolve/-/import-meta-resolve-4.0.0.tgz",
+			"sha": "0b1195915689f60ab00f830af0f15cc841e8919e",
+			"registry": "artifactory-sabadell"
+		},
+		"import-meta-resolve-4.1.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/import-meta-resolve/-/import-meta-resolve-4.1.0.tgz",
+			"sha": "f9db8bead9fafa61adb811db77a2bf22c5399706",
+			"registry": "artifactory-sabadell"
+		},
+		"import-meta-resolve-2.2.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/import-meta-resolve/-/import-meta-resolve-2.2.2.tgz",
+			"sha": "75237301e72d1f0fbd74dbc6cca9324b164c2cc9",
+			"registry": "artifactory-sabadell"
+		},
+		"import-meta-resolve-2.0.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/import-meta-resolve/-/import-meta-resolve-2.0.2.tgz",
+			"sha": "25a8de8521df7a26775f2ac9c5198f339b9200d7",
+			"registry": "artifactory-sabadell"
+		},
+		"import-meta-resolve-2.2.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/import-meta-resolve/-/import-meta-resolve-2.2.0.tgz",
+			"sha": "701aa29a044954bd135214049294745ac70dd607",
+			"registry": "artifactory-sabadell"
+		},
+		"import-meta-resolve-0.1.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/import-meta-resolve/-/import-meta-resolve-0.1.0.tgz",
+			"sha": "027220eaa2298589d8d29b437a92a22db1bec6b2",
+			"registry": "artifactory-sabadell"
+		},
+		"import-meta-resolve-2.0.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/import-meta-resolve/-/import-meta-resolve-2.0.3.tgz",
+			"sha": "117f3dc9a6415e82c32530545e1cf91be5c0a5d1",
+			"registry": "artifactory-sabadell"
+		},
+		"import-meta-resolve-2.2.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/import-meta-resolve/-/import-meta-resolve-2.2.1.tgz",
+			"sha": "80fdeddbc15d7f3992c37425023ffb4aca7cb583",
+			"registry": "artifactory-sabadell"
+		},
+		"import-meta-resolve-3.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/import-meta-resolve/-/import-meta-resolve-3.0.0.tgz",
+			"sha": "94a6aabc623874fbc2f3525ec1300db71c6cbc11",
+			"registry": "artifactory-sabadell"
+		},
+		"import-meta-resolve-3.1.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/import-meta-resolve/-/import-meta-resolve-3.1.0.tgz",
+			"sha": "995a5ada781d1c0730911f2251f6f8108acb9b28",
+			"registry": "artifactory-sabadell"
+		},
+		"import-meta-resolve-1.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/import-meta-resolve/-/import-meta-resolve-1.0.0.tgz",
+			"sha": "29c1a7f9efc5adb2c29e9c8967a63ddbd47b3799",
+			"registry": "artifactory-sabadell"
+		},
+		"import-meta-resolve-3.1.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/import-meta-resolve/-/import-meta-resolve-3.1.1.tgz",
+			"sha": "75d194ae465d17c15736f414734310c87d4c45d7",
+			"registry": "artifactory-sabadell"
+		},
+		"import-meta-resolve-1.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/import-meta-resolve/-/import-meta-resolve-1.0.1.tgz",
+			"sha": "dff5c941c9e42be3932bdce39e4adc0cc549ac40",
+			"registry": "artifactory-sabadell"
+		},
+		"import-meta-resolve-1.1.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/import-meta-resolve/-/import-meta-resolve-1.1.0.tgz",
+			"sha": "27265485e65b029cdac9f95402ea952baad36517",
+			"registry": "artifactory-sabadell"
+		},
+		"import-meta-resolve-1.1.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/import-meta-resolve/-/import-meta-resolve-1.1.1.tgz",
+			"sha": "244fd542fd1fae73550d4f8b3cde3bba1d7b2b18",
+			"registry": "artifactory-sabadell"
+		}
+	},
+	"_attachments": {},
+	"_rev": "1-ad7a8508deb478fb",
+	"_id": "import-meta-resolve",
+	"readme": "# import-meta-resolve\n\n[![Build][build-badge]][build]\n[![Coverage][coverage-badge]][coverage]\n[![Downloads][downloads-badge]][downloads]\n\nResolve things like Node.js.\n\n## Contents\n\n* [What is this?](#what-is-this)\n* [When to use this?](#when-to-use-this)\n* [Install](#install)\n* [Use](#use)\n* [API](#api)\n  * [`resolve(specifier, parent)`](#resolvespecifier-parent)\n  * [`moduleResolve(specifier, parent, conditions, preserveSymlinks)`](#moduleresolvespecifier-parent-conditions-preservesymlinks)\n  * [`ErrnoException`](#errnoexception)\n* [Algorithm](#algorithm)\n* [Differences to Node](#differences-to-node)\n* [Types](#types)\n* [Compatibility](#compatibility)\n* [Contribute](#contribute)\n* [License](#license)\n\n## What is this?\n\nThis package is a ponyfill for [`import.meta.resolve`][native-resolve].\nIt supports everything you need to resolve files just like modern Node does:\nimport maps, export maps, loading CJS and ESM projects, all of that!\n\n## When to use this?\n\nAs of Node.js 20.0, `import.meta.resolve` is still behind an experimental flag.\nThis package can be used to do what it does in Node 16–20.\n\n## Install\n\nThis package is [ESM only][esm].\nIn Node.js (version 16+), install with [npm][]:\n\n```sh\nnpm install import-meta-resolve\n```\n\n## Use\n\n```js\nimport {resolve} from 'import-meta-resolve'\n\n// A file:\nconsole.log(resolve('./index.js', import.meta.url))\n//=> file:///Users/tilde/Projects/oss/import-meta-resolve/index.js\n\n// A CJS package:\nconsole.log(resolve('builtins', import.meta.url))\n//=> file:///Users/tilde/Projects/oss/import-meta-resolve/node_modules/builtins/index.js\n\n// A scoped CJS package:\nconsole.log(resolve('@eslint/eslintrc', import.meta.url))\n//=> file:///Users/tilde/Projects/oss/import-meta-resolve/node_modules/@eslint/eslintrc/lib/index.js\n\n// A package with an export map:\nconsole.log(resolve('micromark/lib/parse', import.meta.url))\n//=> file:///Users/tilde/Projects/oss/import-meta-resolve/node_modules/micromark/lib/parse.js\n\n// A node builtin:\nconsole.log(resolve('fs', import.meta.url))\n//=> node:fs\n```\n\n## API\n\nThis package exports the identifiers [`moduleResolve`][moduleresolve] and\n[`resolve`][resolve].\nThere is no default export.\n\n### `resolve(specifier, parent)`\n\nMatch `import.meta.resolve` except that `parent` is required (you can pass\n`import.meta.url`).\n\n###### Parameters\n\n* `specifier` (`string`)\n  — the module specifier to resolve relative to parent\n  (`/example.js`, `./example.js`, `../example.js`, `some-package`, `fs`, etc)\n* `parent` (`string`, example: `import.meta.url`)\n  — the absolute parent module URL to resolve from; you must pass\n  `import.meta.url` or something else\n\n###### Returns\n\nFull `file:`, `data:`, or `node:` URL (`string`) to the found thing\n\n###### Throws\n\nThrows an [`ErrnoException`][errnoexception].\n\n### `moduleResolve(specifier, parent, conditions, preserveSymlinks)`\n\nThe [“Resolver Algorithm Specification”][algo] as detailed in the Node docs\n(which is slightly lower-level than `resolve`).\n\n###### Parameters\n\n* `specifier` (`string`)\n  — `/example.js`, `./example.js`, `../example.js`, `some-package`, `fs`, etc\n* `parent` (`URL`, example: `import.meta.url`)\n  — full URL (to a file) that `specifier` is resolved relative from\n* `conditions` (`Set<string>`, default: `new Set(['node', 'import'])`)\n  — conditions\n* `preserveSymlinks` (`boolean`, default: `false`)\n  — keep symlinks instead of resolving them\n\n###### Returns\n\nA URL object (`URL`) to the found thing.\n\n###### Throws\n\nThrows an [`ErrnoException`][errnoexception].\n\n### `ErrnoException`\n\nOne of many different errors that occur when resolving (TypeScript type).\n\n###### Type\n\n```ts\ntype ErrnoExceptionFields = Error & {\n  errnode?: number | undefined\n  code?: string | undefined\n  path?: string | undefined\n  syscall?: string | undefined\n  url?: string | undefined\n}\n```\n\nThe `code` field on errors is one of the following strings:\n\n* `'ERR_INVALID_MODULE_SPECIFIER'`\n  — when `specifier` is invalid (example: `'#'`)\n* `'ERR_INVALID_PACKAGE_CONFIG'`\n  — when a `package.json` is invalid (example: invalid JSON)\n* `'ERR_INVALID_PACKAGE_TARGET'`\n  — when a `package.json` `exports` or `imports` is invalid (example: when it\n  does not start with `'./'`)\n* `'ERR_MODULE_NOT_FOUND'`\n  — when `specifier` cannot be found in `parent` (example: `'some-missing-package'`)\n* `'ERR_NETWORK_IMPORT_DISALLOWED'`\n  — thrown when trying to resolve a local file or builtin from a remote file\n  (`node:fs` relative to `'https://example.com'`)\n* `'ERR_PACKAGE_IMPORT_NOT_DEFINED'`\n  — when a local import is not defined in an import map (example: `'#local'`\n  when not defined)\n* `'ERR_PACKAGE_PATH_NOT_EXPORTED'`\n  — when an export is not defined in an export map (example: `'tape/index.js'`,\n  which is not in its export map)\n* `'ERR_UNSUPPORTED_DIR_IMPORT'`\n  — when attempting to import a directory (example: `'./lib/'`)\n* `'ERR_UNKNOWN_FILE_EXTENSION'`\n  — when somehow reading a file that has an unexpected extensions (`'./readme.md'`)\n* `'ERR_INVALID_ARG_VALUE'`\n  — when `conditions` is incorrect\n\n## Algorithm\n\nThe algorithm for `resolve` matches how Node handles `import.meta.resolve`, with\na couple of differences.\n\nThe algorithm for `moduleResolve` matches the [Resolver Algorithm\nSpecification][algo] as detailed in the Node docs (which is sync and slightly\nlower-level than `resolve`).\n\n## Differences to Node\n\n* `parent` defaulting to `import.meta.url` cannot be ponyfilled: you have to\n  explicitly pass it\n* no support for loaders (that would mean implementing all of loaders)\n* no support for CLI flags:\n  `--conditions`,\n  `--experimental-default-type`,\n  `--experimental-json-modules`,\n  `--experimental-network-imports`,\n  `--experimental-policy`,\n  `--experimental-wasm-modules`,\n  `--input-type`,\n  `--no-addons`,\n  `--preserve-symlinks`, nor\n  `--preserve-symlinks-main`\n  work\n* no support for `WATCH_REPORT_DEPENDENCIES` env variable\n* no attempt is made to add a suggestion based on how things used to work in\n  CJS before to not-found errors\n* prototypal methods are not guarded: Node protects for example `String#slice`\n  or so from being tampered with, whereas this doesn’t\n\n## Types\n\nThis package is fully typed with [TypeScript][].\nIt exports the additional type [`ErrnoException`][errnoexception].\n\n## Compatibility\n\nThis package is at least compatible with all maintained versions of Node.js.\nAs of now, that is Node.js 16 and later.\n\n## Contribute\n\nYes please!\nSee [How to Contribute to Open Source][contribute].\n\n## License\n\n[MIT][license] © [Titus Wormer][author] and Node.js contributors\n\n<!-- Definitions -->\n\n[algo]: https://nodejs.org/dist/latest-v14.x/docs/api/esm.html#esm_resolver_algorithm\n\n[author]: https://wooorm.com\n\n[build]: https://github.com/wooorm/import-meta-resolve/actions\n\n[build-badge]: https://github.com/wooorm/import-meta-resolve/workflows/main/badge.svg\n\n[contribute]: https://opensource.guide/how-to-contribute/\n\n[coverage]: https://codecov.io/github/wooorm/import-meta-resolve\n\n[coverage-badge]: https://img.shields.io/codecov/c/github/wooorm/import-meta-resolve.svg\n\n[downloads]: https://www.npmjs.com/package/import-meta-resolve\n\n[downloads-badge]: https://img.shields.io/npm/dm/import-meta-resolve.svg\n\n[errnoexception]: #errnoexception\n\n[esm]: https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c\n\n[license]: license\n\n[moduleresolve]: #moduleResolvespecifier-parent-conditions-preserveSymlinks\n\n[native-resolve]: https://nodejs.org/api/esm.html#esm_import_meta_resolve_specifier_parent\n\n[npm]: https://docs.npmjs.com/cli/install\n\n[resolve]: #resolvespecifier-parent\n\n[typescript]: https://www.typescriptlang.org"
+}

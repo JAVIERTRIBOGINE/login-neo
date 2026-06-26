@@ -1,0 +1,468 @@
+{
+	"name": "minipass-sized",
+	"versions": {
+		"1.0.3": {
+			"name": "minipass-sized",
+			"description": "A Minipass stream that raises an error if you get a different number of bytes than expected",
+			"version": "1.0.3",
+			"author": {
+				"url": "https://izs.me",
+				"name": "Isaac Z. Schlueter",
+				"email": "i@izs.me"
+			},
+			"homepage": "https://github.com/isaacs/minipass-sized#readme",
+			"repository": {
+				"url": "git+https://github.com/isaacs/minipass-sized.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/isaacs/minipass-sized/issues"
+			},
+			"engines": {
+				"node": ">=8"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"minipass": "^3.0.0"
+			},
+			"devDependencies": {
+				"tap": "^14.6.4"
+			},
+			"keywords": [
+				"minipass",
+				"size",
+				"length"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				}
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"snap": "tap",
+				"test": "tap",
+				"preversion": "npm test",
+				"postpublish": "git push origin --follow-tags",
+				"postversion": "npm publish"
+			},
+			"lastModified": 0,
+			"_id": "minipass-sized@1.0.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/minipass-sized/-/minipass-sized-1.0.3.tgz",
+				"shasum": "70ee5a7c5052070afacfbc22977ea79def353b70",
+				"integrity": "sha512-MbkQQ2CTiBMlA2Dm/5cY+9SWFEN8pzzOXi6rlM5Xxq0Yqbda5ZQy9sU75a673FE9ZK0Zsbr6Y5iP6u9nktfg2g==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQCtsBF/Ry3rWgEiNmHYrvXBbzV+Mm9omSjLis/aKkd95QIhAIQABBP+xC5JFzOtybiV5xZZnwCc96BDP+SRIKzJHzCF"
+					}
+				]
+			},
+			"_npmVersion": "6.12.0-next.0",
+			"_npmUser": {
+				"name": "isaacs",
+				"email": "i@izs.me"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "4314081d97c5f3f4bd4c23e380e81fd7392aaa2c",
+			"tap": {
+				"check-coverage": true
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/minipass-sized_1.0.3_1569875524154_0.9383648627837997",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "12.8.1",
+			"contributors": []
+		},
+		"2.0.0": {
+			"name": "minipass-sized",
+			"description": "A Minipass stream that raises an error if you get a different number of bytes than expected",
+			"version": "2.0.0",
+			"author": {
+				"name": "Isaac Z. Schlueter",
+				"email": "i@izs.me",
+				"url": "https://izs.me"
+			},
+			"homepage": "https://github.com/isaacs/minipass-sized#readme",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/isaacs/minipass-sized.git"
+			},
+			"bugs": {
+				"url": "https://github.com/isaacs/minipass-sized/issues"
+			},
+			"engines": {
+				"node": ">=8"
+			},
+			"main": "./dist/commonjs/index.js",
+			"dependencies": {
+				"minipass": "^7.1.2"
+			},
+			"devDependencies": {
+				"prettier": "^3.7.4",
+				"tap": "^21.5.0",
+				"tshy": "^3.1.0",
+				"typedoc": "^0.28.15"
+			},
+			"keywords": [
+				"minipass",
+				"size",
+				"length"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				}
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"test": "tap",
+				"snap": "tap",
+				"pretest": "npm run prepare",
+				"presnap": "npm run prepare",
+				"prepare": "tshy",
+				"preversion": "npm test",
+				"postversion": "npm publish",
+				"prepublishOnly": "git push origin --follow-tags",
+				"format": "prettier --write . --log-level warn",
+				"typedoc": "typedoc"
+			},
+			"lastModified": 0,
+			"_id": "minipass-sized@2.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/minipass-sized/-/minipass-sized-2.0.0.tgz",
+				"shasum": "2228ee97e3f74f6b22ba6d1319addb7621534306",
+				"integrity": "sha512-zSsHhto5BcUVM2m1LurnXY6M//cGhVaegT71OfOXoprxT6o780GZd792ea6FfrQkuU4usHZIUczAQMRUE2plzA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEYCIQDf1zwPLZsiSuE3Jn8WjzKPlM53/CunoaDfvIASR9HCjgIhALamPYwLjvEEcKBWhM+t1sqZhsLsPNJAh2efc9RN36d/"
+					}
+				]
+			},
+			"_npmVersion": "11.6.3",
+			"_npmUser": {
+				"name": "isaacs",
+				"email": "i@izs.me"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "6bfc4bf784d68ae84f61e0ddfb9415d424fc17fd",
+			"types": "./dist/commonjs/index.d.ts",
+			"tshy": {
+				"exports": {
+					"./package.json": "./package.json",
+					".": "./src/index.ts"
+				}
+			},
+			"exports": {
+				"./package.json": "./package.json",
+				".": {
+					"import": {
+						"types": "./dist/esm/index.d.ts",
+						"default": "./dist/esm/index.js"
+					},
+					"require": {
+						"types": "./dist/commonjs/index.d.ts",
+						"default": "./dist/commonjs/index.js"
+					}
+				}
+			},
+			"module": "./dist/esm/index.js",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages-npm-production",
+				"tmp": "tmp/minipass-sized_2.0.0_1767817299626_0.4635247529223119"
+			},
+			"type": "module",
+			"_nodeVersion": "24.4.1",
+			"contributors": []
+		},
+		"1.0.0": {
+			"name": "minipass-sized",
+			"description": "A Minipass stream that raises an error if you get a different number of bytes than expected",
+			"version": "1.0.0",
+			"author": {
+				"url": "https://izs.me",
+				"name": "Isaac Z. Schlueter",
+				"email": "i@izs.me"
+			},
+			"homepage": "https://github.com/isaacs/minipass-sized#readme",
+			"repository": {
+				"url": "git+https://github.com/isaacs/minipass-sized.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/isaacs/minipass-sized/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"minipass": "^2.6.5"
+			},
+			"devDependencies": {
+				"tap": "^14.6.4"
+			},
+			"keywords": [
+				"minipass",
+				"size",
+				"length"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				}
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"snap": "tap",
+				"test": "tap",
+				"preversion": "npm test",
+				"postpublish": "git push origin --follow-tags",
+				"postversion": "npm publish"
+			},
+			"lastModified": 0,
+			"_id": "minipass-sized@1.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/minipass-sized/-/minipass-sized-1.0.0.tgz",
+				"shasum": "35ef931e8f3a5d9471fce6205764a13b5a286454",
+				"integrity": "sha512-nlv+3YPnfjgs0WJwlNGSEE66oYOsLSWDPsWXin8/AhrHM6/IjxAV5GkHmFdWya92AsKvXZZKWAORp/qohNrUVA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIGQ8ZRS6ialN7frsuHpQO9Ip218+sWm8NbHZflxOzSKnAiApi1XSCdIhU2mrHvZZIsy7MyPpFj5bs0D5rZwO+dHnMQ=="
+					}
+				]
+			},
+			"_npmVersion": "6.11.3",
+			"_npmUser": {
+				"name": "isaacs",
+				"email": "i@izs.me"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "f43f1c3bc294ea6e6b44b3c74a71865ad358ec96",
+			"tap": {
+				"check-coverage": true
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/minipass-sized_1.0.0_1569107638213_0.7654586174350935",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "12.8.1",
+			"contributors": []
+		},
+		"1.0.1": {
+			"name": "minipass-sized",
+			"description": "A Minipass stream that raises an error if you get a different number of bytes than expected",
+			"version": "1.0.1",
+			"author": {
+				"url": "https://izs.me",
+				"name": "Isaac Z. Schlueter",
+				"email": "i@izs.me"
+			},
+			"homepage": "https://github.com/isaacs/minipass-sized#readme",
+			"repository": {
+				"url": "git+https://github.com/isaacs/minipass-sized.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/isaacs/minipass-sized/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"minipass": "^2.6.5"
+			},
+			"devDependencies": {
+				"tap": "^14.6.4"
+			},
+			"keywords": [
+				"minipass",
+				"size",
+				"length"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				}
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"snap": "tap",
+				"test": "tap",
+				"preversion": "npm test",
+				"postpublish": "git push origin --follow-tags",
+				"postversion": "npm publish"
+			},
+			"lastModified": 0,
+			"_id": "minipass-sized@1.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/minipass-sized/-/minipass-sized-1.0.1.tgz",
+				"shasum": "e47f37edd05a1c3e9ec8974ecccd35451842cb02",
+				"integrity": "sha512-aSxYBRYK8b1W26nDi86sbPyloADK0RiEWWIfF0fVvgF5y5WHqzWDjt/VBJXkBkMS3YsEb03JDTwhmKVwqElcBA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIGU+ajq1Ku49SA+ZAqG37IB6kLLLXzVfUSvIL0JsajRSAiEAo9mgu4i4B+B1Ht62fkoOa6onj8BYxiqYbpMlPA2UG/w="
+					}
+				]
+			},
+			"_npmVersion": "6.11.3",
+			"_npmUser": {
+				"name": "isaacs",
+				"email": "i@izs.me"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "e0251eabfa4c828c517b694ecb0de51be782dd7c",
+			"tap": {
+				"check-coverage": true
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/minipass-sized_1.0.1_1569107794649_0.4339924043247734",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "12.8.1",
+			"contributors": []
+		},
+		"1.0.2": {
+			"name": "minipass-sized",
+			"description": "A Minipass stream that raises an error if you get a different number of bytes than expected",
+			"version": "1.0.2",
+			"author": {
+				"url": "https://izs.me",
+				"name": "Isaac Z. Schlueter",
+				"email": "i@izs.me"
+			},
+			"homepage": "https://github.com/isaacs/minipass-sized#readme",
+			"repository": {
+				"url": "git+https://github.com/isaacs/minipass-sized.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/isaacs/minipass-sized/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"minipass": "^2.6.5"
+			},
+			"devDependencies": {
+				"tap": "^14.6.4"
+			},
+			"keywords": [
+				"minipass",
+				"size",
+				"length"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				}
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"snap": "tap",
+				"test": "tap",
+				"preversion": "npm test",
+				"postpublish": "git push origin --follow-tags",
+				"postversion": "npm publish"
+			},
+			"lastModified": 0,
+			"_id": "minipass-sized@1.0.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/minipass-sized/-/minipass-sized-1.0.2.tgz",
+				"shasum": "648d3eaeae68892b900c66d34a5a5eeda7e1b9bd",
+				"integrity": "sha512-x2sUm+4EXoi6HYnuedXFSDt8yBTOr41yliNCP6dLziFoDCvJolw9+OKHYtd9sLUdkp/AWvj89Od9msIGfScQDg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCb8XVpHUcaQL9x2cgBzuTUHa0dwixoDCfaqvvIsYB/kwIgU1OmseCaMuJm/BWB4wU4y4UcT1w1GivdGKpMPHk5DDo="
+					}
+				]
+			},
+			"_npmVersion": "6.11.3",
+			"_npmUser": {
+				"name": "isaacs",
+				"email": "i@izs.me"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "e49f02e0eea8d86ce0c998b8ae221d1bdc7fc283",
+			"tap": {
+				"check-coverage": true
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/minipass-sized_1.0.2_1569108186749_0.22612875154912793",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "12.8.1",
+			"contributors": []
+		}
+	},
+	"time": {
+		"1.0.3": "2019-09-30T20:32:04.488Z",
+		"2.0.0": "2026-01-07T20:21:39.790Z",
+		"created": "2019-09-21T23:13:58.213Z",
+		"modified": "2026-01-07T20:21:39.974Z",
+		"1.0.0": "2019-09-21T23:13:58.383Z",
+		"1.0.1": "2019-09-21T23:16:34.822Z",
+		"1.0.2": "2019-09-21T23:23:06.858Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "2.0.0"
+	},
+	"_uplinks": {
+		"artifactory-sabadell": {
+			"etag": "367cc229332bb76606152e36f637b7241d2d10b3",
+			"fetched": 1782459826655
+		}
+	},
+	"_distfiles": {
+		"minipass-sized-1.0.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/minipass-sized/-/minipass-sized-1.0.3.tgz",
+			"sha": "70ee5a7c5052070afacfbc22977ea79def353b70",
+			"registry": "artifactory-sabadell"
+		},
+		"minipass-sized-2.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/minipass-sized/-/minipass-sized-2.0.0.tgz",
+			"sha": "2228ee97e3f74f6b22ba6d1319addb7621534306",
+			"registry": "artifactory-sabadell"
+		},
+		"minipass-sized-1.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/minipass-sized/-/minipass-sized-1.0.0.tgz",
+			"sha": "35ef931e8f3a5d9471fce6205764a13b5a286454",
+			"registry": "artifactory-sabadell"
+		},
+		"minipass-sized-1.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/minipass-sized/-/minipass-sized-1.0.1.tgz",
+			"sha": "e47f37edd05a1c3e9ec8974ecccd35451842cb02",
+			"registry": "artifactory-sabadell"
+		},
+		"minipass-sized-1.0.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/minipass-sized/-/minipass-sized-1.0.2.tgz",
+			"sha": "648d3eaeae68892b900c66d34a5a5eeda7e1b9bd",
+			"registry": "artifactory-sabadell"
+		}
+	},
+	"_attachments": {},
+	"_rev": "1-62b832e1c359f951",
+	"_id": "minipass-sized",
+	"readme": "# minipass-sized\n\nA Minipass stream that raises an error if you get a different\nnumber of bytes than expected.\n\n## USAGE\n\nUse just like any old [minipass](http://npm.im/minipass) stream,\nbut provide a `size` option to the constructor.\n\nThe `size` option must be a positive integer, smaller than\n`Number.MAX_SAFE_INTEGER`.\n\n```ts\nimport { MinipassSized } from 'minipass-sized'\n// or:\n// const { MinipassSized } = require('minipass-sized')\n// figure out how much data you expect to get\nconst expectedSize = +headers['content-length']\nconst stream = new MinipassSized({ size: expectedSize })\nstream.on('error', er => {\n  // if it's the wrong size, then this will raise an error with\n  // { found: <number>, expect: <number>, code: 'EBADSIZE' }\n})\nresponse.pipe(stream)\n```\n\nCaveats: this does not work with `objectMode` streams, and will\nthrow a `TypeError` from the constructor if the size argument is\nmissing or invalid."
+}

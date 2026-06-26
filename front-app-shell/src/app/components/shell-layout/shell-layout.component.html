@@ -7,7 +7,7 @@
   </nav>
 </header>
 
-<div class="shell-body">
+<div class="shell-body" [style.--flow-panel-width.px]="flowPanelWidth">
   <aside class="shell-aside" aria-label="Recursos">
     <div class="shell-aside__title">Recursos</div>
 
@@ -24,7 +24,19 @@
 
   <main class="shell-main">
     <router-outlet />
+    <ng-container *ngIf="flowSteps$ | async as steps">
+      <div class="shell-main__busy" *ngIf="hasActiveFlowStep(steps)" aria-live="polite" aria-label="Flujo en curso">
+        <div class="shell-main__spinner"></div>
+      </div>
+    </ng-container>
   </main>
+
+  <button
+    class="shell-resizer"
+    type="button"
+    aria-label="Redimensionar panel de acciones"
+    (mousedown)="startFlowPanelResize($event)"
+  ></button>
 
   <aside class="shell-flow" aria-label="Trazabilidad del flujo">
     <div class="shell-flow__header">
@@ -36,41 +48,115 @@
     </div>
 
     <ng-container *ngIf="flowSteps$ | async as steps">
-      <p class="shell-flow__empty" *ngIf="steps.length === 0">
-        El flujo se mostrará aquí conforme avance.
-      </p>
+      <p class="shell-flow__empty" *ngIf="steps.length === 0">El flujo se mostrará aquí conforme avance.</p>
 
       <ol class="shell-flow__list" *ngIf="steps.length > 0">
         <li class="shell-flow__item" *ngFor="let step of steps; let index = index">
-          <div class="shell-flow__summary">
+          <button
+            class="shell-flow__summary"
+            type="button"
+            [attr.aria-expanded]="step.expanded"
+            (click)="toggleFlowStep(step)"
+          >
             <div class="shell-flow__index">{{ index + 1 }}</div>
             <div class="shell-flow__content">
               <div class="shell-flow__meta">{{ step.timestamp }}</div>
               <h3>{{ step.title }}</h3>
-              <p>{{ step.description }}</p>
             </div>
-          </div>
-
-          <div class="shell-sequence" aria-hidden="true">
-            <div class="shell-sequence__actor shell-sequence__actor--left">{{ step.diagram.left }}</div>
-            <div class="shell-sequence__actor shell-sequence__actor--right">{{ step.diagram.right }}</div>
-            <div class="shell-sequence__lane shell-sequence__lane--left"></div>
-            <div class="shell-sequence__lane shell-sequence__lane--right"></div>
-            <div class="shell-sequence__arrow shell-sequence__arrow--request">
-              <span>{{ step.diagram.request }}</span>
-            </div>
-            <div class="shell-sequence__arrow shell-sequence__arrow--response">
-              <span>{{ step.diagram.response }}</span>
-            </div>
-          </div>
-
-          <button
-            class="shell-flow__next"
-            type="button"
-            *ngIf="!step.completed"
-            (click)="nextFlowStep(step)">
-            Siguiente
+            <span
+              class="shell-flow__chevron"
+              [class.shell-flow__chevron--expanded]="step.expanded"
+              aria-hidden="true"
+            ></span>
           </button>
+
+          <div class="shell-flow__details" *ngIf="step.expanded">
+            <p>{{ step.description }}</p>
+
+            <ng-container *ngIf="step.diagram.sequence as sequence; else compactSequence">
+              <div
+                class="shell-sequence-wide"
+                [class.shell-sequence-wide--saml]="step.diagram.zone === 'saml'"
+                [class.shell-sequence-wide--oauth]="step.diagram.zone === 'oauth'"
+                tabindex="0"
+                aria-label="Diagrama secuencial extendido"
+              >
+                <div
+                  class="shell-sequence-wide__grid"
+                  [style.--actor-count]="sequence.actors.length"
+                  [style.min-width.px]="sequence.actors.length * 190"
+                >
+                  <div
+                    class="shell-sequence-wide__actor"
+                    *ngFor="let actor of sequence.actors; let actorIndex = index"
+                    [style.gridColumn]="actorIndex + 1"
+                    [style.gridRow]="1"
+                  >
+                    {{ actor }}
+                  </div>
+                  <div
+                    class="shell-sequence-wide__lane"
+                    *ngFor="let actor of sequence.actors; let actorIndex = index"
+                    [style.gridColumn]="actorIndex + 1"
+                    [style.gridRow]="'2 / span ' + sequence.messages.length"
+                  ></div>
+                  <div
+                    class="shell-sequence-wide__message"
+                    *ngFor="let message of sequence.messages; let messageIndex = index"
+                    [class.shell-sequence-wide__message--back]="message.from > message.to"
+                    [style.gridColumn]="(message.from < message.to ? message.from + 1 : message.to + 1) + ' / ' + (message.from < message.to ? message.to + 2 : message.from + 2)"
+                    [style.gridRow]="messageIndex + 2"
+                    [style.--line-inset]="(50 / (message.from < message.to ? message.to - message.from + 1 : message.from - message.to + 1)) + '%'"
+                  >
+                    <span class="shell-sequence-wide__line"></span>
+                    <span class="shell-sequence-wide__label">{{ message.label }}</span>
+                    <span class="shell-sequence-wide__detail" *ngIf="message.detail">{{ message.detail }}</span>
+                  </div>
+                </div>
+              </div>
+            </ng-container>
+
+            <ng-template #compactSequence>
+              <div
+                class="shell-sequence"
+                [class.shell-sequence--with-info]="step.diagram.backendInfo"
+                [class.shell-sequence--from-frame]="step.diagram.requestFromFrame"
+                [class.shell-sequence--to-frame]="step.diagram.responseToFrame"
+                [class.shell-sequence--saml]="step.diagram.zone === 'saml'"
+                [class.shell-sequence--oauth]="step.diagram.zone === 'oauth'"
+                [class.shell-sequence--with-redirect]="step.diagram.redirectTarget"
+                [attr.tabindex]="step.diagram.backendInfo ? 0 : null"
+                [attr.aria-label]="step.diagram.backendInfo ? 'Detalle de llamada backend' : null"
+              >
+                <div class="shell-sequence__actor shell-sequence__actor--left">{{ step.diagram.left }}</div>
+                <div class="shell-sequence__actor shell-sequence__actor--browser" *ngIf="step.diagram.leftFrame">
+                  {{ step.diagram.leftFrame }}
+                </div>
+                <div class="shell-sequence__actor shell-sequence__actor--right">{{ step.diagram.right }}</div>
+                <div class="shell-sequence__actor shell-sequence__actor--redirect" *ngIf="step.diagram.redirectTarget">
+                  {{ step.diagram.redirectTarget }}
+                </div>
+                <div class="shell-sequence__lane shell-sequence__lane--left"></div>
+                <div class="shell-sequence__lane shell-sequence__lane--browser" *ngIf="step.diagram.leftFrame"></div>
+                <div class="shell-sequence__lane shell-sequence__lane--right"></div>
+                <div class="shell-sequence__lane shell-sequence__lane--redirect" *ngIf="step.diagram.redirectTarget"></div>
+                <div class="shell-sequence__arrow shell-sequence__arrow--request">
+                  <span>{{ step.diagram.request }}</span>
+                </div>
+                <div class="shell-sequence__arrow shell-sequence__arrow--response">
+                  <span>{{ step.diagram.response }}</span>
+                </div>
+                <div class="shell-sequence__arrow shell-sequence__arrow--redirect" *ngIf="step.diagram.redirect">
+                  <span>{{ step.diagram.redirect }}</span>
+                </div>
+                <pre class="shell-sequence__tooltip" *ngIf="step.diagram.backendInfo">{{ step.diagram.backendInfo }}</pre>
+              </div>
+            </ng-template>
+
+            <button class="shell-flow__next" type="button" *ngIf="!step.completed" (click)="nextFlowStep(step)">
+              Siguiente
+            </button>
+          </div>
         </li>
       </ol>
     </ng-container>

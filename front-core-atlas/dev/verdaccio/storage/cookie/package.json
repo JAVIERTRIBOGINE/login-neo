@@ -2488,6 +2488,127 @@
 			},
 			"sideEffects": false,
 			"_nodeVersion": "23.10.0"
+		},
+		"2.0.0": {
+			"name": "cookie",
+			"description": "HTTP server cookie parsing and serialization",
+			"version": "2.0.0",
+			"author": {
+				"name": "Roman Shtylman",
+				"email": "shtylman@gmail.com"
+			},
+			"homepage": "https://github.com/jshttp/cookie#readme",
+			"repository": {
+				"url": "git+https://github.com/jshttp/cookie.git",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"name": "Douglas Christopher Wilson",
+					"email": "doug@somethingdoug.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/jshttp/cookie/issues"
+			},
+			"engines": {
+				"node": ">=22"
+			},
+			"devDependencies": {
+				"vitest": "^4.1.9",
+				"top-sites": "1.1.225",
+				"size-limit": "^12.0.0",
+				"typescript": "^6.0.3",
+				"@types/node": "^26.0.1",
+				"@vitest/coverage-v8": "^4.1.9",
+				"@borderless/ts-scripts": "^0.15.0",
+				"@size-limit/preset-small-lib": "^12.0.0"
+			},
+			"keywords": [
+				"cookie",
+				"cookies"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ulisesgascon",
+					"email": "ulisesgascondev@gmail.com"
+				},
+				{
+					"name": "blakeembrey",
+					"email": "hello@blakeembrey.com"
+				},
+				{
+					"name": "dougwilson",
+					"email": "doug@somethingdoug.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"size": "size-limit",
+				"test": "ts-scripts test && npm run size",
+				"bench": "vitest bench",
+				"build": "ts-scripts build",
+				"specs": "ts-scripts specs",
+				"format": "ts-scripts format",
+				"prepare": "ts-scripts install",
+				"prepublishOnly": "npm run build"
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://opencollective.com/express",
+				"type": "opencollective"
+			},
+			"_id": "cookie@2.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/cookie/-/cookie-2.0.0.tgz",
+				"shasum": "80f6d1218194c822c4a6aeac89dee27a9387caa5",
+				"integrity": "sha512-hRSFuKJ6SYHrFVNltQdagQFMk7e0Q/VrORTGqZGyUAmmhA3EwPeldHCTg0HqUaDodQOfQDe7qXuOtpf4lwCsaA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEQCIEHC2P2VCr3N6TtH6I1OCKJA0ixclL6sLQcxtEADBTCwAiBEVMVgLWUlBYTl+e8pWKs3wjXT3zdk8qHTgYhPmey/lQ=="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/cookie@2.0.0",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "11.16.0",
+			"_npmUser": {
+				"name": "GitHub Actions",
+				"email": "npm-oidc-no-reply@github.com",
+				"trustedPublisher": {
+					"id": "github",
+					"oidcConfigId": "oidc:2e6871c3-23f1-4fd6-9e51-5ec226c5bd54"
+				},
+				"approver": {
+					"name": "blakeembrey",
+					"email": "hello@blakeembrey.com"
+				}
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "e5164deb7c3f3671ab197bf6d9a5125c9c08833c",
+			"ts-scripts": {
+				"project": "tsconfig.build.json"
+			},
+			"exports": "./dist/index.js",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages-npm-production",
+				"tmp": "tmp/cookie_2.0.0_1782341863136_0.1496263096730015"
+			},
+			"type": "module",
+			"sideEffects": false,
+			"size-limit": [
+				{
+					"path": "dist/index.js",
+					"limit": "1.4 KB"
+				}
+			],
+			"_nodeVersion": "26.3.1"
 		}
 	},
 	"time": {
@@ -2519,22 +2640,23 @@
 		"0.0.0": "2012-05-28T23:56:12.299Z",
 		"0.0.1": "2012-05-29T02:15:56.897Z",
 		"0.1.0": "2013-05-01T19:18:22.075Z",
-		"modified": "2025-11-26T17:50:20.994Z",
+		"modified": "2026-06-24T22:57:43.555Z",
 		"created": "2012-05-28T23:56:11.938Z",
 		"1.0.0": "2024-10-08T22:25:01.600Z",
 		"1.0.1": "2024-10-11T17:18:35.310Z",
 		"1.1.0": "2025-11-25T22:52:36.316Z",
 		"1.0.2": "2024-11-20T17:39:47.758Z",
-		"1.1.1": "2025-11-26T17:50:20.759Z"
+		"1.1.1": "2025-11-26T17:50:20.759Z",
+		"2.0.0": "2026-06-24T22:57:43.225Z"
 	},
 	"users": {},
 	"dist-tags": {
-		"latest": "1.1.1"
+		"latest": "2.0.0"
 	},
 	"_uplinks": {
 		"artifactory-sabadell": {
-			"etag": "6d2ce868acc010b697237d55c7c8959b7df46cfd",
-			"fetched": 1781195707501
+			"etag": "6a790025ababc890b75fff571d0e45d4fff6d409",
+			"fetched": 1782459822267
 		}
 	},
 	"_distfiles": {
@@ -2702,10 +2824,15 @@
 			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/cookie/-/cookie-1.1.1.tgz",
 			"sha": "3bb9bdfc82369db9c2f69c93c9c3ceb310c88b3c",
 			"registry": "artifactory-sabadell"
+		},
+		"cookie-2.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/cookie/-/cookie-2.0.0.tgz",
+			"sha": "80f6d1218194c822c4a6aeac89dee27a9387caa5",
+			"registry": "artifactory-sabadell"
 		}
 	},
 	"_attachments": {},
-	"_rev": "1-cf585152738e9348",
+	"_rev": "3-18da6766936638be",
 	"_id": "cookie",
-	"readme": "# cookie\n\n[![NPM Version][npm-version-image]][npm-url]\n[![NPM Downloads][npm-downloads-image]][npm-url]\n[![Build Status][ci-image]][ci-url]\n[![Coverage Status][coverage-image]][coverage-url]\n\nBasic HTTP cookie parser and serializer for HTTP servers.\n\n## Installation\n\n```sh\n$ npm install cookie\n```\n\n## API\n\n```js\nconst cookie = require(\"cookie\");\n// import * as cookie from 'cookie';\n```\n\n### cookie.parseCookie(str, options)\n\nParse an HTTP `Cookie` header string and return an [object](#cookie-object) of all cookie name-value pairs.\nThe `str` argument is the string representing a `Cookie` header value and `options` is an\noptional object containing additional parsing options.\n\n```js\nconst cookieObject = cookie.parseCookie(\"foo=bar; equation=E%3Dmc%5E2\");\n// { foo: 'bar', equation: 'E=mc^2' }\n```\n\n#### Options\n\n- `decode` Specifies the function to decode a [cookie-value](https://datatracker.ietf.org/doc/html/rfc6265#section-4.1.1). Defaults to [`decodeURIComponent`](#encode-and-decode).\n\n### cookie.stringifyCookie(cookieObj, options)\n\nStringifies a [cookie object](#cookie-object) into an HTTP `Cookie` header.\n\n```js\nconst cookieHeader = cookie.stringify({ a: \"foo\", b: \"bar\" });\n// a=foo; b=bar\n```\n\n#### Options\n\n- `encode` Specifies the function to encode a [cookie-value](https://datatracker.ietf.org/doc/html/rfc6265#section-4.1.1). Defaults to [`encodeURIComponent`](#encode-and-decode).\n\n### cookie.parseSetCookie(str, options)\n\nParse an HTTP `Set-Cookie` header string and return an [object](#set-cookie-object) of the options.\n\n```js\nconst setCookieObject = cookie.parseSetCookie(\"foo=bar; httpOnly\");\n// { name: \"foo\", value: \"bar\", httpOnly: true }\n```\n\n**Note:** Cookie follows the specification and ignores invalid attributes, but does not attempt to normalize or modify any attributes as a browser might. For example:\n\n```js\ncookie.parseSetCookie(\n  \"session=abc; max-age=1.5; expires=invalid; custom=value; domain=example.com\",\n);\n// { name: \"session\", value: \"abc\", domain: \"example.com\" }\n```\n\n#### Options\n\n- `decode` Specifies the function to decode a [cookie-value](https://datatracker.ietf.org/doc/html/rfc6265#section-4.1.1). Defaults to [`decodeURIComponent`](#encode-and-decode).\n\n### cookie.stringifySetCookie(setCookieObj, options)\n\nStringifies a [`Set-Cookie` object](#set-cookie-object) into a `Set-Cookie` header string.\n\n```js\nconst setCookieHeader = cookie.stringifySetCookie({\n  name: \"foo\",\n  value: \"bar\",\n});\n// foo=bar\n```\n\n#### Options\n\n- `encode` Specifies the function to encode a [cookie-value](https://datatracker.ietf.org/doc/html/rfc6265#section-4.1.1). Defaults to [`encodeURIComponent`](#encode-and-decode).\n\n## Cookie object\n\nThe cookie object represents all cookie name-value pairs in a `Cookie` header, where `{ name: \"value\" }` is used for `name=value`.\n\n## `Set-Cookie` object\n\nThe `Set-Cookie` object represents all the options in a `Set-Cookie` header.\n\n### name\n\nThe name of the cookie.\n\n### value\n\nThe value of a cookie after it has been [decoded](#encode-and-decode).\n\n### maxAge\n\nSpecifies the `number` (in seconds) to be the value for the [`Max-Age` `Set-Cookie` attribute](https://tools.ietf.org/html/rfc6265#section-5.2.2).\n\nThe [cookie storage model specification](https://tools.ietf.org/html/rfc6265#section-5.3) states that if both `expires` and\n`maxAge` are set, then `maxAge` takes precedence, but it is possible not all clients by obey this,\nso if both are set, they should point to the same date and time.\n\n### expires\n\nSpecifies the `Date` object to be the value for the [`Expires` `Set-Cookie` attribute](https://tools.ietf.org/html/rfc6265#section-5.2.1).\nWhen no expiration is set, clients consider this a \"non-persistent cookie\" and delete it when the current session is over.\n\nThe [cookie storage model specification](https://tools.ietf.org/html/rfc6265#section-5.3) states that if both `expires` and\n`maxAge` are set, then `maxAge` takes precedence, but it is possible not all clients by obey this,\nso if both are set, they should point to the same date and time.\n\n### domain\n\nSpecifies the value for the [`Domain` `Set-Cookie` attribute](https://tools.ietf.org/html/rfc6265#section-5.2.3).\nWhen no domain is set, clients consider the cookie to apply to the current domain only.\n\n### path\n\nSpecifies the value for the [`Path` `Set-Cookie` attribute](https://tools.ietf.org/html/rfc6265#section-5.2.4).\nWhen no path is set, the path is considered the [\"default path\"](https://tools.ietf.org/html/rfc6265#section-5.1.4).\n\n### httpOnly\n\nEnables the [`HttpOnly` `Set-Cookie` attribute](https://tools.ietf.org/html/rfc6265#section-5.2.6).\nWhen enabled, clients will not allow client-side JavaScript to see the cookie in `document.cookie`.\n\n### secure\n\nEnables the [`Secure` `Set-Cookie` attribute](https://tools.ietf.org/html/rfc6265#section-5.2.5).\nWhen enabled, clients will only send the cookie back if the browser has an HTTPS connection.\n\n### partitioned\n\nEnables the [`Partitioned` `Set-Cookie` attribute](https://tools.ietf.org/html/draft-cutler-httpbis-partitioned-cookies/).\nWhen enabled, clients will only send the cookie back when the current domain _and_ top-level domain matches.\n\nThis is an attribute that has not yet been fully standardized, and may change in the future.\nThis also means clients may ignore this attribute until they understand it. More information\nabout can be found in [the proposal](https://github.com/privacycg/CHIPS).\n\n### priority\n\nSpecifies the value for the [`Priority` `Set-Cookie` attribute](https://tools.ietf.org/html/draft-west-cookie-priority-00#section-4.1).\n\n- `'low'` will set the `Priority` attribute to `Low`.\n- `'medium'` will set the `Priority` attribute to `Medium`, the default priority when not set.\n- `'high'` will set the `Priority` attribute to `High`.\n\nMore information about priority levels can be found in [the specification](https://tools.ietf.org/html/draft-west-cookie-priority-00#section-4.1).\n\n### sameSite\n\nSpecifies the value for the [`SameSite` `Set-Cookie` attribute](https://tools.ietf.org/html/draft-ietf-httpbis-rfc6265bis-09#section-5.4.7).\n\n- `true` will set the `SameSite` attribute to `Strict` for strict same site enforcement.\n- `'lax'` will set the `SameSite` attribute to `Lax` for lax same site enforcement.\n- `'none'` will set the `SameSite` attribute to `None` for an explicit cross-site cookie.\n- `'strict'` will set the `SameSite` attribute to `Strict` for strict same site enforcement.\n\nMore information about enforcement levels can be found in [the specification](https://tools.ietf.org/html/draft-ietf-httpbis-rfc6265bis-09#section-5.4.7).\n\n## Encode and decode\n\nCookie accepts `encode` or `decode` options for processing a [cookie-value](https://datatracker.ietf.org/doc/html/rfc6265#section-4.1.1).\nSince the value of a cookie has a limited character set (and must be a simple string), these functions are used to transform values into strings suitable for a cookies value.\n\nThe default `encode` function is the global `encodeURIComponent`.\n\nThe default `decode` function is the global `decodeURIComponent`, wrapped in a `try..catch`. If an error\nis thrown it will return the cookie's original value. If you provide your own encode/decode\nscheme you must ensure errors are appropriately handled.\n\n## Example\n\nThe following example uses this module in conjunction with the Node.js core HTTP server\nto prompt a user for their name and display it back on future visits.\n\n```js\nvar cookie = require(\"cookie\");\nvar escapeHtml = require(\"escape-html\");\nvar http = require(\"http\");\nvar url = require(\"url\");\n\nfunction onRequest(req, res) {\n  // Parse the query string\n  var query = url.parse(req.url, true, true).query;\n\n  if (query && query.name) {\n    // Set a new cookie with the name\n    res.setHeader(\n      \"Set-Cookie\",\n      cookie.stringifySetCookie({\n        name: \"name\",\n        value: String(query.name),\n        httpOnly: true,\n        maxAge: 60 * 60 * 24 * 7, // 1 week\n      }),\n    );\n\n    // Redirect back after setting cookie\n    res.statusCode = 302;\n    res.setHeader(\"Location\", req.headers.referer || \"/\");\n    res.end();\n    return;\n  }\n\n  // Parse the cookies on the request\n  var cookies = cookie.parseCookie(req.headers.cookie || \"\");\n\n  // Get the visitor name set in the cookie\n  var name = cookies.name;\n\n  res.setHeader(\"Content-Type\", \"text/html; charset=UTF-8\");\n\n  if (name) {\n    res.write(\"<p>Welcome back, <b>\" + escapeHtml(name) + \"</b>!</p>\");\n  } else {\n    res.write(\"<p>Hello, new visitor!</p>\");\n  }\n\n  res.write('<form method=\"GET\">');\n  res.write(\n    '<input placeholder=\"enter your name\" name=\"name\"> <input type=\"submit\" value=\"Set Name\">',\n  );\n  res.end(\"</form>\");\n}\n\nhttp.createServer(onRequest).listen(3000);\n```\n\n## Testing\n\n```sh\nnpm test\n```\n\n## Benchmark\n\n```sh\nnpm run bench\n```\n\n```\n     name                   hz     min     max    mean     p75     p99    p995    p999     rme  samples\n   · simple       8,566,313.09  0.0000  0.3694  0.0001  0.0001  0.0002  0.0002  0.0003  ±0.64%  4283157   fastest\n   · decode       3,834,348.85  0.0001  0.2465  0.0003  0.0003  0.0003  0.0004  0.0006  ±0.38%  1917175\n   · unquote      8,315,355.96  0.0000  0.3824  0.0001  0.0001  0.0002  0.0002  0.0003  ±0.72%  4157880\n   · duplicates   1,944,765.97  0.0004  0.2959  0.0005  0.0005  0.0006  0.0006  0.0008  ±0.24%   972384\n   · 10 cookies     675,345.67  0.0012  0.4328  0.0015  0.0015  0.0019  0.0020  0.0058  ±0.75%   337673\n   · 100 cookies     61,040.71  0.0152  0.4092  0.0164  0.0160  0.0196  0.0228  0.2260  ±0.71%    30521   slowest\n   ✓ parse top-sites (15) 22945ms\n     name                                  hz     min     max    mean     p75     p99    p995    p999     rme   samples\n   · parse accounts.google.com   7,164,349.17  0.0000  0.0929  0.0001  0.0002  0.0002  0.0002  0.0003  ±0.09%   3582184\n   · parse apple.com             7,817,686.84  0.0000  0.6048  0.0001  0.0001  0.0002  0.0002  0.0003  ±1.05%   3908844\n   · parse cloudflare.com        7,189,841.70  0.0000  0.0390  0.0001  0.0002  0.0002  0.0002  0.0003  ±0.06%   3594921\n   · parse docs.google.com       7,051,765.61  0.0000  0.0296  0.0001  0.0002  0.0002  0.0002  0.0003  ±0.06%   3525883\n   · parse drive.google.com      7,349,104.77  0.0000  0.0368  0.0001  0.0001  0.0002  0.0002  0.0003  ±0.05%   3674553\n   · parse en.wikipedia.org      1,929,909.49  0.0004  0.3598  0.0005  0.0005  0.0007  0.0007  0.0012  ±0.16%    964955\n   · parse linkedin.com          2,225,658.01  0.0003  0.0595  0.0004  0.0005  0.0005  0.0005  0.0006  ±0.06%   1112830\n   · parse maps.google.com       4,423,511.68  0.0001  0.0942  0.0002  0.0003  0.0003  0.0003  0.0005  ±0.08%   2211756\n   · parse microsoft.com         3,387,601.88  0.0002  0.0725  0.0003  0.0003  0.0004  0.0004  0.0005  ±0.09%   1693801\n   · parse play.google.com       7,375,980.86  0.0000  0.1994  0.0001  0.0001  0.0002  0.0002  0.0003  ±0.12%   3687991\n   · parse support.google.com    4,912,267.94  0.0001  2.8958  0.0002  0.0002  0.0003  0.0003  0.0005  ±1.28%   2456134\n   · parse www.google.com        3,443,035.87  0.0002  0.2783  0.0003  0.0003  0.0004  0.0004  0.0007  ±0.51%   1721518\n   · parse youtu.be              1,910,492.87  0.0004  0.3490  0.0005  0.0005  0.0007  0.0007  0.0011  ±0.46%    955247\n   · parse youtube.com           1,895,082.62  0.0004  0.7454  0.0005  0.0005  0.0006  0.0007  0.0013  ±0.64%    947542   slowest\n   · parse example.com          21,582,835.27  0.0000  0.1095  0.0000  0.0000  0.0001  0.0001  0.0001  ±0.13%  10791418\n```\n\n## References\n\n- [RFC 6265: HTTP State Management Mechanism](https://tools.ietf.org/html/rfc6265)\n- [Same-site Cookies](https://tools.ietf.org/html/draft-ietf-httpbis-rfc6265bis-09#section-5.4.7)\n\n## License\n\n[MIT](LICENSE)\n\n[ci-image]: https://img.shields.io/github/actions/workflow/status/jshttp/cookie/ci.yml\n[ci-url]: https://github.com/jshttp/cookie/actions/workflows/ci.yml?query=branch%3Amaster\n[coverage-image]: https://img.shields.io/codecov/c/github/jshttp/cookie/master\n[coverage-url]: https://app.codecov.io/gh/jshttp/cookie\n[npm-downloads-image]: https://img.shields.io/npm/dm/cookie\n[npm-url]: https://npmjs.org/package/cookie\n[npm-version-image]: https://img.shields.io/npm/v/cookie"
+	"readme": "# cookie\n\n[![NPM Version][npm-version-image]][npm-url]\n[![NPM Downloads][npm-downloads-image]][npm-url]\n[![Build Status][ci-image]][ci-url]\n[![Coverage Status][coverage-image]][coverage-url]\n\nBasic HTTP cookie parser and serializer for HTTP servers.\n\n## Installation\n\n```sh\n$ npm install cookie\n```\n\n## API\n\n```js\nimport * as cookie from \"cookie\";\n```\n\n### cookie.parseCookie(str, options)\n\nParse an HTTP `Cookie` header string and return an [object](#cookie-object) of all cookie name-value pairs.\nThe `str` argument is the string representing a `Cookie` header value and `options` is an\noptional object containing additional parsing options.\n\n```js\nconst cookieObject = cookie.parseCookie(\"foo=bar; equation=E%3Dmc%5E2\");\n// { foo: 'bar', equation: 'E=mc^2' }\n```\n\n#### Options\n\n- `decode` Specifies the function to decode a [cookie-value](https://datatracker.ietf.org/doc/html/rfc6265#section-4.1.1). Defaults to [`decodeURIComponent`](#encode-and-decode).\n\n### cookie.stringifyCookie(cookieObj, options)\n\nStringifies a [cookie object](#cookie-object) into an HTTP `Cookie` header.\n\n```js\nconst cookieHeader = cookie.stringifyCookie({ a: \"foo\", b: \"bar\" });\n// a=foo; b=bar\n```\n\n#### Options\n\n- `encode` Specifies the function to encode a [cookie-value](https://datatracker.ietf.org/doc/html/rfc6265#section-4.1.1). Defaults to [`encodeURIComponent`](#encode-and-decode).\n\n### cookie.parseSetCookie(str, options)\n\nParse an HTTP `Set-Cookie` header string and return an [object](#set-cookie-object) of the options.\n\n```js\nconst setCookieObject = cookie.parseSetCookie(\"foo=bar; httpOnly\");\n// { name: \"foo\", value: \"bar\", httpOnly: true }\n```\n\n**Note:** Cookie follows the specification and ignores invalid attributes, but does not attempt to normalize or modify any attributes as a browser might. For example:\n\n```js\ncookie.parseSetCookie(\n  \"session=abc; max-age=1.5; expires=invalid; custom=value; domain=example.com\",\n);\n// { name: \"session\", value: \"abc\", domain: \"example.com\" }\n```\n\n#### Options\n\n- `decode` Specifies the function to decode a [cookie-value](https://datatracker.ietf.org/doc/html/rfc6265#section-4.1.1). Defaults to [`decodeURIComponent`](#encode-and-decode).\n\n### cookie.stringifySetCookie(setCookieObj, options)\n\nStringifies a [`Set-Cookie` object](#set-cookie-object) into a `Set-Cookie` header string.\n\n```js\nconst setCookieHeader = cookie.stringifySetCookie({\n  name: \"foo\",\n  value: \"bar\",\n});\n// foo=bar\n```\n\n#### Options\n\n- `encode` Specifies the function to encode a [cookie-value](https://datatracker.ietf.org/doc/html/rfc6265#section-4.1.1). Defaults to [`encodeURIComponent`](#encode-and-decode).\n\n## Cookie object\n\nThe cookie object represents all cookie name-value pairs in a `Cookie` header, where `{ name: \"value\" }` is used for `name=value`.\n\n## `Set-Cookie` object\n\nThe `Set-Cookie` object represents all the options in a `Set-Cookie` header.\n\n### name\n\nThe name of the cookie.\n\n### value\n\nThe value of a cookie after it has been [decoded](#encode-and-decode).\n\n### maxAge\n\nSpecifies the `number` (in seconds) to be the value for the [`Max-Age` `Set-Cookie` attribute](https://tools.ietf.org/html/rfc6265#section-5.2.2).\n\nThe [cookie storage model specification](https://tools.ietf.org/html/rfc6265#section-5.3) states that if both `expires` and\n`maxAge` are set, then `maxAge` takes precedence, but it is possible not all clients by obey this,\nso if both are set, they should point to the same date and time.\n\n### expires\n\nSpecifies the `Date` object to be the value for the [`Expires` `Set-Cookie` attribute](https://tools.ietf.org/html/rfc6265#section-5.2.1).\nWhen no expiration is set, clients consider this a \"non-persistent cookie\" and delete it when the current session is over.\n\nThe [cookie storage model specification](https://tools.ietf.org/html/rfc6265#section-5.3) states that if both `expires` and\n`maxAge` are set, then `maxAge` takes precedence, but it is possible not all clients by obey this,\nso if both are set, they should point to the same date and time.\n\n### domain\n\nSpecifies the value for the [`Domain` `Set-Cookie` attribute](https://tools.ietf.org/html/rfc6265#section-5.2.3).\nWhen no domain is set, clients consider the cookie to apply to the current domain only.\n\n### path\n\nSpecifies the value for the [`Path` `Set-Cookie` attribute](https://tools.ietf.org/html/rfc6265#section-5.2.4).\nWhen no path is set, the path is considered the [\"default path\"](https://tools.ietf.org/html/rfc6265#section-5.1.4).\n\n### httpOnly\n\nEnables the [`HttpOnly` `Set-Cookie` attribute](https://tools.ietf.org/html/rfc6265#section-5.2.6).\nWhen enabled, clients will not allow client-side JavaScript to see the cookie in `document.cookie`.\n\n### secure\n\nEnables the [`Secure` `Set-Cookie` attribute](https://tools.ietf.org/html/rfc6265#section-5.2.5).\nWhen enabled, clients will only send the cookie back if the browser has an HTTPS connection.\n\n### partitioned\n\nEnables the [`Partitioned` `Set-Cookie` attribute](https://tools.ietf.org/html/draft-cutler-httpbis-partitioned-cookies/).\nWhen enabled, clients will only send the cookie back when the current domain _and_ top-level domain matches.\n\nThis is an attribute that has not yet been fully standardized, and may change in the future.\nThis also means clients may ignore this attribute until they understand it. More information\nabout can be found in [the proposal](https://github.com/privacycg/CHIPS).\n\n### priority\n\nSpecifies the value for the [`Priority` `Set-Cookie` attribute](https://tools.ietf.org/html/draft-west-cookie-priority-00#section-4.1).\n\n- `'low'` will set the `Priority` attribute to `Low`.\n- `'medium'` will set the `Priority` attribute to `Medium`, the default priority when not set.\n- `'high'` will set the `Priority` attribute to `High`.\n\nMore information about priority levels can be found in [the specification](https://tools.ietf.org/html/draft-west-cookie-priority-00#section-4.1).\n\n### sameSite\n\nSpecifies the value for the [`SameSite` `Set-Cookie` attribute](https://tools.ietf.org/html/draft-ietf-httpbis-rfc6265bis-09#section-5.4.7).\n\n- `true` will set the `SameSite` attribute to `Strict` for strict same site enforcement.\n- `'lax'` will set the `SameSite` attribute to `Lax` for lax same site enforcement.\n- `'none'` will set the `SameSite` attribute to `None` for an explicit cross-site cookie.\n- `'strict'` will set the `SameSite` attribute to `Strict` for strict same site enforcement.\n\nMore information about enforcement levels can be found in [the specification](https://tools.ietf.org/html/draft-ietf-httpbis-rfc6265bis-09#section-5.4.7).\n\n## Encode and decode\n\nCookie accepts `encode` or `decode` options for processing a [cookie-value](https://datatracker.ietf.org/doc/html/rfc6265#section-4.1.1).\nSince the value of a cookie has a limited character set (and must be a simple string), these functions are used to transform values into strings suitable for a cookies value.\n\nThe default `encode` function preserves roundtrip-safe cookie-octet values and uses the global `encodeURIComponent` otherwise.\n\nThe default `decode` function is the global `decodeURIComponent`, wrapped in a `try..catch`. If an error\nis thrown it will return the cookie's original value. If you provide your own encode/decode\nscheme you must ensure errors are appropriately handled. Custom decode functions can return `undefined`,\nwhich will skip the cookie during `parse` and try again with a future cookie of the same name.\n\n## Example\n\nThe following example uses this module in conjunction with the Node.js core HTTP server\nto prompt a user for their name and display it back on future visits.\n\n```js\nvar cookie = require(\"cookie\");\nvar escapeHtml = require(\"escape-html\");\nvar http = require(\"http\");\nvar url = require(\"url\");\n\nfunction onRequest(req, res) {\n  // Parse the query string\n  var query = url.parse(req.url, true, true).query;\n\n  if (query && query.name) {\n    // Set a new cookie with the name\n    res.setHeader(\n      \"Set-Cookie\",\n      cookie.stringifySetCookie({\n        name: \"name\",\n        value: String(query.name),\n        httpOnly: true,\n        maxAge: 60 * 60 * 24 * 7, // 1 week\n      }),\n    );\n\n    // Redirect back after setting cookie\n    res.statusCode = 302;\n    res.setHeader(\"Location\", req.headers.referer || \"/\");\n    res.end();\n    return;\n  }\n\n  // Parse the cookies on the request\n  var cookies = cookie.parseCookie(req.headers.cookie || \"\");\n\n  // Get the visitor name set in the cookie\n  var name = cookies.name;\n\n  res.setHeader(\"Content-Type\", \"text/html; charset=UTF-8\");\n\n  if (name) {\n    res.write(\"<p>Welcome back, <b>\" + escapeHtml(name) + \"</b>!</p>\");\n  } else {\n    res.write(\"<p>Hello, new visitor!</p>\");\n  }\n\n  res.write('<form method=\"GET\">');\n  res.write(\n    '<input placeholder=\"enter your name\" name=\"name\"> <input type=\"submit\" value=\"Set Name\">',\n  );\n  res.end(\"</form>\");\n}\n\nhttp.createServer(onRequest).listen(3000);\n```\n\n## Testing\n\n```sh\nnpm test\n```\n\n## Benchmark\n\n```sh\nnpm run bench\n```\n\n```\n     name                   hz     min     max    mean     p75     p99    p995    p999     rme  samples\n   · simple       8,566,313.09  0.0000  0.3694  0.0001  0.0001  0.0002  0.0002  0.0003  ±0.64%  4283157   fastest\n   · decode       3,834,348.85  0.0001  0.2465  0.0003  0.0003  0.0003  0.0004  0.0006  ±0.38%  1917175\n   · unquote      8,315,355.96  0.0000  0.3824  0.0001  0.0001  0.0002  0.0002  0.0003  ±0.72%  4157880\n   · duplicates   1,944,765.97  0.0004  0.2959  0.0005  0.0005  0.0006  0.0006  0.0008  ±0.24%   972384\n   · 10 cookies     675,345.67  0.0012  0.4328  0.0015  0.0015  0.0019  0.0020  0.0058  ±0.75%   337673\n   · 100 cookies     61,040.71  0.0152  0.4092  0.0164  0.0160  0.0196  0.0228  0.2260  ±0.71%    30521   slowest\n   ✓ parse top-sites (15) 22945ms\n     name                                  hz     min     max    mean     p75     p99    p995    p999     rme   samples\n   · parse accounts.google.com   7,164,349.17  0.0000  0.0929  0.0001  0.0002  0.0002  0.0002  0.0003  ±0.09%   3582184\n   · parse apple.com             7,817,686.84  0.0000  0.6048  0.0001  0.0001  0.0002  0.0002  0.0003  ±1.05%   3908844\n   · parse cloudflare.com        7,189,841.70  0.0000  0.0390  0.0001  0.0002  0.0002  0.0002  0.0003  ±0.06%   3594921\n   · parse docs.google.com       7,051,765.61  0.0000  0.0296  0.0001  0.0002  0.0002  0.0002  0.0003  ±0.06%   3525883\n   · parse drive.google.com      7,349,104.77  0.0000  0.0368  0.0001  0.0001  0.0002  0.0002  0.0003  ±0.05%   3674553\n   · parse en.wikipedia.org      1,929,909.49  0.0004  0.3598  0.0005  0.0005  0.0007  0.0007  0.0012  ±0.16%    964955\n   · parse linkedin.com          2,225,658.01  0.0003  0.0595  0.0004  0.0005  0.0005  0.0005  0.0006  ±0.06%   1112830\n   · parse maps.google.com       4,423,511.68  0.0001  0.0942  0.0002  0.0003  0.0003  0.0003  0.0005  ±0.08%   2211756\n   · parse microsoft.com         3,387,601.88  0.0002  0.0725  0.0003  0.0003  0.0004  0.0004  0.0005  ±0.09%   1693801\n   · parse play.google.com       7,375,980.86  0.0000  0.1994  0.0001  0.0001  0.0002  0.0002  0.0003  ±0.12%   3687991\n   · parse support.google.com    4,912,267.94  0.0001  2.8958  0.0002  0.0002  0.0003  0.0003  0.0005  ±1.28%   2456134\n   · parse www.google.com        3,443,035.87  0.0002  0.2783  0.0003  0.0003  0.0004  0.0004  0.0007  ±0.51%   1721518\n   · parse youtu.be              1,910,492.87  0.0004  0.3490  0.0005  0.0005  0.0007  0.0007  0.0011  ±0.46%    955247\n   · parse youtube.com           1,895,082.62  0.0004  0.7454  0.0005  0.0005  0.0006  0.0007  0.0013  ±0.64%    947542   slowest\n   · parse example.com          21,582,835.27  0.0000  0.1095  0.0000  0.0000  0.0001  0.0001  0.0001  ±0.13%  10791418\n```\n\n## References\n\n- [RFC 6265: HTTP State Management Mechanism](https://tools.ietf.org/html/rfc6265)\n- [Same-site Cookies](https://tools.ietf.org/html/draft-ietf-httpbis-rfc6265bis-09#section-5.4.7)\n\n## License\n\n[MIT](LICENSE)\n\n[ci-image]: https://img.shields.io/github/actions/workflow/status/jshttp/cookie/ci.yml\n[ci-url]: https://github.com/jshttp/cookie/actions/workflows/ci.yml?query=branch%3Amaster\n[coverage-image]: https://img.shields.io/codecov/c/github/jshttp/cookie/master\n[coverage-url]: https://app.codecov.io/gh/jshttp/cookie\n[npm-downloads-image]: https://img.shields.io/npm/dm/cookie\n[npm-url]: https://npmjs.org/package/cookie\n[npm-version-image]: https://img.shields.io/npm/v/cookie"
 }

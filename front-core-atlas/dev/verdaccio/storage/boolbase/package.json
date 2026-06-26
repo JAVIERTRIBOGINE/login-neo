@@ -1,0 +1,179 @@
+{
+	"name": "boolbase",
+	"versions": {
+		"2.0.0": {
+			"name": "boolbase",
+			"description": "two functions: One that returns true, one that returns false",
+			"version": "2.0.0",
+			"author": {
+				"name": "Felix Boehm",
+				"email": "me@feedic.com"
+			},
+			"homepage": "https://github.com/fb55/boolbase",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/fb55/boolbase.git"
+			},
+			"bugs": {
+				"url": "https://github.com/fb55/boolbase/issues"
+			},
+			"engines": {
+				"node": ">=20.19.0"
+			},
+			"main": "dist/index.js",
+			"devDependencies": {
+				"typescript": "^5.9.3"
+			},
+			"keywords": [
+				"boolean",
+				"function"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "fb55",
+					"email": "me@feedic.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"build": "tsc",
+				"test": "npm run build && node --test",
+				"prepare": "npm run build"
+			},
+			"lastModified": 0,
+			"funding": {
+				"type": "github",
+				"url": "https://github.com/sponsors/fb55"
+			},
+			"_id": "boolbase@2.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/boolbase/-/boolbase-2.0.0.tgz",
+				"shasum": "832968d211d5c008d833b86e049bb3943036e5b1",
+				"integrity": "sha512-DkVaaQHymRhpYEYo9x1oo7Q7B0Y6KJUsjm3c9eTyFDby4MHLBTwZ6ZDWBel5zrYxj1WsZgC5oLpiz+93MluXeA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEUCIQCfp5h65RYoT6bnqT6R5b7FvqgTNsJtLWhSWIErpvb0KgIgRhcBS+xXGsh9nc8x91uqMPjTwpOf++AD4OsOyGUnoJ0="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/boolbase@2.0.0",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "11.9.0",
+			"_npmUser": {
+				"name": "GitHub Actions",
+				"email": "npm-oidc-no-reply@github.com",
+				"trustedPublisher": {
+					"id": "github",
+					"oidcConfigId": "oidc:25d4a7c0-cd3a-4615-b752-07937a68a69d"
+				}
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "ede159ca6b89b9709e7322c53eeb385ac7fdfefb",
+			"types": "dist/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./dist/index.d.ts",
+					"default": "./dist/index.js"
+				}
+			},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages-npm-production",
+				"tmp": "tmp/boolbase_2.0.0_1773753204402_0.5262832799539794"
+			},
+			"type": "module",
+			"_nodeVersion": "24.14.0",
+			"contributors": []
+		},
+		"1.0.0": {
+			"name": "boolbase",
+			"description": "two functions: One that returns true, one that returns false",
+			"version": "1.0.0",
+			"author": {
+				"name": "Felix Boehm",
+				"email": "me@feedic.com"
+			},
+			"homepage": "https://github.com/fb55/boolbase",
+			"repository": {
+				"url": "https://github.com/fb55/boolbase",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/fb55/boolbase/issues"
+			},
+			"main": "index.js",
+			"keywords": [
+				"boolean",
+				"function"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "feedic",
+					"email": "me@feedic.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "echo \"Error: no test specified\" && exit 1"
+			},
+			"lastModified": 0,
+			"_id": "boolbase@1.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/boolbase/-/boolbase-1.0.0.tgz",
+				"shasum": "68dff5fbe60c51eb37725ea9e3ed310dcc1e776e",
+				"integrity": "sha512-JZOSA7Mo9sNGB8+UjSgzdLtokWAky1zbztM3WRLCbZ70/3cTANmQmOdR7y2g+J0e2WXywy1yS468tY+IruqEww==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIDnj9Fb6MV0ijpKOGLBTlGLuLLGf93sOI1Tp6YqrMI/cAiEAiem+6dYcR3Z21eyzZuPqOR5ddxPqF+qzMrXW1LWDtEw="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "1.4.2",
+			"_npmUser": {
+				"name": "feedic",
+				"email": "me@feedic.com"
+			},
+			"contributors": []
+		}
+	},
+	"time": {
+		"2.0.0": "2026-03-17T13:13:24.549Z",
+		"created": "2014-02-15T14:44:50.619Z",
+		"modified": "2026-03-17T13:13:24.849Z",
+		"1.0.0": "2014-02-15T14:44:50.620Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "2.0.0"
+	},
+	"_uplinks": {
+		"artifactory-sabadell": {
+			"etag": "5d549599aad00dc2b0bbaf9d082ac620d6bf2998",
+			"fetched": 1782459825571
+		}
+	},
+	"_distfiles": {
+		"boolbase-2.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/boolbase/-/boolbase-2.0.0.tgz",
+			"sha": "832968d211d5c008d833b86e049bb3943036e5b1",
+			"registry": "artifactory-sabadell"
+		},
+		"boolbase-1.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/boolbase/-/boolbase-1.0.0.tgz",
+			"sha": "68dff5fbe60c51eb37725ea9e3ed310dcc1e776e",
+			"registry": "artifactory-sabadell"
+		}
+	},
+	"_attachments": {},
+	"_rev": "1-317625d1c4cbe3d0",
+	"_id": "boolbase",
+	"readme": "# boolbase\nThis very simple module provides two basic functions, one that always returns true (`trueFunc`) and one that always returns false (`falseFunc`).\n\n### Why is this needed?\n\nBy having only a single instance of these functions around, it's possible to do some nice optimizations.\nEg. [`css-select`](https://github.com/fb55/css-select) uses these functions to determine whether a selector won't match any elements\nIf that's the case, the DOM doesn't even need to be touched.\n\n### And why is this a separate module?\n\nI'm trying to modularize `css-select` and most modules depend on these functions.\nIMHO, having a separate module is the easiest solution to this problem."
+}

@@ -1,0 +1,1406 @@
+{
+	"name": "loader-runner",
+	"versions": {
+		"2.0.0": {
+			"name": "loader-runner",
+			"description": "Runs (webpack) loaders",
+			"version": "2.0.0",
+			"author": {
+				"name": "Tobias Koppers @sokra"
+			},
+			"homepage": "https://github.com/webpack/loader-runner#readme",
+			"repository": {
+				"url": "git+https://github.com/webpack/loader-runner.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/webpack/loader-runner/issues"
+			},
+			"main": "lib/LoaderRunner.js",
+			"devDependencies": {
+				"mocha": "^2.3.4",
+				"eslint": "^1.10.3",
+				"should": "^8.0.2",
+				"istanbul": "^0.4.1",
+				"coveralls": "^2.11.6",
+				"codecov.io": "^0.1.6",
+				"beautify-lint": "^1.0.4",
+				"eslint-plugin-nodeca": "^1.0.3"
+			},
+			"keywords": [
+				"webpack",
+				"loader"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "sokra",
+					"email": "tobias.koppers@googlemail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint lib test",
+				"test": "mocha --reporter spec",
+				"cover": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec",
+				"travis": "npm run cover -- --report lcovonly",
+				"pretest": "npm run lint && npm run beautify-lint",
+				"beautify": "beautify-rewrite lib/**.js test/*.js",
+				"precover": "npm run lint && npm run beautify-lint",
+				"beautify-lint": "beautify-lint lib/**.js test/*.js"
+			},
+			"lastModified": 0,
+			"_id": "loader-runner@2.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/loader-runner/-/loader-runner-2.0.0.tgz",
+				"shasum": "d8bae1bf75761ef160a687ec92347483b57b152f",
+				"integrity": "sha512-7pJFkhmjYHU9IIbQ9NEgV1JVlKRvJl92rTQXK9jzSgvFvtMtrPatIcjCBkE/SG64jAfZqvm0m912LWEa/+niaQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIHujlLnRFkCMfUS3Dsn1yuxYyiz59+ti/fljBq21lhnbAiEA+wwnFG4p1Jo3BBl2ofR/nWUphzDKBkuBiOCwNOIqFag="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "2.10.1",
+			"_npmUser": {
+				"name": "sokra",
+				"email": "tobias.koppers@googlemail.com"
+			},
+			"_shasum": "d8bae1bf75761ef160a687ec92347483b57b152f",
+			"_nodeVersion": "0.12.4",
+			"contributors": []
+		},
+		"2.0.1": {
+			"name": "loader-runner",
+			"description": "Runs (webpack) loaders",
+			"version": "2.0.1",
+			"author": {
+				"name": "Tobias Koppers @sokra"
+			},
+			"homepage": "https://github.com/webpack/loader-runner#readme",
+			"repository": {
+				"url": "git+https://github.com/webpack/loader-runner.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/webpack/loader-runner/issues"
+			},
+			"main": "lib/LoaderRunner.js",
+			"devDependencies": {
+				"mocha": "^2.3.4",
+				"eslint": "^1.10.3",
+				"should": "^8.0.2",
+				"istanbul": "^0.4.1",
+				"coveralls": "^2.11.6",
+				"codecov.io": "^0.1.6",
+				"beautify-lint": "^1.0.4",
+				"eslint-plugin-nodeca": "^1.0.3"
+			},
+			"keywords": [
+				"webpack",
+				"loader"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "sokra",
+					"email": "tobias.koppers@googlemail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint lib test",
+				"test": "mocha --reporter spec",
+				"cover": "istanbul cover node_modules/mocha/bin/_mocha",
+				"travis": "npm run cover -- --report lcovonly",
+				"pretest": "npm run lint && npm run beautify-lint",
+				"beautify": "beautify-rewrite lib/**.js test/*.js",
+				"precover": "npm run lint && npm run beautify-lint",
+				"beautify-lint": "beautify-lint lib/**.js test/*.js"
+			},
+			"lastModified": 0,
+			"_id": "loader-runner@2.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/loader-runner/-/loader-runner-2.0.1.tgz",
+				"shasum": "504717c0634a484bc7f676feaee6178644cacee6",
+				"integrity": "sha512-8RHSLuopKBXdI8p3Br1zUIl9aNnXQosfKZhT9L9qZ8v2pqvjQDInqTYTjKdkZ+wUxwVr1feHUA8TeG8Dpl1Dmw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQCXWMTVcKPLVLoIKGZ3u6dB7ozWu6dJjvogfttiIUD6gQIhAOYdJYK/eBsFoN8zNdU88j69Um0J3kBK5j8mrFOaYaI6"
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "2.10.1",
+			"_npmUser": {
+				"name": "sokra",
+				"email": "tobias.koppers@googlemail.com"
+			},
+			"gitHead": "2821bf65f5a22cd45ae431981f370f6ee1a2a125",
+			"_shasum": "504717c0634a484bc7f676feaee6178644cacee6",
+			"_nodeVersion": "0.12.4",
+			"contributors": []
+		},
+		"2.1.0": {
+			"name": "loader-runner",
+			"description": "Runs (webpack) loaders",
+			"version": "2.1.0",
+			"author": {
+				"name": "Tobias Koppers @sokra"
+			},
+			"homepage": "https://github.com/webpack/loader-runner#readme",
+			"repository": {
+				"url": "git+https://github.com/webpack/loader-runner.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/webpack/loader-runner/issues"
+			},
+			"main": "lib/LoaderRunner.js",
+			"devDependencies": {
+				"mocha": "^2.3.4",
+				"eslint": "^1.10.3",
+				"should": "^8.0.2",
+				"istanbul": "^0.4.1",
+				"coveralls": "^2.11.6",
+				"codecov.io": "^0.1.6",
+				"beautify-lint": "^1.0.4",
+				"eslint-plugin-nodeca": "^1.0.3"
+			},
+			"keywords": [
+				"webpack",
+				"loader"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "sokra",
+					"email": "tobias.koppers@googlemail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint lib test",
+				"test": "mocha --reporter spec",
+				"cover": "istanbul cover node_modules/mocha/bin/_mocha",
+				"travis": "npm run cover -- --report lcovonly",
+				"pretest": "npm run lint && npm run beautify-lint",
+				"beautify": "beautify-rewrite lib/**.js test/*.js",
+				"precover": "npm run lint && npm run beautify-lint",
+				"beautify-lint": "beautify-lint lib/**.js test/*.js"
+			},
+			"lastModified": 0,
+			"_id": "loader-runner@2.1.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/loader-runner/-/loader-runner-2.1.0.tgz",
+				"shasum": "9d09f7bc6ebee9a13c4fd688c4d15c1c83875e76",
+				"integrity": "sha512-PTacu1C06YhMJrgZIDS90SPrLirgNmZBglEQa3C7JrTlxBTqM/bqR+5o5SfDKtGJPTWt+12R+sH2al0GsvhESw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCRa5R8RQ8alwfou9X+hdnO8s4+Dv3iOGbRp7LeF0njFQIgLgAJ0DasH0E8orMb99X6xkIjXrsqZMoqy+XcJb4NRQQ="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "3.3.3",
+			"_npmUser": {
+				"name": "sokra",
+				"email": "tobias.koppers@googlemail.com"
+			},
+			"gitHead": "c295187856c310684491b940f72d8193136218c4",
+			"_shasum": "9d09f7bc6ebee9a13c4fd688c4d15c1c83875e76",
+			"_nodeVersion": "5.4.1",
+			"contributors": []
+		},
+		"4.2.0": {
+			"name": "loader-runner",
+			"description": "Runs (webpack) loaders",
+			"version": "4.2.0",
+			"author": {
+				"name": "Tobias Koppers @sokra"
+			},
+			"homepage": "https://github.com/webpack/loader-runner#readme",
+			"repository": {
+				"url": "git+https://github.com/webpack/loader-runner.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/webpack/loader-runner/issues"
+			},
+			"engines": {
+				"node": ">=6.11.5"
+			},
+			"main": "lib/LoaderRunner.js",
+			"devDependencies": {
+				"mocha": "^3.2.0",
+				"eslint": "^3.12.2",
+				"should": "^8.0.2",
+				"istanbul": "^0.4.1",
+				"eslint-plugin-node": "^3.0.5",
+				"eslint-plugin-nodeca": "^1.0.3"
+			},
+			"keywords": [
+				"webpack",
+				"loader"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "sokra",
+					"email": "tobias.koppers@googlemail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint lib test",
+				"test": "mocha --reporter spec",
+				"cover": "istanbul cover node_modules/mocha/bin/_mocha",
+				"pretest": "npm run lint",
+				"precover": "npm run lint"
+			},
+			"lastModified": 0,
+			"_id": "loader-runner@4.2.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/loader-runner/-/loader-runner-4.2.0.tgz",
+				"shasum": "d7022380d66d14c5fb1d496b89864ebcfd478384",
+				"integrity": "sha512-92+huvxMvYlMzMt0iIOukcwYBFpkYJdpl2xsZ7LrlayO7E8SOv+JJUEK17B/dJIHAOLMfh2dZZ/Y18WgmGtYNw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDjnYNIpYKY434MrZ+gE1Jcy+4L5rdakl6N55ASCssZjQIgZ1V3djt/Yy790tJ59olShYqbHlc9m1xicG0ycYmwJsA="
+					}
+				]
+			},
+			"_npmVersion": "7.0.15",
+			"_npmUser": {
+				"name": "sokra",
+				"email": "tobias.koppers@googlemail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "6221befd031563e130f59d171e732950ee4402c6",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/loader-runner_4.2.0_1610029759740_0.759150819652417",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "15.4.0",
+			"contributors": []
+		},
+		"4.3.0": {
+			"name": "loader-runner",
+			"description": "Runs (webpack) loaders",
+			"version": "4.3.0",
+			"author": {
+				"name": "Tobias Koppers @sokra"
+			},
+			"homepage": "https://github.com/webpack/loader-runner#readme",
+			"repository": {
+				"url": "git+https://github.com/webpack/loader-runner.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/webpack/loader-runner/issues"
+			},
+			"engines": {
+				"node": ">=6.11.5"
+			},
+			"main": "lib/LoaderRunner.js",
+			"devDependencies": {
+				"mocha": "^3.2.0",
+				"eslint": "^3.12.2",
+				"should": "^8.0.2",
+				"istanbul": "^0.4.1",
+				"eslint-plugin-node": "^3.0.5",
+				"eslint-plugin-nodeca": "^1.0.3"
+			},
+			"keywords": [
+				"webpack",
+				"loader"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "sokra",
+					"email": "tobias.koppers@googlemail.com"
+				},
+				{
+					"name": "jhnns",
+					"email": "mail@johannesewald.de"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint lib test",
+				"test": "mocha --reporter spec",
+				"cover": "istanbul cover node_modules/mocha/bin/_mocha",
+				"pretest": "npm run lint",
+				"precover": "npm run lint"
+			},
+			"lastModified": 0,
+			"_id": "loader-runner@4.3.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/loader-runner/-/loader-runner-4.3.0.tgz",
+				"shasum": "c1b4a163b99f614830353b16755e7149ac2314e1",
+				"integrity": "sha512-3R/1M+yS3j5ou80Me59j7F9IMs4PXs3VqRrm0TU3AbKPxlmpoY1TNscJV/oGJXo8qCatFGTfDbY6W6ipGOYXfg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCPa2WnC3Sbk65ea1fzbmGECkN34FOyt6Dj4UijVrdTkwIgLz6ncHBySJ9KqR72TYmY7dRn8bDzLqj2XCU4LUNQiis="
+					}
+				]
+			},
+			"_npmVersion": "7.22.0",
+			"_npmUser": {
+				"name": "sokra",
+				"email": "tobias.koppers@googlemail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "913ea0d4eb269060b1e9c96f31b79dc081d0b347",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/loader-runner_4.3.0_1649756367574_0.5336774381270604",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "14.19.0",
+			"contributors": []
+		},
+		"4.0.0": {
+			"name": "loader-runner",
+			"description": "Runs (webpack) loaders",
+			"version": "4.0.0",
+			"author": {
+				"name": "Tobias Koppers @sokra"
+			},
+			"homepage": "https://github.com/webpack/loader-runner#readme",
+			"repository": {
+				"url": "git+https://github.com/webpack/loader-runner.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/webpack/loader-runner/issues"
+			},
+			"engines": {
+				"node": ">=6.11.5"
+			},
+			"main": "lib/LoaderRunner.js",
+			"devDependencies": {
+				"mocha": "^3.2.0",
+				"eslint": "^3.12.2",
+				"should": "^8.0.2",
+				"istanbul": "^0.4.1",
+				"coveralls": "^2.11.6",
+				"codecov.io": "^0.1.6",
+				"eslint-plugin-node": "^3.0.5",
+				"eslint-plugin-nodeca": "^1.0.3"
+			},
+			"keywords": [
+				"webpack",
+				"loader"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "sokra",
+					"email": "tobias.koppers@googlemail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint lib test",
+				"test": "mocha --reporter spec",
+				"cover": "istanbul cover node_modules/mocha/bin/_mocha",
+				"travis": "npm run cover -- --report lcovonly",
+				"pretest": "npm run lint",
+				"precover": "npm run lint"
+			},
+			"lastModified": 0,
+			"_id": "loader-runner@4.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/loader-runner/-/loader-runner-4.0.0.tgz",
+				"shasum": "02abcfd9fe6ff7a5aeb3547464746c4dc6ba333d",
+				"integrity": "sha512-Rqf48ufrr48gFjnaqss04QesoXB7VenbpFFIV/0yOKGnpbejrVlOPqTsoX42FG5goXM5Ixekcs4DqDzHOX2z7Q==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQC1/S6ATPC+pHrn10uu861Z43NlFKc/wr+fbpAAy5HCtgIgMwfUS8U55ebaQ+RqzrnCAdwZi4TXUCedOQCYHbe5lUA="
+					}
+				]
+			},
+			"_npmVersion": "6.14.5",
+			"_npmUser": {
+				"name": "sokra",
+				"email": "tobias.koppers@googlemail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "fbbfb6685d6d3bbdd81ac9a34878d6b777dc4b4a",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/loader-runner_4.0.0_1593787765288_0.7672169760556056",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "14.3.0",
+			"contributors": []
+		},
+		"4.1.0": {
+			"name": "loader-runner",
+			"description": "Runs (webpack) loaders",
+			"version": "4.1.0",
+			"author": {
+				"name": "Tobias Koppers @sokra"
+			},
+			"homepage": "https://github.com/webpack/loader-runner#readme",
+			"repository": {
+				"url": "git+https://github.com/webpack/loader-runner.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/webpack/loader-runner/issues"
+			},
+			"engines": {
+				"node": ">=6.11.5"
+			},
+			"main": "lib/LoaderRunner.js",
+			"devDependencies": {
+				"mocha": "^3.2.0",
+				"eslint": "^3.12.2",
+				"should": "^8.0.2",
+				"istanbul": "^0.4.1",
+				"coveralls": "^2.11.6",
+				"codecov.io": "^0.1.6",
+				"eslint-plugin-node": "^3.0.5",
+				"eslint-plugin-nodeca": "^1.0.3"
+			},
+			"keywords": [
+				"webpack",
+				"loader"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "sokra",
+					"email": "tobias.koppers@googlemail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint lib test",
+				"test": "mocha --reporter spec",
+				"cover": "istanbul cover node_modules/mocha/bin/_mocha",
+				"travis": "npm run cover -- --report lcovonly",
+				"pretest": "npm run lint",
+				"precover": "npm run lint"
+			},
+			"lastModified": 0,
+			"_id": "loader-runner@4.1.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/loader-runner/-/loader-runner-4.1.0.tgz",
+				"shasum": "f70bc0c29edbabdf2043e7ee73ccc3fe1c96b42d",
+				"integrity": "sha512-oR4lB4WvwFoC70ocraKhn5nkKSs23t57h9udUgw8o0iH8hMXeEoRuUgfcvgUwAJ1ZpRqBvcou4N2SMvM1DwMrA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIEIfCJGqeghB4m5993BLT1WoLwKaMvYVi6VNh18d9/pwAiA+LZhNFCbHYDObA7Q9EJDS+dozKfzQrTmo2rtvkFHolA=="
+					}
+				]
+			},
+			"_npmVersion": "6.14.8",
+			"_npmUser": {
+				"name": "sokra",
+				"email": "tobias.koppers@googlemail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "cebc687275edc688a5d8cf0d7c9a2be34c67fa4d",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/loader-runner_4.1.0_1601450686604_0.7358849863898114",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "14.9.0",
+			"contributors": []
+		},
+		"2.3.1": {
+			"name": "loader-runner",
+			"description": "Runs (webpack) loaders",
+			"version": "2.3.1",
+			"author": {
+				"name": "Tobias Koppers @sokra"
+			},
+			"homepage": "https://github.com/webpack/loader-runner#readme",
+			"repository": {
+				"url": "git+https://github.com/webpack/loader-runner.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/webpack/loader-runner/issues"
+			},
+			"engines": {
+				"node": ">=4.3.0 <5.0.0 || >=5.10"
+			},
+			"main": "lib/LoaderRunner.js",
+			"devDependencies": {
+				"mocha": "^3.2.0",
+				"eslint": "^3.12.2",
+				"should": "^8.0.2",
+				"istanbul": "^0.4.1",
+				"coveralls": "^2.11.6",
+				"codecov.io": "^0.1.6",
+				"beautify-lint": "^1.0.4",
+				"eslint-plugin-node": "^3.0.5",
+				"eslint-plugin-nodeca": "^1.0.3"
+			},
+			"keywords": [
+				"webpack",
+				"loader"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "sokra",
+					"email": "tobias.koppers@googlemail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint lib test",
+				"test": "mocha --reporter spec",
+				"cover": "istanbul cover node_modules/mocha/bin/_mocha",
+				"travis": "npm run cover -- --report lcovonly",
+				"pretest": "npm run lint && npm run beautify-lint",
+				"beautify": "beautify-rewrite lib/**.js test/*.js",
+				"precover": "npm run lint && npm run beautify-lint",
+				"beautify-lint": "beautify-lint lib/**.js test/*.js"
+			},
+			"lastModified": 0,
+			"_id": "loader-runner@2.3.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/loader-runner/-/loader-runner-2.3.1.tgz",
+				"shasum": "026f12fe7c3115992896ac02ba022ba92971b979",
+				"integrity": "sha512-By6ZFY7ETWOc9RFaAIb23IjJVcM4dvJC/N57nmdz9RSkMXvAXGI7SyVlAw3v8vjtDRlqThgVDVmTnr9fqMlxkw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQCeBC9MwletCQkFEZq+Q6L7mXIVMg11JYq1rNkh+EwRbQIhAMJTYsMrOWO1Ov51e9ccERTz6x2khN8WycYApxe6L+Hj"
+					}
+				]
+			},
+			"_npmVersion": "5.6.0",
+			"_npmUser": {
+				"name": "sokra",
+				"email": "tobias.koppers@googlemail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "2815f40dea982dc14dc872ab7b40657a537371df",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/loader-runner_2.3.1_1537526013899_0.6287133545659194",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "8.11.4",
+			"contributors": []
+		},
+		"2.4.0": {
+			"name": "loader-runner",
+			"description": "Runs (webpack) loaders",
+			"version": "2.4.0",
+			"author": {
+				"name": "Tobias Koppers @sokra"
+			},
+			"homepage": "https://github.com/webpack/loader-runner#readme",
+			"repository": {
+				"url": "git+https://github.com/webpack/loader-runner.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/webpack/loader-runner/issues"
+			},
+			"engines": {
+				"node": ">=4.3.0 <5.0.0 || >=5.10"
+			},
+			"main": "lib/LoaderRunner.js",
+			"devDependencies": {
+				"mocha": "^3.2.0",
+				"eslint": "^3.12.2",
+				"should": "^8.0.2",
+				"istanbul": "^0.4.1",
+				"coveralls": "^2.11.6",
+				"codecov.io": "^0.1.6",
+				"eslint-plugin-node": "^3.0.5",
+				"eslint-plugin-nodeca": "^1.0.3"
+			},
+			"keywords": [
+				"webpack",
+				"loader"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "sokra",
+					"email": "tobias.koppers@googlemail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint lib test",
+				"test": "mocha --reporter spec",
+				"cover": "istanbul cover node_modules/mocha/bin/_mocha",
+				"travis": "npm run cover -- --report lcovonly",
+				"pretest": "npm run lint",
+				"precover": "npm run lint"
+			},
+			"lastModified": 0,
+			"_id": "loader-runner@2.4.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/loader-runner/-/loader-runner-2.4.0.tgz",
+				"shasum": "ed47066bfe534d7e84c4c7b9998c2a75607d9357",
+				"integrity": "sha512-Jsmr89RcXGIwivFY21FcRrisYZfvLMTWx5kOLc+JTxtpBOG6xML0vzbc6SEQG2FO9/4Fc3wW4LVcB5DmGflaRw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIEmEzcif9t5m4m+rJZiJKhjvp0dIPu7ZnqEN+znwOtl3AiEAtJeONFQKoGTXVeyAxlmXz/ZmGJC0W9JN7KlC+JG9wEQ="
+					}
+				]
+			},
+			"_npmVersion": "6.4.1",
+			"_npmUser": {
+				"name": "sokra",
+				"email": "tobias.koppers@googlemail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "4e817fdf48ba866cbfa2e0a91c9b720f09410422",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/loader-runner_2.4.0_1547560015150_0.8059995476306019",
+				"host": "s3://npm-registry-packages"
+			},
+			"readmeFilename": "README.md",
+			"_nodeVersion": "10.15.0",
+			"contributors": []
+		},
+		"2.1.1": {
+			"name": "loader-runner",
+			"description": "Runs (webpack) loaders",
+			"version": "2.1.1",
+			"author": {
+				"name": "Tobias Koppers @sokra"
+			},
+			"homepage": "https://github.com/webpack/loader-runner#readme",
+			"repository": {
+				"url": "git+https://github.com/webpack/loader-runner.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/webpack/loader-runner/issues"
+			},
+			"main": "lib/LoaderRunner.js",
+			"devDependencies": {
+				"mocha": "^2.3.4",
+				"eslint": "^1.10.3",
+				"should": "^8.0.2",
+				"istanbul": "^0.4.1",
+				"coveralls": "^2.11.6",
+				"codecov.io": "^0.1.6",
+				"beautify-lint": "^1.0.4",
+				"eslint-plugin-nodeca": "^1.0.3"
+			},
+			"keywords": [
+				"webpack",
+				"loader"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "sokra",
+					"email": "tobias.koppers@googlemail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint lib test",
+				"test": "mocha --reporter spec",
+				"cover": "istanbul cover node_modules/mocha/bin/_mocha",
+				"travis": "npm run cover -- --report lcovonly",
+				"pretest": "npm run lint && npm run beautify-lint",
+				"beautify": "beautify-rewrite lib/**.js test/*.js",
+				"precover": "npm run lint && npm run beautify-lint",
+				"beautify-lint": "beautify-lint lib/**.js test/*.js"
+			},
+			"lastModified": 0,
+			"_id": "loader-runner@2.1.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/loader-runner/-/loader-runner-2.1.1.tgz",
+				"shasum": "60a30f2a7c8eae79f0805b5848fee134f8ade519",
+				"integrity": "sha512-31BRP1m/zc/IScL5qyz403k93S6sG+LegcwkQ3dGAIIO31y0LFKUcCrZQBIujOASky2CAZ5q2INVPesc3mablw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIF5AuBgQYQ3P8pHFjlHEJn6I0pcg9zroQbXUxw856pn2AiB8sei6400grOkIhoXeI6DsGS6WAR8y0orXm/Rkb0mOQg=="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "2.10.1",
+			"_npmUser": {
+				"name": "sokra",
+				"email": "tobias.koppers@googlemail.com"
+			},
+			"gitHead": "31460593795b9b66ab590312c9e21bec5556c240",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/loader-runner-2.1.1.tgz_1454531680561_0.005646316800266504",
+				"host": "packages-6-west.internal.npmjs.com"
+			},
+			"_shasum": "60a30f2a7c8eae79f0805b5848fee134f8ade519",
+			"_nodeVersion": "0.12.4",
+			"contributors": []
+		},
+		"2.2.0": {
+			"name": "loader-runner",
+			"description": "Runs (webpack) loaders",
+			"version": "2.2.0",
+			"author": {
+				"name": "Tobias Koppers @sokra"
+			},
+			"homepage": "https://github.com/webpack/loader-runner#readme",
+			"repository": {
+				"url": "git+https://github.com/webpack/loader-runner.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/webpack/loader-runner/issues"
+			},
+			"main": "lib/LoaderRunner.js",
+			"devDependencies": {
+				"mocha": "^2.3.4",
+				"eslint": "^1.10.3",
+				"should": "^8.0.2",
+				"istanbul": "^0.4.1",
+				"coveralls": "^2.11.6",
+				"codecov.io": "^0.1.6",
+				"beautify-lint": "^1.0.4",
+				"eslint-plugin-nodeca": "^1.0.3"
+			},
+			"keywords": [
+				"webpack",
+				"loader"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "sokra",
+					"email": "tobias.koppers@googlemail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint lib test",
+				"test": "mocha --reporter spec",
+				"cover": "istanbul cover node_modules/mocha/bin/_mocha",
+				"travis": "npm run cover -- --report lcovonly",
+				"pretest": "npm run lint && npm run beautify-lint",
+				"beautify": "beautify-rewrite lib/**.js test/*.js",
+				"precover": "npm run lint && npm run beautify-lint",
+				"beautify-lint": "beautify-lint lib/**.js test/*.js"
+			},
+			"lastModified": 0,
+			"_id": "loader-runner@2.2.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/loader-runner/-/loader-runner-2.2.0.tgz",
+				"shasum": "824c1b699c4e7a2b6501b85902d5b862bf45b3fa",
+				"integrity": "sha512-N82KYsJ3Eak7gx7RbIsS4F/baYusD7vaHpuEhWz8BcO1giX+6GB99M5Sfetju5LuRqntOtW0yf925uCkzScCXw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDu9illURta2PS+fGLL8IJPIR2piKHNlYU7mqr67Jz7WQIgegwRCV/ywR9Mbb5fTYQNUUjGVmbGjui5TfAuuVZsFWc="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "3.3.3",
+			"_npmUser": {
+				"name": "sokra",
+				"email": "tobias.koppers@googlemail.com"
+			},
+			"gitHead": "c404687b153831ef3fe1ce4171a210241caa388b",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/loader-runner-2.2.0.tgz_1473891180613_0.5520296646282077",
+				"host": "packages-16-east.internal.npmjs.com"
+			},
+			"_shasum": "824c1b699c4e7a2b6501b85902d5b862bf45b3fa",
+			"_nodeVersion": "6.3.1",
+			"contributors": []
+		},
+		"4.3.1": {
+			"name": "loader-runner",
+			"description": "Runs (webpack) loaders",
+			"version": "4.3.1",
+			"author": {
+				"name": "Tobias Koppers @sokra"
+			},
+			"homepage": "https://github.com/webpack/loader-runner#readme",
+			"repository": {
+				"url": "git+https://github.com/webpack/loader-runner.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/webpack/loader-runner/issues"
+			},
+			"engines": {
+				"node": ">=6.11.5"
+			},
+			"main": "lib/LoaderRunner.js",
+			"devDependencies": {
+				"nyc": "^14.1.1",
+				"mocha": "^3.2.0",
+				"eslint": "^9.28.0",
+				"should": "^8.0.2",
+				"globals": "^16.2.0",
+				"prettier": "^3.5.3",
+				"@eslint/js": "^9.28.0",
+				"eslint-plugin-n": "^17.19.0",
+				"@eslint/markdown": "^7.1.0",
+				"eslint-plugin-jest": "^28.12.0",
+				"eslint-plugin-jsdoc": "^54.1.1",
+				"eslint-plugin-import": "^2.31.0",
+				"eslint-config-webpack": "^4.6.1",
+				"eslint-plugin-unicorn": "^60.0.0",
+				"eslint-config-prettier": "^10.1.5",
+				"eslint-plugin-prettier": "^5.4.1",
+				"@stylistic/eslint-plugin": "^5.2.3"
+			},
+			"keywords": [
+				"webpack",
+				"loader"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "sokra",
+					"email": "tobias.koppers@googlemail.com"
+				},
+				{
+					"name": "jhnns",
+					"email": "mail@johannesewald.de"
+				},
+				{
+					"name": "evilebottnawi",
+					"email": "sheo13666q@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"fix": "npm run fix:code && npm run fmt",
+				"fmt": "npm run fmt:base -- --log-level warn --write",
+				"lint": "npm run lint:code && npm run fmt:check",
+				"test": "npm run test:basic",
+				"pretest": "npm run lint",
+				"fix:code": "npm run lint:code -- --fix",
+				"fmt:base": "prettier --cache --ignore-unknown .",
+				"fmt:check": "npm run fmt:base -- --check",
+				"lint:code": "eslint --cache .",
+				"test:basic": "mocha --reporter spec",
+				"test:cover": "nyc --reporter=lcov npm run test:basic"
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://opencollective.com/webpack",
+				"type": "opencollective"
+			},
+			"_id": "loader-runner@4.3.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/loader-runner/-/loader-runner-4.3.1.tgz",
+				"shasum": "6c76ed29b0ccce9af379208299f07f876de737e3",
+				"integrity": "sha512-IWqP2SCPhyVFTBtRcgMHdzlf9ul25NwaFx4wCEH/KjAXuuHY4yNjvPXsBokp8jCB936PyWRaPKUNh8NvylLp2Q==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEYCIQCL6AGRpw7SAdvST1aXXZMolX2jSZoaQZjgkgGRlOZNHwIhALrHHQnIG0QrdDPTU9yONLSoM/Ar//uxch7GX2goHLGh"
+					}
+				]
+			},
+			"_npmVersion": "10.9.2",
+			"_npmUser": {
+				"name": "evilebottnawi",
+				"email": "sheo13666q@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "9fa0836b81bd9723b35f1379e47f247fe8dd9fd8",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/loader-runner_4.3.1_1759930534973_0.7155856507055054",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"_nodeVersion": "22.15.1",
+			"contributors": []
+		},
+		"2.3.0": {
+			"name": "loader-runner",
+			"description": "Runs (webpack) loaders",
+			"version": "2.3.0",
+			"author": {
+				"name": "Tobias Koppers @sokra"
+			},
+			"homepage": "https://github.com/webpack/loader-runner#readme",
+			"repository": {
+				"url": "git+https://github.com/webpack/loader-runner.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/webpack/loader-runner/issues"
+			},
+			"engines": {
+				"node": ">=4.3.0 <5.0.0 || >=5.10"
+			},
+			"main": "lib/LoaderRunner.js",
+			"devDependencies": {
+				"mocha": "^3.2.0",
+				"eslint": "^3.12.2",
+				"should": "^8.0.2",
+				"istanbul": "^0.4.1",
+				"coveralls": "^2.11.6",
+				"codecov.io": "^0.1.6",
+				"beautify-lint": "^1.0.4",
+				"eslint-plugin-node": "^3.0.5",
+				"eslint-plugin-nodeca": "^1.0.3"
+			},
+			"keywords": [
+				"webpack",
+				"loader"
+			],
+			"license": "MIT",
+			"files": [
+				"lib/",
+				"bin/",
+				"hot/",
+				"web_modules/",
+				"schemas/"
+			],
+			"maintainers": [
+				{
+					"name": "sokra",
+					"email": "tobias.koppers@googlemail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint lib test",
+				"test": "mocha --reporter spec",
+				"cover": "istanbul cover node_modules/mocha/bin/_mocha",
+				"travis": "npm run cover -- --report lcovonly",
+				"pretest": "npm run lint && npm run beautify-lint",
+				"beautify": "beautify-rewrite lib/**.js test/*.js",
+				"precover": "npm run lint && npm run beautify-lint",
+				"beautify-lint": "beautify-lint lib/**.js test/*.js"
+			},
+			"lastModified": 0,
+			"_id": "loader-runner@2.3.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/loader-runner/-/loader-runner-2.3.0.tgz",
+				"shasum": "f482aea82d543e07921700d5a46ef26fdac6b8a2",
+				"integrity": "sha512-YeDPSODHmJecKtOhggftAbDOJBUU8BcHtuz0xpsRH8EaCiv8SyDlUQJ2yLam/5stbMLYeEeqW5Ilm0SrXxG7dA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIC0S6a+KhF0sLCUnIA2nCBe57Wo4sGsu/DYJNJGGoX40AiEAv/AKvIVSjtk6nlrE5JZUgy4KOweFm8WYud3eVoXxtU8="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "4.0.5",
+			"_npmUser": {
+				"name": "sokra",
+				"email": "tobias.koppers@googlemail.com"
+			},
+			"gitHead": "c875814f169348ef712b78e22c6404a7f585df3f",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/loader-runner-2.3.0.tgz_1485390251126_0.9998536882922053",
+				"host": "packages-18-east.internal.npmjs.com"
+			},
+			"_shasum": "f482aea82d543e07921700d5a46ef26fdac6b8a2",
+			"_nodeVersion": "7.4.0",
+			"contributors": []
+		},
+		"4.3.2": {
+			"name": "loader-runner",
+			"description": "Runs (webpack) loaders",
+			"version": "4.3.2",
+			"author": {
+				"name": "Tobias Koppers @sokra"
+			},
+			"homepage": "https://github.com/webpack/loader-runner#readme",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/webpack/loader-runner.git"
+			},
+			"bugs": {
+				"url": "https://github.com/webpack/loader-runner/issues"
+			},
+			"engines": {
+				"node": ">=6.11.5"
+			},
+			"main": "lib/LoaderRunner.js",
+			"devDependencies": {
+				"@eslint/js": "^9.28.0",
+				"@eslint/markdown": "^8.0.1",
+				"@stylistic/eslint-plugin": "^5.2.3",
+				"globals": "^17.0.0",
+				"eslint": "^9.28.0",
+				"eslint-config-webpack": "^4.6.1",
+				"eslint-config-prettier": "^10.1.5",
+				"eslint-plugin-import": "^2.31.0",
+				"eslint-plugin-jest": "^29.15.2",
+				"eslint-plugin-jsdoc": "^62.9.0",
+				"eslint-plugin-n": "^17.19.0",
+				"eslint-plugin-prettier": "^5.4.1",
+				"eslint-plugin-unicorn": "^64.0.0",
+				"prettier": "^3.5.3",
+				"nyc": "^14.1.1",
+				"mocha": "^3.2.0",
+				"should": "^8.0.2"
+			},
+			"keywords": [
+				"webpack",
+				"loader"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "15000621931",
+					"email": "784487301@qq.com"
+				},
+				{
+					"name": "ev1stensberg",
+					"email": "evenstensberg@gmail.com"
+				},
+				{
+					"name": "__hai",
+					"email": "haijie0619@gmail.com"
+				},
+				{
+					"name": "sokra",
+					"email": "tobias.koppers@googlemail.com"
+				},
+				{
+					"name": "avivkeller",
+					"email": "me@aviv.sh"
+				},
+				{
+					"name": "evilebottnawi",
+					"email": "sheo13666q@gmail.com"
+				},
+				{
+					"name": "jhnns",
+					"email": "mail@johannesewald.de"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "npm run lint:code && npm run fmt:check",
+				"lint:code": "eslint --cache .",
+				"fmt": "npm run fmt:base -- --log-level warn --write",
+				"fmt:check": "npm run fmt:base -- --check",
+				"fmt:base": "prettier --cache --ignore-unknown .",
+				"fix": "npm run fix:code && npm run fmt",
+				"fix:code": "npm run lint:code -- --fix",
+				"pretest": "npm run lint",
+				"test": "npm run test:basic",
+				"test:basic": "mocha --reporter spec",
+				"test:cover": "nyc --reporter=lcov npm run test:basic"
+			},
+			"lastModified": 0,
+			"funding": {
+				"type": "opencollective",
+				"url": "https://opencollective.com/webpack"
+			},
+			"_id": "loader-runner@4.3.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/loader-runner/-/loader-runner-4.3.2.tgz",
+				"shasum": "9913d3a15971f8f635915e601fb5c9d495d918e9",
+				"integrity": "sha512-DFEqQ3ihfS9blba08cLfYf1NRAIEm+dDjic073DRDc3/JspI/8wYmtDsHwd3+4hwvdxSK7PGaElfTmm0awWJ4w==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEUCIB6umF1GDQbi9kVXewkDnzT3APSTOgL5FUgsEVXTafw3AiEAwz+v+kl7F1U/ir+q7PVMn55AC2hnzJNqW1QVqfa375c="
+					}
+				]
+			},
+			"_npmVersion": "11.11.0",
+			"_npmUser": {
+				"name": "evilebottnawi",
+				"email": "sheo13666q@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "a1a38886eeb46d0ce66bd96839bdb18c34f78301",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages-npm-production",
+				"tmp": "tmp/loader-runner_4.3.2_1777040278607_0.051986146510258235"
+			},
+			"_nodeVersion": "24.14.1",
+			"contributors": []
+		},
+		"3.0.0": {
+			"name": "loader-runner",
+			"description": "Runs (webpack) loaders",
+			"version": "3.0.0",
+			"author": {
+				"name": "Tobias Koppers @sokra"
+			},
+			"homepage": "https://github.com/webpack/loader-runner#readme",
+			"repository": {
+				"url": "git+https://github.com/webpack/loader-runner.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/webpack/loader-runner/issues"
+			},
+			"engines": {
+				"node": ">=6.11.5"
+			},
+			"main": "lib/LoaderRunner.js",
+			"devDependencies": {
+				"mocha": "^3.2.0",
+				"eslint": "^3.12.2",
+				"should": "^8.0.2",
+				"istanbul": "^0.4.1",
+				"coveralls": "^2.11.6",
+				"codecov.io": "^0.1.6",
+				"eslint-plugin-node": "^3.0.5",
+				"eslint-plugin-nodeca": "^1.0.3"
+			},
+			"keywords": [
+				"webpack",
+				"loader"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "sokra",
+					"email": "tobias.koppers@googlemail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint lib test",
+				"test": "mocha --reporter spec",
+				"cover": "istanbul cover node_modules/mocha/bin/_mocha",
+				"travis": "npm run cover -- --report lcovonly",
+				"pretest": "npm run lint",
+				"precover": "npm run lint"
+			},
+			"lastModified": 0,
+			"_id": "loader-runner@3.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/loader-runner/-/loader-runner-3.0.0.tgz",
+				"shasum": "c86f303af2dacbd27eabd2ea3aaa957291562e23",
+				"integrity": "sha512-BlinBEAJYOUubaKH9hMxshD1FltYLTd3FA4DoxEh/82C0Rc4cmcqI61bEUj0/osbmW9FCTXTpMAO/jHZDZC5Fw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQC+zzMsia6W89LW6U3hbBTrdbl6cUbvHOmjPZeY9YRx0wIgcqoxDGWiyDrt2p6GTIE1WQ5ZV5FSURMO+I/N1lkMUDc="
+					}
+				]
+			},
+			"_npmVersion": "6.4.1",
+			"_npmUser": {
+				"name": "sokra",
+				"email": "tobias.koppers@googlemail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "6767b5a873df9821174e18a57e574db1d897e1d6",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/loader-runner_3.0.0_1547551080960_0.6934724322474928",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "10.15.0",
+			"contributors": []
+		},
+		"3.1.0": {
+			"name": "loader-runner",
+			"description": "Runs (webpack) loaders",
+			"version": "3.1.0",
+			"author": {
+				"name": "Tobias Koppers @sokra"
+			},
+			"homepage": "https://github.com/webpack/loader-runner#readme",
+			"repository": {
+				"url": "git+https://github.com/webpack/loader-runner.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/webpack/loader-runner/issues"
+			},
+			"engines": {
+				"node": ">=6.11.5"
+			},
+			"main": "lib/LoaderRunner.js",
+			"devDependencies": {
+				"mocha": "^3.2.0",
+				"eslint": "^3.12.2",
+				"should": "^8.0.2",
+				"istanbul": "^0.4.1",
+				"coveralls": "^2.11.6",
+				"codecov.io": "^0.1.6",
+				"eslint-plugin-node": "^3.0.5",
+				"eslint-plugin-nodeca": "^1.0.3"
+			},
+			"keywords": [
+				"webpack",
+				"loader"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "sokra",
+					"email": "tobias.koppers@googlemail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint lib test",
+				"test": "mocha --reporter spec",
+				"cover": "istanbul cover node_modules/mocha/bin/_mocha",
+				"travis": "npm run cover -- --report lcovonly",
+				"pretest": "npm run lint",
+				"precover": "npm run lint"
+			},
+			"lastModified": 0,
+			"_id": "loader-runner@3.1.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/loader-runner/-/loader-runner-3.1.0.tgz",
+				"shasum": "e9440e5875f2ad2f968489cd2c7b59a4f2847fcb",
+				"integrity": "sha512-wE/bOCdTKMR2rm7Xxh+eirDOmN7Vx7hntWgiTayuFPtF8MgsFDo49SP8kkYz8IVlEBTOtR7P+XI7bE1xjo/IkA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDyWo7S8CK33F+bS89pAx+PMUkaEaS4e/5hBgoycLXOCQIgKs/+4+754NZeULuyIy2NQOfZLskZC1vNUiF2+gfzX9k="
+					}
+				]
+			},
+			"_npmVersion": "6.12.0",
+			"_npmUser": {
+				"name": "sokra",
+				"email": "tobias.koppers@googlemail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "160c809d8d03cebe282fdb3b9d3cecedd4f6da5b",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/loader-runner_3.1.0_1574712067805_0.7914792748361543",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "12.13.0",
+			"contributors": []
+		}
+	},
+	"time": {
+		"2.0.0": "2016-01-03T17:15:15.368Z",
+		"2.0.1": "2016-01-03T17:43:16.995Z",
+		"2.1.0": "2016-01-21T18:04:04.452Z",
+		"created": "2016-01-03T17:15:15.368Z",
+		"4.2.0": "2021-01-07T14:29:19.857Z",
+		"4.3.0": "2022-04-12T09:39:27.730Z",
+		"4.0.0": "2020-07-03T14:49:25.410Z",
+		"4.1.0": "2020-09-30T07:24:46.723Z",
+		"2.3.1": "2018-09-21T10:33:33.998Z",
+		"2.4.0": "2019-01-15T13:46:55.265Z",
+		"2.1.1": "2016-02-03T20:34:43.426Z",
+		"2.2.0": "2016-09-14T22:13:01.689Z",
+		"4.3.1": "2025-10-08T13:35:35.185Z",
+		"2.3.0": "2017-01-26T00:24:11.732Z",
+		"4.3.2": "2026-04-24T14:17:58.760Z",
+		"3.0.0": "2019-01-15T11:18:01.076Z",
+		"modified": "2026-04-24T14:17:58.928Z",
+		"3.1.0": "2019-11-25T20:01:07.926Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"old": "2.4.0",
+		"latest": "4.3.2"
+	},
+	"_uplinks": {
+		"artifactory-sabadell": {
+			"etag": "52ff9d7a998ae0b78148f739238403a5d5aa24df",
+			"fetched": 1782459820298
+		}
+	},
+	"_distfiles": {
+		"loader-runner-2.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/loader-runner/-/loader-runner-2.0.0.tgz",
+			"sha": "d8bae1bf75761ef160a687ec92347483b57b152f",
+			"registry": "artifactory-sabadell"
+		},
+		"loader-runner-2.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/loader-runner/-/loader-runner-2.0.1.tgz",
+			"sha": "504717c0634a484bc7f676feaee6178644cacee6",
+			"registry": "artifactory-sabadell"
+		},
+		"loader-runner-2.1.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/loader-runner/-/loader-runner-2.1.0.tgz",
+			"sha": "9d09f7bc6ebee9a13c4fd688c4d15c1c83875e76",
+			"registry": "artifactory-sabadell"
+		},
+		"loader-runner-4.2.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/loader-runner/-/loader-runner-4.2.0.tgz",
+			"sha": "d7022380d66d14c5fb1d496b89864ebcfd478384",
+			"registry": "artifactory-sabadell"
+		},
+		"loader-runner-4.3.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/loader-runner/-/loader-runner-4.3.0.tgz",
+			"sha": "c1b4a163b99f614830353b16755e7149ac2314e1",
+			"registry": "artifactory-sabadell"
+		},
+		"loader-runner-4.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/loader-runner/-/loader-runner-4.0.0.tgz",
+			"sha": "02abcfd9fe6ff7a5aeb3547464746c4dc6ba333d",
+			"registry": "artifactory-sabadell"
+		},
+		"loader-runner-4.1.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/loader-runner/-/loader-runner-4.1.0.tgz",
+			"sha": "f70bc0c29edbabdf2043e7ee73ccc3fe1c96b42d",
+			"registry": "artifactory-sabadell"
+		},
+		"loader-runner-2.3.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/loader-runner/-/loader-runner-2.3.1.tgz",
+			"sha": "026f12fe7c3115992896ac02ba022ba92971b979",
+			"registry": "artifactory-sabadell"
+		},
+		"loader-runner-2.4.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/loader-runner/-/loader-runner-2.4.0.tgz",
+			"sha": "ed47066bfe534d7e84c4c7b9998c2a75607d9357",
+			"registry": "artifactory-sabadell"
+		},
+		"loader-runner-2.1.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/loader-runner/-/loader-runner-2.1.1.tgz",
+			"sha": "60a30f2a7c8eae79f0805b5848fee134f8ade519",
+			"registry": "artifactory-sabadell"
+		},
+		"loader-runner-2.2.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/loader-runner/-/loader-runner-2.2.0.tgz",
+			"sha": "824c1b699c4e7a2b6501b85902d5b862bf45b3fa",
+			"registry": "artifactory-sabadell"
+		},
+		"loader-runner-4.3.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/loader-runner/-/loader-runner-4.3.1.tgz",
+			"sha": "6c76ed29b0ccce9af379208299f07f876de737e3",
+			"registry": "artifactory-sabadell"
+		},
+		"loader-runner-2.3.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/loader-runner/-/loader-runner-2.3.0.tgz",
+			"sha": "f482aea82d543e07921700d5a46ef26fdac6b8a2",
+			"registry": "artifactory-sabadell"
+		},
+		"loader-runner-4.3.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/loader-runner/-/loader-runner-4.3.2.tgz",
+			"sha": "9913d3a15971f8f635915e601fb5c9d495d918e9",
+			"registry": "artifactory-sabadell"
+		},
+		"loader-runner-3.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/loader-runner/-/loader-runner-3.0.0.tgz",
+			"sha": "c86f303af2dacbd27eabd2ea3aaa957291562e23",
+			"registry": "artifactory-sabadell"
+		},
+		"loader-runner-3.1.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/loader-runner/-/loader-runner-3.1.0.tgz",
+			"sha": "e9440e5875f2ad2f968489cd2c7b59a4f2847fcb",
+			"registry": "artifactory-sabadell"
+		}
+	},
+	"_attachments": {},
+	"_rev": "1-3c3397eac557b073",
+	"_id": "loader-runner",
+	"readme": "# loader-runner\n\n```js\nimport { runLoaders } from \"loader-runner\";\n\nrunLoaders(\n\t{\n\t\tresource: \"/abs/path/to/file.txt?query\",\n\t\t// String: Absolute path to the resource (optionally including query string)\n\n\t\tloaders: [\"/abs/path/to/loader.js?query\"],\n\t\t// String[]: Absolute paths to the loaders (optionally including query string)\n\t\t// {loader, options}[]: Absolute paths to the loaders with options object\n\n\t\tcontext: { minimize: true },\n\t\t// Additional loader context which is used as base context\n\n\t\tprocessResource: (loaderContext, resourcePath, callback) => {\n\t\t\t// ...\n\t\t},\n\t\t// Optional: A function to process the resource\n\t\t// Must have signature function(context, path, function(err, buffer))\n\t\t// By default readResource is used and the resource is added a fileDependency\n\n\t\treadResource: fs.readFile.bind(fs),\n\t\t// Optional: A function to read the resource\n\t\t// Only used when 'processResource' is not provided\n\t\t// Must have signature function(path, function(err, buffer))\n\t\t// By default fs.readFile is used\n\t},\n\t(err, result) => {\n\t\t// err: Error?\n\t\t// result.result: [Buffer | String, SourceMap?, Meta?]\n\t\t// The result as an array matching the arguments passed by the final normal loader\n\t\t// (typically [content, sourceMap, meta])\n\t\t// only available when no error occurred\n\t\t// result.resourceBuffer: Buffer\n\t\t// The raw resource as Buffer (useful for SourceMaps)\n\t\t// only available when no error occurred\n\t\t// result.cacheable: Bool\n\t\t// Is the result cacheable or do it require reexecution?\n\t\t// result.fileDependencies: String[]\n\t\t// An array of paths (existing files) on which the result depends on\n\t\t// result.missingDependencies: String[]\n\t\t// An array of paths (not existing files) on which the result depends on\n\t\t// result.contextDependencies: String[]\n\t\t// An array of paths (directories) on which the result depends on\n\t}\n);\n```\n\nMore documentation following..."
+}

@@ -1,0 +1,2647 @@
+{
+	"name": "npm-install-checks",
+	"versions": {
+		"9.0.0": {
+			"name": "npm-install-checks",
+			"description": "Check the engines and platform fields in package.json",
+			"version": "9.0.0",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/npm-install-checks#readme",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/npm/npm-install-checks.git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-install-checks/issues"
+			},
+			"engines": {
+				"node": "^22.22.2 || ^24.15.0 || >=26.0.0"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"semver": "^7.1.1"
+			},
+			"devDependencies": {
+				"@npmcli/eslint-config": "^6.0.0",
+				"@npmcli/template-oss": "5.1.0",
+				"tap": "^16.0.1"
+			},
+			"keywords": [
+				"npm,",
+				"install"
+			],
+			"license": "BSD-2-Clause",
+			"maintainers": [
+				{
+					"name": "saquibkhan",
+					"email": "saquibkhan@github.com"
+				},
+				{
+					"name": "npm-cli-ops",
+					"email": "npm-cli+bot@github.com"
+				},
+				{
+					"name": "reggi",
+					"email": "reggi@github.com"
+				},
+				{
+					"name": "owlstronaut",
+					"email": "owlstronaut@github.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap",
+				"lint": "npm run eslint",
+				"postlint": "template-oss-check",
+				"template-oss-apply": "template-oss-apply --force",
+				"lintfix": "npm run eslint -- --fix",
+				"snap": "tap",
+				"posttest": "npm run lint",
+				"eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\""
+			},
+			"lastModified": 0,
+			"_id": "npm-install-checks@9.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-9.0.0.tgz",
+				"shasum": "097b6eddbaa7d018364b44d0577a59151fd5b669",
+				"integrity": "sha512-t05Izcgi7p15cpldqoiXYpjzlkTTvBw33sgjmL/JjcvtV0ydbm2O4iEXO8A6smqComu5FAQhUas86HTMQ6Z1Uw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEQCIDU0Cz7XMq0u4mnvfN2xRfyaKVYUBBnL7XBHPAz+ICrGAiAW1oPK9xl4Pjsk61L8T5DuKPXXWDT8WDKFtDkPTt2JRg=="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/npm-install-checks@9.0.0",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "11.14.1",
+			"_npmUser": {
+				"name": "GitHub Actions",
+				"email": "npm-oidc-no-reply@github.com",
+				"trustedPublisher": {
+					"id": "github",
+					"oidcConfigId": "oidc:63969b3c-c585-4819-862e-f0df1435330a"
+				}
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "510a6fffb802181b1589ead4ddcd9209e35a222c",
+			"tap": {
+				"nyc-arg": [
+					"--exclude",
+					"tap-snapshots/**"
+				]
+			},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages-npm-production",
+				"tmp": "tmp/npm-install-checks_9.0.0_1778870788131_0.34679012105052487"
+			},
+			"templateOSS": {
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten.",
+				"version": "5.1.0",
+				"publish": "true"
+			},
+			"_nodeVersion": "26.1.0",
+			"contributors": []
+		},
+		"4.0.0": {
+			"name": "npm-install-checks",
+			"description": "Check the engines and platform fields in package.json",
+			"version": "4.0.0",
+			"homepage": "https://github.com/npm/npm-install-checks#readme",
+			"repository": {
+				"url": "git://github.com/npm/npm-install-checks.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-install-checks/issues"
+			},
+			"engines": {
+				"node": ">=10"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"semver": "^7.1.1"
+			},
+			"devDependencies": {
+				"tap": "^14.10.6"
+			},
+			"keywords": [
+				"npm,",
+				"install"
+			],
+			"license": "BSD-2-Clause",
+			"maintainers": [
+				{
+					"name": "adam_baldwin",
+					"email": "evilpacket@gmail.com"
+				},
+				{
+					"name": "ahmadnassri",
+					"email": "ahmad@ahmadnassri.com"
+				},
+				{
+					"name": "claudiahdz",
+					"email": "cghr1990@gmail.com"
+				},
+				{
+					"name": "darcyclarke",
+					"email": "darcy@darcyclarke.me"
+				},
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				},
+				{
+					"name": "mikemimik",
+					"email": "mike@mikecorp.ca"
+				},
+				{
+					"name": "ruyadorno",
+					"email": "ruyadorno@hotmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap",
+				"preversion": "npm test",
+				"postpublish": "git push origin --follow-tags",
+				"postversion": "npm publish"
+			},
+			"lastModified": 0,
+			"_id": "npm-install-checks@4.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-4.0.0.tgz",
+				"shasum": "a37facc763a2fde0497ef2c6d0ac7c3fbe00d7b4",
+				"integrity": "sha512-09OmyDkNLYwqKPOnbI8exiOZU2GVVmQp7tgez2BPi5OZC8M82elDAps7sxC4l//uSUtotWqoEIDwjRvWH4qz8w==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIA5bjdiW56VdQuvqFpar5ShBq6ndHZSwkjNNUEIjsiqDAiEA+mEFze3Ro5urfgXcx+xZhRaCz8bVcfjaL1Ui45Za7Ik="
+					}
+				]
+			},
+			"_npmVersion": "6.13.7",
+			"_npmUser": {
+				"name": "isaacs",
+				"email": "i@izs.me"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "9b68df38047d8511a917ff200388bc7ed767659c",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-install-checks_4.0.0_1580888602056_0.2758918499825267",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "13.7.0",
+			"contributors": []
+		},
+		"0.0.1": {
+			"name": "npm-install-checks",
+			"description": "checks that npm runs during the installation of a module",
+			"version": "0.0.1",
+			"author": {
+				"name": "Robert Kowalski",
+				"email": "rok@kowalski.gd"
+			},
+			"homepage": "https://github.com/robertkowalski/npm-install-checks",
+			"repository": {
+				"url": "git://github.com/robertkowalski/npm-install-checks.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/robertkowalski/npm-install-checks/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"npmlog": "0.0.6",
+				"semver": "~2.2.1"
+			},
+			"devDependencies": {
+				"tap": "~0.4.8",
+				"mkdirp": "~0.3.5",
+				"rimraf": "~2.2.5"
+			},
+			"keywords": [
+				"npm,",
+				"install"
+			],
+			"license": "BSD-2-Clause",
+			"maintainers": [
+				{
+					"name": "robertkowalski",
+					"email": "rok@kowalski.gd"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap test/*.js"
+			},
+			"lastModified": 0,
+			"_id": "npm-install-checks@0.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-0.0.1.tgz",
+				"shasum": "afce6685d9bc70a7a323076e81706b08c3bab359",
+				"integrity": "sha512-A3sopR5AKp3lcp/ks2Iov6GRoggfBe0BCckYxje4DixY5o8/qQKIys5tIqzhCy8kukKNvJ5N2yrE/HWTZbHGpQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDG2+gqc2SO0MLrTqnAAkTHk+EHKmaExW0j5WQTueynRwIhAIT1YONpdj87rQO47PtwBDc2m5+3KihbP9U6PQDU2xvJ"
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "1.3.23",
+			"_npmUser": {
+				"name": "robertkowalski",
+				"email": "rok@kowalski.gd"
+			},
+			"contributors": []
+		},
+		"3.0.0": {
+			"name": "npm-install-checks",
+			"description": "checks that npm runs during the installation of a module",
+			"version": "3.0.0",
+			"author": {
+				"name": "Robert Kowalski",
+				"email": "rok@kowalski.gd"
+			},
+			"homepage": "https://github.com/npm/npm-install-checks",
+			"repository": {
+				"url": "git://github.com/npm/npm-install-checks.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-install-checks/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"semver": "^2.3.0 || 3.x || 4 || 5"
+			},
+			"devDependencies": {
+				"tap": "^5.0.1",
+				"mkdirp": "~0.3.5",
+				"rimraf": "~2.2.5",
+				"standard": "^5.4.1"
+			},
+			"keywords": [
+				"npm,",
+				"install"
+			],
+			"license": "BSD-2-Clause",
+			"maintainers": [
+				{
+					"name": "robertkowalski",
+					"email": "rok@kowalski.gd"
+				},
+				{
+					"name": "isaacs",
+					"email": "isaacs@npmjs.com"
+				},
+				{
+					"name": "iarna",
+					"email": "me@re-becca.org"
+				},
+				{
+					"name": "othiym23",
+					"email": "ogd@aoaioxxysz.net"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "standard && tap --coverage test/*.js"
+			},
+			"lastModified": 0,
+			"_id": "npm-install-checks@3.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-3.0.0.tgz",
+				"shasum": "d4aecdfd51a53e3723b7b2f93b2ee28e307bc0d7",
+				"integrity": "sha512-ueRNhBE8FYnuLwwpgx3CsftpjXgJNwvmOWPxPNZo9ZVJrQkfJpOZMvbncswgjeGJLzpYw52C6ORXHUozqQlz8A==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIFK8HEsX93z+6d3ICOnKBi1gKuIKC3MvbY4PtqI01u7KAiAfaBjSj0yoWi6BJJNl3EKWKQ3/MKPGT9aR4SZP/v721g=="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "3.5.3",
+			"_npmUser": {
+				"name": "iarna",
+				"email": "me@re-becca.org"
+			},
+			"gitHead": "49d3ea33262de10f99ac6968e621be416f572774",
+			"_shasum": "d4aecdfd51a53e3723b7b2f93b2ee28e307bc0d7",
+			"_nodeVersion": "4.2.2",
+			"contributors": []
+		},
+		"8.0.0": {
+			"name": "npm-install-checks",
+			"description": "Check the engines and platform fields in package.json",
+			"version": "8.0.0",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/npm-install-checks#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/npm-install-checks.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-install-checks/issues"
+			},
+			"engines": {
+				"node": "^20.17.0 || >=22.9.0"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"semver": "^7.1.1"
+			},
+			"devDependencies": {
+				"tap": "^16.0.1",
+				"@npmcli/template-oss": "4.27.1",
+				"@npmcli/eslint-config": "^5.0.0"
+			},
+			"keywords": [
+				"npm,",
+				"install"
+			],
+			"license": "BSD-2-Clause",
+			"maintainers": [
+				{
+					"name": "gar",
+					"email": "gar+npm@danger.computer"
+				},
+				{
+					"name": "saquibkhan",
+					"email": "saquibkhan@github.com"
+				},
+				{
+					"name": "npm-cli-ops",
+					"email": "npm-cli+bot@github.com"
+				},
+				{
+					"name": "reggi",
+					"email": "reggi@github.com"
+				},
+				{
+					"name": "hashtagchris",
+					"email": "hashtagchris@github.com"
+				},
+				{
+					"name": "owlstronaut",
+					"email": "owlstronaut@github.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "npm run eslint",
+				"snap": "tap",
+				"test": "tap",
+				"eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
+				"lintfix": "npm run eslint -- --fix",
+				"postlint": "template-oss-check",
+				"posttest": "npm run lint",
+				"template-oss-apply": "template-oss-apply --force"
+			},
+			"lastModified": 0,
+			"_id": "npm-install-checks@8.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-8.0.0.tgz",
+				"shasum": "f5d18e909bb8318d85093e9d8f36ac427c1cbe30",
+				"integrity": "sha512-ScAUdMpyzkbpxoNekQ3tNRdFI8SJ86wgKZSQZdUxT+bj0wVFpsEMWnkXP0twVe1gJyNF5apBWDJhhIbgrIViRA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEUCIQC+t9cLilxdNorFszc/LNDNs8VZX3lgGw7TBq39F8qFFgIgGjJhxA59JViz3eoenII/GygwuKHMLrlbdAqldSVnXzk="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/npm-install-checks@8.0.0",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "11.6.2",
+			"_npmUser": {
+				"name": "GitHub Actions",
+				"email": "npm-oidc-no-reply@github.com",
+				"trustedPublisher": {
+					"id": "github",
+					"oidcConfigId": "oidc:63969b3c-c585-4819-862e-f0df1435330a"
+				}
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "1523f29b2816f3f1ea2487f41a372744d6768fb7",
+			"tap": {
+				"nyc-arg": [
+					"--exclude",
+					"tap-snapshots/**"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-install-checks_8.0.0_1761165301813_0.07540733465610927",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"templateOSS": {
+				"publish": "true",
+				"version": "4.27.1",
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+			},
+			"_nodeVersion": "22.20.0",
+			"contributors": []
+		},
+		"3.0.1": {
+			"name": "npm-install-checks",
+			"description": "checks that npm runs during the installation of a module",
+			"version": "3.0.1",
+			"author": {
+				"name": "Robert Kowalski",
+				"email": "rok@kowalski.gd"
+			},
+			"homepage": "https://github.com/npm/npm-install-checks",
+			"repository": {
+				"url": "git://github.com/npm/npm-install-checks.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-install-checks/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"semver": "^2.3.0 || 3.x || 4 || 5"
+			},
+			"devDependencies": {
+				"tap": "^12.4.0",
+				"mkdirp": "^0.5.1",
+				"rimraf": "^2.6.3",
+				"standard": "^5.4.1"
+			},
+			"keywords": [
+				"npm,",
+				"install"
+			],
+			"license": "BSD-2-Clause",
+			"maintainers": [
+				{
+					"name": "adam_baldwin",
+					"email": "evilpacket@gmail.com"
+				},
+				{
+					"name": "ahmadnassri",
+					"email": "ahmad@ahmadnassri.com"
+				},
+				{
+					"name": "annekimsey",
+					"email": "anne@npmjs.com"
+				},
+				{
+					"name": "billatnpm",
+					"email": "billatnpm@gmail.com"
+				},
+				{
+					"name": "claudiahdz",
+					"email": "cghr1990@gmail.com"
+				},
+				{
+					"name": "darcyclarke",
+					"email": "darcy@darcyclarke.me"
+				},
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				},
+				{
+					"name": "mikemimik",
+					"email": "mike@mikecorp.ca"
+				},
+				{
+					"name": "ruyadorno",
+					"email": "ruyadorno@hotmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "standard && tap --coverage test/*.js"
+			},
+			"lastModified": 0,
+			"_id": "npm-install-checks@3.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-3.0.1.tgz",
+				"shasum": "d44c87b4c38cb51fcc51e04f6d1659cc390d0ba4",
+				"integrity": "sha512-NiDrfwNGc7orvk4zSgTblIZ8Md+42gBVVfKzlRFNeebnooxPMrCyPl1mUWsM5QvrxbYRax/wlwvKdybWZCSLtQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIFgFqPe9r+WK4mztXWguKZEuvVQxxr1rbwqshicImWfuAiEA8NDMrn8y4Rc7bzlgXFCACW39v37MgF6nqNBbx0w6wFU="
+					}
+				]
+			},
+			"_npmVersion": "6.12.0-next.0",
+			"_npmUser": {
+				"name": "isaacs",
+				"email": "i@izs.me"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "381179f49199725cc080c82589979761cbba2778",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-install-checks_3.0.1_1569876558607_0.055478751062576936",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "12.8.1",
+			"contributors": []
+		},
+		"3.0.2": {
+			"name": "npm-install-checks",
+			"description": "checks that npm runs during the installation of a module",
+			"version": "3.0.2",
+			"author": {
+				"name": "Robert Kowalski",
+				"email": "rok@kowalski.gd"
+			},
+			"homepage": "https://github.com/npm/npm-install-checks",
+			"repository": {
+				"url": "git://github.com/npm/npm-install-checks.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-install-checks/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"semver": "^2.3.0 || 3.x || 4 || 5"
+			},
+			"devDependencies": {
+				"tap": "^12.4.0",
+				"mkdirp": "^0.5.1",
+				"rimraf": "^2.6.3",
+				"standard": "^5.4.1"
+			},
+			"keywords": [
+				"npm,",
+				"install"
+			],
+			"license": "BSD-2-Clause",
+			"maintainers": [
+				{
+					"name": "adam_baldwin",
+					"email": "evilpacket@gmail.com"
+				},
+				{
+					"name": "ahmadnassri",
+					"email": "ahmad@ahmadnassri.com"
+				},
+				{
+					"name": "annekimsey",
+					"email": "anne@npmjs.com"
+				},
+				{
+					"name": "billatnpm",
+					"email": "billatnpm@gmail.com"
+				},
+				{
+					"name": "claudiahdz",
+					"email": "cghr1990@gmail.com"
+				},
+				{
+					"name": "darcyclarke",
+					"email": "darcy@darcyclarke.me"
+				},
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				},
+				{
+					"name": "mikemimik",
+					"email": "mike@mikecorp.ca"
+				},
+				{
+					"name": "ruyadorno",
+					"email": "ruyadorno@hotmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "standard && tap --coverage test/*.js"
+			},
+			"lastModified": 0,
+			"_id": "npm-install-checks@3.0.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-3.0.2.tgz",
+				"shasum": "ab2e32ad27baa46720706908e5b14c1852de44d9",
+				"integrity": "sha512-E4kzkyZDIWoin6uT5howP8VDvkM+E8IQDcHAycaAxMbwkqhIg5eEYALnXOl3Hq9MrkdQB/2/g1xwBINXdKSRkg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCICXSA072jssx1p/7H+T25HaskBRLbcTSzU0ZroORMnQmAiEAjs7udkrDCbol3UDYAJhScknvfHHx7wxIPT2DhitIbRA="
+					}
+				]
+			},
+			"_npmVersion": "6.12.0-next.0",
+			"_npmUser": {
+				"name": "isaacs",
+				"email": "i@izs.me"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "0a367ee1bf08f055fcf9bf252e9c62d59c35483f",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-install-checks_3.0.2_1569876618579_0.9759425998019282",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "12.8.1",
+			"contributors": []
+		},
+		"2.0.0": {
+			"name": "npm-install-checks",
+			"description": "checks that npm runs during the installation of a module",
+			"version": "2.0.0",
+			"author": {
+				"name": "Robert Kowalski",
+				"email": "rok@kowalski.gd"
+			},
+			"homepage": "https://github.com/npm/npm-install-checks",
+			"repository": {
+				"url": "git://github.com/npm/npm-install-checks.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-install-checks/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"npmlog": "0.1 || 1",
+				"semver": "^2.3.0 || 3.x || 4 || 5"
+			},
+			"devDependencies": {
+				"tap": "^1.2.0",
+				"mkdirp": "~0.3.5",
+				"rimraf": "~2.2.5"
+			},
+			"keywords": [
+				"npm,",
+				"install"
+			],
+			"license": "BSD-2-Clause",
+			"maintainers": [
+				{
+					"name": "robertkowalski",
+					"email": "rok@kowalski.gd"
+				},
+				{
+					"name": "isaacs",
+					"email": "isaacs@npmjs.com"
+				},
+				{
+					"name": "iarna",
+					"email": "me@re-becca.org"
+				},
+				{
+					"name": "othiym23",
+					"email": "ogd@aoaioxxysz.net"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap test/*.js"
+			},
+			"lastModified": 0,
+			"_id": "npm-install-checks@2.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-2.0.0.tgz",
+				"shasum": "2a517f34f47e1e4aff9432fd62b6debdca150085",
+				"integrity": "sha512-8zz8KPup2dxrse4J5msG4I0q5swLZwkW0rZ9F4b3fdBofqFwd+yJF3CiiHsfjvBrYxq+WlvoUCzs4ceZHC4ypA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDHXbkg+6ZenfHhNBKQJZwo/kKg1IoRd2XbJk2a7MlJfAIhAP9Q1qffQ1eGVK598qCc+rb3JllzTzKkqSEZsxXUTibW"
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "3.1.2",
+			"_npmUser": {
+				"name": "iarna",
+				"email": "me@re-becca.org"
+			},
+			"gitHead": "7027d5f40bcca73479a7d85dc00cbdb7d53d7e8a",
+			"_shasum": "2a517f34f47e1e4aff9432fd62b6debdca150085",
+			"_nodeVersion": "0.10.40",
+			"contributors": []
+		},
+		"7.1.0": {
+			"name": "npm-install-checks",
+			"description": "Check the engines and platform fields in package.json",
+			"version": "7.1.0",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/npm-install-checks#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/npm-install-checks.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-install-checks/issues"
+			},
+			"engines": {
+				"node": "^18.17.0 || >=20.5.0"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"semver": "^7.1.1"
+			},
+			"devDependencies": {
+				"tap": "^16.0.1",
+				"@npmcli/template-oss": "4.23.3",
+				"@npmcli/eslint-config": "^5.0.0"
+			},
+			"keywords": [
+				"npm,",
+				"install"
+			],
+			"license": "BSD-2-Clause",
+			"maintainers": [
+				{
+					"name": "hashtagchris",
+					"email": "hashtagchris@github.com"
+				},
+				{
+					"name": "reggi",
+					"email": "reggi@github.com"
+				},
+				{
+					"name": "npm-cli-ops",
+					"email": "npm-cli+bot@github.com"
+				},
+				{
+					"name": "saquibkhan",
+					"email": "saquibkhan@github.com"
+				},
+				{
+					"name": "fritzy",
+					"email": "fritzy@github.com"
+				},
+				{
+					"name": "gar",
+					"email": "gar+npm@danger.computer"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "npm run eslint",
+				"snap": "tap",
+				"test": "tap",
+				"eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
+				"lintfix": "npm run eslint -- --fix",
+				"postlint": "template-oss-check",
+				"posttest": "npm run lint",
+				"template-oss-apply": "template-oss-apply --force"
+			},
+			"lastModified": 0,
+			"_id": "npm-install-checks@7.1.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-7.1.0.tgz",
+				"shasum": "e365040c95d59571aaed3d6ebb83f7d9ddd347b8",
+				"integrity": "sha512-bkTildVlofeMX7wiOaWk3PlW7YcBXAuEc7TWpOxwUgalG5ZvgT/ms+6OX9zt7iGLv4+VhKbRZhpOfgQJzk1YAw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIC116RJntiVZ89z77RmEaTQGP17DtR82x25zoS7U1D6RAiEA4/VYk97+Pigcj8b3tB2URMZ34ACsqmxBwwDpWa2FV40="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/npm-install-checks@7.1.0",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "10.8.3",
+			"_npmUser": {
+				"name": "npm-cli-ops",
+				"email": "npm-cli+bot@github.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "4751cb40207cf48ac21ac041b0c239e3c10d37e0",
+			"tap": {
+				"nyc-arg": [
+					"--exclude",
+					"tap-snapshots/**"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-install-checks_7.1.0_1726066702845_0.8362292052094606",
+				"host": "s3://npm-registry-packages"
+			},
+			"templateOSS": {
+				"publish": "true",
+				"version": "4.23.3",
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+			},
+			"_nodeVersion": "22.8.0",
+			"contributors": []
+		},
+		"2.0.1": {
+			"name": "npm-install-checks",
+			"description": "checks that npm runs during the installation of a module",
+			"version": "2.0.1",
+			"author": {
+				"name": "Robert Kowalski",
+				"email": "rok@kowalski.gd"
+			},
+			"homepage": "https://github.com/npm/npm-install-checks",
+			"repository": {
+				"url": "git://github.com/npm/npm-install-checks.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-install-checks/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"npmlog": "0.1 || 1",
+				"semver": "^2.3.0 || 3.x || 4 || 5"
+			},
+			"devDependencies": {
+				"tap": "^1.2.0",
+				"mkdirp": "~0.3.5",
+				"rimraf": "~2.2.5"
+			},
+			"keywords": [
+				"npm,",
+				"install"
+			],
+			"license": "BSD-2-Clause",
+			"maintainers": [
+				{
+					"name": "robertkowalski",
+					"email": "rok@kowalski.gd"
+				},
+				{
+					"name": "isaacs",
+					"email": "isaacs@npmjs.com"
+				},
+				{
+					"name": "iarna",
+					"email": "me@re-becca.org"
+				},
+				{
+					"name": "othiym23",
+					"email": "ogd@aoaioxxysz.net"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap test/*.js"
+			},
+			"lastModified": 0,
+			"_id": "npm-install-checks@2.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-2.0.1.tgz",
+				"shasum": "a93540b53f04fa9d916d2733d6541f6db7d88e46",
+				"integrity": "sha512-gvSWy3xZdQEzL3tenM9mmiicSp39Wb+PKAEl3fYcLf0knKhx3P+OjjBX8fmZZPYLWz69IwIULYDPjF/opPQZlA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDedzFt8eThVa6+K22mzJH9HaE7632o4E4jeeNmF9gHGgIgIZV43ZuIFRTWW3Owp/ufGVWOs4NSR9/o3CZpAXsNkGs="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "3.3.4",
+			"_npmUser": {
+				"name": "iarna",
+				"email": "me@re-becca.org"
+			},
+			"gitHead": "1e9474f30490cd7621e976e91fa611d35e644f64",
+			"_shasum": "a93540b53f04fa9d916d2733d6541f6db7d88e46",
+			"_nodeVersion": "4.0.0",
+			"contributors": []
+		},
+		"7.1.1": {
+			"name": "npm-install-checks",
+			"description": "Check the engines and platform fields in package.json",
+			"version": "7.1.1",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/npm-install-checks#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/npm-install-checks.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-install-checks/issues"
+			},
+			"engines": {
+				"node": "^18.17.0 || >=20.5.0"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"semver": "^7.1.1"
+			},
+			"devDependencies": {
+				"tap": "^16.0.1",
+				"@npmcli/template-oss": "4.23.4",
+				"@npmcli/eslint-config": "^5.0.0"
+			},
+			"keywords": [
+				"npm,",
+				"install"
+			],
+			"license": "BSD-2-Clause",
+			"maintainers": [
+				{
+					"name": "hashtagchris",
+					"email": "hashtagchris@github.com"
+				},
+				{
+					"name": "reggi",
+					"email": "reggi@github.com"
+				},
+				{
+					"name": "npm-cli-ops",
+					"email": "npm-cli+bot@github.com"
+				},
+				{
+					"name": "saquibkhan",
+					"email": "saquibkhan@github.com"
+				},
+				{
+					"name": "fritzy",
+					"email": "fritzy@github.com"
+				},
+				{
+					"name": "gar",
+					"email": "gar+npm@danger.computer"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "npm run eslint",
+				"snap": "tap",
+				"test": "tap",
+				"eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
+				"lintfix": "npm run eslint -- --fix",
+				"postlint": "template-oss-check",
+				"posttest": "npm run lint",
+				"template-oss-apply": "template-oss-apply --force"
+			},
+			"lastModified": 0,
+			"_id": "npm-install-checks@7.1.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-7.1.1.tgz",
+				"shasum": "e9d679fc8a1944c75cdcc96478a22f9d0f763632",
+				"integrity": "sha512-u6DCwbow5ynAX5BdiHQ9qvexme4U3qHW3MWe5NqH+NeBm0LbiH6zvGjNNew1fY+AZZUtVHbOPF3j7mJxbUzpXg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQCBrz8aHVwA6GCrlAaacPWPKHy9iN8/1AjDvkbUa8+vwgIhANgziFfNPud6j5le/1tVGQkE49/37hJL57Vq95w1qRI7"
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/npm-install-checks@7.1.1",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "10.9.0",
+			"_npmUser": {
+				"name": "npm-cli-ops",
+				"email": "npm-cli+bot@github.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "e8631b46fd02d216f89ecf8263b9179408b15de2",
+			"tap": {
+				"nyc-arg": [
+					"--exclude",
+					"tap-snapshots/**"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-install-checks_7.1.1_1732223248697_0.8399431460738169",
+				"host": "s3://npm-registry-packages"
+			},
+			"templateOSS": {
+				"publish": "true",
+				"version": "4.23.4",
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+			},
+			"_nodeVersion": "22.11.0",
+			"contributors": []
+		},
+		"7.1.2": {
+			"name": "npm-install-checks",
+			"description": "Check the engines and platform fields in package.json",
+			"version": "7.1.2",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/npm-install-checks#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/npm-install-checks.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-install-checks/issues"
+			},
+			"engines": {
+				"node": "^18.17.0 || >=20.5.0"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"semver": "^7.1.1"
+			},
+			"devDependencies": {
+				"tap": "^16.0.1",
+				"@npmcli/template-oss": "4.25.0",
+				"@npmcli/eslint-config": "^5.0.0"
+			},
+			"keywords": [
+				"npm,",
+				"install"
+			],
+			"license": "BSD-2-Clause",
+			"maintainers": [
+				{
+					"name": "gar",
+					"email": "gar+npm@danger.computer"
+				},
+				{
+					"name": "saquibkhan",
+					"email": "saquibkhan@github.com"
+				},
+				{
+					"name": "npm-cli-ops",
+					"email": "npm-cli+bot@github.com"
+				},
+				{
+					"name": "reggi",
+					"email": "reggi@github.com"
+				},
+				{
+					"name": "hashtagchris",
+					"email": "hashtagchris@github.com"
+				},
+				{
+					"name": "owlstronaut",
+					"email": "owlstronaut@github.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "npm run eslint",
+				"snap": "tap",
+				"test": "tap",
+				"eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
+				"lintfix": "npm run eslint -- --fix",
+				"postlint": "template-oss-check",
+				"posttest": "npm run lint",
+				"template-oss-apply": "template-oss-apply --force"
+			},
+			"lastModified": 0,
+			"_id": "npm-install-checks@7.1.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-7.1.2.tgz",
+				"shasum": "e338d333930ee18e0fb0be6bd8b67af98be3d2fa",
+				"integrity": "sha512-z9HJBCYw9Zr8BqXcllKIs5nI+QggAImbBdHphOzVYrz2CB4iQ6FzWyKmlqDZua+51nAu7FcemlbTc9VgQN5XDQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEUCIDZM1M6bqKvJTnq8HvIL6ESJUsW33d0K76Uclsj38JUeAiEAkglcbLCLhThW4oXNCL39BkwiafkiZ7MwYhFjNFVhXPY="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/npm-install-checks@7.1.2",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "11.5.2",
+			"_npmUser": {
+				"name": "npm-cli-ops",
+				"email": "npm-cli+bot@github.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "44c7f7a3074c549feef437f6b87ce2db3aa99459",
+			"tap": {
+				"nyc-arg": [
+					"--exclude",
+					"tap-snapshots/**"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-install-checks_7.1.2_1756152629967_0.0081526391115323",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"templateOSS": {
+				"publish": "true",
+				"version": "4.25.0",
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+			},
+			"_nodeVersion": "22.18.0",
+			"contributors": []
+		},
+		"7.0.0": {
+			"name": "npm-install-checks",
+			"description": "Check the engines and platform fields in package.json",
+			"version": "7.0.0",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/npm-install-checks#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/npm-install-checks.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-install-checks/issues"
+			},
+			"engines": {
+				"node": "^18.17.0 || >=20.5.0"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"semver": "^7.1.1"
+			},
+			"devDependencies": {
+				"tap": "^16.0.1",
+				"@npmcli/template-oss": "4.23.3",
+				"@npmcli/eslint-config": "^5.0.0"
+			},
+			"keywords": [
+				"npm,",
+				"install"
+			],
+			"license": "BSD-2-Clause",
+			"maintainers": [
+				{
+					"name": "hashtagchris",
+					"email": "hashtagchris@github.com"
+				},
+				{
+					"name": "reggi",
+					"email": "reggi@github.com"
+				},
+				{
+					"name": "npm-cli-ops",
+					"email": "npm-cli+bot@github.com"
+				},
+				{
+					"name": "saquibkhan",
+					"email": "saquibkhan@github.com"
+				},
+				{
+					"name": "fritzy",
+					"email": "fritzy@github.com"
+				},
+				{
+					"name": "gar",
+					"email": "gar+npm@danger.computer"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "npm run eslint",
+				"snap": "tap",
+				"test": "tap",
+				"eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
+				"lintfix": "npm run eslint -- --fix",
+				"postlint": "template-oss-check",
+				"posttest": "npm run lint",
+				"template-oss-apply": "template-oss-apply --force"
+			},
+			"lastModified": 0,
+			"_id": "npm-install-checks@7.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-7.0.0.tgz",
+				"shasum": "49fd59a8a260386c986ade7eaf36761459bc1e1e",
+				"integrity": "sha512-ueFVr+X+d2tMHbDozgaQkfV0sx22uJxTkSylGNoU1dOOBV9KwLSbmQ9WZ73cBQzgIDwPBUzE33r1LQqKwQGlPw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCICk27mxmGmwmpCbbzY7+56gDzkDQD7n9iB5IMD0cGN8MAiAj1dO/8wza8qks6DKoWjGIUNhObkxGtuSJL0HgRkJgcQ=="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/npm-install-checks@7.0.0",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "10.8.3",
+			"_npmUser": {
+				"name": "npm-cli-ops",
+				"email": "npm-cli+bot@github.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "3e0e1b690a146c4d64ad56e0812dd6686f402ae8",
+			"tap": {
+				"nyc-arg": [
+					"--exclude",
+					"tap-snapshots/**"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-install-checks_7.0.0_1725495546455_0.6361162361468065",
+				"host": "s3://npm-registry-packages"
+			},
+			"templateOSS": {
+				"publish": "true",
+				"version": "4.23.3",
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+			},
+			"_nodeVersion": "22.8.0",
+			"contributors": []
+		},
+		"1.0.3": {
+			"name": "npm-install-checks",
+			"description": "checks that npm runs during the installation of a module",
+			"version": "1.0.3",
+			"author": {
+				"name": "Robert Kowalski",
+				"email": "rok@kowalski.gd"
+			},
+			"homepage": "https://github.com/npm/npm-install-checks",
+			"repository": {
+				"url": "git://github.com/npm/npm-install-checks.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-install-checks/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"npmlog": "0.1",
+				"semver": "^2.3.0 || 3.x"
+			},
+			"devDependencies": {
+				"tap": "~0.4.8",
+				"mkdirp": "~0.3.5",
+				"rimraf": "~2.2.5"
+			},
+			"keywords": [
+				"npm,",
+				"install"
+			],
+			"license": "BSD-2-Clause",
+			"maintainers": [
+				{
+					"name": "robertkowalski",
+					"email": "rok@kowalski.gd"
+				},
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap test/*.js"
+			},
+			"lastModified": 0,
+			"_id": "npm-install-checks@1.0.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-1.0.3.tgz",
+				"shasum": "9301006141a8f1454ae6bfe9a2f89da91316de02",
+				"integrity": "sha512-9lSarb05TCdeTSfJrloCO4ygUdrKRSC24vlsr06vbOXcTcylXohZiSUQMtDn3zPHI9FWbY8oXfWznMB8BdFfpQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIC1710/oOdWjl/pBAH7/g9LrCwh4Aa0KlhQOjSKxIZ4qAiBNuPS95IxvLPgToBWjy0/l4hJXleHbD5h18M4Ryelnow=="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "2.0.0-alpha-5",
+			"_npmUser": {
+				"name": "isaacs",
+				"email": "i@izs.me"
+			},
+			"gitHead": "ca29c68e45e691062471eeb4875f4ec5905277c5",
+			"_shasum": "9301006141a8f1454ae6bfe9a2f89da91316de02",
+			"contributors": []
+		},
+		"1.0.4": {
+			"name": "npm-install-checks",
+			"description": "checks that npm runs during the installation of a module",
+			"version": "1.0.4",
+			"author": {
+				"name": "Robert Kowalski",
+				"email": "rok@kowalski.gd"
+			},
+			"homepage": "https://github.com/npm/npm-install-checks",
+			"repository": {
+				"url": "git://github.com/npm/npm-install-checks.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-install-checks/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"npmlog": "0.1",
+				"semver": "^2.3.0 || 3.x || 4"
+			},
+			"devDependencies": {
+				"tap": "~0.4.8",
+				"mkdirp": "~0.3.5",
+				"rimraf": "~2.2.5"
+			},
+			"keywords": [
+				"npm,",
+				"install"
+			],
+			"license": "BSD-2-Clause",
+			"maintainers": [
+				{
+					"name": "robertkowalski",
+					"email": "rok@kowalski.gd"
+				},
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap test/*.js"
+			},
+			"lastModified": 0,
+			"_id": "npm-install-checks@1.0.4",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-1.0.4.tgz",
+				"shasum": "9757c6f9d4d493c2489465da6d07a8ed416d44c8",
+				"integrity": "sha512-2mLTlKgj1iwwrsDCHs39cnHiuccQOSTFyKgWOhKTCeYl2Wcr216Ze9xqrZ4nR8qOiAu0EMJNeS6G60P8HMNp0w==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQCBMZMXunZvjM0Z7YEMzPu+qHacf0XzJjp6tBkhERNJdAIhAL5qDQyXyiHzAbXnkLdDE7iTrmB+r8GW3ADq5eLYoDWt"
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "2.0.0-beta.3",
+			"_npmUser": {
+				"name": "isaacs",
+				"email": "i@izs.me"
+			},
+			"gitHead": "05944f95860b0ac3769667551c4b7aa3d3fcdc32",
+			"_shasum": "9757c6f9d4d493c2489465da6d07a8ed416d44c8",
+			"contributors": []
+		},
+		"1.0.5": {
+			"name": "npm-install-checks",
+			"description": "checks that npm runs during the installation of a module",
+			"version": "1.0.5",
+			"author": {
+				"name": "Robert Kowalski",
+				"email": "rok@kowalski.gd"
+			},
+			"homepage": "https://github.com/npm/npm-install-checks",
+			"repository": {
+				"url": "git://github.com/npm/npm-install-checks.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-install-checks/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"npmlog": "0.1 || 1",
+				"semver": "^2.3.0 || 3.x || 4"
+			},
+			"devDependencies": {
+				"tap": "~0.4.8",
+				"mkdirp": "~0.3.5",
+				"rimraf": "~2.2.5"
+			},
+			"keywords": [
+				"npm,",
+				"install"
+			],
+			"license": "BSD-2-Clause",
+			"maintainers": [
+				{
+					"name": "robertkowalski",
+					"email": "rok@kowalski.gd"
+				},
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				},
+				{
+					"name": "iarna",
+					"email": "me@re-becca.org"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap test/*.js"
+			},
+			"lastModified": 0,
+			"_id": "npm-install-checks@1.0.5",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-1.0.5.tgz",
+				"shasum": "a1b5beabfd60e0535b14f763157c410cb6bdae56",
+				"integrity": "sha512-pBA8Ts3Q5w9KJ6H9UBJWpwvQ1YJZLQ78d+iq9UKlM4A4bkY/V5X34ct4nEKVUwZXBJmmRS65BVEj0Ngbh6Q1cg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCdaQPPlVu6sEvGVyQCAnWzFqnhGk03iYVrqsPnKWqXuwIgCr6TZEpYXbZGNTmh66bhVOiTZpFmnxXOheAz80ssI+o="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "2.1.11",
+			"_npmUser": {
+				"name": "iarna",
+				"email": "me@re-becca.org"
+			},
+			"gitHead": "c36e052a0a54ad82932689fa86fd59197277f80d",
+			"_shasum": "a1b5beabfd60e0535b14f763157c410cb6bdae56",
+			"_nodeVersion": "0.10.33",
+			"contributors": []
+		},
+		"6.1.1": {
+			"name": "npm-install-checks",
+			"description": "Check the engines and platform fields in package.json",
+			"version": "6.1.1",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/npm-install-checks#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/npm-install-checks.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-install-checks/issues"
+			},
+			"engines": {
+				"node": "^14.17.0 || ^16.13.0 || >=18.0.0"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"semver": "^7.1.1"
+			},
+			"devDependencies": {
+				"tap": "^16.0.1",
+				"@npmcli/template-oss": "4.13.0",
+				"@npmcli/eslint-config": "^4.0.0"
+			},
+			"keywords": [
+				"npm,",
+				"install"
+			],
+			"license": "BSD-2-Clause",
+			"maintainers": [
+				{
+					"name": "npm-cli-ops",
+					"email": "npm-cli+bot@github.com"
+				},
+				{
+					"name": "saquibkhan",
+					"email": "saquibkhan@github.com"
+				},
+				{
+					"name": "fritzy",
+					"email": "fritzy@github.com"
+				},
+				{
+					"name": "nlf",
+					"email": "quitlahok@gmail.com"
+				},
+				{
+					"name": "gar",
+					"email": "gar+npm@danger.computer"
+				},
+				{
+					"name": "lukekarrys",
+					"email": "luke@lukekarrys.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint \"**/*.js\"",
+				"snap": "tap",
+				"test": "tap",
+				"lintfix": "npm run lint -- --fix",
+				"postlint": "template-oss-check",
+				"posttest": "npm run lint",
+				"template-oss-apply": "template-oss-apply --force"
+			},
+			"lastModified": 0,
+			"_id": "npm-install-checks@6.1.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-6.1.1.tgz",
+				"shasum": "b459b621634d06546664207fde16810815808db1",
+				"integrity": "sha512-dH3GmQL4vsPtld59cOn8uY0iOqRmqKvV+DLGwNXV/Q7MDgD2QfOADWd/mFXcIE5LVhYYGjA3baz6W9JneqnuCw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQC79wGGNT7ixQbDMswtCJ5eiZ/cnDPJCkGpek6wDJLTewIhAKyXvYR0pcTnA7K5bpSl2LRFh32latqYzFhd/+NTALpC"
+					}
+				]
+			},
+			"_npmVersion": "9.6.4",
+			"_npmUser": {
+				"name": "npm-cli-ops",
+				"email": "npm-cli+bot@github.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "b3dfd89f4b3a78e82d7af7d5a44cfc4fe82c1bc7",
+			"tap": {
+				"nyc-arg": [
+					"--exclude",
+					"tap-snapshots/**"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-install-checks_6.1.1_1681327048484_0.2334845508705845",
+				"host": "s3://npm-registry-packages"
+			},
+			"templateOSS": {
+				"publish": "true",
+				"version": "4.13.0",
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+			},
+			"_nodeVersion": "18.15.0",
+			"contributors": []
+		},
+		"6.2.0": {
+			"name": "npm-install-checks",
+			"description": "Check the engines and platform fields in package.json",
+			"version": "6.2.0",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/npm-install-checks#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/npm-install-checks.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-install-checks/issues"
+			},
+			"engines": {
+				"node": "^14.17.0 || ^16.13.0 || >=18.0.0"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"semver": "^7.1.1"
+			},
+			"devDependencies": {
+				"tap": "^16.0.1",
+				"@npmcli/template-oss": "4.18.0",
+				"@npmcli/eslint-config": "^4.0.0"
+			},
+			"keywords": [
+				"npm,",
+				"install"
+			],
+			"license": "BSD-2-Clause",
+			"maintainers": [
+				{
+					"name": "npm-cli-ops",
+					"email": "npm-cli+bot@github.com"
+				},
+				{
+					"name": "saquibkhan",
+					"email": "saquibkhan@github.com"
+				},
+				{
+					"name": "fritzy",
+					"email": "fritzy@github.com"
+				},
+				{
+					"name": "gar",
+					"email": "gar+npm@danger.computer"
+				},
+				{
+					"name": "lukekarrys",
+					"email": "luke@lukekarrys.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint \"**/*.js\"",
+				"snap": "tap",
+				"test": "tap",
+				"lintfix": "npm run lint -- --fix",
+				"postlint": "template-oss-check",
+				"posttest": "npm run lint",
+				"template-oss-apply": "template-oss-apply --force"
+			},
+			"lastModified": 0,
+			"_id": "npm-install-checks@6.2.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-6.2.0.tgz",
+				"shasum": "fae55b9967b03ac309695ec96629492d5cedf371",
+				"integrity": "sha512-744wat5wAAHsxa4590mWO0tJ8PKxR8ORZsH9wGpQc3nWTzozMAgBN/XyqYw7mg3yqLM8dLwEnwSfKMmXAjF69g==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDg4rkikqmFrYkdRXa/LVebCDBX+XswyfSkee6p4nxciAIgAxeKFtkzZn8ptE4cBruP0kbPye017InY3iDm0fGC0Ng="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/npm-install-checks@6.2.0",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "9.8.1",
+			"_npmUser": {
+				"name": "npm-cli-ops",
+				"email": "npm-cli+bot@github.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "4615bb765a696cc8575b00aced54805b8c23d128",
+			"tap": {
+				"nyc-arg": [
+					"--exclude",
+					"tap-snapshots/**"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-install-checks_6.2.0_1692039512311_0.44138995440585926",
+				"host": "s3://npm-registry-packages"
+			},
+			"templateOSS": {
+				"publish": "true",
+				"version": "4.18.0",
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+			},
+			"_nodeVersion": "18.17.0",
+			"contributors": []
+		},
+		"1.0.6": {
+			"name": "npm-install-checks",
+			"description": "checks that npm runs during the installation of a module",
+			"version": "1.0.6",
+			"author": {
+				"name": "Robert Kowalski",
+				"email": "rok@kowalski.gd"
+			},
+			"homepage": "https://github.com/npm/npm-install-checks",
+			"repository": {
+				"url": "git://github.com/npm/npm-install-checks.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-install-checks/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"npmlog": "0.1 || 1",
+				"semver": "^2.3.0 || 3.x || 4 || 5"
+			},
+			"devDependencies": {
+				"tap": "^1.2.0",
+				"mkdirp": "~0.3.5",
+				"rimraf": "~2.2.5"
+			},
+			"keywords": [
+				"npm,",
+				"install"
+			],
+			"license": "BSD-2-Clause",
+			"maintainers": [
+				{
+					"name": "robertkowalski",
+					"email": "rok@kowalski.gd"
+				},
+				{
+					"name": "isaacs",
+					"email": "isaacs@npmjs.com"
+				},
+				{
+					"name": "iarna",
+					"email": "me@re-becca.org"
+				},
+				{
+					"name": "othiym23",
+					"email": "ogd@aoaioxxysz.net"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap test/*.js"
+			},
+			"lastModified": 0,
+			"_id": "npm-install-checks@1.0.6",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-1.0.6.tgz",
+				"shasum": "8d4c1e852806e4e2d66601ab787be5841550d0cb",
+				"integrity": "sha512-pBL3vN85jZm97fzV+EI0KFIAgXvKAkLBmZAGjn2s8e1yV7fZkhJ6sPmjotclSh0WO2eMoTvW13Y5P+RNKTs5sA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIEJ4/bdW8+9iXehRDJ4F8kguDSoHJW19daawUv9Nxp8UAiEA3SLxiik99b9UG7NPfYzd9sAnvBD6KE7qWTaxtoXJFDM="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "2.13.1",
+			"_npmUser": {
+				"name": "othiym23",
+				"email": "ogd@aoaioxxysz.net"
+			},
+			"gitHead": "f28aebca7f5df0ddb13161b0f04d069004f6c367",
+			"_shasum": "8d4c1e852806e4e2d66601ab787be5841550d0cb",
+			"_nodeVersion": "2.3.1",
+			"contributors": []
+		},
+		"6.3.0": {
+			"name": "npm-install-checks",
+			"description": "Check the engines and platform fields in package.json",
+			"version": "6.3.0",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/npm-install-checks#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/npm-install-checks.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-install-checks/issues"
+			},
+			"engines": {
+				"node": "^14.17.0 || ^16.13.0 || >=18.0.0"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"semver": "^7.1.1"
+			},
+			"devDependencies": {
+				"tap": "^16.0.1",
+				"@npmcli/template-oss": "4.19.0",
+				"@npmcli/eslint-config": "^4.0.0"
+			},
+			"keywords": [
+				"npm,",
+				"install"
+			],
+			"license": "BSD-2-Clause",
+			"maintainers": [
+				{
+					"name": "npm-cli-ops",
+					"email": "npm-cli+bot@github.com"
+				},
+				{
+					"name": "saquibkhan",
+					"email": "saquibkhan@github.com"
+				},
+				{
+					"name": "fritzy",
+					"email": "fritzy@github.com"
+				},
+				{
+					"name": "gar",
+					"email": "gar+npm@danger.computer"
+				},
+				{
+					"name": "lukekarrys",
+					"email": "luke@lukekarrys.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint \"**/*.js\"",
+				"snap": "tap",
+				"test": "tap",
+				"lintfix": "npm run lint -- --fix",
+				"postlint": "template-oss-check",
+				"posttest": "npm run lint",
+				"template-oss-apply": "template-oss-apply --force"
+			},
+			"lastModified": 0,
+			"_id": "npm-install-checks@6.3.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-6.3.0.tgz",
+				"shasum": "046552d8920e801fa9f919cad569545d60e826fe",
+				"integrity": "sha512-W29RiK/xtpCGqn6f3ixfRYGk+zRyr+Ew9F2E20BfXxT5/euLdA/Nm7fO7OeTGuAmTs30cpgInyJ0cYe708YTZw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDHGUJ9QSpCNebcnPWgp+mTi8Qx4DQLbeZBu7A5oBurhAIhAJmfCgCWpBolCTMISAlyB97PA9SgbS6Aw5wGI3tMH4+N"
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/npm-install-checks@6.3.0",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "10.2.0",
+			"_npmUser": {
+				"name": "npm-cli-ops",
+				"email": "npm-cli+bot@github.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "576927d9a0b77657eceb3048b384326d686f64de",
+			"tap": {
+				"nyc-arg": [
+					"--exclude",
+					"tap-snapshots/**"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-install-checks_6.3.0_1696614750191_0.2306020956887609",
+				"host": "s3://npm-registry-packages"
+			},
+			"templateOSS": {
+				"publish": "true",
+				"version": "4.19.0",
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+			},
+			"_nodeVersion": "18.18.0",
+			"contributors": []
+		},
+		"1.0.7": {
+			"name": "npm-install-checks",
+			"description": "checks that npm runs during the installation of a module",
+			"version": "1.0.7",
+			"author": {
+				"name": "Robert Kowalski",
+				"email": "rok@kowalski.gd"
+			},
+			"homepage": "https://github.com/npm/npm-install-checks",
+			"repository": {
+				"url": "git://github.com/npm/npm-install-checks.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-install-checks/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"npmlog": "0.1 || 1 || 2",
+				"semver": "^2.3.0 || 3.x || 4 || 5"
+			},
+			"devDependencies": {
+				"tap": "^1.2.0",
+				"mkdirp": "~0.3.5",
+				"rimraf": "~2.2.5"
+			},
+			"keywords": [
+				"npm,",
+				"install"
+			],
+			"license": "BSD-2-Clause",
+			"maintainers": [
+				{
+					"name": "iarna",
+					"email": "me@re-becca.org"
+				},
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				},
+				{
+					"name": "othiym23",
+					"email": "ogd@aoaioxxysz.net"
+				},
+				{
+					"name": "robertkowalski",
+					"email": "rok@kowalski.gd"
+				},
+				{
+					"name": "zkat",
+					"email": "kat@sykosomatic.org"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap test/*.js"
+			},
+			"lastModified": 0,
+			"_id": "npm-install-checks@1.0.7",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-1.0.7.tgz",
+				"shasum": "6d91aeda0ac96801f1ed7aadee116a6c0a086a57",
+				"integrity": "sha512-IyaSpkt3NMXaXezbnHxwEZ6HBWpQFlKBUZ0ZEoUCyq3LoAaZEWJ2mchhJPauuvevhkvi8SNW67FiWZLpUhJ82w==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIAZY8sqjDeEEtjsBUni5lQ3kqM2MkbC31DVqiDLUq83yAiAU0Xdr3Edv6J4cHcqraqaqVBu7aCJKhgp+6IoNGI2vtw=="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "2.14.19",
+			"_npmUser": {
+				"name": "zkat",
+				"email": "kat@sykosomatic.org"
+			},
+			"gitHead": "4882a47d954ceeec567db87219bbc31f64af191e",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-install-checks-1.0.7.tgz_1455329001145_0.8577833492308855",
+				"host": "packages-6-west.internal.npmjs.com"
+			},
+			"_shasum": "6d91aeda0ac96801f1ed7aadee116a6c0a086a57",
+			"_nodeVersion": "4.2.4",
+			"contributors": []
+		},
+		"6.0.0": {
+			"name": "npm-install-checks",
+			"description": "Check the engines and platform fields in package.json",
+			"version": "6.0.0",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/npm-install-checks#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/npm-install-checks.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-install-checks/issues"
+			},
+			"engines": {
+				"node": "^14.17.0 || ^16.13.0 || >=18.0.0"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"semver": "^7.1.1"
+			},
+			"devDependencies": {
+				"tap": "^16.0.1",
+				"@npmcli/template-oss": "4.5.1",
+				"@npmcli/eslint-config": "^3.0.1"
+			},
+			"keywords": [
+				"npm,",
+				"install"
+			],
+			"license": "BSD-2-Clause",
+			"maintainers": [
+				{
+					"name": "fritzy",
+					"email": "fritzy@github.com"
+				},
+				{
+					"name": "darcyclarke",
+					"email": "darcy@darcyclarke.me"
+				},
+				{
+					"name": "nlf",
+					"email": "quitlahok@gmail.com"
+				},
+				{
+					"name": "gar",
+					"email": "gar+npm@danger.computer"
+				},
+				{
+					"name": "lukekarrys",
+					"email": "luke@lukekarrys.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint \"**/*.js\"",
+				"snap": "tap",
+				"test": "tap",
+				"lintfix": "npm run lint -- --fix",
+				"postlint": "template-oss-check",
+				"posttest": "npm run lint",
+				"template-oss-apply": "template-oss-apply --force"
+			},
+			"lastModified": 0,
+			"_id": "npm-install-checks@6.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-6.0.0.tgz",
+				"shasum": "9a021d8e8b3956d61fd265c2eda4735bcd3d9b83",
+				"integrity": "sha512-SBU9oFglRVZnfElwAtF14NivyulDqF1VKqqwNsFW9HDcbHMAPHpRSsVFgKuwFGq/hVvWZExz62Th0kvxn/XE7Q==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDzJyDcumdW0uwruGpW+HPOgkNhqYTVKMnX3Bl0Ck2KuAIgUqRA6IkKpwvt1TAGemI1uBzF4Yjc41TDbHcyR/nHTxs="
+					}
+				]
+			},
+			"_npmVersion": "8.19.2",
+			"_npmUser": {
+				"name": "lukekarrys",
+				"email": "luke@lukekarrys.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "d4cd0ad49ca8fad0efcd09b25b2804cce8674836",
+			"tap": {
+				"nyc-arg": [
+					"--exclude",
+					"tap-snapshots/**"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-install-checks_6.0.0_1665724972789_0.5957509316289324",
+				"host": "s3://npm-registry-packages"
+			},
+			"templateOSS": {
+				"version": "4.5.1",
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+			},
+			"_nodeVersion": "18.10.0",
+			"contributors": []
+		},
+		"6.1.0": {
+			"name": "npm-install-checks",
+			"description": "Check the engines and platform fields in package.json",
+			"version": "6.1.0",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/npm-install-checks#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/npm-install-checks.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-install-checks/issues"
+			},
+			"engines": {
+				"node": "^14.17.0 || ^16.13.0 || >=18.0.0"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"semver": "^7.1.1"
+			},
+			"devDependencies": {
+				"tap": "^16.0.1",
+				"@npmcli/template-oss": "4.12.0",
+				"@npmcli/eslint-config": "^4.0.0"
+			},
+			"keywords": [
+				"npm,",
+				"install"
+			],
+			"license": "BSD-2-Clause",
+			"maintainers": [
+				{
+					"name": "npm-cli-ops",
+					"email": "npm-cli+bot@github.com"
+				},
+				{
+					"name": "saquibkhan",
+					"email": "saquibkhan@github.com"
+				},
+				{
+					"name": "fritzy",
+					"email": "fritzy@github.com"
+				},
+				{
+					"name": "nlf",
+					"email": "quitlahok@gmail.com"
+				},
+				{
+					"name": "gar",
+					"email": "gar+npm@danger.computer"
+				},
+				{
+					"name": "lukekarrys",
+					"email": "luke@lukekarrys.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint \"**/*.js\"",
+				"snap": "tap",
+				"test": "tap",
+				"lintfix": "npm run lint -- --fix",
+				"postlint": "template-oss-check",
+				"posttest": "npm run lint",
+				"template-oss-apply": "template-oss-apply --force"
+			},
+			"lastModified": 0,
+			"_id": "npm-install-checks@6.1.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-6.1.0.tgz",
+				"shasum": "7221210d9d746a40c37bf6c9b6c7a39f85e92998",
+				"integrity": "sha512-udSGENih/5xKh3Ex+L0PtZcOt0Pa+6ppDLnpG5D49/EhMja3LupaY9E/DtJTxyFBwE09ot7Fc+H4DywnZNWTVA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIGl1OmByPz0gocwKU4NDNaHE0B3Lp6e9TBEpFPcoK7zrAiEAgmjuELfOGmLqmoBNV5CKHV/Ouy2IEFfRKhN3bnuU4/I="
+					}
+				]
+			},
+			"_npmVersion": "9.6.1",
+			"_npmUser": {
+				"name": "gar",
+				"email": "gar+npm@danger.computer"
+			},
+			"_hasShrinkwrap": false,
+			"tap": {
+				"nyc-arg": [
+					"--exclude",
+					"tap-snapshots/**"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-install-checks_6.1.0_1679425301974_0.1753963723789278",
+				"host": "s3://npm-registry-packages"
+			},
+			"templateOSS": {
+				"version": "4.12.0",
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+			},
+			"_nodeVersion": "18.13.0",
+			"contributors": []
+		},
+		"5.0.0": {
+			"name": "npm-install-checks",
+			"description": "Check the engines and platform fields in package.json",
+			"version": "5.0.0",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/npm-install-checks#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/npm-install-checks.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-install-checks/issues"
+			},
+			"engines": {
+				"node": "^12.13.0 || ^14.15.0 || >=16.0.0"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"semver": "^7.1.1"
+			},
+			"devDependencies": {
+				"tap": "^16.0.1",
+				"@npmcli/template-oss": "3.2.2",
+				"@npmcli/eslint-config": "^3.0.1"
+			},
+			"keywords": [
+				"npm,",
+				"install"
+			],
+			"license": "BSD-2-Clause",
+			"maintainers": [
+				{
+					"name": "fritzy",
+					"email": "fritzy@github.com"
+				},
+				{
+					"name": "darcyclarke",
+					"email": "darcy@darcyclarke.me"
+				},
+				{
+					"name": "ruyadorno",
+					"email": "ruyadorno@hotmail.com"
+				},
+				{
+					"name": "nlf",
+					"email": "quitlahok@gmail.com"
+				},
+				{
+					"name": "gar",
+					"email": "gar+npm@danger.computer"
+				},
+				{
+					"name": "lukekarrys",
+					"email": "luke@lukekarrys.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint \"**/*.js\"",
+				"snap": "tap",
+				"test": "tap",
+				"lintfix": "npm run lint -- --fix",
+				"postlint": "template-oss-check",
+				"posttest": "npm run lint",
+				"preversion": "npm test",
+				"postpublish": "git push origin --follow-tags",
+				"postversion": "npm publish",
+				"prepublishOnly": "git push origin --follow-tags",
+				"template-oss-apply": "template-oss-apply --force"
+			},
+			"lastModified": 0,
+			"_id": "npm-install-checks@5.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-5.0.0.tgz",
+				"shasum": "5ff27d209a4e3542b8ac6b0c1db6063506248234",
+				"integrity": "sha512-65lUsMI8ztHCxFz5ckCEC44DRvEGdZX5usQFriauxHEwt7upv1FKaQEmAtU0YnOAdwuNWCmk64xYiQABNrEyLA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDEJZhffokmrsHNCKeRJ4DAmfQOnFksW0eV2WFbeGBtWgIgAnGXmu3ncXDeB9s4Gvu+Ee8rUsjQJ78D4BWx6ghiHI8="
+					}
+				]
+			},
+			"_npmVersion": "8.6.0",
+			"_npmUser": {
+				"name": "gar",
+				"email": "gar+npm@danger.computer"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "c4f0b0a66e06590223b9dba783d6c3295d931864",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-install-checks_5.0.0_1649180252514_0.9603171635674994",
+				"host": "s3://npm-registry-packages"
+			},
+			"templateOSS": {
+				"version": "3.2.2",
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+			},
+			"_nodeVersion": "16.14.2",
+			"contributors": []
+		},
+		"1.0.0": {
+			"name": "npm-install-checks",
+			"description": "checks that npm runs during the installation of a module",
+			"version": "1.0.0",
+			"author": {
+				"name": "Robert Kowalski",
+				"email": "rok@kowalski.gd"
+			},
+			"homepage": "https://github.com/robertkowalski/npm-install-checks",
+			"repository": {
+				"url": "git://github.com/robertkowalski/npm-install-checks.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/robertkowalski/npm-install-checks/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"npmlog": "0.0.6",
+				"semver": "~2.2.1"
+			},
+			"devDependencies": {
+				"tap": "~0.4.8",
+				"mkdirp": "~0.3.5",
+				"rimraf": "~2.2.5"
+			},
+			"keywords": [
+				"npm,",
+				"install"
+			],
+			"license": "BSD-2-Clause",
+			"maintainers": [
+				{
+					"name": "robertkowalski",
+					"email": "rok@kowalski.gd"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap test/*.js"
+			},
+			"lastModified": 0,
+			"_id": "npm-install-checks@1.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-1.0.0.tgz",
+				"shasum": "7e1469b5e0c693b2ae2a8830b5fc4e7bf76c88fd",
+				"integrity": "sha512-8EDjYTYInJUQKXxbkV5aj3LTLaniIWDOQinBBiVd1duDlTRmf3FKFXawom/w1aCV9xk65oc325YyOUgJHwdaQw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIG8xPKifTU8OxmHpNAyX2K8f1Fl75rOrMP2trDS0O9C0AiEAsQ8EB+kB6wZYt9AwW7Uh8Tb48amWe07XbR2SrdoJeZA="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "1.3.23",
+			"_npmUser": {
+				"name": "robertkowalski",
+				"email": "rok@kowalski.gd"
+			},
+			"contributors": []
+		},
+		"1.0.1": {
+			"name": "npm-install-checks",
+			"description": "checks that npm runs during the installation of a module",
+			"version": "1.0.1",
+			"author": {
+				"name": "Robert Kowalski",
+				"email": "rok@kowalski.gd"
+			},
+			"homepage": "https://github.com/npm/npm-install-checks",
+			"repository": {
+				"url": "git://github.com/npm/npm-install-checks.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-install-checks/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"npmlog": "0.0.6",
+				"semver": "^2.3.0"
+			},
+			"devDependencies": {
+				"tap": "~0.4.8",
+				"mkdirp": "~0.3.5",
+				"rimraf": "~2.2.5"
+			},
+			"keywords": [
+				"npm,",
+				"install"
+			],
+			"license": "BSD-2-Clause",
+			"maintainers": [
+				{
+					"name": "robertkowalski",
+					"email": "rok@kowalski.gd"
+				},
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap test/*.js"
+			},
+			"lastModified": 0,
+			"_id": "npm-install-checks@1.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-1.0.1.tgz",
+				"shasum": "547a73dec58acfd52365012e60de9418b6405101",
+				"integrity": "sha512-00xvMaaRh1fB9r5f8mliAN12ReQn3sOPIOyVxHUP2DbRYCrdy56DiUElysNhjSbORZcG3+aViqIe/DEqWDHysQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIAGHwVNp4PWevlIRvTCNBQ9BRQqZd/BbeIeAeDFQqsDkAiEAoHZf7EMw4GoPvIquBP78P7imLlxnNXj9RqkLpRbt7Wo="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "1.4.10",
+			"_npmUser": {
+				"name": "isaacs",
+				"email": "i@izs.me"
+			},
+			"_shasum": "547a73dec58acfd52365012e60de9418b6405101",
+			"contributors": []
+		},
+		"1.0.2": {
+			"name": "npm-install-checks",
+			"description": "checks that npm runs during the installation of a module",
+			"version": "1.0.2",
+			"author": {
+				"name": "Robert Kowalski",
+				"email": "rok@kowalski.gd"
+			},
+			"homepage": "https://github.com/npm/npm-install-checks",
+			"repository": {
+				"url": "git://github.com/npm/npm-install-checks.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-install-checks/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"npmlog": "0.1",
+				"semver": "^2.3.0"
+			},
+			"devDependencies": {
+				"tap": "~0.4.8",
+				"mkdirp": "~0.3.5",
+				"rimraf": "~2.2.5"
+			},
+			"keywords": [
+				"npm,",
+				"install"
+			],
+			"license": "BSD-2-Clause",
+			"maintainers": [
+				{
+					"name": "robertkowalski",
+					"email": "rok@kowalski.gd"
+				},
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap test/*.js"
+			},
+			"lastModified": 0,
+			"_id": "npm-install-checks@1.0.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-1.0.2.tgz",
+				"shasum": "ebba769753fc8551308333ef411920743a6809f6",
+				"integrity": "sha512-Tq70SVscU0uW4DG/lcvphiZg5V87wWXi5u6G7kpgVIuyTuNL9S9izesuJBoyuqM3ERVLb0c75YEqE7b4ofXC1A==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIEGMzEpexI13L6aOMjjrYPlnlCcZto7zS6IyfwfSAJtFAiBMWjhRzimZZUhlfLbLrtuez9XysZ1Kx43GdH1M/laO0w=="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "1.4.14",
+			"_npmUser": {
+				"name": "isaacs",
+				"email": "i@izs.me"
+			},
+			"gitHead": "056ade7c5e3a6b3c720ca6a743c1b99a0705d29e",
+			"_shasum": "ebba769753fc8551308333ef411920743a6809f6",
+			"contributors": []
+		}
+	},
+	"time": {
+		"9.0.0": "2026-05-15T18:46:28.274Z",
+		"4.0.0": "2020-02-05T07:43:22.153Z",
+		"0.0.1": "2014-01-12T15:44:09.077Z",
+		"3.0.0": "2016-01-12T19:47:29.913Z",
+		"8.0.0": "2025-10-22T20:35:02.063Z",
+		"modified": "2026-05-15T18:46:28.611Z",
+		"3.0.1": "2019-09-30T20:49:18.767Z",
+		"3.0.2": "2019-09-30T20:50:18.727Z",
+		"2.0.0": "2015-07-23T09:46:08.974Z",
+		"7.1.0": "2024-09-11T14:58:23.016Z",
+		"2.0.1": "2015-09-17T23:41:37.425Z",
+		"7.1.1": "2024-11-21T21:07:28.989Z",
+		"7.1.2": "2025-08-25T20:10:30.141Z",
+		"created": "2014-01-12T15:44:09.077Z",
+		"7.0.0": "2024-09-05T00:19:06.609Z",
+		"1.0.3": "2014-07-23T21:18:48.460Z",
+		"1.0.4": "2014-09-11T07:11:20.782Z",
+		"1.0.5": "2015-01-07T18:44:43.931Z",
+		"6.1.1": "2023-04-12T19:17:28.656Z",
+		"6.2.0": "2023-08-14T18:58:32.483Z",
+		"1.0.6": "2015-07-16T23:46:22.059Z",
+		"6.3.0": "2023-10-06T17:52:30.335Z",
+		"1.0.7": "2016-02-13T02:03:22.719Z",
+		"6.0.0": "2022-10-14T05:22:52.974Z",
+		"6.1.0": "2023-03-21T19:01:42.140Z",
+		"5.0.0": "2022-04-05T17:37:32.659Z",
+		"1.0.0": "2014-01-13T20:01:15.796Z",
+		"1.0.1": "2014-05-13T01:12:51.094Z",
+		"1.0.2": "2014-06-06T04:29:17.168Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "9.0.0"
+	},
+	"_uplinks": {
+		"artifactory-sabadell": {
+			"etag": "07edf3b6a20abcde5a36947bda417f511177ed21",
+			"fetched": 1782459821701
+		}
+	},
+	"_distfiles": {
+		"npm-install-checks-9.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-9.0.0.tgz",
+			"sha": "097b6eddbaa7d018364b44d0577a59151fd5b669",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-install-checks-4.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-4.0.0.tgz",
+			"sha": "a37facc763a2fde0497ef2c6d0ac7c3fbe00d7b4",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-install-checks-0.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-0.0.1.tgz",
+			"sha": "afce6685d9bc70a7a323076e81706b08c3bab359",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-install-checks-3.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-3.0.0.tgz",
+			"sha": "d4aecdfd51a53e3723b7b2f93b2ee28e307bc0d7",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-install-checks-8.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-8.0.0.tgz",
+			"sha": "f5d18e909bb8318d85093e9d8f36ac427c1cbe30",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-install-checks-3.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-3.0.1.tgz",
+			"sha": "d44c87b4c38cb51fcc51e04f6d1659cc390d0ba4",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-install-checks-3.0.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-3.0.2.tgz",
+			"sha": "ab2e32ad27baa46720706908e5b14c1852de44d9",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-install-checks-2.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-2.0.0.tgz",
+			"sha": "2a517f34f47e1e4aff9432fd62b6debdca150085",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-install-checks-7.1.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-7.1.0.tgz",
+			"sha": "e365040c95d59571aaed3d6ebb83f7d9ddd347b8",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-install-checks-2.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-2.0.1.tgz",
+			"sha": "a93540b53f04fa9d916d2733d6541f6db7d88e46",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-install-checks-7.1.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-7.1.1.tgz",
+			"sha": "e9d679fc8a1944c75cdcc96478a22f9d0f763632",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-install-checks-7.1.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-7.1.2.tgz",
+			"sha": "e338d333930ee18e0fb0be6bd8b67af98be3d2fa",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-install-checks-7.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-7.0.0.tgz",
+			"sha": "49fd59a8a260386c986ade7eaf36761459bc1e1e",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-install-checks-1.0.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-1.0.3.tgz",
+			"sha": "9301006141a8f1454ae6bfe9a2f89da91316de02",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-install-checks-1.0.4.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-1.0.4.tgz",
+			"sha": "9757c6f9d4d493c2489465da6d07a8ed416d44c8",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-install-checks-1.0.5.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-1.0.5.tgz",
+			"sha": "a1b5beabfd60e0535b14f763157c410cb6bdae56",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-install-checks-6.1.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-6.1.1.tgz",
+			"sha": "b459b621634d06546664207fde16810815808db1",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-install-checks-6.2.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-6.2.0.tgz",
+			"sha": "fae55b9967b03ac309695ec96629492d5cedf371",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-install-checks-1.0.6.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-1.0.6.tgz",
+			"sha": "8d4c1e852806e4e2d66601ab787be5841550d0cb",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-install-checks-6.3.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-6.3.0.tgz",
+			"sha": "046552d8920e801fa9f919cad569545d60e826fe",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-install-checks-1.0.7.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-1.0.7.tgz",
+			"sha": "6d91aeda0ac96801f1ed7aadee116a6c0a086a57",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-install-checks-6.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-6.0.0.tgz",
+			"sha": "9a021d8e8b3956d61fd265c2eda4735bcd3d9b83",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-install-checks-6.1.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-6.1.0.tgz",
+			"sha": "7221210d9d746a40c37bf6c9b6c7a39f85e92998",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-install-checks-5.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-5.0.0.tgz",
+			"sha": "5ff27d209a4e3542b8ac6b0c1db6063506248234",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-install-checks-1.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-1.0.0.tgz",
+			"sha": "7e1469b5e0c693b2ae2a8830b5fc4e7bf76c88fd",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-install-checks-1.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-1.0.1.tgz",
+			"sha": "547a73dec58acfd52365012e60de9418b6405101",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-install-checks-1.0.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-install-checks/-/npm-install-checks-1.0.2.tgz",
+			"sha": "ebba769753fc8551308333ef411920743a6809f6",
+			"registry": "artifactory-sabadell"
+		}
+	},
+	"_attachments": {},
+	"_rev": "1-789be461d0fbc2fb",
+	"_id": "npm-install-checks",
+	"readme": "# npm-install-checks\n\nCheck the engines and platform fields in package.json\n\n## API\n\nBoth functions will throw an error if the check fails, or return\n`undefined` if everything is ok.\n\nErrors have a `required` and `current` fields.\n\n### .checkEngine(pkg, npmVer, nodeVer, force = false)\n\nCheck if a package's `engines.node` and `engines.npm` match the running system.\n\n`force` argument will override the node version check, but not the npm\nversion check, as this typically would indicate that the current version of\nnpm is unable to install the package properly for some reason.\n\nError code: 'EBADENGINE'\n\n### .checkPlatform(pkg, force, environment)\n\nCheck if a package's `os`, `cpu` and `libc` match the running system.\n\n`force` argument skips all checks.\n\n`environment` overrides the execution environment which comes from `process.platform` `process.arch` and current `libc` environment by default. `environment.os` `environment.cpu` and `environment.libc` are available.\n\nError code: 'EBADPLATFORM'\n\n\n### .checkDevEngines(wanted, current, opts)\n\nCheck if a package's `devEngines` property matches the current system environment.\n\nReturns an array of `Error` objects, some of which may be warnings, this can be checked with `.isError` and `.isWarn`. Errors correspond to an error for a given \"engine\" failure, reasons for each engine \"dependency\" failure can be found within `.errors`."
+}

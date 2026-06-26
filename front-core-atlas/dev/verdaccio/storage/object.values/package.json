@@ -1,0 +1,1954 @@
+{
+	"name": "object.values",
+	"versions": {
+		"1.0.3": {
+			"name": "object.values",
+			"description": "ES7 spec-compliant Object.values shim.",
+			"version": "1.0.3",
+			"author": {
+				"name": "Jordan Harband"
+			},
+			"homepage": "https://github.com/es-shims/Object.values#readme",
+			"repository": {
+				"url": "git://github.com/es-shims/Object.values.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/es-shims/Object.values/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"has": "^1.0.1",
+				"es-abstract": "^1.3.2",
+				"function-bind": "^1.0.2",
+				"define-properties": "^1.1.1"
+			},
+			"devDependencies": {
+				"nsp": "^1.1.0",
+				"jscs": "^2.2.1",
+				"tape": "^4.2.1",
+				"covert": "^1.1.0",
+				"eslint": "^1.6.0",
+				"array-map": "^0.0.0",
+				"@es-shims/api": "^1.0.0",
+				"@ljharb/eslint-config": "^1.3.0"
+			},
+			"keywords": [
+				"Object.values",
+				"Object.keys",
+				"Object.entries",
+				"values",
+				"ES7",
+				"shim",
+				"object",
+				"keys",
+				"entries",
+				"polyfill",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"jscs": "jscs test/*.js *.js",
+				"lint": "npm run jscs && npm run eslint",
+				"test": "npm run lint && es-shim-api && npm run test:shimmed && npm run test:module && npm run security",
+				"eslint": "eslint test/*.js *.js",
+				"coverage": "covert test/*.js",
+				"security": "nsp package",
+				"test:module": "node test/index.js",
+				"test:shimmed": "node test/shimmed.js",
+				"coverage-quiet": "covert test/*.js --quiet"
+			},
+			"lastModified": 0,
+			"_id": "object.values@1.0.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/object.values/-/object.values-1.0.3.tgz",
+				"shasum": "a7774ba050893fe6a5d5958acd05823e0f426bef",
+				"integrity": "sha512-qmDXEha79uR2cruWGq3d2hA6eL0kz+1pxJV04TGwfuMH93UIA72SSiqzcaxl9Em5OR2cuDbFoC+V6PtSzd6/+Q==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIAooWFquaEWarwUlktiXRgy96wny88gwfNbDiTkSrbwbAiEA5FfrKYRsN1t/jTqp4rSlFSlkZab/DvUFfCkOm+F/u4k="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "2.14.4",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"gitHead": "5f08f1f169279e9d088ec9e3a52df452f85060a6",
+			"testling": {
+				"files": "test/index.js",
+				"browsers": [
+					"iexplore/9.0..latest",
+					"firefox/4.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/11.6..latest",
+					"opera/next",
+					"safari/5.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_shasum": "a7774ba050893fe6a5d5958acd05823e0f426bef",
+			"_nodeVersion": "4.1.2",
+			"contributors": []
+		},
+		"1.1.2": {
+			"name": "object.values",
+			"description": "ES2017 spec-compliant Object.values shim.",
+			"version": "1.1.2",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/es-shims/Object.values#readme",
+			"repository": {
+				"url": "git://github.com/es-shims/Object.values.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/es-shims/Object.values/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"has": "^1.0.3",
+				"call-bind": "^1.0.0",
+				"es-abstract": "^1.18.0-next.1",
+				"define-properties": "^1.1.3"
+			},
+			"devDependencies": {
+				"aud": "^1.1.3",
+				"nyc": "^10.3.2",
+				"tape": "^5.0.1",
+				"eslint": "^7.14.0",
+				"array-map": "^0.0.0",
+				"object-keys": "^1.1.1",
+				"@es-shims/api": "^2.1.2",
+				"has-strict-mode": "^1.0.0",
+				"safe-publish-latest": "^1.1.4",
+				"functions-have-names": "^1.2.1",
+				"@ljharb/eslint-config": "^17.3.0"
+			},
+			"keywords": [
+				"Object.values",
+				"Object.keys",
+				"Object.entries",
+				"values",
+				"ES7",
+				"ES8",
+				"ES2017",
+				"shim",
+				"object",
+				"keys",
+				"entries",
+				"polyfill",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint .",
+				"test": "npm run tests-only",
+				"pretest": "npm run lint",
+				"postlint": "es-shim-api --bound",
+				"posttest": "npx aud --production",
+				"prepublish": "safe-publish-latest",
+				"tests-only": "nyc tape 'test/**/*.js'"
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "object.values@1.1.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/object.values/-/object.values-1.1.2.tgz",
+				"shasum": "7a2015e06fcb0f546bd652486ce8583a4731c731",
+				"integrity": "sha512-MYC0jvJopr8EK6dPBiO8Nb9mvjdypOachO5REGk6MXzujbBrAisKo3HmdEI6kZDL6fC31Mwee/5YbtMebixeag==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDkcvbxJmpVlVqgnFb7fY976KXQSKZ8Ff3jadpSe1Yd5gIgf00z8M15cXGI8P5yFPCToEmA+flmESbCbea7Wnp8Yyo="
+					}
+				]
+			},
+			"_npmVersion": "6.14.8",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "3b81b1875d5359664028921183c843bc2205327b",
+			"testling": {
+				"files": "test/index.js",
+				"browsers": [
+					"iexplore/9.0..latest",
+					"firefox/4.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/11.6..latest",
+					"opera/next",
+					"safari/5.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/object.values_1.1.2_1606429697427_0.4556652603010847",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "14.15.1",
+			"contributors": []
+		},
+		"1.2.1": {
+			"name": "object.values",
+			"description": "ES2017 spec-compliant Object.values shim.",
+			"version": "1.2.1",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/es-shims/Object.values#readme",
+			"repository": {
+				"type": "git",
+				"url": "git://github.com/es-shims/Object.values.git"
+			},
+			"bugs": {
+				"url": "https://github.com/es-shims/Object.values/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"call-bind": "^1.0.8",
+				"call-bound": "^1.0.3",
+				"define-properties": "^1.2.1",
+				"es-object-atoms": "^1.0.0"
+			},
+			"devDependencies": {
+				"@es-shims/api": "^2.5.1",
+				"@ljharb/eslint-config": "^21.1.1",
+				"array.prototype.map": "^1.0.7",
+				"auto-changelog": "^2.5.0",
+				"encoding": "^0.1.13",
+				"eslint": "=8.8.0",
+				"functions-have-names": "^1.2.3",
+				"has-strict-mode": "^1.0.1",
+				"in-publish": "^2.0.1",
+				"npmignore": "^0.3.1",
+				"nyc": "^10.3.2",
+				"object-keys": "^1.1.1",
+				"safe-publish-latest": "^2.0.0",
+				"tape": "^5.9.0"
+			},
+			"keywords": [
+				"Object.values",
+				"Object.keys",
+				"Object.entries",
+				"values",
+				"ES7",
+				"ES8",
+				"ES2017",
+				"shim",
+				"object",
+				"keys",
+				"entries",
+				"polyfill",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"prepack": "npmignore --auto --commentLines=autogenerated",
+				"prepublish": "not-in-publish || npm run prepublishOnly",
+				"prepublishOnly": "safe-publish-latest",
+				"pretest": "npm run lint",
+				"test": "npm run tests-only",
+				"posttest": "npx npm@'>= 10.2' audit --production",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"lint": "eslint --ext=js,mjs .",
+				"postlint": "es-shim-api --bound",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\""
+			},
+			"publishConfig": {
+				"ignore": [
+					".github/workflows"
+				]
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "object.values@1.2.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/object.values/-/object.values-1.2.1.tgz",
+				"shasum": "deed520a50809ff7f75a7cfd4bc64c7a038c6216",
+				"integrity": "sha512-gXah6aZrcUxjWg2zR2MwouP2eHlCBzdV4pygudehaKXSGW4v2AsRQUK+lwwXhii6KFZcunEnmSUoYp5CXibxtA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQD9mHHpu2RYuhT0VIn+gTVjd3Vpsgw8QMQMuhgkqziqrgIhAIGSXq8i7pYcV3Y/Pwu+Jg9q9kx7sd1OuWnWQ8qYNZa+"
+					}
+				]
+			},
+			"_npmVersion": "10.9.2",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "be752f55df2beae025230681d89520c510d86a7f",
+			"testling": {
+				"files": "test/index.js",
+				"browsers": [
+					"iexplore/9.0..latest",
+					"firefox/4.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/11.6..latest",
+					"opera/next",
+					"safari/5.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages-npm-production",
+				"tmp": "tmp/object.values_1.2.1_1734590347990_0.9304535099281013"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false,
+				"hideCredit": true
+			},
+			"_nodeVersion": "23.4.0",
+			"contributors": []
+		},
+		"1.0.4": {
+			"name": "object.values",
+			"description": "ES2017 spec-compliant Object.values shim.",
+			"version": "1.0.4",
+			"author": {
+				"name": "Jordan Harband"
+			},
+			"homepage": "https://github.com/es-shims/Object.values#readme",
+			"repository": {
+				"url": "git://github.com/es-shims/Object.values.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/es-shims/Object.values/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"has": "^1.0.1",
+				"es-abstract": "^1.6.1",
+				"function-bind": "^1.1.0",
+				"define-properties": "^1.1.2"
+			},
+			"devDependencies": {
+				"nsp": "^2.6.2",
+				"jscs": "^3.0.7",
+				"tape": "^4.6.3",
+				"covert": "^1.1.0",
+				"eslint": "^3.11.1",
+				"array-map": "^0.0.0",
+				"@es-shims/api": "^1.2.0",
+				"@ljharb/eslint-config": "^9.0.1"
+			},
+			"keywords": [
+				"Object.values",
+				"Object.keys",
+				"Object.entries",
+				"values",
+				"ES7",
+				"ES8",
+				"ES2017",
+				"shim",
+				"object",
+				"keys",
+				"entries",
+				"polyfill",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"jscs": "jscs test/*.js *.js",
+				"lint": "npm run --silent jscs && npm run --silent eslint",
+				"test": "npm run --silent tests-only",
+				"eslint": "eslint test/*.js *.js",
+				"pretest": "npm run --silent lint",
+				"coverage": "covert test/*.js",
+				"posttest": "npm run --silent security",
+				"security": "nsp check",
+				"tests-only": "es-shim-api && npm run --silent test:shimmed && npm run --silent test:module",
+				"test:module": "node test/index.js",
+				"test:shimmed": "node test/shimmed.js",
+				"coverage-quiet": "covert test/*.js --quiet"
+			},
+			"lastModified": 0,
+			"_id": "object.values@1.0.4",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/object.values/-/object.values-1.0.4.tgz",
+				"shasum": "e524da09b4f66ff05df457546ec72ac99f13069a",
+				"integrity": "sha512-j8kQn+slWQe1yBFI03FUchGaE5nlK2KLbxV86hM5eCz+pTE9JB4NOGivv/o1wPELIuag7VSfo2vcNQwZjIsYlA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDc9x7aYdQQaYm5/3tobFkva2i8yYjSNqtBEg8T4H8ayQIgUT4RFkFKTaU0hlRYfXJSTlfrQyJdVfq70E+VXd90rMA="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "3.10.9",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"gitHead": "202b50615f2eb0212c9b86ef2486d567770ed8b0",
+			"testling": {
+				"files": "test/index.js",
+				"browsers": [
+					"iexplore/9.0..latest",
+					"firefox/4.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/11.6..latest",
+					"opera/next",
+					"safari/5.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/object.values-1.0.4.tgz_1480881417313_0.5307759246788919",
+				"host": "packages-18-east.internal.npmjs.com"
+			},
+			"_shasum": "e524da09b4f66ff05df457546ec72ac99f13069a",
+			"_nodeVersion": "7.2.0",
+			"contributors": []
+		},
+		"1.1.3": {
+			"name": "object.values",
+			"description": "ES2017 spec-compliant Object.values shim.",
+			"version": "1.1.3",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/es-shims/Object.values#readme",
+			"repository": {
+				"url": "git://github.com/es-shims/Object.values.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/es-shims/Object.values/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"has": "^1.0.3",
+				"call-bind": "^1.0.2",
+				"es-abstract": "^1.18.0-next.2",
+				"define-properties": "^1.1.3"
+			},
+			"devDependencies": {
+				"aud": "^1.1.4",
+				"nyc": "^10.3.2",
+				"tape": "^5.2.0",
+				"eslint": "^7.20.0",
+				"array-map": "^0.0.0",
+				"object-keys": "^1.1.1",
+				"@es-shims/api": "^2.1.2",
+				"has-strict-mode": "^1.0.1",
+				"safe-publish-latest": "^1.1.4",
+				"functions-have-names": "^1.2.2",
+				"@ljharb/eslint-config": "^17.5.1"
+			},
+			"keywords": [
+				"Object.values",
+				"Object.keys",
+				"Object.entries",
+				"values",
+				"ES7",
+				"ES8",
+				"ES2017",
+				"shim",
+				"object",
+				"keys",
+				"entries",
+				"polyfill",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint .",
+				"test": "npm run tests-only",
+				"pretest": "npm run lint",
+				"postlint": "es-shim-api --bound",
+				"posttest": "npx aud --production",
+				"prepublish": "safe-publish-latest",
+				"tests-only": "nyc tape 'test/**/*.js'"
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "object.values@1.1.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/object.values/-/object.values-1.1.3.tgz",
+				"shasum": "eaa8b1e17589f02f698db093f7c62ee1699742ee",
+				"integrity": "sha512-nkF6PfDB9alkOUxpf1HNm/QlkeW3SReqL5WXeBLpEJJnlPSvRaDQpW3gQTksTN3fgJX4hL42RzKyOin6ff3tyw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIHtij2YHemauoDJJXsC+ZM/NZrkXK4J3bcPMVjRgSUJKAiA/zyW/+u7c6ugK9Cg3imD8nAb5LuAJaGZmCfBm16G9DQ=="
+					}
+				]
+			},
+			"_npmVersion": "7.5.4",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "695f42e7132ecd52f0b929aedf1ae8d1de1ad937",
+			"testling": {
+				"files": "test/index.js",
+				"browsers": [
+					"iexplore/9.0..latest",
+					"firefox/4.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/11.6..latest",
+					"opera/next",
+					"safari/5.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/object.values_1.1.3_1614057619791_0.6700125574194895",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "15.8.0",
+			"contributors": []
+		},
+		"1.1.4": {
+			"name": "object.values",
+			"description": "ES2017 spec-compliant Object.values shim.",
+			"version": "1.1.4",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/es-shims/Object.values#readme",
+			"repository": {
+				"url": "git://github.com/es-shims/Object.values.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/es-shims/Object.values/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"call-bind": "^1.0.2",
+				"es-abstract": "^1.18.2",
+				"define-properties": "^1.1.3"
+			},
+			"devDependencies": {
+				"aud": "^1.1.5",
+				"nyc": "^10.3.2",
+				"tape": "^5.2.2",
+				"eslint": "^7.27.0",
+				"object-keys": "^1.1.1",
+				"@es-shims/api": "^2.1.2",
+				"auto-changelog": "^2.3.0",
+				"has-strict-mode": "^1.0.1",
+				"array.prototype.map": "^1.0.3",
+				"safe-publish-latest": "^1.1.4",
+				"functions-have-names": "^1.2.2",
+				"@ljharb/eslint-config": "^17.6.0"
+			},
+			"keywords": [
+				"Object.values",
+				"Object.keys",
+				"Object.entries",
+				"values",
+				"ES7",
+				"ES8",
+				"ES2017",
+				"shim",
+				"object",
+				"keys",
+				"entries",
+				"polyfill",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint .",
+				"test": "npm run tests-only",
+				"pretest": "npm run lint",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"postlint": "es-shim-api --bound",
+				"posttest": "npx aud --production",
+				"prepublish": "not-in-publish || npm run prepublishOnly",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\"",
+				"prepublishOnly": "safe-publish-latest"
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "object.values@1.1.4",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/object.values/-/object.values-1.1.4.tgz",
+				"shasum": "0d273762833e816b693a637d30073e7051535b30",
+				"integrity": "sha512-TnGo7j4XSnKQoK3MfvkzqKCi0nVe/D9I9IjwTNYdb/fxYHpjrluHVOgw0AF6jrRFGMPHdfuidR09tIDiIvnaSg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIAW6Sz6/UYgSjow7Jeb9g/IYWARQhDxDooSMRk6/46xCAiEAmkE15Ehd8FYUPjGdGLgqkOCEzqLAPBtKlV8dqPPSH8A="
+					}
+				]
+			},
+			"_npmVersion": "7.11.2",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "8c9435e0ac5b079a7d68a7541042ac1d94a3e663",
+			"testling": {
+				"files": "test/index.js",
+				"browsers": [
+					"iexplore/9.0..latest",
+					"firefox/4.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/11.6..latest",
+					"opera/next",
+					"safari/5.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/object.values_1.1.4_1622070461268_0.6954003265748214",
+				"host": "s3://npm-registry-packages"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"hideCredit": true,
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false
+			},
+			"_nodeVersion": "16.1.0",
+			"contributors": []
+		},
+		"1.1.5": {
+			"name": "object.values",
+			"description": "ES2017 spec-compliant Object.values shim.",
+			"version": "1.1.5",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/es-shims/Object.values#readme",
+			"repository": {
+				"url": "git://github.com/es-shims/Object.values.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/es-shims/Object.values/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"call-bind": "^1.0.2",
+				"es-abstract": "^1.19.1",
+				"define-properties": "^1.1.3"
+			},
+			"devDependencies": {
+				"aud": "^1.1.5",
+				"nyc": "^10.3.2",
+				"tape": "^5.3.1",
+				"eslint": "^7.32.0",
+				"object-keys": "^1.1.1",
+				"@es-shims/api": "^2.2.2",
+				"auto-changelog": "^2.3.0",
+				"has-strict-mode": "^1.0.1",
+				"array.prototype.map": "^1.0.3",
+				"safe-publish-latest": "^1.1.4",
+				"functions-have-names": "^1.2.2",
+				"@ljharb/eslint-config": "^18.0.0"
+			},
+			"keywords": [
+				"Object.values",
+				"Object.keys",
+				"Object.entries",
+				"values",
+				"ES7",
+				"ES8",
+				"ES2017",
+				"shim",
+				"object",
+				"keys",
+				"entries",
+				"polyfill",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint .",
+				"test": "npm run tests-only",
+				"pretest": "npm run lint",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"postlint": "es-shim-api --bound",
+				"posttest": "npx aud --production",
+				"prepublish": "not-in-publish || npm run prepublishOnly",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\"",
+				"prepublishOnly": "safe-publish-latest"
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "object.values@1.1.5",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/object.values/-/object.values-1.1.5.tgz",
+				"shasum": "959f63e3ce9ef108720333082131e4a459b716ac",
+				"integrity": "sha512-QUZRW0ilQ3PnPpbNtgdNV1PDbEqLIiSFB3l+EnGtBQ/8SUTLj1PZwtQHABZtLgwpJZTSZhuGLOGk57Drx2IvYg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDi1qBsvkcTXc+IWtpfnP2m9ebUrWANVrKGYME2c04G1AIgJcJmmmHID8655WJD/33FTPvCuV67sH6hNVqPlxX5i9I="
+					}
+				]
+			},
+			"_npmVersion": "7.24.0",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "ff9bce4d0a38dcaf556abb0f7093322a9888275c",
+			"testling": {
+				"files": "test/index.js",
+				"browsers": [
+					"iexplore/9.0..latest",
+					"firefox/4.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/11.6..latest",
+					"opera/next",
+					"safari/5.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/object.values_1.1.5_1633326834994_0.6024869061725999",
+				"host": "s3://npm-registry-packages"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"hideCredit": true,
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false
+			},
+			"_nodeVersion": "16.10.0",
+			"contributors": []
+		},
+		"1.1.6": {
+			"name": "object.values",
+			"description": "ES2017 spec-compliant Object.values shim.",
+			"version": "1.1.6",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/es-shims/Object.values#readme",
+			"repository": {
+				"url": "git://github.com/es-shims/Object.values.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/es-shims/Object.values/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"call-bind": "^1.0.2",
+				"es-abstract": "^1.20.4",
+				"define-properties": "^1.1.4"
+			},
+			"devDependencies": {
+				"aud": "^2.0.1",
+				"nyc": "^10.3.2",
+				"tape": "^5.6.1",
+				"eslint": "=8.8.0",
+				"npmignore": "^0.3.0",
+				"in-publish": "^2.0.1",
+				"object-keys": "^1.1.1",
+				"@es-shims/api": "^2.2.3",
+				"auto-changelog": "^2.4.0",
+				"has-strict-mode": "^1.0.1",
+				"array.prototype.map": "^1.0.5",
+				"safe-publish-latest": "^2.0.0",
+				"functions-have-names": "^1.2.3",
+				"@ljharb/eslint-config": "^21.0.0"
+			},
+			"keywords": [
+				"Object.values",
+				"Object.keys",
+				"Object.entries",
+				"values",
+				"ES7",
+				"ES8",
+				"ES2017",
+				"shim",
+				"object",
+				"keys",
+				"entries",
+				"polyfill",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint --ext=js,mjs .",
+				"test": "npm run tests-only",
+				"prepack": "npmignore --auto --commentLines=autogenerated",
+				"pretest": "npm run lint",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"postlint": "es-shim-api --bound",
+				"posttest": "aud --production",
+				"prepublish": "not-in-publish || npm run prepublishOnly",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\"",
+				"prepublishOnly": "safe-publish-latest"
+			},
+			"publishConfig": {
+				"ignore": [
+					".github/workflows"
+				]
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "object.values@1.1.6",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/object.values/-/object.values-1.1.6.tgz",
+				"shasum": "4abbaa71eba47d63589d402856f908243eea9b1d",
+				"integrity": "sha512-FVVTkD1vENCsAcwNs9k6jea2uHC/X0+JcjG8YA60FN5CMaJmG95wT9jek/xX9nornqGRrBkKtzuAu2wuHpKqvw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQD6ATWZkooSpAR/vs9jScMtXhDqJg2WP7CqYGtaRNZBMgIhAKffy8bT7WDFlA3XS4lUI40scbZQbBZ7XTn7BXMUtT6o"
+					}
+				]
+			},
+			"_npmVersion": "8.19.2",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "da744e066168573d2b4b13b9d9bd4daa386786bf",
+			"testling": {
+				"files": "test/index.js",
+				"browsers": [
+					"iexplore/9.0..latest",
+					"firefox/4.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/11.6..latest",
+					"opera/next",
+					"safari/5.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/object.values_1.1.6_1667803903699_0.856961612600792",
+				"host": "s3://npm-registry-packages"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"hideCredit": true,
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false
+			},
+			"_nodeVersion": "19.0.1",
+			"contributors": []
+		},
+		"1.1.7": {
+			"name": "object.values",
+			"description": "ES2017 spec-compliant Object.values shim.",
+			"version": "1.1.7",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/es-shims/Object.values#readme",
+			"repository": {
+				"url": "git://github.com/es-shims/Object.values.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/es-shims/Object.values/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"call-bind": "^1.0.2",
+				"es-abstract": "^1.22.1",
+				"define-properties": "^1.2.0"
+			},
+			"devDependencies": {
+				"aud": "^2.0.3",
+				"nyc": "^10.3.2",
+				"tape": "^5.6.6",
+				"eslint": "=8.8.0",
+				"npmignore": "^0.3.0",
+				"in-publish": "^2.0.1",
+				"object-keys": "^1.1.1",
+				"@es-shims/api": "^2.4.2",
+				"auto-changelog": "^2.4.0",
+				"has-strict-mode": "^1.0.1",
+				"array.prototype.map": "^1.0.5",
+				"safe-publish-latest": "^2.0.0",
+				"functions-have-names": "^1.2.3",
+				"@ljharb/eslint-config": "^21.1.0"
+			},
+			"keywords": [
+				"Object.values",
+				"Object.keys",
+				"Object.entries",
+				"values",
+				"ES7",
+				"ES8",
+				"ES2017",
+				"shim",
+				"object",
+				"keys",
+				"entries",
+				"polyfill",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint --ext=js,mjs .",
+				"test": "npm run tests-only",
+				"prepack": "npmignore --auto --commentLines=autogenerated",
+				"pretest": "npm run lint",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"postlint": "es-shim-api --bound",
+				"posttest": "aud --production",
+				"prepublish": "not-in-publish || npm run prepublishOnly",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\"",
+				"prepublishOnly": "safe-publish-latest"
+			},
+			"publishConfig": {
+				"ignore": [
+					".github/workflows"
+				]
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "object.values@1.1.7",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/object.values/-/object.values-1.1.7.tgz",
+				"shasum": "617ed13272e7e1071b43973aa1655d9291b8442a",
+				"integrity": "sha512-aU6xnDFYT3x17e/f0IiiwlGPTy2jzMySGfUB4fq6z7CV8l85CWHDk5ErhyhpfDHhrOMwGFhSQkhMGHaIotA6Ng==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQC20AWXc0fvnrNvLjx8QuAoRtgB7daFKI0R/1QPw0xregIgSgQGZzyD57fQbYH3tSobBTaj4U5mDgR4pPW6vGATsrY="
+					}
+				]
+			},
+			"_npmVersion": "9.8.0",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "50b8a19330e4bb9b08be37dd6c81111709983da7",
+			"testling": {
+				"files": "test/index.js",
+				"browsers": [
+					"iexplore/9.0..latest",
+					"firefox/4.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/11.6..latest",
+					"opera/next",
+					"safari/5.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/object.values_1.1.7_1693203450598_0.9935015148005166",
+				"host": "s3://npm-registry-packages"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"hideCredit": true,
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false
+			},
+			"_nodeVersion": "20.5.1",
+			"contributors": []
+		},
+		"1.0.0": {
+			"name": "object.values",
+			"description": "ES7 spec-compliant Object.values shim.",
+			"version": "1.0.0",
+			"author": {
+				"name": "Jordan Harband"
+			},
+			"homepage": "https://github.com/es-shims/Object.values#readme",
+			"repository": {
+				"url": "git://github.com/es-shims/Object.values.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/es-shims/Object.values/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"es-abstract": "^1.3.1",
+				"object-keys": "^1.0.7",
+				"define-properties": "^1.1.1"
+			},
+			"devDependencies": {
+				"nsp": "^1.1.0",
+				"jscs": "^2.1.1",
+				"tape": "^4.2.0",
+				"covert": "^1.1.0",
+				"eslint": "^1.3.1",
+				"array-map": "^0.0.0",
+				"@es-shims/api": "^1.0.0",
+				"@ljharb/eslint-config": "^1.1.0"
+			},
+			"keywords": [
+				"Object.values",
+				"Object.keys",
+				"Object.entries",
+				"values",
+				"ES7",
+				"shim",
+				"object",
+				"keys",
+				"entries",
+				"polyfill"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"jscs": "jscs test/*.js *.js",
+				"lint": "npm run jscs && npm run eslint",
+				"test": "npm run lint && es-shim-api && npm run test:shimmed && npm run test:module && npm run security",
+				"eslint": "eslint test/*.js *.js",
+				"coverage": "covert test/*.js",
+				"security": "nsp package",
+				"test:module": "node test/index.js",
+				"test:shimmed": "node test/shimmed.js",
+				"coverage-quiet": "covert test/*.js --quiet"
+			},
+			"lastModified": 0,
+			"_id": "object.values@1.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/object.values/-/object.values-1.0.0.tgz",
+				"shasum": "7ee9e039f0c6abac54e6d2d7f4aec2afe7362d58",
+				"integrity": "sha512-ItIu0V8y4ycvXeXiRk0tYL5YkKcx1+NrA+VPz8VrLTORoVXbv6ctt46O/wuHxQIqysL2ikiPkv8Y+/HptC8I5w==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIC39x8yKmYE2GwfOYUlgNldIJtupgGGwqRkLzzgIT+VyAiAqqUb4jsBBtL8mHn1cT103XwsDk2VPd2qWlW7G5C9TdA=="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "2.14.1",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"gitHead": "4d11654d969d3688f09d05eb389070357854e49c",
+			"testling": {
+				"files": "test/index.js",
+				"browsers": [
+					"iexplore/9.0..latest",
+					"firefox/4.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/11.6..latest",
+					"opera/next",
+					"safari/5.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_shasum": "7ee9e039f0c6abac54e6d2d7f4aec2afe7362d58",
+			"_nodeVersion": "3.2.0",
+			"contributors": []
+		},
+		"1.0.1": {
+			"name": "object.values",
+			"description": "ES7 spec-compliant Object.values shim.",
+			"version": "1.0.1",
+			"author": {
+				"name": "Jordan Harband"
+			},
+			"homepage": "https://github.com/es-shims/Object.values#readme",
+			"repository": {
+				"url": "git://github.com/es-shims/Object.values.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/es-shims/Object.values/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"es-abstract": "^1.3.1",
+				"object-keys": "^1.0.7",
+				"define-properties": "^1.1.1"
+			},
+			"devDependencies": {
+				"nsp": "^1.1.0",
+				"jscs": "^2.1.1",
+				"tape": "^4.2.0",
+				"covert": "^1.1.0",
+				"eslint": "^1.5.0",
+				"array-map": "^0.0.0",
+				"@es-shims/api": "^1.0.0",
+				"@ljharb/eslint-config": "^1.2.0"
+			},
+			"keywords": [
+				"Object.values",
+				"Object.keys",
+				"Object.entries",
+				"values",
+				"ES7",
+				"shim",
+				"object",
+				"keys",
+				"entries",
+				"polyfill",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"jscs": "jscs test/*.js *.js",
+				"lint": "npm run jscs && npm run eslint",
+				"test": "npm run lint && es-shim-api && npm run test:shimmed && npm run test:module && npm run security",
+				"eslint": "eslint test/*.js *.js",
+				"coverage": "covert test/*.js",
+				"security": "nsp package",
+				"test:module": "node test/index.js",
+				"test:shimmed": "node test/shimmed.js",
+				"coverage-quiet": "covert test/*.js --quiet"
+			},
+			"lastModified": 0,
+			"_id": "object.values@1.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/object.values/-/object.values-1.0.1.tgz",
+				"shasum": "9386884a082ddc8920fbfc42fc2bb125a192f3ad",
+				"integrity": "sha512-8rapL6x9zLgAWYcL7SkBwdJgcunJvEViUHbo5xIDxS9g//VOD90zvpU+dZm1EzBIZGsE+3UKYPMpcW98qMh3Gg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQC2VnIkChwSAGBj8gbOlOW8HiZUGabmMDsBno/KYnsMYQIhALT1Y9g5psX3hVd/OkoDCqluBlvHxSzZbnHgRN0S/cjY"
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "2.14.3",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"gitHead": "5d455801147df87de1991dd770184642e670ed8b",
+			"testling": {
+				"files": "test/index.js",
+				"browsers": [
+					"iexplore/9.0..latest",
+					"firefox/4.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/11.6..latest",
+					"opera/next",
+					"safari/5.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_shasum": "9386884a082ddc8920fbfc42fc2bb125a192f3ad",
+			"_nodeVersion": "4.1.0",
+			"contributors": []
+		},
+		"1.1.0": {
+			"name": "object.values",
+			"description": "ES2017 spec-compliant Object.values shim.",
+			"version": "1.1.0",
+			"author": {
+				"name": "Jordan Harband"
+			},
+			"homepage": "https://github.com/es-shims/Object.values#readme",
+			"repository": {
+				"url": "git://github.com/es-shims/Object.values.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/es-shims/Object.values/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"has": "^1.0.3",
+				"es-abstract": "^1.12.0",
+				"function-bind": "^1.1.1",
+				"define-properties": "^1.1.3"
+			},
+			"devDependencies": {
+				"tape": "^4.9.2",
+				"covert": "^1.1.1",
+				"eslint": "^5.11.1",
+				"array-map": "^0.0.0",
+				"object-keys": "^1.0.12",
+				"@es-shims/api": "^2.1.2",
+				"@ljharb/eslint-config": "^13.1.1"
+			},
+			"keywords": [
+				"Object.values",
+				"Object.keys",
+				"Object.entries",
+				"values",
+				"ES7",
+				"ES8",
+				"ES2017",
+				"shim",
+				"object",
+				"keys",
+				"entries",
+				"polyfill",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint .",
+				"test": "npm run --silent tests-only",
+				"audit": "npm audit",
+				"pretest": "npm run --silent lint",
+				"coverage": "covert test/*.js",
+				"posttest": "npm run audit",
+				"preaudit": "npm install --package-lock --package-lock-only",
+				"postaudit": "rm package-lock.json",
+				"tests-only": "es-shim-api && npm run --silent test:shimmed && npm run --silent test:module",
+				"test:module": "node test/index.js",
+				"test:shimmed": "node test/shimmed.js",
+				"coverage-quiet": "covert test/*.js --quiet"
+			},
+			"lastModified": 0,
+			"_id": "object.values@1.1.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/object.values/-/object.values-1.1.0.tgz",
+				"shasum": "bf6810ef5da3e5325790eaaa2be213ea84624da9",
+				"integrity": "sha512-8mf0nKLAoFX6VlNVdhGj31SVYpaNFtUnuoOXWyFEstsWRgU837AK+JYM0iAxwkSzGRbwn8cbFmgbyxj1j4VbXg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIGMg5mhrBXos1/Lv6CRvilHAaf159p7oTu4JczartN9ZAiEAp9JIKcYqXhJMQOZ92dyf3sDfN89NMFTfbpYgpU1dL/g="
+					}
+				]
+			},
+			"_npmVersion": "6.5.0-next.0",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "4d329533840278d1551293e93ff96ff82e6cd922",
+			"testling": {
+				"files": "test/index.js",
+				"browsers": [
+					"iexplore/9.0..latest",
+					"firefox/4.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/11.6..latest",
+					"opera/next",
+					"safari/5.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/object.values_1.1.0_1546408112156_0.8028896537006116",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "11.6.0",
+			"contributors": []
+		},
+		"1.0.2": {
+			"name": "object.values",
+			"description": "ES7 spec-compliant Object.values shim.",
+			"version": "1.0.2",
+			"author": {
+				"name": "Jordan Harband"
+			},
+			"homepage": "https://github.com/es-shims/Object.values#readme",
+			"repository": {
+				"url": "git://github.com/es-shims/Object.values.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/es-shims/Object.values/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"has": "^1.0.1",
+				"es-abstract": "^1.3.1",
+				"object-keys": "^1.0.7",
+				"define-properties": "^1.1.1"
+			},
+			"devDependencies": {
+				"nsp": "^1.1.0",
+				"jscs": "^2.1.1",
+				"tape": "^4.2.0",
+				"covert": "^1.1.0",
+				"eslint": "^1.5.0",
+				"array-map": "^0.0.0",
+				"@es-shims/api": "^1.0.0",
+				"@ljharb/eslint-config": "^1.2.0"
+			},
+			"keywords": [
+				"Object.values",
+				"Object.keys",
+				"Object.entries",
+				"values",
+				"ES7",
+				"shim",
+				"object",
+				"keys",
+				"entries",
+				"polyfill",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"jscs": "jscs test/*.js *.js",
+				"lint": "npm run jscs && npm run eslint",
+				"test": "npm run lint && es-shim-api && npm run test:shimmed && npm run test:module && npm run security",
+				"eslint": "eslint test/*.js *.js",
+				"coverage": "covert test/*.js",
+				"security": "nsp package",
+				"test:module": "node test/index.js",
+				"test:shimmed": "node test/shimmed.js",
+				"coverage-quiet": "covert test/*.js --quiet"
+			},
+			"lastModified": 0,
+			"_id": "object.values@1.0.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/object.values/-/object.values-1.0.2.tgz",
+				"shasum": "e2e410ec29723b1bca4c3f635c0c319ca3fdca35",
+				"integrity": "sha512-EaenYKZcfmGuUE+SGUbK3g71+8s+LDctfja4qbaSZJ9cnhjGU6uranogWtXxNhCwUrRlGEUD7YtHVAS0ker4yw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIFv/QEhYTT5AKB9fwsQBsZK+EYmEMceXvSj5gxuy5a/5AiEAg7BR8fepOCJC7TalMrJdFJ0SkDSBlUuM5JSmvxebCf8="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "2.14.4",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"gitHead": "7f7e74f2cf8e3a8b25f2a830e8fc51a8aefbfd9d",
+			"testling": {
+				"files": "test/index.js",
+				"browsers": [
+					"iexplore/9.0..latest",
+					"firefox/4.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/11.6..latest",
+					"opera/next",
+					"safari/5.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_shasum": "e2e410ec29723b1bca4c3f635c0c319ca3fdca35",
+			"_nodeVersion": "4.1.1",
+			"contributors": []
+		},
+		"1.1.1": {
+			"name": "object.values",
+			"description": "ES2017 spec-compliant Object.values shim.",
+			"version": "1.1.1",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/es-shims/Object.values#readme",
+			"repository": {
+				"url": "git://github.com/es-shims/Object.values.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/es-shims/Object.values/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"has": "^1.0.3",
+				"es-abstract": "^1.17.0-next.1",
+				"function-bind": "^1.1.1",
+				"define-properties": "^1.1.3"
+			},
+			"devDependencies": {
+				"tape": "^4.11.0",
+				"covert": "^1.1.1",
+				"eslint": "^6.7.2",
+				"array-map": "^0.0.0",
+				"object-keys": "^1.1.1",
+				"@es-shims/api": "^2.1.2",
+				"functions-have-names": "^1.2.0",
+				"@ljharb/eslint-config": "^15.0.2"
+			},
+			"keywords": [
+				"Object.values",
+				"Object.keys",
+				"Object.entries",
+				"values",
+				"ES7",
+				"ES8",
+				"ES2017",
+				"shim",
+				"object",
+				"keys",
+				"entries",
+				"polyfill",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "es-shims-owner",
+					"email": "ljharb+esshims@gmail.com"
+				},
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint .",
+				"test": "npm run tests-only",
+				"pretest": "npm run lint",
+				"coverage": "covert test/*.js",
+				"posttest": "npx aud",
+				"tests-only": "es-shim-api && npm run test:shimmed && npm run test:module",
+				"test:module": "node test/index",
+				"test:shimmed": "node test/shimmed"
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "object.values@1.1.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/object.values/-/object.values-1.1.1.tgz",
+				"shasum": "68a99ecde356b7e9295a3c5e0ce31dc8c953de5e",
+				"integrity": "sha512-WTa54g2K8iu0kmS/us18jEmdv1a4Wi//BZ/DTVYEcH0XhLM5NYdpDHja3gt57VrZLcNAO2WGA+KpWsDBaHt6eA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIHSMU5rLRd+ppoOs+lj7UoFFaHpMqK1HRcFxxBGfzICXAiBRLcBdcfLkRr2WaBUgG/7rK3F6fw8FbQW10nhcBp0z9w=="
+					}
+				]
+			},
+			"_npmVersion": "6.13.1",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "e00dd4a6b6aef218167b4e20c959d43adcc33f2b",
+			"testling": {
+				"files": "test/index.js",
+				"browsers": [
+					"iexplore/9.0..latest",
+					"firefox/4.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/11.6..latest",
+					"opera/next",
+					"safari/5.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/object.values_1.1.1_1576221995108_0.2693036147744363",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "13.3.0",
+			"contributors": []
+		},
+		"1.2.0": {
+			"name": "object.values",
+			"description": "ES2017 spec-compliant Object.values shim.",
+			"version": "1.2.0",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/es-shims/Object.values#readme",
+			"repository": {
+				"url": "git://github.com/es-shims/Object.values.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/es-shims/Object.values/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"call-bind": "^1.0.7",
+				"es-object-atoms": "^1.0.0",
+				"define-properties": "^1.2.1"
+			},
+			"devDependencies": {
+				"aud": "^2.0.4",
+				"nyc": "^10.3.2",
+				"tape": "^5.7.5",
+				"eslint": "=8.8.0",
+				"npmignore": "^0.3.1",
+				"in-publish": "^2.0.1",
+				"object-keys": "^1.1.1",
+				"@es-shims/api": "^2.4.2",
+				"auto-changelog": "^2.4.0",
+				"has-strict-mode": "^1.0.1",
+				"array.prototype.map": "^1.0.6",
+				"safe-publish-latest": "^2.0.0",
+				"functions-have-names": "^1.2.3",
+				"@ljharb/eslint-config": "^21.1.0"
+			},
+			"keywords": [
+				"Object.values",
+				"Object.keys",
+				"Object.entries",
+				"values",
+				"ES7",
+				"ES8",
+				"ES2017",
+				"shim",
+				"object",
+				"keys",
+				"entries",
+				"polyfill",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint --ext=js,mjs .",
+				"test": "npm run tests-only",
+				"prepack": "npmignore --auto --commentLines=autogenerated",
+				"pretest": "npm run lint",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"postlint": "es-shim-api --bound",
+				"posttest": "aud --production",
+				"prepublish": "not-in-publish || npm run prepublishOnly",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\"",
+				"prepublishOnly": "safe-publish-latest"
+			},
+			"publishConfig": {
+				"ignore": [
+					".github/workflows"
+				]
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "object.values@1.2.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/object.values/-/object.values-1.2.0.tgz",
+				"shasum": "65405a9d92cee68ac2d303002e0b8470a4d9ab1b",
+				"integrity": "sha512-yBYjY9QX2hnRmZHAjG/f13MzmBzxzYgQhFrke06TTyKY5zSTEqkOeukBzIdVA3j3ulu8Qa3MbVFShV7T2RmGtQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQC/AjMjuU7eApXNgZoKsAi2lKdavRZfsIBdZ4Sh45RAWAIhAMsUXkEMQBnylsZ41ciBPHDUJudBtmordgXKgZMZcgb4"
+					}
+				]
+			},
+			"_npmVersion": "10.5.0",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "3bca8da627ee904bd8074ab99965436630c3e78e",
+			"testling": {
+				"files": "test/index.js",
+				"browsers": [
+					"iexplore/9.0..latest",
+					"firefox/4.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/11.6..latest",
+					"opera/next",
+					"safari/5.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/object.values_1.2.0_1710785274983_0.9431341680040641",
+				"host": "s3://npm-registry-packages"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"hideCredit": true,
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false
+			},
+			"_nodeVersion": "21.7.0",
+			"contributors": []
+		}
+	},
+	"time": {
+		"created": "2015-09-02T14:24:27.145Z",
+		"1.0.3": "2015-10-06T08:32:39.625Z",
+		"1.1.2": "2020-11-26T22:28:17.555Z",
+		"1.2.1": "2024-12-19T06:39:08.165Z",
+		"1.0.4": "2016-12-04T19:56:59.257Z",
+		"1.1.3": "2021-02-23T05:20:19.924Z",
+		"1.1.4": "2021-05-26T23:07:41.408Z",
+		"1.1.5": "2021-10-04T05:53:55.202Z",
+		"1.1.6": "2022-11-07T06:51:43.886Z",
+		"1.1.7": "2023-08-28T06:17:30.803Z",
+		"modified": "2024-12-19T06:39:08.327Z",
+		"1.0.0": "2015-09-02T14:24:27.145Z",
+		"1.0.1": "2015-09-21T23:28:05.133Z",
+		"1.1.0": "2019-01-02T05:48:32.293Z",
+		"1.0.2": "2015-09-25T15:33:34.061Z",
+		"1.1.1": "2019-12-13T07:26:35.253Z",
+		"1.2.0": "2024-03-18T18:07:55.189Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "1.2.1"
+	},
+	"_uplinks": {
+		"artifactory-sabadell": {
+			"etag": "fb7559b3e20ca357d8ea6f372cd94ad5a1c8d511",
+			"fetched": 1782459811274
+		}
+	},
+	"_distfiles": {
+		"object.values-1.0.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/object.values/-/object.values-1.0.3.tgz",
+			"sha": "a7774ba050893fe6a5d5958acd05823e0f426bef",
+			"registry": "artifactory-sabadell"
+		},
+		"object.values-1.1.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/object.values/-/object.values-1.1.2.tgz",
+			"sha": "7a2015e06fcb0f546bd652486ce8583a4731c731",
+			"registry": "artifactory-sabadell"
+		},
+		"object.values-1.2.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/object.values/-/object.values-1.2.1.tgz",
+			"sha": "deed520a50809ff7f75a7cfd4bc64c7a038c6216",
+			"registry": "artifactory-sabadell"
+		},
+		"object.values-1.0.4.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/object.values/-/object.values-1.0.4.tgz",
+			"sha": "e524da09b4f66ff05df457546ec72ac99f13069a",
+			"registry": "artifactory-sabadell"
+		},
+		"object.values-1.1.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/object.values/-/object.values-1.1.3.tgz",
+			"sha": "eaa8b1e17589f02f698db093f7c62ee1699742ee",
+			"registry": "artifactory-sabadell"
+		},
+		"object.values-1.1.4.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/object.values/-/object.values-1.1.4.tgz",
+			"sha": "0d273762833e816b693a637d30073e7051535b30",
+			"registry": "artifactory-sabadell"
+		},
+		"object.values-1.1.5.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/object.values/-/object.values-1.1.5.tgz",
+			"sha": "959f63e3ce9ef108720333082131e4a459b716ac",
+			"registry": "artifactory-sabadell"
+		},
+		"object.values-1.1.6.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/object.values/-/object.values-1.1.6.tgz",
+			"sha": "4abbaa71eba47d63589d402856f908243eea9b1d",
+			"registry": "artifactory-sabadell"
+		},
+		"object.values-1.1.7.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/object.values/-/object.values-1.1.7.tgz",
+			"sha": "617ed13272e7e1071b43973aa1655d9291b8442a",
+			"registry": "artifactory-sabadell"
+		},
+		"object.values-1.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/object.values/-/object.values-1.0.0.tgz",
+			"sha": "7ee9e039f0c6abac54e6d2d7f4aec2afe7362d58",
+			"registry": "artifactory-sabadell"
+		},
+		"object.values-1.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/object.values/-/object.values-1.0.1.tgz",
+			"sha": "9386884a082ddc8920fbfc42fc2bb125a192f3ad",
+			"registry": "artifactory-sabadell"
+		},
+		"object.values-1.1.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/object.values/-/object.values-1.1.0.tgz",
+			"sha": "bf6810ef5da3e5325790eaaa2be213ea84624da9",
+			"registry": "artifactory-sabadell"
+		},
+		"object.values-1.0.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/object.values/-/object.values-1.0.2.tgz",
+			"sha": "e2e410ec29723b1bca4c3f635c0c319ca3fdca35",
+			"registry": "artifactory-sabadell"
+		},
+		"object.values-1.1.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/object.values/-/object.values-1.1.1.tgz",
+			"sha": "68a99ecde356b7e9295a3c5e0ce31dc8c953de5e",
+			"registry": "artifactory-sabadell"
+		},
+		"object.values-1.2.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/object.values/-/object.values-1.2.0.tgz",
+			"sha": "65405a9d92cee68ac2d303002e0b8470a4d9ab1b",
+			"registry": "artifactory-sabadell"
+		}
+	},
+	"_attachments": {},
+	"_rev": "1-be87ac9e42b4d91c",
+	"_id": "object.values",
+	"readme": "# object.values <sup>[![Version Badge][npm-version-svg]][package-url]</sup>\n\n[![github actions][actions-image]][actions-url]\n[![coverage][codecov-image]][codecov-url]\n[![dependency status][deps-svg]][deps-url]\n[![dev dependency status][dev-deps-svg]][dev-deps-url]\n[![License][license-image]][license-url]\n[![Downloads][downloads-image]][downloads-url]\n\n[![npm badge][npm-badge-png]][package-url]\n\nAn ES2017 spec-compliant `Object.values` shim. Invoke its \"shim\" method to shim `Object.values` if it is unavailable or noncompliant.\n\nThis package implements the [es-shim API](https://github.com/es-shims/api) interface. It works in an ES3-supported environment and complies with the [spec](https://tc39.github.io/ecma262/#sec-object.values).\n\nMost common usage:\n```js\nvar assert = require('assert');\nvar values = require('object.values');\n\nvar obj = { a: 1, b: 2, c: 3 };\nvar expected = [1, 2, 3];\n\nif (typeof Symbol === 'function' && typeof Symbol() === 'symbol') {\n\t// for environments with Symbol support\n\tvar sym = Symbol();\n\tobj[sym] = 4;\n\tobj.d = sym;\n\texpected.push(sym);\n}\n\nassert.deepEqual(values(obj), expected);\n\nif (!Object.values) {\n\tvalues.shim();\n}\n\nassert.deepEqual(Object.values(obj), expected);\n```\n\n## Tests\nSimply clone the repo, `npm install`, and run `npm test`\n\n[package-url]: https://npmjs.com/package/object.values\n[npm-version-svg]: https://versionbadg.es/es-shims/Object.values.svg\n[deps-svg]: https://david-dm.org/es-shims/Object.values.svg\n[deps-url]: https://david-dm.org/es-shims/Object.values\n[dev-deps-svg]: https://david-dm.org/es-shims/Object.values/dev-status.svg\n[dev-deps-url]: https://david-dm.org/es-shims/Object.values#info=devDependencies\n[npm-badge-png]: https://nodei.co/npm/object.values.png?downloads=true&stars=true\n[license-image]: https://img.shields.io/npm/l/object.values.svg\n[license-url]: LICENSE\n[downloads-image]: https://img.shields.io/npm/dm/object.values.svg\n[downloads-url]: https://npm-stat.com/charts.html?package=object.values\n[codecov-image]: https://codecov.io/gh/es-shims/Object.values/branch/main/graphs/badge.svg\n[codecov-url]: https://app.codecov.io/gh/es-shims/Object.values/\n[actions-image]: https://img.shields.io/endpoint?url=https://github-actions-badge-u3jn4tfpocch.runkit.sh/es-shims/Object.values\n[actions-url]: https://github.com/es-shims/Object.values/actions"
+}

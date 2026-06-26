@@ -1,0 +1,268 @@
+{
+	"name": "prettier-linter-helpers",
+	"versions": {
+		"1.0.0": {
+			"name": "prettier-linter-helpers",
+			"description": "Utilities to help expose prettier output in linting tools",
+			"version": "1.0.0",
+			"homepage": "https://github.com/prettier/prettier-linter-helpers#readme",
+			"repository": {
+				"url": "git+https://github.com/prettier/prettier-linter-helpers.git",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"name": "Ben Scott"
+				},
+				{
+					"name": "Teddy Katz"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/prettier/prettier-linter-helpers/issues"
+			},
+			"engines": {
+				"node": ">=6.0.0"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"fast-diff": "^1.1.2"
+			},
+			"devDependencies": {
+				"mocha": "^5.2.0",
+				"eslint": "^5.6.1",
+				"prettier": "^1.14.3",
+				"eslint-plugin-node": "^7.0.1",
+				"eslint-config-prettier": "^3.1.0",
+				"eslint-plugin-prettier": "^2.7.0"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "bpscott",
+					"email": "ben@reload.me.uk"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint .",
+				"test": "npm run lint && mocha",
+				"format": "yarn run prettier '**/*.{js,json,md,yml}' --write && yarn run lint --fix"
+			},
+			"lastModified": 0,
+			"_id": "prettier-linter-helpers@1.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/prettier-linter-helpers/-/prettier-linter-helpers-1.0.0.tgz",
+				"shasum": "d23d41fe1375646de2d0104d3454a3008802cf7b",
+				"integrity": "sha512-GbK2cP9nraSSUF9N2XwUwqfzlAFlMNYYl+ShE/V+H8a9uNl/oUqB1w2EL54Jh0OlyRSd8RfWYJ3coVS4TROP2w==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIH3dxX6R++1FrD5jR9A9BG/EGDg7gkj4V5lie+G9Ex71AiBDV61cBxRLwjqWu+jf6XQ7OHDuAYcudsd/nzS2Dg02lQ=="
+					}
+				]
+			},
+			"_npmUser": {
+				"name": "bpscott",
+				"email": "ben@reload.me.uk"
+			},
+			"_hasShrinkwrap": false,
+			"licenseText": "# The MIT License (MIT)\n\nCopyright © 2017 Andres Suarez and Teddy Katz\n\nPermission is hereby granted, free of charge, to any person\nobtaining a copy of this software and associated documentation\nfiles (the “Software”), to deal in the Software without\nrestriction, including without limitation the rights to use,\ncopy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the\nSoftware is furnished to do so, subject to the following\nconditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES\nOF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT\nHOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,\nWHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING\nFROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR\nOTHER DEALINGS IN THE SOFTWARE.\n",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/prettier-linter-helpers_1.0.0_1538368114713_0.019988871500704164",
+				"host": "s3://npm-registry-packages"
+			}
+		},
+		"1.0.1": {
+			"name": "prettier-linter-helpers",
+			"description": "Utilities to help expose prettier output in linting tools",
+			"version": "1.0.1",
+			"homepage": "https://github.com/prettier/prettier-linter-helpers#readme",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/prettier/prettier-linter-helpers.git"
+			},
+			"contributors": [
+				{
+					"name": "Ben Scott"
+				},
+				{
+					"name": "Teddy Katz"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/prettier/prettier-linter-helpers/issues"
+			},
+			"engines": {
+				"node": ">=6.0.0"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"fast-diff": "^1.1.2"
+			},
+			"devDependencies": {
+				"@eslint/js": "^9.39.2",
+				"eslint": "^9.39.2",
+				"eslint-config-prettier": "^10.1.8",
+				"eslint-plugin-n": "^17.23.1  ",
+				"eslint-plugin-prettier": "^5.5.4",
+				"prettier": "^3.7.4"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "bpscott",
+					"email": "ben@reload.me.uk"
+				},
+				{
+					"name": "fisker",
+					"email": "lionkay@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint . && prettier . --check",
+				"test": "node --test test/*.test.js",
+				"format": "eslint . --fix && prettier '**/*.{js,json,md,yml}' --write"
+			},
+			"lastModified": 0,
+			"_id": "prettier-linter-helpers@1.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/prettier-linter-helpers/-/prettier-linter-helpers-1.0.1.tgz",
+				"shasum": "6a31f88a4bad6c7adda253de12ba4edaea80ebcd",
+				"integrity": "sha512-SxToR7P8Y2lWmv/kTzVLC1t/GDI2WGjMwNhLLE9qtH8Q13C+aEmuRlzDst4Up4s0Wc8sF2M+J57iB3cMLqftfg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEUCIGQ2PEWuupt50r0mMUgnZ2mHcAIchfe/nXbkb2b0NEmVAiEAmE0i+DypMeI1+TS3bDU4zuR+t43wHVNtW02dLp1IXHQ="
+					}
+				]
+			},
+			"_from": "file:prettier-linter-helpers-1.0.1.tgz",
+			"_npmVersion": "10.9.2",
+			"_npmUser": {
+				"name": "bpscott",
+				"email": "ben@reload.me.uk"
+			},
+			"_hasShrinkwrap": false,
+			"types": "index.d.ts",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages-npm-production",
+				"tmp": "tmp/prettier-linter-helpers_1.0.1_1766958878332_0.7231946098971584"
+			},
+			"_resolved": "/private/var/folders/dw/ht3d4ddd29g9w7zbw2k7kjlm0000gn/T/081b1b28bf0d242b669a3b22530c637a/prettier-linter-helpers-1.0.1.tgz",
+			"_integrity": "sha512-SxToR7P8Y2lWmv/kTzVLC1t/GDI2WGjMwNhLLE9qtH8Q13C+aEmuRlzDst4Up4s0Wc8sF2M+J57iB3cMLqftfg==",
+			"_nodeVersion": "22.17.0"
+		},
+		"0.1.0": {
+			"name": "prettier-linter-helpers",
+			"description": "Utilities to help expose prettier output in linting tools",
+			"version": "0.1.0",
+			"homepage": "https://github.com/prettier/prettier-linter-helpers#readme",
+			"repository": {
+				"url": "git+https://github.com/prettier/prettier-linter-helpers.git",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"name": "Ben Scott"
+				},
+				{
+					"name": "Teddy Katz"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/prettier/prettier-linter-helpers/issues"
+			},
+			"engines": {
+				"node": ">=6.0.0"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"fast-diff": "^1.1.2"
+			},
+			"devDependencies": {
+				"mocha": "^5.2.0",
+				"eslint": "^5.6.1",
+				"prettier": "^1.14.3",
+				"eslint-plugin-node": "^7.0.1",
+				"eslint-config-prettier": "^3.1.0",
+				"eslint-plugin-prettier": "^2.7.0"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "bpscott",
+					"email": "ben@reload.me.uk"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint .",
+				"test": "npm run lint && mocha",
+				"format": "yarn run prettier '**/*.{js,json,md,yml}' --write && yarn run lint --fix"
+			},
+			"lastModified": 0,
+			"_id": "prettier-linter-helpers@0.1.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/prettier-linter-helpers/-/prettier-linter-helpers-0.1.0.tgz",
+				"shasum": "0221c15f03025b722407d0ebfeee7dea960ec853",
+				"integrity": "sha512-j5e6zr7nDAiX/R9iBSxOKzbzLxJ1OWiCA2yovXNWv7djZOwrB6mPeIwxB+0hip2iXYi6CTWpG+iGmwY27CFBmQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIBy/xNbAZ/YbZFp0oWXAPiTbRR34HqQeCvDK9tlpbX6KAiA9adZ3GexB/AKy3KAYhpl94MVEvcPtFm4KB4WWSbdaNw=="
+					}
+				]
+			},
+			"_npmUser": {
+				"name": "bpscott",
+				"email": "ben@reload.me.uk"
+			},
+			"_hasShrinkwrap": false,
+			"licenseText": "# The MIT License (MIT)\n\nCopyright © 2017 Andres Suarez and Teddy Katz\n\nPermission is hereby granted, free of charge, to any person\nobtaining a copy of this software and associated documentation\nfiles (the “Software”), to deal in the Software without\nrestriction, including without limitation the rights to use,\ncopy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the\nSoftware is furnished to do so, subject to the following\nconditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES\nOF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT\nHOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,\nWHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING\nFROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR\nOTHER DEALINGS IN THE SOFTWARE.\n",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/prettier-linter-helpers_0.1.0_1538367738220_0.18175366566775875",
+				"host": "s3://npm-registry-packages"
+			}
+		}
+	},
+	"time": {
+		"created": "2018-10-01T04:22:18.219Z",
+		"modified": "2025-12-28T21:54:38.672Z",
+		"1.0.0": "2018-10-01T04:28:34.826Z",
+		"1.0.1": "2025-12-28T21:54:38.493Z",
+		"0.1.0": "2018-10-01T04:22:18.416Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "1.0.1"
+	},
+	"_uplinks": {
+		"artifactory-sabadell": {
+			"etag": "f6d7d601bd736d61cb0b0739cfb9cad9f09de457",
+			"fetched": 1782459811239
+		}
+	},
+	"_distfiles": {
+		"prettier-linter-helpers-1.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/prettier-linter-helpers/-/prettier-linter-helpers-1.0.0.tgz",
+			"sha": "d23d41fe1375646de2d0104d3454a3008802cf7b",
+			"registry": "artifactory-sabadell"
+		},
+		"prettier-linter-helpers-1.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/prettier-linter-helpers/-/prettier-linter-helpers-1.0.1.tgz",
+			"sha": "6a31f88a4bad6c7adda253de12ba4edaea80ebcd",
+			"registry": "artifactory-sabadell"
+		},
+		"prettier-linter-helpers-0.1.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/prettier-linter-helpers/-/prettier-linter-helpers-0.1.0.tgz",
+			"sha": "0221c15f03025b722407d0ebfeee7dea960ec853",
+			"registry": "artifactory-sabadell"
+		}
+	},
+	"_attachments": {},
+	"_rev": "1-87dfec9885d4688f",
+	"_id": "prettier-linter-helpers",
+	"readme": "# prettier-linter-helpers\n\nHelper functions for exposing prettier changes within linting tools.\n\nThis package contains:\n\n- `showInvisibles(string)` - Replace invisible characters with ones you can see for\n  for easier diffing.\n- `generateDifferences(source, prettierSource)` - Generate an array of\n  differences between two strings.\n\n## Inspiration\n\nThis code was extracted from [eslint-plugin-prettier v2.7.0](https://github.com/prettier/eslint-plugin-prettier/blob/9fac6b4039c1983b83073fa7af7864f0d7e1f2d3/eslint-plugin-prettier.js#L85-L215)"
+}

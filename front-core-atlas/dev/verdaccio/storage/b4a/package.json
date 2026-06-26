@@ -1,0 +1,2483 @@
+{
+	"name": "b4a",
+	"versions": {
+		"1.6.5": {
+			"name": "b4a",
+			"description": "Bridging the gap between buffers and typed arrays",
+			"version": "1.6.5",
+			"author": {
+				"name": "Kasper Isager Dalsgarð",
+				"email": "kasper@funktionel.co"
+			},
+			"homepage": "https://github.com/holepunchto/b4a#readme",
+			"repository": {
+				"url": "git+https://github.com/holepunchto/b4a.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/holepunchto/b4a/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"brittle": "^1.3.5",
+				"standard": "^16.0.3",
+				"nanobench": "^2.1.1"
+			},
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "mafintosh",
+					"email": "mathiasbuus@gmail.com"
+				},
+				{
+					"name": "kasperisager",
+					"email": "kasperisager@hey.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "standard && brittle test/*.mjs"
+			},
+			"lastModified": 0,
+			"_id": "b4a@1.6.5",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.6.5.tgz",
+				"shasum": "fc4bb8d34b81449f7c5266ce2239a711af0cbca9",
+				"integrity": "sha512-E32/KGan4u4qXWZR2zli2L28R3dK0Drh2Z+/N17dsiwRTAJcya7yfNMQJbnTcvYnXjxjaPFmBdE5b5KoOlSA/w==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIHg5W4mg/pIZm1hW8MInBFQH8+z6Ik3cBPtpM8JmxWJdAiBu/dDEpjZMq37yRWwHUh0kHm9b1A4xHU6d4vJ/8O8DOw=="
+					}
+				]
+			},
+			"_npmVersion": "10.2.4",
+			"_npmUser": {
+				"name": "kasperisager",
+				"email": "kasperisager@hey.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "30c0f0c2afaca9d80012088030a9169a88f23955",
+			"browser": {
+				"./index.js": "./browser.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/b4a_1.6.5_1707220390471_0.7188139005592926",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "21.4.0",
+			"contributors": []
+		},
+		"1.7.4": {
+			"name": "b4a",
+			"description": "Bridging the gap between buffers and typed arrays",
+			"version": "1.7.4",
+			"author": {
+				"name": "Holepunch"
+			},
+			"homepage": "https://github.com/holepunchto/b4a#readme",
+			"repository": {
+				"url": "git+https://github.com/holepunchto/b4a.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/holepunchto/b4a/issues"
+			},
+			"devDependencies": {
+				"brittle": "^3.5.2",
+				"prettier": "^3.6.2",
+				"nanobench": "^3.0.0",
+				"prettier-config-holepunch": "^1.0.0"
+			},
+			"peerDependencies": {
+				"react-native-b4a": "*"
+			},
+			"license": "Apache-2.0",
+			"maintainers": [
+				{
+					"name": "mafintosh",
+					"email": "mathiasbuus@gmail.com"
+				},
+				{
+					"name": "kasperisager",
+					"email": "kasperisager@hey.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "prettier . --check",
+				"test": "npm run lint && npm run test:bare && npm run test:node",
+				"test:bare": "bare test.mjs",
+				"test:node": "node test.mjs"
+			},
+			"lastModified": 0,
+			"peerDependenciesMeta": {
+				"react-native-b4a": {
+					"optional": true
+				}
+			},
+			"_id": "b4a@1.7.4",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.7.4.tgz",
+				"shasum": "0fdcb68cbc0224d267e3d0519c66419efc3416e2",
+				"integrity": "sha512-u20zJLDaSWpxaZ+zaAkEIB2dZZ1o+DF4T/MRbmsvGp9nletHOyiai19OzX1fF8xUBYsO1bPXxODvcd0978pnug==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEUCIH1A89Lttcf/rOneDUNBDNGjvSIrtu995iW7uJ/WhhkXAiEAmxfUF8R/sEWF76KFNOeihzGp1djSZQQjIRKR/GH8214="
+					}
+				]
+			},
+			"_npmVersion": "11.6.4",
+			"_npmUser": {
+				"name": "kasperisager",
+				"email": "kasperisager@hey.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "011a49791e5edd6e9e4d83b1ab8311bb9e57fe25",
+			"exports": {
+				".": {
+					"browser": "./browser.js",
+					"default": "./index.js",
+					"react-native": "./react-native.js"
+				},
+				"./package": "./package.json"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/b4a_1.7.4_1770973025151_0.5576943323487571",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"_nodeVersion": "24.10.0",
+			"contributors": []
+		},
+		"1.6.6": {
+			"name": "b4a",
+			"description": "Bridging the gap between buffers and typed arrays",
+			"version": "1.6.6",
+			"author": {
+				"name": "Holepunch"
+			},
+			"homepage": "https://github.com/holepunchto/b4a#readme",
+			"repository": {
+				"url": "git+https://github.com/holepunchto/b4a.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/holepunchto/b4a/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"brittle": "^1.3.5",
+				"standard": "^16.0.3",
+				"nanobench": "^2.1.1"
+			},
+			"license": "Apache-2.0",
+			"maintainers": [
+				{
+					"name": "mafintosh",
+					"email": "mathiasbuus@gmail.com"
+				},
+				{
+					"name": "kasperisager",
+					"email": "kasperisager@hey.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "standard && brittle test/*.mjs"
+			},
+			"lastModified": 0,
+			"_id": "b4a@1.6.6",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.6.6.tgz",
+				"shasum": "a4cc349a3851987c3c4ac2d7785c18744f6da9ba",
+				"integrity": "sha512-5Tk1HLk6b6ctmjIkAcU/Ujv/1WqiDl0F0JdRCR80VsOcUlHcu7pWeWRlOqQLHfDEsVx9YH/aif5AG4ehoCtTmg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIFVsFM8A0bT+bHkss+cBvQsS1qvnDlX9yifaWU9pqmP8AiBbp1+q/WDMQJCKXLpdGwSN3WtXEyli8iEodPo7Ktk9sg=="
+					}
+				]
+			},
+			"_npmVersion": "10.2.4",
+			"_npmUser": {
+				"name": "kasperisager",
+				"email": "kasperisager@hey.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "d8118de05824397e2abade64860db71569828104",
+			"browser": {
+				"./index.js": "./browser.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/b4a_1.6.6_1707220536843_0.2105797355090675",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "21.4.0",
+			"contributors": []
+		},
+		"1.7.5": {
+			"name": "b4a",
+			"description": "Bridging the gap between buffers and typed arrays",
+			"version": "1.7.5",
+			"author": {
+				"name": "Holepunch"
+			},
+			"homepage": "https://github.com/holepunchto/b4a#readme",
+			"repository": {
+				"url": "git+https://github.com/holepunchto/b4a.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/holepunchto/b4a/issues"
+			},
+			"devDependencies": {
+				"brittle": "^3.5.2",
+				"prettier": "^3.6.2",
+				"nanobench": "^3.0.0",
+				"prettier-config-holepunch": "^1.0.0"
+			},
+			"peerDependencies": {
+				"react-native-b4a": "*"
+			},
+			"license": "Apache-2.0",
+			"maintainers": [
+				{
+					"name": "mafintosh",
+					"email": "mathiasbuus@gmail.com"
+				},
+				{
+					"name": "kasperisager",
+					"email": "kasperisager@hey.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "prettier . --check",
+				"test": "npm run lint && npm run test:bare && npm run test:node",
+				"test:bare": "bare test.mjs",
+				"test:node": "node test.mjs"
+			},
+			"lastModified": 0,
+			"peerDependenciesMeta": {
+				"react-native-b4a": {
+					"optional": true
+				}
+			},
+			"_id": "b4a@1.7.5",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.7.5.tgz",
+				"shasum": "573e93bf2664de8779069ef736615c1c63ec1b74",
+				"integrity": "sha512-iEsKNwDh1wiWTps1/hdkNdmBgDlDVZP5U57ZVOlt+dNFqpc/lpPouCIxZw+DYBgc4P9NDfIZMPNR4CHNhzwLIA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEQCIEtvakG60xq+RY792ZPFuBwEaF243KUq+Jm1qY//83nxAiAXPmbjwuUovRmz60a/u9j4f9bKAAxmvdkr/SKRE0+wgA=="
+					}
+				]
+			},
+			"_npmVersion": "11.6.4",
+			"_npmUser": {
+				"name": "kasperisager",
+				"email": "kasperisager@hey.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "9733de474486ce615de7963d4fe736d75547df9c",
+			"exports": {
+				".": {
+					"browser": "./browser.js",
+					"default": "./index.js",
+					"react-native": "./react-native.js"
+				},
+				"./package": "./package.json"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/b4a_1.7.5_1771320312676_0.8851016032262768",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"_nodeVersion": "24.10.0",
+			"contributors": []
+		},
+		"1.6.7": {
+			"name": "b4a",
+			"description": "Bridging the gap between buffers and typed arrays",
+			"version": "1.6.7",
+			"author": {
+				"name": "Holepunch"
+			},
+			"homepage": "https://github.com/holepunchto/b4a#readme",
+			"repository": {
+				"url": "git+https://github.com/holepunchto/b4a.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/holepunchto/b4a/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"brittle": "^3.5.2",
+				"standard": "^17.1.0",
+				"nanobench": "^3.0.0"
+			},
+			"license": "Apache-2.0",
+			"maintainers": [
+				{
+					"name": "mafintosh",
+					"email": "mathiasbuus@gmail.com"
+				},
+				{
+					"name": "kasperisager",
+					"email": "kasperisager@hey.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "standard && brittle test/*.mjs"
+			},
+			"lastModified": 0,
+			"_id": "b4a@1.6.7",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.6.7.tgz",
+				"shasum": "a99587d4ebbfbd5a6e3b21bdb5d5fa385767abe4",
+				"integrity": "sha512-OnAYlL5b7LEkALw87fUVafQw5rVR9RjwGd4KUwNQ6DrrNmaVaUCgLipfVlzrPQ4tWOR9P0IXGNOx50jYCCdSJg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQC9HFPUDRCggWxtWtwpnJXp17fFY2yh0DF1Kq+AFJxNuAIgCs+SnGzsnbEzpAsQE+jnVNSbWAnH3uvUbQSB52fiFkQ="
+					}
+				]
+			},
+			"_npmVersion": "10.8.3",
+			"_npmUser": {
+				"name": "kasperisager",
+				"email": "kasperisager@hey.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "0561aca9ea53a690d44ab8470a4cca4bcf503bd8",
+			"browser": {
+				"./index.js": "./browser.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/b4a_1.6.7_1727263908419_0.42409835899814796",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "20.17.0",
+			"contributors": []
+		},
+		"0.0.0": {
+			"name": "b4a",
+			"description": "Bridging the gap between buffers and typed arrays",
+			"version": "0.0.0",
+			"author": {
+				"name": "Kasper Isager Dalsgarð",
+				"email": "kasper@funktionel.co"
+			},
+			"homepage": "https://github.com/hypercore-skunkworks/b4a#readme",
+			"repository": {
+				"url": "git+https://github.com/hypercore-skunkworks/b4a.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/hypercore-skunkworks/b4a/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"brittle": "^1.3.5",
+				"standard": "^16.0.3",
+				"nanobench": "^2.1.1"
+			},
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "kasperisager",
+					"email": "kasperisager@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "standard && brittle test/*.mjs"
+			},
+			"lastModified": 0,
+			"_id": "b4a@0.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-0.0.0.tgz",
+				"shasum": "30a474e9d5a71ff37f19ee68da35bf0381aa1183",
+				"integrity": "sha512-WAn0P619JtvENJ6VfwpTUJb3SvBCF5SxMx1WV+EGO2uyYJFyVutv8cspJR3Lbjoj+Y7kVW/TrW6btIwV9OVTSA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCICBeQpBrpGRvz/iK1Fmn4Al4LavC18oiuuHZgmX1Muj7AiEAl3BEYoQ/1pXuZyKyFsmjBTI6p/i2kNNu5P6gQdf3Zz8="
+					}
+				]
+			},
+			"_npmVersion": "8.0.0",
+			"_npmUser": {
+				"name": "kasperisager",
+				"email": "kasperisager@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "f44db2ac033070b31ac907534fe730f0a81d11d6",
+			"browser": {
+				"./index.js": "./browser.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/b4a_0.0.0_1634737801054_0.4702400461248659",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "16.11.1",
+			"contributors": []
+		},
+		"1.1.2": {
+			"name": "b4a",
+			"description": "Bridging the gap between buffers and typed arrays",
+			"version": "1.1.2",
+			"author": {
+				"name": "Kasper Isager Dalsgarð",
+				"email": "kasper@funktionel.co"
+			},
+			"homepage": "https://github.com/hypercore-skunkworks/b4a#readme",
+			"repository": {
+				"url": "git+https://github.com/hypercore-skunkworks/b4a.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/hypercore-skunkworks/b4a/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"brittle": "^1.3.5",
+				"standard": "^16.0.3",
+				"nanobench": "^2.1.1"
+			},
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "mafintosh",
+					"email": "mathiasbuus@gmail.com"
+				},
+				{
+					"name": "kasperisager",
+					"email": "kasperisager@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "standard && brittle test/*.mjs"
+			},
+			"lastModified": 0,
+			"_id": "b4a@1.1.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.1.2.tgz",
+				"shasum": "9af795775e01c7ce1c190ca41884255e3aca7e32",
+				"integrity": "sha512-mL0ZchJqyNLojO7XxJ7VYk5lws0RVFvjDiLilAbJTsClbpIE1ESUOBNKQaRIXmlZgoU8ckusIEeOrWEbFuDymg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQCnlGfyiy/BGemAGe3nUlhBYmW0JMk21yChkRxJ8VsItAIhAJiAzpppVE4bivc3MAbBaOen5qO7u4n1+W4L7/oykXzz"
+					}
+				]
+			},
+			"_npmVersion": "8.1.0",
+			"_npmUser": {
+				"name": "kasperisager",
+				"email": "kasperisager@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "2d35350e9dd95a88666200207b124a20b4c0354b",
+			"browser": {
+				"./index.js": "./browser.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/b4a_1.1.2_1636551344825_0.5069556380968274",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "17.0.1",
+			"contributors": []
+		},
+		"1.3.0": {
+			"name": "b4a",
+			"description": "Bridging the gap between buffers and typed arrays",
+			"version": "1.3.0",
+			"author": {
+				"name": "Kasper Isager Dalsgarð",
+				"email": "kasper@funktionel.co"
+			},
+			"homepage": "https://github.com/hypercore-skunkworks/b4a#readme",
+			"repository": {
+				"url": "git+https://github.com/hypercore-skunkworks/b4a.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/hypercore-skunkworks/b4a/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"brittle": "^1.3.5",
+				"standard": "^16.0.3",
+				"nanobench": "^2.1.1"
+			},
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "mafintosh",
+					"email": "mathiasbuus@gmail.com"
+				},
+				{
+					"name": "kasperisager",
+					"email": "kasperisager@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "standard && brittle test/*.mjs"
+			},
+			"lastModified": 0,
+			"_id": "b4a@1.3.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.3.0.tgz",
+				"shasum": "5650e2ba699cbefcca17d2bdaa4a4987a5402144",
+				"integrity": "sha512-xqmXILllLzT9Revz1E7y6pOV4kSj1NgoUSc8x5YE3QGaT/NrfSQR+Tr6uoK6EBKrbrfI9eVLJGxaiZx47ULBWA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCID8v/NzIDKmN0m62pFVFqeZiHgtkxYnwKP77ne5NFQuMAiEAzFVIH+ozUPZboTNNhdchjTNUeyj6KcX5q2heqpt//1M="
+					}
+				]
+			},
+			"_npmVersion": "8.1.0",
+			"_npmUser": {
+				"name": "kasperisager",
+				"email": "kasperisager@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "7ed0016fb2f84dbdaba69857d1f920710bd9519a",
+			"browser": {
+				"./index.js": "./browser.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/b4a_1.3.0_1637785855949_0.7178005146154798",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "17.0.1",
+			"contributors": []
+		},
+		"1.1.3": {
+			"name": "b4a",
+			"description": "Bridging the gap between buffers and typed arrays",
+			"version": "1.1.3",
+			"author": {
+				"name": "Kasper Isager Dalsgarð",
+				"email": "kasper@funktionel.co"
+			},
+			"homepage": "https://github.com/hypercore-skunkworks/b4a#readme",
+			"repository": {
+				"url": "git+https://github.com/hypercore-skunkworks/b4a.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/hypercore-skunkworks/b4a/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"brittle": "^1.3.5",
+				"standard": "^16.0.3",
+				"nanobench": "^2.1.1"
+			},
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "mafintosh",
+					"email": "mathiasbuus@gmail.com"
+				},
+				{
+					"name": "kasperisager",
+					"email": "kasperisager@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "standard && brittle test/*.mjs"
+			},
+			"lastModified": 0,
+			"_id": "b4a@1.1.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.1.3.tgz",
+				"shasum": "c2b3b09771873026c6190cd01f96a2b5651000ae",
+				"integrity": "sha512-PGn9fSvBVdevMZTM1+JiHU3pH/1SLm7f4Kk+YtXW7WXmV/QqWNTsReK0fNnKBX/T7L/CCL6tV5dzXg2gQ1biwA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIBdDYsX31809aECZESHoYiYamWKlnYAvy9x7UPuGnKUKAiEA7aVfcjUXn2tp+qfeJRaUDc2lMabdWyogJ7fpY7MOcrw="
+					}
+				]
+			},
+			"_npmVersion": "8.1.0",
+			"_npmUser": {
+				"name": "kasperisager",
+				"email": "kasperisager@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "7ed6d8aa3e412609a5547f085dcb4b5433bc5e82",
+			"browser": {
+				"./index.js": "./browser.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/b4a_1.1.3_1637576978337_0.7032002050429205",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "17.0.1",
+			"contributors": []
+		},
+		"1.3.1": {
+			"name": "b4a",
+			"description": "Bridging the gap between buffers and typed arrays",
+			"version": "1.3.1",
+			"author": {
+				"name": "Kasper Isager Dalsgarð",
+				"email": "kasper@funktionel.co"
+			},
+			"homepage": "https://github.com/hypercore-skunkworks/b4a#readme",
+			"repository": {
+				"url": "git+https://github.com/hypercore-skunkworks/b4a.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/hypercore-skunkworks/b4a/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"brittle": "^1.3.5",
+				"standard": "^16.0.3",
+				"nanobench": "^2.1.1"
+			},
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "mafintosh",
+					"email": "mathiasbuus@gmail.com"
+				},
+				{
+					"name": "kasperisager",
+					"email": "kasperisager@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "standard && brittle test/*.mjs"
+			},
+			"lastModified": 0,
+			"_id": "b4a@1.3.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.3.1.tgz",
+				"shasum": "5ead1402bd4a2dcfea35cc83928815d53315ff32",
+				"integrity": "sha512-ULHjbJGjZcdA5bugDNAAcMA6GWXX/9N10I6AQc14TH+Sr7bMfT+NHuJnOFGPJWLtzYa6Tz+PnFD2D/1bISLLZQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCID8UscETFUZOjaAbtXZUzpqQFS39NgNTXvebdjn6YzjnAiEAjxWRcbvkAekdypgqF+ixWXzk/+YKg4iCf5Oj26hl0oI="
+					}
+				]
+			},
+			"_npmVersion": "8.1.0",
+			"_npmUser": {
+				"name": "kasperisager",
+				"email": "kasperisager@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "a102bbcd23481d7843a6b14171dd0354b72f8e34",
+			"browser": {
+				"./index.js": "./browser.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/b4a_1.3.1_1637852615806_0.08896944603194457",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "17.0.1",
+			"contributors": []
+		},
+		"1.4.0": {
+			"name": "b4a",
+			"description": "Bridging the gap between buffers and typed arrays",
+			"version": "1.4.0",
+			"author": {
+				"name": "Kasper Isager Dalsgarð",
+				"email": "kasper@funktionel.co"
+			},
+			"homepage": "https://github.com/hypercore-skunkworks/b4a#readme",
+			"repository": {
+				"url": "git+https://github.com/hypercore-skunkworks/b4a.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/hypercore-skunkworks/b4a/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"brittle": "^1.3.5",
+				"standard": "^16.0.3",
+				"nanobench": "^2.1.1"
+			},
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "mafintosh",
+					"email": "mathiasbuus@gmail.com"
+				},
+				{
+					"name": "kasperisager",
+					"email": "kasperisager@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "standard && brittle test/*.mjs"
+			},
+			"lastModified": 0,
+			"_id": "b4a@1.4.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.4.0.tgz",
+				"shasum": "b71264785f5fd69848453399dbd1279af33a2d00",
+				"integrity": "sha512-na3ING7169vVuUGwPzdXzRW49rtfNqPXg+l1FvT+niLWSyUAXge2vmh3PiDCNCABJ+7jWbYDwbQQKimWkN3f0g==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIAIWZ88lg5x5bNpUJGfIqJZ/cf7S4p7kDKzhb9X2D/IIAiAQTeSc9WHTYPS0tuwCo7/33dms3dnDgrwJGFhW9ZPnxA=="
+					}
+				]
+			},
+			"_npmVersion": "8.5.5",
+			"_npmUser": {
+				"name": "kasperisager",
+				"email": "kasperisager@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "014a7907a94deb11d7a6ffb47c9baf82bb081b1c",
+			"browser": {
+				"./index.js": "./browser.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/b4a_1.4.0_1650623622512_0.6969338595097385",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "17.8.0",
+			"contributors": []
+		},
+		"1.1.4": {
+			"name": "b4a",
+			"description": "Bridging the gap between buffers and typed arrays",
+			"version": "1.1.4",
+			"author": {
+				"name": "Kasper Isager Dalsgarð",
+				"email": "kasper@funktionel.co"
+			},
+			"homepage": "https://github.com/hypercore-skunkworks/b4a#readme",
+			"repository": {
+				"url": "git+https://github.com/hypercore-skunkworks/b4a.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/hypercore-skunkworks/b4a/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"brittle": "^1.3.5",
+				"standard": "^16.0.3",
+				"nanobench": "^2.1.1"
+			},
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "mafintosh",
+					"email": "mathiasbuus@gmail.com"
+				},
+				{
+					"name": "kasperisager",
+					"email": "kasperisager@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "standard && brittle test/*.mjs"
+			},
+			"lastModified": 0,
+			"_id": "b4a@1.1.4",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.1.4.tgz",
+				"shasum": "1fb4a659d2958d2f6929d1e257389f637f94b3ef",
+				"integrity": "sha512-RIWJsXR22BtG5X15f+MrM9QT3JDTpTKj58Gsuaudeh6Nc8eaNSZxiAwABjiC9tiHwXKSTu7NIBH0zB3kYa0BvA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCICuD9XPI+pq46fvZEuvwO+wRsPa7IPp3KrA8YAqHG1JcAiBHFmfCeIc8RGJfWJNBNDfz3+GUnhOVWn1zQVPhO4IITw=="
+					}
+				]
+			},
+			"_npmVersion": "8.1.0",
+			"_npmUser": {
+				"name": "kasperisager",
+				"email": "kasperisager@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "bbd8b79553388cf03ecc3324a0841f88764fb6c2",
+			"browser": {
+				"./index.js": "./browser.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/b4a_1.1.4_1637611085896_0.4645694905243951",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "17.0.1",
+			"contributors": []
+		},
+		"1.5.0": {
+			"name": "b4a",
+			"description": "Bridging the gap between buffers and typed arrays",
+			"version": "1.5.0",
+			"author": {
+				"name": "Kasper Isager Dalsgarð",
+				"email": "kasper@funktionel.co"
+			},
+			"homepage": "https://github.com/hypercore-skunkworks/b4a#readme",
+			"repository": {
+				"url": "git+https://github.com/hypercore-skunkworks/b4a.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/hypercore-skunkworks/b4a/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"brittle": "^1.3.5",
+				"standard": "^16.0.3",
+				"nanobench": "^2.1.1"
+			},
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "mafintosh",
+					"email": "mathiasbuus@gmail.com"
+				},
+				{
+					"name": "kasperisager",
+					"email": "kasperisager@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "standard && brittle test/*.mjs"
+			},
+			"lastModified": 0,
+			"_id": "b4a@1.5.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.5.0.tgz",
+				"shasum": "cb071ca8f4e6f1eaf7d269c9ccc8eea21a914d00",
+				"integrity": "sha512-J20PbRmSy38jW9TmqGEwd8xINUCuOm2I2bPQ1sK8LWLxKTbhPh0H48DJ27ff2qmSXvI30WYV0tKzSmGb+oCsXg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDkH61yc8ahEceBib4fjeBK/AZFoxJDH4Ax7sYupqMkYQIhAM2ThRDS3auJq/mGipedYmD9VfQC4FB4o2i8b/Z4U0Ws"
+					}
+				]
+			},
+			"_npmVersion": "8.5.5",
+			"_npmUser": {
+				"name": "kasperisager",
+				"email": "kasperisager@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "959682a99385d55564f0aaaa01e80f08f7d7fe9b",
+			"browser": {
+				"./index.js": "./browser.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/b4a_1.5.0_1650627889083_0.458289439553065",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "17.8.0",
+			"contributors": []
+		},
+		"1.5.1": {
+			"name": "b4a",
+			"description": "Bridging the gap between buffers and typed arrays",
+			"version": "1.5.1",
+			"author": {
+				"name": "Kasper Isager Dalsgarð",
+				"email": "kasper@funktionel.co"
+			},
+			"homepage": "https://github.com/hypercore-skunkworks/b4a#readme",
+			"repository": {
+				"url": "git+https://github.com/hypercore-skunkworks/b4a.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/hypercore-skunkworks/b4a/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"brittle": "^1.3.5",
+				"standard": "^16.0.3",
+				"nanobench": "^2.1.1"
+			},
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "mafintosh",
+					"email": "mathiasbuus@gmail.com"
+				},
+				{
+					"name": "kasperisager",
+					"email": "kasperisager@hey.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "standard && brittle test/*.mjs"
+			},
+			"lastModified": 0,
+			"_id": "b4a@1.5.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.5.1.tgz",
+				"shasum": "7999832de7b262da50ca1a402b7e68853af81416",
+				"integrity": "sha512-Z64Q36prHpEycAOAaIhf/IE/0jciXqRIMIISSgJltjA25lovDeuPYpLTT/DHBQuWdXnhCR8HXnPIJT8mr7tW5Q==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIHupyrCCJIxbHzON357t/mxjqrYft6ZQTVK6tyPdGDPfAiAMsh8xrmFWlvOP8Kp0jiWO4YSJYUwJwzaiL8Qwyqm9+g=="
+					}
+				]
+			},
+			"_npmVersion": "8.6.0",
+			"_npmUser": {
+				"name": "kasperisager",
+				"email": "kasperisager@hey.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "b6daeb84bb1239538e14fce21362d3cfeec7e069",
+			"browser": {
+				"./index.js": "./browser.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/b4a_1.5.1_1653048176967_0.7854448169756065",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "18.0.0",
+			"contributors": []
+		},
+		"1.6.0": {
+			"name": "b4a",
+			"description": "Bridging the gap between buffers and typed arrays",
+			"version": "1.6.0",
+			"author": {
+				"name": "Kasper Isager Dalsgarð",
+				"email": "kasper@funktionel.co"
+			},
+			"homepage": "https://github.com/hypercore-skunkworks/b4a#readme",
+			"repository": {
+				"url": "git+https://github.com/hypercore-skunkworks/b4a.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/hypercore-skunkworks/b4a/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"brittle": "^1.3.5",
+				"standard": "^16.0.3",
+				"nanobench": "^2.1.1"
+			},
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "mafintosh",
+					"email": "mathiasbuus@gmail.com"
+				},
+				{
+					"name": "kasperisager",
+					"email": "kasperisager@hey.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "standard && brittle test/*.mjs"
+			},
+			"lastModified": 0,
+			"_id": "b4a@1.6.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.6.0.tgz",
+				"shasum": "5430a9cac1af388910dd1a1c1aa9d3a0a796ed68",
+				"integrity": "sha512-fsTxXxj1081Yq5MOQ06gZ5+e2QcSyP2U6NofdOWyq+lrNI4IjkZ+fLVmoQ6uUCiNg1NWePMMVq93vOTdbJmErw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIBGNbPBhvVDltav5jXXjhjEypsZVyjPuMRNs/k00kY4bAiEA5dwwsElSJ1srkMLbAn5ylmKkljlbCl8fo3t25KHOBM4="
+					}
+				]
+			},
+			"_npmVersion": "8.12.1",
+			"_npmUser": {
+				"name": "kasperisager",
+				"email": "kasperisager@hey.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "375edebf6639ed2d8f623da9a66a679c1c3bea79",
+			"browser": {
+				"./index.js": "./browser.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/b4a_1.6.0_1658912321026_0.8393730758129376",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "18.4.0",
+			"contributors": []
+		},
+		"1.5.2": {
+			"name": "b4a",
+			"description": "Bridging the gap between buffers and typed arrays",
+			"version": "1.5.2",
+			"author": {
+				"name": "Kasper Isager Dalsgarð",
+				"email": "kasper@funktionel.co"
+			},
+			"homepage": "https://github.com/hypercore-skunkworks/b4a#readme",
+			"repository": {
+				"url": "git+https://github.com/hypercore-skunkworks/b4a.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/hypercore-skunkworks/b4a/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"brittle": "^1.3.5",
+				"standard": "^16.0.3",
+				"nanobench": "^2.1.1"
+			},
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "mafintosh",
+					"email": "mathiasbuus@gmail.com"
+				},
+				{
+					"name": "kasperisager",
+					"email": "kasperisager@hey.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "standard && brittle test/*.mjs"
+			},
+			"lastModified": 0,
+			"_id": "b4a@1.5.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.5.2.tgz",
+				"shasum": "2f87e4a3dde4bb5b86c1553f3f29d5901b4ec09f",
+				"integrity": "sha512-XyyFZmFcZitsJCAxKHU+//K0x00lZPOVDl6vV6zRQQUudComz5hKaK2hBGr5U8JlMwi633kQvLwbnV0Bb388lw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIDzPSp7By/M6vnBged1RvNgQlsueM/DZzCIo8LBn1eSxAiEA8FlSmtFT1eQRLyBxql+BL5+cFRHBVkLND35s6OjbhjY="
+					}
+				]
+			},
+			"_npmVersion": "8.6.0",
+			"_npmUser": {
+				"name": "kasperisager",
+				"email": "kasperisager@hey.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "c0927f0e735ecd1f1a81dab6f8ce086edc18f333",
+			"browser": {
+				"./index.js": "./browser.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/b4a_1.5.2_1653050789869_0.8832918321742254",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "18.0.0",
+			"contributors": []
+		},
+		"1.6.1": {
+			"name": "b4a",
+			"description": "Bridging the gap between buffers and typed arrays",
+			"version": "1.6.1",
+			"author": {
+				"name": "Kasper Isager Dalsgarð",
+				"email": "kasper@funktionel.co"
+			},
+			"homepage": "https://github.com/holepunchto/b4a#readme",
+			"repository": {
+				"url": "git+https://github.com/holepunchto/b4a.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/holepunchto/b4a/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"brittle": "^1.3.5",
+				"standard": "^16.0.3",
+				"nanobench": "^2.1.1"
+			},
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "mafintosh",
+					"email": "mathiasbuus@gmail.com"
+				},
+				{
+					"name": "kasperisager",
+					"email": "kasperisager@hey.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "standard && brittle test/*.mjs"
+			},
+			"lastModified": 0,
+			"_id": "b4a@1.6.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.6.1.tgz",
+				"shasum": "9effac93a469a868d024e16fd77162c653544cbd",
+				"integrity": "sha512-AsKjNhz72yxteo/0EtQEiwkMUgk/tGmycXlbG4g3Ard2/ULtNLUykGOkeK0egmN27h0xMAhb76jYccW+XTBExA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQCowP1VYCvpgMEzy77jQuqOG2NhYWFdp0u2gj7I1iG3OAIhAJLMOJVqnJHMY68D6Nk0XewNFRkmHDKMpetUXzriASCp"
+					}
+				]
+			},
+			"_npmVersion": "8.19.1",
+			"_npmUser": {
+				"name": "kasperisager",
+				"email": "kasperisager@hey.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "f9510755db505d121b24ca46990e4da0337f5ed1",
+			"browser": {
+				"./index.js": "./browser.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/b4a_1.6.1_1666099918162_0.9393780506087017",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "18.9.0",
+			"contributors": []
+		},
+		"1.7.0": {
+			"name": "b4a",
+			"description": "Bridging the gap between buffers and typed arrays",
+			"version": "1.7.0",
+			"author": {
+				"name": "Holepunch"
+			},
+			"homepage": "https://github.com/holepunchto/b4a#readme",
+			"repository": {
+				"url": "git+https://github.com/holepunchto/b4a.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/holepunchto/b4a/issues"
+			},
+			"devDependencies": {
+				"brittle": "^3.5.2",
+				"prettier": "^3.6.2",
+				"nanobench": "^3.0.0",
+				"prettier-config-standard": "^7.0.0"
+			},
+			"peerDependencies": {
+				"react-native-b4a": "^0.0.0"
+			},
+			"license": "Apache-2.0",
+			"maintainers": [
+				{
+					"name": "mafintosh",
+					"email": "mathiasbuus@gmail.com"
+				},
+				{
+					"name": "kasperisager",
+					"email": "kasperisager@hey.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "prettier . --check",
+				"test": "npm run lint && npm run test:bare && npm run test:node",
+				"test:bare": "bare test.mjs",
+				"test:node": "node test.mjs"
+			},
+			"lastModified": 0,
+			"peerDependenciesMeta": {
+				"react-native-b4a": {
+					"optional": true
+				}
+			},
+			"_id": "b4a@1.7.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.7.0.tgz",
+				"shasum": "d3c1f72f68be612020c15702d0a6f0e8bc0b65e5",
+				"integrity": "sha512-KtsH1alSKomfNi/yDAFaD8PPFfi0LxJCEbPuzogcXrMF+yH40Z1ykTDo2vyxuQfN1FLjv0LFM7CadLHEPrVifw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEYCIQCyZ3087zYJt4HZ3plU/LY8K6L5aacROjv+AUNqrLNCjAIhALVBhIJ+tzYDKX+2J3BcjM2XVo4HwGxLIUl+307rqpLG"
+					}
+				]
+			},
+			"_npmVersion": "11.5.2",
+			"_npmUser": {
+				"name": "kasperisager",
+				"email": "kasperisager@hey.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "90d199db319be5e3a4abf4653fdf236a350682d5",
+			"exports": {
+				".": {
+					"browser": "./browser.js",
+					"default": "./index.js",
+					"react-native": "./react-native.js"
+				},
+				"./package": "./package.json"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/b4a_1.7.0_1757503716111_0.5634027772052748",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"_nodeVersion": "24.2.0",
+			"contributors": []
+		},
+		"1.5.3": {
+			"name": "b4a",
+			"description": "Bridging the gap between buffers and typed arrays",
+			"version": "1.5.3",
+			"author": {
+				"name": "Kasper Isager Dalsgarð",
+				"email": "kasper@funktionel.co"
+			},
+			"homepage": "https://github.com/hypercore-skunkworks/b4a#readme",
+			"repository": {
+				"url": "git+https://github.com/hypercore-skunkworks/b4a.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/hypercore-skunkworks/b4a/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"brittle": "^1.3.5",
+				"standard": "^16.0.3",
+				"nanobench": "^2.1.1"
+			},
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "mafintosh",
+					"email": "mathiasbuus@gmail.com"
+				},
+				{
+					"name": "kasperisager",
+					"email": "kasperisager@hey.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "standard && brittle test/*.mjs"
+			},
+			"lastModified": 0,
+			"_id": "b4a@1.5.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.5.3.tgz",
+				"shasum": "56293b5607aeda3fd81c481e516e9f103fc88341",
+				"integrity": "sha512-1aCQIzQJK7G0z1Una75tWMlwVAR8o+QHoAlnWc5XAxRVBESY9WsitfBgM5nPyDBP5HrhPU1Np4Pq2Y7CJQ+tVw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQCRAELbHDa3mb7SceYVRKZGcHAsXBwt4Pezg9RrVHlbngIhAMq4n6SFtqlWpppbz/Ks1I6lo1gkViZzeBjNz9wlAD1m"
+					}
+				]
+			},
+			"_npmVersion": "8.6.0",
+			"_npmUser": {
+				"name": "kasperisager",
+				"email": "kasperisager@hey.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "81ff8e1b5de2e1c89cd34b10ccad7a87bab087d4",
+			"browser": {
+				"./index.js": "./browser.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/b4a_1.5.3_1653051558661_0.06562095337337137",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "18.0.0",
+			"contributors": []
+		},
+		"1.6.2": {
+			"name": "b4a",
+			"description": "Bridging the gap between buffers and typed arrays",
+			"version": "1.6.2",
+			"author": {
+				"name": "Kasper Isager Dalsgarð",
+				"email": "kasper@funktionel.co"
+			},
+			"homepage": "https://github.com/holepunchto/b4a#readme",
+			"repository": {
+				"url": "git+https://github.com/holepunchto/b4a.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/holepunchto/b4a/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"brittle": "^1.3.5",
+				"standard": "^16.0.3",
+				"nanobench": "^2.1.1"
+			},
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "mafintosh",
+					"email": "mathiasbuus@gmail.com"
+				},
+				{
+					"name": "kasperisager",
+					"email": "kasperisager@hey.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "standard && brittle test/*.mjs"
+			},
+			"lastModified": 0,
+			"_id": "b4a@1.6.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.6.2.tgz",
+				"shasum": "d3dca0ac7da794aa13093e92dd57cfe61d58b07e",
+				"integrity": "sha512-YFqjbZ8iqX/wWJVmF1SSOB5TYDwsPd/sZzhSdu2PskElf55PjEe+0MhsEPgoa5eTK1VS/WqJMz9qwIFwZta+3g==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQC8WYoBx0Mw0TVtRU7tYMgfk8MU+kJsRILBXs1toNKT+AIgAktKwg+8xADXuhZHFhmgRLOERd1GGd31UHP3GFxfokY="
+					}
+				]
+			},
+			"_npmVersion": "9.5.0",
+			"_npmUser": {
+				"name": "kasperisager",
+				"email": "kasperisager@hey.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "22fee03c5cc01d86d1c1fc53e4c153e269b81961",
+			"browser": {
+				"./index.js": "./browser.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/b4a_1.6.2_1678355317537_0.2662942045650045",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "19.7.0",
+			"contributors": []
+		},
+		"1.7.1": {
+			"name": "b4a",
+			"description": "Bridging the gap between buffers and typed arrays",
+			"version": "1.7.1",
+			"author": {
+				"name": "Holepunch"
+			},
+			"homepage": "https://github.com/holepunchto/b4a#readme",
+			"repository": {
+				"url": "git+https://github.com/holepunchto/b4a.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/holepunchto/b4a/issues"
+			},
+			"devDependencies": {
+				"brittle": "^3.5.2",
+				"prettier": "^3.6.2",
+				"nanobench": "^3.0.0",
+				"prettier-config-standard": "^7.0.0"
+			},
+			"peerDependencies": {
+				"react-native-b4a": "*"
+			},
+			"license": "Apache-2.0",
+			"maintainers": [
+				{
+					"name": "mafintosh",
+					"email": "mathiasbuus@gmail.com"
+				},
+				{
+					"name": "kasperisager",
+					"email": "kasperisager@hey.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "prettier . --check",
+				"test": "npm run lint && npm run test:bare && npm run test:node",
+				"test:bare": "bare test.mjs",
+				"test:node": "node test.mjs"
+			},
+			"lastModified": 0,
+			"peerDependenciesMeta": {
+				"react-native-b4a": {
+					"optional": true
+				}
+			},
+			"_id": "b4a@1.7.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.7.1.tgz",
+				"shasum": "6fd4ec2fb33ba7a4ff341a2869bbfc88a6e57850",
+				"integrity": "sha512-ZovbrBV0g6JxK5cGUF1Suby1vLfKjv4RWi8IxoaO/Mon8BDD9I21RxjHFtgQ+kskJqLAVyQZly3uMBui+vhc8Q==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEQCID8h6itOy1cEWPJUPq6sps11ejKu01AeqnGPPxm+LsxnAiB1hTUVWUcoqK+ggcQxaOsu1DDVqJRRW/tO0RHGBJRqGg=="
+					}
+				]
+			},
+			"_npmVersion": "11.5.2",
+			"_npmUser": {
+				"name": "kasperisager",
+				"email": "kasperisager@hey.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "fbcd6d703907249c5c39b5acde10ff88e35fa764",
+			"exports": {
+				".": {
+					"browser": "./browser.js",
+					"default": "./index.js",
+					"react-native": "./react-native.js"
+				},
+				"./package": "./package.json"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/b4a_1.7.1_1757577508833_0.468992382357867",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"_nodeVersion": "24.2.0",
+			"contributors": []
+		},
+		"1.8.0": {
+			"name": "b4a",
+			"description": "Bridging the gap between buffers and typed arrays",
+			"version": "1.8.0",
+			"author": {
+				"name": "Holepunch"
+			},
+			"homepage": "https://github.com/holepunchto/b4a#readme",
+			"repository": {
+				"url": "git+https://github.com/holepunchto/b4a.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/holepunchto/b4a/issues"
+			},
+			"devDependencies": {
+				"brittle": "^3.5.2",
+				"prettier": "^3.6.2",
+				"nanobench": "^3.0.0",
+				"prettier-config-holepunch": "^1.0.0"
+			},
+			"peerDependencies": {
+				"react-native-b4a": "*"
+			},
+			"license": "Apache-2.0",
+			"maintainers": [
+				{
+					"name": "mafintosh",
+					"email": "mathiasbuus@gmail.com"
+				},
+				{
+					"name": "kasperisager",
+					"email": "kasperisager@hey.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "prettier . --check",
+				"test": "npm run lint && npm run test:bare && npm run test:node",
+				"test:bare": "bare test.mjs",
+				"test:node": "node test.mjs"
+			},
+			"lastModified": 0,
+			"peerDependenciesMeta": {
+				"react-native-b4a": {
+					"optional": true
+				}
+			},
+			"_id": "b4a@1.8.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.8.0.tgz",
+				"shasum": "1ca3ba0edc9469aaabef5647e769a83d50180b1a",
+				"integrity": "sha512-qRuSmNSkGQaHwNbM7J78Wwy+ghLEYF1zNrSeMxj4Kgw6y33O3mXcQ6Ie9fRvfU/YnxWkOchPXbaLb73TkIsfdg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEYCIQDdK/ywc8K+x9NhN8iI7wzv9NqeKx/B7+N0064nkXWu4QIhAN5kl5jR72GMEq9lcwYyE7bDxD6fQpToiwm1JnKtKw8l"
+					}
+				]
+			},
+			"_npmVersion": "11.6.4",
+			"_npmUser": {
+				"name": "kasperisager",
+				"email": "kasperisager@hey.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "9119236b369ace8def4f3b56b7afc6733100b361",
+			"exports": {
+				".": {
+					"browser": "./browser.js",
+					"default": "./index.js",
+					"react-native": "./react-native.js"
+				},
+				"./package": "./package.json"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/b4a_1.8.0_1771527113531_0.7300627134273701",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"_nodeVersion": "24.10.0",
+			"contributors": []
+		},
+		"1.6.3": {
+			"name": "b4a",
+			"description": "Bridging the gap between buffers and typed arrays",
+			"version": "1.6.3",
+			"author": {
+				"name": "Kasper Isager Dalsgarð",
+				"email": "kasper@funktionel.co"
+			},
+			"homepage": "https://github.com/holepunchto/b4a#readme",
+			"repository": {
+				"url": "git+https://github.com/holepunchto/b4a.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/holepunchto/b4a/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"brittle": "^1.3.5",
+				"standard": "^16.0.3",
+				"nanobench": "^2.1.1"
+			},
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "mafintosh",
+					"email": "mathiasbuus@gmail.com"
+				},
+				{
+					"name": "kasperisager",
+					"email": "kasperisager@hey.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "standard && brittle test/*.mjs"
+			},
+			"lastModified": 0,
+			"_id": "b4a@1.6.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.6.3.tgz",
+				"shasum": "cce6e8a2f0d0774e5fe8062086827e979970266d",
+				"integrity": "sha512-aX6/FqpWQve8VN9kyTExy7GlmwNShvxcCWWD5QVR3ZbRlyBGtCrG5Autu95xxSPH4CRs+5PSV4d7PRnWpmqFlA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDtLTqWxSTYf8ZBjPZeL21+uRjeu9Cv5/TjoGILzYA5cAIhAKiFbSBM7Hyhd327ca+Be2UFANN8QRrtrP2ihQ6JySRQ"
+					}
+				]
+			},
+			"_npmVersion": "9.5.0",
+			"_npmUser": {
+				"name": "kasperisager",
+				"email": "kasperisager@hey.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "53d8ee1474a557e016702ed4056738fe967c7ffb",
+			"browser": {
+				"./index.js": "./browser.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/b4a_1.6.3_1679059104969_0.6945984671914149",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "19.7.0",
+			"contributors": []
+		},
+		"1.7.2": {
+			"name": "b4a",
+			"description": "Bridging the gap between buffers and typed arrays",
+			"version": "1.7.2",
+			"author": {
+				"name": "Holepunch"
+			},
+			"homepage": "https://github.com/holepunchto/b4a#readme",
+			"repository": {
+				"url": "git+https://github.com/holepunchto/b4a.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/holepunchto/b4a/issues"
+			},
+			"devDependencies": {
+				"brittle": "^3.5.2",
+				"prettier": "^3.6.2",
+				"nanobench": "^3.0.0",
+				"prettier-config-holepunch": "^1.0.0"
+			},
+			"peerDependencies": {
+				"react-native-b4a": "*"
+			},
+			"license": "Apache-2.0",
+			"maintainers": [
+				{
+					"name": "mafintosh",
+					"email": "mathiasbuus@gmail.com"
+				},
+				{
+					"name": "kasperisager",
+					"email": "kasperisager@hey.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "prettier . --check",
+				"test": "npm run lint && npm run test:bare && npm run test:node",
+				"test:bare": "bare test.mjs",
+				"test:node": "node test.mjs"
+			},
+			"lastModified": 0,
+			"peerDependenciesMeta": {
+				"react-native-b4a": {
+					"optional": true
+				}
+			},
+			"_id": "b4a@1.7.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.7.2.tgz",
+				"shasum": "aefbe7aaf52fe53c3270f87cf72c33c61bc3174b",
+				"integrity": "sha512-DyUOdz+E8R6+sruDpQNOaV0y/dBbV6X/8ZkxrDcR0Ifc3BgKlpgG0VAtfOozA0eMtJO5GGe9FsZhueLs00pTww==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEUCIFBxFSwftz3RrcWmS25JDafoW5ZcwIY7RKMS9qqVQjjDAiEAja/1QrVrMiHvnYO1JO5vebRBCoHWCC2c+lcTTeFL9Yc="
+					}
+				]
+			},
+			"_npmVersion": "11.6.0",
+			"_npmUser": {
+				"name": "kasperisager",
+				"email": "kasperisager@hey.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "e733af5b96e200dd580f0a20f5a54e918e577397",
+			"exports": {
+				".": {
+					"browser": "./browser.js",
+					"default": "./index.js",
+					"react-native": "./react-native.js"
+				},
+				"./package": "./package.json"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/b4a_1.7.2_1758637594741_0.8241306125771761",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"_nodeVersion": "24.8.0",
+			"contributors": []
+		},
+		"1.8.1": {
+			"name": "b4a",
+			"description": "Bridging the gap between buffers and typed arrays",
+			"version": "1.8.1",
+			"author": {
+				"name": "Holepunch"
+			},
+			"homepage": "https://github.com/holepunchto/b4a#readme",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/holepunchto/b4a.git"
+			},
+			"bugs": {
+				"url": "https://github.com/holepunchto/b4a/issues"
+			},
+			"devDependencies": {
+				"brittle": "^3.5.2",
+				"lunte": "^1.7.0",
+				"nanobench": "^3.0.0",
+				"prettier": "^3.6.2",
+				"prettier-config-holepunch": "^2.0.0"
+			},
+			"peerDependencies": {
+				"react-native-b4a": "*"
+			},
+			"license": "Apache-2.0",
+			"maintainers": [
+				{
+					"name": "mafintosh",
+					"email": "mathiasbuus@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"format": "prettier --write . && lunte --fix",
+				"lint": "prettier --check . && lunte",
+				"test": "npm run test:bare && npm run test:node",
+				"test:bare": "brittle-bare --coverage test.mjs",
+				"test:node": "brittle-node --coverage test.mjs"
+			},
+			"lastModified": 0,
+			"peerDependenciesMeta": {
+				"react-native-b4a": {
+					"optional": true
+				}
+			},
+			"_id": "b4a@1.8.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.8.1.tgz",
+				"shasum": "7f16334ca80127aeb26064a28841acbf174840a4",
+				"integrity": "sha512-aiqre1Nr0B/6DgE2N5vwTc+2/oQZ4Wh1t4NznYY4E00y8LCt6NqdRv81so00oo27D8MVKTpUa/MwUUtBLXCoDw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEUCIGOkjFtgg6JTpBX/J9lnKqQ4qGkF6doOSzsnZ/sPtUCNAiEA1aaUrUm2svteCMg0Kqr6wxBNTMRt91l+csH2CYOTbGM="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/b4a@1.8.1",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "11.11.0",
+			"_npmUser": {
+				"name": "GitHub Actions",
+				"email": "npm-oidc-no-reply@github.com",
+				"trustedPublisher": {
+					"id": "github",
+					"oidcConfigId": "oidc:8b4d81a4-f1c9-42ad-a587-d92905ea33d2"
+				}
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "bf1d3da6eae3439a1d62b1ffcd29e84bcdc1d397",
+			"exports": {
+				"./package": "./package.json",
+				".": {
+					"react-native": "./react-native.js",
+					"browser": "./browser.js",
+					"default": "./index.js"
+				}
+			},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages-npm-production",
+				"tmp": "tmp/b4a_1.8.1_1777578579549_0.8896761091095167"
+			},
+			"_nodeVersion": "24.14.1",
+			"contributors": []
+		},
+		"1.6.4": {
+			"name": "b4a",
+			"description": "Bridging the gap between buffers and typed arrays",
+			"version": "1.6.4",
+			"author": {
+				"name": "Kasper Isager Dalsgarð",
+				"email": "kasper@funktionel.co"
+			},
+			"homepage": "https://github.com/holepunchto/b4a#readme",
+			"repository": {
+				"url": "git+https://github.com/holepunchto/b4a.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/holepunchto/b4a/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"brittle": "^1.3.5",
+				"standard": "^16.0.3",
+				"nanobench": "^2.1.1"
+			},
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "mafintosh",
+					"email": "mathiasbuus@gmail.com"
+				},
+				{
+					"name": "kasperisager",
+					"email": "kasperisager@hey.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "standard && brittle test/*.mjs"
+			},
+			"lastModified": 0,
+			"_id": "b4a@1.6.4",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.6.4.tgz",
+				"shasum": "ef1c1422cae5ce6535ec191baeed7567443f36c9",
+				"integrity": "sha512-fpWrvyVHEKyeEvbKZTVOeZF3VSKKWtJxFIxX/jaVPf+cLbGUSitjb49pHLqPV2BUNNZ0LcoeEGfE/YCpyDYHIw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDgtT2vA4OdLDtLosGhjw2fyUsxwVq84W1hMdPeqv3dsAIgQs8OQYp8mJlJIdBAB4d+CD6NgHftu9zlDK06uLnhqeg="
+					}
+				]
+			},
+			"_npmVersion": "9.5.0",
+			"_npmUser": {
+				"name": "kasperisager",
+				"email": "kasperisager@hey.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "d2b742296c96f5683f083f27869ce893a6228316",
+			"browser": {
+				"./index.js": "./browser.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/b4a_1.6.4_1683281685627_0.7866432969081794",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "19.7.0",
+			"contributors": []
+		},
+		"1.7.3": {
+			"name": "b4a",
+			"description": "Bridging the gap between buffers and typed arrays",
+			"version": "1.7.3",
+			"author": {
+				"name": "Holepunch"
+			},
+			"homepage": "https://github.com/holepunchto/b4a#readme",
+			"repository": {
+				"url": "git+https://github.com/holepunchto/b4a.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/holepunchto/b4a/issues"
+			},
+			"devDependencies": {
+				"brittle": "^3.5.2",
+				"prettier": "^3.6.2",
+				"nanobench": "^3.0.0",
+				"prettier-config-holepunch": "^1.0.0"
+			},
+			"peerDependencies": {
+				"react-native-b4a": "*"
+			},
+			"license": "Apache-2.0",
+			"maintainers": [
+				{
+					"name": "mafintosh",
+					"email": "mathiasbuus@gmail.com"
+				},
+				{
+					"name": "kasperisager",
+					"email": "kasperisager@hey.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "prettier . --check",
+				"test": "npm run lint && npm run test:bare && npm run test:node",
+				"test:bare": "bare test.mjs",
+				"test:node": "node test.mjs"
+			},
+			"lastModified": 0,
+			"peerDependenciesMeta": {
+				"react-native-b4a": {
+					"optional": true
+				}
+			},
+			"_id": "b4a@1.7.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.7.3.tgz",
+				"shasum": "24cf7ccda28f5465b66aec2bac69e32809bf112f",
+				"integrity": "sha512-5Q2mfq2WfGuFp3uS//0s6baOJLMoVduPYVeNmDYxu5OUA1/cBfvr2RIS7vi62LdNj/urk1hfmj867I3qt6uZ7Q==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEYCIQDW/RRxch+d50AmZXbAxMECo588EsRDEHPMz0mcuotajAIhAJSPQDhDFIe4cxOoOUkW/c1ibEEWohfPeAnBwDQ0p9wr"
+					}
+				]
+			},
+			"_npmVersion": "11.6.1",
+			"_npmUser": {
+				"name": "kasperisager",
+				"email": "kasperisager@hey.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "f992b867a0ec251b029c5cca6b5eee71ee17a5a6",
+			"exports": {
+				".": {
+					"browser": "./browser.js",
+					"default": "./index.js",
+					"react-native": "./react-native.js"
+				},
+				"./package": "./package.json"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/b4a_1.7.3_1758870181752_0.7763366805812726",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"_nodeVersion": "24.8.0",
+			"contributors": []
+		},
+		"1.0.0": {
+			"name": "b4a",
+			"description": "Bridging the gap between buffers and typed arrays",
+			"version": "1.0.0",
+			"author": {
+				"name": "Kasper Isager Dalsgarð",
+				"email": "kasper@funktionel.co"
+			},
+			"homepage": "https://github.com/hypercore-skunkworks/b4a#readme",
+			"repository": {
+				"url": "git+https://github.com/hypercore-skunkworks/b4a.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/hypercore-skunkworks/b4a/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"brittle": "^1.3.5",
+				"standard": "^16.0.3",
+				"nanobench": "^2.1.1"
+			},
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "mafintosh",
+					"email": "mathiasbuus@gmail.com"
+				},
+				{
+					"name": "kasperisager",
+					"email": "kasperisager@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "standard && brittle test/*.mjs"
+			},
+			"lastModified": 0,
+			"_id": "b4a@1.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.0.0.tgz",
+				"shasum": "aa3b9ba16d6be3f1ea37128f505193bd9d5d270e",
+				"integrity": "sha512-sfonR4GazdyLnIKyAgfsSOu38WforKCTJ12GQc/70Dwx9CfeByiOjAh42xEwZ6imWIgLCH5sbnzaEk72viWIrw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCPlLsH53+RPQ56c8BZO5fHtRgePr7lqG+s4TjRtWwpVgIgZEYehJHAh6qWMqkHe+cN2eWbhknNCuB5A+0SbHwrMk4="
+					}
+				]
+			},
+			"_npmVersion": "8.0.0",
+			"_npmUser": {
+				"name": "kasperisager",
+				"email": "kasperisager@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "8f3e72365977af43e7cfd790bc545736e8075cd9",
+			"browser": {
+				"./index.js": "./browser.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/b4a_1.0.0_1634750500846_0.6145766663845742",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "16.11.1",
+			"contributors": []
+		},
+		"1.0.1": {
+			"name": "b4a",
+			"description": "Bridging the gap between buffers and typed arrays",
+			"version": "1.0.1",
+			"author": {
+				"name": "Kasper Isager Dalsgarð",
+				"email": "kasper@funktionel.co"
+			},
+			"homepage": "https://github.com/hypercore-skunkworks/b4a#readme",
+			"repository": {
+				"url": "git+https://github.com/hypercore-skunkworks/b4a.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/hypercore-skunkworks/b4a/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"brittle": "^1.3.5",
+				"standard": "^16.0.3",
+				"nanobench": "^2.1.1"
+			},
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "mafintosh",
+					"email": "mathiasbuus@gmail.com"
+				},
+				{
+					"name": "kasperisager",
+					"email": "kasperisager@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "standard && brittle test/*.mjs"
+			},
+			"lastModified": 0,
+			"_id": "b4a@1.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.0.1.tgz",
+				"shasum": "01a0fbcb64d4b2947cc1cc5dcf0e9eff5d1f463b",
+				"integrity": "sha512-FNuY5WpUqRNITgg8o9459kvjVrIUA4w9oO7nptPIBsF+zmrqlDZcMP+B42P3d69EopNEyEdejkXn7aiT1WhM0g==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIAY+AR4+5ZYtGnc1LvLDMMUdBvUvxWwX5QGhjLkyHrdtAiEAuL9mWGphv9/9wv/ekyQRg8lKdnaTxPzMI9nLqxZdYtM="
+					}
+				]
+			},
+			"_npmVersion": "8.0.0",
+			"_npmUser": {
+				"name": "kasperisager",
+				"email": "kasperisager@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "60af1c92467512dde14cc1c1d798f30f7c95fa59",
+			"browser": {
+				"./index.js": "./browser.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/b4a_1.0.1_1635154250606_0.04318599385787536",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "16.11.1",
+			"contributors": []
+		},
+		"1.1.0": {
+			"name": "b4a",
+			"description": "Bridging the gap between buffers and typed arrays",
+			"version": "1.1.0",
+			"author": {
+				"name": "Kasper Isager Dalsgarð",
+				"email": "kasper@funktionel.co"
+			},
+			"homepage": "https://github.com/hypercore-skunkworks/b4a#readme",
+			"repository": {
+				"url": "git+https://github.com/hypercore-skunkworks/b4a.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/hypercore-skunkworks/b4a/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"brittle": "^1.3.5",
+				"standard": "^16.0.3",
+				"nanobench": "^2.1.1"
+			},
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "mafintosh",
+					"email": "mathiasbuus@gmail.com"
+				},
+				{
+					"name": "kasperisager",
+					"email": "kasperisager@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "standard && brittle test/*.mjs"
+			},
+			"lastModified": 0,
+			"_id": "b4a@1.1.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.1.0.tgz",
+				"shasum": "62c06cbf2da88f66fd0be1c75b794114222f14ff",
+				"integrity": "sha512-jFyBIqfvniR+iaSbG7EdfqKclZv4ST+O9T4YBybgO1aHm/a6WwF13O0EXNF6PdLwUGZ0xu4myHjw1yq06k105w==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCHoyARqQ5NGG0fnFHIYbnn+LjV6W/6a/vcu34p4qVvDAIgHnaCztOnxbSZfgxldZXVePRNSO+atSmiAnRI+kEKwVI="
+					}
+				]
+			},
+			"_npmVersion": "8.1.0",
+			"_npmUser": {
+				"name": "kasperisager",
+				"email": "kasperisager@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "85b366740066e3bde2c547d9e9e7c4f6ce2524c1",
+			"browser": {
+				"./index.js": "./browser.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/b4a_1.1.0_1635507424991_0.9060016987409252",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "17.0.1",
+			"contributors": []
+		},
+		"1.1.1": {
+			"name": "b4a",
+			"description": "Bridging the gap between buffers and typed arrays",
+			"version": "1.1.1",
+			"author": {
+				"name": "Kasper Isager Dalsgarð",
+				"email": "kasper@funktionel.co"
+			},
+			"homepage": "https://github.com/hypercore-skunkworks/b4a#readme",
+			"repository": {
+				"url": "git+https://github.com/hypercore-skunkworks/b4a.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/hypercore-skunkworks/b4a/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"brittle": "^1.3.5",
+				"standard": "^16.0.3",
+				"nanobench": "^2.1.1"
+			},
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "mafintosh",
+					"email": "mathiasbuus@gmail.com"
+				},
+				{
+					"name": "kasperisager",
+					"email": "kasperisager@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "standard && brittle test/*.mjs"
+			},
+			"lastModified": 0,
+			"_id": "b4a@1.1.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.1.1.tgz",
+				"shasum": "c50c0ae687c99f001f55c6684b60596171efc1d6",
+				"integrity": "sha512-f2d+E1G7eiejlPpPe6RPBaW5tnbI0rsHp7ZyN3nr+kvwWGVnUwh7Kr5P+NtJ2B7+lZe0B1vcWz4HNnvdG1N9eg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIHastDm/Pilf3vu8WkQd6DSeY5DJwvw001Pr2zruZi0xAiBIG37z81TZOS3QcEpIRciUKlEfQqWX49d2DBdciqjpGA=="
+					}
+				]
+			},
+			"_npmVersion": "8.1.0",
+			"_npmUser": {
+				"name": "kasperisager",
+				"email": "kasperisager@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "2c07aa978f8e87dd96c3fdb9bf463811047e92cb",
+			"browser": {
+				"./index.js": "./browser.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/b4a_1.1.1_1635949925907_0.861270538800655",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "17.0.1",
+			"contributors": []
+		},
+		"1.2.0": {
+			"name": "b4a",
+			"description": "Bridging the gap between buffers and typed arrays",
+			"version": "1.2.0",
+			"author": {
+				"name": "Kasper Isager Dalsgarð",
+				"email": "kasper@funktionel.co"
+			},
+			"homepage": "https://github.com/hypercore-skunkworks/b4a#readme",
+			"repository": {
+				"url": "git+https://github.com/hypercore-skunkworks/b4a.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/hypercore-skunkworks/b4a/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"brittle": "^1.3.5",
+				"standard": "^16.0.3",
+				"nanobench": "^2.1.1"
+			},
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "mafintosh",
+					"email": "mathiasbuus@gmail.com"
+				},
+				{
+					"name": "kasperisager",
+					"email": "kasperisager@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "standard && brittle test/*.mjs"
+			},
+			"lastModified": 0,
+			"_id": "b4a@1.2.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.2.0.tgz",
+				"shasum": "face62a078b98814e0275c8f3f81453d47f7c962",
+				"integrity": "sha512-pBDXa0oi0UDJn5Hz1nzXgrNeVDN5Vqoy/DcPCkKSHUwLuDUeaMqFpIgJGMaehpGt1vUOhJOt8OFWvj0f8Zxksg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIDJe25399bKhSag0K6DL2DmR54ph/L8oJVVE/k4Urn1rAiEAl2NYIPJ4MrlD6pFHnbTc9W+TZ8ZdTUeBrypoKTdqIAY="
+					}
+				]
+			},
+			"_npmVersion": "8.1.0",
+			"_npmUser": {
+				"name": "kasperisager",
+				"email": "kasperisager@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "72ad87b8f698849a21907b22c4b38b3f8cc38014",
+			"browser": {
+				"./index.js": "./browser.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/b4a_1.2.0_1637784253731_0.6198966922064963",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "17.0.1",
+			"contributors": []
+		}
+	},
+	"time": {
+		"1.6.5": "2024-02-06T11:53:10.664Z",
+		"1.7.4": "2026-02-13T08:57:05.283Z",
+		"1.6.6": "2024-02-06T11:55:37.046Z",
+		"1.7.5": "2026-02-17T09:25:12.821Z",
+		"1.6.7": "2024-09-25T11:31:48.667Z",
+		"0.0.0": "2021-10-20T13:50:01.202Z",
+		"modified": "2026-04-30T19:49:39.949Z",
+		"created": "2021-10-20T13:50:01.053Z",
+		"1.1.2": "2021-11-10T13:35:44.942Z",
+		"1.3.0": "2021-11-24T20:30:56.096Z",
+		"1.1.3": "2021-11-22T10:29:38.465Z",
+		"1.3.1": "2021-11-25T15:03:36.139Z",
+		"1.4.0": "2022-04-22T10:33:42.715Z",
+		"1.1.4": "2021-11-22T19:58:06.049Z",
+		"1.5.0": "2022-04-22T11:44:49.226Z",
+		"1.5.1": "2022-05-20T12:02:57.125Z",
+		"1.6.0": "2022-07-27T08:58:41.191Z",
+		"1.5.2": "2022-05-20T12:46:30.044Z",
+		"1.6.1": "2022-10-18T13:31:58.314Z",
+		"1.7.0": "2025-09-10T11:28:36.275Z",
+		"1.5.3": "2022-05-20T12:59:18.835Z",
+		"1.6.2": "2023-03-09T09:48:37.714Z",
+		"1.7.1": "2025-09-11T07:58:29.008Z",
+		"1.8.0": "2026-02-19T18:51:53.683Z",
+		"1.6.3": "2023-03-17T13:18:25.120Z",
+		"1.7.2": "2025-09-23T14:26:34.916Z",
+		"1.8.1": "2026-04-30T19:49:39.694Z",
+		"1.6.4": "2023-05-05T10:14:45.798Z",
+		"1.7.3": "2025-09-26T07:03:01.955Z",
+		"1.0.0": "2021-10-20T17:21:41.037Z",
+		"1.0.1": "2021-10-25T09:30:50.791Z",
+		"1.1.0": "2021-10-29T11:37:05.145Z",
+		"1.1.1": "2021-11-03T14:32:06.050Z",
+		"1.2.0": "2021-11-24T20:04:13.889Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "1.8.1"
+	},
+	"_uplinks": {
+		"artifactory-sabadell": {
+			"etag": "3f873e43db17f074af5f1fd9b0e3a234af8f1a3f",
+			"fetched": 1782459826847
+		}
+	},
+	"_distfiles": {
+		"b4a-1.6.5.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.6.5.tgz",
+			"sha": "fc4bb8d34b81449f7c5266ce2239a711af0cbca9",
+			"registry": "artifactory-sabadell"
+		},
+		"b4a-1.7.4.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.7.4.tgz",
+			"sha": "0fdcb68cbc0224d267e3d0519c66419efc3416e2",
+			"registry": "artifactory-sabadell"
+		},
+		"b4a-1.6.6.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.6.6.tgz",
+			"sha": "a4cc349a3851987c3c4ac2d7785c18744f6da9ba",
+			"registry": "artifactory-sabadell"
+		},
+		"b4a-1.7.5.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.7.5.tgz",
+			"sha": "573e93bf2664de8779069ef736615c1c63ec1b74",
+			"registry": "artifactory-sabadell"
+		},
+		"b4a-1.6.7.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.6.7.tgz",
+			"sha": "a99587d4ebbfbd5a6e3b21bdb5d5fa385767abe4",
+			"registry": "artifactory-sabadell"
+		},
+		"b4a-0.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-0.0.0.tgz",
+			"sha": "30a474e9d5a71ff37f19ee68da35bf0381aa1183",
+			"registry": "artifactory-sabadell"
+		},
+		"b4a-1.1.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.1.2.tgz",
+			"sha": "9af795775e01c7ce1c190ca41884255e3aca7e32",
+			"registry": "artifactory-sabadell"
+		},
+		"b4a-1.3.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.3.0.tgz",
+			"sha": "5650e2ba699cbefcca17d2bdaa4a4987a5402144",
+			"registry": "artifactory-sabadell"
+		},
+		"b4a-1.1.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.1.3.tgz",
+			"sha": "c2b3b09771873026c6190cd01f96a2b5651000ae",
+			"registry": "artifactory-sabadell"
+		},
+		"b4a-1.3.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.3.1.tgz",
+			"sha": "5ead1402bd4a2dcfea35cc83928815d53315ff32",
+			"registry": "artifactory-sabadell"
+		},
+		"b4a-1.4.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.4.0.tgz",
+			"sha": "b71264785f5fd69848453399dbd1279af33a2d00",
+			"registry": "artifactory-sabadell"
+		},
+		"b4a-1.1.4.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.1.4.tgz",
+			"sha": "1fb4a659d2958d2f6929d1e257389f637f94b3ef",
+			"registry": "artifactory-sabadell"
+		},
+		"b4a-1.5.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.5.0.tgz",
+			"sha": "cb071ca8f4e6f1eaf7d269c9ccc8eea21a914d00",
+			"registry": "artifactory-sabadell"
+		},
+		"b4a-1.5.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.5.1.tgz",
+			"sha": "7999832de7b262da50ca1a402b7e68853af81416",
+			"registry": "artifactory-sabadell"
+		},
+		"b4a-1.6.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.6.0.tgz",
+			"sha": "5430a9cac1af388910dd1a1c1aa9d3a0a796ed68",
+			"registry": "artifactory-sabadell"
+		},
+		"b4a-1.5.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.5.2.tgz",
+			"sha": "2f87e4a3dde4bb5b86c1553f3f29d5901b4ec09f",
+			"registry": "artifactory-sabadell"
+		},
+		"b4a-1.6.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.6.1.tgz",
+			"sha": "9effac93a469a868d024e16fd77162c653544cbd",
+			"registry": "artifactory-sabadell"
+		},
+		"b4a-1.7.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.7.0.tgz",
+			"sha": "d3c1f72f68be612020c15702d0a6f0e8bc0b65e5",
+			"registry": "artifactory-sabadell"
+		},
+		"b4a-1.5.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.5.3.tgz",
+			"sha": "56293b5607aeda3fd81c481e516e9f103fc88341",
+			"registry": "artifactory-sabadell"
+		},
+		"b4a-1.6.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.6.2.tgz",
+			"sha": "d3dca0ac7da794aa13093e92dd57cfe61d58b07e",
+			"registry": "artifactory-sabadell"
+		},
+		"b4a-1.7.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.7.1.tgz",
+			"sha": "6fd4ec2fb33ba7a4ff341a2869bbfc88a6e57850",
+			"registry": "artifactory-sabadell"
+		},
+		"b4a-1.8.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.8.0.tgz",
+			"sha": "1ca3ba0edc9469aaabef5647e769a83d50180b1a",
+			"registry": "artifactory-sabadell"
+		},
+		"b4a-1.6.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.6.3.tgz",
+			"sha": "cce6e8a2f0d0774e5fe8062086827e979970266d",
+			"registry": "artifactory-sabadell"
+		},
+		"b4a-1.7.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.7.2.tgz",
+			"sha": "aefbe7aaf52fe53c3270f87cf72c33c61bc3174b",
+			"registry": "artifactory-sabadell"
+		},
+		"b4a-1.8.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.8.1.tgz",
+			"sha": "7f16334ca80127aeb26064a28841acbf174840a4",
+			"registry": "artifactory-sabadell"
+		},
+		"b4a-1.6.4.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.6.4.tgz",
+			"sha": "ef1c1422cae5ce6535ec191baeed7567443f36c9",
+			"registry": "artifactory-sabadell"
+		},
+		"b4a-1.7.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.7.3.tgz",
+			"sha": "24cf7ccda28f5465b66aec2bac69e32809bf112f",
+			"registry": "artifactory-sabadell"
+		},
+		"b4a-1.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.0.0.tgz",
+			"sha": "aa3b9ba16d6be3f1ea37128f505193bd9d5d270e",
+			"registry": "artifactory-sabadell"
+		},
+		"b4a-1.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.0.1.tgz",
+			"sha": "01a0fbcb64d4b2947cc1cc5dcf0e9eff5d1f463b",
+			"registry": "artifactory-sabadell"
+		},
+		"b4a-1.1.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.1.0.tgz",
+			"sha": "62c06cbf2da88f66fd0be1c75b794114222f14ff",
+			"registry": "artifactory-sabadell"
+		},
+		"b4a-1.1.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.1.1.tgz",
+			"sha": "c50c0ae687c99f001f55c6684b60596171efc1d6",
+			"registry": "artifactory-sabadell"
+		},
+		"b4a-1.2.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/b4a/-/b4a-1.2.0.tgz",
+			"sha": "face62a078b98814e0275c8f3f81453d47f7c962",
+			"registry": "artifactory-sabadell"
+		}
+	},
+	"_attachments": {},
+	"_rev": "1-bbc0348a0c9b0a20",
+	"_id": "b4a",
+	"readme": "# Buffer for Array\n\nBuffer for Array (B4A) provides a set of functions for bridging the gap between the Node.js `Buffer` class and the `Uint8Array` class. A browser compatibility layer is also included, making it possible to use B4A in both Node.js and browsers without having to worry about whether you're dealing with buffers or typed arrays.\n\n## Installation\n\n```sh\nnpm i b4a\n```\n\n### React Native\n\nWhen imported from React Native `b4a` will make use of `react-native-b4a` for optimised buffer operations when available. All you need to do is install it:\n\n```sh\nnpm i react-native-b4a\n```\n\n## API\n\n#### `b4a.isBuffer(value)`\n\nSee https://nodejs.org/api/buffer.html#static-method-bufferisbufferobj\n\nThis will also return `true` when passed a `Uint8Array`.\n\n#### `b4a.isEncoding(encoding)`\n\nSee https://nodejs.org/api/buffer.html#static-method-bufferisencodingencoding\n\n#### `b4a.alloc(size[, fill[, encoding]])`\n\nSee https://nodejs.org/api/buffer.html#static-method-bufferallocsize-fill-encoding\n\n#### `b4a.allocUnsafe(size)`\n\nSee https://nodejs.org/api/buffer.html#static-method-bufferallocunsafesize\n\n#### `b4a.allocUnsafeSlow(size)`\n\nSee https://nodejs.org/api/buffer.html#static-method-bufferallocunsafeslowsize\n\n#### `b4a.byteLength(string)`\n\nSee https://nodejs.org/api/buffer.html#static-method-bufferbytelengthstring-encoding\n\n#### `b4a.compare(buf1, buf2)`\n\nSee https://nodejs.org/api/buffer.html#static-method-buffercomparebuf1-buf2\n\n#### `b4a.concat(buffers[, totalLength])`\n\nSee https://nodejs.org/api/buffer.html#static-method-bufferconcatlist-totallength\n\n#### `b4a.copy(source, target[, targetStart[, sourceStart[, sourceEnd]]])`\n\nSee https://nodejs.org/api/buffer.html#bufcopytarget-targetstart-sourcestart-sourceend\n\n#### `b4a.equals(buf1, buf2)`\n\nSee https://nodejs.org/api/buffer.html#bufequalsotherbuffer\n\n#### `b4a.fill(buffer, value[, offset[, end]][, encoding])`\n\nSee https://nodejs.org/api/buffer.html#buffillvalue-offset-end-encoding\n\n#### `b4a.from(array)`\n\nSee https://nodejs.org/api/buffer.html#static-method-bufferfromarray\n\n#### `b4a.from(arrayBuffer[, byteOffset[, length]])`\n\nSee https://nodejs.org/api/buffer.html#static-method-bufferfromarraybuffer-byteoffset-length\n\n#### `b4a.from(buffer)`\n\nSee https://nodejs.org/api/buffer.html#static-method-bufferfrombuffer\n\n#### `b4a.from(string[, encoding])`\n\nSee https://nodejs.org/api/buffer.html#static-method-bufferfromstring-encoding\n\n#### `b4a.includes(buffer, value[, byteOffset][, encoding])`\n\nSee https://nodejs.org/api/buffer.html#bufincludesvalue-byteoffset-encoding\n\n#### `b4a.indexOf(buffer, value[, byteOffset][, encoding])`\n\nSee https://nodejs.org/api/buffer.html#bufindexofvalue-byteoffset-encoding\n\n#### `b4a.lastIndexOf(buffer, value[, byteOffset][, encoding])`\n\nSee https://nodejs.org/api/buffer.html#buflastindexofvalue-byteoffset-encoding\n\n#### `b4a.swap16(buffer)`\n\nSee https://nodejs.org/api/buffer.html#bufswap16\n\n#### `b4a.swap32(buffer)`\n\nSee https://nodejs.org/api/buffer.html#bufswap32\n\n#### `b4a.swap64(buffer)`\n\nSee https://nodejs.org/api/buffer.html#bufswap64\n\n#### `b4a.toBuffer(buffer)`\n\nConvert a buffer to its canonical representation. In Node.js, the canonical representation is a `Buffer`. In the browser, the canonical representation is a `Uint8Array`.\n\n#### `b4a.toString(buffer, [encoding[, start[, end]]])`\n\nSee https://nodejs.org/api/buffer.html#buftostringencoding-start-end\n\n#### `b4a.write(buffer, string[, offset[, length]][, encoding])`\n\nSee https://nodejs.org/api/buffer.html#bufwritestring-offset-length-encoding\n\n#### `b4a.writeDoubleLE(buffer, value[, offset])`\n\nSee https://nodejs.org/api/buffer.html#bufwritedoublelevalue-offset\n\n#### `b4a.writeFloatLE(buffer, value[, offset])`\n\nSee https://nodejs.org/api/buffer.html#bufwritefloatlevalue-offset\n\n#### `b4a.writeUInt32LE(buffer, value[, offset])`\n\nhttps://nodejs.org/api/buffer.html#bufwriteuint32levalue-offset\n\n#### `b4a.writeInt32LE(buffer, value[, offset])`\n\nSee https://nodejs.org/api/buffer.html#bufwriteint32levalue-offset\n\n#### `b4a.readDoubleLE(buffer[, offset])`\n\nSee https://nodejs.org/api/buffer.html#bufreaddoubleleoffset\n\n#### `b4a.readFloatLE(buffer[, offset])`\n\nSee https://nodejs.org/api/buffer.html#bufreadfloatleoffset\n\n#### `b4a.readUInt32LE(buffer[, offset])`\n\nSee https://nodejs.org/api/buffer.html#bufreaduint32leoffset\n\n#### `b4a.readInt32LE(buffer[, offset])`\n\nSee https://nodejs.org/api/buffer.html#bufreadint32leoffset\n\n## License\n\nApache 2.0"
+}

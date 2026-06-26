@@ -1,0 +1,2171 @@
+{
+	"name": "y18n",
+	"versions": {
+		"2.0.0": {
+			"name": "y18n",
+			"description": "the bare-bones internationalization library used by yargs",
+			"version": "2.0.0",
+			"author": {
+				"name": "Ben Coe",
+				"email": "ben@npmjs.com"
+			},
+			"homepage": "https://github.com/bcoe/y18n",
+			"repository": {
+				"type": "git",
+				"url": "git+ssh://git@github.com/bcoe/y18n.git"
+			},
+			"bugs": {
+				"url": "https://github.com/bcoe/y18n/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"chai": "^3.2.0",
+				"coveralls": "^2.11.3",
+				"mocha": "^2.2.5",
+				"nyc": "^3.0.1",
+				"rimraf": "^2.4.2",
+				"standard": "^4.5.4"
+			},
+			"keywords": [
+				"i18n",
+				"internationalization",
+				"yargs"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "bcoe",
+					"email": "ben@npmjs.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"pretest": "standard",
+				"test": "nyc mocha",
+				"coverage": "nyc report --reporter=text-lcov | coveralls"
+			},
+			"lastModified": 0,
+			"_id": "y18n@2.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/y18n/-/y18n-2.0.0.tgz",
+				"shasum": "c4bc87a9add7962f72d208f8d04660abd774e4de",
+				"integrity": "sha512-pq9/O2K/Rdv5NPmMGwG17e5grO3gWSNrkzMY0XzvfIubvskV+uDOkHUlAA/AsrsxpWZ2rK9JsQmTULe7nWsDPw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIFsBhZSW+2Xpr9QJS6vWKTvPUbBChADmL2bSCcxdcMSVAiBusp+99+6whTw/3kO0D4ITpB/Ti9ufq/2k3tarnt12Cw=="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "2.13.2",
+			"_npmUser": {
+				"name": "bcoe",
+				"email": "ben@npmjs.com"
+			},
+			"gitHead": "17c6b1146fc008e4e95645105f1733210733e786",
+			"_shasum": "c4bc87a9add7962f72d208f8d04660abd774e4de",
+			"_nodeVersion": "2.0.2",
+			"contributors": []
+		},
+		"5.0.7": {
+			"name": "y18n",
+			"description": "the bare-bones internationalization library used by yargs",
+			"version": "5.0.7",
+			"author": {
+				"name": "Ben Coe",
+				"email": "bencoe@gmail.com"
+			},
+			"homepage": "https://github.com/yargs/y18n",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/yargs/y18n.git"
+			},
+			"bugs": {
+				"url": "https://github.com/yargs/y18n/issues"
+			},
+			"engines": {
+				"node": ">=10"
+			},
+			"main": "./build/index.cjs",
+			"devDependencies": {
+				"@types/node": "^14.6.4",
+				"@wessberg/rollup-plugin-ts": "^1.3.1",
+				"c8": "^7.3.0",
+				"chai": "^4.0.1",
+				"cross-env": "^7.0.2",
+				"gts": "^3.0.0",
+				"mocha": "^8.0.0",
+				"rimraf": "^3.0.2",
+				"rollup": "^2.26.10",
+				"standardx": "^7.0.0",
+				"ts-transform-default-export": "^1.0.2",
+				"typescript": "^4.0.0"
+			},
+			"keywords": [
+				"i18n",
+				"internationalization",
+				"yargs"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "bcoe",
+					"email": "bencoe@gmail.com"
+				},
+				{
+					"name": "nexdrew",
+					"email": "andrewbgoode@gmail.com"
+				},
+				{
+					"name": "oss-bot",
+					"email": "bencoe+oss-bot@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"check": "standardx **/*.ts **/*.cjs **/*.mjs",
+				"fix": "standardx --fix **/*.ts **/*.cjs **/*.mjs",
+				"pretest": "rimraf build && tsc -p tsconfig.test.json && cross-env NODE_ENV=test npm run build:cjs",
+				"test": "c8 --reporter=text --reporter=html mocha test/*.cjs",
+				"test:esm": "c8 --reporter=text --reporter=html mocha test/esm/*.mjs",
+				"posttest": "npm run check",
+				"coverage": "c8 report --check-coverage",
+				"precompile": "rimraf build",
+				"compile": "tsc",
+				"postcompile": "npm run build:cjs",
+				"build:cjs": "rollup -c",
+				"prepare": "npm run compile"
+			},
+			"lastModified": 0,
+			"_id": "y18n@5.0.7",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/y18n/-/y18n-5.0.7.tgz",
+				"shasum": "0c514aba53fc40e2db911aeb8b51566a3374efe7",
+				"integrity": "sha512-oOhslryvNcA1lB9WYr+M6TMyLkLg81Dgmyb48ZDU0lvR+5bmNDTMz7iobM1QXooaLhbbrcHrlNaABhI6Vo6StQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQCeslun2xOuyVVDbxuvBix42mRH0+soZm77UUQuc6KhQAIhAMzf50oOIs6UzP0UUObiW/draOZ2RguW4/++G9lmb5Pc"
+					}
+				]
+			},
+			"_npmVersion": "6.14.11",
+			"_npmUser": {
+				"name": "oss-bot",
+				"email": "bencoe+oss-bot@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "76718909722fd1765f85ba4d314f1b2ebd8b1239",
+			"exports": {
+				".": [
+					{
+						"import": "./index.mjs",
+						"require": "./build/index.cjs"
+					},
+					"./build/index.cjs"
+				]
+			},
+			"module": "./build/lib/index.js",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/y18n_5.0.7_1617760002805_0.7333351141980393"
+			},
+			"type": "module",
+			"standardx": {
+				"ignore": [
+					"build"
+				]
+			},
+			"_nodeVersion": "14.16.0",
+			"contributors": []
+		},
+		"5.0.8": {
+			"name": "y18n",
+			"description": "the bare-bones internationalization library used by yargs",
+			"version": "5.0.8",
+			"author": {
+				"name": "Ben Coe",
+				"email": "bencoe@gmail.com"
+			},
+			"homepage": "https://github.com/yargs/y18n",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/yargs/y18n.git"
+			},
+			"bugs": {
+				"url": "https://github.com/yargs/y18n/issues"
+			},
+			"engines": {
+				"node": ">=10"
+			},
+			"main": "./build/index.cjs",
+			"devDependencies": {
+				"@types/node": "^14.6.4",
+				"@wessberg/rollup-plugin-ts": "^1.3.1",
+				"c8": "^7.3.0",
+				"chai": "^4.0.1",
+				"cross-env": "^7.0.2",
+				"gts": "^3.0.0",
+				"mocha": "^8.0.0",
+				"rimraf": "^3.0.2",
+				"rollup": "^2.26.10",
+				"standardx": "^7.0.0",
+				"ts-transform-default-export": "^1.0.2",
+				"typescript": "^4.0.0"
+			},
+			"keywords": [
+				"i18n",
+				"internationalization",
+				"yargs"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "bcoe",
+					"email": "bencoe@gmail.com"
+				},
+				{
+					"name": "nexdrew",
+					"email": "andrewbgoode@gmail.com"
+				},
+				{
+					"name": "oss-bot",
+					"email": "bencoe+oss-bot@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"check": "standardx **/*.ts **/*.cjs **/*.mjs",
+				"fix": "standardx --fix **/*.ts **/*.cjs **/*.mjs",
+				"pretest": "rimraf build && tsc -p tsconfig.test.json && cross-env NODE_ENV=test npm run build:cjs",
+				"test": "c8 --reporter=text --reporter=html mocha test/*.cjs",
+				"test:esm": "c8 --reporter=text --reporter=html mocha test/esm/*.mjs",
+				"posttest": "npm run check",
+				"coverage": "c8 report --check-coverage",
+				"precompile": "rimraf build",
+				"compile": "tsc",
+				"postcompile": "npm run build:cjs",
+				"build:cjs": "rollup -c",
+				"prepare": "npm run compile"
+			},
+			"lastModified": 0,
+			"_id": "y18n@5.0.8",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/y18n/-/y18n-5.0.8.tgz",
+				"shasum": "7f4934d0f7ca8c56f95314939ddcd2dd91ce1d55",
+				"integrity": "sha512-0pfFzegeDWJHJIAmTLRP2DwHjdF5s7jo9tuztdQxAhINCdvS+3nGINqPd00AphqJR/0LhANUS6/+7SCb98YOfA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIGbHwqJFZjnz9AWpeEVMOweV2g8TS4PkQz2LPe9gUugEAiBPhTbPW09lSJKJ92lpEuiLudAZLZIMKiExkZkcVjyDjw=="
+					}
+				]
+			},
+			"_npmVersion": "6.14.11",
+			"_npmUser": {
+				"name": "oss-bot",
+				"email": "bencoe+oss-bot@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "e2900d1cdf313663bba012f20737385a42c66b87",
+			"exports": {
+				".": [
+					{
+						"import": "./index.mjs",
+						"require": "./build/index.cjs"
+					},
+					"./build/index.cjs"
+				]
+			},
+			"module": "./build/lib/index.js",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/y18n_5.0.8_1617821853833_0.037626956652615284"
+			},
+			"type": "module",
+			"standardx": {
+				"ignore": [
+					"build"
+				]
+			},
+			"_nodeVersion": "14.16.0",
+			"contributors": []
+		},
+		"6.0.0-alpha.0": {
+			"name": "y18n",
+			"description": "the bare-bones internationalization library used by yargs",
+			"version": "6.0.0-alpha.0",
+			"author": {
+				"name": "Ben Coe",
+				"email": "bencoe@gmail.com"
+			},
+			"homepage": "https://github.com/yargs/y18n",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/yargs/y18n.git"
+			},
+			"bugs": {
+				"url": "https://github.com/yargs/y18n/issues"
+			},
+			"engines": {
+				"node": ">=12"
+			},
+			"main": "./build/index.cjs",
+			"devDependencies": {
+				"@types/node": "^14.6.4",
+				"@wessberg/rollup-plugin-ts": "^1.3.1",
+				"c8": "^7.3.0",
+				"chai": "^4.0.1",
+				"cross-env": "^7.0.2",
+				"gts": "^2.0.2",
+				"mocha": "^8.0.0",
+				"rimraf": "^3.0.2",
+				"rollup": "^2.26.10",
+				"standardx": "^5.0.0",
+				"ts-transform-default-export": "^1.0.2",
+				"typescript": "^4.0.0"
+			},
+			"keywords": [
+				"i18n",
+				"internationalization",
+				"yargs"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "bcoe",
+					"email": "bencoe@gmail.com"
+				},
+				{
+					"name": "nexdrew",
+					"email": "andrewbgoode@gmail.com"
+				},
+				{
+					"name": "oss-bot",
+					"email": "bencoe+oss-bot@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"check": "standardx '**/*.ts' '**/*.cjs' '**/*.mjs'",
+				"fix": "standardx --fix '**/*.ts' '**/*.cjs' '**/*.mjs'",
+				"pretest": "rimraf build && tsc -p tsconfig.test.json && cross-env NODE_ENV=test npm run build:cjs",
+				"test": "c8 --reporter=text --reporter=html mocha test/*.cjs",
+				"test:esm": "c8 --reporter=text --reporter=html mocha test/esm/*.mjs",
+				"posttest": "npm run check",
+				"coverage": "c8 report --check-coverage",
+				"precompile": "rimraf build",
+				"compile": "tsc",
+				"postcompile": "npm run build:cjs",
+				"build:cjs": "rollup -c",
+				"prepare": "npm run compile"
+			},
+			"lastModified": 0,
+			"_id": "y18n@6.0.0-alpha.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/y18n/-/y18n-6.0.0-alpha.0.tgz",
+				"shasum": "eccd8e2176c2bf786dee53c4881cd88e3e4cbfc5",
+				"integrity": "sha512-J9CO+Qo98a30YwPMgXt1IetZS4823Y+KzBEWHPQYaO2sWcwtvVascTF0eNdUgU0Me3Efl36PnCygmVPdzqQmJg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCFzpI0NrxcPps5KHCsYn923+7lHs/T1OqQTYvQ3HRsagIgQr8hOuwwjwbo7FqAKcWwjyGi2et8NpeEF94qX8ydZyw="
+					}
+				]
+			},
+			"_npmVersion": "6.14.6",
+			"_npmUser": {
+				"name": "oss-bot",
+				"email": "bencoe+oss-bot@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "9c8a079a2917b71dd55086233f4272da521fc600",
+			"exports": {
+				"import": "./index.mjs",
+				"require": "./build/index.cjs"
+			},
+			"module": "./build/lib/index.js",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/y18n_6.0.0-alpha.0_1599870005446_0.2345770096577866"
+			},
+			"readmeFilename": "README.md",
+			"type": "module",
+			"standardx": {
+				"ignore": [
+					"build"
+				]
+			},
+			"_nodeVersion": "12.18.3",
+			"contributors": []
+		},
+		"4.0.2": {
+			"name": "y18n",
+			"description": "the bare-bones internationalization library used by yargs",
+			"version": "4.0.2",
+			"author": {
+				"name": "Ben Coe",
+				"email": "bencoe@gmail.com"
+			},
+			"homepage": "https://github.com/yargs/y18n",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/yargs/y18n.git"
+			},
+			"bugs": {
+				"url": "https://github.com/yargs/y18n/issues"
+			},
+			"engines": {
+				"node": ">=10"
+			},
+			"main": "./build/index.cjs",
+			"devDependencies": {
+				"@types/node": "^14.6.4",
+				"@wessberg/rollup-plugin-ts": "^1.3.1",
+				"c8": "^7.3.0",
+				"chai": "^4.0.1",
+				"cross-env": "^7.0.2",
+				"gts": "^3.0.0",
+				"mocha": "^8.0.0",
+				"rimraf": "^3.0.2",
+				"rollup": "^2.26.10",
+				"standardx": "^5.0.0",
+				"ts-transform-default-export": "^1.0.2",
+				"typescript": "^4.0.0"
+			},
+			"keywords": [
+				"i18n",
+				"internationalization",
+				"yargs"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "bcoe",
+					"email": "bencoe@gmail.com"
+				},
+				{
+					"name": "nexdrew",
+					"email": "andrewbgoode@gmail.com"
+				},
+				{
+					"name": "oss-bot",
+					"email": "bencoe+oss-bot@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"check": "standardx '**/*.ts' '**/*.cjs' '**/*.mjs'",
+				"fix": "standardx --fix '**/*.ts' '**/*.cjs' '**/*.mjs'",
+				"pretest": "rimraf build && tsc -p tsconfig.test.json && cross-env NODE_ENV=test npm run build:cjs",
+				"test": "c8 --reporter=text --reporter=html mocha test/*.cjs",
+				"test:esm": "c8 --reporter=text --reporter=html mocha test/esm/*.mjs",
+				"posttest": "npm run check",
+				"coverage": "c8 report --check-coverage",
+				"precompile": "rimraf build",
+				"compile": "tsc",
+				"postcompile": "npm run build:cjs",
+				"build:cjs": "rollup -c",
+				"prepare": "npm run compile"
+			},
+			"lastModified": 0,
+			"_id": "y18n@4.0.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/y18n/-/y18n-4.0.2.tgz",
+				"shasum": "c504495ba9b59230dd60226d1dd89c3c0a1b745e",
+				"integrity": "sha512-DnBDwcL54b5xWMM/7RfFg4xs5amYxq2ot49aUfLjQSAracXkGvlZq0txzqr3Pa6Q0ayuCxBcwTzrPUScKY0O8w==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIHNRSpQmiqU2CH1vd8F3M5fbFSaK3PWHPEqw0ItgRrv3AiEAqXJON/ZV+luaoLjsSNd4VerwEeUSTEjVLZcbR9mpbT8="
+					}
+				]
+			},
+			"_npmVersion": "6.14.11",
+			"_npmUser": {
+				"name": "oss-bot",
+				"email": "bencoe+oss-bot@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "bcfdd05cf8405593cd3261e25fde4976efd8672f",
+			"exports": {
+				".": [
+					{
+						"import": "./index.mjs",
+						"require": "./build/index.cjs"
+					},
+					"./build/index.cjs"
+				]
+			},
+			"module": "./build/lib/index.js",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/y18n_4.0.2_1617759904116_0.11983796019170101"
+			},
+			"readmeFilename": "README.md",
+			"type": "module",
+			"standardx": {
+				"ignore": [
+					"build"
+				]
+			},
+			"_nodeVersion": "10.24.0",
+			"contributors": []
+		},
+		"4.0.3": {
+			"name": "y18n",
+			"description": "the bare-bones internationalization library used by yargs",
+			"version": "4.0.3",
+			"author": {
+				"name": "Ben Coe",
+				"email": "ben@npmjs.com"
+			},
+			"homepage": "https://github.com/yargs/y18n",
+			"repository": {
+				"type": "git",
+				"url": "git+ssh://git@github.com/yargs/y18n.git"
+			},
+			"bugs": {
+				"url": "https://github.com/yargs/y18n/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"chai": "^4.0.1",
+				"coveralls": "^3.0.0",
+				"mocha": "^4.0.1",
+				"nyc": "^11.0.1",
+				"rimraf": "^2.5.0",
+				"standard": "^10.0.0-beta.0",
+				"standard-version": "^4.2.0"
+			},
+			"keywords": [
+				"i18n",
+				"internationalization",
+				"yargs"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "bcoe",
+					"email": "bencoe@gmail.com"
+				},
+				{
+					"name": "nexdrew",
+					"email": "andrewbgoode@gmail.com"
+				},
+				{
+					"name": "oss-bot",
+					"email": "bencoe+oss-bot@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"pretest": "standard",
+				"test": "nyc mocha",
+				"coverage": "nyc report --reporter=text-lcov | coveralls",
+				"release": "standard-version"
+			},
+			"lastModified": 0,
+			"_id": "y18n@4.0.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/y18n/-/y18n-4.0.3.tgz",
+				"shasum": "b5f259c82cd6e336921efd7bfd8bf560de9eeedf",
+				"integrity": "sha512-JKhqTOwSrqNA1NY5lSztJ1GrBiUodLMmIZuLiDaMRJ+itFd+ABVE8XBjOvIWL+rSqNDC74LCSFmlb/U4UZ4hJQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDnkHHWjnL+X5hHbt7TnnNsW9bcnUjymQjk6IXCEasnKwIhAK4hlGypSf7vIAiZFz8Hv0h+v3IxRqN4WzjTi6whxXyY"
+					}
+				]
+			},
+			"_npmVersion": "6.14.11",
+			"_npmUser": {
+				"name": "oss-bot",
+				"email": "bencoe+oss-bot@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "0aa97c508ea31efadd2a27f98fed6873eefc963e",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/y18n_4.0.3_1617818723912_0.7126177310246005"
+			},
+			"readmeFilename": "README.md",
+			"_nodeVersion": "12.21.0",
+			"contributors": []
+		},
+		"4.0.0": {
+			"name": "y18n",
+			"description": "the bare-bones internationalization library used by yargs",
+			"version": "4.0.0",
+			"author": {
+				"name": "Ben Coe",
+				"email": "ben@npmjs.com"
+			},
+			"homepage": "https://github.com/yargs/y18n",
+			"repository": {
+				"type": "git",
+				"url": "git+ssh://git@github.com/yargs/y18n.git"
+			},
+			"bugs": {
+				"url": "https://github.com/yargs/y18n/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"chai": "^4.0.1",
+				"coveralls": "^3.0.0",
+				"mocha": "^4.0.1",
+				"nyc": "^11.0.1",
+				"rimraf": "^2.5.0",
+				"standard": "^10.0.0-beta.0",
+				"standard-version": "^4.2.0"
+			},
+			"keywords": [
+				"i18n",
+				"internationalization",
+				"yargs"
+			],
+			"license": "ISC",
+			"files": [
+				"index.js"
+			],
+			"maintainers": [
+				{
+					"email": "andrewbgoode@gmail.com",
+					"name": "nexdrew"
+				},
+				{
+					"email": "ben@npmjs.com",
+					"name": "bcoe"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"pretest": "standard",
+				"test": "nyc mocha",
+				"coverage": "nyc report --reporter=text-lcov | coveralls",
+				"release": "standard-version"
+			},
+			"lastModified": 0,
+			"_id": "y18n@4.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/y18n/-/y18n-4.0.0.tgz",
+				"shasum": "95ef94f85ecc81d007c264e190a120f0a3c8566b",
+				"integrity": "sha512-r9S/ZyXu/Xu9q1tYlpsLIsa3EeLXXk0VwlxqTcFRfg9EhMW+17kbt9G0NrgCmhGb5vT2hyhJZLfDGx+7+5Uj/w==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIAG+hRS2Nlz+U3BYbNCOKiKTWMCNTDAWg5KEIqsQStxAAiA6lcUIFprodpgsZ/Q7OQSlK1woi/Cw9C4ItGQumY1njQ=="
+					}
+				]
+			},
+			"_npmVersion": "5.4.2",
+			"_npmUser": {
+				"name": "nexdrew",
+				"email": "andrewbgoode@gmail.com"
+			},
+			"gitHead": "45d2568800d6c57be045e76dc4984b2ef3432233",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/y18n-4.0.0.tgz_1507662196433_0.6819839081726968"
+			},
+			"_nodeVersion": "8.6.0",
+			"contributors": []
+		},
+		"4.0.1": {
+			"name": "y18n",
+			"description": "the bare-bones internationalization library used by yargs",
+			"version": "4.0.1",
+			"author": {
+				"name": "Ben Coe",
+				"email": "ben@npmjs.com"
+			},
+			"homepage": "https://github.com/yargs/y18n",
+			"repository": {
+				"type": "git",
+				"url": "git+ssh://git@github.com/yargs/y18n.git"
+			},
+			"bugs": {
+				"url": "https://github.com/yargs/y18n/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"chai": "^4.0.1",
+				"coveralls": "^3.0.0",
+				"mocha": "^4.0.1",
+				"nyc": "^11.0.1",
+				"rimraf": "^2.5.0",
+				"standard": "^10.0.0-beta.0",
+				"standard-version": "^4.2.0"
+			},
+			"keywords": [
+				"i18n",
+				"internationalization",
+				"yargs"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "bcoe",
+					"email": "bencoe@gmail.com"
+				},
+				{
+					"name": "nexdrew",
+					"email": "andrewbgoode@gmail.com"
+				},
+				{
+					"name": "oss-bot",
+					"email": "bencoe+oss-bot@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"pretest": "standard",
+				"test": "nyc mocha",
+				"coverage": "nyc report --reporter=text-lcov | coveralls",
+				"release": "standard-version"
+			},
+			"lastModified": 0,
+			"_id": "y18n@4.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/y18n/-/y18n-4.0.1.tgz",
+				"shasum": "8db2b83c31c5d75099bb890b23f3094891e247d4",
+				"integrity": "sha512-wNcy4NvjMYL8gogWWYAO7ZFWFfHcbdbE57tZO8e4cbpj8tfUcwrwqSl3ad8HxpYWCdXcJUCeKKZS62Av1affwQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCzSxGX2xT88JC38tkOY3FMEOQmn8VoRrVWPeBhis/TMgIgc4QveU6amA7jzOVwZFIu0xRnkHJHvmCNxFvxH7q7ey0="
+					}
+				]
+			},
+			"_npmVersion": "6.14.8",
+			"_npmUser": {
+				"name": "oss-bot",
+				"email": "bencoe+oss-bot@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "8dc75802f3aa944bf9a827213969d64834621215",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/y18n_4.0.1_1606779814627_0.7420427256466908"
+			},
+			"readmeFilename": "README.md",
+			"_nodeVersion": "14.14.0",
+			"contributors": []
+		},
+		"3.0.0": {
+			"name": "y18n",
+			"description": "the bare-bones internationalization library used by yargs",
+			"version": "3.0.0",
+			"author": {
+				"name": "Ben Coe",
+				"email": "ben@npmjs.com"
+			},
+			"homepage": "https://github.com/bcoe/y18n",
+			"repository": {
+				"type": "git",
+				"url": "git+ssh://git@github.com/bcoe/y18n.git"
+			},
+			"bugs": {
+				"url": "https://github.com/bcoe/y18n/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"chai": "^3.2.0",
+				"coveralls": "^2.11.3",
+				"mocha": "^2.2.5",
+				"nyc": "^3.0.1",
+				"rimraf": "^2.4.2",
+				"standard": "^4.5.4"
+			},
+			"keywords": [
+				"i18n",
+				"internationalization",
+				"yargs"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "bcoe",
+					"email": "ben@npmjs.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"pretest": "standard",
+				"test": "nyc mocha",
+				"coverage": "nyc report --reporter=text-lcov | coveralls"
+			},
+			"lastModified": 0,
+			"_id": "y18n@3.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/y18n/-/y18n-3.0.0.tgz",
+				"shasum": "848c0149c64003945d62287d6a0a3b91d7fdf6f5",
+				"integrity": "sha512-RoMA9LODvhCev/HdfjZMupROmZ2nLIACelUi7jJz2cG/BJw94kgL4+pYyObQlH5dQokks9KRClbNlXRz4ffqUw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCWH2nTxft5LBLbzuoCAbJaZ7SWHFL8EQYl/ZWGYisVlgIgZNjIDKvjTAo6gz6ryJ/vDD6FWC/jaJTFpkmUtOWqiJ0="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "2.13.2",
+			"_npmUser": {
+				"name": "bcoe",
+				"email": "ben@npmjs.com"
+			},
+			"gitHead": "58bf38fb645839f75f0ccfae16ef819fe0df2986",
+			"_shasum": "848c0149c64003945d62287d6a0a3b91d7fdf6f5",
+			"_nodeVersion": "2.0.2",
+			"contributors": []
+		},
+		"5.0.0": {
+			"name": "y18n",
+			"description": "the bare-bones internationalization library used by yargs",
+			"version": "5.0.0",
+			"author": {
+				"name": "Ben Coe",
+				"email": "bencoe@gmail.com"
+			},
+			"homepage": "https://github.com/yargs/y18n",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/yargs/y18n.git"
+			},
+			"bugs": {
+				"url": "https://github.com/yargs/y18n/issues"
+			},
+			"engines": {
+				"node": ">=10"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"@types/node": "^14.6.4",
+				"@wessberg/rollup-plugin-ts": "^1.3.1",
+				"c8": "^7.3.0",
+				"chai": "^4.0.1",
+				"cross-env": "^7.0.2",
+				"gts": "^2.0.2",
+				"mocha": "^8.0.0",
+				"rimraf": "^3.0.2",
+				"rollup": "^2.26.10",
+				"standardx": "^5.0.0",
+				"ts-transform-default-export": "^1.0.2",
+				"typescript": "^4.0.0"
+			},
+			"keywords": [
+				"i18n",
+				"internationalization",
+				"yargs"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"email": "ben@npmjs.com",
+					"name": "bcoe"
+				},
+				{
+					"email": "andrewbgoode@gmail.com",
+					"name": "nexdrew"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"check": "standardx '**/*.ts' '**/*.cjs' '**/*.mjs'",
+				"fix": "standardx --fix '**/*.ts' '**/*.cjs' '**/*.mjs'",
+				"pretest": "rimraf build && tsc -p tsconfig.test.json && cross-env NODE_ENV=test npm run build:cjs",
+				"test": "c8 --reporter=text --reporter=html mocha test/*.cjs",
+				"test:esm": "c8 --reporter=text --reporter=html mocha test/esm/*.mjs",
+				"posttest": "npm run check",
+				"coverage": "c8 report --check-coverage",
+				"precompile": "rimraf build",
+				"compile": "tsc",
+				"postcompile": "npm run build:cjs",
+				"build:cjs": "rollup -c",
+				"prepare": "npm run compile"
+			},
+			"lastModified": 0,
+			"_id": "y18n@5.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/y18n/-/y18n-5.0.0.tgz",
+				"shasum": "8e056f5aa98abd2bcfa2cf2c3557c5d24ac472ae",
+				"integrity": "sha512-kmhFIXV4iTEaUF09bNkcjbwp0XKUKF5SGmKHusIj+oQOvZyfy3Z+UFkjJWbKhPiHVNExkEuw2UmCDBGELch4jA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQC409Ch+vFVlCAN7SPzrmb/Vezs8xBkbIkngajNZBV/MQIhAPWGMQYhId/5ABPK6f6mB4vCtY/L97Td4CEd4JRouS3/"
+					}
+				]
+			},
+			"_npmVersion": "6.14.5",
+			"_npmUser": {
+				"name": "bcoe",
+				"email": "bencoe@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "335133842bfa398ba34d53ae17135d2604bf3e68",
+			"types": "./build/index.cjs.d.ts",
+			"exports": {
+				"import": "./index.mjs",
+				"require": "./build/index.cjs"
+			},
+			"module": "./build/lib/index.js",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/y18n_5.0.0_1599273332047_0.682491923761469"
+			},
+			"type": "module",
+			"standardx": {
+				"ignore": [
+					"build"
+				]
+			},
+			"_nodeVersion": "12.18.2",
+			"contributors": []
+		},
+		"5.0.1": {
+			"name": "y18n",
+			"description": "the bare-bones internationalization library used by yargs",
+			"version": "5.0.1",
+			"author": {
+				"name": "Ben Coe",
+				"email": "bencoe@gmail.com"
+			},
+			"homepage": "https://github.com/yargs/y18n",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/yargs/y18n.git"
+			},
+			"bugs": {
+				"url": "https://github.com/yargs/y18n/issues"
+			},
+			"engines": {
+				"node": ">=10"
+			},
+			"main": "./build/index.cjs",
+			"devDependencies": {
+				"@types/node": "^14.6.4",
+				"@wessberg/rollup-plugin-ts": "^1.3.1",
+				"c8": "^7.3.0",
+				"chai": "^4.0.1",
+				"cross-env": "^7.0.2",
+				"gts": "^2.0.2",
+				"mocha": "^8.0.0",
+				"rimraf": "^3.0.2",
+				"rollup": "^2.26.10",
+				"standardx": "^5.0.0",
+				"ts-transform-default-export": "^1.0.2",
+				"typescript": "^4.0.0"
+			},
+			"keywords": [
+				"i18n",
+				"internationalization",
+				"yargs"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"email": "ben@npmjs.com",
+					"name": "bcoe"
+				},
+				{
+					"email": "andrewbgoode@gmail.com",
+					"name": "nexdrew"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"check": "standardx '**/*.ts' '**/*.cjs' '**/*.mjs'",
+				"fix": "standardx --fix '**/*.ts' '**/*.cjs' '**/*.mjs'",
+				"pretest": "rimraf build && tsc -p tsconfig.test.json && cross-env NODE_ENV=test npm run build:cjs",
+				"test": "c8 --reporter=text --reporter=html mocha test/*.cjs",
+				"test:esm": "c8 --reporter=text --reporter=html mocha test/esm/*.mjs",
+				"posttest": "npm run check",
+				"coverage": "c8 report --check-coverage",
+				"precompile": "rimraf build",
+				"compile": "tsc",
+				"postcompile": "npm run build:cjs",
+				"build:cjs": "rollup -c",
+				"prepare": "npm run compile"
+			},
+			"lastModified": 0,
+			"_id": "y18n@5.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/y18n/-/y18n-5.0.1.tgz",
+				"shasum": "1ad2a7eddfa8bce7caa2e1f6b5da96c39d99d571",
+				"integrity": "sha512-/jJ831jEs4vGDbYPQp4yGKDYPSCCEQ45uZWJHE1AoYBzqdZi8+LDWas0z4HrmJXmKdpFsTiowSHXdxyFhpmdMg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQC/ugVZaCjUDky3n9hvpPVSJo9eRysgh5r1mE1reXMCTAIhAPb+ye2jgbMvFKNA+TX0idtkUSJgLDnsWgRkjWIAE+s8"
+					}
+				]
+			},
+			"_npmVersion": "6.14.8",
+			"_npmUser": {
+				"name": "oss-bot",
+				"email": "bencoe+oss-bot@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "786ffdc6cdabc15fd8e50240f662ea11e67ef5cc",
+			"exports": {
+				"import": "./index.mjs",
+				"require": "./build/index.cjs"
+			},
+			"module": "./build/lib/index.js",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/y18n_5.0.1_1599350279463_0.9581207231521827"
+			},
+			"type": "module",
+			"standardx": {
+				"ignore": [
+					"build"
+				]
+			},
+			"_nodeVersion": "14.9.0",
+			"contributors": []
+		},
+		"5.0.2": {
+			"name": "y18n",
+			"description": "the bare-bones internationalization library used by yargs",
+			"version": "5.0.2",
+			"author": {
+				"name": "Ben Coe",
+				"email": "bencoe@gmail.com"
+			},
+			"homepage": "https://github.com/yargs/y18n",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/yargs/y18n.git"
+			},
+			"bugs": {
+				"url": "https://github.com/yargs/y18n/issues"
+			},
+			"engines": {
+				"node": ">=10"
+			},
+			"main": "./build/index.cjs",
+			"devDependencies": {
+				"@types/node": "^14.6.4",
+				"@wessberg/rollup-plugin-ts": "^1.3.1",
+				"c8": "^7.3.0",
+				"chai": "^4.0.1",
+				"cross-env": "^7.0.2",
+				"gts": "^2.0.2",
+				"mocha": "^8.0.0",
+				"rimraf": "^3.0.2",
+				"rollup": "^2.26.10",
+				"standardx": "^5.0.0",
+				"ts-transform-default-export": "^1.0.2",
+				"typescript": "^4.0.0"
+			},
+			"keywords": [
+				"i18n",
+				"internationalization",
+				"yargs"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "bcoe",
+					"email": "bencoe@gmail.com"
+				},
+				{
+					"name": "nexdrew",
+					"email": "andrewbgoode@gmail.com"
+				},
+				{
+					"name": "oss-bot",
+					"email": "bencoe+oss-bot@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"check": "standardx '**/*.ts' '**/*.cjs' '**/*.mjs'",
+				"fix": "standardx --fix '**/*.ts' '**/*.cjs' '**/*.mjs'",
+				"pretest": "rimraf build && tsc -p tsconfig.test.json && cross-env NODE_ENV=test npm run build:cjs",
+				"test": "c8 --reporter=text --reporter=html mocha test/*.cjs",
+				"test:esm": "c8 --reporter=text --reporter=html mocha test/esm/*.mjs",
+				"posttest": "npm run check",
+				"coverage": "c8 report --check-coverage",
+				"precompile": "rimraf build",
+				"compile": "tsc",
+				"postcompile": "npm run build:cjs",
+				"build:cjs": "rollup -c",
+				"prepare": "npm run compile"
+			},
+			"lastModified": 0,
+			"_id": "y18n@5.0.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/y18n/-/y18n-5.0.2.tgz",
+				"shasum": "48218df5da2731b4403115c39a1af709c873f829",
+				"integrity": "sha512-CkwaeZw6dQgqgPGeTWKMXCRmMcBgETFlTml1+ZOO+q7kGst8NREJ+eWwFNPVUQ4QGdAaklbqCZHH6Zuep1RjiA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDnixjnn1HpIII7inPp6TtNFjRQM5j2atdBPRvqic7xLgIhAIauZem9YcLJNKtVV5pBDNj00pTbaTXBU3VKv4kcphGB"
+					}
+				]
+			},
+			"_npmVersion": "6.14.8",
+			"_npmUser": {
+				"name": "oss-bot",
+				"email": "bencoe+oss-bot@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "29e7571ece1cfa8fd5d197c284e384a2fbea79b2",
+			"exports": {
+				"import": "./index.mjs",
+				"require": "./build/index.cjs"
+			},
+			"module": "./build/lib/index.js",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/y18n_5.0.2_1601576606909_0.7193058628251092"
+			},
+			"type": "module",
+			"standardx": {
+				"ignore": [
+					"build"
+				]
+			},
+			"_nodeVersion": "14.11.0",
+			"contributors": []
+		},
+		"3.1.0": {
+			"name": "y18n",
+			"description": "the bare-bones internationalization library used by yargs",
+			"version": "3.1.0",
+			"author": {
+				"name": "Ben Coe",
+				"email": "ben@npmjs.com"
+			},
+			"homepage": "https://github.com/bcoe/y18n",
+			"repository": {
+				"type": "git",
+				"url": "git+ssh://git@github.com/bcoe/y18n.git"
+			},
+			"bugs": {
+				"url": "https://github.com/bcoe/y18n/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"chai": "^3.2.0",
+				"coveralls": "^2.11.4",
+				"mocha": "^2.2.5",
+				"nyc": "^3.1.0",
+				"rimraf": "^2.4.2",
+				"standard": "^5.1.0"
+			},
+			"keywords": [
+				"i18n",
+				"internationalization",
+				"yargs"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "bcoe",
+					"email": "ben@npmjs.com"
+				},
+				{
+					"name": "abg",
+					"email": "andrewbgoode@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"pretest": "standard",
+				"test": "nyc mocha",
+				"coverage": "nyc report --reporter=text-lcov | coveralls"
+			},
+			"lastModified": 0,
+			"_id": "y18n@3.1.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/y18n/-/y18n-3.1.0.tgz",
+				"shasum": "dfcf19493e8dd9763a3d4bd0fa673de37cf8e860",
+				"integrity": "sha512-sp7msmfHa8Y6fTvDUOWQ4tYkyRNDg5QfZLRz4OA3Vvdz4QJmg7+psnYfNvB3zKIk4tBPgn3u3rfn91qRIIPMog==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIHyTK/F/291Bh51Obw9UEEDcK9hxiERciXs35sD7ySrBAiAe0/jqcQGFG7kltUwETwbjIKatVbJ/Gie1r+O36IGEIg=="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "2.13.1",
+			"_npmUser": {
+				"name": "abg",
+				"email": "andrewbgoode@gmail.com"
+			},
+			"gitHead": "a75460b306db0097aed0c7e12362bb222e8de90b",
+			"_shasum": "dfcf19493e8dd9763a3d4bd0fa673de37cf8e860",
+			"_nodeVersion": "0.12.7",
+			"contributors": []
+		},
+		"5.0.3": {
+			"name": "y18n",
+			"description": "the bare-bones internationalization library used by yargs",
+			"version": "5.0.3",
+			"author": {
+				"name": "Ben Coe",
+				"email": "bencoe@gmail.com"
+			},
+			"homepage": "https://github.com/yargs/y18n",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/yargs/y18n.git"
+			},
+			"bugs": {
+				"url": "https://github.com/yargs/y18n/issues"
+			},
+			"engines": {
+				"node": ">=10"
+			},
+			"main": "./build/index.cjs",
+			"devDependencies": {
+				"@types/node": "^14.6.4",
+				"@wessberg/rollup-plugin-ts": "^1.3.1",
+				"c8": "^7.3.0",
+				"chai": "^4.0.1",
+				"cross-env": "^7.0.2",
+				"gts": "^3.0.0",
+				"mocha": "^8.0.0",
+				"rimraf": "^3.0.2",
+				"rollup": "^2.26.10",
+				"standardx": "^5.0.0",
+				"ts-transform-default-export": "^1.0.2",
+				"typescript": "^4.0.0"
+			},
+			"keywords": [
+				"i18n",
+				"internationalization",
+				"yargs"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "bcoe",
+					"email": "bencoe@gmail.com"
+				},
+				{
+					"name": "nexdrew",
+					"email": "andrewbgoode@gmail.com"
+				},
+				{
+					"name": "oss-bot",
+					"email": "bencoe+oss-bot@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"check": "standardx '**/*.ts' '**/*.cjs' '**/*.mjs'",
+				"fix": "standardx --fix '**/*.ts' '**/*.cjs' '**/*.mjs'",
+				"pretest": "rimraf build && tsc -p tsconfig.test.json && cross-env NODE_ENV=test npm run build:cjs",
+				"test": "c8 --reporter=text --reporter=html mocha test/*.cjs",
+				"test:esm": "c8 --reporter=text --reporter=html mocha test/esm/*.mjs",
+				"posttest": "npm run check",
+				"coverage": "c8 report --check-coverage",
+				"precompile": "rimraf build",
+				"compile": "tsc",
+				"postcompile": "npm run build:cjs",
+				"build:cjs": "rollup -c",
+				"prepare": "npm run compile"
+			},
+			"lastModified": 0,
+			"_id": "y18n@5.0.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/y18n/-/y18n-5.0.3.tgz",
+				"shasum": "978115b82befe2b5c762bf55980b7b01a4a2d5d9",
+				"integrity": "sha512-JeFbcHQ/7hVmMBXW6UB6Tg7apStHd/ztGz1JN78y3pFi/q0Ht1eA6PVkvw56gm7UA8fcJR/ziRlYEDMGoju0yQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIFtzrTzqZXKNq1HTENkeaOR4/Kjyf80KAlN+1fppOgGTAiBmLgrIYkIHGOz2ZNHuWmp6bK0fMTVn50ekreTf9qxYsg=="
+					}
+				]
+			},
+			"_npmVersion": "6.14.8",
+			"_npmUser": {
+				"name": "oss-bot",
+				"email": "bencoe+oss-bot@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "d3584d2f1b1d98bb8a7bfd4c8c92614d1684376a",
+			"exports": [
+				{
+					"import": "./index.mjs",
+					"require": "./build/index.cjs"
+				},
+				"./build/index.cjs"
+			],
+			"module": "./build/lib/index.js",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/y18n_5.0.3_1602813135466_0.6790940796421885"
+			},
+			"type": "module",
+			"standardx": {
+				"ignore": [
+					"build"
+				]
+			},
+			"_nodeVersion": "14.13.1",
+			"contributors": []
+		},
+		"1.0.0": {
+			"name": "y18n",
+			"description": "the bare-bones internationalization library used by yargs",
+			"version": "1.0.0",
+			"author": {
+				"name": "Ben Coe",
+				"email": "ben@npmjs.com"
+			},
+			"homepage": "https://github.com/bcoe/y18n",
+			"repository": {
+				"type": "git",
+				"url": "git@github.com:bcoe/y18n.git"
+			},
+			"bugs": {
+				"url": "https://github.com/bcoe/y18n/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"chai": "^3.2.0",
+				"mocha": "^2.2.5",
+				"nyc": "^3.0.1",
+				"rimraf": "^2.4.2",
+				"standard": "^4.5.4"
+			},
+			"keywords": [
+				"i18n",
+				"internationalization",
+				"yargs"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "bcoe",
+					"email": "ben@npmjs.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"pretest": "standard",
+				"test": "nyc mocha"
+			},
+			"lastModified": 0,
+			"_id": "y18n@1.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/y18n/-/y18n-1.0.0.tgz",
+				"shasum": "408ca633ce1cb2e8e1e288acb8c7007dcb28a588",
+				"integrity": "sha512-p0rJluph22q+Hh6y2e2CFrTIYy1oaxLD4rudaQbU6o575Fd8hGkH0EXXGHfUfIOt3t4kkcZlNM2G0izf6w4zhA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDzRwrlebnb6DKBJsGriXp1W+6vsGpPy0jR0mqTWyGgcAIgOZh3msEePmGyEgdlBrFsbVk59G4kXnx8Q/WaWtgMMYc="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "2.7.5",
+			"_npmUser": {
+				"name": "bcoe",
+				"email": "ben@npmjs.com"
+			},
+			"gitHead": "da3facd10d36b380d02dfa14db367f09ff124869",
+			"_shasum": "408ca633ce1cb2e8e1e288acb8c7007dcb28a588",
+			"_nodeVersion": "0.10.36",
+			"contributors": []
+		},
+		"3.2.0": {
+			"name": "y18n",
+			"description": "the bare-bones internationalization library used by yargs",
+			"version": "3.2.0",
+			"author": {
+				"name": "Ben Coe",
+				"email": "ben@npmjs.com"
+			},
+			"homepage": "https://github.com/bcoe/y18n",
+			"repository": {
+				"type": "git",
+				"url": "git+ssh://git@github.com/bcoe/y18n.git"
+			},
+			"bugs": {
+				"url": "https://github.com/bcoe/y18n/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"chai": "^3.3.0",
+				"coveralls": "^2.11.4",
+				"mocha": "^2.3.3",
+				"nyc": "^3.2.2",
+				"rimraf": "^2.4.3",
+				"standard": "^5.3.1"
+			},
+			"keywords": [
+				"i18n",
+				"internationalization",
+				"yargs"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "bcoe",
+					"email": "ben@npmjs.com"
+				},
+				{
+					"name": "abg",
+					"email": "andrewbgoode@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"pretest": "standard",
+				"test": "nyc mocha",
+				"coverage": "nyc report --reporter=text-lcov | coveralls"
+			},
+			"lastModified": 0,
+			"_id": "y18n@3.2.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/y18n/-/y18n-3.2.0.tgz",
+				"shasum": "3bec64c93b730d924a6148c765757932433e34c8",
+				"integrity": "sha512-AwfXWS7HU/c65gWiqN1lvIUclNoXFParUa+ebDRF2MWcH8ZJZd9g9YtMjQblxzpBpLmMKHuU0yqZuRmBefgckQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCMMUKsD46qI5fkqEcDlvAQuW9GV9898OmUoEYNeLmxIQIgWRlV4xaZrCvaHwPHRV8eX/wm64+bM29sabOMw7HHRRo="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "2.14.2",
+			"_npmUser": {
+				"name": "abg",
+				"email": "andrewbgoode@gmail.com"
+			},
+			"gitHead": "a92184823afa8cccef4c8100a0b79338f85ab089",
+			"_shasum": "3bec64c93b730d924a6148c765757932433e34c8",
+			"_nodeVersion": "0.12.7",
+			"contributors": []
+		},
+		"5.0.4": {
+			"name": "y18n",
+			"description": "the bare-bones internationalization library used by yargs",
+			"version": "5.0.4",
+			"author": {
+				"name": "Ben Coe",
+				"email": "bencoe@gmail.com"
+			},
+			"homepage": "https://github.com/yargs/y18n",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/yargs/y18n.git"
+			},
+			"bugs": {
+				"url": "https://github.com/yargs/y18n/issues"
+			},
+			"engines": {
+				"node": ">=10"
+			},
+			"main": "./build/index.cjs",
+			"devDependencies": {
+				"@types/node": "^14.6.4",
+				"@wessberg/rollup-plugin-ts": "^1.3.1",
+				"c8": "^7.3.0",
+				"chai": "^4.0.1",
+				"cross-env": "^7.0.2",
+				"gts": "^3.0.0",
+				"mocha": "^8.0.0",
+				"rimraf": "^3.0.2",
+				"rollup": "^2.26.10",
+				"standardx": "^5.0.0",
+				"ts-transform-default-export": "^1.0.2",
+				"typescript": "^4.0.0"
+			},
+			"keywords": [
+				"i18n",
+				"internationalization",
+				"yargs"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "bcoe",
+					"email": "bencoe@gmail.com"
+				},
+				{
+					"name": "nexdrew",
+					"email": "andrewbgoode@gmail.com"
+				},
+				{
+					"name": "oss-bot",
+					"email": "bencoe+oss-bot@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"check": "standardx '**/*.ts' '**/*.cjs' '**/*.mjs'",
+				"fix": "standardx --fix '**/*.ts' '**/*.cjs' '**/*.mjs'",
+				"pretest": "rimraf build && tsc -p tsconfig.test.json && cross-env NODE_ENV=test npm run build:cjs",
+				"test": "c8 --reporter=text --reporter=html mocha test/*.cjs",
+				"test:esm": "c8 --reporter=text --reporter=html mocha test/esm/*.mjs",
+				"posttest": "npm run check",
+				"coverage": "c8 report --check-coverage",
+				"precompile": "rimraf build",
+				"compile": "tsc",
+				"postcompile": "npm run build:cjs",
+				"build:cjs": "rollup -c",
+				"prepare": "npm run compile"
+			},
+			"lastModified": 0,
+			"_id": "y18n@5.0.4",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/y18n/-/y18n-5.0.4.tgz",
+				"shasum": "0ab2db89dd5873b5ec4682d8e703e833373ea897",
+				"integrity": "sha512-deLOfD+RvFgrpAmSZgfGdWYE+OKyHcVHaRQ7NphG/63scpRvTHHeQMAxGGvaLVGJ+HYVcCXlzcTK0ZehFf+eHQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCICd45z4UCqGaTKOYgwSz1pw9COdS+/c233jCqZGYpUT9AiBpCdvs+szdZIfc/mKQfvzUWVMxlZwhByPsa0GE1TgElQ=="
+					}
+				]
+			},
+			"_npmVersion": "6.14.8",
+			"_npmUser": {
+				"name": "oss-bot",
+				"email": "bencoe+oss-bot@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "f91f68f5b7ab163d57900b4b25e4b5d0dc5581d0",
+			"exports": {
+				".": [
+					{
+						"import": "./index.mjs",
+						"require": "./build/index.cjs"
+					},
+					"./build/index.cjs"
+				]
+			},
+			"module": "./build/lib/index.js",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/y18n_5.0.4_1602863099464_0.5549476304057792"
+			},
+			"type": "module",
+			"standardx": {
+				"ignore": [
+					"build"
+				]
+			},
+			"_nodeVersion": "14.13.1",
+			"contributors": []
+		},
+		"1.1.0": {
+			"name": "y18n",
+			"description": "the bare-bones internationalization library used by yargs",
+			"version": "1.1.0",
+			"author": {
+				"name": "Ben Coe",
+				"email": "ben@npmjs.com"
+			},
+			"homepage": "https://github.com/bcoe/y18n",
+			"repository": {
+				"type": "git",
+				"url": "git+ssh://git@github.com/bcoe/y18n.git"
+			},
+			"bugs": {
+				"url": "https://github.com/bcoe/y18n/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"chai": "^3.2.0",
+				"coveralls": "^2.11.3",
+				"mocha": "^2.2.5",
+				"nyc": "^3.0.1",
+				"rimraf": "^2.4.2",
+				"standard": "^4.5.4"
+			},
+			"keywords": [
+				"i18n",
+				"internationalization",
+				"yargs"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "bcoe",
+					"email": "ben@npmjs.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"pretest": "standard",
+				"test": "nyc mocha",
+				"coverage": "nyc report --reporter=text-lcov | coveralls"
+			},
+			"lastModified": 0,
+			"_id": "y18n@1.1.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/y18n/-/y18n-1.1.0.tgz",
+				"shasum": "ba6bce6ebc50bcdb66bebadcd8f2c6fa5f5d6e4d",
+				"integrity": "sha512-ZYi7XjwE80QtQwOyYLIlbW7Y8TMaG31E5SXoMqBsrk3HICl4Edgvh4bfGDioWGh9qDS91tTEN2kUNh/O3+B7jQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIBixLyZR2MJElBOKMdHzyFziHVOYOvWUz/46F9orO78GAiEAuEbF51997/jG3JbMgiyrdfVteVjw9DlbgBdWcZ34COo="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "2.13.2",
+			"_npmUser": {
+				"name": "bcoe",
+				"email": "ben@npmjs.com"
+			},
+			"gitHead": "84becd79cc173a7dbfd97decbbc50aec85a52694",
+			"_shasum": "ba6bce6ebc50bcdb66bebadcd8f2c6fa5f5d6e4d",
+			"_nodeVersion": "2.0.2",
+			"contributors": []
+		},
+		"3.2.1": {
+			"name": "y18n",
+			"description": "the bare-bones internationalization library used by yargs",
+			"version": "3.2.1",
+			"author": {
+				"name": "Ben Coe",
+				"email": "ben@npmjs.com"
+			},
+			"homepage": "https://github.com/yargs/y18n",
+			"repository": {
+				"type": "git",
+				"url": "git+ssh://git@github.com/yargs/y18n.git"
+			},
+			"bugs": {
+				"url": "https://github.com/yargs/y18n/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"chai": "^3.4.1",
+				"coveralls": "^2.11.6",
+				"mocha": "^2.3.4",
+				"nyc": "^6.1.1",
+				"rimraf": "^2.5.0",
+				"standard": "^5.4.1"
+			},
+			"keywords": [
+				"i18n",
+				"internationalization",
+				"yargs"
+			],
+			"license": "ISC",
+			"files": [
+				"index.js"
+			],
+			"maintainers": [
+				{
+					"name": "bcoe",
+					"email": "ben@npmjs.com"
+				},
+				{
+					"name": "nexdrew",
+					"email": "andrew@npmjs.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"pretest": "standard",
+				"test": "nyc mocha",
+				"coverage": "nyc report --reporter=text-lcov | coveralls"
+			},
+			"lastModified": 0,
+			"_id": "y18n@3.2.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/y18n/-/y18n-3.2.1.tgz",
+				"shasum": "6d15fba884c08679c0d77e88e7759e811e07fa41",
+				"integrity": "sha512-Vd1yWKYGMtzFB6bAuTI7/POwJnwQStQXOe1PW1GmjUZgkaKYGc6/Pl3IDGFgplEklF65niuwBHeS5yve4+U01Q==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIHdpGnO72/nxWF1WBXdJh1Siy/p71Zlj+cjF03rVImLBAiEAp3Kc9UkwBJiBUgNTHsLXbYjQuVYaChhF3DUKWJlkuN0="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "3.3.0",
+			"_npmUser": {
+				"name": "bcoe",
+				"email": "ben@npmjs.com"
+			},
+			"gitHead": "34d6ad7bfeac67721ccbcf3bbcc761f33d787c90",
+			"_npmOperationalInternal": {
+				"host": "packages-13-west.internal.npmjs.com",
+				"tmp": "tmp/y18n-3.2.1.tgz_1458191070611_0.9606689948122948"
+			},
+			"_shasum": "6d15fba884c08679c0d77e88e7759e811e07fa41",
+			"_nodeVersion": "3.2.0",
+			"contributors": []
+		},
+		"5.0.5": {
+			"name": "y18n",
+			"description": "the bare-bones internationalization library used by yargs",
+			"version": "5.0.5",
+			"author": {
+				"name": "Ben Coe",
+				"email": "bencoe@gmail.com"
+			},
+			"homepage": "https://github.com/yargs/y18n",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/yargs/y18n.git"
+			},
+			"bugs": {
+				"url": "https://github.com/yargs/y18n/issues"
+			},
+			"engines": {
+				"node": ">=10"
+			},
+			"main": "./build/index.cjs",
+			"devDependencies": {
+				"@types/node": "^14.6.4",
+				"@wessberg/rollup-plugin-ts": "^1.3.1",
+				"c8": "^7.3.0",
+				"chai": "^4.0.1",
+				"cross-env": "^7.0.2",
+				"gts": "^3.0.0",
+				"mocha": "^8.0.0",
+				"rimraf": "^3.0.2",
+				"rollup": "^2.26.10",
+				"standardx": "^5.0.0",
+				"ts-transform-default-export": "^1.0.2",
+				"typescript": "^4.0.0"
+			},
+			"keywords": [
+				"i18n",
+				"internationalization",
+				"yargs"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "bcoe",
+					"email": "bencoe@gmail.com"
+				},
+				{
+					"name": "nexdrew",
+					"email": "andrewbgoode@gmail.com"
+				},
+				{
+					"name": "oss-bot",
+					"email": "bencoe+oss-bot@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"check": "standardx '**/*.ts' '**/*.cjs' '**/*.mjs'",
+				"fix": "standardx --fix '**/*.ts' '**/*.cjs' '**/*.mjs'",
+				"pretest": "rimraf build && tsc -p tsconfig.test.json && cross-env NODE_ENV=test npm run build:cjs",
+				"test": "c8 --reporter=text --reporter=html mocha test/*.cjs",
+				"test:esm": "c8 --reporter=text --reporter=html mocha test/esm/*.mjs",
+				"posttest": "npm run check",
+				"coverage": "c8 report --check-coverage",
+				"precompile": "rimraf build",
+				"compile": "tsc",
+				"postcompile": "npm run build:cjs",
+				"build:cjs": "rollup -c",
+				"prepare": "npm run compile"
+			},
+			"lastModified": 0,
+			"_id": "y18n@5.0.5",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/y18n/-/y18n-5.0.5.tgz",
+				"shasum": "8769ec08d03b1ea2df2500acef561743bbb9ab18",
+				"integrity": "sha512-hsRUr4FFrvhhRH12wOdfs38Gy7k2FFzB9qgN9v3aLykRq0dRcdcpz5C9FxdS2NuhOrI/628b/KSTJ3rwHysYSg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIA3soP+S7MThcC0sLV+KT/w7ssjDTtlhfDkDwAj0K35eAiEA8k8CtjMOlyTRaObrtHkuBUea1gXj0+F6cgCnyn3ga4U="
+					}
+				]
+			},
+			"_npmVersion": "6.14.8",
+			"_npmUser": {
+				"name": "oss-bot",
+				"email": "bencoe+oss-bot@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "e343b70fbe8245c0a02a5615eee1bbd6bcaac1d6",
+			"exports": {
+				".": [
+					{
+						"import": "./index.mjs",
+						"require": "./build/index.cjs"
+					},
+					"./build/index.cjs"
+				]
+			},
+			"module": "./build/lib/index.js",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/y18n_5.0.5_1603639128070_0.21918731679310355"
+			},
+			"type": "module",
+			"standardx": {
+				"ignore": [
+					"build"
+				]
+			},
+			"_nodeVersion": "14.13.1",
+			"contributors": []
+		},
+		"3.2.2": {
+			"name": "y18n",
+			"description": "the bare-bones internationalization library used by yargs",
+			"version": "3.2.2",
+			"author": {
+				"name": "Ben Coe",
+				"email": "ben@npmjs.com"
+			},
+			"homepage": "https://github.com/yargs/y18n",
+			"repository": {
+				"type": "git",
+				"url": "git+ssh://git@github.com/yargs/y18n.git"
+			},
+			"bugs": {
+				"url": "https://github.com/yargs/y18n/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"chai": "^3.4.1",
+				"coveralls": "^2.11.6",
+				"mocha": "^3.0.0",
+				"nyc": "^10.0.0",
+				"rimraf": "^2.5.0",
+				"standard": "^10.0.0-beta.0"
+			},
+			"keywords": [
+				"i18n",
+				"internationalization",
+				"yargs"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "bcoe",
+					"email": "bencoe@gmail.com"
+				},
+				{
+					"name": "nexdrew",
+					"email": "andrewbgoode@gmail.com"
+				},
+				{
+					"name": "oss-bot",
+					"email": "bencoe+oss-bot@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"pretest": "standard",
+				"test": "nyc mocha",
+				"coverage": "nyc report --reporter=text-lcov | coveralls"
+			},
+			"lastModified": 0,
+			"_id": "y18n@3.2.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/y18n/-/y18n-3.2.2.tgz",
+				"shasum": "85c901bd6470ce71fc4bb723ad209b70f7f28696",
+				"integrity": "sha512-uGZHXkHnhF0XeeAPgnKfPv1bgKAYyVvmNL1xlKsPYZPaIHxGti2hHqvOCQv71XMsLxu1QjergkqogUnms5D3YQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIAV9u4ild2q71rpr9c2FUv9D3Heu7Zh3DkdkQiIN9NNpAiAGCPz32t9O5n+7KaO9wUbhi7RhQb5MPwzcjhkm9wysVA=="
+					}
+				]
+			},
+			"_npmVersion": "6.14.8",
+			"_npmUser": {
+				"name": "oss-bot",
+				"email": "bencoe+oss-bot@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "90401eea9062ad498f4f792e3fff8008c4c193a3",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/y18n_3.2.2_1609800476248_0.15203860144039116"
+			},
+			"readmeFilename": "README.md",
+			"_nodeVersion": "14.14.0",
+			"contributors": []
+		},
+		"5.0.6": {
+			"name": "y18n",
+			"description": "the bare-bones internationalization library used by yargs",
+			"version": "5.0.6",
+			"author": {
+				"name": "Ben Coe",
+				"email": "bencoe@gmail.com"
+			},
+			"homepage": "https://github.com/yargs/y18n",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/yargs/y18n.git"
+			},
+			"bugs": {
+				"url": "https://github.com/yargs/y18n/issues"
+			},
+			"engines": {
+				"node": ">=10"
+			},
+			"main": "./build/index.cjs",
+			"devDependencies": {
+				"@types/node": "^14.6.4",
+				"@wessberg/rollup-plugin-ts": "^1.3.1",
+				"c8": "^7.3.0",
+				"chai": "^4.0.1",
+				"cross-env": "^7.0.2",
+				"gts": "^3.0.0",
+				"mocha": "^8.0.0",
+				"rimraf": "^3.0.2",
+				"rollup": "^2.26.10",
+				"standardx": "^7.0.0",
+				"ts-transform-default-export": "^1.0.2",
+				"typescript": "^4.0.0"
+			},
+			"keywords": [
+				"i18n",
+				"internationalization",
+				"yargs"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "bcoe",
+					"email": "bencoe@gmail.com"
+				},
+				{
+					"name": "nexdrew",
+					"email": "andrewbgoode@gmail.com"
+				},
+				{
+					"name": "oss-bot",
+					"email": "bencoe+oss-bot@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"check": "standardx **/*.ts **/*.cjs **/*.mjs",
+				"fix": "standardx --fix **/*.ts **/*.cjs **/*.mjs",
+				"pretest": "rimraf build && tsc -p tsconfig.test.json && cross-env NODE_ENV=test npm run build:cjs",
+				"test": "c8 --reporter=text --reporter=html mocha test/*.cjs",
+				"test:esm": "c8 --reporter=text --reporter=html mocha test/esm/*.mjs",
+				"posttest": "npm run check",
+				"coverage": "c8 report --check-coverage",
+				"precompile": "rimraf build",
+				"compile": "tsc",
+				"postcompile": "npm run build:cjs",
+				"build:cjs": "rollup -c",
+				"prepare": "npm run compile"
+			},
+			"lastModified": 0,
+			"_id": "y18n@5.0.6",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/y18n/-/y18n-5.0.6.tgz",
+				"shasum": "8236b05cfc5af6a409f41326a4847c68989bb04f",
+				"integrity": "sha512-PlVX4Y0lDTN6E2V4ES2tEdyvXkeKzxa8c/vo0pxPr/TqbztddTP0yn7zZylIyiAuxerqj0Q5GhpJ1YJCP8LaZQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDYfh/DyFqhrzmkSbv/4KLXLqsfNG6S/w+loCrmCHNmEAIhAKvcxSCH/jycMOQipLF2VF22bdCweS+1Gq7PpL6UNcIC"
+					}
+				]
+			},
+			"_npmVersion": "6.14.11",
+			"_npmUser": {
+				"name": "oss-bot",
+				"email": "bencoe+oss-bot@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "0884534e044d1cc1239b021232dc6f358a71fd3e",
+			"exports": {
+				".": [
+					{
+						"import": "./index.mjs",
+						"require": "./build/index.cjs"
+					},
+					"./build/index.cjs"
+				]
+			},
+			"module": "./build/lib/index.js",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/y18n_5.0.6_1617585960208_0.7906647956829878"
+			},
+			"type": "module",
+			"standardx": {
+				"ignore": [
+					"build"
+				]
+			},
+			"_nodeVersion": "14.16.0",
+			"contributors": []
+		}
+	},
+	"time": {
+		"2.0.0": "2015-07-28T05:07:08.737Z",
+		"5.0.7": "2021-04-07T01:46:43.112Z",
+		"5.0.8": "2021-04-07T18:57:33.969Z",
+		"6.0.0-alpha.0": "2020-09-12T00:20:05.591Z",
+		"created": "2015-07-27T07:19:00.467Z",
+		"4.0.2": "2021-04-07T01:45:04.213Z",
+		"4.0.3": "2021-04-07T18:05:24.075Z",
+		"4.0.0": "2017-10-10T19:03:17.301Z",
+		"4.0.1": "2020-11-30T23:43:34.811Z",
+		"3.0.0": "2015-07-29T07:35:44.735Z",
+		"modified": "2023-07-10T23:16:26.635Z",
+		"5.0.0": "2020-09-05T02:35:32.173Z",
+		"5.0.1": "2020-09-05T23:57:59.585Z",
+		"5.0.2": "2020-10-01T18:23:27.000Z",
+		"3.1.0": "2015-08-18T22:01:52.657Z",
+		"5.0.3": "2020-10-16T01:52:15.606Z",
+		"1.0.0": "2015-07-27T07:19:00.467Z",
+		"3.2.0": "2015-09-21T20:58:01.658Z",
+		"5.0.4": "2020-10-16T15:44:59.622Z",
+		"1.1.0": "2015-07-28T04:15:40.553Z",
+		"3.2.1": "2016-03-17T05:04:31.363Z",
+		"5.0.5": "2020-10-25T15:18:48.201Z",
+		"3.2.2": "2021-01-04T22:47:56.362Z",
+		"5.0.6": "2021-04-05T01:26:00.411Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"next": "4.0.0",
+		"engines-test": "6.0.0-alpha.0",
+		"latest-4": "4.0.3",
+		"latest": "5.0.8",
+		"latest-3": "3.2.2"
+	},
+	"_uplinks": {
+		"artifactory-sabadell": {
+			"etag": "eb96e630b0376dbcfda209f2b2394544ba13ab52",
+			"fetched": 1782459821525
+		}
+	},
+	"_distfiles": {
+		"y18n-2.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/y18n/-/y18n-2.0.0.tgz",
+			"sha": "c4bc87a9add7962f72d208f8d04660abd774e4de",
+			"registry": "artifactory-sabadell"
+		},
+		"y18n-5.0.7.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/y18n/-/y18n-5.0.7.tgz",
+			"sha": "0c514aba53fc40e2db911aeb8b51566a3374efe7",
+			"registry": "artifactory-sabadell"
+		},
+		"y18n-5.0.8.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/y18n/-/y18n-5.0.8.tgz",
+			"sha": "7f4934d0f7ca8c56f95314939ddcd2dd91ce1d55",
+			"registry": "artifactory-sabadell"
+		},
+		"y18n-6.0.0-alpha.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/y18n/-/y18n-6.0.0-alpha.0.tgz",
+			"sha": "eccd8e2176c2bf786dee53c4881cd88e3e4cbfc5",
+			"registry": "artifactory-sabadell"
+		},
+		"y18n-4.0.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/y18n/-/y18n-4.0.2.tgz",
+			"sha": "c504495ba9b59230dd60226d1dd89c3c0a1b745e",
+			"registry": "artifactory-sabadell"
+		},
+		"y18n-4.0.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/y18n/-/y18n-4.0.3.tgz",
+			"sha": "b5f259c82cd6e336921efd7bfd8bf560de9eeedf",
+			"registry": "artifactory-sabadell"
+		},
+		"y18n-4.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/y18n/-/y18n-4.0.0.tgz",
+			"sha": "95ef94f85ecc81d007c264e190a120f0a3c8566b",
+			"registry": "artifactory-sabadell"
+		},
+		"y18n-4.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/y18n/-/y18n-4.0.1.tgz",
+			"sha": "8db2b83c31c5d75099bb890b23f3094891e247d4",
+			"registry": "artifactory-sabadell"
+		},
+		"y18n-3.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/y18n/-/y18n-3.0.0.tgz",
+			"sha": "848c0149c64003945d62287d6a0a3b91d7fdf6f5",
+			"registry": "artifactory-sabadell"
+		},
+		"y18n-5.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/y18n/-/y18n-5.0.0.tgz",
+			"sha": "8e056f5aa98abd2bcfa2cf2c3557c5d24ac472ae",
+			"registry": "artifactory-sabadell"
+		},
+		"y18n-5.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/y18n/-/y18n-5.0.1.tgz",
+			"sha": "1ad2a7eddfa8bce7caa2e1f6b5da96c39d99d571",
+			"registry": "artifactory-sabadell"
+		},
+		"y18n-5.0.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/y18n/-/y18n-5.0.2.tgz",
+			"sha": "48218df5da2731b4403115c39a1af709c873f829",
+			"registry": "artifactory-sabadell"
+		},
+		"y18n-3.1.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/y18n/-/y18n-3.1.0.tgz",
+			"sha": "dfcf19493e8dd9763a3d4bd0fa673de37cf8e860",
+			"registry": "artifactory-sabadell"
+		},
+		"y18n-5.0.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/y18n/-/y18n-5.0.3.tgz",
+			"sha": "978115b82befe2b5c762bf55980b7b01a4a2d5d9",
+			"registry": "artifactory-sabadell"
+		},
+		"y18n-1.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/y18n/-/y18n-1.0.0.tgz",
+			"sha": "408ca633ce1cb2e8e1e288acb8c7007dcb28a588",
+			"registry": "artifactory-sabadell"
+		},
+		"y18n-3.2.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/y18n/-/y18n-3.2.0.tgz",
+			"sha": "3bec64c93b730d924a6148c765757932433e34c8",
+			"registry": "artifactory-sabadell"
+		},
+		"y18n-5.0.4.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/y18n/-/y18n-5.0.4.tgz",
+			"sha": "0ab2db89dd5873b5ec4682d8e703e833373ea897",
+			"registry": "artifactory-sabadell"
+		},
+		"y18n-1.1.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/y18n/-/y18n-1.1.0.tgz",
+			"sha": "ba6bce6ebc50bcdb66bebadcd8f2c6fa5f5d6e4d",
+			"registry": "artifactory-sabadell"
+		},
+		"y18n-3.2.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/y18n/-/y18n-3.2.1.tgz",
+			"sha": "6d15fba884c08679c0d77e88e7759e811e07fa41",
+			"registry": "artifactory-sabadell"
+		},
+		"y18n-5.0.5.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/y18n/-/y18n-5.0.5.tgz",
+			"sha": "8769ec08d03b1ea2df2500acef561743bbb9ab18",
+			"registry": "artifactory-sabadell"
+		},
+		"y18n-3.2.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/y18n/-/y18n-3.2.2.tgz",
+			"sha": "85c901bd6470ce71fc4bb723ad209b70f7f28696",
+			"registry": "artifactory-sabadell"
+		},
+		"y18n-5.0.6.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/y18n/-/y18n-5.0.6.tgz",
+			"sha": "8236b05cfc5af6a409f41326a4847c68989bb04f",
+			"registry": "artifactory-sabadell"
+		}
+	},
+	"_attachments": {},
+	"_rev": "1-d3bcd321cb731e06",
+	"_id": "y18n",
+	"readme": "# y18n\n\n[![NPM version][npm-image]][npm-url]\n[![js-standard-style][standard-image]][standard-url]\n[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)\n\nThe bare-bones internationalization library used by yargs.\n\nInspired by [i18n](https://www.npmjs.com/package/i18n).\n\n## Examples\n\n_simple string translation:_\n\n```js\nconst __ = require('y18n')().__;\n\nconsole.log(__('my awesome string %s', 'foo'));\n```\n\noutput:\n\n`my awesome string foo`\n\n_using tagged template literals_\n\n```js\nconst __ = require('y18n')().__;\n\nconst str = 'foo';\n\nconsole.log(__`my awesome string ${str}`);\n```\n\noutput:\n\n`my awesome string foo`\n\n_pluralization support:_\n\n```js\nconst __n = require('y18n')().__n;\n\nconsole.log(__n('one fish %s', '%d fishes %s', 2, 'foo'));\n```\n\noutput:\n\n`2 fishes foo`\n\n## Deno Example\n\nAs of `v5` `y18n` supports [Deno](https://github.com/denoland/deno):\n\n```typescript\nimport y18n from \"https://deno.land/x/y18n/deno.ts\";\n\nconst __ = y18n({\n  locale: 'pirate',\n  directory: './test/locales'\n}).__\n\nconsole.info(__`Hi, ${'Ben'} ${'Coe'}!`)\n```\n\nYou will need to run with `--allow-read` to load alternative locales.\n\n## JSON Language Files\n\nThe JSON language files should be stored in a `./locales` folder.\nFile names correspond to locales, e.g., `en.json`, `pirate.json`.\n\nWhen strings are observed for the first time they will be\nadded to the JSON file corresponding to the current locale.\n\n## Methods\n\n### require('y18n')(config)\n\nCreate an instance of y18n with the config provided, options include:\n\n* `directory`: the locale directory, default `./locales`.\n* `updateFiles`: should newly observed strings be updated in file, default `true`.\n* `locale`: what locale should be used.\n* `fallbackToLanguage`: should fallback to a language-only file (e.g. `en.json`)\n  be allowed if a file matching the locale does not exist (e.g. `en_US.json`),\n  default `true`.\n\n### y18n.\\_\\_(str, arg, arg, arg)\n\nPrint a localized string, `%s` will be replaced with `arg`s.\n\nThis function can also be used as a tag for a template literal. You can use it\nlike this: <code>__&#96;hello ${'world'}&#96;</code>. This will be equivalent to\n`__('hello %s', 'world')`.\n\n### y18n.\\_\\_n(singularString, pluralString, count, arg, arg, arg)\n\nPrint a localized string with appropriate pluralization. If `%d` is provided\nin the string, the `count` will replace this placeholder.\n\n### y18n.setLocale(str)\n\nSet the current locale being used.\n\n### y18n.getLocale()\n\nWhat locale is currently being used?\n\n### y18n.updateLocale(obj)\n\nUpdate the current locale with the key value pairs in `obj`.\n\n## Supported Node.js Versions\n\nLibraries in this ecosystem make a best effort to track\n[Node.js' release schedule](https://nodejs.org/en/about/releases/). Here's [a\npost on why we think this is important](https://medium.com/the-node-js-collection/maintainers-should-consider-following-node-js-release-schedule-ab08ed4de71a).\n\n## License\n\nISC\n\n[npm-url]: https://npmjs.org/package/y18n\n[npm-image]: https://img.shields.io/npm/v/y18n.svg\n[standard-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg\n[standard-url]: https://github.com/feross/standard"
+}

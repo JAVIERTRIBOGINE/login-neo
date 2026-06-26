@@ -1,0 +1,1462 @@
+{
+	"name": "es-to-primitive",
+	"versions": {
+		"1.2.1": {
+			"name": "es-to-primitive",
+			"description": "ECMAScript ToPrimitive algorithm. Provides ES5 and ES2015 versions.",
+			"version": "1.2.1",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/ljharb/es-to-primitive#readme",
+			"repository": {
+				"url": "git://github.com/ljharb/es-to-primitive.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/ljharb/es-to-primitive/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"is-symbol": "^1.0.2",
+				"is-callable": "^1.1.4",
+				"is-date-object": "^1.0.1"
+			},
+			"devDependencies": {
+				"tape": "^4.11.0",
+				"covert": "^1.1.1",
+				"eslint": "^6.6.0",
+				"semver": "^6.3.0",
+				"foreach": "^2.0.5",
+				"replace": "^1.1.1",
+				"object-is": "^1.0.1",
+				"has-symbols": "^1.0.0",
+				"object-inspect": "^1.6.0",
+				"@ljharb/eslint-config": "^15.0.0",
+				"function.prototype.name": "^1.1.1"
+			},
+			"keywords": [
+				"primitive",
+				"abstract",
+				"ecmascript",
+				"es5",
+				"es6",
+				"es2015",
+				"toPrimitive",
+				"coerce",
+				"type",
+				"object",
+				"string",
+				"number",
+				"boolean",
+				"symbol",
+				"null",
+				"undefined"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint .",
+				"test": "npm run --silent tests-only",
+				"pretest": "npm run --silent lint",
+				"coverage": "covert test/*.js",
+				"posttest": "npx aud",
+				"tests-only": "node --es-staging test",
+				"coverage-quiet": "covert test/*.js --quiet"
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "es-to-primitive@1.2.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/es-to-primitive/-/es-to-primitive-1.2.1.tgz",
+				"shasum": "e55cd4c9cdc188bcefb03b366c736323fc5c898a",
+				"integrity": "sha512-QCOllgZJtaUo9miYBcLChTUaHNjJF3PYs1VidD7AwiEj1kYxKeQTctLAezAOH5ZKRH0g2IgPn6KwB4IT8iRpvA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIBxhoa9ISYBlfW+Pid7suNb+TGOd9NNzuOWU9oYQi31NAiEA54tLYU0tYeGachhJZfJ4C1nUjKRb3OKjTK5jQSaz4P4="
+					}
+				]
+			},
+			"_npmVersion": "6.12.1",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "fc864b766689e70707a0b86a136b0ec0021e4d17",
+			"testling": {
+				"files": "test",
+				"browsers": [
+					"iexplore/6.0..latest",
+					"firefox/3.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/10.0..latest",
+					"opera/next",
+					"safari/4.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/es-to-primitive_1.2.1_1573280870337_0.8527363876404559",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "13.1.0",
+			"contributors": []
+		},
+		"1.3.0": {
+			"name": "es-to-primitive",
+			"description": "ECMAScript ToPrimitive algorithm. Provides ES5 and ES2015 versions.",
+			"version": "1.3.0",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/ljharb/es-to-primitive#readme",
+			"repository": {
+				"url": "git://github.com/ljharb/es-to-primitive.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/ljharb/es-to-primitive/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"is-symbol": "^1.0.4",
+				"is-callable": "^1.2.7",
+				"is-date-object": "^1.0.5"
+			},
+			"devDependencies": {
+				"nyc": "^10.3.2",
+				"tape": "^5.9.0",
+				"eslint": "=8.8.0",
+				"encoding": "^0.1.13",
+				"for-each": "^0.3.3",
+				"npmignore": "^0.3.1",
+				"object-is": "^1.1.6",
+				"typescript": "next",
+				"@types/tape": "^5.6.4",
+				"auto-changelog": "^2.5.0",
+				"object-inspect": "^1.13.3",
+				"@types/for-each": "^0.3.3",
+				"@ljharb/tsconfig": "^0.2.0",
+				"@types/is-symbol": "^1.0.2",
+				"@types/object-is": "^1.1.0",
+				"es-value-fixtures": "^1.5.0",
+				"@types/is-callable": "^1.1.2",
+				"safe-publish-latest": "^2.0.0",
+				"@arethetypeswrong/cli": "^0.17.0",
+				"@ljharb/eslint-config": "^21.1.1",
+				"@types/is-date-object": "^1.0.4",
+				"@types/object-inspect": "^1.13.0",
+				"function.prototype.name": "^1.1.6",
+				"@types/function.prototype.name": "^1.1.3"
+			},
+			"keywords": [
+				"primitive",
+				"abstract",
+				"ecmascript",
+				"es5",
+				"es6",
+				"es2015",
+				"toPrimitive",
+				"coerce",
+				"type",
+				"object",
+				"string",
+				"number",
+				"boolean",
+				"symbol",
+				"null",
+				"undefined"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint --ext=js,mjs .",
+				"test": "npm run tests-only",
+				"prepack": "npmignore --auto --commentLines=autogenerated",
+				"pretest": "npm run lint",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"postlint": "tsc && attw -P",
+				"posttest": "npx npm@'>=10.2' audit --production",
+				"prepublish": "not-in-publish || npm run prepublishOnly",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\"",
+				"prepublishOnly": "safe-publish-latest"
+			},
+			"publishConfig": {
+				"ignore": [
+					".github/workflows"
+				]
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "es-to-primitive@1.3.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/es-to-primitive/-/es-to-primitive-1.3.0.tgz",
+				"shasum": "96c89c82cc49fd8794a24835ba3e1ff87f214e18",
+				"integrity": "sha512-w+5mJ3GuFL+NjVtJlvydShqE1eN3h3PbI7/5LAsYJP/2qtuMXjfL2LpHSRqo4b4eSF5K/DH1JXKUAHSB2UW50g==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQCwc33QjGDWvT1QUshC6HmKl9K/UgbbwMRMNXgrqdDUyAIhAKKrGt3TnZniRQZP3JfnZGaUEkj0r1lK4gTUZqqyaB6g"
+					}
+				]
+			},
+			"_npmVersion": "10.9.0",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "717f14a340bf0ab635eadc472cf1fe29a6c9240b",
+			"types": "./index.d.ts",
+			"testling": {
+				"files": "test/index.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/es-to-primitive_1.3.0_1732646187387_0.5953143774878684",
+				"host": "s3://npm-registry-packages"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"hideCredit": true,
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false,
+				"startingVersion": "1.2.2"
+			},
+			"_nodeVersion": "23.2.0",
+			"contributors": []
+		},
+		"1.3.1": {
+			"name": "es-to-primitive",
+			"description": "ECMAScript ToPrimitive algorithm. Provides ES5 and ES2015 versions.",
+			"version": "1.3.1",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/ljharb/es-to-primitive#readme",
+			"repository": {
+				"url": "git://github.com/ljharb/es-to-primitive.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/ljharb/es-to-primitive/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"es-errors": "^1.3.0",
+				"is-symbol": "^1.1.1",
+				"is-callable": "^1.2.7",
+				"is-date-object": "^1.1.0",
+				"es-abstract-get": "^1.0.0"
+			},
+			"devDependencies": {
+				"nyc": "^10.3.2",
+				"jiti": "^0.0.0",
+				"tape": "^5.10.1",
+				"eslint": "^10.5.0",
+				"for-each": "^0.3.5",
+				"npmignore": "^0.3.5",
+				"object-is": "^1.1.6",
+				"typescript": "next",
+				"@types/node": "^25.9.3",
+				"auto-changelog": "^2.6.0",
+				"object-inspect": "^1.13.4",
+				"@ljharb/tsconfig": "^0.3.2",
+				"@types/object-is": "^1.1.0",
+				"es-value-fixtures": "^1.7.1",
+				"@types/is-callable": "^1.1.2",
+				"safe-publish-latest": "^2.0.0",
+				"@arethetypeswrong/cli": "^0.18.3",
+				"@ljharb/eslint-config": "^22.2.3",
+				"@types/object-inspect": "^1.13.0",
+				"function.prototype.name": "^1.2.0"
+			},
+			"keywords": [
+				"primitive",
+				"abstract",
+				"ecmascript",
+				"es5",
+				"es6",
+				"es2015",
+				"toPrimitive",
+				"coerce",
+				"type",
+				"object",
+				"string",
+				"number",
+				"boolean",
+				"symbol",
+				"null",
+				"undefined"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint .",
+				"test": "npm run tests-only",
+				"prepack": "npmignore --auto --commentLines=autogenerated",
+				"pretest": "npm run lint",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"postlint": "tsc && attw -P",
+				"posttest": "npx npm@'>=10.2' audit --production",
+				"prepublish": "not-in-publish || npm run prepublishOnly",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\"",
+				"prepublishOnly": "safe-publish-latest"
+			},
+			"publishConfig": {
+				"ignore": [
+					".github/workflows"
+				]
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "es-to-primitive@1.3.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/es-to-primitive/-/es-to-primitive-1.3.1.tgz",
+				"shasum": "abd6ef5b12d7c25bcd9eb3a7ef63e568b451ba4a",
+				"integrity": "sha512-CxN9N56HYfd2m/acc/NOFrZQsN9kU4eh+2kk6A707Kz1krH8tKmfrs5RnftB8WNX80T0NS7vSQsDOlg23diR2g==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEQCIGtodDEbi4EUCmSJAP8/gxQEDOTqNfiAUkU1GyZUH49rAiBhUQ6yFZ755ITzC9HGbLvR4Zsv2L1cXyBRWLiymtgkow=="
+					}
+				]
+			},
+			"_npmVersion": "11.16.0",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com",
+				"approver": {
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "e9ead298a34609698a227ffefc6dfd9829d66185",
+			"types": "./index.d.ts",
+			"testling": {
+				"files": "test/index.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/es-to-primitive_1.3.1_1781577331647_0.7452172626632645",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"hideCredit": true,
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false,
+				"startingVersion": "1.2.2"
+			},
+			"_nodeVersion": "26.3.0",
+			"contributors": []
+		},
+		"1.3.2": {
+			"name": "es-to-primitive",
+			"description": "ECMAScript ToPrimitive algorithm. Provides ES5 and ES2015 versions.",
+			"version": "1.3.2",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/ljharb/es-to-primitive#readme",
+			"repository": {
+				"url": "git://github.com/ljharb/es-to-primitive.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/ljharb/es-to-primitive/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"es-errors": "^1.3.0",
+				"is-symbol": "^1.1.1",
+				"is-callable": "^1.2.7",
+				"is-date-object": "^1.1.0",
+				"es-abstract-get": "^1.0.0"
+			},
+			"devDependencies": {
+				"nyc": "^10.3.2",
+				"jiti": "^0.0.0",
+				"tape": "^5.10.2",
+				"eslint": "^10.5.0",
+				"for-each": "^0.3.5",
+				"npmignore": "^0.3.5",
+				"object-is": "^1.1.6",
+				"typescript": "next",
+				"@types/node": "^12.20.55",
+				"auto-changelog": "^2.6.0",
+				"object-inspect": "^1.13.4",
+				"@ljharb/tsconfig": "^0.3.2",
+				"@types/object-is": "^1.1.0",
+				"es-value-fixtures": "^1.7.1",
+				"@types/is-callable": "^1.1.2",
+				"safe-publish-latest": "^2.0.0",
+				"@arethetypeswrong/cli": "^0.18.4",
+				"@ljharb/eslint-config": "^22.2.3",
+				"@types/object-inspect": "^1.13.0",
+				"function.prototype.name": "^1.2.0"
+			},
+			"keywords": [
+				"primitive",
+				"abstract",
+				"ecmascript",
+				"es5",
+				"es6",
+				"es2015",
+				"toPrimitive",
+				"coerce",
+				"type",
+				"object",
+				"string",
+				"number",
+				"boolean",
+				"symbol",
+				"null",
+				"undefined"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint .",
+				"test": "npm run tests-only",
+				"prepack": "npmignore --auto --commentLines=autogenerated",
+				"pretest": "npm run lint",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"postlint": "tsc && attw -P",
+				"posttest": "npx npm@'>=10.2' audit --production",
+				"prepublish": "not-in-publish || npm run prepublishOnly",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\"",
+				"prepublishOnly": "safe-publish-latest"
+			},
+			"publishConfig": {
+				"ignore": [
+					".github/workflows"
+				]
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "es-to-primitive@1.3.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/es-to-primitive/-/es-to-primitive-1.3.2.tgz",
+				"shasum": "c3ed7ff5e9d8d16f40ef1b7dc474b8bec31c692b",
+				"integrity": "sha512-6/0+20XmtRIlY3DpXm0aThZOgFbUuzSx25/ceQD7aOnd3o6dc2EDRrrMSOOCZl3KDF5PyIpHKDXgip3WYffPdg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEUCIHxoZxupi+cN33qPOI7H+04254gqtgDw9V0Lg73orZ3SAiEApwn/H43535EtgyzsyHh8NHhiajbc4qamndlF4ZDoW+s="
+					}
+				]
+			},
+			"_npmVersion": "11.16.0",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com",
+				"approver": {
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "eeee0bfa78d765eb6b94f5b280bf418819f45632",
+			"types": "./index.d.ts",
+			"testling": {
+				"files": "test/index.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/es-to-primitive_1.3.2_1782416842671_0.5285501819068095",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"hideCredit": true,
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false,
+				"startingVersion": "1.2.2"
+			},
+			"_nodeVersion": "26.3.0",
+			"contributors": []
+		},
+		"1.3.3": {
+			"name": "es-to-primitive",
+			"description": "ECMAScript ToPrimitive algorithm. Provides ES5 and ES2015 versions.",
+			"version": "1.3.3",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/ljharb/es-to-primitive#readme",
+			"repository": {
+				"url": "git://github.com/ljharb/es-to-primitive.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/ljharb/es-to-primitive/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"es-errors": "^1.3.0",
+				"is-symbol": "^1.1.1",
+				"is-callable": "^1.2.7",
+				"is-date-object": "^1.1.0",
+				"es-abstract-get": "^1.0.0"
+			},
+			"devDependencies": {
+				"nyc": "^10.3.2",
+				"jiti": "^0.0.0",
+				"tape": "^5.10.2",
+				"eslint": "^10.5.0",
+				"for-each": "^0.3.5",
+				"npmignore": "^0.3.5",
+				"object-is": "^1.1.6",
+				"typescript": "next",
+				"@types/node": "^12.20.55",
+				"auto-changelog": "^2.6.0",
+				"object-inspect": "^1.13.4",
+				"@ljharb/tsconfig": "^0.3.2",
+				"@types/object-is": "^1.1.0",
+				"es-value-fixtures": "^1.7.1",
+				"@types/is-callable": "^1.1.2",
+				"safe-publish-latest": "^2.0.0",
+				"@arethetypeswrong/cli": "^0.18.4",
+				"@ljharb/eslint-config": "^22.2.3",
+				"@types/object-inspect": "^1.13.0",
+				"function.prototype.name": "^1.2.0"
+			},
+			"keywords": [
+				"primitive",
+				"abstract",
+				"ecmascript",
+				"es5",
+				"es6",
+				"es2015",
+				"toPrimitive",
+				"coerce",
+				"type",
+				"object",
+				"string",
+				"number",
+				"boolean",
+				"symbol",
+				"null",
+				"undefined"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint .",
+				"test": "npm run tests-only",
+				"prepack": "npmignore --auto --commentLines=autogenerated",
+				"pretest": "npm run lint",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"postlint": "tsc && attw -P",
+				"posttest": "npx npm@'>=10.2' audit --production",
+				"prepublish": "not-in-publish || npm run prepublishOnly",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\"",
+				"prepublishOnly": "safe-publish-latest"
+			},
+			"publishConfig": {
+				"ignore": [
+					".github/workflows"
+				]
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "es-to-primitive@1.3.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/es-to-primitive/-/es-to-primitive-1.3.3.tgz",
+				"shasum": "15c4a79558c58e1320436dde1aad728b8ac8b912",
+				"integrity": "sha512-3OJmZ3m4VNhTWEfn/bPv7yoSd/7Kx0MYdm27o7SqgS45l03O4purW3zO4B/4JroAWHluvmQaXqrPXFtT4IKYEw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEUCIQCi7inJmnwx7UZCPtqjm9TltT+/EacZE19BFSzEYpsF2gIgcTK68a3siH9emmMBQTlV0CjiAHL0q/OJ510v1gQ8Q/Q="
+					}
+				]
+			},
+			"_npmVersion": "11.16.0",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com",
+				"approver": {
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "ef65246d6076a3e772b44399a04dd27e46aa52ec",
+			"types": "./index.d.ts",
+			"testling": {
+				"files": "test/index.js"
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/es-to-primitive_1.3.3_1782417546649_0.9941206659740349",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"hideCredit": true,
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false,
+				"startingVersion": "1.2.2"
+			},
+			"_nodeVersion": "26.3.0",
+			"contributors": []
+		},
+		"1.3.4": {
+			"name": "es-to-primitive",
+			"description": "ECMAScript ToPrimitive algorithm. Provides ES5 and ES2015 versions.",
+			"version": "1.3.4",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/ljharb/es-to-primitive#readme",
+			"repository": {
+				"url": "git://github.com/ljharb/es-to-primitive.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/ljharb/es-to-primitive/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"es-errors": "^1.3.0",
+				"is-symbol": "^1.1.1",
+				"is-callable": "^1.2.7",
+				"is-date-object": "^1.1.0",
+				"es-abstract-get": "^1.0.0",
+				"es-define-property": "^1.0.1"
+			},
+			"devDependencies": {
+				"nyc": "^10.3.2",
+				"jiti": "^0.0.0",
+				"tape": "^5.10.2",
+				"eslint": "^10.5.0",
+				"for-each": "^0.3.5",
+				"npmignore": "^0.3.5",
+				"object-is": "^1.1.6",
+				"typescript": "next",
+				"@types/node": "^12.20.55",
+				"auto-changelog": "^2.6.0",
+				"object-inspect": "^1.13.4",
+				"@ljharb/tsconfig": "^0.3.2",
+				"@types/object-is": "^1.1.0",
+				"es-value-fixtures": "^1.7.1",
+				"@types/is-callable": "^1.1.2",
+				"safe-publish-latest": "^2.0.0",
+				"@arethetypeswrong/cli": "^0.18.4",
+				"@ljharb/eslint-config": "^22.2.3",
+				"@types/object-inspect": "^1.13.0",
+				"function.prototype.name": "^1.2.0"
+			},
+			"keywords": [
+				"primitive",
+				"abstract",
+				"ecmascript",
+				"es5",
+				"es6",
+				"es2015",
+				"toPrimitive",
+				"coerce",
+				"type",
+				"object",
+				"string",
+				"number",
+				"boolean",
+				"symbol",
+				"null",
+				"undefined"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint .",
+				"test": "npm run tests-only",
+				"prepack": "npmignore --auto --commentLines=autogenerated",
+				"pretest": "npm run lint",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"postlint": "tsc && attw -P",
+				"posttest": "npx npm@'>=10.2' audit --production",
+				"prepublish": "not-in-publish || npm run prepublishOnly",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\"",
+				"prepublishOnly": "safe-publish-latest"
+			},
+			"publishConfig": {
+				"ignore": [
+					".github/workflows"
+				]
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "es-to-primitive@1.3.4",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/es-to-primitive/-/es-to-primitive-1.3.4.tgz",
+				"shasum": "0c854291cf0d7b439d6b9e5771ea837ffaf1f991",
+				"integrity": "sha512-yPDz7wqpg1/mmHLmS3tcfTfbw5f1eryXvyghYBffGdERwe+mV7ZcWzTR8LR17Kvqt3qfPurjlonmnq3MKXIOXw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEUCID8v7DZb+cCbuA8IpqEPV3lK/8TKM+InHHAx/en56YGSAiEA3LoshyfLiWvCbClEYJ/5AVzADMHZmb60N4vHjkyMEUY="
+					}
+				]
+			},
+			"_npmVersion": "11.16.0",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com",
+				"approver": {
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "f33dccb3a8950f4abc67f43bec81f776da9cdf13",
+			"types": "./index.d.ts",
+			"testling": {
+				"files": "test/index.js"
+			},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages-npm-production",
+				"tmp": "tmp/es-to-primitive_1.3.4_1782438786855_0.6370821595021947"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"hideCredit": true,
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false,
+				"startingVersion": "1.2.2"
+			},
+			"_nodeVersion": "26.3.0",
+			"contributors": []
+		},
+		"1.0.0": {
+			"name": "es-to-primitive",
+			"description": "ECMAScript ToPrimitive algorithm. Provides ES5 and ES6 versions.",
+			"version": "1.0.0",
+			"author": {
+				"name": "Jordan Harband"
+			},
+			"homepage": "https://github.com/ljharb/es-to-primitive",
+			"repository": {
+				"url": "git://github.com/ljharb/es-to-primitive.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/ljharb/es-to-primitive/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"is-symbol": "^1.0.1",
+				"is-callable": "^1.0.4",
+				"is-date-object": "^1.0.0"
+			},
+			"devDependencies": {
+				"nsp": "^1.0.1",
+				"jscs": "^1.11.3",
+				"tape": "^3.5.0",
+				"covert": "^1.0.1",
+				"eslint": "^0.17.0",
+				"semver": "^4.3.1",
+				"foreach": "^2.0.5",
+				"replace": "^0.3.0",
+				"object-is": "^1.0.1",
+				"editorconfig-tools": "^0.1.1",
+				"make-arrow-function": "^1.0.0",
+				"make-generator-function": "^1.1.0"
+			},
+			"keywords": [
+				"primitive",
+				"abstract",
+				"ecmascript",
+				"es5",
+				"es6",
+				"toPrimitive",
+				"coerce",
+				"type",
+				"object"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"jscs": "jscs test/*.js *.js",
+				"lint": "npm run jscs && npm run eslint",
+				"test": "npm run lint && node --harmony --es-staging test && npm run security",
+				"eslint": "eslint test/*.js *.js",
+				"eccheck": "editorconfig-tools check *.js **/*.js > /dev/null",
+				"coverage": "covert test/*.js",
+				"security": "nsp package",
+				"coverage-quiet": "covert test/*.js --quiet"
+			},
+			"lastModified": 0,
+			"_id": "es-to-primitive@1.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/es-to-primitive/-/es-to-primitive-1.0.0.tgz",
+				"shasum": "469bea3a1b3b41f2e2af0a8c9c8c75a1ac8d517f",
+				"integrity": "sha512-003toMeRDcK1JwRQ9hOHciqH+r0qio/4l090aJP4Q3jStN/BmkVgJnUCmiU6Bg+txJGL94oYVQTKrYtGorTubA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQC/1ydd++QWFdhOoguSoP4aFBz97emTlqXJiSFcve6QJQIgU0hmcA28AwVRXMfQ8CZHyqFOf8KWguCUZ1dByw3vr7Y="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "2.7.2",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"gitHead": "cf3f44b793aaa5c340e1da4b49d37fb5f2dd413d",
+			"testling": {
+				"files": "test.js",
+				"browsers": [
+					"iexplore/6.0..latest",
+					"firefox/3.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/10.0..latest",
+					"opera/next",
+					"safari/4.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_shasum": "469bea3a1b3b41f2e2af0a8c9c8c75a1ac8d517f",
+			"_nodeVersion": "1.5.1",
+			"contributors": []
+		},
+		"1.1.0": {
+			"name": "es-to-primitive",
+			"description": "ECMAScript ToPrimitive algorithm. Provides ES5 and ES6 versions.",
+			"version": "1.1.0",
+			"author": {
+				"name": "Jordan Harband"
+			},
+			"homepage": "https://github.com/ljharb/es-to-primitive#readme",
+			"repository": {
+				"url": "git://github.com/ljharb/es-to-primitive.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/ljharb/es-to-primitive/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"is-symbol": "^1.0.1",
+				"is-callable": "^1.1.1",
+				"is-date-object": "^1.0.1"
+			},
+			"devDependencies": {
+				"nsp": "^2.2.0",
+				"jscs": "^2.7.0",
+				"tape": "^4.4.0",
+				"covert": "^1.1.0",
+				"eslint": "^1.10.3",
+				"semver": "^5.1.0",
+				"foreach": "^2.0.5",
+				"replace": "^0.3.0",
+				"object-is": "^1.0.1",
+				"@ljharb/eslint-config": "^1.6.0"
+			},
+			"keywords": [
+				"primitive",
+				"abstract",
+				"ecmascript",
+				"es5",
+				"es6",
+				"toPrimitive",
+				"coerce",
+				"type",
+				"object"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"jscs": "jscs test/*.js *.js",
+				"lint": "npm run jscs && npm run eslint",
+				"test": "npm run lint && npm run tests-only && npm run security",
+				"eslint": "eslint test/*.js *.js",
+				"coverage": "covert test/*.js",
+				"security": "nsp check",
+				"tests-only": "node --es-staging test",
+				"coverage-quiet": "covert test/*.js --quiet"
+			},
+			"lastModified": 0,
+			"_id": "es-to-primitive@1.1.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/es-to-primitive/-/es-to-primitive-1.1.0.tgz",
+				"shasum": "0f8de4e23e86abb53a1a079de63bd98ab25ee983",
+				"integrity": "sha512-1v1In8XPra1MpmxdNv2nPZIW2vGrA4/ePPsZgn/EfPS6Voj8sqidt98nhcRZI2u/EkvcnoourE086KqzYJvrSA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQCgUO3Exf6HpEY9hgn2DkOgUssmfYX6kSaoshs77fqKawIhAOO309Q4QJgliUS4YDRV5/sPmYuC05/Bz6jcJDtkbpgt"
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "3.3.12",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"gitHead": "4a15be41802efab7f63836a567b4012d5b48a4d0",
+			"testling": {
+				"files": "test",
+				"browsers": [
+					"iexplore/6.0..latest",
+					"firefox/3.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/10.0..latest",
+					"opera/next",
+					"safari/4.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_shasum": "0f8de4e23e86abb53a1a079de63bd98ab25ee983",
+			"_nodeVersion": "5.3.0",
+			"contributors": []
+		},
+		"1.0.1": {
+			"name": "es-to-primitive",
+			"description": "ECMAScript ToPrimitive algorithm. Provides ES5 and ES6 versions.",
+			"version": "1.0.1",
+			"author": {
+				"name": "Jordan Harband"
+			},
+			"homepage": "https://github.com/ljharb/es-to-primitive#readme",
+			"repository": {
+				"url": "git://github.com/ljharb/es-to-primitive.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/ljharb/es-to-primitive/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"is-symbol": "^1.0.1",
+				"is-callable": "^1.1.1",
+				"is-date-object": "^1.0.1"
+			},
+			"devDependencies": {
+				"nsp": "^2.2.0",
+				"jscs": "^2.7.0",
+				"tape": "^4.4.0",
+				"covert": "^1.1.0",
+				"eslint": "^1.10.3",
+				"semver": "^5.1.0",
+				"foreach": "^2.0.5",
+				"replace": "^0.3.0",
+				"object-is": "^1.0.1",
+				"@ljharb/eslint-config": "^1.6.0"
+			},
+			"keywords": [
+				"primitive",
+				"abstract",
+				"ecmascript",
+				"es5",
+				"es6",
+				"toPrimitive",
+				"coerce",
+				"type",
+				"object"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"jscs": "jscs test/*.js *.js",
+				"lint": "npm run jscs && npm run eslint",
+				"test": "npm run lint && npm run tests-only && npm run security",
+				"eslint": "eslint test/*.js *.js",
+				"coverage": "covert test/*.js",
+				"security": "nsp check",
+				"tests-only": "node --es-staging test",
+				"coverage-quiet": "covert test/*.js --quiet"
+			},
+			"lastModified": 0,
+			"_id": "es-to-primitive@1.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/es-to-primitive/-/es-to-primitive-1.0.1.tgz",
+				"shasum": "a3232761b89e025ed982f5b097dfb7371d70023f",
+				"integrity": "sha512-0n5UCxsSvGYOS82iaXZNN0VzuO4tcZob+c6jDFwcSe98Q1uIu+rb+0n49umLGuQVsi/lQCPzAVtBAutXKB9Raw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDO2rTrxEvslSB0KUTQ5xpZZbTUqobVNy6OaJBOhPAX0wIhAO52i3XvmvkGzm4jPZ6QgK+e9w6u8r4FN36LJaDNZ2JT"
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "3.3.12",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"gitHead": "33543b6d593197d9f5d9db3bbe0953f330a639ad",
+			"testling": {
+				"files": "test",
+				"browsers": [
+					"iexplore/6.0..latest",
+					"firefox/3.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/10.0..latest",
+					"opera/next",
+					"safari/4.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_shasum": "a3232761b89e025ed982f5b097dfb7371d70023f",
+			"_nodeVersion": "5.3.0",
+			"contributors": []
+		},
+		"1.1.1": {
+			"name": "es-to-primitive",
+			"description": "ECMAScript ToPrimitive algorithm. Provides ES5 and ES6 versions.",
+			"version": "1.1.1",
+			"author": {
+				"name": "Jordan Harband"
+			},
+			"homepage": "https://github.com/ljharb/es-to-primitive#readme",
+			"repository": {
+				"url": "git://github.com/ljharb/es-to-primitive.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/ljharb/es-to-primitive/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"is-symbol": "^1.0.1",
+				"is-callable": "^1.1.1",
+				"is-date-object": "^1.0.1"
+			},
+			"devDependencies": {
+				"nsp": "^2.2.0",
+				"jscs": "^2.7.0",
+				"tape": "^4.4.0",
+				"covert": "^1.1.0",
+				"eslint": "^1.10.3",
+				"semver": "^5.1.0",
+				"foreach": "^2.0.5",
+				"replace": "^0.3.0",
+				"object-is": "^1.0.1",
+				"@ljharb/eslint-config": "^1.6.1"
+			},
+			"keywords": [
+				"primitive",
+				"abstract",
+				"ecmascript",
+				"es5",
+				"es6",
+				"toPrimitive",
+				"coerce",
+				"type",
+				"object"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"jscs": "jscs test/*.js *.js",
+				"lint": "npm run jscs && npm run eslint",
+				"test": "npm run lint && npm run tests-only && npm run security",
+				"eslint": "eslint test/*.js *.js",
+				"coverage": "covert test/*.js",
+				"security": "nsp check",
+				"tests-only": "node --es-staging test",
+				"coverage-quiet": "covert test/*.js --quiet"
+			},
+			"lastModified": 0,
+			"_id": "es-to-primitive@1.1.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/es-to-primitive/-/es-to-primitive-1.1.1.tgz",
+				"shasum": "45355248a88979034b6792e19bb81f2b7975dd0d",
+				"integrity": "sha512-wXsac552n5sYhgVjyFvhXLunXZFPOiT/WgP7hFhUPU5gtaUQpm9OryPwlWQUS3Qptk8iZzY/2T3J62GtC/toSw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDzBU8f7ODHcqmNruRr+CKngswdcpkwbK0MXkkY8fsZ8wIhAPpx75wXMnUCRjGt4XM0iKGeFNlHOWOXIOylcLs5fOKx"
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "3.3.12",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"gitHead": "56cd0400062c37e3427c59ddf7852972cf14e6fe",
+			"testling": {
+				"files": "test",
+				"browsers": [
+					"iexplore/6.0..latest",
+					"firefox/3.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/10.0..latest",
+					"opera/next",
+					"safari/4.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_shasum": "45355248a88979034b6792e19bb81f2b7975dd0d",
+			"_nodeVersion": "5.3.0",
+			"contributors": []
+		},
+		"1.2.0": {
+			"name": "es-to-primitive",
+			"description": "ECMAScript ToPrimitive algorithm. Provides ES5 and ES2015 versions.",
+			"version": "1.2.0",
+			"author": {
+				"name": "Jordan Harband"
+			},
+			"homepage": "https://github.com/ljharb/es-to-primitive#readme",
+			"repository": {
+				"url": "git://github.com/ljharb/es-to-primitive.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/ljharb/es-to-primitive/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"is-symbol": "^1.0.2",
+				"is-callable": "^1.1.4",
+				"is-date-object": "^1.0.1"
+			},
+			"devDependencies": {
+				"nsp": "^3.2.1",
+				"jscs": "^3.0.7",
+				"tape": "^4.9.1",
+				"covert": "^1.1.0",
+				"eslint": "^5.6.0",
+				"semver": "^5.5.1",
+				"foreach": "^2.0.5",
+				"replace": "^1.0.0",
+				"object-is": "^1.0.1",
+				"object-inspect": "^1.6.0",
+				"@ljharb/eslint-config": "^13.0.0",
+				"function.prototype.name": "^1.1.0"
+			},
+			"keywords": [
+				"primitive",
+				"abstract",
+				"ecmascript",
+				"es5",
+				"es6",
+				"es2015",
+				"toPrimitive",
+				"coerce",
+				"type",
+				"object",
+				"string",
+				"number",
+				"boolean",
+				"symbol",
+				"null",
+				"undefined"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"jscs": "jscs test/*.js *.js",
+				"lint": "npm run --silent jscs && npm run --silent eslint",
+				"test": "npm run --silent tests-only",
+				"eslint": "eslint test/*.js *.js",
+				"pretest": "npm run --silent lint",
+				"coverage": "covert test/*.js",
+				"posttest": "npm run --silent security",
+				"security": "nsp check",
+				"tests-only": "node --es-staging test",
+				"coverage-quiet": "covert test/*.js --quiet"
+			},
+			"lastModified": 0,
+			"_id": "es-to-primitive@1.2.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/es-to-primitive/-/es-to-primitive-1.2.0.tgz",
+				"shasum": "edf72478033456e8dda8ef09e00ad9650707f377",
+				"integrity": "sha512-qZryBOJjV//LaxLTV6UC//WewneB3LcXOL9NP++ozKVXsIIIpm/2c13UDiD9Jp2eThsecw9m3jPqDwTyobcdbg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCOVGwCPqKfD8il8bOmXx8kSTEqlKb/seB1gcvU/FCxbQIgRixHRVo7HNJyP7BjMJv3euBbrTw5coXaHzlXcDly3Ew="
+					}
+				]
+			},
+			"_npmVersion": "6.4.1",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "2a4bca5456480149ca8cdc8e4529b0fa18390aa7",
+			"testling": {
+				"files": "test",
+				"browsers": [
+					"iexplore/6.0..latest",
+					"firefox/3.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/10.0..latest",
+					"opera/next",
+					"safari/4.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/es-to-primitive_1.2.0_1538070806741_0.6483493775372577",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "10.11.0",
+			"contributors": []
+		}
+	},
+	"time": {
+		"created": "2015-03-19T09:39:36.352Z",
+		"1.2.1": "2019-11-09T06:27:50.488Z",
+		"1.3.0": "2024-11-26T18:36:27.571Z",
+		"1.3.1": "2026-06-16T02:35:31.720Z",
+		"1.3.2": "2026-06-25T19:47:22.760Z",
+		"1.3.3": "2026-06-25T19:59:06.728Z",
+		"1.3.4": "2026-06-26T01:53:06.939Z",
+		"modified": "2026-06-26T01:53:07.070Z",
+		"1.0.0": "2015-03-19T09:39:36.352Z",
+		"1.1.0": "2015-12-27T18:22:15.885Z",
+		"1.0.1": "2016-01-04T01:34:53.797Z",
+		"1.1.1": "2016-01-04T02:05:46.641Z",
+		"1.2.0": "2018-09-27T17:53:26.933Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "1.3.4"
+	},
+	"_uplinks": {
+		"artifactory-sabadell": {
+			"etag": "4be506efa34cc3f7d62b68db4394909b530f9ded",
+			"fetched": 1782459825158
+		}
+	},
+	"_distfiles": {
+		"es-to-primitive-1.2.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/es-to-primitive/-/es-to-primitive-1.2.1.tgz",
+			"sha": "e55cd4c9cdc188bcefb03b366c736323fc5c898a",
+			"registry": "artifactory-sabadell"
+		},
+		"es-to-primitive-1.3.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/es-to-primitive/-/es-to-primitive-1.3.0.tgz",
+			"sha": "96c89c82cc49fd8794a24835ba3e1ff87f214e18",
+			"registry": "artifactory-sabadell"
+		},
+		"es-to-primitive-1.3.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/es-to-primitive/-/es-to-primitive-1.3.1.tgz",
+			"sha": "abd6ef5b12d7c25bcd9eb3a7ef63e568b451ba4a",
+			"registry": "artifactory-sabadell"
+		},
+		"es-to-primitive-1.3.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/es-to-primitive/-/es-to-primitive-1.3.2.tgz",
+			"sha": "c3ed7ff5e9d8d16f40ef1b7dc474b8bec31c692b",
+			"registry": "artifactory-sabadell"
+		},
+		"es-to-primitive-1.3.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/es-to-primitive/-/es-to-primitive-1.3.3.tgz",
+			"sha": "15c4a79558c58e1320436dde1aad728b8ac8b912",
+			"registry": "artifactory-sabadell"
+		},
+		"es-to-primitive-1.3.4.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/es-to-primitive/-/es-to-primitive-1.3.4.tgz",
+			"sha": "0c854291cf0d7b439d6b9e5771ea837ffaf1f991",
+			"registry": "artifactory-sabadell"
+		},
+		"es-to-primitive-1.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/es-to-primitive/-/es-to-primitive-1.0.0.tgz",
+			"sha": "469bea3a1b3b41f2e2af0a8c9c8c75a1ac8d517f",
+			"registry": "artifactory-sabadell"
+		},
+		"es-to-primitive-1.1.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/es-to-primitive/-/es-to-primitive-1.1.0.tgz",
+			"sha": "0f8de4e23e86abb53a1a079de63bd98ab25ee983",
+			"registry": "artifactory-sabadell"
+		},
+		"es-to-primitive-1.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/es-to-primitive/-/es-to-primitive-1.0.1.tgz",
+			"sha": "a3232761b89e025ed982f5b097dfb7371d70023f",
+			"registry": "artifactory-sabadell"
+		},
+		"es-to-primitive-1.1.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/es-to-primitive/-/es-to-primitive-1.1.1.tgz",
+			"sha": "45355248a88979034b6792e19bb81f2b7975dd0d",
+			"registry": "artifactory-sabadell"
+		},
+		"es-to-primitive-1.2.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/es-to-primitive/-/es-to-primitive-1.2.0.tgz",
+			"sha": "edf72478033456e8dda8ef09e00ad9650707f377",
+			"registry": "artifactory-sabadell"
+		}
+	},
+	"_attachments": {},
+	"_rev": "1-6210ad22c8ca78db",
+	"_id": "es-to-primitive",
+	"readme": "# es-to-primitive <sup>[![Version Badge][npm-version-svg]][package-url]</sup>\n\n[![github actions][actions-image]][actions-url]\n[![coverage][codecov-image]][codecov-url]\n[![dependency status][deps-svg]][deps-url]\n[![dev dependency status][dev-deps-svg]][dev-deps-url]\n[![License][license-image]][license-url]\n[![Downloads][downloads-image]][downloads-url]\n\n[![npm badge][npm-badge-png]][package-url]\n\nECMAScript “ToPrimitive” algorithm. Provides ES5 and ES2015 versions.\nWhen different versions of the spec conflict, the default export will be the latest version of the abstract operation.\nAlternative versions will also be available under an `es5`/`es2015` exported property if you require a specific version.\n\n## Example\n\n```js\nvar toPrimitive = require('es-to-primitive');\nvar assert = require('assert');\n\nassert(toPrimitive(function () {}) === String(function () {}));\n\nvar date = new Date();\nassert(toPrimitive(date) === String(date));\n\nassert(toPrimitive({ valueOf: function () { return 3; } }) === 3);\n\nassert(toPrimitive(['a', 'b', 3]) === String(['a', 'b', 3]));\n\nvar sym = Symbol();\nassert(toPrimitive(Object(sym)) === sym);\n```\n\n## Tests\nSimply clone the repo, `npm install`, and run `npm test`\n\n[package-url]: https://npmjs.org/package/es-to-primitive\n[npm-version-svg]: https://versionbadg.es/ljharb/es-to-primitive.svg\n[deps-svg]: https://david-dm.org/ljharb/es-to-primitive.svg\n[deps-url]: https://david-dm.org/ljharb/es-to-primitive\n[dev-deps-svg]: https://david-dm.org/ljharb/es-to-primitive/dev-status.svg\n[dev-deps-url]: https://david-dm.org/ljharb/es-to-primitive#info=devDependencies\n[npm-badge-png]: https://nodei.co/npm/es-to-primitive.png?downloads=true&stars=true\n[license-image]: https://img.shields.io/npm/l/es-to-primitive.svg\n[license-url]: LICENSE\n[downloads-image]: https://img.shields.io/npm/dm/es-to-primitive.svg\n[downloads-url]: https://npm-stat.com/charts.html?package=es-to-primitive\n[codecov-image]: https://codecov.io/gh/ljharb/es-to-primitive/branch/main/graphs/badge.svg\n[codecov-url]: https://app.codecov.io/gh/ljharb/es-to-primitive/\n[actions-image]: https://img.shields.io/github/check-runs/ljharb/es-to-primitive/main\n[actions-url]: https://github.com/ljharb/es-to-primitive/actions"
+}

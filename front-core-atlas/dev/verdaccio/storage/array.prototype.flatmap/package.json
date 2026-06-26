@@ -1,0 +1,1944 @@
+{
+	"name": "array.prototype.flatmap",
+	"versions": {
+		"1.2.1": {
+			"name": "array.prototype.flatmap",
+			"description": "An ESnext spec-compliant `Array.prototype.flatMap` shim/polyfill/replacement that works as far down as ES3.",
+			"version": "1.2.1",
+			"author": {
+				"url": "http://ljharb.codes",
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/es-shims/Array.prototype.flatMap#readme",
+			"repository": {
+				"url": "git://github.com/es-shims/Array.prototype.flatMap.git",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"url": "http://ljharb.codes",
+					"name": "Jordan Harband",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/es-shims/Array.prototype.flatMap/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index",
+			"dependencies": {
+				"es-abstract": "^1.10.0",
+				"function-bind": "^1.1.1",
+				"define-properties": "^1.1.2"
+			},
+			"devDependencies": {
+				"nsp": "^3.2.1",
+				"nyc": "^10.3.2",
+				"tape": "^4.9.0",
+				"covert": "^1.1.0",
+				"eslint": "^4.18.1",
+				"evalmd": "^0.0.17",
+				"foreach": "^2.0.5",
+				"@es-shims/api": "^2.1.2",
+				"object-inspect": "^1.5.0",
+				"safe-publish-latest": "^1.1.1",
+				"@ljharb/eslint-config": "^12.2.1"
+			},
+			"keywords": [
+				"Array.prototype.flatMap",
+				"flatMap",
+				"array",
+				"ESnext",
+				"shim",
+				"polyfill",
+				"flatten",
+				"Array.prototype.flatten",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint test/*.js *.js",
+				"test": "npm run --silent tests-only",
+				"pretest": "npm run --silent lint && evalmd README.md",
+				"coverage": "nyc npm run tests-only",
+				"posttest": "npm run --silent security",
+				"security": "nsp check",
+				"prepublish": "safe-publish-latest",
+				"tests-only": "npm run --silent test:shimmed && npm run --silent test:module",
+				"test:module": "node test",
+				"test:shimmed": "node test/shimmed",
+				"pretests-only": "es-shim-api --bound"
+			},
+			"lastModified": 0,
+			"_id": "array.prototype.flatmap@1.2.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array.prototype.flatmap/-/array.prototype.flatmap-1.2.1.tgz",
+				"shasum": "3103cd4826ef90019c9b0a4839b2535fa6faf4e9",
+				"integrity": "sha512-i18e2APdsiezkcqDyZor78Pbfjfds3S94dG6dgIV2ZASJaUf1N0dz2tGdrmwrmlZuNUgxH+wz6Z0zYVH2c5xzQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDo+XFqloczL2V0RV6W7c+SOjsRliEjKVasYxNMJqN4nQIgWeAQlnZGsLzxaPOyPWFoVxslC9q/ze4fo8p5sn5gRFA="
+					}
+				]
+			},
+			"_npmVersion": "5.6.0",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "399547c49522195d83a07a38de2f3ea1042c84da",
+			"testling": {
+				"files": [
+					"test/index.js",
+					"test/shimmed.js"
+				],
+				"browsers": [
+					"iexplore/6.0..latest",
+					"firefox/3.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/10.0..latest",
+					"opera/next",
+					"safari/4.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/array.prototype.flatmap_1.2.1_1519458221229_0.05513180159146125",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "9.6.1"
+		},
+		"1.3.0": {
+			"name": "array.prototype.flatmap",
+			"description": "An ES2019 spec-compliant `Array.prototype.flatMap` shim/polyfill/replacement that works as far down as ES3.",
+			"version": "1.3.0",
+			"author": {
+				"url": "http://ljharb.codes",
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/es-shims/Array.prototype.flatMap#readme",
+			"repository": {
+				"url": "git://github.com/es-shims/Array.prototype.flatMap.git",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"url": "http://ljharb.codes",
+					"name": "Jordan Harband",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/es-shims/Array.prototype.flatMap/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index",
+			"dependencies": {
+				"call-bind": "^1.0.2",
+				"es-abstract": "^1.19.2",
+				"define-properties": "^1.1.3",
+				"es-shim-unscopables": "^1.0.0"
+			},
+			"devDependencies": {
+				"aud": "^2.0.0",
+				"nyc": "^10.3.2",
+				"tape": "^5.5.3",
+				"covert": "^1.1.1",
+				"eslint": "=8.8.0",
+				"evalmd": "^0.0.19",
+				"foreach": "^2.0.5",
+				"@es-shims/api": "^2.2.3",
+				"auto-changelog": "^2.4.0",
+				"object-inspect": "^1.12.0",
+				"has-strict-mode": "^1.0.1",
+				"safe-publish-latest": "^2.0.0",
+				"@ljharb/eslint-config": "^21.0.0"
+			},
+			"keywords": [
+				"Array.prototype.flatMap",
+				"flatMap",
+				"array",
+				"ESnext",
+				"shim",
+				"polyfill",
+				"flatten",
+				"Array.prototype.flatten",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint --ext=js,mjs .",
+				"test": "npm run tests-only",
+				"prelint": "evalmd README.md",
+				"pretest": "npm run lint",
+				"postlint": "es-shim-api --bound",
+				"posttest": "aud --production",
+				"prepublish": "not-in-publish || npm run prepublishOnly",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"prepublishOnly": "safe-publish-latest"
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "array.prototype.flatmap@1.3.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array.prototype.flatmap/-/array.prototype.flatmap-1.3.0.tgz",
+				"shasum": "a7e8ed4225f4788a70cd910abcf0791e76a5534f",
+				"integrity": "sha512-PZC9/8TKAIxcWKdyeb77EzULHPrIX/tIZebLJUQOMR1OwYosT8yggdfWScfTBCDj5utONvOuPQQumYsU2ULbkg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCTRWwFu3JkrQFnGVNmc8oM+qKOSXz9lQW3uQJSwOVegwIgHcVIn1le2JaDnqgY3Ip94jRCs2/2/Hpz/1h2f8jc1U8="
+					}
+				]
+			},
+			"_npmVersion": "8.3.1",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "6ed2ebbea158a417b555fde09272f25f227fd623",
+			"greenkeeper": {
+				"ignore": [
+					"nyc"
+				]
+			},
+			"testling": {
+				"files": [
+					"test/index.js",
+					"test/shimmed.js"
+				],
+				"browsers": [
+					"iexplore/6.0..latest",
+					"firefox/3.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/10.0..latest",
+					"opera/next",
+					"safari/4.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/array.prototype.flatmap_1.3.0_1649720901342_0.2889249356756256",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "17.9.0"
+		},
+		"1.2.2": {
+			"name": "array.prototype.flatmap",
+			"description": "An ESnext spec-compliant `Array.prototype.flatMap` shim/polyfill/replacement that works as far down as ES3.",
+			"version": "1.2.2",
+			"author": {
+				"url": "http://ljharb.codes",
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/es-shims/Array.prototype.flatMap#readme",
+			"repository": {
+				"url": "git://github.com/es-shims/Array.prototype.flatMap.git",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"url": "http://ljharb.codes",
+					"name": "Jordan Harband",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/es-shims/Array.prototype.flatMap/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index",
+			"dependencies": {
+				"es-abstract": "^1.15.0",
+				"function-bind": "^1.1.1",
+				"define-properties": "^1.1.3"
+			},
+			"devDependencies": {
+				"nyc": "^10.3.2",
+				"tape": "^4.11.0",
+				"covert": "^1.1.1",
+				"eslint": "^6.5.1",
+				"evalmd": "0.0.19",
+				"foreach": "^2.0.5",
+				"@es-shims/api": "^2.1.2",
+				"object-inspect": "^1.6.0",
+				"safe-publish-latest": "^1.1.3",
+				"@ljharb/eslint-config": "^14.1.0"
+			},
+			"keywords": [
+				"Array.prototype.flatMap",
+				"flatMap",
+				"array",
+				"ESnext",
+				"shim",
+				"polyfill",
+				"flatten",
+				"Array.prototype.flatten",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "es-shims-owner",
+					"email": "ljharb+esshims@gmail.com"
+				},
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint test/*.js *.js",
+				"test": "npm run --silent tests-only",
+				"pretest": "npm run --silent lint && evalmd README.md",
+				"coverage": "nyc npm run tests-only",
+				"posttest": "npx aud --production",
+				"prepublish": "safe-publish-latest",
+				"tests-only": "npm run --silent test:shimmed && npm run --silent test:module",
+				"test:module": "node test",
+				"test:shimmed": "node test/shimmed",
+				"pretests-only": "es-shim-api --bound"
+			},
+			"lastModified": 0,
+			"_id": "array.prototype.flatmap@1.2.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array.prototype.flatmap/-/array.prototype.flatmap-1.2.2.tgz",
+				"shasum": "28d621d351c19a62b84331b01669395ef6cef4c4",
+				"integrity": "sha512-ZZtPLE74KNE+0XcPv/vQmcivxN+8FhwOLvt2udHauO0aDEpsXDQrmd5HuJGpgPVyaV8HvkDPWnJ2iaem0oCKtA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDVlt3T6zi59Jjv1Bdwqc1/7URS6xJJzMNsDTn1gNK/ZQIgUVrR7/vXXFIcbX6CY4kLoHm7ZJezD+TOFqUFdQqpeEc="
+					}
+				]
+			},
+			"_npmVersion": "6.11.3",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "baf90f4a34b58a4f60b38335ffdce59b237822be",
+			"testling": {
+				"files": [
+					"test/index.js",
+					"test/shimmed.js"
+				],
+				"browsers": [
+					"iexplore/6.0..latest",
+					"firefox/3.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/10.0..latest",
+					"opera/next",
+					"safari/4.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/array.prototype.flatmap_1.2.2_1570769232430_0.29084436220576526",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "12.11.0"
+		},
+		"1.3.1": {
+			"name": "array.prototype.flatmap",
+			"description": "An ES2019 spec-compliant `Array.prototype.flatMap` shim/polyfill/replacement that works as far down as ES3.",
+			"version": "1.3.1",
+			"author": {
+				"url": "http://ljharb.codes",
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/es-shims/Array.prototype.flatMap#readme",
+			"repository": {
+				"url": "git://github.com/es-shims/Array.prototype.flatMap.git",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"url": "http://ljharb.codes",
+					"name": "Jordan Harband",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/es-shims/Array.prototype.flatMap/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index",
+			"dependencies": {
+				"call-bind": "^1.0.2",
+				"es-abstract": "^1.20.4",
+				"define-properties": "^1.1.4",
+				"es-shim-unscopables": "^1.0.0"
+			},
+			"devDependencies": {
+				"aud": "^2.0.1",
+				"nyc": "^10.3.2",
+				"tape": "^5.6.1",
+				"covert": "^1.1.1",
+				"eslint": "=8.8.0",
+				"evalmd": "^0.0.19",
+				"for-each": "^0.3.3",
+				"npmignore": "^0.3.0",
+				"in-publish": "^2.0.1",
+				"@es-shims/api": "^2.2.3",
+				"auto-changelog": "^2.4.0",
+				"object-inspect": "^1.12.2",
+				"has-strict-mode": "^1.0.1",
+				"safe-publish-latest": "^2.0.0",
+				"@ljharb/eslint-config": "^21.0.0"
+			},
+			"keywords": [
+				"Array.prototype.flatMap",
+				"flatMap",
+				"array",
+				"ESnext",
+				"shim",
+				"polyfill",
+				"flatten",
+				"Array.prototype.flatten",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint --ext=js,mjs .",
+				"test": "npm run tests-only",
+				"prelint": "evalmd README.md",
+				"prepack": "npmignore --auto --commentLines=autogenerated",
+				"pretest": "npm run lint",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"postlint": "es-shim-api --bound",
+				"posttest": "aud --production",
+				"prepublish": "not-in-publish || npm run prepublishOnly",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\"",
+				"prepublishOnly": "safe-publish-latest"
+			},
+			"publishConfig": {
+				"ignore": [
+					".github/workflows"
+				]
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "array.prototype.flatmap@1.3.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array.prototype.flatmap/-/array.prototype.flatmap-1.3.1.tgz",
+				"shasum": "1aae7903c2100433cb8261cd4ed310aab5c4a183",
+				"integrity": "sha512-8UGn9O1FDVvMNB0UlLv4voxRMze7+FpHyF5mSMRjWHUMlpoDViniy05870VlxhfgTnLbpuwTzvD76MTtWxB/mQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIDFjU6L/dsMoRfKss8u/xsRy5W9Y3WkV+UNMrrbhbHtbAiEAkXnzx4DNGNz5YqCSHDoP2jmzW/ArbnA0M/w5QYBfvzs="
+					}
+				]
+			},
+			"_npmVersion": "8.19.2",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "34aafc85b65dcf2ea35d1be6a7ef48b498fc5c7e",
+			"testling": {
+				"files": [
+					"test/index.js",
+					"test/shimmed.js"
+				],
+				"browsers": [
+					"iexplore/6.0..latest",
+					"firefox/3.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/10.0..latest",
+					"opera/next",
+					"safari/4.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/array.prototype.flatmap_1.3.1_1667453982392_0.7004215061669057",
+				"host": "s3://npm-registry-packages"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"hideCredit": true,
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false,
+				"startingVersion": "1.3.1"
+			},
+			"_nodeVersion": "19.0.0"
+		},
+		"1.2.3": {
+			"name": "array.prototype.flatmap",
+			"description": "An ESnext spec-compliant `Array.prototype.flatMap` shim/polyfill/replacement that works as far down as ES3.",
+			"version": "1.2.3",
+			"author": {
+				"url": "http://ljharb.codes",
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/es-shims/Array.prototype.flatMap#readme",
+			"repository": {
+				"url": "git://github.com/es-shims/Array.prototype.flatMap.git",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"url": "http://ljharb.codes",
+					"name": "Jordan Harband",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/es-shims/Array.prototype.flatMap/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index",
+			"dependencies": {
+				"es-abstract": "^1.17.0-next.1",
+				"function-bind": "^1.1.1",
+				"define-properties": "^1.1.3"
+			},
+			"devDependencies": {
+				"nyc": "^10.3.2",
+				"tape": "^4.11.0",
+				"covert": "^1.1.1",
+				"eslint": "^6.7.2",
+				"evalmd": "0.0.19",
+				"foreach": "^2.0.5",
+				"@es-shims/api": "^2.1.2",
+				"object-inspect": "^1.7.0",
+				"safe-publish-latest": "^1.1.4",
+				"@ljharb/eslint-config": "^15.0.2"
+			},
+			"keywords": [
+				"Array.prototype.flatMap",
+				"flatMap",
+				"array",
+				"ESnext",
+				"shim",
+				"polyfill",
+				"flatten",
+				"Array.prototype.flatten",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "es-shims-owner",
+					"email": "ljharb+esshims@gmail.com"
+				},
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint test/*.js *.js",
+				"test": "npm run --silent tests-only",
+				"pretest": "npm run --silent lint && evalmd README.md",
+				"coverage": "nyc npm run tests-only",
+				"posttest": "npx aud --production",
+				"prepublish": "safe-publish-latest",
+				"tests-only": "npm run --silent test:shimmed && npm run --silent test:module",
+				"test:module": "node test",
+				"test:shimmed": "node test/shimmed",
+				"pretests-only": "es-shim-api --bound"
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "array.prototype.flatmap@1.2.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array.prototype.flatmap/-/array.prototype.flatmap-1.2.3.tgz",
+				"shasum": "1c13f84a178566042dd63de4414440db9222e443",
+				"integrity": "sha512-OOEk+lkePcg+ODXIpvuU9PAryCikCJyo7GlDG1upleEpQRx6mzL9puEBkozQ5iAx20KV0l3DbyQwqciJtqe5Pg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQCOQF6yfD0QrL9/gQMQlYEJY2O63QlzNqleiVjYsP2vsAIhAKAM4kJ0pN0G1iyAJfpV9HjPz/kaSH1xnc+Lbc6CpWnx"
+					}
+				]
+			},
+			"_npmVersion": "6.13.1",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "e34b4ec7556715334f25ea710693011359304901",
+			"greenkeeper": {
+				"ignore": [
+					"nyc"
+				]
+			},
+			"testling": {
+				"files": [
+					"test/index.js",
+					"test/shimmed.js"
+				],
+				"browsers": [
+					"iexplore/6.0..latest",
+					"firefox/3.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/10.0..latest",
+					"opera/next",
+					"safari/4.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/array.prototype.flatmap_1.2.3_1576169487864_0.2683977317374431",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "13.3.0"
+		},
+		"1.3.2": {
+			"name": "array.prototype.flatmap",
+			"description": "An ES2019 spec-compliant `Array.prototype.flatMap` shim/polyfill/replacement that works as far down as ES3.",
+			"version": "1.3.2",
+			"author": {
+				"url": "http://ljharb.codes",
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/es-shims/Array.prototype.flatMap#readme",
+			"repository": {
+				"url": "git://github.com/es-shims/Array.prototype.flatMap.git",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"url": "http://ljharb.codes",
+					"name": "Jordan Harband",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/es-shims/Array.prototype.flatMap/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index",
+			"dependencies": {
+				"call-bind": "^1.0.2",
+				"es-abstract": "^1.22.1",
+				"define-properties": "^1.2.0",
+				"es-shim-unscopables": "^1.0.0"
+			},
+			"devDependencies": {
+				"aud": "^2.0.3",
+				"nyc": "^10.3.2",
+				"tape": "^5.6.6",
+				"covert": "^1.1.1",
+				"eslint": "=8.8.0",
+				"evalmd": "^0.0.19",
+				"for-each": "^0.3.3",
+				"npmignore": "^0.3.0",
+				"in-publish": "^2.0.1",
+				"@es-shims/api": "^2.4.2",
+				"auto-changelog": "^2.4.0",
+				"object-inspect": "^1.12.3",
+				"has-strict-mode": "^1.0.1",
+				"safe-publish-latest": "^2.0.0",
+				"@ljharb/eslint-config": "^21.1.0"
+			},
+			"keywords": [
+				"Array.prototype.flatMap",
+				"flatMap",
+				"array",
+				"ESnext",
+				"shim",
+				"polyfill",
+				"flatten",
+				"Array.prototype.flatten",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint --ext=js,mjs .",
+				"test": "npm run tests-only",
+				"prelint": "evalmd README.md",
+				"prepack": "npmignore --auto --commentLines=autogenerated",
+				"pretest": "npm run lint",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"postlint": "es-shim-api --bound",
+				"posttest": "aud --production",
+				"prepublish": "not-in-publish || npm run prepublishOnly",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\"",
+				"prepublishOnly": "safe-publish-latest"
+			},
+			"publishConfig": {
+				"ignore": [
+					".github/workflows"
+				]
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "array.prototype.flatmap@1.3.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array.prototype.flatmap/-/array.prototype.flatmap-1.3.2.tgz",
+				"shasum": "c9a7c6831db8e719d6ce639190146c24bbd3e527",
+				"integrity": "sha512-Ewyx0c9PmpcsByhSW4r+9zDU7sGjFc86qf/kKtuSCRdhfbk0SNLLkaT5qvcHnRGgc5NP/ly/y+qkXkqONX54CQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIH9pPfrsoMsdbtk+cKSts/fKSdB7DzjgSgN+DgYyOWh4AiEAq1Rc3BugU89HM62kM1uX2tC21MRt+2W9oCN+BlltTkI="
+					}
+				]
+			},
+			"_npmVersion": "9.8.1",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "706bcbc9b045f24795580174e77e2d4f56c621e4",
+			"testling": {
+				"files": [
+					"test/index.js",
+					"test/shimmed.js"
+				],
+				"browsers": [
+					"iexplore/6.0..latest",
+					"firefox/3.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/10.0..latest",
+					"opera/next",
+					"safari/4.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/array.prototype.flatmap_1.3.2_1694059620571_0.9145922766486956",
+				"host": "s3://npm-registry-packages"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"hideCredit": true,
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false,
+				"startingVersion": "1.3.1"
+			},
+			"_nodeVersion": "20.6.0"
+		},
+		"1.2.4": {
+			"name": "array.prototype.flatmap",
+			"description": "An ESnext spec-compliant `Array.prototype.flatMap` shim/polyfill/replacement that works as far down as ES3.",
+			"version": "1.2.4",
+			"author": {
+				"url": "http://ljharb.codes",
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/es-shims/Array.prototype.flatMap#readme",
+			"repository": {
+				"url": "git://github.com/es-shims/Array.prototype.flatMap.git",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"url": "http://ljharb.codes",
+					"name": "Jordan Harband",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/es-shims/Array.prototype.flatMap/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index",
+			"dependencies": {
+				"call-bind": "^1.0.0",
+				"es-abstract": "^1.18.0-next.1",
+				"function-bind": "^1.1.1",
+				"define-properties": "^1.1.3"
+			},
+			"devDependencies": {
+				"aud": "^1.1.3",
+				"nyc": "^10.3.2",
+				"tape": "^5.0.1",
+				"covert": "^1.1.1",
+				"eslint": "^7.13.0",
+				"evalmd": "0.0.19",
+				"foreach": "^2.0.5",
+				"@es-shims/api": "^2.1.2",
+				"object-inspect": "^1.8.0",
+				"has-strict-mode": "^1.0.0",
+				"safe-publish-latest": "^1.1.4",
+				"@ljharb/eslint-config": "^17.2.0"
+			},
+			"keywords": [
+				"Array.prototype.flatMap",
+				"flatMap",
+				"array",
+				"ESnext",
+				"shim",
+				"polyfill",
+				"flatten",
+				"Array.prototype.flatten",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint .",
+				"test": "npm run tests-only",
+				"pretest": "npm run --silent lint && evalmd README.md",
+				"postlint": "es-shim-api --bound",
+				"posttest": "aud --production",
+				"prepublish": "safe-publish-latest",
+				"tests-only": "nyc tape 'test/**/*.js'"
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "array.prototype.flatmap@1.2.4",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array.prototype.flatmap/-/array.prototype.flatmap-1.2.4.tgz",
+				"shasum": "94cfd47cc1556ec0747d97f7c7738c58122004c9",
+				"integrity": "sha512-r9Z0zYoxqHz60vvQbWEdXIEtCwHF0yxaWfno9qzXeNHvfyl3BZqygmGzb84dsubyaXLH4husF+NFgMSdpZhk2Q==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCICr6gwO/KHtF/KWwxqTU9p08L6cGmtNo05LanSjo4Oq0AiAP4MJTsrFeq6FRP+iTYPrIi4q38xYYSIKpxJablmfGNg=="
+					}
+				]
+			},
+			"_npmVersion": "6.14.8",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "deef67f9fd9f360f1c86fc47b16bb3a34f200b83",
+			"greenkeeper": {
+				"ignore": [
+					"nyc"
+				]
+			},
+			"testling": {
+				"files": [
+					"test/index.js",
+					"test/shimmed.js"
+				],
+				"browsers": [
+					"iexplore/6.0..latest",
+					"firefox/3.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/10.0..latest",
+					"opera/next",
+					"safari/4.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/array.prototype.flatmap_1.2.4_1605696395059_0.2596562181897857",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "14.15.0"
+		},
+		"1.3.3": {
+			"name": "array.prototype.flatmap",
+			"description": "An ES2019 spec-compliant `Array.prototype.flatMap` shim/polyfill/replacement that works as far down as ES3.",
+			"version": "1.3.3",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com",
+				"url": "http://ljharb.codes"
+			},
+			"homepage": "https://github.com/es-shims/Array.prototype.flatMap#readme",
+			"repository": {
+				"type": "git",
+				"url": "git://github.com/es-shims/Array.prototype.flatMap.git"
+			},
+			"contributors": [
+				{
+					"name": "Jordan Harband",
+					"email": "ljharb@gmail.com",
+					"url": "http://ljharb.codes"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/es-shims/Array.prototype.flatMap/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index",
+			"dependencies": {
+				"call-bind": "^1.0.8",
+				"define-properties": "^1.2.1",
+				"es-abstract": "^1.23.5",
+				"es-shim-unscopables": "^1.0.2"
+			},
+			"devDependencies": {
+				"@es-shims/api": "^2.5.1",
+				"@ljharb/eslint-config": "^21.1.1",
+				"auto-changelog": "^2.5.0",
+				"encoding": "^0.1.13",
+				"eslint": "=8.8.0",
+				"evalmd": "^0.0.19",
+				"for-each": "^0.3.3",
+				"has-strict-mode": "^1.0.1",
+				"in-publish": "^2.0.1",
+				"npmignore": "^0.3.1",
+				"nyc": "^10.3.2",
+				"object-inspect": "^1.13.3",
+				"safe-publish-latest": "^2.0.0",
+				"tape": "^5.9.0"
+			},
+			"keywords": [
+				"Array.prototype.flatMap",
+				"flatMap",
+				"array",
+				"ESnext",
+				"shim",
+				"polyfill",
+				"flatten",
+				"Array.prototype.flatten",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"prepack": "npmignore --auto --commentLines=autogenerated",
+				"prepublishOnly": "safe-publish-latest",
+				"prepublish": "not-in-publish || npm run prepublishOnly",
+				"pretest": "npm run lint",
+				"test": "npm run tests-only",
+				"posttest": "npx npm@'>= 10.2' audit --production",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"prelint": "evalmd README.md",
+				"lint": "eslint --ext=js,mjs .",
+				"postlint": "es-shim-api --bound",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\""
+			},
+			"publishConfig": {
+				"ignore": [
+					".github/workflows"
+				]
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "array.prototype.flatmap@1.3.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array.prototype.flatmap/-/array.prototype.flatmap-1.3.3.tgz",
+				"shasum": "712cc792ae70370ae40586264629e33aab5dd38b",
+				"integrity": "sha512-Y7Wt51eKJSyi80hFrJCePGGNo5ktJCslFuboqJsbf57CCPcm5zztluPlc4/aD8sWsKvlwatezpV4U1efk8kpjg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDF9lD78N2klVa46Ik4qWueGbbaMRvgkydP/GRkrx8w0QIgIyaOiEFvcFtgiOSd54a+kkAK/1Mi2yVFsXmjtoOzGKI="
+					}
+				]
+			},
+			"_npmVersion": "10.9.2",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "80b9df6aed22a58c804d3bab7811f277fc7018b5",
+			"testling": {
+				"files": [
+					"test/index.js",
+					"test/shimmed.js"
+				],
+				"browsers": [
+					"iexplore/6.0..latest",
+					"firefox/3.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/10.0..latest",
+					"opera/next",
+					"safari/4.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages-npm-production",
+				"tmp": "tmp/array.prototype.flatmap_1.3.3_1734309939779_0.7633455654590757"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false,
+				"hideCredit": true,
+				"startingVersion": "1.3.1"
+			},
+			"_nodeVersion": "23.4.0"
+		},
+		"1.2.5": {
+			"name": "array.prototype.flatmap",
+			"description": "An ES2019 spec-compliant `Array.prototype.flatMap` shim/polyfill/replacement that works as far down as ES3.",
+			"version": "1.2.5",
+			"author": {
+				"url": "http://ljharb.codes",
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/es-shims/Array.prototype.flatMap#readme",
+			"repository": {
+				"url": "git://github.com/es-shims/Array.prototype.flatMap.git",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"url": "http://ljharb.codes",
+					"name": "Jordan Harband",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/es-shims/Array.prototype.flatMap/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index",
+			"dependencies": {
+				"call-bind": "^1.0.0",
+				"es-abstract": "^1.19.0",
+				"define-properties": "^1.1.3"
+			},
+			"devDependencies": {
+				"aud": "^1.1.5",
+				"nyc": "^10.3.2",
+				"tape": "^5.3.1",
+				"covert": "^1.1.1",
+				"eslint": "^7.32.0",
+				"evalmd": "0.0.19",
+				"foreach": "^2.0.5",
+				"@es-shims/api": "^2.2.1",
+				"object-inspect": "^1.11.0",
+				"has-strict-mode": "^1.0.1",
+				"safe-publish-latest": "^1.1.4",
+				"@ljharb/eslint-config": "^18.0.0"
+			},
+			"keywords": [
+				"Array.prototype.flatMap",
+				"flatMap",
+				"array",
+				"ESnext",
+				"shim",
+				"polyfill",
+				"flatten",
+				"Array.prototype.flatten",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint .",
+				"test": "npm run tests-only",
+				"pretest": "npm run --silent lint && evalmd README.md",
+				"postlint": "es-shim-api --bound",
+				"posttest": "aud --production",
+				"prepublish": "safe-publish-latest",
+				"tests-only": "nyc tape 'test/**/*.js'"
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "array.prototype.flatmap@1.2.5",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array.prototype.flatmap/-/array.prototype.flatmap-1.2.5.tgz",
+				"shasum": "908dc82d8a406930fdf38598d51e7411d18d4446",
+				"integrity": "sha512-08u6rVyi1Lj7oqWbS9nUxliETrtIROT4XGTA4D/LWGten6E3ocm7cy9SIrmNHOL5XVbVuckUp3X6Xyg8/zpvHA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIHHFjS3tzPFxSePMpa0PrE8m0+Am5u3E9qN8Z3X7cRAHAiBxlFk5sSWNjYLAEOtdN2HeooC2mLeIXzugtwOy7gd8PA=="
+					}
+				]
+			},
+			"_npmVersion": "7.24.0",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "23c0fe74b93bd888e907d41f2ddb4dbdafd156e2",
+			"greenkeeper": {
+				"ignore": [
+					"nyc"
+				]
+			},
+			"testling": {
+				"files": [
+					"test/index.js",
+					"test/shimmed.js"
+				],
+				"browsers": [
+					"iexplore/6.0..latest",
+					"firefox/3.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/10.0..latest",
+					"opera/next",
+					"safari/4.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/array.prototype.flatmap_1.2.5_1633120071850_0.7090666783433124",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "16.10.0"
+		},
+		"1.0.0": {
+			"name": "array.prototype.flatmap",
+			"description": "An ESnext spec-compliant `Array.prototype.flatMap` shim/polyfill/replacement that works as far down as ES3.",
+			"version": "1.0.0",
+			"author": {
+				"url": "http://ljharb.codes",
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/es-shims/Array.prototype.flatMap#readme",
+			"repository": {
+				"url": "git://github.com/es-shims/Array.prototype.flatMap.git",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"url": "http://ljharb.codes",
+					"name": "Jordan Harband",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/es-shims/Array.prototype.flatMap/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "./",
+			"dependencies": {
+				"es-abstract": "^1.9.0",
+				"function-bind": "^1.1.1",
+				"define-properties": "^1.1.2"
+			},
+			"devDependencies": {
+				"nsp": "^2.8.1",
+				"nyc": "^10.3.2",
+				"tape": "^4.8.0",
+				"covert": "^1.1.0",
+				"eslint": "^4.8.0",
+				"evalmd": "^0.0.17",
+				"foreach": "^2.0.5",
+				"@es-shims/api": "^1.3.0",
+				"object-inspect": "^1.3.0",
+				"@ljharb/eslint-config": "^12.2.1"
+			},
+			"keywords": [
+				"Array.prototype.flatMap",
+				"flatMap",
+				"array",
+				"ESnext",
+				"shim",
+				"polyfill",
+				"flatten",
+				"Array.prototype.flatten",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint test/*.js *.js",
+				"test": "npm run --silent tests-only",
+				"pretest": "npm run --silent lint && evalmd README.md",
+				"coverage": "nyc npm run tests-only",
+				"posttest": "npm run --silent security",
+				"security": "nsp check",
+				"tests-only": "es-shim-api --bound && npm run --silent test:shimmed && npm run --silent test:module",
+				"test:module": "node test",
+				"test:shimmed": "node test/shimmed"
+			},
+			"lastModified": 0,
+			"_id": "array.prototype.flatmap@1.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array.prototype.flatmap/-/array.prototype.flatmap-1.0.0.tgz",
+				"shasum": "d53c344f208f26c385f88d3c87a8521c67a808d7",
+				"integrity": "sha512-PrWkCFvrhBl6aB83TwSDo4HAdhVvZ+1GXij8y6aHcCkKGDlJZAfEgp6+qmsRMuNeoU7+zUavahInvaOHVrXyxQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCICyX87c1UFrAYX0kv3wIL3tzXzzToerJxsjYbvrmkZvNAiEA9Hu57ERCcyZjRwOGO8DaZDjm9eIkiLskbSJeor1V6Eo="
+					}
+				]
+			},
+			"_npmVersion": "5.3.0",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"gitHead": "3bdc576d4c1d73b1638c350b3d2b79f9119d39bf",
+			"testling": {
+				"files": [
+					"test/index.js",
+					"test/shimmed.js"
+				],
+				"browsers": [
+					"iexplore/6.0..latest",
+					"firefox/3.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/10.0..latest",
+					"opera/next",
+					"safari/4.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/array.prototype.flatmap-1.0.0.tgz_1506848452312_0.892912779469043",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "8.6.0"
+		},
+		"1.0.1": {
+			"name": "array.prototype.flatmap",
+			"description": "An ESnext spec-compliant `Array.prototype.flatMap` shim/polyfill/replacement that works as far down as ES3.",
+			"version": "1.0.1",
+			"author": {
+				"url": "http://ljharb.codes",
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/es-shims/Array.prototype.flatMap#readme",
+			"repository": {
+				"url": "git://github.com/es-shims/Array.prototype.flatMap.git",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"url": "http://ljharb.codes",
+					"name": "Jordan Harband",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/es-shims/Array.prototype.flatMap/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "./",
+			"dependencies": {
+				"es-abstract": "^1.9.0",
+				"function-bind": "^1.1.1",
+				"define-properties": "^1.1.2"
+			},
+			"devDependencies": {
+				"nsp": "^2.8.1",
+				"nyc": "^10.3.2",
+				"tape": "^4.8.0",
+				"covert": "^1.1.0",
+				"eslint": "^4.8.0",
+				"evalmd": "^0.0.17",
+				"foreach": "^2.0.5",
+				"@es-shims/api": "^1.3.0",
+				"object-inspect": "^1.3.0",
+				"@ljharb/eslint-config": "^12.2.1"
+			},
+			"keywords": [
+				"Array.prototype.flatMap",
+				"flatMap",
+				"array",
+				"ESnext",
+				"shim",
+				"polyfill",
+				"flatten",
+				"Array.prototype.flatten",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint test/*.js *.js",
+				"test": "npm run --silent tests-only",
+				"pretest": "npm run --silent lint && evalmd README.md",
+				"coverage": "nyc npm run tests-only",
+				"posttest": "npm run --silent security",
+				"security": "nsp check",
+				"tests-only": "es-shim-api --bound && npm run --silent test:shimmed && npm run --silent test:module",
+				"test:module": "node test",
+				"test:shimmed": "node test/shimmed"
+			},
+			"lastModified": 0,
+			"_id": "array.prototype.flatmap@1.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array.prototype.flatmap/-/array.prototype.flatmap-1.0.1.tgz",
+				"shasum": "1d16847031027ef8c3b542ce6d97c26ec1dab0b3",
+				"integrity": "sha512-J/+aUvxBqTBDp+5yaCQuUc0KmQbKI28FjmD7xUKe3e/QV3FNeKNu1CdRR6kYjjnnIJ4mnSNtF7AWnmZBOVlIPg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQChB7alV+iBD8NRAwWWmbu14Jxz/H1DZjkzFNzUBEtmAgIgakgkNj8MzcSyYgCrtijNN3yS9xUojWcd30p6mv0Zp+4="
+					}
+				]
+			},
+			"_npmVersion": "5.3.0",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"gitHead": "a58895f9a9b920e5e71a9915f9449593fdb10d90",
+			"testling": {
+				"files": [
+					"test/index.js",
+					"test/shimmed.js"
+				],
+				"browsers": [
+					"iexplore/6.0..latest",
+					"firefox/3.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/10.0..latest",
+					"opera/next",
+					"safari/4.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/array.prototype.flatmap-1.0.1.tgz_1506937717176_0.15777125745080411",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "8.6.0"
+		},
+		"1.1.0": {
+			"name": "array.prototype.flatmap",
+			"description": "An ESnext spec-compliant `Array.prototype.flatMap` shim/polyfill/replacement that works as far down as ES3.",
+			"version": "1.1.0",
+			"author": {
+				"url": "http://ljharb.codes",
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/es-shims/Array.prototype.flatMap#readme",
+			"repository": {
+				"url": "git://github.com/es-shims/Array.prototype.flatMap.git",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"url": "http://ljharb.codes",
+					"name": "Jordan Harband",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/es-shims/Array.prototype.flatMap/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "./",
+			"dependencies": {
+				"es-abstract": "^1.9.0",
+				"function-bind": "^1.1.1",
+				"define-properties": "^1.1.2"
+			},
+			"devDependencies": {
+				"nsp": "^2.8.1",
+				"nyc": "^10.3.2",
+				"tape": "^4.8.0",
+				"covert": "^1.1.0",
+				"eslint": "^4.8.0",
+				"evalmd": "^0.0.17",
+				"foreach": "^2.0.5",
+				"@es-shims/api": "^1.3.0",
+				"object-inspect": "^1.3.0",
+				"@ljharb/eslint-config": "^12.2.1"
+			},
+			"keywords": [
+				"Array.prototype.flatMap",
+				"flatMap",
+				"array",
+				"ESnext",
+				"shim",
+				"polyfill",
+				"flatten",
+				"Array.prototype.flatten",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint test/*.js *.js",
+				"test": "npm run --silent tests-only",
+				"pretest": "npm run --silent lint && evalmd README.md",
+				"coverage": "nyc npm run tests-only",
+				"posttest": "npm run --silent security",
+				"security": "nsp check",
+				"tests-only": "es-shim-api --bound && npm run --silent test:shimmed && npm run --silent test:module",
+				"test:module": "node test",
+				"test:shimmed": "node test/shimmed"
+			},
+			"lastModified": 0,
+			"_id": "array.prototype.flatmap@1.1.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array.prototype.flatmap/-/array.prototype.flatmap-1.1.0.tgz",
+				"shasum": "d6a032dc1b26e013a006c1faa3ae4a4d45d34403",
+				"integrity": "sha512-rAEC6hqiazW5g064aV8Y4W465zsQJsNvXLn/MA1M1Gt5k3QNo4iM7H1uy5boBiV2yQ5W84x3FcSg8fmCqUA+rw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDvxqjlxy3MsLKqrhjbbrPqkn0JG5Z2R0S125+4Yk1h3wIgFnqf/rZ5MUDw0TZGJs4z60Uk1iOi1IfdYQKLOciLEl0="
+					}
+				]
+			},
+			"_npmVersion": "5.3.0",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"gitHead": "d880712069e04889ccfbef9d602ebcf65a2affb4",
+			"testling": {
+				"files": [
+					"test/index.js",
+					"test/shimmed.js"
+				],
+				"browsers": [
+					"iexplore/6.0..latest",
+					"firefox/3.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/10.0..latest",
+					"opera/next",
+					"safari/4.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/array.prototype.flatmap-1.1.0.tgz_1507102941231_0.38010560744442046",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "8.6.0"
+		},
+		"1.1.1": {
+			"name": "array.prototype.flatmap",
+			"description": "An ESnext spec-compliant `Array.prototype.flatMap` shim/polyfill/replacement that works as far down as ES3.",
+			"version": "1.1.1",
+			"author": {
+				"url": "http://ljharb.codes",
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/es-shims/Array.prototype.flatMap#readme",
+			"repository": {
+				"url": "git://github.com/es-shims/Array.prototype.flatMap.git",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"url": "http://ljharb.codes",
+					"name": "Jordan Harband",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/es-shims/Array.prototype.flatMap/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "./",
+			"dependencies": {
+				"es-abstract": "^1.10.0",
+				"function-bind": "^1.1.1",
+				"define-properties": "^1.1.2"
+			},
+			"devDependencies": {
+				"nsp": "^3.1.0",
+				"nyc": "^10.3.2",
+				"tape": "^4.8.0",
+				"covert": "^1.1.0",
+				"eslint": "^4.12.0",
+				"evalmd": "^0.0.17",
+				"foreach": "^2.0.5",
+				"@es-shims/api": "^1.3.0",
+				"object-inspect": "^1.4.0",
+				"safe-publish-latest": "^1.1.1",
+				"@ljharb/eslint-config": "^12.2.1"
+			},
+			"keywords": [
+				"Array.prototype.flatMap",
+				"flatMap",
+				"array",
+				"ESnext",
+				"shim",
+				"polyfill",
+				"flatten",
+				"Array.prototype.flatten",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint test/*.js *.js",
+				"test": "npm run --silent tests-only",
+				"pretest": "npm run --silent lint && evalmd README.md",
+				"coverage": "nyc npm run tests-only",
+				"posttest": "npm run --silent security",
+				"security": "nsp check",
+				"prepublish": "safe-publish-latest",
+				"tests-only": "es-shim-api --bound && npm run --silent test:shimmed && npm run --silent test:module",
+				"test:module": "node test",
+				"test:shimmed": "node test/shimmed"
+			},
+			"lastModified": 0,
+			"_id": "array.prototype.flatmap@1.1.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array.prototype.flatmap/-/array.prototype.flatmap-1.1.1.tgz",
+				"shasum": "dbb6c44693c2a2a2fcab24e551dfbf47f67fde03",
+				"integrity": "sha512-LYxij5OIk/e1wxCPu0Ng1Rtqpe3c1FmfQ/uS/2HGk9GfySnzEpJ4N8eKJgnTCI3PSBBsNNwbUORetjs7B+3oLA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIA1Q4vL34oR/U2I6T8PF3ySXuIXYaLxmqUWBffBj7DmZAiEA38JgKBQpYAO8I171qrTWBKe5oindmSSGvGsDDT0be2s="
+					}
+				]
+			},
+			"_npmVersion": "5.5.1",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"gitHead": "8b800d0528479cc4cd28bc93540bcbcacffe2bcf",
+			"testling": {
+				"files": [
+					"test/index.js",
+					"test/shimmed.js"
+				],
+				"browsers": [
+					"iexplore/6.0..latest",
+					"firefox/3.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/10.0..latest",
+					"opera/next",
+					"safari/4.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/array.prototype.flatmap-1.1.1.tgz_1511997498871_0.7336063627153635",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "9.2.0"
+		},
+		"1.2.0": {
+			"name": "array.prototype.flatmap",
+			"description": "An ESnext spec-compliant `Array.prototype.flatMap` shim/polyfill/replacement that works as far down as ES3.",
+			"version": "1.2.0",
+			"author": {
+				"url": "http://ljharb.codes",
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/es-shims/Array.prototype.flatMap#readme",
+			"repository": {
+				"url": "git://github.com/es-shims/Array.prototype.flatMap.git",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"url": "http://ljharb.codes",
+					"name": "Jordan Harband",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/es-shims/Array.prototype.flatMap/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "./",
+			"dependencies": {
+				"es-abstract": "^1.10.0",
+				"function-bind": "^1.1.1",
+				"define-properties": "^1.1.2"
+			},
+			"devDependencies": {
+				"nsp": "^3.1.0",
+				"nyc": "^10.3.2",
+				"tape": "^4.8.0",
+				"covert": "^1.1.0",
+				"eslint": "^4.15.0",
+				"evalmd": "^0.0.17",
+				"foreach": "^2.0.5",
+				"@es-shims/api": "^2.1.2",
+				"object-inspect": "^1.5.0",
+				"safe-publish-latest": "^1.1.1",
+				"@ljharb/eslint-config": "^12.2.1"
+			},
+			"keywords": [
+				"Array.prototype.flatMap",
+				"flatMap",
+				"array",
+				"ESnext",
+				"shim",
+				"polyfill",
+				"flatten",
+				"Array.prototype.flatten",
+				"es-shim API"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint test/*.js *.js",
+				"test": "npm run --silent tests-only",
+				"pretest": "npm run --silent lint && evalmd README.md",
+				"coverage": "nyc npm run tests-only",
+				"posttest": "npm run --silent security",
+				"security": "nsp check",
+				"prepublish": "safe-publish-latest",
+				"tests-only": "npm run --silent test:shimmed && npm run --silent test:module",
+				"test:module": "node test",
+				"test:shimmed": "node test/shimmed",
+				"pretests-only": "es-shim-api --bound"
+			},
+			"lastModified": 0,
+			"_id": "array.prototype.flatmap@1.2.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array.prototype.flatmap/-/array.prototype.flatmap-1.2.0.tgz",
+				"shasum": "279f7ed4eeb1cedfe5515e92e63cfb40ca15b74b",
+				"integrity": "sha512-Mks+PkOK0iOmxq0WtINn1rlPmFC8ZTdLq37MzgZG7ihF5eF+cT29H9MZ6TqbBvxGFLArGwuMxXl/DQjeNI3zeQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIFlUUbpQDTlBdaJXDF9jVy6vTpOHzZsiCdqnPDqXwbGCAiBPwcLxWfcSjCSf0dCJT1a3CGHYa/ZDqbsAE0RGeoD05g=="
+					}
+				]
+			},
+			"_npmVersion": "5.6.0",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"gitHead": "82aefc68d671d0f83109610615cbc34b9c21bb64",
+			"testling": {
+				"files": [
+					"test/index.js",
+					"test/shimmed.js"
+				],
+				"browsers": [
+					"iexplore/6.0..latest",
+					"firefox/3.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/10.0..latest",
+					"opera/next",
+					"safari/4.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/array.prototype.flatmap-1.2.0.tgz_1516327419227_0.9909516347106546",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "9.4.0"
+		}
+	},
+	"time": {
+		"created": "2017-10-01T09:00:52.465Z",
+		"1.2.1": "2018-02-24T07:43:41.296Z",
+		"1.3.0": "2022-04-11T23:48:21.484Z",
+		"1.2.2": "2019-10-11T04:47:12.563Z",
+		"1.3.1": "2022-11-03T05:39:42.559Z",
+		"1.2.3": "2019-12-12T16:51:27.956Z",
+		"1.3.2": "2023-09-07T04:07:00.782Z",
+		"1.2.4": "2020-11-18T10:46:35.217Z",
+		"1.3.3": "2024-12-16T00:45:39.935Z",
+		"1.2.5": "2021-10-01T20:27:51.997Z",
+		"modified": "2024-12-16T00:45:40.122Z",
+		"1.0.0": "2017-10-01T09:00:52.465Z",
+		"1.0.1": "2017-10-02T09:48:37.257Z",
+		"1.1.0": "2017-10-04T07:42:22.125Z",
+		"1.1.1": "2017-11-29T23:18:18.960Z",
+		"1.2.0": "2018-01-19T02:03:39.390Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "1.3.3"
+	},
+	"_uplinks": {
+		"artifactory-sabadell": {
+			"etag": "43e32c72b97998d9c4bf4e2a737ebb22387bec72",
+			"fetched": 1782459811474
+		}
+	},
+	"_distfiles": {
+		"array.prototype.flatmap-1.2.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array.prototype.flatmap/-/array.prototype.flatmap-1.2.1.tgz",
+			"sha": "3103cd4826ef90019c9b0a4839b2535fa6faf4e9",
+			"registry": "artifactory-sabadell"
+		},
+		"array.prototype.flatmap-1.3.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array.prototype.flatmap/-/array.prototype.flatmap-1.3.0.tgz",
+			"sha": "a7e8ed4225f4788a70cd910abcf0791e76a5534f",
+			"registry": "artifactory-sabadell"
+		},
+		"array.prototype.flatmap-1.2.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array.prototype.flatmap/-/array.prototype.flatmap-1.2.2.tgz",
+			"sha": "28d621d351c19a62b84331b01669395ef6cef4c4",
+			"registry": "artifactory-sabadell"
+		},
+		"array.prototype.flatmap-1.3.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array.prototype.flatmap/-/array.prototype.flatmap-1.3.1.tgz",
+			"sha": "1aae7903c2100433cb8261cd4ed310aab5c4a183",
+			"registry": "artifactory-sabadell"
+		},
+		"array.prototype.flatmap-1.2.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array.prototype.flatmap/-/array.prototype.flatmap-1.2.3.tgz",
+			"sha": "1c13f84a178566042dd63de4414440db9222e443",
+			"registry": "artifactory-sabadell"
+		},
+		"array.prototype.flatmap-1.3.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array.prototype.flatmap/-/array.prototype.flatmap-1.3.2.tgz",
+			"sha": "c9a7c6831db8e719d6ce639190146c24bbd3e527",
+			"registry": "artifactory-sabadell"
+		},
+		"array.prototype.flatmap-1.2.4.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array.prototype.flatmap/-/array.prototype.flatmap-1.2.4.tgz",
+			"sha": "94cfd47cc1556ec0747d97f7c7738c58122004c9",
+			"registry": "artifactory-sabadell"
+		},
+		"array.prototype.flatmap-1.3.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array.prototype.flatmap/-/array.prototype.flatmap-1.3.3.tgz",
+			"sha": "712cc792ae70370ae40586264629e33aab5dd38b",
+			"registry": "artifactory-sabadell"
+		},
+		"array.prototype.flatmap-1.2.5.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array.prototype.flatmap/-/array.prototype.flatmap-1.2.5.tgz",
+			"sha": "908dc82d8a406930fdf38598d51e7411d18d4446",
+			"registry": "artifactory-sabadell"
+		},
+		"array.prototype.flatmap-1.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array.prototype.flatmap/-/array.prototype.flatmap-1.0.0.tgz",
+			"sha": "d53c344f208f26c385f88d3c87a8521c67a808d7",
+			"registry": "artifactory-sabadell"
+		},
+		"array.prototype.flatmap-1.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array.prototype.flatmap/-/array.prototype.flatmap-1.0.1.tgz",
+			"sha": "1d16847031027ef8c3b542ce6d97c26ec1dab0b3",
+			"registry": "artifactory-sabadell"
+		},
+		"array.prototype.flatmap-1.1.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array.prototype.flatmap/-/array.prototype.flatmap-1.1.0.tgz",
+			"sha": "d6a032dc1b26e013a006c1faa3ae4a4d45d34403",
+			"registry": "artifactory-sabadell"
+		},
+		"array.prototype.flatmap-1.1.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array.prototype.flatmap/-/array.prototype.flatmap-1.1.1.tgz",
+			"sha": "dbb6c44693c2a2a2fcab24e551dfbf47f67fde03",
+			"registry": "artifactory-sabadell"
+		},
+		"array.prototype.flatmap-1.2.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/array.prototype.flatmap/-/array.prototype.flatmap-1.2.0.tgz",
+			"sha": "279f7ed4eeb1cedfe5515e92e63cfb40ca15b74b",
+			"registry": "artifactory-sabadell"
+		}
+	},
+	"_attachments": {},
+	"_rev": "1-82e0a574cbc98f74",
+	"_id": "array.prototype.flatmap",
+	"readme": "# array.prototype.flatmap <sup>[![Version Badge][npm-version-svg]][package-url]</sup>\n\n[![github actions][actions-image]][actions-url]\n[![coverage][codecov-image]][codecov-url]\n[![dependency status][deps-svg]][deps-url]\n[![dev dependency status][dev-deps-svg]][dev-deps-url]\n[![License][license-image]][license-url]\n[![Downloads][downloads-image]][downloads-url]\n\n[![npm badge][npm-badge-png]][package-url]\n\nAn ES2019 spec-compliant `Array.prototype.flatMap` shim/polyfill/replacement that works as far down as ES3.\n\nThis package implements the [es-shim API](https://github.com/es-shims/api) interface. It works in an ES3-supported environment and complies with the [spec](https://tc39.es/ecma262/#sec-array.prototype.flatmap).\n\nBecause `Array.prototype.flatMap` depends on a receiver (the `this` value), the main export takes the array to operate on as the first argument.\n\n## Getting started\n\n```sh\nnpm install --save array.prototype.flatmap\n```\n\n## Usage/Examples\n\n```js\nvar flatMap = require('array.prototype.flatmap');\nvar assert = require('assert');\n\nvar arr = [1, [2], [], 3];\n\nvar results = flatMap(arr, function (x, i) {\n\tassert.equal(x, arr[i]);\n\treturn x;\n});\n\nassert.deepEqual(results, [1, 2, 3]);\n```\n\n```js\nvar flatMap = require('array.prototype.flatmap');\nvar assert = require('assert');\n/* when Array#flatMap is not present */\ndelete Array.prototype.flatMap;\nvar shimmedFlatMap = flatMap.shim();\n\nvar mapper = function (x) { return [x, 1]; };\n\nassert.equal(shimmedFlatMap, flatMap.getPolyfill());\nassert.deepEqual(arr.flatMap(mapper), flatMap(arr, mapper));\n```\n\n```js\nvar flatMap = require('array.prototype.flatmap');\nvar assert = require('assert');\n/* when Array#flatMap is present */\nvar shimmedIncludes = flatMap.shim();\n\nvar mapper = function (x) { return [x, 1]; };\n\nassert.equal(shimmedIncludes, Array.prototype.flatMap);\nassert.deepEqual(arr.flatMap(mapper), flatMap(arr, mapper));\n```\n\n## Tests\nSimply clone the repo, `npm install`, and run `npm test`\n\n[package-url]: https://npmjs.org/package/array.prototype.flatmap\n[npm-version-svg]: https://versionbadg.es/es-shims/Array.prototype.flatMap.svg\n[deps-svg]: https://david-dm.org/es-shims/Array.prototype.flatMap.svg\n[deps-url]: https://david-dm.org/es-shims/Array.prototype.flatMap\n[dev-deps-svg]: https://david-dm.org/es-shims/Array.prototype.flatMap/dev-status.svg\n[dev-deps-url]: https://david-dm.org/es-shims/Array.prototype.flatMap#info=devDependencies\n[npm-badge-png]: https://nodei.co/npm/array.prototype.flatmap.png?downloads=true&stars=true\n[license-image]: https://img.shields.io/npm/l/array.prototype.flatmap.svg\n[license-url]: LICENSE\n[downloads-image]: https://img.shields.io/npm/dm/array.prototype.flatmap.svg\n[downloads-url]: https://npm-stat.com/charts.html?package=array.prototype.flatmap\n[codecov-image]: https://codecov.io/gh/es-shims/Array.prototype.flatMap/branch/main/graphs/badge.svg\n[codecov-url]: https://app.codecov.io/gh/es-shims/Array.prototype.flatMap/\n[actions-image]: https://img.shields.io/endpoint?url=https://github-actions-badge-u3jn4tfpocch.runkit.sh/es-shims/Array.prototype.flatMap\n[actions-url]: https://github.com/es-shims/Array.prototype.flatMap/actions"
+}

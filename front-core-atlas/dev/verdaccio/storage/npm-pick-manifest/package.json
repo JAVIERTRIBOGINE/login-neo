@@ -1,0 +1,3744 @@
+{
+	"name": "npm-pick-manifest",
+	"versions": {
+		"11.0.1": {
+			"name": "npm-pick-manifest",
+			"description": "Resolves a matching manifest from a package metadata document according to standard npm semver resolution rules.",
+			"version": "11.0.1",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/npm-pick-manifest#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/npm-pick-manifest.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-pick-manifest/issues"
+			},
+			"engines": {
+				"node": "^20.17.0 || >=22.9.0"
+			},
+			"main": "./lib",
+			"dependencies": {
+				"semver": "^7.3.5",
+				"npm-package-arg": "^13.0.0",
+				"npm-install-checks": "^7.1.0",
+				"npm-normalize-package-bin": "^4.0.0"
+			},
+			"devDependencies": {
+				"tap": "^16.0.1",
+				"@npmcli/template-oss": "4.25.0",
+				"@npmcli/eslint-config": "^5.0.0"
+			},
+			"keywords": [
+				"npm",
+				"semver",
+				"package manager"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "gar",
+					"email": "gar+npm@danger.computer"
+				},
+				{
+					"name": "saquibkhan",
+					"email": "saquibkhan@github.com"
+				},
+				{
+					"name": "npm-cli-ops",
+					"email": "npm-cli+bot@github.com"
+				},
+				{
+					"name": "reggi",
+					"email": "reggi@github.com"
+				},
+				{
+					"name": "hashtagchris",
+					"email": "hashtagchris@github.com"
+				},
+				{
+					"name": "owlstronaut",
+					"email": "owlstronaut@github.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "npm run eslint",
+				"snap": "tap",
+				"test": "tap",
+				"eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
+				"lintfix": "npm run eslint -- --fix",
+				"coverage": "tap",
+				"postlint": "template-oss-check",
+				"posttest": "npm run lint",
+				"template-oss-apply": "template-oss-apply --force"
+			},
+			"lastModified": 0,
+			"_id": "npm-pick-manifest@11.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-11.0.1.tgz",
+				"shasum": "77f74dc36df3444391c0aa5cd80ba7bf41184163",
+				"integrity": "sha512-HnU7FYSWbo7dTVHtK0G+BXbZ0aIfxz/aUCVLN0979Ec6rGUX5cJ6RbgVx5fqb5G31ufz+BVFA7y1SkRTPVNoVQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEUCIQDxiNWnAe8Awj19bbe3oo/20xBjmiamxhUu0deXRvzgEAIgLke3/zjMEQ3dfHbYEhdb6DPh3afdsPsG6yWbAdwmW4w="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/npm-pick-manifest@11.0.1",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "11.6.0",
+			"_npmUser": {
+				"name": "GitHub Actions",
+				"email": "npm-oidc-no-reply@github.com",
+				"trustedPublisher": {
+					"id": "github",
+					"oidcConfigId": "oidc:82cb1b0c-4f68-4f8f-a191-c880d9d114d0"
+				}
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "f3a5148c5cb969af92ed3402b7fc97f503fe795a",
+			"tap": {
+				"nyc-arg": [
+					"--exclude",
+					"tap-snapshots/**"
+				],
+				"check-coverage": true
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-pick-manifest_11.0.1_1758134501078_0.5088213968814472",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"templateOSS": {
+				"publish": true,
+				"version": "4.25.0",
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+			},
+			"_nodeVersion": "22.19.0",
+			"contributors": []
+		},
+		"11.0.3": {
+			"name": "npm-pick-manifest",
+			"description": "Resolves a matching manifest from a package metadata document according to standard npm semver resolution rules.",
+			"version": "11.0.3",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/npm-pick-manifest#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/npm-pick-manifest.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-pick-manifest/issues"
+			},
+			"engines": {
+				"node": "^20.17.0 || >=22.9.0"
+			},
+			"main": "./lib",
+			"dependencies": {
+				"semver": "^7.3.5",
+				"npm-package-arg": "^13.0.0",
+				"npm-install-checks": "^8.0.0",
+				"npm-normalize-package-bin": "^5.0.0"
+			},
+			"devDependencies": {
+				"tap": "^16.0.1",
+				"@npmcli/template-oss": "4.27.1",
+				"@npmcli/eslint-config": "^6.0.0"
+			},
+			"keywords": [
+				"npm",
+				"semver",
+				"package manager"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "gar",
+					"email": "gar+npm@danger.computer"
+				},
+				{
+					"name": "saquibkhan",
+					"email": "saquibkhan@github.com"
+				},
+				{
+					"name": "npm-cli-ops",
+					"email": "npm-cli+bot@github.com"
+				},
+				{
+					"name": "reggi",
+					"email": "reggi@github.com"
+				},
+				{
+					"name": "hashtagchris",
+					"email": "hashtagchris@github.com"
+				},
+				{
+					"name": "owlstronaut",
+					"email": "owlstronaut@github.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "npm run eslint",
+				"snap": "tap",
+				"test": "tap",
+				"eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
+				"lintfix": "npm run eslint -- --fix",
+				"coverage": "tap",
+				"postlint": "template-oss-check",
+				"posttest": "npm run lint",
+				"template-oss-apply": "template-oss-apply --force"
+			},
+			"lastModified": 0,
+			"_id": "npm-pick-manifest@11.0.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-11.0.3.tgz",
+				"shasum": "76cf6593a351849006c36b38a7326798e2a76d13",
+				"integrity": "sha512-buzyCfeoGY/PxKqmBqn1IUJrZnUi1VVJTdSSRPGI60tJdUhUoSQFhs0zycJokDdOznQentgrpf8LayEHyyYlqQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEUCIQDL6IFM9M0YcG/6FZYeIN9a/ZJ42qtj9/QbEwy2Gjvx5AIgNTiSsvudpKeeRqcD2CSgSScHY9XER9TrdSIiWJuKot4="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/npm-pick-manifest@11.0.3",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "11.6.2",
+			"_npmUser": {
+				"name": "GitHub Actions",
+				"email": "npm-oidc-no-reply@github.com",
+				"trustedPublisher": {
+					"id": "github",
+					"oidcConfigId": "oidc:82cb1b0c-4f68-4f8f-a191-c880d9d114d0"
+				}
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "b4f0753b12bf0439e8b9c340e701e59a1f669db7",
+			"tap": {
+				"nyc-arg": [
+					"--exclude",
+					"tap-snapshots/**"
+				],
+				"check-coverage": true
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-pick-manifest_11.0.3_1761256031482_0.3691023400740985",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"templateOSS": {
+				"publish": true,
+				"version": "4.27.1",
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+			},
+			"_nodeVersion": "22.20.0",
+			"contributors": []
+		},
+		"11.0.2": {
+			"name": "npm-pick-manifest",
+			"description": "Resolves a matching manifest from a package metadata document according to standard npm semver resolution rules.",
+			"version": "11.0.2",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/npm-pick-manifest#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/npm-pick-manifest.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-pick-manifest/issues"
+			},
+			"engines": {
+				"node": "^20.17.0 || >=22.9.0"
+			},
+			"main": "./lib",
+			"dependencies": {
+				"semver": "^7.3.5",
+				"npm-package-arg": "^13.0.0",
+				"npm-install-checks": "^7.1.0",
+				"npm-normalize-package-bin": "^5.0.0"
+			},
+			"devDependencies": {
+				"tap": "^16.0.1",
+				"@npmcli/template-oss": "4.27.1",
+				"@npmcli/eslint-config": "^5.0.0"
+			},
+			"keywords": [
+				"npm",
+				"semver",
+				"package manager"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "gar",
+					"email": "gar+npm@danger.computer"
+				},
+				{
+					"name": "saquibkhan",
+					"email": "saquibkhan@github.com"
+				},
+				{
+					"name": "npm-cli-ops",
+					"email": "npm-cli+bot@github.com"
+				},
+				{
+					"name": "reggi",
+					"email": "reggi@github.com"
+				},
+				{
+					"name": "hashtagchris",
+					"email": "hashtagchris@github.com"
+				},
+				{
+					"name": "owlstronaut",
+					"email": "owlstronaut@github.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "npm run eslint",
+				"snap": "tap",
+				"test": "tap",
+				"eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
+				"lintfix": "npm run eslint -- --fix",
+				"coverage": "tap",
+				"postlint": "template-oss-check",
+				"posttest": "npm run lint",
+				"template-oss-apply": "template-oss-apply --force"
+			},
+			"lastModified": 0,
+			"_id": "npm-pick-manifest@11.0.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-11.0.2.tgz",
+				"shasum": "bd849657a3ca7d8366028b18f1db2a7ec9506011",
+				"integrity": "sha512-tzbcEh9zp8FZN8+UDfsKSCHLpVYpLoqTcpAR83lbAVDE4Q24AGmTvWh4lIMAYL7niDzEnRvN96xUCxXW+6Z2jQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEQCIDjCgQWADEnoDGI2CQoVa52O5z3vwJzfN42UNgI55VG7AiBHAl27y40ZT3LYGpdyHSQY00vpp357eL9faG89ZOBaVA=="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/npm-pick-manifest@11.0.2",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "11.6.2",
+			"_npmUser": {
+				"name": "GitHub Actions",
+				"email": "npm-oidc-no-reply@github.com",
+				"trustedPublisher": {
+					"id": "github",
+					"oidcConfigId": "oidc:82cb1b0c-4f68-4f8f-a191-c880d9d114d0"
+				}
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "bbf78a56aa9dd4151512887271a07ee6731bdc8f",
+			"tap": {
+				"nyc-arg": [
+					"--exclude",
+					"tap-snapshots/**"
+				],
+				"check-coverage": true
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-pick-manifest_11.0.2_1761242263967_0.29998348082645476",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"templateOSS": {
+				"publish": true,
+				"version": "4.27.1",
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+			},
+			"_nodeVersion": "22.20.0",
+			"contributors": []
+		},
+		"9.0.0": {
+			"name": "npm-pick-manifest",
+			"description": "Resolves a matching manifest from a package metadata document according to standard npm semver resolution rules.",
+			"version": "9.0.0",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/npm-pick-manifest#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/npm-pick-manifest.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-pick-manifest/issues"
+			},
+			"engines": {
+				"node": "^16.14.0 || >=18.0.0"
+			},
+			"main": "./lib",
+			"dependencies": {
+				"semver": "^7.3.5",
+				"npm-package-arg": "^11.0.0",
+				"npm-install-checks": "^6.0.0",
+				"npm-normalize-package-bin": "^3.0.0"
+			},
+			"devDependencies": {
+				"tap": "^16.0.1",
+				"@npmcli/template-oss": "4.18.0",
+				"@npmcli/eslint-config": "^4.0.0"
+			},
+			"keywords": [
+				"npm",
+				"semver",
+				"package manager"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "npm-cli-ops",
+					"email": "npm-cli+bot@github.com"
+				},
+				{
+					"name": "saquibkhan",
+					"email": "saquibkhan@github.com"
+				},
+				{
+					"name": "fritzy",
+					"email": "fritzy@github.com"
+				},
+				{
+					"name": "gar",
+					"email": "gar+npm@danger.computer"
+				},
+				{
+					"name": "lukekarrys",
+					"email": "luke@lukekarrys.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint \"**/*.js\"",
+				"snap": "tap",
+				"test": "tap",
+				"lintfix": "npm run lint -- --fix",
+				"coverage": "tap",
+				"postlint": "template-oss-check",
+				"posttest": "npm run lint",
+				"template-oss-apply": "template-oss-apply --force"
+			},
+			"lastModified": 0,
+			"_id": "npm-pick-manifest@9.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-9.0.0.tgz",
+				"shasum": "f87a4c134504a2c7931f2bb8733126e3c3bb7e8f",
+				"integrity": "sha512-VfvRSs/b6n9ol4Qb+bDwNGUXutpy76x6MARw/XssevE0TnctIKcmklJZM5Z7nqs5z5aW+0S63pgCNbpkUNNXBg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDW8+oL5yifTuSrCqKcDQ4yz5EI6RPGB88YIJW2dfXDzAIhAMbTiUDeDSsCGBQ/XhCceehzFNSPTLIePVIfMMciA6p3"
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/npm-pick-manifest@9.0.0",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "9.8.1",
+			"_npmUser": {
+				"name": "npm-cli-ops",
+				"email": "npm-cli+bot@github.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "267e208670d89020910addf79fafd96513c83e21",
+			"tap": {
+				"nyc-arg": [
+					"--exclude",
+					"tap-snapshots/**"
+				],
+				"check-coverage": true
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-pick-manifest_9.0.0_1692131341991_0.4386334300160648",
+				"host": "s3://npm-registry-packages"
+			},
+			"templateOSS": {
+				"publish": true,
+				"version": "4.18.0",
+				"ciVersions": [
+					"16.14.0",
+					"16.x",
+					"18.0.0",
+					"18.x"
+				],
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+			},
+			"_nodeVersion": "18.17.0",
+			"contributors": []
+		},
+		"9.0.1": {
+			"name": "npm-pick-manifest",
+			"description": "Resolves a matching manifest from a package metadata document according to standard npm semver resolution rules.",
+			"version": "9.0.1",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/npm-pick-manifest#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/npm-pick-manifest.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-pick-manifest/issues"
+			},
+			"engines": {
+				"node": "^16.14.0 || >=18.0.0"
+			},
+			"main": "./lib",
+			"dependencies": {
+				"semver": "^7.3.5",
+				"npm-package-arg": "^11.0.0",
+				"npm-install-checks": "^6.0.0",
+				"npm-normalize-package-bin": "^3.0.0"
+			},
+			"devDependencies": {
+				"tap": "^16.0.1",
+				"@npmcli/template-oss": "4.22.0",
+				"@npmcli/eslint-config": "^4.0.0"
+			},
+			"keywords": [
+				"npm",
+				"semver",
+				"package manager"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "npm-cli-ops",
+					"email": "npm-cli+bot@github.com"
+				},
+				{
+					"name": "saquibkhan",
+					"email": "saquibkhan@github.com"
+				},
+				{
+					"name": "fritzy",
+					"email": "fritzy@github.com"
+				},
+				{
+					"name": "gar",
+					"email": "gar+npm@danger.computer"
+				},
+				{
+					"name": "lukekarrys",
+					"email": "luke@lukekarrys.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
+				"snap": "tap",
+				"test": "tap",
+				"lintfix": "npm run lint -- --fix",
+				"coverage": "tap",
+				"postlint": "template-oss-check",
+				"posttest": "npm run lint",
+				"template-oss-apply": "template-oss-apply --force"
+			},
+			"lastModified": 0,
+			"_id": "npm-pick-manifest@9.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-9.0.1.tgz",
+				"shasum": "c90658bd726fe5bca9d2869f3e99359b8fcda046",
+				"integrity": "sha512-Udm1f0l2nXb3wxDpKjfohwgdFUSV50UVwzEIpDXVsbDMXVIEF81a/i0UhuQbhrPMMmdiq3+YMFLFIRVLs3hxQw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDu3k0Y2eoipKBmYevOnxRBh9DMK+YTvi2WKtM7L2OM7QIgYwXp914ZP6h6yvxgqj5KYkTZfXpACSxT4HKtaRkGTzg="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/npm-pick-manifest@9.0.1",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "10.7.0",
+			"_npmUser": {
+				"name": "npm-cli-ops",
+				"email": "npm-cli+bot@github.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "1841ad297f2c22b8a76ede7de680dc639635a824",
+			"tap": {
+				"nyc-arg": [
+					"--exclude",
+					"tap-snapshots/**"
+				],
+				"check-coverage": true
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-pick-manifest_9.0.1_1714785044324_0.6492244403171783",
+				"host": "s3://npm-registry-packages"
+			},
+			"templateOSS": {
+				"publish": true,
+				"version": "4.22.0",
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+			},
+			"_nodeVersion": "22.1.0",
+			"contributors": []
+		},
+		"9.1.0": {
+			"name": "npm-pick-manifest",
+			"description": "Resolves a matching manifest from a package metadata document according to standard npm semver resolution rules.",
+			"version": "9.1.0",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/npm-pick-manifest#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/npm-pick-manifest.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-pick-manifest/issues"
+			},
+			"engines": {
+				"node": "^16.14.0 || >=18.0.0"
+			},
+			"main": "./lib",
+			"dependencies": {
+				"semver": "^7.3.5",
+				"npm-package-arg": "^11.0.0",
+				"npm-install-checks": "^6.0.0",
+				"npm-normalize-package-bin": "^3.0.0"
+			},
+			"devDependencies": {
+				"tap": "^16.0.1",
+				"@npmcli/template-oss": "4.22.0",
+				"@npmcli/eslint-config": "^4.0.0"
+			},
+			"keywords": [
+				"npm",
+				"semver",
+				"package manager"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "reggi",
+					"email": "reggi@github.com"
+				},
+				{
+					"name": "npm-cli-ops",
+					"email": "npm-cli+bot@github.com"
+				},
+				{
+					"name": "saquibkhan",
+					"email": "saquibkhan@github.com"
+				},
+				{
+					"name": "fritzy",
+					"email": "fritzy@github.com"
+				},
+				{
+					"name": "gar",
+					"email": "gar+npm@danger.computer"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
+				"snap": "tap",
+				"test": "tap",
+				"lintfix": "npm run lint -- --fix",
+				"coverage": "tap",
+				"postlint": "template-oss-check",
+				"posttest": "npm run lint",
+				"template-oss-apply": "template-oss-apply --force"
+			},
+			"lastModified": 0,
+			"_id": "npm-pick-manifest@9.1.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-9.1.0.tgz",
+				"shasum": "83562afde52b0b07cb6244361788d319ce7e8636",
+				"integrity": "sha512-nkc+3pIIhqHVQr085X9d2JzPzLyjzQS96zbruppqC9aZRm/x8xx6xhI98gHtsfELP2bE+loHq8ZaHFHhe+NauA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQC+FDTQYrXHydlEZDtT0TyzwKL1hX+KyF4AmO/R7sEccAIhAPc4puXa4QCLaQyuFL2ue9Xace6saaGC0O5oOc9EP9Y/"
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/npm-pick-manifest@9.1.0",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "10.8.1",
+			"_npmUser": {
+				"name": "npm-cli-ops",
+				"email": "npm-cli+bot@github.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "dd050662c8bb181ff30fee1c677e18fd480d2b5b",
+			"tap": {
+				"nyc-arg": [
+					"--exclude",
+					"tap-snapshots/**"
+				],
+				"check-coverage": true
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-pick-manifest_9.1.0_1720545182300_0.9973932354077775",
+				"host": "s3://npm-registry-packages"
+			},
+			"templateOSS": {
+				"publish": true,
+				"version": "4.22.0",
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+			},
+			"_nodeVersion": "22.4.0",
+			"contributors": []
+		},
+		"4.0.0": {
+			"name": "npm-pick-manifest",
+			"description": "Resolves a matching manifest from a package metadata document according to standard npm semver resolution rules.",
+			"version": "4.0.0",
+			"author": {
+				"name": "Kat Marchán",
+				"email": "kzm@sykosomatic.org"
+			},
+			"homepage": "https://github.com/npm/npm-pick-manifest#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/npm-pick-manifest.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-pick-manifest/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"semver": "^5.4.1",
+				"figgy-pudding": "^3.5.1",
+				"npm-package-arg": "^7.0.0"
+			},
+			"devDependencies": {
+				"nyc": "^13.1.0",
+				"tap": "^12.0.1",
+				"standard": "^10.0.3",
+				"weallbehave": "^1.2.0",
+				"weallcontribute": "^1.0.8",
+				"standard-version": "^4.4.0"
+			},
+			"keywords": [
+				"npm",
+				"semver",
+				"package manager"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "adam_baldwin",
+					"email": "evilpacket@gmail.com"
+				},
+				{
+					"name": "ahmadnassri",
+					"email": "ahmad@ahmadnassri.com"
+				},
+				{
+					"name": "annekimsey",
+					"email": "anne@npmjs.com"
+				},
+				{
+					"name": "billatnpm",
+					"email": "billatnpm@gmail.com"
+				},
+				{
+					"name": "claudiahdz",
+					"email": "cghr1990@gmail.com"
+				},
+				{
+					"name": "darcyclarke",
+					"email": "darcy@darcyclarke.me"
+				},
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				},
+				{
+					"name": "mikemimik",
+					"email": "mike@mikecorp.ca"
+				},
+				{
+					"name": "ruyadorno",
+					"email": "ruyadorno@hotmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap -J --100 --coverage test/*.js",
+				"pretest": "standard",
+				"release": "standard-version -s",
+				"prerelease": "npm t",
+				"update-coc": "weallbehave -o . && git add CODE_OF_CONDUCT.md && git commit -m 'docs(coc): updated CODE_OF_CONDUCT.md'",
+				"postrelease": "npm publish && git push --follow-tags",
+				"update-contrib": "weallcontribute -o . && git add CONTRIBUTING.md && git commit -m 'docs(contributing): updated CONTRIBUTING.md'"
+			},
+			"config": {
+				"nyc": {
+					"exclude": [
+						"node_modules/**",
+						"test/**"
+					]
+				}
+			},
+			"lastModified": 0,
+			"_id": "npm-pick-manifest@4.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-4.0.0.tgz",
+				"shasum": "5e1b392a2a6310378b9bab32332597030ca073ce",
+				"integrity": "sha512-SsYReLe/16UgSL6GKX6GO4o3RVBthVy1uuHq6kZ9mkPeQXpOHbrLZoV13i8fr3LQtET+pLPSfD13e4RIYfkX5Q==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCu1GJbquaXVuvmN8zJomTjrw9vAchLS04e/+qXU7SNNwIgQYmcHXsqI/c8pFB97iZzi0Ez1L+HN6Wh5ZLLQbVDCT4="
+					}
+				]
+			},
+			"_npmVersion": "6.13.0",
+			"_npmUser": {
+				"name": "isaacs",
+				"email": "i@izs.me"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "405d00b1bd4b5e58dda6d9bd93ee81e1e92bf3f9",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-pick-manifest_4.0.0_1573444397881_0.08519009887690521",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "12.12.0",
+			"contributors": []
+		},
+		"3.0.0": {
+			"name": "npm-pick-manifest",
+			"description": "Resolves a matching manifest from a package metadata document according to standard npm semver resolution rules.",
+			"version": "3.0.0",
+			"author": {
+				"name": "Kat Marchán",
+				"email": "kzm@sykosomatic.org"
+			},
+			"homepage": "https://github.com/zkat/npm-pick-manifest#readme",
+			"repository": {
+				"url": "git+https://github.com/zkat/npm-pick-manifest.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/zkat/npm-pick-manifest/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"semver": "^5.4.1",
+				"figgy-pudding": "^3.5.1",
+				"npm-package-arg": "^6.0.0"
+			},
+			"devDependencies": {
+				"nyc": "^13.1.0",
+				"tap": "^12.0.1",
+				"standard": "^10.0.3",
+				"weallbehave": "^1.2.0",
+				"weallcontribute": "^1.0.8",
+				"standard-version": "^4.4.0"
+			},
+			"keywords": [
+				"npm",
+				"semver",
+				"package manager"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "adam_baldwin",
+					"email": "evilpacket@gmail.com"
+				},
+				{
+					"name": "ahmadnassri",
+					"email": "ahmad@ahmadnassri.com"
+				},
+				{
+					"name": "annekimsey",
+					"email": "anne@npmjs.com"
+				},
+				{
+					"name": "billatnpm",
+					"email": "billatnpm@gmail.com"
+				},
+				{
+					"name": "claudiahdz",
+					"email": "cghr1990@gmail.com"
+				},
+				{
+					"name": "darcyclarke",
+					"email": "darcy@darcyclarke.me"
+				},
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap -J --100 --coverage test/*.js",
+				"pretest": "standard",
+				"release": "standard-version -s",
+				"prerelease": "npm t",
+				"update-coc": "weallbehave -o . && git add CODE_OF_CONDUCT.md && git commit -m 'docs(coc): updated CODE_OF_CONDUCT.md'",
+				"postrelease": "npm publish && git push --follow-tags",
+				"update-contrib": "weallcontribute -o . && git add CONTRIBUTING.md && git commit -m 'docs(contributing): updated CONTRIBUTING.md'"
+			},
+			"config": {
+				"nyc": {
+					"exclude": [
+						"node_modules/**",
+						"test/**"
+					]
+				}
+			},
+			"lastModified": 0,
+			"_id": "npm-pick-manifest@3.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-3.0.0.tgz",
+				"shasum": "c94cab52d201a85875e45198fffe1a8a348e7af7",
+				"integrity": "sha512-H+OnFudiq38Qj8P8xcesD/1Xa0Kvr2QRn1DTlephIwNfJg3P30Szc1wtpGEgdPXfAyKZKT2ajIM2X8YtCrbXrA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCkcbDPxt9T41ccFK63A1i4FbvIxxAVrUhzqgYhK/zAggIgYaG6a54LkI9TdGzHx5gtpS2t4LC5leSH8irZ0Adq89c="
+					}
+				]
+			},
+			"_npmVersion": "6.10.3",
+			"_npmUser": {
+				"name": "isaacs",
+				"email": "i@izs.me"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "ed0fc2943e43a8843a122e5e3dcec8f501362242",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-pick-manifest_3.0.0_1566259262446_0.26670970897241686",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "12.6.0",
+			"contributors": []
+		},
+		"8.0.2": {
+			"name": "npm-pick-manifest",
+			"description": "Resolves a matching manifest from a package metadata document according to standard npm semver resolution rules.",
+			"version": "8.0.2",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/npm-pick-manifest#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/npm-pick-manifest.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-pick-manifest/issues"
+			},
+			"engines": {
+				"node": "^14.17.0 || ^16.13.0 || >=18.0.0"
+			},
+			"main": "./lib",
+			"dependencies": {
+				"semver": "^7.3.5",
+				"npm-package-arg": "^10.0.0",
+				"npm-install-checks": "^6.0.0",
+				"npm-normalize-package-bin": "^3.0.0"
+			},
+			"devDependencies": {
+				"tap": "^16.0.1",
+				"@npmcli/template-oss": "4.18.0",
+				"@npmcli/eslint-config": "^4.0.0"
+			},
+			"keywords": [
+				"npm",
+				"semver",
+				"package manager"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "npm-cli-ops",
+					"email": "npm-cli+bot@github.com"
+				},
+				{
+					"name": "saquibkhan",
+					"email": "saquibkhan@github.com"
+				},
+				{
+					"name": "fritzy",
+					"email": "fritzy@github.com"
+				},
+				{
+					"name": "nlf",
+					"email": "quitlahok@gmail.com"
+				},
+				{
+					"name": "gar",
+					"email": "gar+npm@danger.computer"
+				},
+				{
+					"name": "lukekarrys",
+					"email": "luke@lukekarrys.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint \"**/*.js\"",
+				"snap": "tap",
+				"test": "tap",
+				"lintfix": "npm run lint -- --fix",
+				"coverage": "tap",
+				"postlint": "template-oss-check",
+				"posttest": "npm run lint",
+				"template-oss-apply": "template-oss-apply --force"
+			},
+			"lastModified": 0,
+			"_id": "npm-pick-manifest@8.0.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-8.0.2.tgz",
+				"shasum": "2159778d9c7360420c925c1a2287b5a884c713aa",
+				"integrity": "sha512-1dKY+86/AIiq1tkKVD3l0WI+Gd3vkknVGAggsFeBkTvbhMQ1OND/LKkYv4JtXPKUJ8bOTCyLiqEg2P6QNdK+Gg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIFtbNgskDyBrye4jftudfAnQW+1rQs1ebPQcbAhDcM3/AiBSktW1BmhpY8q9J+GiAaoIgC9lImYgiKaLvt9KpiSgkQ=="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/npm-pick-manifest@8.0.2",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "9.8.1",
+			"_npmUser": {
+				"name": "npm-cli-ops",
+				"email": "npm-cli+bot@github.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "b683868bd7e47542287ea45170598d1ea8066fc0",
+			"tap": {
+				"nyc-arg": [
+					"--exclude",
+					"tap-snapshots/**"
+				],
+				"check-coverage": true
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-pick-manifest_8.0.2_1690410247675_0.9468843750643319",
+				"host": "s3://npm-registry-packages"
+			},
+			"templateOSS": {
+				"publish": true,
+				"version": "4.18.0",
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+			},
+			"_nodeVersion": "18.17.0",
+			"contributors": []
+		},
+		"8.0.0": {
+			"name": "npm-pick-manifest",
+			"description": "Resolves a matching manifest from a package metadata document according to standard npm semver resolution rules.",
+			"version": "8.0.0",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/npm-pick-manifest#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/npm-pick-manifest.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-pick-manifest/issues"
+			},
+			"engines": {
+				"node": "^14.17.0 || ^16.13.0 || >=18.0.0"
+			},
+			"main": "./lib",
+			"dependencies": {
+				"semver": "^7.3.5",
+				"npm-package-arg": "^9.0.0",
+				"npm-install-checks": "^6.0.0",
+				"npm-normalize-package-bin": "^3.0.0"
+			},
+			"devDependencies": {
+				"tap": "^16.0.1",
+				"@npmcli/template-oss": "4.5.1",
+				"@npmcli/eslint-config": "^4.0.0"
+			},
+			"keywords": [
+				"npm",
+				"semver",
+				"package manager"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "fritzy",
+					"email": "fritzy@github.com"
+				},
+				{
+					"name": "darcyclarke",
+					"email": "darcy@darcyclarke.me"
+				},
+				{
+					"name": "nlf",
+					"email": "quitlahok@gmail.com"
+				},
+				{
+					"name": "gar",
+					"email": "gar+npm@danger.computer"
+				},
+				{
+					"name": "lukekarrys",
+					"email": "luke@lukekarrys.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint \"**/*.js\"",
+				"snap": "tap",
+				"test": "tap",
+				"lintfix": "npm run lint -- --fix",
+				"coverage": "tap",
+				"postlint": "template-oss-check",
+				"posttest": "npm run lint",
+				"template-oss-apply": "template-oss-apply --force"
+			},
+			"lastModified": 0,
+			"_id": "npm-pick-manifest@8.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-8.0.0.tgz",
+				"shasum": "cf7743b00ae777215fa0c4233a346b5df8bc2af0",
+				"integrity": "sha512-Tcy/Mdf9L5f09vaBZo/z9+eb+ZTDeXWZFuPD5PZ6grobO9E3tjaPH+jQOFXZNn3EcqaiRcROzKU1UU7mLTtC2w==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIFQ9oj0F2okFLAUz0hkyeyVQ9ywlWQ02LZ3F3K20WutAAiB4fIOo3Iu2yrV2TLNu3CG6cR1z5ILzjiQTElp0leKdPg=="
+					}
+				]
+			},
+			"_npmVersion": "8.19.2",
+			"_npmUser": {
+				"name": "lukekarrys",
+				"email": "luke@lukekarrys.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "c69708bf2fe217dd114cc6e80e87db99bc196a91",
+			"tap": {
+				"nyc-arg": [
+					"--exclude",
+					"tap-snapshots/**"
+				],
+				"check-coverage": true
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-pick-manifest_8.0.0_1665779969103_0.3735895398009539",
+				"host": "s3://npm-registry-packages"
+			},
+			"templateOSS": {
+				"version": "4.5.1",
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+			},
+			"_nodeVersion": "18.10.0",
+			"contributors": []
+		},
+		"12.0.0": {
+			"name": "npm-pick-manifest",
+			"description": "Resolves a matching manifest from a package metadata document according to standard npm semver resolution rules.",
+			"version": "12.0.0",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/npm-pick-manifest#readme",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/npm/npm-pick-manifest.git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-pick-manifest/issues"
+			},
+			"engines": {
+				"node": "^22.22.2 || ^24.15.0 || >=26.0.0"
+			},
+			"main": "./lib",
+			"dependencies": {
+				"npm-install-checks": "^9.0.0",
+				"npm-normalize-package-bin": "^6.0.0",
+				"npm-package-arg": "^14.0.0",
+				"semver": "^7.3.5"
+			},
+			"devDependencies": {
+				"@npmcli/eslint-config": "^6.0.0",
+				"@npmcli/template-oss": "5.1.0"
+			},
+			"keywords": [
+				"npm",
+				"semver",
+				"package manager"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "saquibkhan",
+					"email": "saquibkhan@github.com"
+				},
+				{
+					"name": "npm-cli-ops",
+					"email": "npm-cli+bot@github.com"
+				},
+				{
+					"name": "reggi",
+					"email": "reggi@github.com"
+				},
+				{
+					"name": "owlstronaut",
+					"email": "owlstronaut@github.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"coverage": "tap",
+				"lint": "npm run eslint",
+				"test": "node --test './test/**/*.js'",
+				"posttest": "npm run lint",
+				"postlint": "template-oss-check",
+				"lintfix": "npm run eslint -- --fix",
+				"snap": "node --test --test-update-snapshots './test/**/*.js'",
+				"template-oss-apply": "template-oss-apply --force",
+				"eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
+				"test:node20": "node --test test",
+				"test:cover": "node --test --experimental-test-coverage --test-timeout=3000 --test-coverage-lines=100 --test-coverage-functions=100 --test-coverage-branches=100 './test/**/*.js'"
+			},
+			"lastModified": 0,
+			"_id": "npm-pick-manifest@12.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-12.0.0.tgz",
+				"shasum": "20e73a00ca66b4c187957d524aaff3cdf77ed9f4",
+				"integrity": "sha512-8Fs3YLrnNOhrCdPNZy18MzNgVC58LTDAFzq1FdZO/p3BHeCC/coz+t4F5Pxabys8HJpyTUorMea26GkXsb4J/Q==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEYCIQDzr4/RULRt4Pm8PMWRRbBTYiSJBTGp5lrk+GU4sbbTAwIhAN3Wr/o3qmfkTPFu0SyBH+jhI0M+yIaAbCa0FOnTgrCt"
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/npm-pick-manifest@12.0.0",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "11.14.1",
+			"_npmUser": {
+				"name": "GitHub Actions",
+				"email": "npm-oidc-no-reply@github.com",
+				"trustedPublisher": {
+					"id": "github",
+					"oidcConfigId": "oidc:82cb1b0c-4f68-4f8f-a191-c880d9d114d0"
+				}
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "bc160ab2a4f49d85f05d85d7b59d98bf9caacd0f",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages-npm-production",
+				"tmp": "tmp/npm-pick-manifest_12.0.0_1779138529140_0.30435820303004313"
+			},
+			"templateOSS": {
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten.",
+				"version": "5.1.0",
+				"publish": true,
+				"testRunner": "node:test",
+				"latestCiVersion": 24
+			},
+			"_nodeVersion": "26.1.0",
+			"contributors": []
+		},
+		"8.0.1": {
+			"name": "npm-pick-manifest",
+			"description": "Resolves a matching manifest from a package metadata document according to standard npm semver resolution rules.",
+			"version": "8.0.1",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/npm-pick-manifest#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/npm-pick-manifest.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-pick-manifest/issues"
+			},
+			"engines": {
+				"node": "^14.17.0 || ^16.13.0 || >=18.0.0"
+			},
+			"main": "./lib",
+			"dependencies": {
+				"semver": "^7.3.5",
+				"npm-package-arg": "^10.0.0",
+				"npm-install-checks": "^6.0.0",
+				"npm-normalize-package-bin": "^3.0.0"
+			},
+			"devDependencies": {
+				"tap": "^16.0.1",
+				"@npmcli/template-oss": "4.6.1",
+				"@npmcli/eslint-config": "^4.0.0"
+			},
+			"keywords": [
+				"npm",
+				"semver",
+				"package manager"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "fritzy",
+					"email": "fritzy@github.com"
+				},
+				{
+					"name": "darcyclarke",
+					"email": "darcy@darcyclarke.me"
+				},
+				{
+					"name": "nlf",
+					"email": "quitlahok@gmail.com"
+				},
+				{
+					"name": "gar",
+					"email": "gar+npm@danger.computer"
+				},
+				{
+					"name": "lukekarrys",
+					"email": "luke@lukekarrys.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint \"**/*.js\"",
+				"snap": "tap",
+				"test": "tap",
+				"lintfix": "npm run lint -- --fix",
+				"coverage": "tap",
+				"postlint": "template-oss-check",
+				"posttest": "npm run lint",
+				"template-oss-apply": "template-oss-apply --force"
+			},
+			"lastModified": 0,
+			"_id": "npm-pick-manifest@8.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-8.0.1.tgz",
+				"shasum": "c6acd97d1ad4c5dbb80eac7b386b03ffeb289e5f",
+				"integrity": "sha512-mRtvlBjTsJvfCCdmPtiu2bdlx8d/KXtF7yNXNWe7G0Z36qWA9Ny5zXsI2PfBZEv7SXgoxTmNaTzGSbbzDZChoA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDSqcTCKMaEy8grPEY5flkhyhw/Hhett/wQpRIi6FDHdgIgXiPnt/w1uhZ1gjB92aeLezVG1RUc5e0Omxty7TwPAyc="
+					}
+				]
+			},
+			"_npmVersion": "9.0.0-pre.4",
+			"_npmUser": {
+				"name": "gar",
+				"email": "gar+npm@danger.computer"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "11dbb8d311217f9ad1b09a915f74e79ced1537ee",
+			"tap": {
+				"nyc-arg": [
+					"--exclude",
+					"tap-snapshots/**"
+				],
+				"check-coverage": true
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-pick-manifest_8.0.1_1666108817212_0.4956567393984028",
+				"host": "s3://npm-registry-packages"
+			},
+			"templateOSS": {
+				"version": "4.6.1",
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+			},
+			"_nodeVersion": "18.10.0",
+			"contributors": []
+		},
+		"3.0.1": {
+			"name": "npm-pick-manifest",
+			"description": "Resolves a matching manifest from a package metadata document according to standard npm semver resolution rules.",
+			"version": "3.0.1",
+			"author": {
+				"name": "Kat Marchán",
+				"email": "kzm@sykosomatic.org"
+			},
+			"homepage": "https://github.com/zkat/npm-pick-manifest#readme",
+			"repository": {
+				"url": "git+https://github.com/zkat/npm-pick-manifest.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/zkat/npm-pick-manifest/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"semver": "^5.4.1",
+				"figgy-pudding": "^3.5.1",
+				"npm-package-arg": "^6.0.0"
+			},
+			"devDependencies": {
+				"nyc": "^13.1.0",
+				"tap": "^12.0.1",
+				"standard": "^10.0.3",
+				"weallbehave": "^1.2.0",
+				"weallcontribute": "^1.0.8",
+				"standard-version": "^4.4.0"
+			},
+			"keywords": [
+				"npm",
+				"semver",
+				"package manager"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "adam_baldwin",
+					"email": "evilpacket@gmail.com"
+				},
+				{
+					"name": "ahmadnassri",
+					"email": "ahmad@ahmadnassri.com"
+				},
+				{
+					"name": "annekimsey",
+					"email": "anne@npmjs.com"
+				},
+				{
+					"name": "billatnpm",
+					"email": "billatnpm@gmail.com"
+				},
+				{
+					"name": "claudiahdz",
+					"email": "cghr1990@gmail.com"
+				},
+				{
+					"name": "darcyclarke",
+					"email": "darcy@darcyclarke.me"
+				},
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap -J --100 --coverage test/*.js",
+				"pretest": "standard",
+				"release": "standard-version -s",
+				"prerelease": "npm t",
+				"update-coc": "weallbehave -o . && git add CODE_OF_CONDUCT.md && git commit -m 'docs(coc): updated CODE_OF_CONDUCT.md'",
+				"postrelease": "npm publish && git push --follow-tags",
+				"update-contrib": "weallcontribute -o . && git add CONTRIBUTING.md && git commit -m 'docs(contributing): updated CONTRIBUTING.md'"
+			},
+			"config": {
+				"nyc": {
+					"exclude": [
+						"node_modules/**",
+						"test/**"
+					]
+				}
+			},
+			"lastModified": 0,
+			"_id": "npm-pick-manifest@3.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-3.0.1.tgz",
+				"shasum": "19c350ffbe42e0c3c054dcd50dd5760556a98bd8",
+				"integrity": "sha512-QsJY1LuN6vuGg2BDnteeWGYODOYWZZwbW/YyCKHK4tt9uE+k2d70eg+Kr1CSLbX157Nu8UtY/Afdv884RnJSrQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIGZPLimLybPCvIcQvwYUcx3EDMlItv8J/8iqOq5TlN04AiEAwetwYCj4dOxJzPb0fS2CfbghlNpLqxcPTGlWsHcfJ4g="
+					}
+				]
+			},
+			"_npmVersion": "6.11.1",
+			"_npmUser": {
+				"name": "isaacs",
+				"email": "i@izs.me"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "543da7ce3c18e2a8616b8098cd76d8eb27731e5f",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-pick-manifest_3.0.1_1567023725003_0.4652259824432121",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "12.8.1",
+			"contributors": []
+		},
+		"3.0.2": {
+			"name": "npm-pick-manifest",
+			"description": "Resolves a matching manifest from a package metadata document according to standard npm semver resolution rules.",
+			"version": "3.0.2",
+			"author": {
+				"name": "Kat Marchán",
+				"email": "kzm@sykosomatic.org"
+			},
+			"homepage": "https://github.com/npm/npm-pick-manifest#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/npm-pick-manifest.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-pick-manifest/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"semver": "^5.4.1",
+				"figgy-pudding": "^3.5.1",
+				"npm-package-arg": "^6.0.0"
+			},
+			"devDependencies": {
+				"nyc": "^13.1.0",
+				"tap": "^12.0.1",
+				"standard": "^10.0.3",
+				"weallbehave": "^1.2.0",
+				"weallcontribute": "^1.0.8",
+				"standard-version": "^4.4.0"
+			},
+			"keywords": [
+				"npm",
+				"semver",
+				"package manager"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "adam_baldwin",
+					"email": "evilpacket@gmail.com"
+				},
+				{
+					"name": "ahmadnassri",
+					"email": "ahmad@ahmadnassri.com"
+				},
+				{
+					"name": "annekimsey",
+					"email": "anne@npmjs.com"
+				},
+				{
+					"name": "billatnpm",
+					"email": "billatnpm@gmail.com"
+				},
+				{
+					"name": "claudiahdz",
+					"email": "cghr1990@gmail.com"
+				},
+				{
+					"name": "darcyclarke",
+					"email": "darcy@darcyclarke.me"
+				},
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap -J --100 --coverage test/*.js",
+				"pretest": "standard",
+				"release": "standard-version -s",
+				"prerelease": "npm t",
+				"update-coc": "weallbehave -o . && git add CODE_OF_CONDUCT.md && git commit -m 'docs(coc): updated CODE_OF_CONDUCT.md'",
+				"postrelease": "npm publish && git push --follow-tags",
+				"update-contrib": "weallcontribute -o . && git add CONTRIBUTING.md && git commit -m 'docs(contributing): updated CONTRIBUTING.md'"
+			},
+			"config": {
+				"nyc": {
+					"exclude": [
+						"node_modules/**",
+						"test/**"
+					]
+				}
+			},
+			"lastModified": 0,
+			"_id": "npm-pick-manifest@3.0.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-3.0.2.tgz",
+				"shasum": "f4d9e5fd4be2153e5f4e5f9b7be8dc419a99abb7",
+				"integrity": "sha512-wNprTNg+X5nf+tDi+hbjdHhM4bX+mKqv6XmPh7B5eG+QY9VARfQPfCEH013H5GqfNj6ee8Ij2fg8yk0mzps1Vw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIAF4Nl/IhgCjl+PMtNmOVlZkgCdG14BEdRGPi9o8KutMAiAgXmJUeHsr0aGcR9mqS8aQcP8C2UlozejzE369CrbVwQ=="
+					}
+				]
+			},
+			"_npmVersion": "6.11.2",
+			"_npmUser": {
+				"name": "isaacs",
+				"email": "i@izs.me"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "8e662722d4958b4714e5279e4a9eb4af82f74b5a",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-pick-manifest_3.0.2_1567204257190_0.4469388122328821",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "12.8.1",
+			"contributors": []
+		},
+		"2.0.0": {
+			"name": "npm-pick-manifest",
+			"description": "Resolves a matching manifest from a package metadata document according to standard npm semver resolution rules.",
+			"version": "2.0.0",
+			"author": {
+				"name": "Kat Marchán",
+				"email": "kzm@sykosomatic.org"
+			},
+			"homepage": "https://github.com/zkat/npm-pick-manifest#readme",
+			"repository": {
+				"url": "git+https://github.com/zkat/npm-pick-manifest.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/zkat/npm-pick-manifest/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"semver": "^5.4.1",
+				"npm-package-arg": "^5.1.2"
+			},
+			"devDependencies": {
+				"nyc": "^11.2.1",
+				"tap": "^10.7.0",
+				"standard": "^10.0.3",
+				"weallbehave": "^1.2.0",
+				"weallcontribute": "^1.0.8",
+				"standard-version": "^4.2.0"
+			},
+			"keywords": [
+				"npm",
+				"semver",
+				"package manager"
+			],
+			"license": "ISC",
+			"files": [
+				"*.js"
+			],
+			"maintainers": [
+				{
+					"name": "zkat",
+					"email": "kat@sykosomatic.org"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap -J --100 --coverage test/*.js",
+				"pretest": "standard",
+				"release": "standard-version -s",
+				"prerelease": "npm t",
+				"update-coc": "weallbehave -o . && git add CODE_OF_CONDUCT.md && git commit -m 'docs(coc): updated CODE_OF_CONDUCT.md'",
+				"postrelease": "npm publish && git push --follow-tags",
+				"update-contrib": "weallcontribute -o . && git add CONTRIBUTING.md && git commit -m 'docs(contributing): updated CONTRIBUTING.md'"
+			},
+			"config": {
+				"nyc": {
+					"exclude": [
+						"node_modules/**",
+						"test/**"
+					]
+				}
+			},
+			"lastModified": 0,
+			"_id": "npm-pick-manifest@2.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-2.0.0.tgz",
+				"shasum": "a7a66b4776d25f51a9b01c621e373e8137a8a519",
+				"integrity": "sha512-JFZ9oRVPm7M1lz00r5dypjWVqaWl1W2RO2jhoZ42GTJpzoLKcG/gXxvUbwAyQikBgcIC8YAaVmtzdp2VpN2sUw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDpVv5ExP/AKCKm7MgPbFyb00f/vxTIygN4nR0kXufxqgIhAMr9l7uXZZH7MmWNs04Dw80mr5n4UhHLPS7J1fzgDc3Z"
+					}
+				]
+			},
+			"_npmVersion": "5.4.2-canary.6",
+			"_npmUser": {
+				"name": "zkat",
+				"email": "kzm@sykosomatic.org"
+			},
+			"gitHead": "caee1cc2036be9cde7c93a9030cab592de80f39d",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-pick-manifest-2.0.0.tgz_1507073229704_0.22930030734278262",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "8.5.0",
+			"contributors": []
+		},
+		"7.0.1": {
+			"name": "npm-pick-manifest",
+			"description": "Resolves a matching manifest from a package metadata document according to standard npm semver resolution rules.",
+			"version": "7.0.1",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/npm-pick-manifest#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/npm-pick-manifest.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-pick-manifest/issues"
+			},
+			"engines": {
+				"node": "^12.13.0 || ^14.15.0 || >=16.0.0"
+			},
+			"main": "./lib",
+			"dependencies": {
+				"semver": "^7.3.5",
+				"npm-package-arg": "^9.0.0",
+				"npm-install-checks": "^5.0.0",
+				"npm-normalize-package-bin": "^1.0.1"
+			},
+			"devDependencies": {
+				"tap": "^16.0.1",
+				"@npmcli/template-oss": "3.2.2",
+				"@npmcli/eslint-config": "^3.0.1"
+			},
+			"keywords": [
+				"npm",
+				"semver",
+				"package manager"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "fritzy",
+					"email": "fritzy@github.com"
+				},
+				{
+					"name": "darcyclarke",
+					"email": "darcy@darcyclarke.me"
+				},
+				{
+					"name": "ruyadorno",
+					"email": "ruyadorno@hotmail.com"
+				},
+				{
+					"name": "nlf",
+					"email": "quitlahok@gmail.com"
+				},
+				{
+					"name": "gar",
+					"email": "gar+npm@danger.computer"
+				},
+				{
+					"name": "lukekarrys",
+					"email": "luke@lukekarrys.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint \"**/*.js\"",
+				"snap": "tap",
+				"test": "tap",
+				"lintfix": "npm run lint -- --fix",
+				"coverage": "tap",
+				"postlint": "template-oss-check",
+				"posttest": "npm run lint",
+				"preversion": "npm test",
+				"postversion": "npm publish",
+				"prepublishOnly": "git push origin --follow-tags",
+				"template-oss-apply": "template-oss-apply --force"
+			},
+			"lastModified": 0,
+			"_id": "npm-pick-manifest@7.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-7.0.1.tgz",
+				"shasum": "76dda30a7cd6b99be822217a935c2f5eacdaca4c",
+				"integrity": "sha512-IA8+tuv8KujbsbLQvselW2XQgmXWS47t3CB0ZrzsRZ82DbDfkcFunOaPm4X7qNuhMfq+FmV7hQT4iFVpHqV7mg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDv0GzNSPrwZ9FTedrm+ZU060MqOJLcKEb4Cz9uV6bbfwIgJIZjYKXTEe/SXYgeDE5Oyu/XvCVXamaMzfUxplgXlX8="
+					}
+				]
+			},
+			"_npmVersion": "8.6.0",
+			"_npmUser": {
+				"name": "gar",
+				"email": "gar+npm@danger.computer"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "2c9d25f97663b72253828cb540d598c35b8920a7",
+			"tap": {
+				"check-coverage": true
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-pick-manifest_7.0.1_1649180636270_0.9426326462089702",
+				"host": "s3://npm-registry-packages"
+			},
+			"templateOSS": {
+				"version": "3.2.2",
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+			},
+			"_nodeVersion": "16.14.2",
+			"contributors": []
+		},
+		"2.0.1": {
+			"name": "npm-pick-manifest",
+			"description": "Resolves a matching manifest from a package metadata document according to standard npm semver resolution rules.",
+			"version": "2.0.1",
+			"author": {
+				"name": "Kat Marchán",
+				"email": "kzm@sykosomatic.org"
+			},
+			"homepage": "https://github.com/zkat/npm-pick-manifest#readme",
+			"repository": {
+				"url": "git+https://github.com/zkat/npm-pick-manifest.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/zkat/npm-pick-manifest/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"semver": "^5.4.1",
+				"npm-package-arg": "^6.0.0"
+			},
+			"devDependencies": {
+				"nyc": "^11.2.1",
+				"tap": "^10.7.0",
+				"standard": "^10.0.3",
+				"weallbehave": "^1.2.0",
+				"weallcontribute": "^1.0.8",
+				"standard-version": "^4.2.0"
+			},
+			"keywords": [
+				"npm",
+				"semver",
+				"package manager"
+			],
+			"license": "ISC",
+			"files": [
+				"*.js"
+			],
+			"maintainers": [
+				{
+					"name": "zkat",
+					"email": "kat@sykosomatic.org"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap -J --100 --coverage test/*.js",
+				"pretest": "standard",
+				"release": "standard-version -s",
+				"prerelease": "npm t",
+				"update-coc": "weallbehave -o . && git add CODE_OF_CONDUCT.md && git commit -m 'docs(coc): updated CODE_OF_CONDUCT.md'",
+				"postrelease": "npm publish && git push --follow-tags",
+				"update-contrib": "weallcontribute -o . && git add CONTRIBUTING.md && git commit -m 'docs(contributing): updated CONTRIBUTING.md'"
+			},
+			"config": {
+				"nyc": {
+					"exclude": [
+						"node_modules/**",
+						"test/**"
+					]
+				}
+			},
+			"lastModified": 0,
+			"_id": "npm-pick-manifest@2.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-2.0.1.tgz",
+				"shasum": "c46e6dc318d9eb1d969a1d4d86da8af2b11a9070",
+				"integrity": "sha512-ezJVNA/t0Lwt7sMJHSjO6sb7+1zak29DSI4ntt/HgRREntji9biVCjvCPtjUjnlUbSHWnAD361Q52jI62yihrA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIAcP/6A06stsxLj+Rd5z4G1p4e3shgyYg5kqtpbVYF93AiEAmk3LOaeCBPKNWS6H23VzRQnvGrKk/kZYbUJSQj/BpJE="
+					}
+				]
+			},
+			"_npmVersion": "5.5.1",
+			"_npmUser": {
+				"name": "zkat",
+				"email": "kzm@sykosomatic.org"
+			},
+			"gitHead": "567665892ee2d3fcefc9ea226154aea3308893d5",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-pick-manifest-2.0.1.tgz_1508360376368_0.8312480710446835",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "8.5.0",
+			"contributors": []
+		},
+		"2.1.0": {
+			"name": "npm-pick-manifest",
+			"description": "Resolves a matching manifest from a package metadata document according to standard npm semver resolution rules.",
+			"version": "2.1.0",
+			"author": {
+				"name": "Kat Marchán",
+				"email": "kzm@sykosomatic.org"
+			},
+			"homepage": "https://github.com/zkat/npm-pick-manifest#readme",
+			"repository": {
+				"url": "git+https://github.com/zkat/npm-pick-manifest.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/zkat/npm-pick-manifest/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"semver": "^5.4.1",
+				"npm-package-arg": "^6.0.0"
+			},
+			"devDependencies": {
+				"nyc": "^11.2.1",
+				"tap": "^10.7.0",
+				"standard": "^10.0.3",
+				"weallbehave": "^1.2.0",
+				"weallcontribute": "^1.0.8",
+				"standard-version": "^4.2.0"
+			},
+			"keywords": [
+				"npm",
+				"semver",
+				"package manager"
+			],
+			"license": "ISC",
+			"files": [
+				"*.js"
+			],
+			"maintainers": [
+				{
+					"name": "zkat",
+					"email": "kat@sykosomatic.org"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap -J --100 --coverage test/*.js",
+				"pretest": "standard",
+				"release": "standard-version -s",
+				"prerelease": "npm t",
+				"update-coc": "weallbehave -o . && git add CODE_OF_CONDUCT.md && git commit -m 'docs(coc): updated CODE_OF_CONDUCT.md'",
+				"postrelease": "npm publish && git push --follow-tags",
+				"update-contrib": "weallcontribute -o . && git add CONTRIBUTING.md && git commit -m 'docs(contributing): updated CONTRIBUTING.md'"
+			},
+			"config": {
+				"nyc": {
+					"exclude": [
+						"node_modules/**",
+						"test/**"
+					]
+				}
+			},
+			"lastModified": 0,
+			"_id": "npm-pick-manifest@2.1.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-2.1.0.tgz",
+				"shasum": "dc381bdd670c35d81655e1d5a94aa3dd4d87fce5",
+				"integrity": "sha512-q9zLP8cTr8xKPmMZN3naxp1k/NxVFsjxN6uWuO1tiw9gxg7wZWQ/b5UTfzD0ANw2q1lQxdLKTeCCksq+bPSgbQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCZYb6orFiLAu/Qkw7t4wRK5rF9U2s+B1sdyyoupJ924gIgP+hUaCM01slk5e0YCZ4suRclhTRn9S1B6mZEtNJP7LA="
+					}
+				]
+			},
+			"_npmVersion": "5.5.1",
+			"_npmUser": {
+				"name": "zkat",
+				"email": "kzm@sykosomatic.org"
+			},
+			"gitHead": "a4ef36f6a5481722ae168bcd1212975927f6912c",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-pick-manifest-2.1.0.tgz_1508361288782_0.6483745856676251",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "8.5.0",
+			"contributors": []
+		},
+		"7.0.2": {
+			"name": "npm-pick-manifest",
+			"description": "Resolves a matching manifest from a package metadata document according to standard npm semver resolution rules.",
+			"version": "7.0.2",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/npm-pick-manifest#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/npm-pick-manifest.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-pick-manifest/issues"
+			},
+			"engines": {
+				"node": "^12.13.0 || ^14.15.0 || >=16.0.0"
+			},
+			"main": "./lib",
+			"dependencies": {
+				"semver": "^7.3.5",
+				"npm-package-arg": "^9.0.0",
+				"npm-install-checks": "^5.0.0",
+				"npm-normalize-package-bin": "^2.0.0"
+			},
+			"devDependencies": {
+				"tap": "^16.0.1",
+				"@npmcli/template-oss": "3.2.2",
+				"@npmcli/eslint-config": "^3.0.1"
+			},
+			"keywords": [
+				"npm",
+				"semver",
+				"package manager"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "fritzy",
+					"email": "fritzy@github.com"
+				},
+				{
+					"name": "darcyclarke",
+					"email": "darcy@darcyclarke.me"
+				},
+				{
+					"name": "nlf",
+					"email": "quitlahok@gmail.com"
+				},
+				{
+					"name": "gar",
+					"email": "gar+npm@danger.computer"
+				},
+				{
+					"name": "lukekarrys",
+					"email": "luke@lukekarrys.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint \"**/*.js\"",
+				"snap": "tap",
+				"test": "tap",
+				"lintfix": "npm run lint -- --fix",
+				"coverage": "tap",
+				"postlint": "template-oss-check",
+				"posttest": "npm run lint",
+				"preversion": "npm test",
+				"postversion": "npm publish",
+				"prepublishOnly": "git push origin --follow-tags",
+				"template-oss-apply": "template-oss-apply --force"
+			},
+			"lastModified": 0,
+			"_id": "npm-pick-manifest@7.0.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-7.0.2.tgz",
+				"shasum": "1d372b4e7ea7c6712316c0e99388a73ed3496e84",
+				"integrity": "sha512-gk37SyRmlIjvTfcYl6RzDbSmS9Y4TOBXfsPnoYqTHARNgWbyDiCSMLUpmALDj4jjcTZpURiEfsSHJj9k7EV4Rw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIDZ8uBo1QCSa4fqhiLVTrkB1FbBZ7k1E6GfkBrh/Ma+jAiBvB3f8UsMXQSm6Sdt1gvUwAsQmHlAhr53EqVQYfS5eVQ=="
+					}
+				]
+			},
+			"_npmVersion": "8.18.0",
+			"_npmUser": {
+				"name": "lukekarrys",
+				"email": "luke@lukekarrys.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "da52ec9cd5640d424075ccb6beb622c63e98c4ac",
+			"tap": {
+				"check-coverage": true
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-pick-manifest_7.0.2_1661456616306_0.5669359278115589",
+				"host": "s3://npm-registry-packages"
+			},
+			"templateOSS": {
+				"version": "3.2.2",
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+			},
+			"_nodeVersion": "18.7.0",
+			"contributors": []
+		},
+		"7.0.0": {
+			"name": "npm-pick-manifest",
+			"description": "Resolves a matching manifest from a package metadata document according to standard npm semver resolution rules.",
+			"version": "7.0.0",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/npm-pick-manifest#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/npm-pick-manifest.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-pick-manifest/issues"
+			},
+			"engines": {
+				"node": "^12.13.0 || ^14.15.0 || >=16"
+			},
+			"main": "./lib",
+			"dependencies": {
+				"semver": "^7.3.5",
+				"npm-package-arg": "^9.0.0",
+				"npm-install-checks": "^4.0.0",
+				"npm-normalize-package-bin": "^1.0.1"
+			},
+			"devDependencies": {
+				"tap": "^15.1.6",
+				"@npmcli/template-oss": "^2.7.1"
+			},
+			"keywords": [
+				"npm",
+				"semver",
+				"package manager"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "fritzy",
+					"email": "fritzy@github.com"
+				},
+				{
+					"name": "darcyclarke",
+					"email": "darcy@darcyclarke.me"
+				},
+				{
+					"name": "ruyadorno",
+					"email": "ruyadorno@hotmail.com"
+				},
+				{
+					"name": "nlf",
+					"email": "quitlahok@gmail.com"
+				},
+				{
+					"name": "gar",
+					"email": "gar+npm@danger.computer"
+				},
+				{
+					"name": "lukekarrys",
+					"email": "luke@lukekarrys.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint '**/*.js'",
+				"snap": "tap",
+				"test": "tap",
+				"lintfix": "npm run lint -- --fix",
+				"coverage": "tap",
+				"postlint": "npm-template-check",
+				"posttest": "npm run lint",
+				"preversion": "npm test",
+				"postversion": "npm publish",
+				"template-copy": "npm-template-copy --force",
+				"prepublishOnly": "git push origin --follow-tags"
+			},
+			"lastModified": 0,
+			"_id": "npm-pick-manifest@7.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-7.0.0.tgz",
+				"shasum": "e3b18b09678a47e894f90941bef8204ea5d96c3b",
+				"integrity": "sha512-njM1AcdioFaKd0JSGtLO09YA1WRwctjGQJbnHGmKS+u+uwP8oFvtZtOQWPYdxrnY5eJud3wn8OpH4sEIx6+GEQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCgr5geis2QHgN4hg+vuCyf4jdnmQMUt5t9gUHR9Yn1SgIgVpIwcFTVDPX3Yff2LlyyXoRKI8P6I0UfmBzs1+VEiGw="
+					}
+				]
+			},
+			"_npmVersion": "8.4.1",
+			"_npmUser": {
+				"name": "gar",
+				"email": "gar+npm@danger.computer"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "9c7c7aaba9f6900e6810c1123aea5dbc4234030e",
+			"tap": {
+				"check-coverage": true
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-pick-manifest_7.0.0_1644506917456_0.4765661644464383",
+				"host": "s3://npm-registry-packages"
+			},
+			"templateOSS": {
+				"version": "2.7.1"
+			},
+			"_nodeVersion": "16.14.0",
+			"contributors": []
+		},
+		"2.2.2": {
+			"name": "npm-pick-manifest",
+			"description": "Resolves a matching manifest from a package metadata document according to standard npm semver resolution rules.",
+			"version": "2.2.2",
+			"author": {
+				"name": "Kat Marchán",
+				"email": "kzm@sykosomatic.org"
+			},
+			"homepage": "https://github.com/zkat/npm-pick-manifest#readme",
+			"repository": {
+				"url": "git+https://github.com/zkat/npm-pick-manifest.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/zkat/npm-pick-manifest/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"semver": "^5.4.1",
+				"figgy-pudding": "^3.5.1",
+				"npm-package-arg": "^6.0.0"
+			},
+			"devDependencies": {
+				"nyc": "^13.1.0",
+				"tap": "^12.0.1",
+				"standard": "^10.0.3",
+				"weallbehave": "^1.2.0",
+				"weallcontribute": "^1.0.8",
+				"standard-version": "^4.4.0"
+			},
+			"keywords": [
+				"npm",
+				"semver",
+				"package manager"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "zkat",
+					"email": "kat@sykosomatic.org"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap -J --100 --coverage test/*.js",
+				"pretest": "standard",
+				"release": "standard-version -s",
+				"prerelease": "npm t",
+				"update-coc": "weallbehave -o . && git add CODE_OF_CONDUCT.md && git commit -m 'docs(coc): updated CODE_OF_CONDUCT.md'",
+				"postrelease": "npm publish && git push --follow-tags",
+				"update-contrib": "weallcontribute -o . && git add CONTRIBUTING.md && git commit -m 'docs(contributing): updated CONTRIBUTING.md'"
+			},
+			"config": {
+				"nyc": {
+					"exclude": [
+						"node_modules/**",
+						"test/**"
+					]
+				}
+			},
+			"lastModified": 0,
+			"_id": "npm-pick-manifest@2.2.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-2.2.2.tgz",
+				"shasum": "db4e4ba3eb27a86f6094083087f1fbfd1a6fa6b3",
+				"integrity": "sha512-ZVhE5G1KZU7g72L2ljCyJNbXgzSu/7Fef8cSQRzVMxzfk5An2AOxa6Tl1PszKtGmhJlL1USFNJMAsVxv2obevg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEMCIF/pzfZt4jMMXB9PSHKDHV9dj5EYOBnFX2P13vJZZlN7Ah9UO8I9gqiCJylNVA5gTPayMCO9vRd4T6j+f0vw6pup"
+					}
+				]
+			},
+			"_npmVersion": "6.4.1",
+			"_npmUser": {
+				"name": "zkat",
+				"email": "npm@zkat.tech"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "dcef9cd937274dd4536474e9413f835692631a40",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-pick-manifest_2.2.2_1540952660859_0.4760443772839327",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "10.6.0",
+			"contributors": []
+		},
+		"2.2.3": {
+			"name": "npm-pick-manifest",
+			"description": "Resolves a matching manifest from a package metadata document according to standard npm semver resolution rules.",
+			"version": "2.2.3",
+			"author": {
+				"name": "Kat Marchán",
+				"email": "kzm@sykosomatic.org"
+			},
+			"homepage": "https://github.com/zkat/npm-pick-manifest#readme",
+			"repository": {
+				"url": "git+https://github.com/zkat/npm-pick-manifest.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/zkat/npm-pick-manifest/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"semver": "^5.4.1",
+				"figgy-pudding": "^3.5.1",
+				"npm-package-arg": "^6.0.0"
+			},
+			"devDependencies": {
+				"nyc": "^13.1.0",
+				"tap": "^12.0.1",
+				"standard": "^10.0.3",
+				"weallbehave": "^1.2.0",
+				"weallcontribute": "^1.0.8",
+				"standard-version": "^4.4.0"
+			},
+			"keywords": [
+				"npm",
+				"semver",
+				"package manager"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "zkat",
+					"email": "kat@sykosomatic.org"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap -J --100 --coverage test/*.js",
+				"pretest": "standard",
+				"release": "standard-version -s",
+				"prerelease": "npm t",
+				"update-coc": "weallbehave -o . && git add CODE_OF_CONDUCT.md && git commit -m 'docs(coc): updated CODE_OF_CONDUCT.md'",
+				"postrelease": "npm publish && git push --follow-tags",
+				"update-contrib": "weallcontribute -o . && git add CONTRIBUTING.md && git commit -m 'docs(contributing): updated CONTRIBUTING.md'"
+			},
+			"config": {
+				"nyc": {
+					"exclude": [
+						"node_modules/**",
+						"test/**"
+					]
+				}
+			},
+			"lastModified": 0,
+			"_id": "npm-pick-manifest@2.2.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-2.2.3.tgz",
+				"shasum": "32111d2a9562638bb2c8f2bf27f7f3092c8fae40",
+				"integrity": "sha512-+IluBC5K201+gRU85vFlUwX3PFShZAbAgDNp2ewJdWMVSppdo/Zih0ul2Ecky/X7b51J7LrrUAP+XOmOCvYZqA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIDCwjErOq3doTIcmaubpNVvzusLW346sv3Wud7zYYxp3AiBwQ2CbYbot8LTEMBdadc2Ns7ExrPmD7WCtM8dh4p5v0w=="
+					}
+				]
+			},
+			"_npmVersion": "6.4.1",
+			"_npmUser": {
+				"name": "zkat",
+				"email": "npm@zkat.tech"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "cf0c6127458ec472679466b397fdec3d4f9437f3",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-pick-manifest_2.2.3_1540954798258_0.9079661490340645",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "10.6.0",
+			"contributors": []
+		},
+		"2.2.0": {
+			"name": "npm-pick-manifest",
+			"description": "Resolves a matching manifest from a package metadata document according to standard npm semver resolution rules.",
+			"version": "2.2.0",
+			"author": {
+				"name": "Kat Marchán",
+				"email": "kzm@sykosomatic.org"
+			},
+			"homepage": "https://github.com/zkat/npm-pick-manifest#readme",
+			"repository": {
+				"url": "git+https://github.com/zkat/npm-pick-manifest.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/zkat/npm-pick-manifest/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"semver": "^5.4.1",
+				"figgy-pudding": "^3.5.1",
+				"npm-package-arg": "^6.0.0"
+			},
+			"devDependencies": {
+				"nyc": "^13.1.0",
+				"tap": "^12.0.1",
+				"standard": "^10.0.3",
+				"weallbehave": "^1.2.0",
+				"weallcontribute": "^1.0.8",
+				"standard-version": "^4.4.0"
+			},
+			"keywords": [
+				"npm",
+				"semver",
+				"package manager"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "zkat",
+					"email": "kat@sykosomatic.org"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap -J --100 --coverage test/*.js",
+				"pretest": "standard",
+				"release": "standard-version -s",
+				"prerelease": "npm t",
+				"update-coc": "weallbehave -o . && git add CODE_OF_CONDUCT.md && git commit -m 'docs(coc): updated CODE_OF_CONDUCT.md'",
+				"postrelease": "npm publish && git push --follow-tags",
+				"update-contrib": "weallcontribute -o . && git add CONTRIBUTING.md && git commit -m 'docs(contributing): updated CONTRIBUTING.md'"
+			},
+			"config": {
+				"nyc": {
+					"exclude": [
+						"node_modules/**",
+						"test/**"
+					]
+				}
+			},
+			"lastModified": 0,
+			"_id": "npm-pick-manifest@2.2.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-2.2.0.tgz",
+				"shasum": "43bb722c08caff83c9822d0011f9f5951c219505",
+				"integrity": "sha512-ZqBYyBVrLFGIqRYOE4yjg3Cxav1SCpnrv3NAL2nsi23fGxIDMsotYjt/wmBTF53YZ5NwPwGGX9t3GSzDA8H2cg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIEXSjbEscIH2r/pHIlxTOcE7YWe0iSURiwQKe6CkDdFbAiALYnJLR1e6Ri+L70JZGtVgerwDg8oW3aJPu7Y/inpY0g=="
+					}
+				]
+			},
+			"_npmVersion": "6.4.1",
+			"_npmUser": {
+				"name": "zkat",
+				"email": "npm@zkat.tech"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "b0ea20a1b25b2927898706c6c5ba932934bf74f9",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-pick-manifest_2.2.0_1540924511730_0.5083070590477872",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "10.6.0",
+			"contributors": []
+		},
+		"2.2.1": {
+			"name": "npm-pick-manifest",
+			"description": "Resolves a matching manifest from a package metadata document according to standard npm semver resolution rules.",
+			"version": "2.2.1",
+			"author": {
+				"name": "Kat Marchán",
+				"email": "kzm@sykosomatic.org"
+			},
+			"homepage": "https://github.com/zkat/npm-pick-manifest#readme",
+			"repository": {
+				"url": "git+https://github.com/zkat/npm-pick-manifest.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/zkat/npm-pick-manifest/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"semver": "^5.4.1",
+				"figgy-pudding": "^3.5.1",
+				"npm-package-arg": "^6.0.0"
+			},
+			"devDependencies": {
+				"nyc": "^13.1.0",
+				"tap": "^12.0.1",
+				"standard": "^10.0.3",
+				"weallbehave": "^1.2.0",
+				"weallcontribute": "^1.0.8",
+				"standard-version": "^4.4.0"
+			},
+			"keywords": [
+				"npm",
+				"semver",
+				"package manager"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "zkat",
+					"email": "kat@sykosomatic.org"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap -J --100 --coverage test/*.js",
+				"pretest": "standard",
+				"release": "standard-version -s",
+				"prerelease": "npm t",
+				"update-coc": "weallbehave -o . && git add CODE_OF_CONDUCT.md && git commit -m 'docs(coc): updated CODE_OF_CONDUCT.md'",
+				"postrelease": "npm publish && git push --follow-tags",
+				"update-contrib": "weallcontribute -o . && git add CONTRIBUTING.md && git commit -m 'docs(contributing): updated CONTRIBUTING.md'"
+			},
+			"config": {
+				"nyc": {
+					"exclude": [
+						"node_modules/**",
+						"test/**"
+					]
+				}
+			},
+			"lastModified": 0,
+			"_id": "npm-pick-manifest@2.2.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-2.2.1.tgz",
+				"shasum": "a528c8540f3e181bad4bca7a1ad458097dd02225",
+				"integrity": "sha512-aT0qU5tLFIbWzNLBcT6hUOK/4WVxMBx6XyaeoYOQ7MMid43EYPoTQW3+XPi9/g6+v7QcyfNXg5wVGumQzq1dJw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIB9LexJ00u003K1hBntbYgB92LmaStO/YUOZigweEYLjAiAuttG7+L2PfIXG4Ti09xc94dJDdZ95/Pw+CPyh/U6ENQ=="
+					}
+				]
+			},
+			"_npmVersion": "6.4.1",
+			"_npmUser": {
+				"name": "zkat",
+				"email": "npm@zkat.tech"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "3ed20c07f356a7a962f0873b454da363c6376ff1",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-pick-manifest_2.2.1_1540934358186_0.8240630853369948",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "10.6.0",
+			"contributors": []
+		},
+		"1.0.3": {
+			"name": "npm-pick-manifest",
+			"description": "Resolves a matching manifest from a package metadata document according to standard npm semver resolution rules.",
+			"version": "1.0.3",
+			"author": {
+				"name": "Kat Marchán",
+				"email": "kzm@sykosomatic.org"
+			},
+			"homepage": "https://github.com/zkat/npm-pick-manifest#readme",
+			"repository": {
+				"url": "git+https://github.com/zkat/npm-pick-manifest.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/zkat/npm-pick-manifest/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"semver": "^5.3.0",
+				"npm-package-arg": "^5.0.1"
+			},
+			"devDependencies": {
+				"nyc": "^10.2.0",
+				"tap": "^10.3.2",
+				"standard": "^9.0.2",
+				"weallbehave": "^1.0.0",
+				"weallcontribute": "^1.0.8",
+				"standard-version": "^4.0.0"
+			},
+			"keywords": [
+				"npm",
+				"semver",
+				"package manager"
+			],
+			"license": "CC0-1.0",
+			"files": [
+				"*.js"
+			],
+			"maintainers": [
+				{
+					"name": "zkat",
+					"email": "kat@sykosomatic.org"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap -J --100 --coverage test/*.js",
+				"pretest": "standard",
+				"release": "standard-version -s",
+				"prerelease": "npm t",
+				"update-coc": "weallbehave -o . && git add CODE_OF_CONDUCT.md && git commit -m 'docs(coc): updated CODE_OF_CONDUCT.md'",
+				"postrelease": "npm publish && git push --follow-tags",
+				"update-contrib": "weallcontribute -o . && git add CONTRIBUTING.md && git commit -m 'docs(contributing): updated CONTRIBUTING.md'"
+			},
+			"config": {
+				"nyc": {
+					"exclude": [
+						"node_modules/**",
+						"test/**"
+					]
+				}
+			},
+			"lastModified": 0,
+			"_id": "npm-pick-manifest@1.0.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-1.0.3.tgz",
+				"shasum": "a56fed120b2d8adaec5334ddd07cf23b2389e8de",
+				"integrity": "sha512-L2UKmHEWw2RMlqZEx/0iHq1TWkSV1TiODFsmZ11Jxl2lBqL6+f2Pu4gBPsYkYIuSdgd7bALz28rgaoH1EiGHcg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDB1AQupQYMxDmkEvsjZAdcDr2Gr9SMqjmZau7lIyk7bAIgFHUW/e5Kl3sZ1iTfPFt/I5DfNfkmzSkl9UHBkz12yho="
+					}
+				]
+			},
+			"_npmVersion": "5.0.0-beta.35",
+			"_npmUser": {
+				"name": "zkat",
+				"email": "kat@sykosomatic.org"
+			},
+			"gitHead": "e6493e523db8edcebd1ef059ffd848571a72986c",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-pick-manifest-1.0.3.tgz_1493921422928_0.5096963816322386",
+				"host": "packages-18-east.internal.npmjs.com"
+			},
+			"_nodeVersion": "7.9.0",
+			"contributors": []
+		},
+		"1.0.4": {
+			"name": "npm-pick-manifest",
+			"description": "Resolves a matching manifest from a package metadata document according to standard npm semver resolution rules.",
+			"version": "1.0.4",
+			"author": {
+				"name": "Kat Marchán",
+				"email": "kzm@sykosomatic.org"
+			},
+			"homepage": "https://github.com/zkat/npm-pick-manifest#readme",
+			"repository": {
+				"url": "git+https://github.com/zkat/npm-pick-manifest.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/zkat/npm-pick-manifest/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"semver": "^5.3.0",
+				"npm-package-arg": "^5.1.2"
+			},
+			"devDependencies": {
+				"nyc": "^10.3.2",
+				"tap": "^10.7.0",
+				"standard": "^9.0.2",
+				"weallbehave": "^1.2.0",
+				"weallcontribute": "^1.0.8",
+				"standard-version": "^4.2.0"
+			},
+			"keywords": [
+				"npm",
+				"semver",
+				"package manager"
+			],
+			"license": "CC0-1.0",
+			"files": [
+				"*.js"
+			],
+			"maintainers": [
+				{
+					"name": "zkat",
+					"email": "kat@sykosomatic.org"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap -J --100 --coverage test/*.js",
+				"pretest": "standard",
+				"release": "standard-version -s",
+				"prerelease": "npm t",
+				"update-coc": "weallbehave -o . && git add CODE_OF_CONDUCT.md && git commit -m 'docs(coc): updated CODE_OF_CONDUCT.md'",
+				"postrelease": "npm publish && git push --follow-tags",
+				"update-contrib": "weallcontribute -o . && git add CONTRIBUTING.md && git commit -m 'docs(contributing): updated CONTRIBUTING.md'"
+			},
+			"config": {
+				"nyc": {
+					"exclude": [
+						"node_modules/**",
+						"test/**"
+					]
+				}
+			},
+			"lastModified": 0,
+			"_id": "npm-pick-manifest@1.0.4",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-1.0.4.tgz",
+				"shasum": "a5ee6510c1fe7221c0bc0414e70924c14045f7e8",
+				"integrity": "sha512-MKxNdeyOZysPRTTbHtW0M5Fw38Jo/3ARsoGw5qjCfS+XGjvNB/Gb4qtAZUFmKPM2mVum+eX559eHvKywU856BQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCICqGv0l49AtKztcmZyxG0f1mRgHJS/8VJNxbw1ZxConnAiEAyxSpgdDCUawwTBquWQTYMT/VKUm+NfXbNkHKs9+VD8c="
+					}
+				]
+			},
+			"_npmVersion": "5.0.4",
+			"_npmUser": {
+				"name": "zkat",
+				"email": "kat@sykosomatic.org"
+			},
+			"gitHead": "f8b594b6fdacb1fd2e3ca7d6ddf77c3e1dd8df01",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-pick-manifest-1.0.4.tgz_1498705775059_0.0010705087333917618",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "8.1.2",
+			"contributors": []
+		},
+		"6.1.1": {
+			"name": "npm-pick-manifest",
+			"description": "Resolves a matching manifest from a package metadata document according to standard npm semver resolution rules.",
+			"version": "6.1.1",
+			"author": {
+				"name": "Kat Marchán",
+				"email": "kzm@sykosomatic.org"
+			},
+			"homepage": "https://github.com/npm/npm-pick-manifest#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/npm-pick-manifest.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-pick-manifest/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"semver": "^7.3.4",
+				"npm-package-arg": "^8.1.2",
+				"npm-install-checks": "^4.0.0",
+				"npm-normalize-package-bin": "^1.0.1"
+			},
+			"devDependencies": {
+				"tap": "^14.11.0",
+				"standard": "^14.3.1"
+			},
+			"keywords": [
+				"npm",
+				"semver",
+				"package manager"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "gar",
+					"email": "gar+npm@danger.computer"
+				},
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				},
+				{
+					"name": "darcyclarke",
+					"email": "darcy@darcyclarke.me"
+				},
+				{
+					"name": "ruyadorno",
+					"email": "ruyadorno@hotmail.com"
+				},
+				{
+					"name": "nlf",
+					"email": "quitlahok@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "standard",
+				"test": "tap",
+				"coverage": "tap",
+				"posttest": "npm run lint",
+				"preversion": "npm test",
+				"postversion": "npm publish",
+				"prepublishOnly": "git push origin --follow-tags"
+			},
+			"lastModified": 0,
+			"_id": "npm-pick-manifest@6.1.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-6.1.1.tgz",
+				"shasum": "7b5484ca2c908565f43b7f27644f36bb816f5148",
+				"integrity": "sha512-dBsdBtORT84S8V8UTad1WlUyKIY9iMsAmqxHbLdeEeBNMLQDlDWWra3wYUx9EBEIiG/YwAy0XyNHDd2goAsfuA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIBHEQZeuxkTSIwB0XrWCzhPEe3yTaZWHLDEVujbe44bBAiEAn5fHbCIJgi25vc64UhwaA/7bSScDrEGN16dJQNV7lIA="
+					}
+				]
+			},
+			"_npmVersion": "7.6.3",
+			"_npmUser": {
+				"name": "ruyadorno",
+				"email": "ruyadorno@hotmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "6d0a36e0c8d65754ffbc2dcf7e44c81068640eb2",
+			"tap": {
+				"check-coverage": true
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-pick-manifest_6.1.1_1616094236396_0.7589151714743336",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "16.0.0-pre",
+			"contributors": []
+		},
+		"6.0.0": {
+			"name": "npm-pick-manifest",
+			"description": "Resolves a matching manifest from a package metadata document according to standard npm semver resolution rules.",
+			"version": "6.0.0",
+			"author": {
+				"name": "Kat Marchán",
+				"email": "kzm@sykosomatic.org"
+			},
+			"homepage": "https://github.com/npm/npm-pick-manifest#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/npm-pick-manifest.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-pick-manifest/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"semver": "^7.0.0",
+				"npm-package-arg": "^8.0.0",
+				"npm-install-checks": "^4.0.0"
+			},
+			"devDependencies": {
+				"tap": "^14.10.2",
+				"standard": "^14.3.1",
+				"standard-version": "^7.0.1"
+			},
+			"keywords": [
+				"npm",
+				"semver",
+				"package manager"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "adam_baldwin",
+					"email": "evilpacket@gmail.com"
+				},
+				{
+					"name": "ahmadnassri",
+					"email": "ahmad@ahmadnassri.com"
+				},
+				{
+					"name": "claudiahdz",
+					"email": "cghr1990@gmail.com"
+				},
+				{
+					"name": "darcyclarke",
+					"email": "darcy@darcyclarke.me"
+				},
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				},
+				{
+					"name": "mikemimik",
+					"email": "mike@mikecorp.ca"
+				},
+				{
+					"name": "ruyadorno",
+					"email": "ruyadorno@hotmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "standard",
+				"test": "tap",
+				"release": "standard-version -s",
+				"coverage": "tap",
+				"posttest": "npm run lint",
+				"prerelease": "npm t",
+				"postrelease": "npm publish",
+				"prepublishOnly": "git push --follow-tags"
+			},
+			"lastModified": 0,
+			"_id": "npm-pick-manifest@6.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-6.0.0.tgz",
+				"shasum": "bfde7abe95f2670aed1629a3c18245ccb3cc2eb8",
+				"integrity": "sha512-PdJpXMvjqt4nftNEDpCgjBUF8yI3Q3MyuAmVB9nemnnCg32F4BPL/JFBfdj8DubgHCYUFQhtLWmBPvdsFtjWMg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCICHrPsRCOYzhLi0s9CQ2qJIlIbMYkRbsrH6Frcf/Ut+OAiEA1MOyBmHtzYzyWfUzVZTmmvKsrmIIl0CbpNIKfWeT5dQ="
+					}
+				]
+			},
+			"_npmVersion": "6.13.6",
+			"_npmUser": {
+				"name": "isaacs",
+				"email": "i@izs.me"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "81f45cc8b5517c98fa09fd875b33d674c377c862",
+			"tap": {
+				"check-coverage": true
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-pick-manifest_6.0.0_1581990531106_0.24361362736824055",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "13.7.0",
+			"contributors": []
+		},
+		"10.0.0": {
+			"name": "npm-pick-manifest",
+			"description": "Resolves a matching manifest from a package metadata document according to standard npm semver resolution rules.",
+			"version": "10.0.0",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/npm-pick-manifest#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/npm-pick-manifest.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-pick-manifest/issues"
+			},
+			"engines": {
+				"node": "^18.17.0 || >=20.5.0"
+			},
+			"main": "./lib",
+			"dependencies": {
+				"semver": "^7.3.5",
+				"npm-package-arg": "^12.0.0",
+				"npm-install-checks": "^7.1.0",
+				"npm-normalize-package-bin": "^4.0.0"
+			},
+			"devDependencies": {
+				"tap": "^16.0.1",
+				"@npmcli/template-oss": "4.23.3",
+				"@npmcli/eslint-config": "^5.0.0"
+			},
+			"keywords": [
+				"npm",
+				"semver",
+				"package manager"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "hashtagchris",
+					"email": "hashtagchris@github.com"
+				},
+				{
+					"name": "reggi",
+					"email": "reggi@github.com"
+				},
+				{
+					"name": "npm-cli-ops",
+					"email": "npm-cli+bot@github.com"
+				},
+				{
+					"name": "saquibkhan",
+					"email": "saquibkhan@github.com"
+				},
+				{
+					"name": "fritzy",
+					"email": "fritzy@github.com"
+				},
+				{
+					"name": "gar",
+					"email": "gar+npm@danger.computer"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "npm run eslint",
+				"snap": "tap",
+				"test": "tap",
+				"eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
+				"lintfix": "npm run eslint -- --fix",
+				"coverage": "tap",
+				"postlint": "template-oss-check",
+				"posttest": "npm run lint",
+				"template-oss-apply": "template-oss-apply --force"
+			},
+			"lastModified": 0,
+			"_id": "npm-pick-manifest@10.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-10.0.0.tgz",
+				"shasum": "6cc120c6473ceea56dfead500f00735b2b892851",
+				"integrity": "sha512-r4fFa4FqYY8xaM7fHecQ9Z2nE9hgNfJR+EmoKv0+chvzWkBcORX3r0FpTByP+CbOVJDladMXnPQGVN8PBLGuTQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIARQD9rIWCqmAQ4jX6PXXkYaIneGfL8TDA+lSas6/LNYAiA88NarnBpMlqp2wsh6SUo528ZNFEG4JdBBAIZ+TAhfdA=="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/npm-pick-manifest@10.0.0",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "10.8.3",
+			"_npmUser": {
+				"name": "npm-cli-ops",
+				"email": "npm-cli+bot@github.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "f68698d5af14f0a586a3015bbe7b91d2e9d4ad26",
+			"tap": {
+				"nyc-arg": [
+					"--exclude",
+					"tap-snapshots/**"
+				],
+				"check-coverage": true
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-pick-manifest_10.0.0_1727368123351_0.7293690669147719",
+				"host": "s3://npm-registry-packages"
+			},
+			"templateOSS": {
+				"publish": true,
+				"version": "4.23.3",
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+			},
+			"_nodeVersion": "22.9.0",
+			"contributors": []
+		},
+		"6.1.0": {
+			"name": "npm-pick-manifest",
+			"description": "Resolves a matching manifest from a package metadata document according to standard npm semver resolution rules.",
+			"version": "6.1.0",
+			"author": {
+				"name": "Kat Marchán",
+				"email": "kzm@sykosomatic.org"
+			},
+			"homepage": "https://github.com/npm/npm-pick-manifest#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/npm-pick-manifest.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-pick-manifest/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"semver": "^7.0.0",
+				"npm-package-arg": "^8.0.0",
+				"npm-install-checks": "^4.0.0"
+			},
+			"devDependencies": {
+				"tap": "^14.10.2",
+				"standard": "^14.3.1",
+				"standard-version": "^7.0.1"
+			},
+			"keywords": [
+				"npm",
+				"semver",
+				"package manager"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "adam_baldwin",
+					"email": "evilpacket@gmail.com"
+				},
+				{
+					"name": "claudiahdz",
+					"email": "cghr1990@gmail.com"
+				},
+				{
+					"name": "darcyclarke",
+					"email": "darcy@darcyclarke.me"
+				},
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				},
+				{
+					"name": "ruyadorno",
+					"email": "ruyadorno@hotmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "standard",
+				"test": "tap",
+				"release": "standard-version -s",
+				"coverage": "tap",
+				"posttest": "npm run lint",
+				"prerelease": "npm t",
+				"postrelease": "npm publish",
+				"prepublishOnly": "git push --follow-tags"
+			},
+			"lastModified": 0,
+			"_id": "npm-pick-manifest@6.1.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-6.1.0.tgz",
+				"shasum": "2befed87b0fce956790f62d32afb56d7539c022a",
+				"integrity": "sha512-ygs4k6f54ZxJXrzT0x34NybRlLeZ4+6nECAIbr2i0foTnijtS1TJiyzpqtuUAJOps/hO0tNDr8fRV5g+BtRlTw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCoi1DIlbHVB5y4utFlCVVNyR6doYIX+wsTribnQhy1WgIgGPg3I3KvK2KLsv9DFkXUmLmDan5JjsqyyLPal5DoiNE="
+					}
+				]
+			},
+			"_npmVersion": "6.14.4",
+			"_npmUser": {
+				"name": "isaacs",
+				"email": "i@izs.me"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "a5ead3c33eddea65f53eaab08e4d46b904a61a90",
+			"tap": {
+				"check-coverage": true
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-pick-manifest_6.1.0_1586302988018_0.529777146841228",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "13.10.1",
+			"contributors": []
+		},
+		"5.0.0": {
+			"name": "npm-pick-manifest",
+			"description": "Resolves a matching manifest from a package metadata document according to standard npm semver resolution rules.",
+			"version": "5.0.0",
+			"author": {
+				"name": "Kat Marchán",
+				"email": "kzm@sykosomatic.org"
+			},
+			"homepage": "https://github.com/npm/npm-pick-manifest#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/npm-pick-manifest.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-pick-manifest/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"semver": "^7.0.0",
+				"figgy-pudding": "^3.5.1",
+				"npm-package-arg": "^8.0.0"
+			},
+			"devDependencies": {
+				"tap": "^14.10.2",
+				"standard": "^14.3.1",
+				"standard-version": "^7.0.1"
+			},
+			"keywords": [
+				"npm",
+				"semver",
+				"package manager"
+			],
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "adam_baldwin",
+					"email": "evilpacket@gmail.com"
+				},
+				{
+					"name": "ahmadnassri",
+					"email": "ahmad@ahmadnassri.com"
+				},
+				{
+					"name": "annekimsey",
+					"email": "anne@npmjs.com"
+				},
+				{
+					"name": "billatnpm",
+					"email": "billatnpm@gmail.com"
+				},
+				{
+					"name": "claudiahdz",
+					"email": "cghr1990@gmail.com"
+				},
+				{
+					"name": "darcyclarke",
+					"email": "darcy@darcyclarke.me"
+				},
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				},
+				{
+					"name": "mikemimik",
+					"email": "mike@mikecorp.ca"
+				},
+				{
+					"name": "ruyadorno",
+					"email": "ruyadorno@hotmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap",
+				"release": "standard-version -s",
+				"posttest": "standard",
+				"prerelease": "npm t",
+				"postrelease": "npm publish",
+				"prepublishOnly": "git push --follow-tags"
+			},
+			"lastModified": 0,
+			"_id": "npm-pick-manifest@5.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-5.0.0.tgz",
+				"shasum": "2163877aec513b6b634cfc855960ac8259130df0",
+				"integrity": "sha512-YUW9xObM7Y1OkQ/gSmU5VQyI3vCkG5lwOrdycw0dpj9/3dE8h9CKY8tVyHTIp50+mV8jOAGH4m4Lts7zz2rN4Q==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIE/Nx3g24wlgABCqcNuaYoRod5rjsPoLPI51O2oIbPtQAiEAkrcWASoq5uz3ehv5FuUf53hvld4cyDRSzsxLwT6WJlA="
+					}
+				]
+			},
+			"_npmVersion": "6.13.4",
+			"_npmUser": {
+				"name": "isaacs",
+				"email": "i@izs.me"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "3c8cb5dec93daa6ee0a0e99d0b539bfe37f674ac",
+			"tap": {
+				"check-coverage": true
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-pick-manifest_5.0.0_1576387203633_0.3135837100890986",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "13.3.0",
+			"contributors": []
+		},
+		"1.0.0": {
+			"name": "npm-pick-manifest",
+			"description": "Resolves a matching manifest from a package metadata document according to standard npm semver resolution rules.",
+			"version": "1.0.0",
+			"author": {
+				"name": "Kat Marchán",
+				"email": "kzm@sykosomatic.org"
+			},
+			"homepage": "https://github.com/zkat/npm-pick-manifest#readme",
+			"repository": {
+				"url": "git+https://github.com/zkat/npm-pick-manifest.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/zkat/npm-pick-manifest/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"npm-package-arg": "^5.0.1"
+			},
+			"devDependencies": {
+				"nyc": "^10.2.0",
+				"tap": "^10.3.2",
+				"standard": "^9.0.2",
+				"weallbehave": "^1.0.0",
+				"weallcontribute": "^1.0.8",
+				"standard-version": "^4.0.0"
+			},
+			"keywords": [
+				"npm",
+				"semver",
+				"package manager"
+			],
+			"license": "CC0-1.0",
+			"files": [
+				"*.js"
+			],
+			"maintainers": [
+				{
+					"name": "zkat",
+					"email": "kat@sykosomatic.org"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap -J --100 --coverage test/*.js",
+				"pretest": "standard",
+				"release": "standard-version -s",
+				"prerelease": "npm t",
+				"update-coc": "weallbehave -o . && git add CODE_OF_CONDUCT.md && git commit -m 'docs(coc): updated CODE_OF_CONDUCT.md'",
+				"postrelease": "npm publish && git push --follow-tags",
+				"update-contrib": "weallcontribute -o . && git add CONTRIBUTING.md && git commit -m 'docs(contributing): updated CONTRIBUTING.md'"
+			},
+			"config": {
+				"nyc": {
+					"exclude": [
+						"node_modules/**",
+						"test/**"
+					]
+				}
+			},
+			"lastModified": 0,
+			"_id": "npm-pick-manifest@1.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-1.0.0.tgz",
+				"shasum": "87af090aa12f7efa372615ca759d3fe530d0eae4",
+				"integrity": "sha512-iMrH26d+plLedoqmL3gQJyyhmn/csFaFVLfGRXa8Wzq3PyeqT10fa/BlZ93EvmNaw6/BXASrpdmtn0OQXoS67Q==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIA3HAiYIG26OGgsatF6WiMsbBGLDGsZBq3yU3EkTU1NgAiB/Ypr7QjZQOdi6ar3A8d48lWFvyQVKPMF3PagaodmKPg=="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "4.6.1",
+			"_npmUser": {
+				"name": "zkat",
+				"email": "kat@sykosomatic.org"
+			},
+			"gitHead": "16a620cf0e2544019aa725eef9a5bb5eba1f79c4",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-pick-manifest-1.0.0.tgz_1493009016769_0.11990652093663812",
+				"host": "packages-12-west.internal.npmjs.com"
+			},
+			"_shasum": "87af090aa12f7efa372615ca759d3fe530d0eae4",
+			"_nodeVersion": "7.9.0",
+			"contributors": []
+		},
+		"1.0.1": {
+			"name": "npm-pick-manifest",
+			"description": "Resolves a matching manifest from a package metadata document according to standard npm semver resolution rules.",
+			"version": "1.0.1",
+			"author": {
+				"name": "Kat Marchán",
+				"email": "kzm@sykosomatic.org"
+			},
+			"homepage": "https://github.com/zkat/npm-pick-manifest#readme",
+			"repository": {
+				"url": "git+https://github.com/zkat/npm-pick-manifest.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/zkat/npm-pick-manifest/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"semver": "^5.3.0",
+				"npm-package-arg": "^5.0.1"
+			},
+			"devDependencies": {
+				"nyc": "^10.2.0",
+				"tap": "^10.3.2",
+				"standard": "^9.0.2",
+				"weallbehave": "^1.0.0",
+				"weallcontribute": "^1.0.8",
+				"standard-version": "^4.0.0"
+			},
+			"keywords": [
+				"npm",
+				"semver",
+				"package manager"
+			],
+			"license": "CC0-1.0",
+			"files": [
+				"*.js"
+			],
+			"maintainers": [
+				{
+					"name": "zkat",
+					"email": "kat@sykosomatic.org"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap -J --100 --coverage test/*.js",
+				"pretest": "standard",
+				"release": "standard-version -s",
+				"prerelease": "npm t",
+				"update-coc": "weallbehave -o . && git add CODE_OF_CONDUCT.md && git commit -m 'docs(coc): updated CODE_OF_CONDUCT.md'",
+				"postrelease": "npm publish && git push --follow-tags",
+				"update-contrib": "weallcontribute -o . && git add CONTRIBUTING.md && git commit -m 'docs(contributing): updated CONTRIBUTING.md'"
+			},
+			"config": {
+				"nyc": {
+					"exclude": [
+						"node_modules/**",
+						"test/**"
+					]
+				}
+			},
+			"lastModified": 0,
+			"_id": "npm-pick-manifest@1.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-1.0.1.tgz",
+				"shasum": "b10d8e88307c58c15097caf15f2ffc92f5ac8cce",
+				"integrity": "sha512-KbceCoJKMNY77MweSp5UeVECjf0LqAt6jVeizMVg8C190BXUYrd6haxLDpv6201klVUZLSGD1oa/X9FN6n2bgw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQD5xjgUkGYHF/6f1L0hsBMf4/Ua5HybljYZooFXdfRV1QIgLBI0IDYgFwa9DxRfKc2Zb4gK8dhmzgMbfUy9t4aiPMk="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "4.6.1",
+			"_npmUser": {
+				"name": "zkat",
+				"email": "kat@sykosomatic.org"
+			},
+			"gitHead": "454d808bbea678f8727f7d0c611fe8fb85c18b6f",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-pick-manifest-1.0.1.tgz_1493020490265_0.09999046148732305",
+				"host": "packages-12-west.internal.npmjs.com"
+			},
+			"_shasum": "b10d8e88307c58c15097caf15f2ffc92f5ac8cce",
+			"_nodeVersion": "7.9.0",
+			"contributors": []
+		},
+		"1.0.2": {
+			"name": "npm-pick-manifest",
+			"description": "Resolves a matching manifest from a package metadata document according to standard npm semver resolution rules.",
+			"version": "1.0.2",
+			"author": {
+				"name": "Kat Marchán",
+				"email": "kzm@sykosomatic.org"
+			},
+			"homepage": "https://github.com/zkat/npm-pick-manifest#readme",
+			"repository": {
+				"url": "git+https://github.com/zkat/npm-pick-manifest.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/zkat/npm-pick-manifest/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"semver": "^5.3.0",
+				"npm-package-arg": "^5.0.1"
+			},
+			"devDependencies": {
+				"nyc": "^10.2.0",
+				"tap": "^10.3.2",
+				"standard": "^9.0.2",
+				"weallbehave": "^1.0.0",
+				"weallcontribute": "^1.0.8",
+				"standard-version": "^4.0.0"
+			},
+			"keywords": [
+				"npm",
+				"semver",
+				"package manager"
+			],
+			"license": "CC0-1.0",
+			"files": [
+				"*.js"
+			],
+			"maintainers": [
+				{
+					"name": "zkat",
+					"email": "kat@sykosomatic.org"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap -J --100 --coverage test/*.js",
+				"pretest": "standard",
+				"release": "standard-version -s",
+				"prerelease": "npm t",
+				"update-coc": "weallbehave -o . && git add CODE_OF_CONDUCT.md && git commit -m 'docs(coc): updated CODE_OF_CONDUCT.md'",
+				"postrelease": "npm publish && git push --follow-tags",
+				"update-contrib": "weallcontribute -o . && git add CONTRIBUTING.md && git commit -m 'docs(contributing): updated CONTRIBUTING.md'"
+			},
+			"config": {
+				"nyc": {
+					"exclude": [
+						"node_modules/**",
+						"test/**"
+					]
+				}
+			},
+			"lastModified": 0,
+			"_id": "npm-pick-manifest@1.0.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-1.0.2.tgz",
+				"shasum": "0884bce6bf176e3d70b7d2026c1daf10fdbcc9a4",
+				"integrity": "sha512-ggcQbjkhEZm778rJdChcTCStWIB0ryaCo3HIo0+T4GAYenBQhXcz2T7ZZXMuFs3k7At4G2d6LMF+jHtSgVrsZQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIF0egUQ7/djCgsFunA0ipPTcSEitU9vmb8omVeZb9daRAiEAx3EOciKlFV82PQ7ulxW9IYidAEU9ioHt5RXna06NnuY="
+					}
+				]
+			},
+			"_npmVersion": "5.0.0-beta.34",
+			"_npmUser": {
+				"name": "zkat",
+				"email": "kat@sykosomatic.org"
+			},
+			"gitHead": "274e4c95bef6a42e84500c615a7775091d93c412",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-pick-manifest-1.0.2.tgz_1493917439220_0.8960373636800796",
+				"host": "packages-18-east.internal.npmjs.com"
+			},
+			"_nodeVersion": "7.9.0",
+			"contributors": []
+		}
+	},
+	"time": {
+		"11.0.1": "2025-09-17T18:41:41.263Z",
+		"11.0.3": "2025-10-23T21:47:11.690Z",
+		"11.0.2": "2025-10-23T17:57:44.151Z",
+		"9.0.0": "2023-08-15T20:29:02.154Z",
+		"9.0.1": "2024-05-04T01:10:44.480Z",
+		"9.1.0": "2024-07-09T17:13:02.437Z",
+		"4.0.0": "2019-11-11T03:53:18.044Z",
+		"3.0.0": "2019-08-20T00:01:02.569Z",
+		"8.0.2": "2023-07-26T22:24:07.845Z",
+		"8.0.0": "2022-10-14T20:39:29.281Z",
+		"12.0.0": "2026-05-18T21:08:49.267Z",
+		"8.0.1": "2022-10-18T16:00:17.316Z",
+		"modified": "2026-05-18T21:08:49.652Z",
+		"3.0.1": "2019-08-28T20:22:05.197Z",
+		"3.0.2": "2019-08-30T22:30:57.276Z",
+		"2.0.0": "2017-10-03T23:27:09.771Z",
+		"7.0.1": "2022-04-05T17:43:56.411Z",
+		"2.0.1": "2017-10-18T21:01:43.611Z",
+		"2.1.0": "2017-10-18T21:14:49.826Z",
+		"7.0.2": "2022-08-25T19:43:36.620Z",
+		"created": "2017-04-24T04:43:37.053Z",
+		"7.0.0": "2022-02-10T15:28:37.676Z",
+		"2.2.2": "2018-10-31T02:24:20.985Z",
+		"2.2.3": "2018-10-31T02:59:58.415Z",
+		"2.2.0": "2018-10-30T18:35:11.846Z",
+		"2.2.1": "2018-10-30T21:19:18.355Z",
+		"1.0.3": "2017-05-04T18:10:25.299Z",
+		"1.0.4": "2017-06-29T03:09:35.720Z",
+		"6.1.1": "2021-03-18T19:03:56.549Z",
+		"6.0.0": "2020-02-18T01:48:51.221Z",
+		"10.0.0": "2024-09-26T16:28:43.529Z",
+		"6.1.0": "2020-04-07T23:43:08.146Z",
+		"5.0.0": "2019-12-15T05:20:03.884Z",
+		"1.0.0": "2017-04-24T04:43:37.053Z",
+		"1.0.1": "2017-04-24T07:54:50.495Z",
+		"1.0.2": "2017-05-04T17:04:01.429Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "12.0.0"
+	},
+	"_uplinks": {
+		"artifactory-sabadell": {
+			"etag": "227dbdc9a5f160673364aa3620eae64c687c598d",
+			"fetched": 1782459810396
+		}
+	},
+	"_distfiles": {
+		"npm-pick-manifest-11.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-11.0.1.tgz",
+			"sha": "77f74dc36df3444391c0aa5cd80ba7bf41184163",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-pick-manifest-11.0.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-11.0.3.tgz",
+			"sha": "76cf6593a351849006c36b38a7326798e2a76d13",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-pick-manifest-11.0.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-11.0.2.tgz",
+			"sha": "bd849657a3ca7d8366028b18f1db2a7ec9506011",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-pick-manifest-9.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-9.0.0.tgz",
+			"sha": "f87a4c134504a2c7931f2bb8733126e3c3bb7e8f",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-pick-manifest-9.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-9.0.1.tgz",
+			"sha": "c90658bd726fe5bca9d2869f3e99359b8fcda046",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-pick-manifest-9.1.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-9.1.0.tgz",
+			"sha": "83562afde52b0b07cb6244361788d319ce7e8636",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-pick-manifest-4.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-4.0.0.tgz",
+			"sha": "5e1b392a2a6310378b9bab32332597030ca073ce",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-pick-manifest-3.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-3.0.0.tgz",
+			"sha": "c94cab52d201a85875e45198fffe1a8a348e7af7",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-pick-manifest-8.0.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-8.0.2.tgz",
+			"sha": "2159778d9c7360420c925c1a2287b5a884c713aa",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-pick-manifest-8.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-8.0.0.tgz",
+			"sha": "cf7743b00ae777215fa0c4233a346b5df8bc2af0",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-pick-manifest-12.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-12.0.0.tgz",
+			"sha": "20e73a00ca66b4c187957d524aaff3cdf77ed9f4",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-pick-manifest-8.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-8.0.1.tgz",
+			"sha": "c6acd97d1ad4c5dbb80eac7b386b03ffeb289e5f",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-pick-manifest-3.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-3.0.1.tgz",
+			"sha": "19c350ffbe42e0c3c054dcd50dd5760556a98bd8",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-pick-manifest-3.0.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-3.0.2.tgz",
+			"sha": "f4d9e5fd4be2153e5f4e5f9b7be8dc419a99abb7",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-pick-manifest-2.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-2.0.0.tgz",
+			"sha": "a7a66b4776d25f51a9b01c621e373e8137a8a519",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-pick-manifest-7.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-7.0.1.tgz",
+			"sha": "76dda30a7cd6b99be822217a935c2f5eacdaca4c",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-pick-manifest-2.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-2.0.1.tgz",
+			"sha": "c46e6dc318d9eb1d969a1d4d86da8af2b11a9070",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-pick-manifest-2.1.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-2.1.0.tgz",
+			"sha": "dc381bdd670c35d81655e1d5a94aa3dd4d87fce5",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-pick-manifest-7.0.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-7.0.2.tgz",
+			"sha": "1d372b4e7ea7c6712316c0e99388a73ed3496e84",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-pick-manifest-7.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-7.0.0.tgz",
+			"sha": "e3b18b09678a47e894f90941bef8204ea5d96c3b",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-pick-manifest-2.2.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-2.2.2.tgz",
+			"sha": "db4e4ba3eb27a86f6094083087f1fbfd1a6fa6b3",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-pick-manifest-2.2.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-2.2.3.tgz",
+			"sha": "32111d2a9562638bb2c8f2bf27f7f3092c8fae40",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-pick-manifest-2.2.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-2.2.0.tgz",
+			"sha": "43bb722c08caff83c9822d0011f9f5951c219505",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-pick-manifest-2.2.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-2.2.1.tgz",
+			"sha": "a528c8540f3e181bad4bca7a1ad458097dd02225",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-pick-manifest-1.0.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-1.0.3.tgz",
+			"sha": "a56fed120b2d8adaec5334ddd07cf23b2389e8de",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-pick-manifest-1.0.4.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-1.0.4.tgz",
+			"sha": "a5ee6510c1fe7221c0bc0414e70924c14045f7e8",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-pick-manifest-6.1.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-6.1.1.tgz",
+			"sha": "7b5484ca2c908565f43b7f27644f36bb816f5148",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-pick-manifest-6.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-6.0.0.tgz",
+			"sha": "bfde7abe95f2670aed1629a3c18245ccb3cc2eb8",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-pick-manifest-10.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-10.0.0.tgz",
+			"sha": "6cc120c6473ceea56dfead500f00735b2b892851",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-pick-manifest-6.1.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-6.1.0.tgz",
+			"sha": "2befed87b0fce956790f62d32afb56d7539c022a",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-pick-manifest-5.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-5.0.0.tgz",
+			"sha": "2163877aec513b6b634cfc855960ac8259130df0",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-pick-manifest-1.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-1.0.0.tgz",
+			"sha": "87af090aa12f7efa372615ca759d3fe530d0eae4",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-pick-manifest-1.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-1.0.1.tgz",
+			"sha": "b10d8e88307c58c15097caf15f2ffc92f5ac8cce",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-pick-manifest-1.0.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-pick-manifest/-/npm-pick-manifest-1.0.2.tgz",
+			"sha": "0884bce6bf176e3d70b7d2026c1daf10fdbcc9a4",
+			"registry": "artifactory-sabadell"
+		}
+	},
+	"_attachments": {},
+	"_rev": "1-261a9028b99f531e",
+	"_id": "npm-pick-manifest",
+	"readme": "# npm-pick-manifest [![npm version](https://img.shields.io/npm/v/npm-pick-manifest.svg)](https://npm.im/npm-pick-manifest) [![license](https://img.shields.io/npm/l/npm-pick-manifest.svg)](https://npm.im/npm-pick-manifest) [![Travis](https://img.shields.io/travis/npm/npm-pick-manifest.svg)](https://travis-ci.org/npm/npm-pick-manifest) [![Coverage Status](https://coveralls.io/repos/github/npm/npm-pick-manifest/badge.svg?branch=latest)](https://coveralls.io/github/npm/npm-pick-manifest?branch=latest)\n\n[`npm-pick-manifest`](https://github.com/npm/npm-pick-manifest) is a standalone\nimplementation of [npm](https://npmjs.com)'s semver range resolution algorithm.\n\n## Install\n\n`$ npm install --save npm-pick-manifest`\n\n## Table of Contents\n\n* [Example](#example)\n* [Features](#features)\n* [API](#api)\n  * [`pickManifest()`](#pick-manifest)\n\n### Example\n\n```javascript\nconst pickManifest = require('npm-pick-manifest')\n\nfetch('https://registry.npmjs.org/npm-pick-manifest').then(res => {\n  return res.json()\n}).then(packument => {\n  return pickManifest(packument, '^1.0.0')\n}) // get same manifest as npm would get if you `npm i npm-pick-manifest@^1.0.0`\n```\n\n### Features\n\n* Uses npm's exact [semver resolution algorithm](http://npm.im/semver).\n* Supports ranges, tags, and versions.\n* Prefers non-deprecated versions to deprecated versions.\n* Prefers versions whose `engines` requirements are satisfied over those\n  that will raise a warning or error at install time.\n\n### API\n\n#### <a name=\"pick-manifest\"></a> `> pickManifest(packument, selector, [opts]) -> manifest`\n\nReturns the manifest that best matches `selector`, or throws an error.\n\nPackuments are anything returned by metadata URLs from the npm registry. That\nis, they're objects with the following shape (only fields used by\n`npm-pick-manifest` included):\n\n```javascript\n{\n  name: 'some-package',\n  'dist-tags': {\n    foo: '1.0.1'\n  },\n  versions: {\n    '1.0.0': { version: '1.0.0' },\n    '1.0.1': { version: '1.0.1' },\n    '1.0.2': { version: '1.0.2' },\n    '2.0.0': { version: '2.0.0' }\n  }\n}\n```\n\nThe algorithm will follow npm's algorithm for semver resolution, and only\n`tag`, `range`, and `version` selectors are supported.\n\nThe function will throw `ETARGET` if there was no matching manifest, and\n`ENOVERSIONS` if the packument object has no valid versions in `versions`.\nIf the only matching manifest is included in a `policyRestrictions` section\nof the packument, then an `E403` is raised.\n\n#### <a name=\"pick-manifest-options\"></a> Options\n\nAll options are optional.\n\n* `includeStaged` - Boolean, default `false`.  Include manifests in the\n  `stagedVersions.versions` set, to support installing [staged\n  packages](https://github.com/npm/rfcs/pull/92) when appropriate.  Note\n  that staged packages are always treated as lower priority than actual\n  publishes, even when `includeStaged` is set.\n* `defaultTag` - String, default `'latest'`.  The default `dist-tag` to\n  install when no specifier is provided.  Note that the version indicated\n  by this specifier will be given top priority if it matches a supplied\n  semver range.\n* `before` - String, Date, or Number, default `null`. This is passed to\n  `new Date()`, so anything that works there will be valid.  Do not\n  consider _any_ manifests that were published after the date indicated.\n  Note that this is only relevant when the packument includes a `time`\n  field listing the publish date of all the packages.\n* `nodeVersion` - String, default `process.version`.  The Node.js version\n  to use when checking manifests for `engines` requirement satisfaction.\n* `npmVersion` - String, default `null`.  The npm version to use when\n  checking manifest for `engines` requirement satisfaction.  (If `null`,\n  then this particular check is skipped.)\n* `avoid` - String, default `null`.  A SemVer range of\n  versions that should be avoided.  An avoided version MAY be selected if\n  there is no other option, so when using this for version selection ensure\n  that you check the result against the range to see if there was no\n  alternative available.\n* `avoidStrict` Boolean, default `false`.  If set to true, then\n  `pickManifest` will never return a version in the `avoid` range.  If the\n  only available version in the `wanted` range is a version that should be\n  avoided, then it will return a version _outside_ the `wanted` range,\n  preferring to do so without making a SemVer-major jump, if possible.  If\n  there are no versions outside the `avoid` range, then throw an\n  `ETARGET` error.  It does this by calling pickManifest first with the\n  `wanted` range, then with a `^` affixed to the version returned by the\n  `wanted` range, and then with a `*` version range, and throwing if\n  nothing could be found to satisfy the avoidance request.\n\nReturn value is the manifest as it exists in the packument, possibly\ndecorated with the following boolean flags:\n\n* `_shouldAvoid` The version is in the `avoid` range.  Watch out!\n* `_outsideDependencyRange` The version is outside the `wanted` range,\n  because `avoidStrict: true` was set.\n* `_isSemVerMajor` The `_outsideDependencyRange` result is a SemVer-major\n  step up from the version returned by the `wanted` range.\n\n### Algorithm\n\n1. Create list of all versions in `versions`,\n   `policyRestrictions.versions`, and (if `includeStaged` is set)\n   `stagedVersions.versions`.\n2. If a `dist-tag` is requested,\n    1. If the manifest is not after the specified `before` date, then\n       select that from the set.\n    2. If the manifest is after the specified `before` date, then re-start\n       the selection looking for the highest SemVer range that is equal to\n       or less than the `dist-tag` target.\n3. If a specific version is requested,\n    1. If the manifest is not after the specified `before` date, then\n       select the specified manifest.\n    2. If the manifest is after the specified `before` date, then raise\n       `ETARGET` error.  (NB: this is a breaking change from v5, where a\n       specified version would override the `before` setting.)\n4. (At this point we know a range is requested.)\n5. If the `defaultTag` refers to a `dist-tag` that satisfies the range (or\n   if the range is `'*'` or `''`), and the manifest is published before the\n   `before` setting, then select that manifest.\n6. If nothing is yet selected, sort by the following heuristics in order,\n   and select the top item:\n    1. Prioritize versions that are not in the `avoid` range over those\n       that are.\n    2. Prioritize versions that are not in `policyRestrictions` over those\n       that are.\n    3. Prioritize published versions over staged versions.\n    4. Prioritize versions that are not deprecated, and which have a\n       satisfied engines requirement, over those that are either deprecated\n       or have an engines mismatch.\n    5. Prioritize versions that have a satisfied engines requirement over\n       those that do not.\n    6. Prioritize versions that are not are not deprecated (but have a\n       mismatched engines requirement) over those that are deprecated.\n    7. Prioritize higher SemVer precedence over lower SemVer precedence.\n7. If no manifest was selected, raise an `ETARGET` error.\n8. If the selected item is in the `policyRestrictions.versions` list, raise\n   an `E403` error.\n9. Return the selected manifest."
+}

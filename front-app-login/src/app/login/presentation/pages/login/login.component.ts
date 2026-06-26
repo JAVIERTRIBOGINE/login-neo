@@ -17,6 +17,7 @@ import { getAuthenticateEndpoint } from '@app/login/application/services/oauth-e
 
 // ─── AuthManager (Proteo4) ───────────────────────────────────────────────────
 import { AuthManagerService, AUTH_MANAGER_EVENTS } from '@proteo/auth-manager';
+import { FlowConfirmationModalService } from '@app/login/application/services/flow-confirmation-modal.service';
 
 // ─── Lógica de orquestación desplazada a AuthManager ────────────────────────
 // Los imports siguientes quedan comentados: la orquestación de los 4 casos
@@ -170,20 +171,29 @@ export class LoginComponent implements OnInit, AfterViewInit, OnDestroy {
   private publishService   = inject(PublishService);
   private loginDataService = inject(LoginDataService);
   private authManager      = inject(AuthManagerService);
+  private flowConfirmation = inject(FlowConfirmationModalService);
 
   private authSub!: Subscription;
   private credentialListenersAttached = false;
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
     this.subscribeToAuthManager();
 
-    this.authManager.authenticate({
+    if (this.route.snapshot.queryParamMap.get('samlSso') === 'unauthorized') {
+      await this.flowConfirmation.confirm({
+        title: 'Paso SAML: SSO Unauthorized en PingAM',
+        description: 'Apigee/PingAM no encuentra una SSO Cookie activa. Devuelve el navegador a /login para iniciar el flujo OAuth.',
+      });
+    }
+
+    await this.authManager.authenticate({
       endpoints: {
         authenticate: getAuthenticateEndpoint(),
       },
       resumeAuthId: this.route.snapshot.queryParamMap.get('authId') ?? undefined,
       procedence:   this.loginDataService.getProcedence(),
       language:     this.loginTranslation.getLanguage(),
+      confirmStep:  step => this.flowConfirmation.confirm(step),
     });
 
     // ─── Lógica desplazada a AuthManager ────────────────────────────────────

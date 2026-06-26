@@ -1,0 +1,276 @@
+{
+	"name": "nice-napi",
+	"versions": {
+		"1.0.0": {
+			"name": "nice-napi",
+			"description": "nice(2) bindings for Node.js",
+			"version": "1.0.0",
+			"author": {
+				"name": "Anna Henningsen",
+				"email": "anna@addaleax.net"
+			},
+			"homepage": "https://github.com/addaleax/nice-napi#readme",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/addaleax/nice-napi.git"
+			},
+			"bugs": {
+				"url": "https://github.com/addaleax/nice-napi/issues"
+			},
+			"main": "./index.js",
+			"dependencies": {
+				"node-addon-api": "^3.0.0",
+				"node-gyp-build": "^4.2.2"
+			},
+			"devDependencies": {
+				"gen-esm-wrapper": "^1.0.6",
+				"prebuildify": "^4.0.0",
+				"prebuildify-ci": "^1.0.5"
+			},
+			"keywords": [
+				"nice",
+				"priority"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "addaleax",
+					"email": "anna@addaleax.net"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"build": "node-gyp-build && gen-esm-wrapper . ./.esm-wrapper.mjs",
+				"test": "node ./test.js",
+				"install": "npm run build",
+				"prebuild": "prebuildify --napi",
+				"prepack": "prebuildify-ci download && ([ $(ls prebuilds | wc -l) = '2' ] || (echo 'Some prebuilds are missing'; exit 1))"
+			},
+			"lastModified": 0,
+			"_id": "nice-napi@1.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nice-napi/-/nice-napi-1.0.0.tgz",
+				"shasum": "df4e41e7a30c739debb5674fecade4f2a8fbe5f7",
+				"integrity": "sha512-4RBdJFToakGO9cbmcPHUjatIDuNFxdJ3QoDYbRO5k+io96TbprJVwMfwP3bu9Hr1/iEfmwDmVlq0VgAzWGl0sg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIEhoGtJ4Ryp8uxb5h++bB8xFdj6+LM4zDgNuK/mHeytYAiEAj2sHRm7HVDvYMMltaxb5y0qcgnCJBfoTWPUrThxqyJM="
+					}
+				]
+			},
+			"_npmVersion": "6.14.4",
+			"_npmUser": {
+				"name": "addaleax",
+				"email": "anna@addaleax.net"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "4c919780f476de0fda5944cef47e6d7fc07bfd5d",
+			"types": "./index.d.ts",
+			"exports": {
+				"import": "./.esm-wrapper.mjs",
+				"require": "./index.js"
+			},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/nice-napi_1.0.0_1590112358811_0.774988788143069"
+			},
+			"_nodeVersion": "12.16.3",
+			"contributors": []
+		},
+		"1.0.1": {
+			"name": "nice-napi",
+			"description": "nice(2) bindings for Node.js",
+			"version": "1.0.1",
+			"author": {
+				"name": "Anna Henningsen",
+				"email": "anna@addaleax.net"
+			},
+			"homepage": "https://github.com/addaleax/nice-napi#readme",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/addaleax/nice-napi.git"
+			},
+			"bugs": {
+				"url": "https://github.com/addaleax/nice-napi/issues"
+			},
+			"main": "./index.js",
+			"dependencies": {
+				"node-addon-api": "^3.0.0",
+				"node-gyp-build": "^4.2.2"
+			},
+			"devDependencies": {
+				"gen-esm-wrapper": "^1.0.6",
+				"prebuildify": "^4.0.0",
+				"prebuildify-ci": "^1.0.5"
+			},
+			"keywords": [
+				"nice",
+				"priority"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "addaleax",
+					"email": "anna@addaleax.net"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"build": "node-gyp-build && gen-esm-wrapper . ./.esm-wrapper.mjs",
+				"test": "node ./test.js",
+				"install": "npm run build",
+				"prebuildify": "prebuildify --napi",
+				"prepack": "prebuildify-ci download && ([ $(ls prebuilds | wc -l) = '2' ] || (echo 'Some prebuilds are missing'; exit 1))"
+			},
+			"lastModified": 0,
+			"_id": "nice-napi@1.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nice-napi/-/nice-napi-1.0.1.tgz",
+				"shasum": "4c919b1fd2b8069788208288ab5d0d0c895ab137",
+				"integrity": "sha512-JEQu+kFE1ZYaXbri6lRnZEt5MvJLjmq4JV3wcKtug5c58kRel92yT2etqGA6VSmUacZnPLn6TW+VCwKbZoq3iw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCICWgliURFsumubERx9/jO7SDA1HR/k2dOwZL6J1Y+T/OAiEA40myUomIJT1XIdFxyK3FMscUciceNZqWz+GAtfGVHyM="
+					}
+				]
+			},
+			"_npmVersion": "6.14.5",
+			"_npmUser": {
+				"name": "addaleax",
+				"email": "anna@addaleax.net"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "c48b0e4ba81033d0cdf35e356a32b4607b217d90",
+			"types": "./index.d.ts",
+			"exports": {
+				"import": "./.esm-wrapper.mjs",
+				"require": "./index.js"
+			},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/nice-napi_1.0.1_1590112854094_0.9953261563720284"
+			},
+			"_nodeVersion": "15.0.0-pre",
+			"contributors": []
+		},
+		"1.0.2": {
+			"name": "nice-napi",
+			"description": "nice(2) bindings for Node.js",
+			"version": "1.0.2",
+			"author": {
+				"name": "Anna Henningsen",
+				"email": "anna@addaleax.net"
+			},
+			"homepage": "https://github.com/addaleax/nice-napi#readme",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/addaleax/nice-napi.git"
+			},
+			"bugs": {
+				"url": "https://github.com/addaleax/nice-napi/issues"
+			},
+			"main": "./index.js",
+			"dependencies": {
+				"node-addon-api": "^3.0.0",
+				"node-gyp-build": "^4.2.2"
+			},
+			"devDependencies": {
+				"gen-esm-wrapper": "^1.0.6",
+				"prebuildify": "^4.0.0",
+				"prebuildify-ci": "^1.0.5"
+			},
+			"keywords": [
+				"nice",
+				"priority"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "addaleax",
+					"email": "anna@addaleax.net"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "node ./test.js",
+				"install": "node-gyp-build",
+				"prebuildify": "prebuildify --napi",
+				"prepack": " gen-esm-wrapper . ./.esm-wrapper.mjs && prebuildify-ci download && ([ $(ls prebuilds | wc -l) = '2' ] || (echo 'Some prebuilds are missing'; exit 1))"
+			},
+			"os": [
+				"!win32"
+			],
+			"lastModified": 0,
+			"_id": "nice-napi@1.0.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nice-napi/-/nice-napi-1.0.2.tgz",
+				"shasum": "dc0ab5a1eac20ce548802fc5686eaa6bc654927b",
+				"integrity": "sha512-px/KnJAJZf5RuBGcfD+Sp2pAKq0ytz8j+1NehvgIGFkvtvFrDM3T8E4x/JJODXK9WZow8RRGrbA9QQ3hs+pDhA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIA414aOCEdysBddeqgSdywSIb2C8Zojf5vTfZFgXFqRJAiEAu9Z/6iwF4uXWyD/dvGZ/kjqpYqw9VG/4ZfPK/QY2iV4="
+					}
+				]
+			},
+			"_npmVersion": "6.14.5",
+			"_npmUser": {
+				"name": "addaleax",
+				"email": "anna@addaleax.net"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "4e1a448503544c2ba9f1a7eaa3fad2eaad3e350e",
+			"types": "./index.d.ts",
+			"exports": {
+				"import": "./.esm-wrapper.mjs",
+				"require": "./index.js"
+			},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/nice-napi_1.0.2_1590114192646_0.8933718166847147"
+			},
+			"_nodeVersion": "15.0.0-pre",
+			"contributors": []
+		}
+	},
+	"time": {
+		"created": "2020-05-22T01:52:38.810Z",
+		"modified": "2022-05-10T21:16:58.781Z",
+		"1.0.0": "2020-05-22T01:52:39.007Z",
+		"1.0.1": "2020-05-22T02:00:54.315Z",
+		"1.0.2": "2020-05-22T02:23:12.796Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "1.0.2"
+	},
+	"_uplinks": {
+		"artifactory-sabadell": {
+			"etag": "3c60db0286f908e885cff3d19f82dc9cc99c6f46",
+			"fetched": 1782459820408
+		}
+	},
+	"_distfiles": {
+		"nice-napi-1.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nice-napi/-/nice-napi-1.0.0.tgz",
+			"sha": "df4e41e7a30c739debb5674fecade4f2a8fbe5f7",
+			"registry": "artifactory-sabadell"
+		},
+		"nice-napi-1.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nice-napi/-/nice-napi-1.0.1.tgz",
+			"sha": "4c919b1fd2b8069788208288ab5d0d0c895ab137",
+			"registry": "artifactory-sabadell"
+		},
+		"nice-napi-1.0.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/nice-napi/-/nice-napi-1.0.2.tgz",
+			"sha": "dc0ab5a1eac20ce548802fc5686eaa6bc654927b",
+			"registry": "artifactory-sabadell"
+		}
+	},
+	"_attachments": {},
+	"_rev": "1-652d13b505657f77",
+	"_id": "nice-napi",
+	"readme": "# nice-napi – nice(2) bindings for Node.js\n\nhttps://linux.die.net/man/2/nice as a JS function. That’s it, that’s the module.\n\n```js\nconst nice = require('nice-napi');\nnice(5);  // Increase niceness by 5.\n```"
+}

@@ -419637,6 +419637,5405 @@
 			"prettier": "@ionic/prettier-config",
 			"_nodeVersion": "20.4.0",
 			"contributors": []
+		},
+		"4.43.5-dev.1781764531.ca85879": {
+			"name": "@stencil/core",
+			"description": "A Compiler for Web Components and Progressive Web Apps",
+			"version": "4.43.5-dev.1781764531.ca85879",
+			"author": {
+				"name": "Ionic Team"
+			},
+			"homepage": "https://stenciljs.com/",
+			"repository": {
+				"url": "git+https://github.com/stenciljs/core.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/stenciljs/core/issues"
+			},
+			"engines": {
+				"npm": ">=7.10.0",
+				"node": ">=16.0.0"
+			},
+			"main": "./internal/stencil-core/index.cjs",
+			"optionalDependencies": {
+				"@rollup/rollup-darwin-x64": "4.44.0",
+				"@rollup/rollup-darwin-arm64": "4.44.0",
+				"@rollup/rollup-linux-x64-gnu": "4.44.0",
+				"@rollup/rollup-linux-x64-musl": "4.44.0",
+				"@rollup/rollup-win32-x64-msvc": "4.44.0",
+				"@rollup/rollup-linux-arm64-gnu": "4.44.0",
+				"@rollup/rollup-linux-arm64-musl": "4.44.0",
+				"@rollup/rollup-win32-arm64-msvc": "4.44.0"
+			},
+			"devDependencies": {
+				"ws": "8.17.1",
+				"tsx": "^4.19.2",
+				"exit": "^0.1.2",
+				"glob": "10.5.0",
+				"jest": "^27.4.5",
+				"open": "^9.0.0",
+				"execa": "9.3.0",
+				"listr": "^0.14.3",
+				"cspell": "^8.0.0",
+				"eslint": "^8.23.1",
+				"jquery": "https://github.com/jquery/jquery/tarball/c98597eaf5e144ee5e549cb41984687cd1033068",
+				"parse5": "7.2.1",
+				"rimraf": "^6.0.1",
+				"rollup": "4.44.0",
+				"semver": "^7.3.7",
+				"terser": "5.37.0",
+				"esbuild": "^0.25.0",
+				"mime-db": "^1.46.0",
+				"postcss": "^8.2.8",
+				"prompts": "2.4.2",
+				"webpack": "^5.75.0",
+				"css-what": "^7.0.0",
+				"fs-extra": "^11.0.0",
+				"jest-cli": "^27.4.5",
+				"prettier": "3.3.1",
+				"@types/ws": "^8.5.4",
+				"minimatch": "9.0.9",
+				"puppeteer": "^24.1.0",
+				"node-fetch": "3.3.2",
+				"pixelmatch": "5.3.0",
+				"typescript": "~5.8.3",
+				"@types/exit": "^0.1.31",
+				"@types/jest": "^27.0.3",
+				"@types/node": "^24.6.2",
+				"ansi-colors": "4.1.3",
+				"graceful-fs": "~4.2.6",
+				"@types/listr": "^0.14.4",
+				"@types/pngjs": "^6.0.1",
+				"autoprefixer": "10.4.19",
+				"magic-string": "^0.30.0",
+				"@types/eslint": "^8.4.6",
+				"@types/semver": "^7.3.12",
+				"@types/prompts": "^2.0.9",
+				"open-in-editor": "2.2.0",
+				"@types/fs-extra": "^11.0.0",
+				"merge-source-map": "^1.1.0",
+				"@types/pixelmatch": "^5.2.4",
+				"@yarnpkg/lockfile": "^1.1.0",
+				"@types/graceful-fs": "^4.1.5",
+				"eslint-plugin-jest": "^28.0.0",
+				"eslint-plugin-wdio": "^8.24.12",
+				"@rollup/plugin-json": "6.1.0",
+				"@rollup/pluginutils": "5.1.4",
+				"eslint-plugin-jsdoc": "^50.0.0",
+				"postcss-safe-parser": "^7.0.1",
+				"dts-bundle-generator": "~9.5.0",
+				"jest-environment-node": "^27.4.4",
+				"@ionic/prettier-config": "^4.0.0",
+				"@jridgewell/source-map": "^0.3.6",
+				"@rollup/plugin-replace": "6.0.2",
+				"esbuild-plugin-replace": "^1.4.0",
+				"eslint-config-prettier": "^9.0.0",
+				"@rollup/plugin-commonjs": "28.0.2",
+				"postcss-selector-parser": "^7.1.0",
+				"@types/yarnpkg__lockfile": "^1.1.5",
+				"@typescript-eslint/parser": "^7.0.0",
+				"conventional-changelog-cli": "^5.0.0",
+				"@rollup/plugin-node-resolve": "16.0.0",
+				"@typescript-eslint/eslint-plugin": "^7.0.0",
+				"eslint-plugin-simple-import-sort": "^12.0.0"
+			},
+			"keywords": [
+				"web components",
+				"components",
+				"stencil",
+				"ionic",
+				"webapp",
+				"custom elements",
+				"pwa",
+				"progressive web app"
+			],
+			"license": "MIT",
+			"bin": {
+				"stencil": "bin/stencil"
+			},
+			"maintainers": [
+				{
+					"name": "ionicjs",
+					"email": "hi@ionic.io"
+				},
+				{
+					"name": "gm-os",
+					"email": "goncalo.martins@outsystems.com"
+				},
+				{
+					"name": "vmfo",
+					"email": "vitor.oliveira@outsystems.com"
+				},
+				{
+					"name": "gnbm",
+					"email": "goncalo.martins.fct@gmail.com"
+				},
+				{
+					"name": "johnny.jenkins",
+					"email": "johnljenkins@hotmail.com"
+				},
+				{
+					"name": "stencil-bot",
+					"email": "sa_git_uicomponents@outsystems.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"ts": "tsc --noEmit --project scripts/tsconfig.json && tsx",
+				"lint": "eslint bin/* scripts/*.ts scripts/**/*.ts src/*.ts src/**/*.ts src/**/*.tsx test/wdio/**/*.tsx",
+				"test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --coverage",
+				"build": "npm run clean && npm run tsc.prod && npm run ts scripts/index.ts -- --prod --ci",
+				"clean": "rimraf --max-retries=2 build/ cli/ compiler/ dev-server/ internal/ mock-doc/ sys/node/ sys/ testing/ && npm run clean:scripts && npm run clean.screenshots",
+				"prettier": "npm run prettier.base -- --write",
+				"tsc.prod": "tsc",
+				"test.dist": "npm run ts scripts/index.ts -- --validate-build",
+				"test.jest": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js",
+				"test.prod": "npm run test.dist && npm run test.end-to-end && npm run test.jest && npm run test.wdio && npm run test.testing && npm run test.analysis",
+				"test.wdio": "cd test/wdio && npm ci && npm run test",
+				"release.ci": "NODE_OPTIONS=--max-old-space-size=4096 npm run ts scripts/index.ts -- --release --ci-publish",
+				"spellcheck": "npm run spellcheck.code && npm run spellcheck.markdown",
+				"test.watch": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --watch",
+				"build.watch": "npm run build -- --watch",
+				"install.jest": "npx tsx ./src/testing/jest/install-dependencies.mts",
+				"test.testing": "node scripts/test/validate-testing.js",
+				"clean:scripts": "rimraf scripts/build",
+				"prettier.base": "prettier --cache \"./({bin,scripts,src,test}/**/*.{ts,tsx,js,jsx})|bin/stencil|.github/(**/)?*.(yml|yaml)|*.js\"",
+				"test.analysis": "cd test && npm ci && npm run analysis.build-and-analyze",
+				"test.bundlers": "cd test && npm run bundlers",
+				"test.copytask": "cd test/copy-task && npm ci && npm run test",
+				"test.watch-all": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --watchAll --coverage",
+				"spellcheck.code": "cspell --config cspell-code.json --no-progress \"src/**/*.ts\" \"src/**/*.tsx\" \"scripts/**/*.ts\"",
+				"test.docs-build": "cd test && npm run build.docs-json && npm run build.docs-readme",
+				"test.end-to-end": "cd test/end-to-end && npm ci && npm test && npm run test.dist",
+				"test.type-tests": "cd ./test/wdio && npm install && npm run build.test-sibling && npm run build.main && cd ../../ && tsc -p test/type-tests/tsconfig.json",
+				"prettier.dry-run": "npm run prettier.base -- --list-different",
+				"test.bundle-size": "cd test/bundle-size && npm test",
+				"clean.screenshots": "rimraf test/end-to-end/screenshot/builds test/end-to-end/screenshot/images",
+				"release.ci.prepare": "npm run ts scripts/index.ts -- --release --ci-prepare",
+				"test.wdio.testOnly": "cd test/wdio && npm ci && npm run wdio",
+				"spellcheck.markdown": "cspell --config cspell-markdown.json --no-progress \"*.md\" \"**/*.md\"",
+				"build.updateSelectorEngine": "npm run ts scripts/updateSelectorEngine.ts"
+			},
+			"lastModified": 0,
+			"_id": "@stencil/core@4.43.5-dev.1781764531.ca85879",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@stencil/core/-/core-4.43.5-dev.1781764531.ca85879.tgz",
+				"shasum": "f6a1e2aed6c9541991a9ed4e25a3b3a1a5a2309d",
+				"integrity": "sha512-MGHU1GYwEwvmnmPRQfBnIjC/+xSDoSOuElLv+u6vxL1F6+K8yo/CuTjMegDC1zmNiGDbVKzm2yOcAN6FKAOahA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEQCIDOSn+EcExj+8TliuaJvRwdmjpcrm5EUaCcZbzPpaodKAiBfKFGH/VTvgx+NhWQ8Y/+tnP8BBm7qwP/13QLEv2WCag=="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/@stencil%2fcore@4.43.5-dev.1781764531.ca85879",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "11.17.0",
+			"_npmUser": {
+				"name": "GitHub Actions",
+				"email": "npm-oidc-no-reply@github.com",
+				"trustedPublisher": {
+					"id": "github",
+					"oidcConfigId": "oidc:572e3806-71f4-4421-9a10-c8b3254fafd8"
+				}
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "ca858791094349a3d5ccfd9afbdb71612973c2cc",
+			"types": "./internal/stencil-core/index.d.ts",
+			"volta": {
+				"npm": "10.8.1",
+				"node": "22.2.0"
+			},
+			"exports": {
+				".": {
+					"types": "./internal/stencil-core/index.d.ts",
+					"import": "./internal/stencil-core/index.js",
+					"require": "./internal/stencil-core/index.cjs"
+				},
+				"./cli": {
+					"import": "./cli/index.js",
+					"require": "./cli/index.cjs"
+				},
+				"./testing": {
+					"types": "./testing/index.d.ts",
+					"import": "./testing/index.js",
+					"require": "./testing/index.js"
+				},
+				"./compiler": {
+					"types": "./compiler/stencil.d.ts",
+					"import": "./compiler/stencil.js",
+					"require": "./compiler/stencil.js"
+				},
+				"./internal": {
+					"types": "./internal/index.d.ts",
+					"import": "./internal/index.js"
+				},
+				"./mock-doc": {
+					"types": "./mock-doc/index.d.ts",
+					"import": "./mock-doc/index.js",
+					"require": "./mock-doc/index.cjs"
+				},
+				"./sys/node": {
+					"types": "./sys/node/index.d.ts",
+					"import": "./sys/node/index.js",
+					"require": "./sys/node/index.js"
+				},
+				"./testing/*": {
+					"import": "./testing/*",
+					"require": "./testing/*"
+				},
+				"./compiler/*": {
+					"types": "./compiler/*",
+					"import": "./compiler/*",
+					"require": "./compiler/*"
+				},
+				"./screenshot": {
+					"types": "./screenshot/index.d.ts",
+					"require": "./screenshot/index.js"
+				},
+				"./sys/node/*": {
+					"import": "./sys/node/*",
+					"require": "./sys/node/*"
+				},
+				"./jsx-runtime": {
+					"types": "./internal/stencil-core/jsx-runtime.d.ts",
+					"import": "./internal/stencil-core/jsx-runtime.js",
+					"require": "./internal/stencil-core/jsx-runtime.cjs"
+				},
+				"./internal/client": {
+					"import": "./internal/client/index.js",
+					"require": "./internal/client/index.js"
+				},
+				"./jsx-dev-runtime": {
+					"types": "./internal/stencil-core/jsx-dev-runtime.d.ts",
+					"import": "./internal/stencil-core/jsx-dev-runtime.js",
+					"require": "./internal/stencil-core/jsx-dev-runtime.cjs"
+				},
+				"./internal/testing": {
+					"import": "./internal/testing/index.js",
+					"require": "./internal/testing/index.js"
+				},
+				"./internal/app-data": {
+					"types": "./internal/app-data/index.d.ts",
+					"import": "./internal/app-data/index.js",
+					"require": "./internal/app-data/index.cjs"
+				},
+				"./internal/testing/*": {
+					"import": "./internal/testing/*"
+				},
+				"./testing/jest-preset": {
+					"require": "./testing/jest-preset.js"
+				},
+				"./internal/app-globals": {
+					"import": "./internal/app-globals/index.js",
+					"require": "./internal/app-globals/index.js"
+				},
+				"./internal/testing/jsx-runtime": {
+					"types": "./internal/testing/jsx-runtime.d.ts",
+					"import": "./internal/testing/jsx-runtime.js",
+					"require": "./internal/testing/jsx-runtime.js"
+				},
+				"./internal/testing/jsx-dev-runtime": {
+					"types": "./internal/testing/jsx-dev-runtime.d.ts",
+					"import": "./internal/testing/jsx-dev-runtime.js",
+					"require": "./internal/testing/jsx-dev-runtime.js"
+				}
+			},
+			"module": "./internal/stencil-core/index.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/core_4.43.5-dev.1781764531.ca85879_1781764720338_0.2186966744340455",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"readmeFilename": "readme.md",
+			"prettier": "@ionic/prettier-config",
+			"_nodeVersion": "20.20.2",
+			"contributors": []
+		},
+		"4.43.5-dev.1782110921.ca85879": {
+			"name": "@stencil/core",
+			"description": "A Compiler for Web Components and Progressive Web Apps",
+			"version": "4.43.5-dev.1782110921.ca85879",
+			"author": {
+				"name": "Ionic Team"
+			},
+			"homepage": "https://stenciljs.com/",
+			"repository": {
+				"url": "git+https://github.com/stenciljs/core.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/stenciljs/core/issues"
+			},
+			"engines": {
+				"npm": ">=7.10.0",
+				"node": ">=16.0.0"
+			},
+			"main": "./internal/stencil-core/index.cjs",
+			"optionalDependencies": {
+				"@rollup/rollup-darwin-x64": "4.44.0",
+				"@rollup/rollup-darwin-arm64": "4.44.0",
+				"@rollup/rollup-linux-x64-gnu": "4.44.0",
+				"@rollup/rollup-linux-x64-musl": "4.44.0",
+				"@rollup/rollup-win32-x64-msvc": "4.44.0",
+				"@rollup/rollup-linux-arm64-gnu": "4.44.0",
+				"@rollup/rollup-linux-arm64-musl": "4.44.0",
+				"@rollup/rollup-win32-arm64-msvc": "4.44.0"
+			},
+			"devDependencies": {
+				"ws": "8.17.1",
+				"tsx": "^4.19.2",
+				"exit": "^0.1.2",
+				"glob": "10.5.0",
+				"jest": "^27.4.5",
+				"open": "^9.0.0",
+				"execa": "9.3.0",
+				"listr": "^0.14.3",
+				"cspell": "^8.0.0",
+				"eslint": "^8.23.1",
+				"jquery": "https://github.com/jquery/jquery/tarball/c98597eaf5e144ee5e549cb41984687cd1033068",
+				"parse5": "7.2.1",
+				"rimraf": "^6.0.1",
+				"rollup": "4.44.0",
+				"semver": "^7.3.7",
+				"terser": "5.37.0",
+				"esbuild": "^0.25.0",
+				"mime-db": "^1.46.0",
+				"postcss": "^8.2.8",
+				"prompts": "2.4.2",
+				"webpack": "^5.75.0",
+				"css-what": "^7.0.0",
+				"fs-extra": "^11.0.0",
+				"jest-cli": "^27.4.5",
+				"prettier": "3.3.1",
+				"@types/ws": "^8.5.4",
+				"minimatch": "9.0.9",
+				"puppeteer": "^24.1.0",
+				"node-fetch": "3.3.2",
+				"pixelmatch": "5.3.0",
+				"typescript": "~5.8.3",
+				"@types/exit": "^0.1.31",
+				"@types/jest": "^27.0.3",
+				"@types/node": "^24.6.2",
+				"ansi-colors": "4.1.3",
+				"graceful-fs": "~4.2.6",
+				"@types/listr": "^0.14.4",
+				"@types/pngjs": "^6.0.1",
+				"autoprefixer": "10.4.19",
+				"magic-string": "^0.30.0",
+				"@types/eslint": "^8.4.6",
+				"@types/semver": "^7.3.12",
+				"@types/prompts": "^2.0.9",
+				"open-in-editor": "2.2.0",
+				"@types/fs-extra": "^11.0.0",
+				"merge-source-map": "^1.1.0",
+				"@types/pixelmatch": "^5.2.4",
+				"@yarnpkg/lockfile": "^1.1.0",
+				"@types/graceful-fs": "^4.1.5",
+				"eslint-plugin-jest": "^28.0.0",
+				"eslint-plugin-wdio": "^8.24.12",
+				"@rollup/plugin-json": "6.1.0",
+				"@rollup/pluginutils": "5.1.4",
+				"eslint-plugin-jsdoc": "^50.0.0",
+				"postcss-safe-parser": "^7.0.1",
+				"dts-bundle-generator": "~9.5.0",
+				"jest-environment-node": "^27.4.4",
+				"@ionic/prettier-config": "^4.0.0",
+				"@jridgewell/source-map": "^0.3.6",
+				"@rollup/plugin-replace": "6.0.2",
+				"esbuild-plugin-replace": "^1.4.0",
+				"eslint-config-prettier": "^9.0.0",
+				"@rollup/plugin-commonjs": "28.0.2",
+				"postcss-selector-parser": "^7.1.0",
+				"@types/yarnpkg__lockfile": "^1.1.5",
+				"@typescript-eslint/parser": "^7.0.0",
+				"conventional-changelog-cli": "^5.0.0",
+				"@rollup/plugin-node-resolve": "16.0.0",
+				"@typescript-eslint/eslint-plugin": "^7.0.0",
+				"eslint-plugin-simple-import-sort": "^12.0.0"
+			},
+			"keywords": [
+				"web components",
+				"components",
+				"stencil",
+				"ionic",
+				"webapp",
+				"custom elements",
+				"pwa",
+				"progressive web app"
+			],
+			"license": "MIT",
+			"bin": {
+				"stencil": "bin/stencil"
+			},
+			"maintainers": [
+				{
+					"name": "ionicjs",
+					"email": "hi@ionic.io"
+				},
+				{
+					"name": "gm-os",
+					"email": "goncalo.martins@outsystems.com"
+				},
+				{
+					"name": "vmfo",
+					"email": "vitor.oliveira@outsystems.com"
+				},
+				{
+					"name": "gnbm",
+					"email": "goncalo.martins.fct@gmail.com"
+				},
+				{
+					"name": "johnny.jenkins",
+					"email": "johnljenkins@hotmail.com"
+				},
+				{
+					"name": "stencil-bot",
+					"email": "sa_git_uicomponents@outsystems.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"ts": "tsc --noEmit --project scripts/tsconfig.json && tsx",
+				"lint": "eslint bin/* scripts/*.ts scripts/**/*.ts src/*.ts src/**/*.ts src/**/*.tsx test/wdio/**/*.tsx",
+				"test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --coverage",
+				"build": "npm run clean && npm run tsc.prod && npm run ts scripts/index.ts -- --prod --ci",
+				"clean": "rimraf --max-retries=2 build/ cli/ compiler/ dev-server/ internal/ mock-doc/ sys/node/ sys/ testing/ && npm run clean:scripts && npm run clean.screenshots",
+				"prettier": "npm run prettier.base -- --write",
+				"tsc.prod": "tsc",
+				"test.dist": "npm run ts scripts/index.ts -- --validate-build",
+				"test.jest": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js",
+				"test.prod": "npm run test.dist && npm run test.end-to-end && npm run test.jest && npm run test.wdio && npm run test.testing && npm run test.analysis",
+				"test.wdio": "cd test/wdio && npm ci && npm run test",
+				"release.ci": "NODE_OPTIONS=--max-old-space-size=4096 npm run ts scripts/index.ts -- --release --ci-publish",
+				"spellcheck": "npm run spellcheck.code && npm run spellcheck.markdown",
+				"test.watch": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --watch",
+				"build.watch": "npm run build -- --watch",
+				"install.jest": "npx tsx ./src/testing/jest/install-dependencies.mts",
+				"test.testing": "node scripts/test/validate-testing.js",
+				"clean:scripts": "rimraf scripts/build",
+				"prettier.base": "prettier --cache \"./({bin,scripts,src,test}/**/*.{ts,tsx,js,jsx})|bin/stencil|.github/(**/)?*.(yml|yaml)|*.js\"",
+				"test.analysis": "cd test && npm ci && npm run analysis.build-and-analyze",
+				"test.bundlers": "cd test && npm run bundlers",
+				"test.copytask": "cd test/copy-task && npm ci && npm run test",
+				"test.watch-all": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --watchAll --coverage",
+				"spellcheck.code": "cspell --config cspell-code.json --no-progress \"src/**/*.ts\" \"src/**/*.tsx\" \"scripts/**/*.ts\"",
+				"test.docs-build": "cd test && npm run build.docs-json && npm run build.docs-readme",
+				"test.end-to-end": "cd test/end-to-end && npm ci && npm test && npm run test.dist",
+				"test.type-tests": "cd ./test/wdio && npm install && npm run build.test-sibling && npm run build.main && cd ../../ && tsc -p test/type-tests/tsconfig.json",
+				"prettier.dry-run": "npm run prettier.base -- --list-different",
+				"test.bundle-size": "cd test/bundle-size && npm test",
+				"clean.screenshots": "rimraf test/end-to-end/screenshot/builds test/end-to-end/screenshot/images",
+				"release.ci.prepare": "npm run ts scripts/index.ts -- --release --ci-prepare",
+				"test.wdio.testOnly": "cd test/wdio && npm ci && npm run wdio",
+				"spellcheck.markdown": "cspell --config cspell-markdown.json --no-progress \"*.md\" \"**/*.md\"",
+				"build.updateSelectorEngine": "npm run ts scripts/updateSelectorEngine.ts"
+			},
+			"lastModified": 0,
+			"_id": "@stencil/core@4.43.5-dev.1782110921.ca85879",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@stencil/core/-/core-4.43.5-dev.1782110921.ca85879.tgz",
+				"shasum": "03abd4bd3510853bd762c4ad37903ab6b3dd3aa0",
+				"integrity": "sha512-E7/oTBiM4sAa19MAqho+QEdmYEDP363U7GgQlMXxzqlbVsUjvfDqRiIMpUfch15qrZsQaW4vxcvX7pSsXNecTw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEQCIDA655rpfGsnjsIYFODGVDNrtYLQJ0fhzzYXxcs9BJxrAiBlsD+lkq/Qlubt11aol/oShGNg6UkEgC9jOiCpQkFVKQ=="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/@stencil%2fcore@4.43.5-dev.1782110921.ca85879",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "11.17.0",
+			"_npmUser": {
+				"name": "GitHub Actions",
+				"email": "npm-oidc-no-reply@github.com",
+				"trustedPublisher": {
+					"id": "github",
+					"oidcConfigId": "oidc:572e3806-71f4-4421-9a10-c8b3254fafd8"
+				}
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "ca858791094349a3d5ccfd9afbdb71612973c2cc",
+			"types": "./internal/stencil-core/index.d.ts",
+			"volta": {
+				"npm": "10.8.1",
+				"node": "22.2.0"
+			},
+			"exports": {
+				".": {
+					"types": "./internal/stencil-core/index.d.ts",
+					"import": "./internal/stencil-core/index.js",
+					"require": "./internal/stencil-core/index.cjs"
+				},
+				"./cli": {
+					"import": "./cli/index.js",
+					"require": "./cli/index.cjs"
+				},
+				"./testing": {
+					"types": "./testing/index.d.ts",
+					"import": "./testing/index.js",
+					"require": "./testing/index.js"
+				},
+				"./compiler": {
+					"types": "./compiler/stencil.d.ts",
+					"import": "./compiler/stencil.js",
+					"require": "./compiler/stencil.js"
+				},
+				"./internal": {
+					"types": "./internal/index.d.ts",
+					"import": "./internal/index.js"
+				},
+				"./mock-doc": {
+					"types": "./mock-doc/index.d.ts",
+					"import": "./mock-doc/index.js",
+					"require": "./mock-doc/index.cjs"
+				},
+				"./sys/node": {
+					"types": "./sys/node/index.d.ts",
+					"import": "./sys/node/index.js",
+					"require": "./sys/node/index.js"
+				},
+				"./testing/*": {
+					"import": "./testing/*",
+					"require": "./testing/*"
+				},
+				"./compiler/*": {
+					"types": "./compiler/*",
+					"import": "./compiler/*",
+					"require": "./compiler/*"
+				},
+				"./screenshot": {
+					"types": "./screenshot/index.d.ts",
+					"require": "./screenshot/index.js"
+				},
+				"./sys/node/*": {
+					"import": "./sys/node/*",
+					"require": "./sys/node/*"
+				},
+				"./jsx-runtime": {
+					"types": "./internal/stencil-core/jsx-runtime.d.ts",
+					"import": "./internal/stencil-core/jsx-runtime.js",
+					"require": "./internal/stencil-core/jsx-runtime.cjs"
+				},
+				"./internal/client": {
+					"import": "./internal/client/index.js",
+					"require": "./internal/client/index.js"
+				},
+				"./jsx-dev-runtime": {
+					"types": "./internal/stencil-core/jsx-dev-runtime.d.ts",
+					"import": "./internal/stencil-core/jsx-dev-runtime.js",
+					"require": "./internal/stencil-core/jsx-dev-runtime.cjs"
+				},
+				"./internal/testing": {
+					"import": "./internal/testing/index.js",
+					"require": "./internal/testing/index.js"
+				},
+				"./internal/app-data": {
+					"types": "./internal/app-data/index.d.ts",
+					"import": "./internal/app-data/index.js",
+					"require": "./internal/app-data/index.cjs"
+				},
+				"./internal/testing/*": {
+					"import": "./internal/testing/*"
+				},
+				"./testing/jest-preset": {
+					"require": "./testing/jest-preset.js"
+				},
+				"./internal/app-globals": {
+					"import": "./internal/app-globals/index.js",
+					"require": "./internal/app-globals/index.js"
+				},
+				"./internal/testing/jsx-runtime": {
+					"types": "./internal/testing/jsx-runtime.d.ts",
+					"import": "./internal/testing/jsx-runtime.js",
+					"require": "./internal/testing/jsx-runtime.js"
+				},
+				"./internal/testing/jsx-dev-runtime": {
+					"types": "./internal/testing/jsx-dev-runtime.d.ts",
+					"import": "./internal/testing/jsx-dev-runtime.js",
+					"require": "./internal/testing/jsx-dev-runtime.js"
+				}
+			},
+			"module": "./internal/stencil-core/index.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/core_4.43.5-dev.1782110921.ca85879_1782111084789_0.09530565906102506",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"readmeFilename": "readme.md",
+			"prettier": "@ionic/prettier-config",
+			"_nodeVersion": "20.20.2",
+			"contributors": []
+		},
+		"4.43.5-dev.1782195838.f6d6f8c": {
+			"name": "@stencil/core",
+			"description": "A Compiler for Web Components and Progressive Web Apps",
+			"version": "4.43.5-dev.1782195838.f6d6f8c",
+			"author": {
+				"name": "Ionic Team"
+			},
+			"homepage": "https://stenciljs.com/",
+			"repository": {
+				"url": "git+https://github.com/stenciljs/core.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/stenciljs/core/issues"
+			},
+			"engines": {
+				"npm": ">=7.10.0",
+				"node": ">=16.0.0"
+			},
+			"main": "./internal/stencil-core/index.cjs",
+			"optionalDependencies": {
+				"@rollup/rollup-darwin-x64": "4.44.0",
+				"@rollup/rollup-darwin-arm64": "4.44.0",
+				"@rollup/rollup-linux-x64-gnu": "4.44.0",
+				"@rollup/rollup-linux-x64-musl": "4.44.0",
+				"@rollup/rollup-win32-x64-msvc": "4.44.0",
+				"@rollup/rollup-linux-arm64-gnu": "4.44.0",
+				"@rollup/rollup-linux-arm64-musl": "4.44.0",
+				"@rollup/rollup-win32-arm64-msvc": "4.44.0"
+			},
+			"devDependencies": {
+				"ws": "8.17.1",
+				"tsx": "^4.19.2",
+				"exit": "^0.1.2",
+				"glob": "10.5.0",
+				"jest": "^27.4.5",
+				"open": "^9.0.0",
+				"execa": "9.3.0",
+				"listr": "^0.14.3",
+				"cspell": "^8.0.0",
+				"eslint": "^8.23.1",
+				"jquery": "https://github.com/jquery/jquery/tarball/c98597eaf5e144ee5e549cb41984687cd1033068",
+				"parse5": "7.2.1",
+				"rimraf": "^6.0.1",
+				"rollup": "4.44.0",
+				"semver": "^7.3.7",
+				"terser": "5.37.0",
+				"esbuild": "^0.25.0",
+				"mime-db": "^1.46.0",
+				"postcss": "^8.2.8",
+				"prompts": "2.4.2",
+				"webpack": "^5.75.0",
+				"css-what": "^7.0.0",
+				"fs-extra": "^11.0.0",
+				"jest-cli": "^27.4.5",
+				"prettier": "3.3.1",
+				"@types/ws": "^8.5.4",
+				"minimatch": "9.0.9",
+				"puppeteer": "^24.1.0",
+				"node-fetch": "3.3.2",
+				"pixelmatch": "5.3.0",
+				"typescript": "~5.8.3",
+				"@types/exit": "^0.1.31",
+				"@types/jest": "^27.0.3",
+				"@types/node": "^24.6.2",
+				"ansi-colors": "4.1.3",
+				"graceful-fs": "~4.2.6",
+				"@types/listr": "^0.14.4",
+				"@types/pngjs": "^6.0.1",
+				"autoprefixer": "10.4.19",
+				"magic-string": "^0.30.0",
+				"@types/eslint": "^8.4.6",
+				"@types/semver": "^7.3.12",
+				"@types/prompts": "^2.0.9",
+				"open-in-editor": "2.2.0",
+				"@types/fs-extra": "^11.0.0",
+				"merge-source-map": "^1.1.0",
+				"@types/pixelmatch": "^5.2.4",
+				"@yarnpkg/lockfile": "^1.1.0",
+				"@types/graceful-fs": "^4.1.5",
+				"eslint-plugin-jest": "^28.0.0",
+				"eslint-plugin-wdio": "^8.24.12",
+				"@rollup/plugin-json": "6.1.0",
+				"@rollup/pluginutils": "5.1.4",
+				"eslint-plugin-jsdoc": "^50.0.0",
+				"postcss-safe-parser": "^7.0.1",
+				"dts-bundle-generator": "~9.5.0",
+				"jest-environment-node": "^27.4.4",
+				"@ionic/prettier-config": "^4.0.0",
+				"@jridgewell/source-map": "^0.3.6",
+				"@rollup/plugin-replace": "6.0.2",
+				"esbuild-plugin-replace": "^1.4.0",
+				"eslint-config-prettier": "^9.0.0",
+				"@rollup/plugin-commonjs": "28.0.2",
+				"postcss-selector-parser": "^7.1.0",
+				"@types/yarnpkg__lockfile": "^1.1.5",
+				"@typescript-eslint/parser": "^7.0.0",
+				"conventional-changelog-cli": "^5.0.0",
+				"@rollup/plugin-node-resolve": "16.0.0",
+				"@typescript-eslint/eslint-plugin": "^7.0.0",
+				"eslint-plugin-simple-import-sort": "^12.0.0"
+			},
+			"keywords": [
+				"web components",
+				"components",
+				"stencil",
+				"ionic",
+				"webapp",
+				"custom elements",
+				"pwa",
+				"progressive web app"
+			],
+			"license": "MIT",
+			"bin": {
+				"stencil": "bin/stencil"
+			},
+			"maintainers": [
+				{
+					"name": "ionicjs",
+					"email": "hi@ionic.io"
+				},
+				{
+					"name": "gm-os",
+					"email": "goncalo.martins@outsystems.com"
+				},
+				{
+					"name": "vmfo",
+					"email": "vitor.oliveira@outsystems.com"
+				},
+				{
+					"name": "gnbm",
+					"email": "goncalo.martins.fct@gmail.com"
+				},
+				{
+					"name": "johnny.jenkins",
+					"email": "johnljenkins@hotmail.com"
+				},
+				{
+					"name": "stencil-bot",
+					"email": "sa_git_uicomponents@outsystems.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"ts": "tsc --noEmit --project scripts/tsconfig.json && tsx",
+				"lint": "eslint bin/* scripts/*.ts scripts/**/*.ts src/*.ts src/**/*.ts src/**/*.tsx test/wdio/**/*.tsx",
+				"test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --coverage",
+				"build": "npm run clean && npm run tsc.prod && npm run ts scripts/index.ts -- --prod --ci",
+				"clean": "rimraf --max-retries=2 build/ cli/ compiler/ dev-server/ internal/ mock-doc/ sys/node/ sys/ testing/ && npm run clean:scripts && npm run clean.screenshots",
+				"prettier": "npm run prettier.base -- --write",
+				"tsc.prod": "tsc",
+				"test.dist": "npm run ts scripts/index.ts -- --validate-build",
+				"test.jest": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js",
+				"test.prod": "npm run test.dist && npm run test.end-to-end && npm run test.jest && npm run test.wdio && npm run test.testing && npm run test.analysis",
+				"test.wdio": "cd test/wdio && npm ci && npm run test",
+				"release.ci": "NODE_OPTIONS=--max-old-space-size=4096 npm run ts scripts/index.ts -- --release --ci-publish",
+				"spellcheck": "npm run spellcheck.code && npm run spellcheck.markdown",
+				"test.watch": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --watch",
+				"build.watch": "npm run build -- --watch",
+				"install.jest": "npx tsx ./src/testing/jest/install-dependencies.mts",
+				"test.testing": "node scripts/test/validate-testing.js",
+				"clean:scripts": "rimraf scripts/build",
+				"prettier.base": "prettier --cache \"./({bin,scripts,src,test}/**/*.{ts,tsx,js,jsx})|bin/stencil|.github/(**/)?*.(yml|yaml)|*.js\"",
+				"test.analysis": "cd test && npm ci && npm run analysis.build-and-analyze",
+				"test.bundlers": "cd test && npm run bundlers",
+				"test.copytask": "cd test/copy-task && npm ci && npm run test",
+				"test.watch-all": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --watchAll --coverage",
+				"spellcheck.code": "cspell --config cspell-code.json --no-progress \"src/**/*.ts\" \"src/**/*.tsx\" \"scripts/**/*.ts\"",
+				"test.docs-build": "cd test && npm run build.docs-json && npm run build.docs-readme",
+				"test.end-to-end": "cd test/end-to-end && npm ci && npm test && npm run test.dist",
+				"test.type-tests": "cd ./test/wdio && npm install && npm run build.test-sibling && npm run build.main && cd ../../ && tsc -p test/type-tests/tsconfig.json",
+				"prettier.dry-run": "npm run prettier.base -- --list-different",
+				"test.bundle-size": "cd test/bundle-size && npm test",
+				"clean.screenshots": "rimraf test/end-to-end/screenshot/builds test/end-to-end/screenshot/images",
+				"release.ci.prepare": "npm run ts scripts/index.ts -- --release --ci-prepare",
+				"test.wdio.testOnly": "cd test/wdio && npm ci && npm run wdio",
+				"spellcheck.markdown": "cspell --config cspell-markdown.json --no-progress \"*.md\" \"**/*.md\"",
+				"build.updateSelectorEngine": "npm run ts scripts/updateSelectorEngine.ts"
+			},
+			"lastModified": 0,
+			"_id": "@stencil/core@4.43.5-dev.1782195838.f6d6f8c",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@stencil/core/-/core-4.43.5-dev.1782195838.f6d6f8c.tgz",
+				"shasum": "94a16c81cb76089165663fede05fbf51b8909614",
+				"integrity": "sha512-au1Te4uk0wA4IyrnuPq46K++SM3WvE6Jj5v3BHbCQ7R6dDgcc2uVJvPafJmzP5keoH56bmoTj/pb9x+ZLerQGA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEQCIGUSUtkDkRWZkZa4z2fBfUkByIPuj7yo99IrZV0pHRVlAiARg3n6pJ3E86eTDca1wSpJAJVfbE2C5R+th4kWwhSsQQ=="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/@stencil%2fcore@4.43.5-dev.1782195838.f6d6f8c",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "11.17.0",
+			"_npmUser": {
+				"name": "GitHub Actions",
+				"email": "npm-oidc-no-reply@github.com",
+				"trustedPublisher": {
+					"id": "github",
+					"oidcConfigId": "oidc:572e3806-71f4-4421-9a10-c8b3254fafd8"
+				}
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "f6d6f8c27ae4e9f2f8650f85c302f8cb86606d12",
+			"types": "./internal/stencil-core/index.d.ts",
+			"volta": {
+				"npm": "10.8.1",
+				"node": "22.2.0"
+			},
+			"exports": {
+				".": {
+					"types": "./internal/stencil-core/index.d.ts",
+					"import": "./internal/stencil-core/index.js",
+					"require": "./internal/stencil-core/index.cjs"
+				},
+				"./cli": {
+					"import": "./cli/index.js",
+					"require": "./cli/index.cjs"
+				},
+				"./testing": {
+					"types": "./testing/index.d.ts",
+					"import": "./testing/index.js",
+					"require": "./testing/index.js"
+				},
+				"./compiler": {
+					"types": "./compiler/stencil.d.ts",
+					"import": "./compiler/stencil.js",
+					"require": "./compiler/stencil.js"
+				},
+				"./internal": {
+					"types": "./internal/index.d.ts",
+					"import": "./internal/index.js"
+				},
+				"./mock-doc": {
+					"types": "./mock-doc/index.d.ts",
+					"import": "./mock-doc/index.js",
+					"require": "./mock-doc/index.cjs"
+				},
+				"./sys/node": {
+					"types": "./sys/node/index.d.ts",
+					"import": "./sys/node/index.js",
+					"require": "./sys/node/index.js"
+				},
+				"./testing/*": {
+					"import": "./testing/*",
+					"require": "./testing/*"
+				},
+				"./compiler/*": {
+					"types": "./compiler/*",
+					"import": "./compiler/*",
+					"require": "./compiler/*"
+				},
+				"./screenshot": {
+					"types": "./screenshot/index.d.ts",
+					"require": "./screenshot/index.js"
+				},
+				"./sys/node/*": {
+					"import": "./sys/node/*",
+					"require": "./sys/node/*"
+				},
+				"./jsx-runtime": {
+					"types": "./internal/stencil-core/jsx-runtime.d.ts",
+					"import": "./internal/stencil-core/jsx-runtime.js",
+					"require": "./internal/stencil-core/jsx-runtime.cjs"
+				},
+				"./internal/client": {
+					"import": "./internal/client/index.js",
+					"require": "./internal/client/index.js"
+				},
+				"./jsx-dev-runtime": {
+					"types": "./internal/stencil-core/jsx-dev-runtime.d.ts",
+					"import": "./internal/stencil-core/jsx-dev-runtime.js",
+					"require": "./internal/stencil-core/jsx-dev-runtime.cjs"
+				},
+				"./internal/testing": {
+					"import": "./internal/testing/index.js",
+					"require": "./internal/testing/index.js"
+				},
+				"./internal/app-data": {
+					"types": "./internal/app-data/index.d.ts",
+					"import": "./internal/app-data/index.js",
+					"require": "./internal/app-data/index.cjs"
+				},
+				"./internal/testing/*": {
+					"import": "./internal/testing/*"
+				},
+				"./testing/jest-preset": {
+					"require": "./testing/jest-preset.js"
+				},
+				"./internal/app-globals": {
+					"import": "./internal/app-globals/index.js",
+					"require": "./internal/app-globals/index.js"
+				},
+				"./internal/testing/jsx-runtime": {
+					"types": "./internal/testing/jsx-runtime.d.ts",
+					"import": "./internal/testing/jsx-runtime.js",
+					"require": "./internal/testing/jsx-runtime.js"
+				},
+				"./internal/testing/jsx-dev-runtime": {
+					"types": "./internal/testing/jsx-dev-runtime.d.ts",
+					"import": "./internal/testing/jsx-dev-runtime.js",
+					"require": "./internal/testing/jsx-dev-runtime.js"
+				}
+			},
+			"module": "./internal/stencil-core/index.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/core_4.43.5-dev.1782195838.f6d6f8c_1782196003284_0.1305378052856252",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"readmeFilename": "readme.md",
+			"prettier": "@ionic/prettier-config",
+			"_nodeVersion": "20.20.2",
+			"contributors": []
+		},
+		"4.43.5-dev.1781851551.ca85879": {
+			"name": "@stencil/core",
+			"description": "A Compiler for Web Components and Progressive Web Apps",
+			"version": "4.43.5-dev.1781851551.ca85879",
+			"author": {
+				"name": "Ionic Team"
+			},
+			"homepage": "https://stenciljs.com/",
+			"repository": {
+				"url": "git+https://github.com/stenciljs/core.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/stenciljs/core/issues"
+			},
+			"engines": {
+				"npm": ">=7.10.0",
+				"node": ">=16.0.0"
+			},
+			"main": "./internal/stencil-core/index.cjs",
+			"optionalDependencies": {
+				"@rollup/rollup-darwin-x64": "4.44.0",
+				"@rollup/rollup-darwin-arm64": "4.44.0",
+				"@rollup/rollup-linux-x64-gnu": "4.44.0",
+				"@rollup/rollup-linux-x64-musl": "4.44.0",
+				"@rollup/rollup-win32-x64-msvc": "4.44.0",
+				"@rollup/rollup-linux-arm64-gnu": "4.44.0",
+				"@rollup/rollup-linux-arm64-musl": "4.44.0",
+				"@rollup/rollup-win32-arm64-msvc": "4.44.0"
+			},
+			"devDependencies": {
+				"ws": "8.17.1",
+				"tsx": "^4.19.2",
+				"exit": "^0.1.2",
+				"glob": "10.5.0",
+				"jest": "^27.4.5",
+				"open": "^9.0.0",
+				"execa": "9.3.0",
+				"listr": "^0.14.3",
+				"cspell": "^8.0.0",
+				"eslint": "^8.23.1",
+				"jquery": "https://github.com/jquery/jquery/tarball/c98597eaf5e144ee5e549cb41984687cd1033068",
+				"parse5": "7.2.1",
+				"rimraf": "^6.0.1",
+				"rollup": "4.44.0",
+				"semver": "^7.3.7",
+				"terser": "5.37.0",
+				"esbuild": "^0.25.0",
+				"mime-db": "^1.46.0",
+				"postcss": "^8.2.8",
+				"prompts": "2.4.2",
+				"webpack": "^5.75.0",
+				"css-what": "^7.0.0",
+				"fs-extra": "^11.0.0",
+				"jest-cli": "^27.4.5",
+				"prettier": "3.3.1",
+				"@types/ws": "^8.5.4",
+				"minimatch": "9.0.9",
+				"puppeteer": "^24.1.0",
+				"node-fetch": "3.3.2",
+				"pixelmatch": "5.3.0",
+				"typescript": "~5.8.3",
+				"@types/exit": "^0.1.31",
+				"@types/jest": "^27.0.3",
+				"@types/node": "^24.6.2",
+				"ansi-colors": "4.1.3",
+				"graceful-fs": "~4.2.6",
+				"@types/listr": "^0.14.4",
+				"@types/pngjs": "^6.0.1",
+				"autoprefixer": "10.4.19",
+				"magic-string": "^0.30.0",
+				"@types/eslint": "^8.4.6",
+				"@types/semver": "^7.3.12",
+				"@types/prompts": "^2.0.9",
+				"open-in-editor": "2.2.0",
+				"@types/fs-extra": "^11.0.0",
+				"merge-source-map": "^1.1.0",
+				"@types/pixelmatch": "^5.2.4",
+				"@yarnpkg/lockfile": "^1.1.0",
+				"@types/graceful-fs": "^4.1.5",
+				"eslint-plugin-jest": "^28.0.0",
+				"eslint-plugin-wdio": "^8.24.12",
+				"@rollup/plugin-json": "6.1.0",
+				"@rollup/pluginutils": "5.1.4",
+				"eslint-plugin-jsdoc": "^50.0.0",
+				"postcss-safe-parser": "^7.0.1",
+				"dts-bundle-generator": "~9.5.0",
+				"jest-environment-node": "^27.4.4",
+				"@ionic/prettier-config": "^4.0.0",
+				"@jridgewell/source-map": "^0.3.6",
+				"@rollup/plugin-replace": "6.0.2",
+				"esbuild-plugin-replace": "^1.4.0",
+				"eslint-config-prettier": "^9.0.0",
+				"@rollup/plugin-commonjs": "28.0.2",
+				"postcss-selector-parser": "^7.1.0",
+				"@types/yarnpkg__lockfile": "^1.1.5",
+				"@typescript-eslint/parser": "^7.0.0",
+				"conventional-changelog-cli": "^5.0.0",
+				"@rollup/plugin-node-resolve": "16.0.0",
+				"@typescript-eslint/eslint-plugin": "^7.0.0",
+				"eslint-plugin-simple-import-sort": "^12.0.0"
+			},
+			"keywords": [
+				"web components",
+				"components",
+				"stencil",
+				"ionic",
+				"webapp",
+				"custom elements",
+				"pwa",
+				"progressive web app"
+			],
+			"license": "MIT",
+			"bin": {
+				"stencil": "bin/stencil"
+			},
+			"maintainers": [
+				{
+					"name": "ionicjs",
+					"email": "hi@ionic.io"
+				},
+				{
+					"name": "gm-os",
+					"email": "goncalo.martins@outsystems.com"
+				},
+				{
+					"name": "vmfo",
+					"email": "vitor.oliveira@outsystems.com"
+				},
+				{
+					"name": "gnbm",
+					"email": "goncalo.martins.fct@gmail.com"
+				},
+				{
+					"name": "johnny.jenkins",
+					"email": "johnljenkins@hotmail.com"
+				},
+				{
+					"name": "stencil-bot",
+					"email": "sa_git_uicomponents@outsystems.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"ts": "tsc --noEmit --project scripts/tsconfig.json && tsx",
+				"lint": "eslint bin/* scripts/*.ts scripts/**/*.ts src/*.ts src/**/*.ts src/**/*.tsx test/wdio/**/*.tsx",
+				"test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --coverage",
+				"build": "npm run clean && npm run tsc.prod && npm run ts scripts/index.ts -- --prod --ci",
+				"clean": "rimraf --max-retries=2 build/ cli/ compiler/ dev-server/ internal/ mock-doc/ sys/node/ sys/ testing/ && npm run clean:scripts && npm run clean.screenshots",
+				"prettier": "npm run prettier.base -- --write",
+				"tsc.prod": "tsc",
+				"test.dist": "npm run ts scripts/index.ts -- --validate-build",
+				"test.jest": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js",
+				"test.prod": "npm run test.dist && npm run test.end-to-end && npm run test.jest && npm run test.wdio && npm run test.testing && npm run test.analysis",
+				"test.wdio": "cd test/wdio && npm ci && npm run test",
+				"release.ci": "NODE_OPTIONS=--max-old-space-size=4096 npm run ts scripts/index.ts -- --release --ci-publish",
+				"spellcheck": "npm run spellcheck.code && npm run spellcheck.markdown",
+				"test.watch": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --watch",
+				"build.watch": "npm run build -- --watch",
+				"install.jest": "npx tsx ./src/testing/jest/install-dependencies.mts",
+				"test.testing": "node scripts/test/validate-testing.js",
+				"clean:scripts": "rimraf scripts/build",
+				"prettier.base": "prettier --cache \"./({bin,scripts,src,test}/**/*.{ts,tsx,js,jsx})|bin/stencil|.github/(**/)?*.(yml|yaml)|*.js\"",
+				"test.analysis": "cd test && npm ci && npm run analysis.build-and-analyze",
+				"test.bundlers": "cd test && npm run bundlers",
+				"test.copytask": "cd test/copy-task && npm ci && npm run test",
+				"test.watch-all": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --watchAll --coverage",
+				"spellcheck.code": "cspell --config cspell-code.json --no-progress \"src/**/*.ts\" \"src/**/*.tsx\" \"scripts/**/*.ts\"",
+				"test.docs-build": "cd test && npm run build.docs-json && npm run build.docs-readme",
+				"test.end-to-end": "cd test/end-to-end && npm ci && npm test && npm run test.dist",
+				"test.type-tests": "cd ./test/wdio && npm install && npm run build.test-sibling && npm run build.main && cd ../../ && tsc -p test/type-tests/tsconfig.json",
+				"prettier.dry-run": "npm run prettier.base -- --list-different",
+				"test.bundle-size": "cd test/bundle-size && npm test",
+				"clean.screenshots": "rimraf test/end-to-end/screenshot/builds test/end-to-end/screenshot/images",
+				"release.ci.prepare": "npm run ts scripts/index.ts -- --release --ci-prepare",
+				"test.wdio.testOnly": "cd test/wdio && npm ci && npm run wdio",
+				"spellcheck.markdown": "cspell --config cspell-markdown.json --no-progress \"*.md\" \"**/*.md\"",
+				"build.updateSelectorEngine": "npm run ts scripts/updateSelectorEngine.ts"
+			},
+			"lastModified": 0,
+			"_id": "@stencil/core@4.43.5-dev.1781851551.ca85879",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@stencil/core/-/core-4.43.5-dev.1781851551.ca85879.tgz",
+				"shasum": "898dcd6516cc72720a9545c59316c673f97a6ffc",
+				"integrity": "sha512-8BVUAvQ67efELD0Pe1LerRlAAPVjOIXO5oEhegloYo7/ggEDm8b5x62EDYx7WQb1p6EVBWgZeQo1sMyZuDhEoQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEUCIAnaacMkEGbCtbiiE/gDqXkL7V7BfgW6EBkreLdbLNEXAiEAn9hyOyamn1HUKxpDl21sMWg0Ko8HQC9bCstm7P89yS8="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/@stencil%2fcore@4.43.5-dev.1781851551.ca85879",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "11.17.0",
+			"_npmUser": {
+				"name": "GitHub Actions",
+				"email": "npm-oidc-no-reply@github.com",
+				"trustedPublisher": {
+					"id": "github",
+					"oidcConfigId": "oidc:572e3806-71f4-4421-9a10-c8b3254fafd8"
+				}
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "ca858791094349a3d5ccfd9afbdb71612973c2cc",
+			"types": "./internal/stencil-core/index.d.ts",
+			"volta": {
+				"npm": "10.8.1",
+				"node": "22.2.0"
+			},
+			"exports": {
+				".": {
+					"types": "./internal/stencil-core/index.d.ts",
+					"import": "./internal/stencil-core/index.js",
+					"require": "./internal/stencil-core/index.cjs"
+				},
+				"./cli": {
+					"import": "./cli/index.js",
+					"require": "./cli/index.cjs"
+				},
+				"./testing": {
+					"types": "./testing/index.d.ts",
+					"import": "./testing/index.js",
+					"require": "./testing/index.js"
+				},
+				"./compiler": {
+					"types": "./compiler/stencil.d.ts",
+					"import": "./compiler/stencil.js",
+					"require": "./compiler/stencil.js"
+				},
+				"./internal": {
+					"types": "./internal/index.d.ts",
+					"import": "./internal/index.js"
+				},
+				"./mock-doc": {
+					"types": "./mock-doc/index.d.ts",
+					"import": "./mock-doc/index.js",
+					"require": "./mock-doc/index.cjs"
+				},
+				"./sys/node": {
+					"types": "./sys/node/index.d.ts",
+					"import": "./sys/node/index.js",
+					"require": "./sys/node/index.js"
+				},
+				"./testing/*": {
+					"import": "./testing/*",
+					"require": "./testing/*"
+				},
+				"./compiler/*": {
+					"types": "./compiler/*",
+					"import": "./compiler/*",
+					"require": "./compiler/*"
+				},
+				"./screenshot": {
+					"types": "./screenshot/index.d.ts",
+					"require": "./screenshot/index.js"
+				},
+				"./sys/node/*": {
+					"import": "./sys/node/*",
+					"require": "./sys/node/*"
+				},
+				"./jsx-runtime": {
+					"types": "./internal/stencil-core/jsx-runtime.d.ts",
+					"import": "./internal/stencil-core/jsx-runtime.js",
+					"require": "./internal/stencil-core/jsx-runtime.cjs"
+				},
+				"./internal/client": {
+					"import": "./internal/client/index.js",
+					"require": "./internal/client/index.js"
+				},
+				"./jsx-dev-runtime": {
+					"types": "./internal/stencil-core/jsx-dev-runtime.d.ts",
+					"import": "./internal/stencil-core/jsx-dev-runtime.js",
+					"require": "./internal/stencil-core/jsx-dev-runtime.cjs"
+				},
+				"./internal/testing": {
+					"import": "./internal/testing/index.js",
+					"require": "./internal/testing/index.js"
+				},
+				"./internal/app-data": {
+					"types": "./internal/app-data/index.d.ts",
+					"import": "./internal/app-data/index.js",
+					"require": "./internal/app-data/index.cjs"
+				},
+				"./internal/testing/*": {
+					"import": "./internal/testing/*"
+				},
+				"./testing/jest-preset": {
+					"require": "./testing/jest-preset.js"
+				},
+				"./internal/app-globals": {
+					"import": "./internal/app-globals/index.js",
+					"require": "./internal/app-globals/index.js"
+				},
+				"./internal/testing/jsx-runtime": {
+					"types": "./internal/testing/jsx-runtime.d.ts",
+					"import": "./internal/testing/jsx-runtime.js",
+					"require": "./internal/testing/jsx-runtime.js"
+				},
+				"./internal/testing/jsx-dev-runtime": {
+					"types": "./internal/testing/jsx-dev-runtime.d.ts",
+					"import": "./internal/testing/jsx-dev-runtime.js",
+					"require": "./internal/testing/jsx-dev-runtime.js"
+				}
+			},
+			"module": "./internal/stencil-core/index.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/core_4.43.5-dev.1781851551.ca85879_1781851722660_0.24347854092815324",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"readmeFilename": "readme.md",
+			"prettier": "@ionic/prettier-config",
+			"_nodeVersion": "20.20.2",
+			"contributors": []
+		},
+		"4.43.5-dev.1782368644.f6d6f8c": {
+			"name": "@stencil/core",
+			"description": "A Compiler for Web Components and Progressive Web Apps",
+			"version": "4.43.5-dev.1782368644.f6d6f8c",
+			"author": {
+				"name": "Ionic Team"
+			},
+			"homepage": "https://stenciljs.com/",
+			"repository": {
+				"url": "git+https://github.com/stenciljs/core.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/stenciljs/core/issues"
+			},
+			"engines": {
+				"npm": ">=7.10.0",
+				"node": ">=16.0.0"
+			},
+			"main": "./internal/stencil-core/index.cjs",
+			"optionalDependencies": {
+				"@rollup/rollup-darwin-x64": "4.44.0",
+				"@rollup/rollup-darwin-arm64": "4.44.0",
+				"@rollup/rollup-linux-x64-gnu": "4.44.0",
+				"@rollup/rollup-linux-x64-musl": "4.44.0",
+				"@rollup/rollup-win32-x64-msvc": "4.44.0",
+				"@rollup/rollup-linux-arm64-gnu": "4.44.0",
+				"@rollup/rollup-linux-arm64-musl": "4.44.0",
+				"@rollup/rollup-win32-arm64-msvc": "4.44.0"
+			},
+			"devDependencies": {
+				"ws": "8.17.1",
+				"tsx": "^4.19.2",
+				"exit": "^0.1.2",
+				"glob": "10.5.0",
+				"jest": "^27.4.5",
+				"open": "^9.0.0",
+				"execa": "9.3.0",
+				"listr": "^0.14.3",
+				"cspell": "^8.0.0",
+				"eslint": "^8.23.1",
+				"jquery": "https://github.com/jquery/jquery/tarball/c98597eaf5e144ee5e549cb41984687cd1033068",
+				"parse5": "7.2.1",
+				"rimraf": "^6.0.1",
+				"rollup": "4.44.0",
+				"semver": "^7.3.7",
+				"terser": "5.37.0",
+				"esbuild": "^0.25.0",
+				"mime-db": "^1.46.0",
+				"postcss": "^8.2.8",
+				"prompts": "2.4.2",
+				"webpack": "^5.75.0",
+				"css-what": "^7.0.0",
+				"fs-extra": "^11.0.0",
+				"jest-cli": "^27.4.5",
+				"prettier": "3.3.1",
+				"@types/ws": "^8.5.4",
+				"minimatch": "9.0.9",
+				"puppeteer": "^24.1.0",
+				"node-fetch": "3.3.2",
+				"pixelmatch": "5.3.0",
+				"typescript": "~5.8.3",
+				"@types/exit": "^0.1.31",
+				"@types/jest": "^27.0.3",
+				"@types/node": "^24.6.2",
+				"ansi-colors": "4.1.3",
+				"graceful-fs": "~4.2.6",
+				"@types/listr": "^0.14.4",
+				"@types/pngjs": "^6.0.1",
+				"autoprefixer": "10.4.19",
+				"magic-string": "^0.30.0",
+				"@types/eslint": "^8.4.6",
+				"@types/semver": "^7.3.12",
+				"@types/prompts": "^2.0.9",
+				"open-in-editor": "2.2.0",
+				"@types/fs-extra": "^11.0.0",
+				"merge-source-map": "^1.1.0",
+				"@types/pixelmatch": "^5.2.4",
+				"@yarnpkg/lockfile": "^1.1.0",
+				"@types/graceful-fs": "^4.1.5",
+				"eslint-plugin-jest": "^28.0.0",
+				"eslint-plugin-wdio": "^8.24.12",
+				"@rollup/plugin-json": "6.1.0",
+				"@rollup/pluginutils": "5.1.4",
+				"eslint-plugin-jsdoc": "^50.0.0",
+				"postcss-safe-parser": "^7.0.1",
+				"dts-bundle-generator": "~9.5.0",
+				"jest-environment-node": "^27.4.4",
+				"@ionic/prettier-config": "^4.0.0",
+				"@jridgewell/source-map": "^0.3.6",
+				"@rollup/plugin-replace": "6.0.2",
+				"esbuild-plugin-replace": "^1.4.0",
+				"eslint-config-prettier": "^9.0.0",
+				"@rollup/plugin-commonjs": "28.0.2",
+				"postcss-selector-parser": "^7.1.0",
+				"@types/yarnpkg__lockfile": "^1.1.5",
+				"@typescript-eslint/parser": "^7.0.0",
+				"conventional-changelog-cli": "^5.0.0",
+				"@rollup/plugin-node-resolve": "16.0.0",
+				"@typescript-eslint/eslint-plugin": "^7.0.0",
+				"eslint-plugin-simple-import-sort": "^12.0.0"
+			},
+			"keywords": [
+				"web components",
+				"components",
+				"stencil",
+				"ionic",
+				"webapp",
+				"custom elements",
+				"pwa",
+				"progressive web app"
+			],
+			"license": "MIT",
+			"bin": {
+				"stencil": "bin/stencil"
+			},
+			"maintainers": [
+				{
+					"name": "ionicjs",
+					"email": "hi@ionic.io"
+				},
+				{
+					"name": "gm-os",
+					"email": "goncalo.martins@outsystems.com"
+				},
+				{
+					"name": "vmfo",
+					"email": "vitor.oliveira@outsystems.com"
+				},
+				{
+					"name": "gnbm",
+					"email": "goncalo.martins.fct@gmail.com"
+				},
+				{
+					"name": "johnny.jenkins",
+					"email": "johnljenkins@hotmail.com"
+				},
+				{
+					"name": "stencil-bot",
+					"email": "sa_git_uicomponents@outsystems.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"ts": "tsc --noEmit --project scripts/tsconfig.json && tsx",
+				"lint": "eslint bin/* scripts/*.ts scripts/**/*.ts src/*.ts src/**/*.ts src/**/*.tsx test/wdio/**/*.tsx",
+				"test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --coverage",
+				"build": "npm run clean && npm run tsc.prod && npm run ts scripts/index.ts -- --prod --ci",
+				"clean": "rimraf --max-retries=2 build/ cli/ compiler/ dev-server/ internal/ mock-doc/ sys/node/ sys/ testing/ && npm run clean:scripts && npm run clean.screenshots",
+				"prettier": "npm run prettier.base -- --write",
+				"tsc.prod": "tsc",
+				"test.dist": "npm run ts scripts/index.ts -- --validate-build",
+				"test.jest": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js",
+				"test.prod": "npm run test.dist && npm run test.end-to-end && npm run test.jest && npm run test.wdio && npm run test.testing && npm run test.analysis",
+				"test.wdio": "cd test/wdio && npm ci && npm run test",
+				"release.ci": "NODE_OPTIONS=--max-old-space-size=4096 npm run ts scripts/index.ts -- --release --ci-publish",
+				"spellcheck": "npm run spellcheck.code && npm run spellcheck.markdown",
+				"test.watch": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --watch",
+				"build.watch": "npm run build -- --watch",
+				"install.jest": "npx tsx ./src/testing/jest/install-dependencies.mts",
+				"test.testing": "node scripts/test/validate-testing.js",
+				"clean:scripts": "rimraf scripts/build",
+				"prettier.base": "prettier --cache \"./({bin,scripts,src,test}/**/*.{ts,tsx,js,jsx})|bin/stencil|.github/(**/)?*.(yml|yaml)|*.js\"",
+				"test.analysis": "cd test && npm ci && npm run analysis.build-and-analyze",
+				"test.bundlers": "cd test && npm run bundlers",
+				"test.copytask": "cd test/copy-task && npm ci && npm run test",
+				"test.watch-all": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --watchAll --coverage",
+				"spellcheck.code": "cspell --config cspell-code.json --no-progress \"src/**/*.ts\" \"src/**/*.tsx\" \"scripts/**/*.ts\"",
+				"test.docs-build": "cd test && npm run build.docs-json && npm run build.docs-readme",
+				"test.end-to-end": "cd test/end-to-end && npm ci && npm test && npm run test.dist",
+				"test.type-tests": "cd ./test/wdio && npm install && npm run build.test-sibling && npm run build.main && cd ../../ && tsc -p test/type-tests/tsconfig.json",
+				"prettier.dry-run": "npm run prettier.base -- --list-different",
+				"test.bundle-size": "cd test/bundle-size && npm test",
+				"clean.screenshots": "rimraf test/end-to-end/screenshot/builds test/end-to-end/screenshot/images",
+				"release.ci.prepare": "npm run ts scripts/index.ts -- --release --ci-prepare",
+				"test.wdio.testOnly": "cd test/wdio && npm ci && npm run wdio",
+				"spellcheck.markdown": "cspell --config cspell-markdown.json --no-progress \"*.md\" \"**/*.md\"",
+				"build.updateSelectorEngine": "npm run ts scripts/updateSelectorEngine.ts"
+			},
+			"lastModified": 0,
+			"_id": "@stencil/core@4.43.5-dev.1782368644.f6d6f8c",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@stencil/core/-/core-4.43.5-dev.1782368644.f6d6f8c.tgz",
+				"shasum": "fbd2abcc636b8d1a05f79e156cc4eb3c24c99915",
+				"integrity": "sha512-7a2VkcsVVQjF90huaP8L0dRXofqGSjScTN9O9T6C40Oes6VcBFFY0uuaEP5zukIkWCcY+2/RRciTaWEdDX1e8Q==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEQCIF+EH8PmXdWguXr/dAYPpOhxkp/JiKqRrQrzCjx+v9qeAiBF+Go+BbUs71SB3JnC0wt6oDIlOxZWJJQytk1iBrMuVQ=="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/@stencil%2fcore@4.43.5-dev.1782368644.f6d6f8c",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "11.17.0",
+			"_npmUser": {
+				"name": "GitHub Actions",
+				"email": "npm-oidc-no-reply@github.com",
+				"trustedPublisher": {
+					"id": "github",
+					"oidcConfigId": "oidc:572e3806-71f4-4421-9a10-c8b3254fafd8"
+				}
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "f6d6f8c27ae4e9f2f8650f85c302f8cb86606d12",
+			"types": "./internal/stencil-core/index.d.ts",
+			"volta": {
+				"npm": "10.8.1",
+				"node": "22.2.0"
+			},
+			"exports": {
+				".": {
+					"types": "./internal/stencil-core/index.d.ts",
+					"import": "./internal/stencil-core/index.js",
+					"require": "./internal/stencil-core/index.cjs"
+				},
+				"./cli": {
+					"import": "./cli/index.js",
+					"require": "./cli/index.cjs"
+				},
+				"./testing": {
+					"types": "./testing/index.d.ts",
+					"import": "./testing/index.js",
+					"require": "./testing/index.js"
+				},
+				"./compiler": {
+					"types": "./compiler/stencil.d.ts",
+					"import": "./compiler/stencil.js",
+					"require": "./compiler/stencil.js"
+				},
+				"./internal": {
+					"types": "./internal/index.d.ts",
+					"import": "./internal/index.js"
+				},
+				"./mock-doc": {
+					"types": "./mock-doc/index.d.ts",
+					"import": "./mock-doc/index.js",
+					"require": "./mock-doc/index.cjs"
+				},
+				"./sys/node": {
+					"types": "./sys/node/index.d.ts",
+					"import": "./sys/node/index.js",
+					"require": "./sys/node/index.js"
+				},
+				"./testing/*": {
+					"import": "./testing/*",
+					"require": "./testing/*"
+				},
+				"./compiler/*": {
+					"types": "./compiler/*",
+					"import": "./compiler/*",
+					"require": "./compiler/*"
+				},
+				"./screenshot": {
+					"types": "./screenshot/index.d.ts",
+					"require": "./screenshot/index.js"
+				},
+				"./sys/node/*": {
+					"import": "./sys/node/*",
+					"require": "./sys/node/*"
+				},
+				"./jsx-runtime": {
+					"types": "./internal/stencil-core/jsx-runtime.d.ts",
+					"import": "./internal/stencil-core/jsx-runtime.js",
+					"require": "./internal/stencil-core/jsx-runtime.cjs"
+				},
+				"./internal/client": {
+					"import": "./internal/client/index.js",
+					"require": "./internal/client/index.js"
+				},
+				"./jsx-dev-runtime": {
+					"types": "./internal/stencil-core/jsx-dev-runtime.d.ts",
+					"import": "./internal/stencil-core/jsx-dev-runtime.js",
+					"require": "./internal/stencil-core/jsx-dev-runtime.cjs"
+				},
+				"./internal/testing": {
+					"import": "./internal/testing/index.js",
+					"require": "./internal/testing/index.js"
+				},
+				"./internal/app-data": {
+					"types": "./internal/app-data/index.d.ts",
+					"import": "./internal/app-data/index.js",
+					"require": "./internal/app-data/index.cjs"
+				},
+				"./internal/testing/*": {
+					"import": "./internal/testing/*"
+				},
+				"./testing/jest-preset": {
+					"require": "./testing/jest-preset.js"
+				},
+				"./internal/app-globals": {
+					"import": "./internal/app-globals/index.js",
+					"require": "./internal/app-globals/index.js"
+				},
+				"./internal/testing/jsx-runtime": {
+					"types": "./internal/testing/jsx-runtime.d.ts",
+					"import": "./internal/testing/jsx-runtime.js",
+					"require": "./internal/testing/jsx-runtime.js"
+				},
+				"./internal/testing/jsx-dev-runtime": {
+					"types": "./internal/testing/jsx-dev-runtime.d.ts",
+					"import": "./internal/testing/jsx-dev-runtime.js",
+					"require": "./internal/testing/jsx-dev-runtime.js"
+				}
+			},
+			"module": "./internal/stencil-core/index.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/core_4.43.5-dev.1782368644.f6d6f8c_1782368808375_0.32253273231239965",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"readmeFilename": "readme.md",
+			"prettier": "@ionic/prettier-config",
+			"_nodeVersion": "20.20.2",
+			"contributors": []
+		},
+		"5.0.0-alpha.10": {
+			"name": "@stencil/core",
+			"description": "A Compiler for Web Components and Progressive Web Apps",
+			"version": "5.0.0-alpha.10",
+			"author": {
+				"name": "StencilJs Contributors"
+			},
+			"homepage": "https://stenciljs.com/",
+			"repository": {
+				"url": "git+https://github.com/stenciljs/core.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/stenciljs/core/issues"
+			},
+			"main": "./dist/index.mjs",
+			"dependencies": {
+				"jiti": "^2.0.0",
+				"chalk": "^5.0.0",
+				"semver": "^7.0.0",
+				"terser": "^5.0.0",
+				"postcss": "^8.0.0",
+				"resolve": "^1.22.0",
+				"css-what": "^7.0.0",
+				"rolldown": "^1.0.0",
+				"picomatch": "^4.0.0",
+				"tinyglobby": "^0.2.0",
+				"typescript": ">4.0.0 <7.0.0",
+				"@stencil/cli": "5.0.0-alpha.9",
+				"browserslist": "^4.0.0",
+				"lightningcss": "^1.0.0",
+				"magic-string": "^0.30.0",
+				"@parcel/watcher": "^2.0.0",
+				"@stencil/mock-doc": "5.0.0-alpha.10",
+				"@rollup/pluginutils": "^5.3.0",
+				"@stencil/dev-server": "5.0.0-alpha.10",
+				"postcss-safe-parser": "^7.0.0",
+				"@preact/signals-core": "^1.0.0",
+				"postcss-selector-parser": "^7.0.0"
+			},
+			"devDependencies": {
+				"tsdown": ">=0.21.0 <1.0.0",
+				"vitest": "^4.1.7",
+				"prettier": "^3.5.0",
+				"@stencil/vitest": "^1.12.1",
+				"@ionic/prettier-config": "^4.0.0",
+				"vitest-environment-stencil": "^1.12.1"
+			},
+			"keywords": [
+				"components",
+				"custom elements",
+				"ionic",
+				"progressive web app",
+				"pwa",
+				"stencil",
+				"web components",
+				"webapp"
+			],
+			"license": "MIT",
+			"bin": {
+				"stencil": "bin/stencil.mjs"
+			},
+			"maintainers": [
+				{
+					"name": "ionicjs",
+					"email": "hi@ionic.io"
+				},
+				{
+					"name": "gm-os",
+					"email": "goncalo.martins@outsystems.com"
+				},
+				{
+					"name": "vmfo",
+					"email": "vitor.oliveira@outsystems.com"
+				},
+				{
+					"name": "gnbm",
+					"email": "goncalo.martins.fct@gmail.com"
+				},
+				{
+					"name": "johnny.jenkins",
+					"email": "johnljenkins@hotmail.com"
+				},
+				{
+					"name": "stencil-bot",
+					"email": "sa_git_uicomponents@outsystems.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "vitest run",
+				"build": "tsdown",
+				"typecheck": "tsc --noEmit"
+			},
+			"lastModified": 0,
+			"_id": "@stencil/core@5.0.0-alpha.10",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@stencil/core/-/core-5.0.0-alpha.10.tgz",
+				"shasum": "222a98d4b8f492a580022a49e3f91ae4956d7653",
+				"integrity": "sha512-Yc3/XEcXZWPRm7IaZPNPRDzNz9iLGxJr7BbOzlNUMpDO+dl4Z3U9bKpMAIqBRuGgQMq8sdPuLZCePCjAFlN/WA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEUCIQD4W4aMhJKTv9KHIgvUy6SCShcnbUznlKnVt7PVKhF4AgIgOvgCiRsWD890uijIqGzpfYlNEfUSjVpGdjRf9zE8DUw="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/@stencil%2fcore@5.0.0-alpha.10",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_from": "file:stencil-core-5.0.0-alpha.10.tgz",
+			"_npmVersion": "11.13.0",
+			"_npmUser": {
+				"name": "GitHub Actions",
+				"email": "npm-oidc-no-reply@github.com",
+				"trustedPublisher": {
+					"id": "github",
+					"oidcConfigId": "oidc:572e3806-71f4-4421-9a10-c8b3254fafd8"
+				}
+			},
+			"_hasShrinkwrap": false,
+			"types": "./dist/index.d.mts",
+			"volta": {
+				"extends": "../../package.json"
+			},
+			"exports": {
+				".": {
+					"types": "./dist/index.d.mts",
+					"import": "./dist/index.mjs"
+				},
+				"./runtime": {
+					"types": "./dist/runtime/index.d.ts",
+					"import": "./dist/runtime/index.js"
+				},
+				"./signals": {
+					"types": "./dist/signals/index.d.ts",
+					"import": "./dist/signals/index.js"
+				},
+				"./testing": {
+					"types": "./dist/testing/index.d.mts",
+					"import": "./dist/testing/index.mjs"
+				},
+				"./app-data": {
+					"types": "./dist/app-data/index.d.ts",
+					"import": "./dist/app-data/index.js"
+				},
+				"./compiler": {
+					"types": "./dist/compiler/index.d.mts",
+					"import": "./dist/compiler/index.mjs"
+				},
+				"./mock-doc": {
+					"types": "./dist/mock-doc.d.mts",
+					"import": "./dist/mock-doc.mjs",
+					"default": "./dist/mock-doc.mjs"
+				},
+				"./sys/node": {
+					"types": "./dist/sys/node/index.d.mts",
+					"import": "./dist/sys/node/index.mjs"
+				},
+				"./app-globals": {
+					"types": "./dist/app-globals/index.d.ts",
+					"import": "./dist/app-globals/index.js"
+				},
+				"./jsx-runtime": {
+					"types": "./dist/jsx-runtime.d.mts",
+					"import": "./dist/jsx-runtime.mjs"
+				},
+				"./package.json": "./package.json",
+				"./compiler/utils": {
+					"types": "./dist/compiler/utils/index.d.mts",
+					"import": "./dist/compiler/utils/index.mjs"
+				},
+				"./runtime/client": {
+					"types": "./dist/runtime/client/runtime.d.ts",
+					"import": "./dist/runtime/client/runtime.js"
+				},
+				"./runtime/server": {
+					"types": "./dist/runtime/server/index.d.mts",
+					"import": "./dist/runtime/server/index.mjs"
+				},
+				"./jsx-dev-runtime": {
+					"types": "./dist/jsx-runtime.d.mts",
+					"import": "./dist/jsx-runtime.mjs"
+				},
+				"./runtime/client/lazy": {
+					"types": "./dist/runtime/client/runtime.d.ts",
+					"import": "./dist/runtime/client/lazy.js"
+				},
+				"./runtime/server/runner": {
+					"types": "./dist/runtime/server/runner.d.mts",
+					"import": "./dist/runtime/server/runner.mjs"
+				},
+				"./runtime/client/standalone": {
+					"types": "./dist/runtime/client/runtime.d.ts",
+					"import": "./dist/runtime/client/runtime.js"
+				}
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/core_5.0.0-alpha.10_1782158227015_0.02950916459834385",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"_resolved": "/tmp/4c77fd838bfb378c970dfef7b5ed16b7/stencil-core-5.0.0-alpha.10.tgz",
+			"type": "module",
+			"_integrity": "sha512-Yc3/XEcXZWPRm7IaZPNPRDzNz9iLGxJr7BbOzlNUMpDO+dl4Z3U9bKpMAIqBRuGgQMq8sdPuLZCePCjAFlN/WA==",
+			"_nodeVersion": "24.16.0",
+			"contributors": []
+		},
+		"5.0.0-alpha.12": {
+			"name": "@stencil/core",
+			"description": "A Compiler for Web Components and Progressive Web Apps",
+			"version": "5.0.0-alpha.12",
+			"author": {
+				"name": "StencilJs Contributors"
+			},
+			"homepage": "https://stenciljs.com/",
+			"repository": {
+				"url": "git+https://github.com/stenciljs/core.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/stenciljs/core/issues"
+			},
+			"main": "./dist/index.mjs",
+			"dependencies": {
+				"jiti": "^2.0.0",
+				"chalk": "^5.0.0",
+				"semver": "^7.0.0",
+				"terser": "^5.0.0",
+				"postcss": "^8.0.0",
+				"resolve": "^1.22.0",
+				"css-what": "^7.0.0",
+				"rolldown": "^1.0.0",
+				"picomatch": "^4.0.0",
+				"tinyglobby": "^0.2.0",
+				"typescript": ">4.0.0 <7.0.0",
+				"@stencil/cli": "5.0.0-alpha.12",
+				"browserslist": "^4.0.0",
+				"lightningcss": "^1.0.0",
+				"magic-string": "^0.30.0",
+				"@parcel/watcher": "^2.0.0",
+				"@stencil/mock-doc": "5.0.0-alpha.12",
+				"@rollup/pluginutils": "^5.3.0",
+				"@stencil/dev-server": "5.0.0-alpha.12",
+				"postcss-safe-parser": "^7.0.0",
+				"@preact/signals-core": "^1.0.0",
+				"postcss-selector-parser": "^7.0.0"
+			},
+			"devDependencies": {
+				"tsdown": ">=0.21.0 <1.0.0",
+				"vitest": "^4.1.7",
+				"prettier": "^3.5.0",
+				"@stencil/vitest": "^1.12.1",
+				"@ionic/prettier-config": "^4.0.0",
+				"vitest-environment-stencil": "^1.12.1"
+			},
+			"keywords": [
+				"components",
+				"custom elements",
+				"ionic",
+				"progressive web app",
+				"pwa",
+				"stencil",
+				"web components",
+				"webapp"
+			],
+			"license": "MIT",
+			"bin": {
+				"stencil": "bin/stencil.mjs"
+			},
+			"maintainers": [
+				{
+					"name": "ionicjs",
+					"email": "hi@ionic.io"
+				},
+				{
+					"name": "gm-os",
+					"email": "goncalo.martins@outsystems.com"
+				},
+				{
+					"name": "vmfo",
+					"email": "vitor.oliveira@outsystems.com"
+				},
+				{
+					"name": "gnbm",
+					"email": "goncalo.martins.fct@gmail.com"
+				},
+				{
+					"name": "johnny.jenkins",
+					"email": "johnljenkins@hotmail.com"
+				},
+				{
+					"name": "stencil-bot",
+					"email": "sa_git_uicomponents@outsystems.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "vitest run",
+				"build": "tsdown",
+				"typecheck": "tsc --noEmit"
+			},
+			"lastModified": 0,
+			"_id": "@stencil/core@5.0.0-alpha.12",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@stencil/core/-/core-5.0.0-alpha.12.tgz",
+				"shasum": "1087107bec5181a8607009974cdbdeaf2c27bd99",
+				"integrity": "sha512-uDr2Xy4yPnybfNuI6NjD/RmQukCyqNg4fDdCoUfxB0P6I8OPOzBL/zPSvPA4Lct6Q1QdtxHiAl4flvWwAjGcqQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEYCIQCyFF2E3wWIVSfqNd+s6d0/eMvYnOfC9Ep+Zm1jKhZdnwIhAKN8XnuOqIlfbP8vdREBrGiDlpQSJRvr5Epq5bZMcr1x"
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/@stencil%2fcore@5.0.0-alpha.12",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_from": "file:stencil-core-5.0.0-alpha.12.tgz",
+			"_npmVersion": "11.13.0",
+			"_npmUser": {
+				"name": "GitHub Actions",
+				"email": "npm-oidc-no-reply@github.com",
+				"trustedPublisher": {
+					"id": "github",
+					"oidcConfigId": "oidc:572e3806-71f4-4421-9a10-c8b3254fafd8"
+				}
+			},
+			"_hasShrinkwrap": false,
+			"types": "./dist/index.d.mts",
+			"volta": {
+				"extends": "../../package.json"
+			},
+			"exports": {
+				".": {
+					"types": "./dist/index.d.mts",
+					"import": "./dist/index.mjs"
+				},
+				"./runtime": {
+					"types": "./dist/runtime/index.d.ts",
+					"import": "./dist/runtime/index.js"
+				},
+				"./signals": {
+					"types": "./dist/signals/index.d.ts",
+					"import": "./dist/signals/index.js"
+				},
+				"./testing": {
+					"types": "./dist/testing/index.d.mts",
+					"import": "./dist/testing/index.mjs"
+				},
+				"./app-data": {
+					"types": "./dist/app-data/index.d.ts",
+					"import": "./dist/app-data/index.js"
+				},
+				"./compiler": {
+					"types": "./dist/compiler/index.d.mts",
+					"import": "./dist/compiler/index.mjs"
+				},
+				"./mock-doc": {
+					"types": "./dist/mock-doc.d.mts",
+					"import": "./dist/mock-doc.mjs",
+					"default": "./dist/mock-doc.mjs"
+				},
+				"./sys/node": {
+					"types": "./dist/sys/node/index.d.mts",
+					"import": "./dist/sys/node/index.mjs"
+				},
+				"./app-globals": {
+					"types": "./dist/app-globals/index.d.ts",
+					"import": "./dist/app-globals/index.js"
+				},
+				"./jsx-runtime": {
+					"types": "./dist/jsx-runtime.d.mts",
+					"import": "./dist/jsx-runtime.mjs"
+				},
+				"./package.json": "./package.json",
+				"./compiler/utils": {
+					"types": "./dist/compiler/utils/index.d.mts",
+					"import": "./dist/compiler/utils/index.mjs"
+				},
+				"./runtime/client": {
+					"types": "./dist/runtime/client/runtime.d.ts",
+					"import": "./dist/runtime/client/runtime.js"
+				},
+				"./runtime/server": {
+					"types": "./dist/runtime/server/index.d.mts",
+					"import": "./dist/runtime/server/index.mjs"
+				},
+				"./jsx-dev-runtime": {
+					"types": "./dist/jsx-runtime.d.mts",
+					"import": "./dist/jsx-runtime.mjs"
+				},
+				"./runtime/client/lazy": {
+					"types": "./dist/runtime/client/runtime.d.ts",
+					"import": "./dist/runtime/client/lazy.js"
+				},
+				"./runtime/server/runner": {
+					"types": "./dist/runtime/server/runner.d.mts",
+					"import": "./dist/runtime/server/runner.mjs"
+				},
+				"./runtime/client/standalone": {
+					"types": "./dist/runtime/client/runtime.d.ts",
+					"import": "./dist/runtime/client/runtime.js"
+				}
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/core_5.0.0-alpha.12_1782167349059_0.08321204413520356",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"_resolved": "/tmp/b792a5abd9ef3541e4a603e0eb1afa33/stencil-core-5.0.0-alpha.12.tgz",
+			"type": "module",
+			"_integrity": "sha512-uDr2Xy4yPnybfNuI6NjD/RmQukCyqNg4fDdCoUfxB0P6I8OPOzBL/zPSvPA4Lct6Q1QdtxHiAl4flvWwAjGcqQ==",
+			"_nodeVersion": "24.16.0",
+			"contributors": []
+		},
+		"5.0.0-alpha.11": {
+			"name": "@stencil/core",
+			"description": "A Compiler for Web Components and Progressive Web Apps",
+			"version": "5.0.0-alpha.11",
+			"author": {
+				"name": "StencilJs Contributors"
+			},
+			"homepage": "https://stenciljs.com/",
+			"repository": {
+				"url": "git+https://github.com/stenciljs/core.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/stenciljs/core/issues"
+			},
+			"main": "./dist/index.mjs",
+			"dependencies": {
+				"jiti": "^2.0.0",
+				"chalk": "^5.0.0",
+				"semver": "^7.0.0",
+				"terser": "^5.0.0",
+				"postcss": "^8.0.0",
+				"resolve": "^1.22.0",
+				"css-what": "^7.0.0",
+				"rolldown": "^1.0.0",
+				"picomatch": "^4.0.0",
+				"tinyglobby": "^0.2.0",
+				"typescript": ">4.0.0 <7.0.0",
+				"@stencil/cli": "5.0.0-alpha.11",
+				"browserslist": "^4.0.0",
+				"lightningcss": "^1.0.0",
+				"magic-string": "^0.30.0",
+				"@parcel/watcher": "^2.0.0",
+				"@stencil/mock-doc": "5.0.0-alpha.11",
+				"@rollup/pluginutils": "^5.3.0",
+				"@stencil/dev-server": "5.0.0-alpha.11",
+				"postcss-safe-parser": "^7.0.0",
+				"@preact/signals-core": "^1.0.0",
+				"postcss-selector-parser": "^7.0.0"
+			},
+			"devDependencies": {
+				"tsdown": ">=0.21.0 <1.0.0",
+				"vitest": "^4.1.7",
+				"prettier": "^3.5.0",
+				"@stencil/vitest": "^1.12.1",
+				"@ionic/prettier-config": "^4.0.0",
+				"vitest-environment-stencil": "^1.12.1"
+			},
+			"keywords": [
+				"components",
+				"custom elements",
+				"ionic",
+				"progressive web app",
+				"pwa",
+				"stencil",
+				"web components",
+				"webapp"
+			],
+			"license": "MIT",
+			"bin": {
+				"stencil": "bin/stencil.mjs"
+			},
+			"maintainers": [
+				{
+					"name": "ionicjs",
+					"email": "hi@ionic.io"
+				},
+				{
+					"name": "gm-os",
+					"email": "goncalo.martins@outsystems.com"
+				},
+				{
+					"name": "vmfo",
+					"email": "vitor.oliveira@outsystems.com"
+				},
+				{
+					"name": "gnbm",
+					"email": "goncalo.martins.fct@gmail.com"
+				},
+				{
+					"name": "johnny.jenkins",
+					"email": "johnljenkins@hotmail.com"
+				},
+				{
+					"name": "stencil-bot",
+					"email": "sa_git_uicomponents@outsystems.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "vitest run",
+				"build": "tsdown",
+				"typecheck": "tsc --noEmit"
+			},
+			"lastModified": 0,
+			"_id": "@stencil/core@5.0.0-alpha.11",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@stencil/core/-/core-5.0.0-alpha.11.tgz",
+				"shasum": "5011ca99458a70b2eb189bbd96194b834555d65a",
+				"integrity": "sha512-se2rkZHn71KMV47rR410jZXdY2nFSzstKSpJcOly6DQfePa72pH9ywhrhaXJpxNyv9BM1ztD0C/+i0ip5IqC0A==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEUCIEybcj9EM4sLuhSoG4PTUY7UlEq+uIXJGIFDLZme//IVAiEA4pJLrpbpDPsA4ZS/5ec3MpZ098eLBOpSjh5auPVB8ok="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/@stencil%2fcore@5.0.0-alpha.11",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_from": "file:stencil-core-5.0.0-alpha.11.tgz",
+			"_npmVersion": "11.13.0",
+			"_npmUser": {
+				"name": "GitHub Actions",
+				"email": "npm-oidc-no-reply@github.com",
+				"trustedPublisher": {
+					"id": "github",
+					"oidcConfigId": "oidc:572e3806-71f4-4421-9a10-c8b3254fafd8"
+				}
+			},
+			"_hasShrinkwrap": false,
+			"types": "./dist/index.d.mts",
+			"volta": {
+				"extends": "../../package.json"
+			},
+			"exports": {
+				".": {
+					"types": "./dist/index.d.mts",
+					"import": "./dist/index.mjs"
+				},
+				"./runtime": {
+					"types": "./dist/runtime/index.d.ts",
+					"import": "./dist/runtime/index.js"
+				},
+				"./signals": {
+					"types": "./dist/signals/index.d.ts",
+					"import": "./dist/signals/index.js"
+				},
+				"./testing": {
+					"types": "./dist/testing/index.d.mts",
+					"import": "./dist/testing/index.mjs"
+				},
+				"./app-data": {
+					"types": "./dist/app-data/index.d.ts",
+					"import": "./dist/app-data/index.js"
+				},
+				"./compiler": {
+					"types": "./dist/compiler/index.d.mts",
+					"import": "./dist/compiler/index.mjs"
+				},
+				"./mock-doc": {
+					"types": "./dist/mock-doc.d.mts",
+					"import": "./dist/mock-doc.mjs",
+					"default": "./dist/mock-doc.mjs"
+				},
+				"./sys/node": {
+					"types": "./dist/sys/node/index.d.mts",
+					"import": "./dist/sys/node/index.mjs"
+				},
+				"./app-globals": {
+					"types": "./dist/app-globals/index.d.ts",
+					"import": "./dist/app-globals/index.js"
+				},
+				"./jsx-runtime": {
+					"types": "./dist/jsx-runtime.d.mts",
+					"import": "./dist/jsx-runtime.mjs"
+				},
+				"./package.json": "./package.json",
+				"./compiler/utils": {
+					"types": "./dist/compiler/utils/index.d.mts",
+					"import": "./dist/compiler/utils/index.mjs"
+				},
+				"./runtime/client": {
+					"types": "./dist/runtime/client/runtime.d.ts",
+					"import": "./dist/runtime/client/runtime.js"
+				},
+				"./runtime/server": {
+					"types": "./dist/runtime/server/index.d.mts",
+					"import": "./dist/runtime/server/index.mjs"
+				},
+				"./jsx-dev-runtime": {
+					"types": "./dist/jsx-runtime.d.mts",
+					"import": "./dist/jsx-runtime.mjs"
+				},
+				"./runtime/client/lazy": {
+					"types": "./dist/runtime/client/runtime.d.ts",
+					"import": "./dist/runtime/client/lazy.js"
+				},
+				"./runtime/server/runner": {
+					"types": "./dist/runtime/server/runner.d.mts",
+					"import": "./dist/runtime/server/runner.mjs"
+				},
+				"./runtime/client/standalone": {
+					"types": "./dist/runtime/client/runtime.d.ts",
+					"import": "./dist/runtime/client/runtime.js"
+				}
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/core_5.0.0-alpha.11_1782164061469_0.6209652807193118",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"_resolved": "/tmp/dc8d2ef1df1ab6af1dbaddd9da6d5e61/stencil-core-5.0.0-alpha.11.tgz",
+			"type": "module",
+			"_integrity": "sha512-se2rkZHn71KMV47rR410jZXdY2nFSzstKSpJcOly6DQfePa72pH9ywhrhaXJpxNyv9BM1ztD0C/+i0ip5IqC0A==",
+			"_nodeVersion": "24.16.0",
+			"contributors": []
+		},
+		"5.0.0-alpha.14": {
+			"name": "@stencil/core",
+			"description": "A Compiler for Web Components and Progressive Web Apps",
+			"version": "5.0.0-alpha.14",
+			"author": {
+				"name": "StencilJs Contributors"
+			},
+			"homepage": "https://stenciljs.com/",
+			"repository": {
+				"url": "git+https://github.com/stenciljs/core.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/stenciljs/core/issues"
+			},
+			"main": "./dist/index.mjs",
+			"dependencies": {
+				"jiti": "^2.0.0",
+				"chalk": "^5.0.0",
+				"semver": "^7.0.0",
+				"terser": "^5.0.0",
+				"postcss": "^8.0.0",
+				"resolve": "^1.22.0",
+				"css-what": "^7.0.0",
+				"rolldown": "^1.0.0",
+				"picomatch": "^4.0.0",
+				"tinyglobby": "^0.2.0",
+				"typescript": ">4.0.0 <7.0.0",
+				"@stencil/cli": "5.0.0-alpha.14",
+				"browserslist": "^4.0.0",
+				"lightningcss": "^1.0.0",
+				"magic-string": "^0.30.0",
+				"@parcel/watcher": "^2.0.0",
+				"@stencil/mock-doc": "5.0.0-alpha.14",
+				"@rollup/pluginutils": "^5.3.0",
+				"@stencil/dev-server": "5.0.0-alpha.14",
+				"postcss-safe-parser": "^7.0.0",
+				"@preact/signals-core": "^1.0.0",
+				"postcss-selector-parser": "^7.0.0"
+			},
+			"devDependencies": {
+				"tsdown": ">=0.21.0 <1.0.0",
+				"vitest": "^4.1.7",
+				"prettier": "^3.5.0",
+				"@stencil/vitest": "^1.12.1",
+				"@ionic/prettier-config": "^4.0.0",
+				"vitest-environment-stencil": "^1.12.1"
+			},
+			"keywords": [
+				"components",
+				"custom elements",
+				"ionic",
+				"progressive web app",
+				"pwa",
+				"stencil",
+				"web components",
+				"webapp"
+			],
+			"license": "MIT",
+			"bin": {
+				"stencil": "bin/stencil.mjs"
+			},
+			"maintainers": [
+				{
+					"name": "ionicjs",
+					"email": "hi@ionic.io"
+				},
+				{
+					"name": "gm-os",
+					"email": "goncalo.martins@outsystems.com"
+				},
+				{
+					"name": "vmfo",
+					"email": "vitor.oliveira@outsystems.com"
+				},
+				{
+					"name": "gnbm",
+					"email": "goncalo.martins.fct@gmail.com"
+				},
+				{
+					"name": "johnny.jenkins",
+					"email": "johnljenkins@hotmail.com"
+				},
+				{
+					"name": "stencil-bot",
+					"email": "sa_git_uicomponents@outsystems.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "vitest run",
+				"build": "tsdown",
+				"typecheck": "tsc --noEmit"
+			},
+			"lastModified": 0,
+			"_id": "@stencil/core@5.0.0-alpha.14",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@stencil/core/-/core-5.0.0-alpha.14.tgz",
+				"shasum": "979519da0be4f7e7dfeae1a7216bdd15ccdea818",
+				"integrity": "sha512-9pWidhSdZgFkJs5gL1u4LZr4KJBd7U65cFRZis/B4r4UFmu4UnZ1Z16MWIvI4rIyq82ieT0Kb/U8JO7NjTthqA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEUCICKvlWIIS+JDjovBD3mRTU3DFyRSJhIh/we2y6+4ic3tAiEAqpi/MX4Z6735Ie+FxJV41C4vMxfpjs8sTdf3j6HfHHk="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/@stencil%2fcore@5.0.0-alpha.14",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_from": "file:stencil-core-5.0.0-alpha.14.tgz",
+			"_npmVersion": "11.13.0",
+			"_npmUser": {
+				"name": "GitHub Actions",
+				"email": "npm-oidc-no-reply@github.com",
+				"trustedPublisher": {
+					"id": "github",
+					"oidcConfigId": "oidc:572e3806-71f4-4421-9a10-c8b3254fafd8"
+				}
+			},
+			"_hasShrinkwrap": false,
+			"types": "./dist/index.d.mts",
+			"volta": {
+				"extends": "../../package.json"
+			},
+			"exports": {
+				".": {
+					"types": "./dist/index.d.mts",
+					"import": "./dist/index.mjs"
+				},
+				"./runtime": {
+					"types": "./dist/runtime/index.d.ts",
+					"import": "./dist/runtime/index.js"
+				},
+				"./signals": {
+					"types": "./dist/signals/index.d.ts",
+					"import": "./dist/signals/index.js"
+				},
+				"./testing": {
+					"types": "./dist/testing/index.d.mts",
+					"import": "./dist/testing/index.mjs"
+				},
+				"./app-data": {
+					"types": "./dist/app-data/index.d.ts",
+					"import": "./dist/app-data/index.js"
+				},
+				"./compiler": {
+					"types": "./dist/compiler/index.d.mts",
+					"import": "./dist/compiler/index.mjs"
+				},
+				"./mock-doc": {
+					"types": "./dist/mock-doc.d.mts",
+					"import": "./dist/mock-doc.mjs",
+					"default": "./dist/mock-doc.mjs"
+				},
+				"./sys/node": {
+					"types": "./dist/sys/node/index.d.mts",
+					"import": "./dist/sys/node/index.mjs"
+				},
+				"./app-globals": {
+					"types": "./dist/app-globals/index.d.ts",
+					"import": "./dist/app-globals/index.js"
+				},
+				"./jsx-runtime": {
+					"types": "./dist/jsx-runtime.d.mts",
+					"import": "./dist/jsx-runtime.mjs"
+				},
+				"./package.json": "./package.json",
+				"./compiler/utils": {
+					"types": "./dist/compiler/utils/index.d.mts",
+					"import": "./dist/compiler/utils/index.mjs"
+				},
+				"./runtime/client": {
+					"types": "./dist/runtime/client/runtime.d.ts",
+					"import": "./dist/runtime/client/runtime.js"
+				},
+				"./runtime/server": {
+					"types": "./dist/runtime/server/index.d.mts",
+					"import": "./dist/runtime/server/index.mjs"
+				},
+				"./jsx-dev-runtime": {
+					"types": "./dist/jsx-runtime.d.mts",
+					"import": "./dist/jsx-runtime.mjs"
+				},
+				"./runtime/client/lazy": {
+					"types": "./dist/runtime/client/runtime.d.ts",
+					"import": "./dist/runtime/client/lazy.js"
+				},
+				"./runtime/server/runner": {
+					"types": "./dist/runtime/server/runner.d.mts",
+					"import": "./dist/runtime/server/runner.mjs"
+				},
+				"./runtime/client/standalone": {
+					"types": "./dist/runtime/client/runtime.d.ts",
+					"import": "./dist/runtime/client/runtime.js"
+				}
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/core_5.0.0-alpha.14_1782231774020_0.48295650446635263",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"_resolved": "/tmp/96ac3d2e6f0331f92c73b1824fa4d2d0/stencil-core-5.0.0-alpha.14.tgz",
+			"type": "module",
+			"_integrity": "sha512-9pWidhSdZgFkJs5gL1u4LZr4KJBd7U65cFRZis/B4r4UFmu4UnZ1Z16MWIvI4rIyq82ieT0Kb/U8JO7NjTthqA==",
+			"_nodeVersion": "24.16.0",
+			"contributors": []
+		},
+		"5.0.0-alpha.13": {
+			"name": "@stencil/core",
+			"description": "A Compiler for Web Components and Progressive Web Apps",
+			"version": "5.0.0-alpha.13",
+			"author": {
+				"name": "StencilJs Contributors"
+			},
+			"homepage": "https://stenciljs.com/",
+			"repository": {
+				"url": "git+https://github.com/stenciljs/core.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/stenciljs/core/issues"
+			},
+			"main": "./dist/index.mjs",
+			"dependencies": {
+				"jiti": "^2.0.0",
+				"chalk": "^5.0.0",
+				"semver": "^7.0.0",
+				"terser": "^5.0.0",
+				"postcss": "^8.0.0",
+				"resolve": "^1.22.0",
+				"css-what": "^7.0.0",
+				"rolldown": "^1.0.0",
+				"picomatch": "^4.0.0",
+				"tinyglobby": "^0.2.0",
+				"typescript": ">4.0.0 <7.0.0",
+				"@stencil/cli": "5.0.0-alpha.13",
+				"browserslist": "^4.0.0",
+				"lightningcss": "^1.0.0",
+				"magic-string": "^0.30.0",
+				"@parcel/watcher": "^2.0.0",
+				"@stencil/mock-doc": "5.0.0-alpha.13",
+				"@rollup/pluginutils": "^5.3.0",
+				"@stencil/dev-server": "5.0.0-alpha.13",
+				"postcss-safe-parser": "^7.0.0",
+				"@preact/signals-core": "^1.0.0",
+				"postcss-selector-parser": "^7.0.0"
+			},
+			"devDependencies": {
+				"tsdown": ">=0.21.0 <1.0.0",
+				"vitest": "^4.1.7",
+				"prettier": "^3.5.0",
+				"@stencil/vitest": "^1.12.1",
+				"@ionic/prettier-config": "^4.0.0",
+				"vitest-environment-stencil": "^1.12.1"
+			},
+			"keywords": [
+				"components",
+				"custom elements",
+				"ionic",
+				"progressive web app",
+				"pwa",
+				"stencil",
+				"web components",
+				"webapp"
+			],
+			"license": "MIT",
+			"bin": {
+				"stencil": "bin/stencil.mjs"
+			},
+			"maintainers": [
+				{
+					"name": "ionicjs",
+					"email": "hi@ionic.io"
+				},
+				{
+					"name": "gm-os",
+					"email": "goncalo.martins@outsystems.com"
+				},
+				{
+					"name": "vmfo",
+					"email": "vitor.oliveira@outsystems.com"
+				},
+				{
+					"name": "gnbm",
+					"email": "goncalo.martins.fct@gmail.com"
+				},
+				{
+					"name": "johnny.jenkins",
+					"email": "johnljenkins@hotmail.com"
+				},
+				{
+					"name": "stencil-bot",
+					"email": "sa_git_uicomponents@outsystems.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "vitest run",
+				"build": "tsdown",
+				"typecheck": "tsc --noEmit"
+			},
+			"lastModified": 0,
+			"_id": "@stencil/core@5.0.0-alpha.13",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@stencil/core/-/core-5.0.0-alpha.13.tgz",
+				"shasum": "1a94507ebead5cc7f9e502d64dfc18092b33d064",
+				"integrity": "sha512-dE9A0jZBHLhv323BdFYW8chMLN7MIGkwQTARZnGSdpErUwizGlp+s2cdPwCd2bejnkLW5muNLyWIwYacNqo9bQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEQCIFr8ObxyOFWq5xfZ1OLyGCGuXxwTLn1KsxCPWHUylOUTAiAksd2w5Z9yI5YgE8M7K5WMxWt+WiZTUlLjL3dlZhUpIg=="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/@stencil%2fcore@5.0.0-alpha.13",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_from": "file:stencil-core-5.0.0-alpha.13.tgz",
+			"_npmVersion": "11.13.0",
+			"_npmUser": {
+				"name": "GitHub Actions",
+				"email": "npm-oidc-no-reply@github.com",
+				"trustedPublisher": {
+					"id": "github",
+					"oidcConfigId": "oidc:572e3806-71f4-4421-9a10-c8b3254fafd8"
+				}
+			},
+			"_hasShrinkwrap": false,
+			"types": "./dist/index.d.mts",
+			"volta": {
+				"extends": "../../package.json"
+			},
+			"exports": {
+				".": {
+					"types": "./dist/index.d.mts",
+					"import": "./dist/index.mjs"
+				},
+				"./runtime": {
+					"types": "./dist/runtime/index.d.ts",
+					"import": "./dist/runtime/index.js"
+				},
+				"./signals": {
+					"types": "./dist/signals/index.d.ts",
+					"import": "./dist/signals/index.js"
+				},
+				"./testing": {
+					"types": "./dist/testing/index.d.mts",
+					"import": "./dist/testing/index.mjs"
+				},
+				"./app-data": {
+					"types": "./dist/app-data/index.d.ts",
+					"import": "./dist/app-data/index.js"
+				},
+				"./compiler": {
+					"types": "./dist/compiler/index.d.mts",
+					"import": "./dist/compiler/index.mjs"
+				},
+				"./mock-doc": {
+					"types": "./dist/mock-doc.d.mts",
+					"import": "./dist/mock-doc.mjs",
+					"default": "./dist/mock-doc.mjs"
+				},
+				"./sys/node": {
+					"types": "./dist/sys/node/index.d.mts",
+					"import": "./dist/sys/node/index.mjs"
+				},
+				"./app-globals": {
+					"types": "./dist/app-globals/index.d.ts",
+					"import": "./dist/app-globals/index.js"
+				},
+				"./jsx-runtime": {
+					"types": "./dist/jsx-runtime.d.mts",
+					"import": "./dist/jsx-runtime.mjs"
+				},
+				"./package.json": "./package.json",
+				"./compiler/utils": {
+					"types": "./dist/compiler/utils/index.d.mts",
+					"import": "./dist/compiler/utils/index.mjs"
+				},
+				"./runtime/client": {
+					"types": "./dist/runtime/client/runtime.d.ts",
+					"import": "./dist/runtime/client/runtime.js"
+				},
+				"./runtime/server": {
+					"types": "./dist/runtime/server/index.d.mts",
+					"import": "./dist/runtime/server/index.mjs"
+				},
+				"./jsx-dev-runtime": {
+					"types": "./dist/jsx-runtime.d.mts",
+					"import": "./dist/jsx-runtime.mjs"
+				},
+				"./runtime/client/lazy": {
+					"types": "./dist/runtime/client/runtime.d.ts",
+					"import": "./dist/runtime/client/lazy.js"
+				},
+				"./runtime/server/runner": {
+					"types": "./dist/runtime/server/runner.d.mts",
+					"import": "./dist/runtime/server/runner.mjs"
+				},
+				"./runtime/client/standalone": {
+					"types": "./dist/runtime/client/runtime.d.ts",
+					"import": "./dist/runtime/client/runtime.js"
+				}
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/core_5.0.0-alpha.13_1782229527613_0.48026478467607703",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"_resolved": "/tmp/9d38581e1b0b51ed444086671b79f60a/stencil-core-5.0.0-alpha.13.tgz",
+			"type": "module",
+			"_integrity": "sha512-dE9A0jZBHLhv323BdFYW8chMLN7MIGkwQTARZnGSdpErUwizGlp+s2cdPwCd2bejnkLW5muNLyWIwYacNqo9bQ==",
+			"_nodeVersion": "24.16.0",
+			"contributors": []
+		},
+		"5.0.0-alpha.16": {
+			"name": "@stencil/core",
+			"description": "A Compiler for Web Components and Progressive Web Apps",
+			"version": "5.0.0-alpha.16",
+			"author": {
+				"name": "StencilJs Contributors"
+			},
+			"homepage": "https://stenciljs.com/",
+			"repository": {
+				"url": "git+https://github.com/stenciljs/core.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/stenciljs/core/issues"
+			},
+			"main": "./dist/index.mjs",
+			"dependencies": {
+				"jiti": "^2.0.0",
+				"chalk": "^5.0.0",
+				"semver": "^7.0.0",
+				"terser": "^5.0.0",
+				"postcss": "^8.0.0",
+				"resolve": "^1.22.0",
+				"css-what": "^7.0.0",
+				"rolldown": "^1.0.0",
+				"picomatch": "^4.0.0",
+				"tinyglobby": "^0.2.0",
+				"typescript": ">4.0.0 <7.0.0",
+				"@stencil/cli": "5.0.0-alpha.16",
+				"browserslist": "^4.0.0",
+				"lightningcss": "^1.0.0",
+				"magic-string": "^0.30.0",
+				"@parcel/watcher": "^2.0.0",
+				"@stencil/mock-doc": "5.0.0-alpha.16",
+				"@rollup/pluginutils": "^5.3.0",
+				"@stencil/dev-server": "5.0.0-alpha.16",
+				"postcss-safe-parser": "^7.0.0",
+				"@preact/signals-core": "^1.0.0",
+				"postcss-selector-parser": "^7.0.0"
+			},
+			"devDependencies": {
+				"tsdown": ">=0.21.0 <1.0.0",
+				"vitest": "^4.1.7",
+				"prettier": "^3.5.0",
+				"@stencil/vitest": "^1.12.1",
+				"@ionic/prettier-config": "^4.0.0",
+				"vitest-environment-stencil": "^1.12.1"
+			},
+			"keywords": [
+				"components",
+				"custom elements",
+				"ionic",
+				"progressive web app",
+				"pwa",
+				"stencil",
+				"web components",
+				"webapp"
+			],
+			"license": "MIT",
+			"bin": {
+				"stencil": "bin/stencil.mjs"
+			},
+			"maintainers": [
+				{
+					"name": "ionicjs",
+					"email": "hi@ionic.io"
+				},
+				{
+					"name": "gm-os",
+					"email": "goncalo.martins@outsystems.com"
+				},
+				{
+					"name": "vmfo",
+					"email": "vitor.oliveira@outsystems.com"
+				},
+				{
+					"name": "gnbm",
+					"email": "goncalo.martins.fct@gmail.com"
+				},
+				{
+					"name": "johnny.jenkins",
+					"email": "johnljenkins@hotmail.com"
+				},
+				{
+					"name": "stencil-bot",
+					"email": "sa_git_uicomponents@outsystems.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "vitest run",
+				"build": "tsdown",
+				"typecheck": "tsc --noEmit"
+			},
+			"lastModified": 0,
+			"_id": "@stencil/core@5.0.0-alpha.16",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@stencil/core/-/core-5.0.0-alpha.16.tgz",
+				"shasum": "513c64c41beee93b6188e36440bce2476df61dec",
+				"integrity": "sha512-mRJZbQ1PR1xInxahuEvqvafS7CV5lKmKZ3TsKSdDrX8Lv0sZbykh63oPj0WoUNpWojqA56EFbYAOMT98nqGOhw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEYCIQDzioiOlWfO+xC6Bh0B7odEOi2s97BK+6ZHZ6q+a2ZdewIhAOWkxHrzlN/5juDW8XxxljN+bHHQkGr3Befy3+UQB5Ys"
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/@stencil%2fcore@5.0.0-alpha.16",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_from": "file:stencil-core-5.0.0-alpha.16.tgz",
+			"_npmVersion": "11.13.0",
+			"_npmUser": {
+				"name": "GitHub Actions",
+				"email": "npm-oidc-no-reply@github.com",
+				"trustedPublisher": {
+					"id": "github",
+					"oidcConfigId": "oidc:572e3806-71f4-4421-9a10-c8b3254fafd8"
+				}
+			},
+			"_hasShrinkwrap": false,
+			"types": "./dist/index.d.mts",
+			"volta": {
+				"extends": "../../package.json"
+			},
+			"exports": {
+				".": {
+					"types": "./dist/index.d.mts",
+					"import": "./dist/index.mjs"
+				},
+				"./runtime": {
+					"types": "./dist/runtime/index.d.ts",
+					"import": "./dist/runtime/index.js"
+				},
+				"./signals": {
+					"types": "./dist/signals/index.d.ts",
+					"import": "./dist/signals/index.js"
+				},
+				"./testing": {
+					"types": "./dist/testing/index.d.mts",
+					"import": "./dist/testing/index.mjs"
+				},
+				"./app-data": {
+					"types": "./dist/app-data/index.d.ts",
+					"import": "./dist/app-data/index.js"
+				},
+				"./compiler": {
+					"types": "./dist/compiler/index.d.mts",
+					"import": "./dist/compiler/index.mjs"
+				},
+				"./mock-doc": {
+					"types": "./dist/mock-doc.d.mts",
+					"import": "./dist/mock-doc.mjs",
+					"default": "./dist/mock-doc.mjs"
+				},
+				"./sys/node": {
+					"types": "./dist/sys/node/index.d.mts",
+					"import": "./dist/sys/node/index.mjs"
+				},
+				"./app-globals": {
+					"types": "./dist/app-globals/index.d.ts",
+					"import": "./dist/app-globals/index.js"
+				},
+				"./jsx-runtime": {
+					"types": "./dist/jsx-runtime.d.mts",
+					"import": "./dist/jsx-runtime.mjs"
+				},
+				"./package.json": "./package.json",
+				"./compiler/utils": {
+					"types": "./dist/compiler/utils/index.d.mts",
+					"import": "./dist/compiler/utils/index.mjs"
+				},
+				"./runtime/client": {
+					"types": "./dist/runtime/client/runtime.d.ts",
+					"import": "./dist/runtime/client/runtime.js"
+				},
+				"./runtime/server": {
+					"types": "./dist/runtime/server/index.d.mts",
+					"import": "./dist/runtime/server/index.mjs"
+				},
+				"./jsx-dev-runtime": {
+					"types": "./dist/jsx-runtime.d.mts",
+					"import": "./dist/jsx-runtime.mjs"
+				},
+				"./runtime/client/lazy": {
+					"types": "./dist/runtime/client/runtime.d.ts",
+					"import": "./dist/runtime/client/lazy.js"
+				},
+				"./runtime/server/runner": {
+					"types": "./dist/runtime/server/runner.d.mts",
+					"import": "./dist/runtime/server/runner.mjs"
+				},
+				"./runtime/client/standalone": {
+					"types": "./dist/runtime/client/runtime.d.ts",
+					"import": "./dist/runtime/client/runtime.js"
+				}
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/core_5.0.0-alpha.16_1782306316706_0.7528115983243528",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"_resolved": "/tmp/0eddca4b94eaffd3eed6a7529fbc0ff2/stencil-core-5.0.0-alpha.16.tgz",
+			"type": "module",
+			"_integrity": "sha512-mRJZbQ1PR1xInxahuEvqvafS7CV5lKmKZ3TsKSdDrX8Lv0sZbykh63oPj0WoUNpWojqA56EFbYAOMT98nqGOhw==",
+			"_nodeVersion": "24.16.0",
+			"contributors": []
+		},
+		"5.0.0-alpha.15": {
+			"name": "@stencil/core",
+			"description": "A Compiler for Web Components and Progressive Web Apps",
+			"version": "5.0.0-alpha.15",
+			"author": {
+				"name": "StencilJs Contributors"
+			},
+			"homepage": "https://stenciljs.com/",
+			"repository": {
+				"url": "git+https://github.com/stenciljs/core.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/stenciljs/core/issues"
+			},
+			"main": "./dist/index.mjs",
+			"dependencies": {
+				"jiti": "^2.0.0",
+				"chalk": "^5.0.0",
+				"semver": "^7.0.0",
+				"terser": "^5.0.0",
+				"postcss": "^8.0.0",
+				"resolve": "^1.22.0",
+				"css-what": "^7.0.0",
+				"rolldown": "^1.0.0",
+				"picomatch": "^4.0.0",
+				"tinyglobby": "^0.2.0",
+				"typescript": ">4.0.0 <7.0.0",
+				"@stencil/cli": "5.0.0-alpha.15",
+				"browserslist": "^4.0.0",
+				"lightningcss": "^1.0.0",
+				"magic-string": "^0.30.0",
+				"@parcel/watcher": "^2.0.0",
+				"@stencil/mock-doc": "5.0.0-alpha.15",
+				"@rollup/pluginutils": "^5.3.0",
+				"@stencil/dev-server": "5.0.0-alpha.15",
+				"postcss-safe-parser": "^7.0.0",
+				"@preact/signals-core": "^1.0.0",
+				"postcss-selector-parser": "^7.0.0"
+			},
+			"devDependencies": {
+				"tsdown": ">=0.21.0 <1.0.0",
+				"vitest": "^4.1.7",
+				"prettier": "^3.5.0",
+				"@stencil/vitest": "^1.12.1",
+				"@ionic/prettier-config": "^4.0.0",
+				"vitest-environment-stencil": "^1.12.1"
+			},
+			"keywords": [
+				"components",
+				"custom elements",
+				"ionic",
+				"progressive web app",
+				"pwa",
+				"stencil",
+				"web components",
+				"webapp"
+			],
+			"license": "MIT",
+			"bin": {
+				"stencil": "bin/stencil.mjs"
+			},
+			"maintainers": [
+				{
+					"name": "ionicjs",
+					"email": "hi@ionic.io"
+				},
+				{
+					"name": "gm-os",
+					"email": "goncalo.martins@outsystems.com"
+				},
+				{
+					"name": "vmfo",
+					"email": "vitor.oliveira@outsystems.com"
+				},
+				{
+					"name": "gnbm",
+					"email": "goncalo.martins.fct@gmail.com"
+				},
+				{
+					"name": "johnny.jenkins",
+					"email": "johnljenkins@hotmail.com"
+				},
+				{
+					"name": "stencil-bot",
+					"email": "sa_git_uicomponents@outsystems.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "vitest run",
+				"build": "tsdown",
+				"typecheck": "tsc --noEmit"
+			},
+			"lastModified": 0,
+			"_id": "@stencil/core@5.0.0-alpha.15",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@stencil/core/-/core-5.0.0-alpha.15.tgz",
+				"shasum": "fb4285c4d205ecb3500b65ac548e8c04fb44c7f1",
+				"integrity": "sha512-bIB/L9CSqptLSMkpIuSy65nSFsFE7MJZFNTZ8p2ly0tM/RVFNU8iBbKXR8BWcNGiubpw00faGx8SpO7rLNA+aw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEYCIQDIkXu2gUnkgO2ofTlu2zxJsUJ/FUM/sXAptJP9dqHn8QIhAJ5SXfqeRiifpBqpRcfzOCL6LQZ41+LdQa70qTaOcCqO"
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/@stencil%2fcore@5.0.0-alpha.15",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_from": "file:stencil-core-5.0.0-alpha.15.tgz",
+			"_npmVersion": "11.13.0",
+			"_npmUser": {
+				"name": "GitHub Actions",
+				"email": "npm-oidc-no-reply@github.com",
+				"trustedPublisher": {
+					"id": "github",
+					"oidcConfigId": "oidc:572e3806-71f4-4421-9a10-c8b3254fafd8"
+				}
+			},
+			"_hasShrinkwrap": false,
+			"types": "./dist/index.d.mts",
+			"volta": {
+				"extends": "../../package.json"
+			},
+			"exports": {
+				".": {
+					"types": "./dist/index.d.mts",
+					"import": "./dist/index.mjs"
+				},
+				"./runtime": {
+					"types": "./dist/runtime/index.d.ts",
+					"import": "./dist/runtime/index.js"
+				},
+				"./signals": {
+					"types": "./dist/signals/index.d.ts",
+					"import": "./dist/signals/index.js"
+				},
+				"./testing": {
+					"types": "./dist/testing/index.d.mts",
+					"import": "./dist/testing/index.mjs"
+				},
+				"./app-data": {
+					"types": "./dist/app-data/index.d.ts",
+					"import": "./dist/app-data/index.js"
+				},
+				"./compiler": {
+					"types": "./dist/compiler/index.d.mts",
+					"import": "./dist/compiler/index.mjs"
+				},
+				"./mock-doc": {
+					"types": "./dist/mock-doc.d.mts",
+					"import": "./dist/mock-doc.mjs",
+					"default": "./dist/mock-doc.mjs"
+				},
+				"./sys/node": {
+					"types": "./dist/sys/node/index.d.mts",
+					"import": "./dist/sys/node/index.mjs"
+				},
+				"./app-globals": {
+					"types": "./dist/app-globals/index.d.ts",
+					"import": "./dist/app-globals/index.js"
+				},
+				"./jsx-runtime": {
+					"types": "./dist/jsx-runtime.d.mts",
+					"import": "./dist/jsx-runtime.mjs"
+				},
+				"./package.json": "./package.json",
+				"./compiler/utils": {
+					"types": "./dist/compiler/utils/index.d.mts",
+					"import": "./dist/compiler/utils/index.mjs"
+				},
+				"./runtime/client": {
+					"types": "./dist/runtime/client/runtime.d.ts",
+					"import": "./dist/runtime/client/runtime.js"
+				},
+				"./runtime/server": {
+					"types": "./dist/runtime/server/index.d.mts",
+					"import": "./dist/runtime/server/index.mjs"
+				},
+				"./jsx-dev-runtime": {
+					"types": "./dist/jsx-runtime.d.mts",
+					"import": "./dist/jsx-runtime.mjs"
+				},
+				"./runtime/client/lazy": {
+					"types": "./dist/runtime/client/runtime.d.ts",
+					"import": "./dist/runtime/client/lazy.js"
+				},
+				"./runtime/server/runner": {
+					"types": "./dist/runtime/server/runner.d.mts",
+					"import": "./dist/runtime/server/runner.mjs"
+				},
+				"./runtime/client/standalone": {
+					"types": "./dist/runtime/client/runtime.d.ts",
+					"import": "./dist/runtime/client/runtime.js"
+				}
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/core_5.0.0-alpha.15_1782245486810_0.50809549228482",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"_resolved": "/tmp/88cc41be3141d2141c626329409c4af4/stencil-core-5.0.0-alpha.15.tgz",
+			"type": "module",
+			"_integrity": "sha512-bIB/L9CSqptLSMkpIuSy65nSFsFE7MJZFNTZ8p2ly0tM/RVFNU8iBbKXR8BWcNGiubpw00faGx8SpO7rLNA+aw==",
+			"_nodeVersion": "24.16.0",
+			"contributors": []
+		},
+		"4.43.5-dev.1781245971.06258c8": {
+			"name": "@stencil/core",
+			"description": "A Compiler for Web Components and Progressive Web Apps",
+			"version": "4.43.5-dev.1781245971.06258c8",
+			"author": {
+				"name": "Ionic Team"
+			},
+			"homepage": "https://stenciljs.com/",
+			"repository": {
+				"url": "git+https://github.com/stenciljs/core.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/stenciljs/core/issues"
+			},
+			"engines": {
+				"npm": ">=7.10.0",
+				"node": ">=16.0.0"
+			},
+			"main": "./internal/stencil-core/index.cjs",
+			"optionalDependencies": {
+				"@rollup/rollup-darwin-x64": "4.44.0",
+				"@rollup/rollup-darwin-arm64": "4.44.0",
+				"@rollup/rollup-linux-x64-gnu": "4.44.0",
+				"@rollup/rollup-linux-x64-musl": "4.44.0",
+				"@rollup/rollup-win32-x64-msvc": "4.44.0",
+				"@rollup/rollup-linux-arm64-gnu": "4.44.0",
+				"@rollup/rollup-linux-arm64-musl": "4.44.0",
+				"@rollup/rollup-win32-arm64-msvc": "4.44.0"
+			},
+			"devDependencies": {
+				"ws": "8.17.1",
+				"tsx": "^4.19.2",
+				"exit": "^0.1.2",
+				"glob": "10.5.0",
+				"jest": "^27.4.5",
+				"open": "^9.0.0",
+				"execa": "9.3.0",
+				"listr": "^0.14.3",
+				"cspell": "^8.0.0",
+				"eslint": "^8.23.1",
+				"jquery": "https://github.com/jquery/jquery/tarball/c98597eaf5e144ee5e549cb41984687cd1033068",
+				"parse5": "7.2.1",
+				"rimraf": "^6.0.1",
+				"rollup": "4.44.0",
+				"semver": "^7.3.7",
+				"terser": "5.37.0",
+				"esbuild": "^0.25.0",
+				"mime-db": "^1.46.0",
+				"postcss": "^8.2.8",
+				"prompts": "2.4.2",
+				"webpack": "^5.75.0",
+				"css-what": "^7.0.0",
+				"fs-extra": "^11.0.0",
+				"jest-cli": "^27.4.5",
+				"prettier": "3.3.1",
+				"@types/ws": "^8.5.4",
+				"minimatch": "9.0.9",
+				"puppeteer": "^24.1.0",
+				"node-fetch": "3.3.2",
+				"pixelmatch": "5.3.0",
+				"typescript": "~5.8.3",
+				"@types/exit": "^0.1.31",
+				"@types/jest": "^27.0.3",
+				"@types/node": "^24.6.2",
+				"ansi-colors": "4.1.3",
+				"graceful-fs": "~4.2.6",
+				"@types/listr": "^0.14.4",
+				"@types/pngjs": "^6.0.1",
+				"autoprefixer": "10.4.19",
+				"magic-string": "^0.30.0",
+				"@types/eslint": "^8.4.6",
+				"@types/semver": "^7.3.12",
+				"@types/prompts": "^2.0.9",
+				"open-in-editor": "2.2.0",
+				"@types/fs-extra": "^11.0.0",
+				"merge-source-map": "^1.1.0",
+				"@types/pixelmatch": "^5.2.4",
+				"@yarnpkg/lockfile": "^1.1.0",
+				"@types/graceful-fs": "^4.1.5",
+				"eslint-plugin-jest": "^28.0.0",
+				"eslint-plugin-wdio": "^8.24.12",
+				"@rollup/plugin-json": "6.1.0",
+				"@rollup/pluginutils": "5.1.4",
+				"eslint-plugin-jsdoc": "^50.0.0",
+				"postcss-safe-parser": "^7.0.1",
+				"dts-bundle-generator": "~9.5.0",
+				"jest-environment-node": "^27.4.4",
+				"@ionic/prettier-config": "^4.0.0",
+				"@jridgewell/source-map": "^0.3.6",
+				"@rollup/plugin-replace": "6.0.2",
+				"esbuild-plugin-replace": "^1.4.0",
+				"eslint-config-prettier": "^9.0.0",
+				"@rollup/plugin-commonjs": "28.0.2",
+				"postcss-selector-parser": "^7.1.0",
+				"@types/yarnpkg__lockfile": "^1.1.5",
+				"@typescript-eslint/parser": "^7.0.0",
+				"conventional-changelog-cli": "^5.0.0",
+				"@rollup/plugin-node-resolve": "16.0.0",
+				"@typescript-eslint/eslint-plugin": "^7.0.0",
+				"eslint-plugin-simple-import-sort": "^12.0.0"
+			},
+			"keywords": [
+				"web components",
+				"components",
+				"stencil",
+				"ionic",
+				"webapp",
+				"custom elements",
+				"pwa",
+				"progressive web app"
+			],
+			"license": "MIT",
+			"bin": {
+				"stencil": "bin/stencil"
+			},
+			"maintainers": [
+				{
+					"name": "ionicjs",
+					"email": "hi@ionic.io"
+				},
+				{
+					"name": "gm-os",
+					"email": "goncalo.martins@outsystems.com"
+				},
+				{
+					"name": "vmfo",
+					"email": "vitor.oliveira@outsystems.com"
+				},
+				{
+					"name": "gnbm",
+					"email": "goncalo.martins.fct@gmail.com"
+				},
+				{
+					"name": "johnny.jenkins",
+					"email": "johnljenkins@hotmail.com"
+				},
+				{
+					"name": "stencil-bot",
+					"email": "sa_git_uicomponents@outsystems.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"ts": "tsc --noEmit --project scripts/tsconfig.json && tsx",
+				"lint": "eslint bin/* scripts/*.ts scripts/**/*.ts src/*.ts src/**/*.ts src/**/*.tsx test/wdio/**/*.tsx",
+				"test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --coverage",
+				"build": "npm run clean && npm run tsc.prod && npm run ts scripts/index.ts -- --prod --ci",
+				"clean": "rimraf --max-retries=2 build/ cli/ compiler/ dev-server/ internal/ mock-doc/ sys/node/ sys/ testing/ && npm run clean:scripts && npm run clean.screenshots",
+				"prettier": "npm run prettier.base -- --write",
+				"tsc.prod": "tsc",
+				"test.dist": "npm run ts scripts/index.ts -- --validate-build",
+				"test.jest": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js",
+				"test.prod": "npm run test.dist && npm run test.end-to-end && npm run test.jest && npm run test.wdio && npm run test.testing && npm run test.analysis",
+				"test.wdio": "cd test/wdio && npm ci && npm run test",
+				"release.ci": "NODE_OPTIONS=--max-old-space-size=4096 npm run ts scripts/index.ts -- --release --ci-publish",
+				"spellcheck": "npm run spellcheck.code && npm run spellcheck.markdown",
+				"test.watch": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --watch",
+				"build.watch": "npm run build -- --watch",
+				"install.jest": "npx tsx ./src/testing/jest/install-dependencies.mts",
+				"test.testing": "node scripts/test/validate-testing.js",
+				"clean:scripts": "rimraf scripts/build",
+				"prettier.base": "prettier --cache \"./({bin,scripts,src,test}/**/*.{ts,tsx,js,jsx})|bin/stencil|.github/(**/)?*.(yml|yaml)|*.js\"",
+				"test.analysis": "cd test && npm ci && npm run analysis.build-and-analyze",
+				"test.bundlers": "cd test && npm run bundlers",
+				"test.copytask": "cd test/copy-task && npm ci && npm run test",
+				"test.watch-all": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --watchAll --coverage",
+				"spellcheck.code": "cspell --config cspell-code.json --no-progress \"src/**/*.ts\" \"src/**/*.tsx\" \"scripts/**/*.ts\"",
+				"test.docs-build": "cd test && npm run build.docs-json && npm run build.docs-readme",
+				"test.end-to-end": "cd test/end-to-end && npm ci && npm test && npm run test.dist",
+				"test.type-tests": "cd ./test/wdio && npm install && npm run build.test-sibling && npm run build.main && cd ../../ && tsc -p test/type-tests/tsconfig.json",
+				"prettier.dry-run": "npm run prettier.base -- --list-different",
+				"test.bundle-size": "cd test/bundle-size && npm test",
+				"clean.screenshots": "rimraf test/end-to-end/screenshot/builds test/end-to-end/screenshot/images",
+				"release.ci.prepare": "npm run ts scripts/index.ts -- --release --ci-prepare",
+				"test.wdio.testOnly": "cd test/wdio && npm ci && npm run wdio",
+				"spellcheck.markdown": "cspell --config cspell-markdown.json --no-progress \"*.md\" \"**/*.md\"",
+				"build.updateSelectorEngine": "npm run ts scripts/updateSelectorEngine.ts"
+			},
+			"lastModified": 0,
+			"_id": "@stencil/core@4.43.5-dev.1781245971.06258c8",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@stencil/core/-/core-4.43.5-dev.1781245971.06258c8.tgz",
+				"shasum": "bff65b29b8e6b0cc7da869ad83f64e6c5be9599d",
+				"integrity": "sha512-fuoQ1ZF60ki5yLdYC3eoGS8KuR0pmYpjMbh4jd2WNcfDOy/kg5WbscXZ0j+RxluTvR9AGBMqDJB/Z/c3tPLLdg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEUCIQDQrB8EdGM5rqpwpjhKEt2fyQ9TSWICtlv3CK+jxKMv4AIgCMxd/4FdXlgWLSeKC9tjZ4ga2xMw+ED8OINtRYehYmw="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/@stencil%2fcore@4.43.5-dev.1781245971.06258c8",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "11.17.0",
+			"_npmUser": {
+				"name": "GitHub Actions",
+				"email": "npm-oidc-no-reply@github.com",
+				"trustedPublisher": {
+					"id": "github",
+					"oidcConfigId": "oidc:572e3806-71f4-4421-9a10-c8b3254fafd8"
+				}
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "06258c870fb58bfa59eec1473a9a7048249341ed",
+			"types": "./internal/stencil-core/index.d.ts",
+			"volta": {
+				"npm": "10.8.1",
+				"node": "22.2.0"
+			},
+			"exports": {
+				".": {
+					"types": "./internal/stencil-core/index.d.ts",
+					"import": "./internal/stencil-core/index.js",
+					"require": "./internal/stencil-core/index.cjs"
+				},
+				"./cli": {
+					"import": "./cli/index.js",
+					"require": "./cli/index.cjs"
+				},
+				"./testing": {
+					"types": "./testing/index.d.ts",
+					"import": "./testing/index.js",
+					"require": "./testing/index.js"
+				},
+				"./compiler": {
+					"types": "./compiler/stencil.d.ts",
+					"import": "./compiler/stencil.js",
+					"require": "./compiler/stencil.js"
+				},
+				"./internal": {
+					"types": "./internal/index.d.ts",
+					"import": "./internal/index.js"
+				},
+				"./mock-doc": {
+					"types": "./mock-doc/index.d.ts",
+					"import": "./mock-doc/index.js",
+					"require": "./mock-doc/index.cjs"
+				},
+				"./sys/node": {
+					"types": "./sys/node/index.d.ts",
+					"import": "./sys/node/index.js",
+					"require": "./sys/node/index.js"
+				},
+				"./testing/*": {
+					"import": "./testing/*",
+					"require": "./testing/*"
+				},
+				"./compiler/*": {
+					"types": "./compiler/*",
+					"import": "./compiler/*",
+					"require": "./compiler/*"
+				},
+				"./screenshot": {
+					"types": "./screenshot/index.d.ts",
+					"require": "./screenshot/index.js"
+				},
+				"./sys/node/*": {
+					"import": "./sys/node/*",
+					"require": "./sys/node/*"
+				},
+				"./jsx-runtime": {
+					"types": "./internal/stencil-core/jsx-runtime.d.ts",
+					"import": "./internal/stencil-core/jsx-runtime.js",
+					"require": "./internal/stencil-core/jsx-runtime.cjs"
+				},
+				"./internal/client": {
+					"import": "./internal/client/index.js",
+					"require": "./internal/client/index.js"
+				},
+				"./jsx-dev-runtime": {
+					"types": "./internal/stencil-core/jsx-dev-runtime.d.ts",
+					"import": "./internal/stencil-core/jsx-dev-runtime.js",
+					"require": "./internal/stencil-core/jsx-dev-runtime.cjs"
+				},
+				"./internal/testing": {
+					"import": "./internal/testing/index.js",
+					"require": "./internal/testing/index.js"
+				},
+				"./internal/app-data": {
+					"types": "./internal/app-data/index.d.ts",
+					"import": "./internal/app-data/index.js",
+					"require": "./internal/app-data/index.cjs"
+				},
+				"./internal/testing/*": {
+					"import": "./internal/testing/*"
+				},
+				"./testing/jest-preset": {
+					"require": "./testing/jest-preset.js"
+				},
+				"./internal/app-globals": {
+					"import": "./internal/app-globals/index.js",
+					"require": "./internal/app-globals/index.js"
+				},
+				"./internal/testing/jsx-runtime": {
+					"types": "./internal/testing/jsx-runtime.d.ts",
+					"import": "./internal/testing/jsx-runtime.js",
+					"require": "./internal/testing/jsx-runtime.js"
+				},
+				"./internal/testing/jsx-dev-runtime": {
+					"types": "./internal/testing/jsx-dev-runtime.d.ts",
+					"import": "./internal/testing/jsx-dev-runtime.js",
+					"require": "./internal/testing/jsx-dev-runtime.js"
+				}
+			},
+			"module": "./internal/stencil-core/index.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/core_4.43.5-dev.1781245971.06258c8_1781246139162_0.23193025903526898",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"readmeFilename": "readme.md",
+			"prettier": "@ionic/prettier-config",
+			"_nodeVersion": "20.20.2",
+			"contributors": []
+		},
+		"4.43.5-dev.1781678626.ca85879": {
+			"name": "@stencil/core",
+			"description": "A Compiler for Web Components and Progressive Web Apps",
+			"version": "4.43.5-dev.1781678626.ca85879",
+			"author": {
+				"name": "Ionic Team"
+			},
+			"homepage": "https://stenciljs.com/",
+			"repository": {
+				"url": "git+https://github.com/stenciljs/core.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/stenciljs/core/issues"
+			},
+			"engines": {
+				"npm": ">=7.10.0",
+				"node": ">=16.0.0"
+			},
+			"main": "./internal/stencil-core/index.cjs",
+			"optionalDependencies": {
+				"@rollup/rollup-darwin-x64": "4.44.0",
+				"@rollup/rollup-darwin-arm64": "4.44.0",
+				"@rollup/rollup-linux-x64-gnu": "4.44.0",
+				"@rollup/rollup-linux-x64-musl": "4.44.0",
+				"@rollup/rollup-win32-x64-msvc": "4.44.0",
+				"@rollup/rollup-linux-arm64-gnu": "4.44.0",
+				"@rollup/rollup-linux-arm64-musl": "4.44.0",
+				"@rollup/rollup-win32-arm64-msvc": "4.44.0"
+			},
+			"devDependencies": {
+				"ws": "8.17.1",
+				"tsx": "^4.19.2",
+				"exit": "^0.1.2",
+				"glob": "10.5.0",
+				"jest": "^27.4.5",
+				"open": "^9.0.0",
+				"execa": "9.3.0",
+				"listr": "^0.14.3",
+				"cspell": "^8.0.0",
+				"eslint": "^8.23.1",
+				"jquery": "https://github.com/jquery/jquery/tarball/c98597eaf5e144ee5e549cb41984687cd1033068",
+				"parse5": "7.2.1",
+				"rimraf": "^6.0.1",
+				"rollup": "4.44.0",
+				"semver": "^7.3.7",
+				"terser": "5.37.0",
+				"esbuild": "^0.25.0",
+				"mime-db": "^1.46.0",
+				"postcss": "^8.2.8",
+				"prompts": "2.4.2",
+				"webpack": "^5.75.0",
+				"css-what": "^7.0.0",
+				"fs-extra": "^11.0.0",
+				"jest-cli": "^27.4.5",
+				"prettier": "3.3.1",
+				"@types/ws": "^8.5.4",
+				"minimatch": "9.0.9",
+				"puppeteer": "^24.1.0",
+				"node-fetch": "3.3.2",
+				"pixelmatch": "5.3.0",
+				"typescript": "~5.8.3",
+				"@types/exit": "^0.1.31",
+				"@types/jest": "^27.0.3",
+				"@types/node": "^24.6.2",
+				"ansi-colors": "4.1.3",
+				"graceful-fs": "~4.2.6",
+				"@types/listr": "^0.14.4",
+				"@types/pngjs": "^6.0.1",
+				"autoprefixer": "10.4.19",
+				"magic-string": "^0.30.0",
+				"@types/eslint": "^8.4.6",
+				"@types/semver": "^7.3.12",
+				"@types/prompts": "^2.0.9",
+				"open-in-editor": "2.2.0",
+				"@types/fs-extra": "^11.0.0",
+				"merge-source-map": "^1.1.0",
+				"@types/pixelmatch": "^5.2.4",
+				"@yarnpkg/lockfile": "^1.1.0",
+				"@types/graceful-fs": "^4.1.5",
+				"eslint-plugin-jest": "^28.0.0",
+				"eslint-plugin-wdio": "^8.24.12",
+				"@rollup/plugin-json": "6.1.0",
+				"@rollup/pluginutils": "5.1.4",
+				"eslint-plugin-jsdoc": "^50.0.0",
+				"postcss-safe-parser": "^7.0.1",
+				"dts-bundle-generator": "~9.5.0",
+				"jest-environment-node": "^27.4.4",
+				"@ionic/prettier-config": "^4.0.0",
+				"@jridgewell/source-map": "^0.3.6",
+				"@rollup/plugin-replace": "6.0.2",
+				"esbuild-plugin-replace": "^1.4.0",
+				"eslint-config-prettier": "^9.0.0",
+				"@rollup/plugin-commonjs": "28.0.2",
+				"postcss-selector-parser": "^7.1.0",
+				"@types/yarnpkg__lockfile": "^1.1.5",
+				"@typescript-eslint/parser": "^7.0.0",
+				"conventional-changelog-cli": "^5.0.0",
+				"@rollup/plugin-node-resolve": "16.0.0",
+				"@typescript-eslint/eslint-plugin": "^7.0.0",
+				"eslint-plugin-simple-import-sort": "^12.0.0"
+			},
+			"keywords": [
+				"web components",
+				"components",
+				"stencil",
+				"ionic",
+				"webapp",
+				"custom elements",
+				"pwa",
+				"progressive web app"
+			],
+			"license": "MIT",
+			"bin": {
+				"stencil": "bin/stencil"
+			},
+			"maintainers": [
+				{
+					"name": "ionicjs",
+					"email": "hi@ionic.io"
+				},
+				{
+					"name": "gm-os",
+					"email": "goncalo.martins@outsystems.com"
+				},
+				{
+					"name": "vmfo",
+					"email": "vitor.oliveira@outsystems.com"
+				},
+				{
+					"name": "gnbm",
+					"email": "goncalo.martins.fct@gmail.com"
+				},
+				{
+					"name": "johnny.jenkins",
+					"email": "johnljenkins@hotmail.com"
+				},
+				{
+					"name": "stencil-bot",
+					"email": "sa_git_uicomponents@outsystems.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"ts": "tsc --noEmit --project scripts/tsconfig.json && tsx",
+				"lint": "eslint bin/* scripts/*.ts scripts/**/*.ts src/*.ts src/**/*.ts src/**/*.tsx test/wdio/**/*.tsx",
+				"test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --coverage",
+				"build": "npm run clean && npm run tsc.prod && npm run ts scripts/index.ts -- --prod --ci",
+				"clean": "rimraf --max-retries=2 build/ cli/ compiler/ dev-server/ internal/ mock-doc/ sys/node/ sys/ testing/ && npm run clean:scripts && npm run clean.screenshots",
+				"prettier": "npm run prettier.base -- --write",
+				"tsc.prod": "tsc",
+				"test.dist": "npm run ts scripts/index.ts -- --validate-build",
+				"test.jest": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js",
+				"test.prod": "npm run test.dist && npm run test.end-to-end && npm run test.jest && npm run test.wdio && npm run test.testing && npm run test.analysis",
+				"test.wdio": "cd test/wdio && npm ci && npm run test",
+				"release.ci": "NODE_OPTIONS=--max-old-space-size=4096 npm run ts scripts/index.ts -- --release --ci-publish",
+				"spellcheck": "npm run spellcheck.code && npm run spellcheck.markdown",
+				"test.watch": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --watch",
+				"build.watch": "npm run build -- --watch",
+				"install.jest": "npx tsx ./src/testing/jest/install-dependencies.mts",
+				"test.testing": "node scripts/test/validate-testing.js",
+				"clean:scripts": "rimraf scripts/build",
+				"prettier.base": "prettier --cache \"./({bin,scripts,src,test}/**/*.{ts,tsx,js,jsx})|bin/stencil|.github/(**/)?*.(yml|yaml)|*.js\"",
+				"test.analysis": "cd test && npm ci && npm run analysis.build-and-analyze",
+				"test.bundlers": "cd test && npm run bundlers",
+				"test.copytask": "cd test/copy-task && npm ci && npm run test",
+				"test.watch-all": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --watchAll --coverage",
+				"spellcheck.code": "cspell --config cspell-code.json --no-progress \"src/**/*.ts\" \"src/**/*.tsx\" \"scripts/**/*.ts\"",
+				"test.docs-build": "cd test && npm run build.docs-json && npm run build.docs-readme",
+				"test.end-to-end": "cd test/end-to-end && npm ci && npm test && npm run test.dist",
+				"test.type-tests": "cd ./test/wdio && npm install && npm run build.test-sibling && npm run build.main && cd ../../ && tsc -p test/type-tests/tsconfig.json",
+				"prettier.dry-run": "npm run prettier.base -- --list-different",
+				"test.bundle-size": "cd test/bundle-size && npm test",
+				"clean.screenshots": "rimraf test/end-to-end/screenshot/builds test/end-to-end/screenshot/images",
+				"release.ci.prepare": "npm run ts scripts/index.ts -- --release --ci-prepare",
+				"test.wdio.testOnly": "cd test/wdio && npm ci && npm run wdio",
+				"spellcheck.markdown": "cspell --config cspell-markdown.json --no-progress \"*.md\" \"**/*.md\"",
+				"build.updateSelectorEngine": "npm run ts scripts/updateSelectorEngine.ts"
+			},
+			"lastModified": 0,
+			"_id": "@stencil/core@4.43.5-dev.1781678626.ca85879",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@stencil/core/-/core-4.43.5-dev.1781678626.ca85879.tgz",
+				"shasum": "48015f09b8aba489717b626e8f525b63a074ad0d",
+				"integrity": "sha512-ztrSHvy2+HoO4wwpT6mJ7nOU7xhby9F5jWTSEhzEYLivGATqW/OnSdT6nbR4Dggrbyav7KjTe8X59Xqh3Msssw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEQCIHYUw3Xc6ztgyW4ugC5Ai7iz6iYKAliGKCbm+R0bGHbHAiBZcW/KoiR4BXjlY4gHhbNHyuxMw6zSTsQ3vYt6uO0GlQ=="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/@stencil%2fcore@4.43.5-dev.1781678626.ca85879",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "11.17.0",
+			"_npmUser": {
+				"name": "GitHub Actions",
+				"email": "npm-oidc-no-reply@github.com",
+				"trustedPublisher": {
+					"id": "github",
+					"oidcConfigId": "oidc:572e3806-71f4-4421-9a10-c8b3254fafd8"
+				}
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "ca858791094349a3d5ccfd9afbdb71612973c2cc",
+			"types": "./internal/stencil-core/index.d.ts",
+			"volta": {
+				"npm": "10.8.1",
+				"node": "22.2.0"
+			},
+			"exports": {
+				".": {
+					"types": "./internal/stencil-core/index.d.ts",
+					"import": "./internal/stencil-core/index.js",
+					"require": "./internal/stencil-core/index.cjs"
+				},
+				"./cli": {
+					"import": "./cli/index.js",
+					"require": "./cli/index.cjs"
+				},
+				"./testing": {
+					"types": "./testing/index.d.ts",
+					"import": "./testing/index.js",
+					"require": "./testing/index.js"
+				},
+				"./compiler": {
+					"types": "./compiler/stencil.d.ts",
+					"import": "./compiler/stencil.js",
+					"require": "./compiler/stencil.js"
+				},
+				"./internal": {
+					"types": "./internal/index.d.ts",
+					"import": "./internal/index.js"
+				},
+				"./mock-doc": {
+					"types": "./mock-doc/index.d.ts",
+					"import": "./mock-doc/index.js",
+					"require": "./mock-doc/index.cjs"
+				},
+				"./sys/node": {
+					"types": "./sys/node/index.d.ts",
+					"import": "./sys/node/index.js",
+					"require": "./sys/node/index.js"
+				},
+				"./testing/*": {
+					"import": "./testing/*",
+					"require": "./testing/*"
+				},
+				"./compiler/*": {
+					"types": "./compiler/*",
+					"import": "./compiler/*",
+					"require": "./compiler/*"
+				},
+				"./screenshot": {
+					"types": "./screenshot/index.d.ts",
+					"require": "./screenshot/index.js"
+				},
+				"./sys/node/*": {
+					"import": "./sys/node/*",
+					"require": "./sys/node/*"
+				},
+				"./jsx-runtime": {
+					"types": "./internal/stencil-core/jsx-runtime.d.ts",
+					"import": "./internal/stencil-core/jsx-runtime.js",
+					"require": "./internal/stencil-core/jsx-runtime.cjs"
+				},
+				"./internal/client": {
+					"import": "./internal/client/index.js",
+					"require": "./internal/client/index.js"
+				},
+				"./jsx-dev-runtime": {
+					"types": "./internal/stencil-core/jsx-dev-runtime.d.ts",
+					"import": "./internal/stencil-core/jsx-dev-runtime.js",
+					"require": "./internal/stencil-core/jsx-dev-runtime.cjs"
+				},
+				"./internal/testing": {
+					"import": "./internal/testing/index.js",
+					"require": "./internal/testing/index.js"
+				},
+				"./internal/app-data": {
+					"types": "./internal/app-data/index.d.ts",
+					"import": "./internal/app-data/index.js",
+					"require": "./internal/app-data/index.cjs"
+				},
+				"./internal/testing/*": {
+					"import": "./internal/testing/*"
+				},
+				"./testing/jest-preset": {
+					"require": "./testing/jest-preset.js"
+				},
+				"./internal/app-globals": {
+					"import": "./internal/app-globals/index.js",
+					"require": "./internal/app-globals/index.js"
+				},
+				"./internal/testing/jsx-runtime": {
+					"types": "./internal/testing/jsx-runtime.d.ts",
+					"import": "./internal/testing/jsx-runtime.js",
+					"require": "./internal/testing/jsx-runtime.js"
+				},
+				"./internal/testing/jsx-dev-runtime": {
+					"types": "./internal/testing/jsx-dev-runtime.d.ts",
+					"import": "./internal/testing/jsx-dev-runtime.js",
+					"require": "./internal/testing/jsx-dev-runtime.js"
+				}
+			},
+			"module": "./internal/stencil-core/index.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/core_4.43.5-dev.1781678626.ca85879_1781678763982_0.37040833697188646",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"readmeFilename": "readme.md",
+			"prettier": "@ionic/prettier-config",
+			"_nodeVersion": "20.20.2",
+			"contributors": []
+		},
+		"5.0.0-alpha.8": {
+			"name": "@stencil/core",
+			"description": "A Compiler for Web Components and Progressive Web Apps",
+			"version": "5.0.0-alpha.8",
+			"author": {
+				"name": "StencilJs Contributors"
+			},
+			"homepage": "https://stenciljs.com/",
+			"repository": {
+				"url": "git+https://github.com/stenciljs/core.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/stenciljs/core/issues"
+			},
+			"main": "./dist/index.mjs",
+			"dependencies": {
+				"jiti": "^2.0.0",
+				"chalk": "^5.0.0",
+				"semver": "^7.0.0",
+				"terser": "^5.0.0",
+				"postcss": "^8.0.0",
+				"resolve": "^1.22.0",
+				"css-what": "^7.0.0",
+				"rolldown": "^1.0.0",
+				"picomatch": "^4.0.0",
+				"tinyglobby": "^0.2.0",
+				"typescript": ">4.0.0 <7.0.0",
+				"@stencil/cli": "5.0.0-alpha.8",
+				"browserslist": "^4.0.0",
+				"lightningcss": "^1.0.0",
+				"magic-string": "^0.30.0",
+				"@parcel/watcher": "^2.0.0",
+				"@stencil/mock-doc": "5.0.0-alpha.8",
+				"@rollup/pluginutils": "^5.3.0",
+				"@stencil/dev-server": "5.0.0-alpha.8",
+				"postcss-safe-parser": "^7.0.0",
+				"@preact/signals-core": "^1.0.0",
+				"postcss-selector-parser": "^7.0.0"
+			},
+			"devDependencies": {
+				"tsdown": ">=0.21.0 <1.0.0",
+				"vitest": "^4.1.7",
+				"prettier": "^3.5.0",
+				"@stencil/vitest": "^1.12.1",
+				"@ionic/prettier-config": "^4.0.0",
+				"vitest-environment-stencil": "^1.12.1"
+			},
+			"keywords": [
+				"components",
+				"custom elements",
+				"ionic",
+				"progressive web app",
+				"pwa",
+				"stencil",
+				"web components",
+				"webapp"
+			],
+			"license": "MIT",
+			"bin": {
+				"stencil": "bin/stencil.mjs"
+			},
+			"maintainers": [
+				{
+					"name": "ionicjs",
+					"email": "hi@ionic.io"
+				},
+				{
+					"name": "gm-os",
+					"email": "goncalo.martins@outsystems.com"
+				},
+				{
+					"name": "vmfo",
+					"email": "vitor.oliveira@outsystems.com"
+				},
+				{
+					"name": "gnbm",
+					"email": "goncalo.martins.fct@gmail.com"
+				},
+				{
+					"name": "johnny.jenkins",
+					"email": "johnljenkins@hotmail.com"
+				},
+				{
+					"name": "stencil-bot",
+					"email": "sa_git_uicomponents@outsystems.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "vitest run",
+				"build": "tsdown",
+				"typecheck": "tsc --noEmit"
+			},
+			"lastModified": 0,
+			"_id": "@stencil/core@5.0.0-alpha.8",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@stencil/core/-/core-5.0.0-alpha.8.tgz",
+				"shasum": "161d5090ce5483364fdf0f1cb924eee6640696cb",
+				"integrity": "sha512-GWkrPoiQnW2dMvoKCbL7ykFbksAUen0JtyqEJAmCver9Q5C7TJ7r/SlMnvgaBDPdM6lHqzNyCwZm4iB2Mc1R+g==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEUCIQDYceWPx9qRusi+TTQCkMwahMD9CEw3WDIHv8K3ObvoAQIgHLrCxJ+TilNXRhPVMW/xbfuoji/e/5BMJbmX4Q1LTA8="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/@stencil%2fcore@5.0.0-alpha.8",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_from": "file:stencil-core-5.0.0-alpha.8.tgz",
+			"_npmVersion": "11.13.0",
+			"_npmUser": {
+				"name": "GitHub Actions",
+				"email": "npm-oidc-no-reply@github.com",
+				"trustedPublisher": {
+					"id": "github",
+					"oidcConfigId": "oidc:572e3806-71f4-4421-9a10-c8b3254fafd8"
+				}
+			},
+			"_hasShrinkwrap": false,
+			"types": "./dist/index.d.mts",
+			"volta": {
+				"extends": "../../package.json"
+			},
+			"exports": {
+				".": {
+					"types": "./dist/index.d.mts",
+					"import": "./dist/index.mjs"
+				},
+				"./runtime": {
+					"types": "./dist/runtime/index.d.ts",
+					"import": "./dist/runtime/index.js"
+				},
+				"./signals": {
+					"types": "./dist/signals/index.d.ts",
+					"import": "./dist/signals/index.js"
+				},
+				"./testing": {
+					"types": "./dist/testing/index.d.mts",
+					"import": "./dist/testing/index.mjs"
+				},
+				"./compiler": {
+					"types": "./dist/compiler/index.d.mts",
+					"import": "./dist/compiler/index.mjs"
+				},
+				"./mock-doc": {
+					"types": "./dist/mock-doc.d.mts",
+					"import": "./dist/mock-doc.mjs",
+					"default": "./dist/mock-doc.mjs"
+				},
+				"./sys/node": {
+					"types": "./dist/sys/node/index.d.mts",
+					"import": "./dist/sys/node/index.mjs"
+				},
+				"./jsx-runtime": {
+					"types": "./dist/jsx-runtime.d.mts",
+					"import": "./dist/jsx-runtime.mjs"
+				},
+				"./package.json": "./package.json",
+				"./compiler/utils": {
+					"types": "./dist/compiler/utils/index.d.mts",
+					"import": "./dist/compiler/utils/index.mjs"
+				},
+				"./runtime/client": {
+					"types": "./dist/runtime/client/runtime.d.ts",
+					"import": "./dist/runtime/client/runtime.js"
+				},
+				"./runtime/server": {
+					"types": "./dist/runtime/server/index.d.mts",
+					"import": "./dist/runtime/server/index.mjs"
+				},
+				"./jsx-dev-runtime": {
+					"types": "./dist/jsx-runtime.d.mts",
+					"import": "./dist/jsx-runtime.mjs"
+				},
+				"./runtime/app-data": {
+					"types": "./dist/runtime/app-data/index.d.ts",
+					"import": "./dist/runtime/app-data/index.js"
+				},
+				"./runtime/app-globals": {
+					"types": "./dist/runtime/app-globals/index.d.ts",
+					"import": "./dist/runtime/app-globals/index.js"
+				},
+				"./runtime/client/lazy": {
+					"types": "./dist/runtime/client/runtime.d.ts",
+					"import": "./dist/runtime/client/lazy.js"
+				},
+				"./runtime/server/runner": {
+					"types": "./dist/runtime/server/runner.d.mts",
+					"import": "./dist/runtime/server/runner.mjs"
+				},
+				"./runtime/client/standalone": {
+					"types": "./dist/runtime/client/runtime.d.ts",
+					"import": "./dist/runtime/client/runtime.js"
+				}
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/core_5.0.0-alpha.8_1781306606776_0.39413452664938897",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"_resolved": "/tmp/50fbc237b9cc5d67de00dd204b5b3c0f/stencil-core-5.0.0-alpha.8.tgz",
+			"type": "module",
+			"_integrity": "sha512-GWkrPoiQnW2dMvoKCbL7ykFbksAUen0JtyqEJAmCver9Q5C7TJ7r/SlMnvgaBDPdM6lHqzNyCwZm4iB2Mc1R+g==",
+			"_nodeVersion": "24.16.0",
+			"contributors": []
+		},
+		"5.0.0-alpha.9": {
+			"name": "@stencil/core",
+			"description": "A Compiler for Web Components and Progressive Web Apps",
+			"version": "5.0.0-alpha.9",
+			"author": {
+				"name": "StencilJs Contributors"
+			},
+			"homepage": "https://stenciljs.com/",
+			"repository": {
+				"url": "git+https://github.com/stenciljs/core.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/stenciljs/core/issues"
+			},
+			"main": "./dist/index.mjs",
+			"dependencies": {
+				"jiti": "^2.0.0",
+				"chalk": "^5.0.0",
+				"semver": "^7.0.0",
+				"terser": "^5.0.0",
+				"postcss": "^8.0.0",
+				"resolve": "^1.22.0",
+				"css-what": "^7.0.0",
+				"rolldown": "^1.0.0",
+				"picomatch": "^4.0.0",
+				"tinyglobby": "^0.2.0",
+				"typescript": ">4.0.0 <7.0.0",
+				"@stencil/cli": "5.0.0-alpha.9",
+				"browserslist": "^4.0.0",
+				"lightningcss": "^1.0.0",
+				"magic-string": "^0.30.0",
+				"@parcel/watcher": "^2.0.0",
+				"@stencil/mock-doc": "5.0.0-alpha.9",
+				"@rollup/pluginutils": "^5.3.0",
+				"@stencil/dev-server": "5.0.0-alpha.9",
+				"postcss-safe-parser": "^7.0.0",
+				"@preact/signals-core": "^1.0.0",
+				"postcss-selector-parser": "^7.0.0"
+			},
+			"devDependencies": {
+				"tsdown": ">=0.21.0 <1.0.0",
+				"vitest": "^4.1.7",
+				"prettier": "^3.5.0",
+				"@stencil/vitest": "^1.12.1",
+				"@ionic/prettier-config": "^4.0.0",
+				"vitest-environment-stencil": "^1.12.1"
+			},
+			"keywords": [
+				"components",
+				"custom elements",
+				"ionic",
+				"progressive web app",
+				"pwa",
+				"stencil",
+				"web components",
+				"webapp"
+			],
+			"license": "MIT",
+			"bin": {
+				"stencil": "bin/stencil.mjs"
+			},
+			"maintainers": [
+				{
+					"name": "ionicjs",
+					"email": "hi@ionic.io"
+				},
+				{
+					"name": "gm-os",
+					"email": "goncalo.martins@outsystems.com"
+				},
+				{
+					"name": "vmfo",
+					"email": "vitor.oliveira@outsystems.com"
+				},
+				{
+					"name": "gnbm",
+					"email": "goncalo.martins.fct@gmail.com"
+				},
+				{
+					"name": "johnny.jenkins",
+					"email": "johnljenkins@hotmail.com"
+				},
+				{
+					"name": "stencil-bot",
+					"email": "sa_git_uicomponents@outsystems.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "vitest run",
+				"build": "tsdown",
+				"typecheck": "tsc --noEmit"
+			},
+			"lastModified": 0,
+			"_id": "@stencil/core@5.0.0-alpha.9",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@stencil/core/-/core-5.0.0-alpha.9.tgz",
+				"shasum": "96acd45b14e1c8fb578dc824ddada0b204092e78",
+				"integrity": "sha512-CRJwoYTPxxdBfLOp/qhJknOlZGU+GzyDtDKZ66xgVTwt9hyg+gvMO6bDZlXjfV9jUY9JHqLhuWKGuYTTxdMwuA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEQCIAU2v/MxTZFanzR2LLhHDm8mlpt+TagCmkheg2fA4om/AiBanhdXoF8tn3nPkTZEsyVhPqooiHxj/9qGoovIDAdtTg=="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/@stencil%2fcore@5.0.0-alpha.9",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_from": "file:stencil-core-5.0.0-alpha.9.tgz",
+			"_npmVersion": "11.13.0",
+			"_npmUser": {
+				"name": "GitHub Actions",
+				"email": "npm-oidc-no-reply@github.com",
+				"trustedPublisher": {
+					"id": "github",
+					"oidcConfigId": "oidc:572e3806-71f4-4421-9a10-c8b3254fafd8"
+				}
+			},
+			"_hasShrinkwrap": false,
+			"types": "./dist/index.d.mts",
+			"volta": {
+				"extends": "../../package.json"
+			},
+			"exports": {
+				".": {
+					"types": "./dist/index.d.mts",
+					"import": "./dist/index.mjs"
+				},
+				"./runtime": {
+					"types": "./dist/runtime/index.d.ts",
+					"import": "./dist/runtime/index.js"
+				},
+				"./signals": {
+					"types": "./dist/signals/index.d.ts",
+					"import": "./dist/signals/index.js"
+				},
+				"./testing": {
+					"types": "./dist/testing/index.d.mts",
+					"import": "./dist/testing/index.mjs"
+				},
+				"./app-data": {
+					"types": "./dist/app-data/index.d.ts",
+					"import": "./dist/app-data/index.js"
+				},
+				"./compiler": {
+					"types": "./dist/compiler/index.d.mts",
+					"import": "./dist/compiler/index.mjs"
+				},
+				"./mock-doc": {
+					"types": "./dist/mock-doc.d.mts",
+					"import": "./dist/mock-doc.mjs",
+					"default": "./dist/mock-doc.mjs"
+				},
+				"./sys/node": {
+					"types": "./dist/sys/node/index.d.mts",
+					"import": "./dist/sys/node/index.mjs"
+				},
+				"./app-globals": {
+					"types": "./dist/app-globals/index.d.ts",
+					"import": "./dist/app-globals/index.js"
+				},
+				"./jsx-runtime": {
+					"types": "./dist/jsx-runtime.d.mts",
+					"import": "./dist/jsx-runtime.mjs"
+				},
+				"./package.json": "./package.json",
+				"./compiler/utils": {
+					"types": "./dist/compiler/utils/index.d.mts",
+					"import": "./dist/compiler/utils/index.mjs"
+				},
+				"./runtime/client": {
+					"types": "./dist/runtime/client/runtime.d.ts",
+					"import": "./dist/runtime/client/runtime.js"
+				},
+				"./runtime/server": {
+					"types": "./dist/runtime/server/index.d.mts",
+					"import": "./dist/runtime/server/index.mjs"
+				},
+				"./jsx-dev-runtime": {
+					"types": "./dist/jsx-runtime.d.mts",
+					"import": "./dist/jsx-runtime.mjs"
+				},
+				"./runtime/client/lazy": {
+					"types": "./dist/runtime/client/runtime.d.ts",
+					"import": "./dist/runtime/client/lazy.js"
+				},
+				"./runtime/server/runner": {
+					"types": "./dist/runtime/server/runner.d.mts",
+					"import": "./dist/runtime/server/runner.mjs"
+				},
+				"./runtime/client/standalone": {
+					"types": "./dist/runtime/client/runtime.d.ts",
+					"import": "./dist/runtime/client/runtime.js"
+				}
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/core_5.0.0-alpha.9_1782143912725_0.9821546258104286",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"_resolved": "/tmp/022182ef23cef8517a36874d163abc6d/stencil-core-5.0.0-alpha.9.tgz",
+			"type": "module",
+			"_integrity": "sha512-CRJwoYTPxxdBfLOp/qhJknOlZGU+GzyDtDKZ66xgVTwt9hyg+gvMO6bDZlXjfV9jUY9JHqLhuWKGuYTTxdMwuA==",
+			"_nodeVersion": "24.16.0",
+			"contributors": []
+		},
+		"4.43.5-dev.1782282081.f6d6f8c": {
+			"name": "@stencil/core",
+			"description": "A Compiler for Web Components and Progressive Web Apps",
+			"version": "4.43.5-dev.1782282081.f6d6f8c",
+			"author": {
+				"name": "Ionic Team"
+			},
+			"homepage": "https://stenciljs.com/",
+			"repository": {
+				"url": "git+https://github.com/stenciljs/core.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/stenciljs/core/issues"
+			},
+			"engines": {
+				"npm": ">=7.10.0",
+				"node": ">=16.0.0"
+			},
+			"main": "./internal/stencil-core/index.cjs",
+			"optionalDependencies": {
+				"@rollup/rollup-darwin-x64": "4.44.0",
+				"@rollup/rollup-darwin-arm64": "4.44.0",
+				"@rollup/rollup-linux-x64-gnu": "4.44.0",
+				"@rollup/rollup-linux-x64-musl": "4.44.0",
+				"@rollup/rollup-win32-x64-msvc": "4.44.0",
+				"@rollup/rollup-linux-arm64-gnu": "4.44.0",
+				"@rollup/rollup-linux-arm64-musl": "4.44.0",
+				"@rollup/rollup-win32-arm64-msvc": "4.44.0"
+			},
+			"devDependencies": {
+				"ws": "8.17.1",
+				"tsx": "^4.19.2",
+				"exit": "^0.1.2",
+				"glob": "10.5.0",
+				"jest": "^27.4.5",
+				"open": "^9.0.0",
+				"execa": "9.3.0",
+				"listr": "^0.14.3",
+				"cspell": "^8.0.0",
+				"eslint": "^8.23.1",
+				"jquery": "https://github.com/jquery/jquery/tarball/c98597eaf5e144ee5e549cb41984687cd1033068",
+				"parse5": "7.2.1",
+				"rimraf": "^6.0.1",
+				"rollup": "4.44.0",
+				"semver": "^7.3.7",
+				"terser": "5.37.0",
+				"esbuild": "^0.25.0",
+				"mime-db": "^1.46.0",
+				"postcss": "^8.2.8",
+				"prompts": "2.4.2",
+				"webpack": "^5.75.0",
+				"css-what": "^7.0.0",
+				"fs-extra": "^11.0.0",
+				"jest-cli": "^27.4.5",
+				"prettier": "3.3.1",
+				"@types/ws": "^8.5.4",
+				"minimatch": "9.0.9",
+				"puppeteer": "^24.1.0",
+				"node-fetch": "3.3.2",
+				"pixelmatch": "5.3.0",
+				"typescript": "~5.8.3",
+				"@types/exit": "^0.1.31",
+				"@types/jest": "^27.0.3",
+				"@types/node": "^24.6.2",
+				"ansi-colors": "4.1.3",
+				"graceful-fs": "~4.2.6",
+				"@types/listr": "^0.14.4",
+				"@types/pngjs": "^6.0.1",
+				"autoprefixer": "10.4.19",
+				"magic-string": "^0.30.0",
+				"@types/eslint": "^8.4.6",
+				"@types/semver": "^7.3.12",
+				"@types/prompts": "^2.0.9",
+				"open-in-editor": "2.2.0",
+				"@types/fs-extra": "^11.0.0",
+				"merge-source-map": "^1.1.0",
+				"@types/pixelmatch": "^5.2.4",
+				"@yarnpkg/lockfile": "^1.1.0",
+				"@types/graceful-fs": "^4.1.5",
+				"eslint-plugin-jest": "^28.0.0",
+				"eslint-plugin-wdio": "^8.24.12",
+				"@rollup/plugin-json": "6.1.0",
+				"@rollup/pluginutils": "5.1.4",
+				"eslint-plugin-jsdoc": "^50.0.0",
+				"postcss-safe-parser": "^7.0.1",
+				"dts-bundle-generator": "~9.5.0",
+				"jest-environment-node": "^27.4.4",
+				"@ionic/prettier-config": "^4.0.0",
+				"@jridgewell/source-map": "^0.3.6",
+				"@rollup/plugin-replace": "6.0.2",
+				"esbuild-plugin-replace": "^1.4.0",
+				"eslint-config-prettier": "^9.0.0",
+				"@rollup/plugin-commonjs": "28.0.2",
+				"postcss-selector-parser": "^7.1.0",
+				"@types/yarnpkg__lockfile": "^1.1.5",
+				"@typescript-eslint/parser": "^7.0.0",
+				"conventional-changelog-cli": "^5.0.0",
+				"@rollup/plugin-node-resolve": "16.0.0",
+				"@typescript-eslint/eslint-plugin": "^7.0.0",
+				"eslint-plugin-simple-import-sort": "^12.0.0"
+			},
+			"keywords": [
+				"web components",
+				"components",
+				"stencil",
+				"ionic",
+				"webapp",
+				"custom elements",
+				"pwa",
+				"progressive web app"
+			],
+			"license": "MIT",
+			"bin": {
+				"stencil": "bin/stencil"
+			},
+			"maintainers": [
+				{
+					"name": "ionicjs",
+					"email": "hi@ionic.io"
+				},
+				{
+					"name": "gm-os",
+					"email": "goncalo.martins@outsystems.com"
+				},
+				{
+					"name": "vmfo",
+					"email": "vitor.oliveira@outsystems.com"
+				},
+				{
+					"name": "gnbm",
+					"email": "goncalo.martins.fct@gmail.com"
+				},
+				{
+					"name": "johnny.jenkins",
+					"email": "johnljenkins@hotmail.com"
+				},
+				{
+					"name": "stencil-bot",
+					"email": "sa_git_uicomponents@outsystems.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"ts": "tsc --noEmit --project scripts/tsconfig.json && tsx",
+				"lint": "eslint bin/* scripts/*.ts scripts/**/*.ts src/*.ts src/**/*.ts src/**/*.tsx test/wdio/**/*.tsx",
+				"test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --coverage",
+				"build": "npm run clean && npm run tsc.prod && npm run ts scripts/index.ts -- --prod --ci",
+				"clean": "rimraf --max-retries=2 build/ cli/ compiler/ dev-server/ internal/ mock-doc/ sys/node/ sys/ testing/ && npm run clean:scripts && npm run clean.screenshots",
+				"prettier": "npm run prettier.base -- --write",
+				"tsc.prod": "tsc",
+				"test.dist": "npm run ts scripts/index.ts -- --validate-build",
+				"test.jest": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js",
+				"test.prod": "npm run test.dist && npm run test.end-to-end && npm run test.jest && npm run test.wdio && npm run test.testing && npm run test.analysis",
+				"test.wdio": "cd test/wdio && npm ci && npm run test",
+				"release.ci": "NODE_OPTIONS=--max-old-space-size=4096 npm run ts scripts/index.ts -- --release --ci-publish",
+				"spellcheck": "npm run spellcheck.code && npm run spellcheck.markdown",
+				"test.watch": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --watch",
+				"build.watch": "npm run build -- --watch",
+				"install.jest": "npx tsx ./src/testing/jest/install-dependencies.mts",
+				"test.testing": "node scripts/test/validate-testing.js",
+				"clean:scripts": "rimraf scripts/build",
+				"prettier.base": "prettier --cache \"./({bin,scripts,src,test}/**/*.{ts,tsx,js,jsx})|bin/stencil|.github/(**/)?*.(yml|yaml)|*.js\"",
+				"test.analysis": "cd test && npm ci && npm run analysis.build-and-analyze",
+				"test.bundlers": "cd test && npm run bundlers",
+				"test.copytask": "cd test/copy-task && npm ci && npm run test",
+				"test.watch-all": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --watchAll --coverage",
+				"spellcheck.code": "cspell --config cspell-code.json --no-progress \"src/**/*.ts\" \"src/**/*.tsx\" \"scripts/**/*.ts\"",
+				"test.docs-build": "cd test && npm run build.docs-json && npm run build.docs-readme",
+				"test.end-to-end": "cd test/end-to-end && npm ci && npm test && npm run test.dist",
+				"test.type-tests": "cd ./test/wdio && npm install && npm run build.test-sibling && npm run build.main && cd ../../ && tsc -p test/type-tests/tsconfig.json",
+				"prettier.dry-run": "npm run prettier.base -- --list-different",
+				"test.bundle-size": "cd test/bundle-size && npm test",
+				"clean.screenshots": "rimraf test/end-to-end/screenshot/builds test/end-to-end/screenshot/images",
+				"release.ci.prepare": "npm run ts scripts/index.ts -- --release --ci-prepare",
+				"test.wdio.testOnly": "cd test/wdio && npm ci && npm run wdio",
+				"spellcheck.markdown": "cspell --config cspell-markdown.json --no-progress \"*.md\" \"**/*.md\"",
+				"build.updateSelectorEngine": "npm run ts scripts/updateSelectorEngine.ts"
+			},
+			"lastModified": 0,
+			"_id": "@stencil/core@4.43.5-dev.1782282081.f6d6f8c",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@stencil/core/-/core-4.43.5-dev.1782282081.f6d6f8c.tgz",
+				"shasum": "94dd1589e8b2e17f638d362aaa0efe971a6ebef8",
+				"integrity": "sha512-07L999aX+TmNNfuR5+hxZ2xGK127ZeJhR9XlLoXfD+D80eFbuPzcJL7kDkq3Wpc401ZvugDKaHXLlz4fIkPm9Q==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEUCICol11lLiTSg1c3+Ulqwl0SMplR6fvcCgfuoHO8WJqs+AiEAwoiKaHW008EGxBirtAcs3Bi8sVtya2tFmjwx+hM8Q0Y="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/@stencil%2fcore@4.43.5-dev.1782282081.f6d6f8c",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "11.17.0",
+			"_npmUser": {
+				"name": "GitHub Actions",
+				"email": "npm-oidc-no-reply@github.com",
+				"trustedPublisher": {
+					"id": "github",
+					"oidcConfigId": "oidc:572e3806-71f4-4421-9a10-c8b3254fafd8"
+				}
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "f6d6f8c27ae4e9f2f8650f85c302f8cb86606d12",
+			"types": "./internal/stencil-core/index.d.ts",
+			"volta": {
+				"npm": "10.8.1",
+				"node": "22.2.0"
+			},
+			"exports": {
+				".": {
+					"types": "./internal/stencil-core/index.d.ts",
+					"import": "./internal/stencil-core/index.js",
+					"require": "./internal/stencil-core/index.cjs"
+				},
+				"./cli": {
+					"import": "./cli/index.js",
+					"require": "./cli/index.cjs"
+				},
+				"./testing": {
+					"types": "./testing/index.d.ts",
+					"import": "./testing/index.js",
+					"require": "./testing/index.js"
+				},
+				"./compiler": {
+					"types": "./compiler/stencil.d.ts",
+					"import": "./compiler/stencil.js",
+					"require": "./compiler/stencil.js"
+				},
+				"./internal": {
+					"types": "./internal/index.d.ts",
+					"import": "./internal/index.js"
+				},
+				"./mock-doc": {
+					"types": "./mock-doc/index.d.ts",
+					"import": "./mock-doc/index.js",
+					"require": "./mock-doc/index.cjs"
+				},
+				"./sys/node": {
+					"types": "./sys/node/index.d.ts",
+					"import": "./sys/node/index.js",
+					"require": "./sys/node/index.js"
+				},
+				"./testing/*": {
+					"import": "./testing/*",
+					"require": "./testing/*"
+				},
+				"./compiler/*": {
+					"types": "./compiler/*",
+					"import": "./compiler/*",
+					"require": "./compiler/*"
+				},
+				"./screenshot": {
+					"types": "./screenshot/index.d.ts",
+					"require": "./screenshot/index.js"
+				},
+				"./sys/node/*": {
+					"import": "./sys/node/*",
+					"require": "./sys/node/*"
+				},
+				"./jsx-runtime": {
+					"types": "./internal/stencil-core/jsx-runtime.d.ts",
+					"import": "./internal/stencil-core/jsx-runtime.js",
+					"require": "./internal/stencil-core/jsx-runtime.cjs"
+				},
+				"./internal/client": {
+					"import": "./internal/client/index.js",
+					"require": "./internal/client/index.js"
+				},
+				"./jsx-dev-runtime": {
+					"types": "./internal/stencil-core/jsx-dev-runtime.d.ts",
+					"import": "./internal/stencil-core/jsx-dev-runtime.js",
+					"require": "./internal/stencil-core/jsx-dev-runtime.cjs"
+				},
+				"./internal/testing": {
+					"import": "./internal/testing/index.js",
+					"require": "./internal/testing/index.js"
+				},
+				"./internal/app-data": {
+					"types": "./internal/app-data/index.d.ts",
+					"import": "./internal/app-data/index.js",
+					"require": "./internal/app-data/index.cjs"
+				},
+				"./internal/testing/*": {
+					"import": "./internal/testing/*"
+				},
+				"./testing/jest-preset": {
+					"require": "./testing/jest-preset.js"
+				},
+				"./internal/app-globals": {
+					"import": "./internal/app-globals/index.js",
+					"require": "./internal/app-globals/index.js"
+				},
+				"./internal/testing/jsx-runtime": {
+					"types": "./internal/testing/jsx-runtime.d.ts",
+					"import": "./internal/testing/jsx-runtime.js",
+					"require": "./internal/testing/jsx-runtime.js"
+				},
+				"./internal/testing/jsx-dev-runtime": {
+					"types": "./internal/testing/jsx-dev-runtime.d.ts",
+					"import": "./internal/testing/jsx-dev-runtime.js",
+					"require": "./internal/testing/jsx-dev-runtime.js"
+				}
+			},
+			"module": "./internal/stencil-core/index.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/core_4.43.5-dev.1782282081.f6d6f8c_1782282259720_0.6058584489864858",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"readmeFilename": "readme.md",
+			"prettier": "@ionic/prettier-config",
+			"_nodeVersion": "20.20.2",
+			"contributors": []
+		},
+		"4.43.5-dev.1782455081.f6d6f8c": {
+			"name": "@stencil/core",
+			"description": "A Compiler for Web Components and Progressive Web Apps",
+			"version": "4.43.5-dev.1782455081.f6d6f8c",
+			"author": {
+				"name": "Ionic Team"
+			},
+			"homepage": "https://stenciljs.com/",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/stenciljs/core.git"
+			},
+			"bugs": {
+				"url": "https://github.com/stenciljs/core/issues"
+			},
+			"engines": {
+				"node": ">=16.0.0",
+				"npm": ">=7.10.0"
+			},
+			"main": "./internal/stencil-core/index.cjs",
+			"optionalDependencies": {
+				"@rollup/rollup-darwin-arm64": "4.44.0",
+				"@rollup/rollup-darwin-x64": "4.44.0",
+				"@rollup/rollup-linux-arm64-gnu": "4.44.0",
+				"@rollup/rollup-linux-arm64-musl": "4.44.0",
+				"@rollup/rollup-linux-x64-gnu": "4.44.0",
+				"@rollup/rollup-linux-x64-musl": "4.44.0",
+				"@rollup/rollup-win32-arm64-msvc": "4.44.0",
+				"@rollup/rollup-win32-x64-msvc": "4.44.0"
+			},
+			"devDependencies": {
+				"@ionic/prettier-config": "^4.0.0",
+				"@jridgewell/source-map": "^0.3.6",
+				"@rollup/plugin-commonjs": "28.0.2",
+				"@rollup/plugin-json": "6.1.0",
+				"@rollup/plugin-node-resolve": "16.0.0",
+				"@rollup/plugin-replace": "6.0.2",
+				"@rollup/pluginutils": "5.1.4",
+				"@types/eslint": "^8.4.6",
+				"@types/exit": "^0.1.31",
+				"@types/fs-extra": "^11.0.0",
+				"@types/graceful-fs": "^4.1.5",
+				"@types/jest": "^27.0.3",
+				"@types/listr": "^0.14.4",
+				"@types/node": "^24.6.2",
+				"@types/pixelmatch": "^5.2.4",
+				"@types/pngjs": "^6.0.1",
+				"@types/prompts": "^2.0.9",
+				"@types/semver": "^7.3.12",
+				"@types/ws": "^8.5.4",
+				"@types/yarnpkg__lockfile": "^1.1.5",
+				"@typescript-eslint/eslint-plugin": "^7.0.0",
+				"@typescript-eslint/parser": "^7.0.0",
+				"@yarnpkg/lockfile": "^1.1.0",
+				"ansi-colors": "4.1.3",
+				"autoprefixer": "10.4.19",
+				"conventional-changelog-cli": "^5.0.0",
+				"cspell": "^8.0.0",
+				"css-what": "^7.0.0",
+				"dts-bundle-generator": "~9.5.0",
+				"esbuild": "^0.25.0",
+				"esbuild-plugin-replace": "^1.4.0",
+				"eslint": "^8.23.1",
+				"eslint-config-prettier": "^9.0.0",
+				"eslint-plugin-jest": "^28.0.0",
+				"eslint-plugin-jsdoc": "^50.0.0",
+				"eslint-plugin-simple-import-sort": "^12.0.0",
+				"eslint-plugin-wdio": "^8.24.12",
+				"execa": "9.3.0",
+				"exit": "^0.1.2",
+				"fs-extra": "^11.0.0",
+				"glob": "10.5.0",
+				"graceful-fs": "~4.2.6",
+				"jest": "^27.4.5",
+				"jest-cli": "^27.4.5",
+				"jest-environment-node": "^27.4.4",
+				"jquery": "https://github.com/jquery/jquery/tarball/c98597eaf5e144ee5e549cb41984687cd1033068",
+				"listr": "^0.14.3",
+				"magic-string": "^0.30.0",
+				"merge-source-map": "^1.1.0",
+				"mime-db": "^1.46.0",
+				"minimatch": "9.0.9",
+				"node-fetch": "3.3.2",
+				"open": "^9.0.0",
+				"open-in-editor": "2.2.0",
+				"parse5": "7.2.1",
+				"pixelmatch": "5.3.0",
+				"postcss": "^8.2.8",
+				"postcss-safe-parser": "^7.0.1",
+				"postcss-selector-parser": "^7.1.0",
+				"prettier": "3.3.1",
+				"prompts": "2.4.2",
+				"puppeteer": "^24.1.0",
+				"rimraf": "^6.0.1",
+				"rollup": "4.44.0",
+				"semver": "^7.3.7",
+				"terser": "5.37.0",
+				"tsx": "^4.19.2",
+				"typescript": "~5.8.3",
+				"webpack": "^5.75.0",
+				"ws": "8.17.1"
+			},
+			"keywords": [
+				"web components",
+				"components",
+				"stencil",
+				"ionic",
+				"webapp",
+				"custom elements",
+				"pwa",
+				"progressive web app"
+			],
+			"license": "MIT",
+			"bin": {
+				"stencil": "bin/stencil"
+			},
+			"maintainers": [
+				{
+					"name": "ionicjs",
+					"email": "hi@ionic.io"
+				},
+				{
+					"name": "gm-os",
+					"email": "goncalo.martins@outsystems.com"
+				},
+				{
+					"name": "vmfo",
+					"email": "vitor.oliveira@outsystems.com"
+				},
+				{
+					"name": "gnbm",
+					"email": "goncalo.martins.fct@gmail.com"
+				},
+				{
+					"name": "johnny.jenkins",
+					"email": "johnljenkins@hotmail.com"
+				},
+				{
+					"name": "stencil-bot",
+					"email": "sa_git_uicomponents@outsystems.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"build": "npm run clean && npm run tsc.prod && npm run ts scripts/index.ts -- --prod --ci",
+				"build.watch": "npm run build -- --watch",
+				"build.updateSelectorEngine": "npm run ts scripts/updateSelectorEngine.ts",
+				"clean": "rimraf --max-retries=2 build/ cli/ compiler/ dev-server/ internal/ mock-doc/ sys/node/ sys/ testing/ && npm run clean:scripts && npm run clean.screenshots",
+				"clean.screenshots": "rimraf test/end-to-end/screenshot/builds test/end-to-end/screenshot/images",
+				"clean:scripts": "rimraf scripts/build",
+				"lint": "eslint bin/* scripts/*.ts scripts/**/*.ts src/*.ts src/**/*.ts src/**/*.tsx test/wdio/**/*.tsx",
+				"install.jest": "npx tsx ./src/testing/jest/install-dependencies.mts",
+				"prettier": "npm run prettier.base -- --write",
+				"prettier.base": "prettier --cache \"./({bin,scripts,src,test}/**/*.{ts,tsx,js,jsx})|bin/stencil|.github/(**/)?*.(yml|yaml)|*.js\"",
+				"prettier.dry-run": "npm run prettier.base -- --list-different",
+				"release.ci.prepare": "npm run ts scripts/index.ts -- --release --ci-prepare",
+				"release.ci": "NODE_OPTIONS=--max-old-space-size=4096 npm run ts scripts/index.ts -- --release --ci-publish",
+				"spellcheck": "npm run spellcheck.code && npm run spellcheck.markdown",
+				"spellcheck.code": "cspell --config cspell-code.json --no-progress \"src/**/*.ts\" \"src/**/*.tsx\" \"scripts/**/*.ts\"",
+				"spellcheck.markdown": "cspell --config cspell-markdown.json --no-progress \"*.md\" \"**/*.md\"",
+				"test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --coverage",
+				"test.analysis": "cd test && npm ci && npm run analysis.build-and-analyze",
+				"test.bundle-size": "cd test/bundle-size && npm test",
+				"test.bundlers": "cd test && npm run bundlers",
+				"test.copytask": "cd test/copy-task && npm ci && npm run test",
+				"test.dist": "npm run ts scripts/index.ts -- --validate-build",
+				"test.end-to-end": "cd test/end-to-end && npm ci && npm test && npm run test.dist",
+				"test.jest": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js",
+				"test.type-tests": "cd ./test/wdio && npm install && npm run build.test-sibling && npm run build.main && cd ../../ && tsc -p test/type-tests/tsconfig.json",
+				"test.wdio": "cd test/wdio && npm ci && npm run test",
+				"test.wdio.testOnly": "cd test/wdio && npm ci && npm run wdio",
+				"test.prod": "npm run test.dist && npm run test.end-to-end && npm run test.jest && npm run test.wdio && npm run test.testing && npm run test.analysis",
+				"test.testing": "node scripts/test/validate-testing.js",
+				"test.docs-build": "cd test && npm run build.docs-json && npm run build.docs-readme",
+				"test.watch": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --watch",
+				"test.watch-all": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --watchAll --coverage",
+				"tsc.prod": "tsc",
+				"ts": "tsc --noEmit --project scripts/tsconfig.json && tsx"
+			},
+			"lastModified": 0,
+			"_id": "@stencil/core@4.43.5-dev.1782455081.f6d6f8c",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@stencil/core/-/core-4.43.5-dev.1782455081.f6d6f8c.tgz",
+				"shasum": "83906af55be9a9fdb0d0b62c8c9be8316887b7d4",
+				"integrity": "sha512-+rtMVJxhXd3N4rClwk5YJikjmF/3/FOc9PWRshbtsSwdAfRYQ7SrDYu+dhNRXnzf0lY0lYXm8fvuq6IcYk4wfg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEUCIQCCR5MjyRVtAHRCAl6C402s9/ul8CHoptAMfSH28k+a5AIgf283QScgKzZTv/y/xf5x72yEus4Ty+m38TVYsiRGVts="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/@stencil%2fcore@4.43.5-dev.1782455081.f6d6f8c",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "11.17.0",
+			"_npmUser": {
+				"name": "GitHub Actions",
+				"email": "npm-oidc-no-reply@github.com",
+				"trustedPublisher": {
+					"id": "github",
+					"oidcConfigId": "oidc:572e3806-71f4-4421-9a10-c8b3254fafd8"
+				}
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "f6d6f8c27ae4e9f2f8650f85c302f8cb86606d12",
+			"types": "./internal/stencil-core/index.d.ts",
+			"volta": {
+				"node": "22.2.0",
+				"npm": "10.8.1"
+			},
+			"exports": {
+				".": {
+					"types": "./internal/stencil-core/index.d.ts",
+					"import": "./internal/stencil-core/index.js",
+					"require": "./internal/stencil-core/index.cjs"
+				},
+				"./jsx-runtime": {
+					"types": "./internal/stencil-core/jsx-runtime.d.ts",
+					"import": "./internal/stencil-core/jsx-runtime.js",
+					"require": "./internal/stencil-core/jsx-runtime.cjs"
+				},
+				"./jsx-dev-runtime": {
+					"types": "./internal/stencil-core/jsx-dev-runtime.d.ts",
+					"import": "./internal/stencil-core/jsx-dev-runtime.js",
+					"require": "./internal/stencil-core/jsx-dev-runtime.cjs"
+				},
+				"./cli": {
+					"import": "./cli/index.js",
+					"require": "./cli/index.cjs"
+				},
+				"./internal": {
+					"import": "./internal/index.js",
+					"types": "./internal/index.d.ts"
+				},
+				"./internal/client": {
+					"import": "./internal/client/index.js",
+					"require": "./internal/client/index.js"
+				},
+				"./internal/testing": {
+					"import": "./internal/testing/index.js",
+					"require": "./internal/testing/index.js"
+				},
+				"./internal/testing/jsx-runtime": {
+					"types": "./internal/testing/jsx-runtime.d.ts",
+					"import": "./internal/testing/jsx-runtime.js",
+					"require": "./internal/testing/jsx-runtime.js"
+				},
+				"./internal/testing/jsx-dev-runtime": {
+					"types": "./internal/testing/jsx-dev-runtime.d.ts",
+					"import": "./internal/testing/jsx-dev-runtime.js",
+					"require": "./internal/testing/jsx-dev-runtime.js"
+				},
+				"./internal/testing/*": {
+					"import": "./internal/testing/*"
+				},
+				"./internal/app-data": {
+					"types": "./internal/app-data/index.d.ts",
+					"import": "./internal/app-data/index.js",
+					"require": "./internal/app-data/index.cjs"
+				},
+				"./internal/app-globals": {
+					"import": "./internal/app-globals/index.js",
+					"require": "./internal/app-globals/index.js"
+				},
+				"./mock-doc": {
+					"types": "./mock-doc/index.d.ts",
+					"import": "./mock-doc/index.js",
+					"require": "./mock-doc/index.cjs"
+				},
+				"./compiler": {
+					"types": "./compiler/stencil.d.ts",
+					"import": "./compiler/stencil.js",
+					"require": "./compiler/stencil.js"
+				},
+				"./compiler/*": {
+					"types": "./compiler/*",
+					"import": "./compiler/*",
+					"require": "./compiler/*"
+				},
+				"./screenshot": {
+					"types": "./screenshot/index.d.ts",
+					"require": "./screenshot/index.js"
+				},
+				"./sys/node": {
+					"types": "./sys/node/index.d.ts",
+					"import": "./sys/node/index.js",
+					"require": "./sys/node/index.js"
+				},
+				"./sys/node/*": {
+					"import": "./sys/node/*",
+					"require": "./sys/node/*"
+				},
+				"./testing": {
+					"types": "./testing/index.d.ts",
+					"import": "./testing/index.js",
+					"require": "./testing/index.js"
+				},
+				"./testing/jest-preset": {
+					"require": "./testing/jest-preset.js"
+				},
+				"./testing/*": {
+					"import": "./testing/*",
+					"require": "./testing/*"
+				}
+			},
+			"module": "./internal/stencil-core/index.js",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages-npm-production",
+				"tmp": "tmp/core_4.43.5-dev.1782455081.f6d6f8c_1782455254075_0.19846273388482594"
+			},
+			"readmeFilename": "readme.md",
+			"prettier": "@ionic/prettier-config",
+			"_nodeVersion": "20.20.2",
+			"contributors": []
+		},
+		"4.43.5-dev.1781506088.ca85879": {
+			"name": "@stencil/core",
+			"description": "A Compiler for Web Components and Progressive Web Apps",
+			"version": "4.43.5-dev.1781506088.ca85879",
+			"author": {
+				"name": "Ionic Team"
+			},
+			"homepage": "https://stenciljs.com/",
+			"repository": {
+				"url": "git+https://github.com/stenciljs/core.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/stenciljs/core/issues"
+			},
+			"engines": {
+				"npm": ">=7.10.0",
+				"node": ">=16.0.0"
+			},
+			"main": "./internal/stencil-core/index.cjs",
+			"optionalDependencies": {
+				"@rollup/rollup-darwin-x64": "4.44.0",
+				"@rollup/rollup-darwin-arm64": "4.44.0",
+				"@rollup/rollup-linux-x64-gnu": "4.44.0",
+				"@rollup/rollup-linux-x64-musl": "4.44.0",
+				"@rollup/rollup-win32-x64-msvc": "4.44.0",
+				"@rollup/rollup-linux-arm64-gnu": "4.44.0",
+				"@rollup/rollup-linux-arm64-musl": "4.44.0",
+				"@rollup/rollup-win32-arm64-msvc": "4.44.0"
+			},
+			"devDependencies": {
+				"ws": "8.17.1",
+				"tsx": "^4.19.2",
+				"exit": "^0.1.2",
+				"glob": "10.5.0",
+				"jest": "^27.4.5",
+				"open": "^9.0.0",
+				"execa": "9.3.0",
+				"listr": "^0.14.3",
+				"cspell": "^8.0.0",
+				"eslint": "^8.23.1",
+				"jquery": "https://github.com/jquery/jquery/tarball/c98597eaf5e144ee5e549cb41984687cd1033068",
+				"parse5": "7.2.1",
+				"rimraf": "^6.0.1",
+				"rollup": "4.44.0",
+				"semver": "^7.3.7",
+				"terser": "5.37.0",
+				"esbuild": "^0.25.0",
+				"mime-db": "^1.46.0",
+				"postcss": "^8.2.8",
+				"prompts": "2.4.2",
+				"webpack": "^5.75.0",
+				"css-what": "^7.0.0",
+				"fs-extra": "^11.0.0",
+				"jest-cli": "^27.4.5",
+				"prettier": "3.3.1",
+				"@types/ws": "^8.5.4",
+				"minimatch": "9.0.9",
+				"puppeteer": "^24.1.0",
+				"node-fetch": "3.3.2",
+				"pixelmatch": "5.3.0",
+				"typescript": "~5.8.3",
+				"@types/exit": "^0.1.31",
+				"@types/jest": "^27.0.3",
+				"@types/node": "^24.6.2",
+				"ansi-colors": "4.1.3",
+				"graceful-fs": "~4.2.6",
+				"@types/listr": "^0.14.4",
+				"@types/pngjs": "^6.0.1",
+				"autoprefixer": "10.4.19",
+				"magic-string": "^0.30.0",
+				"@types/eslint": "^8.4.6",
+				"@types/semver": "^7.3.12",
+				"@types/prompts": "^2.0.9",
+				"open-in-editor": "2.2.0",
+				"@types/fs-extra": "^11.0.0",
+				"merge-source-map": "^1.1.0",
+				"@types/pixelmatch": "^5.2.4",
+				"@yarnpkg/lockfile": "^1.1.0",
+				"@types/graceful-fs": "^4.1.5",
+				"eslint-plugin-jest": "^28.0.0",
+				"eslint-plugin-wdio": "^8.24.12",
+				"@rollup/plugin-json": "6.1.0",
+				"@rollup/pluginutils": "5.1.4",
+				"eslint-plugin-jsdoc": "^50.0.0",
+				"postcss-safe-parser": "^7.0.1",
+				"dts-bundle-generator": "~9.5.0",
+				"jest-environment-node": "^27.4.4",
+				"@ionic/prettier-config": "^4.0.0",
+				"@jridgewell/source-map": "^0.3.6",
+				"@rollup/plugin-replace": "6.0.2",
+				"esbuild-plugin-replace": "^1.4.0",
+				"eslint-config-prettier": "^9.0.0",
+				"@rollup/plugin-commonjs": "28.0.2",
+				"postcss-selector-parser": "^7.1.0",
+				"@types/yarnpkg__lockfile": "^1.1.5",
+				"@typescript-eslint/parser": "^7.0.0",
+				"conventional-changelog-cli": "^5.0.0",
+				"@rollup/plugin-node-resolve": "16.0.0",
+				"@typescript-eslint/eslint-plugin": "^7.0.0",
+				"eslint-plugin-simple-import-sort": "^12.0.0"
+			},
+			"keywords": [
+				"web components",
+				"components",
+				"stencil",
+				"ionic",
+				"webapp",
+				"custom elements",
+				"pwa",
+				"progressive web app"
+			],
+			"license": "MIT",
+			"bin": {
+				"stencil": "bin/stencil"
+			},
+			"maintainers": [
+				{
+					"name": "ionicjs",
+					"email": "hi@ionic.io"
+				},
+				{
+					"name": "gm-os",
+					"email": "goncalo.martins@outsystems.com"
+				},
+				{
+					"name": "vmfo",
+					"email": "vitor.oliveira@outsystems.com"
+				},
+				{
+					"name": "gnbm",
+					"email": "goncalo.martins.fct@gmail.com"
+				},
+				{
+					"name": "johnny.jenkins",
+					"email": "johnljenkins@hotmail.com"
+				},
+				{
+					"name": "stencil-bot",
+					"email": "sa_git_uicomponents@outsystems.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"ts": "tsc --noEmit --project scripts/tsconfig.json && tsx",
+				"lint": "eslint bin/* scripts/*.ts scripts/**/*.ts src/*.ts src/**/*.ts src/**/*.tsx test/wdio/**/*.tsx",
+				"test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --coverage",
+				"build": "npm run clean && npm run tsc.prod && npm run ts scripts/index.ts -- --prod --ci",
+				"clean": "rimraf --max-retries=2 build/ cli/ compiler/ dev-server/ internal/ mock-doc/ sys/node/ sys/ testing/ && npm run clean:scripts && npm run clean.screenshots",
+				"prettier": "npm run prettier.base -- --write",
+				"tsc.prod": "tsc",
+				"test.dist": "npm run ts scripts/index.ts -- --validate-build",
+				"test.jest": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js",
+				"test.prod": "npm run test.dist && npm run test.end-to-end && npm run test.jest && npm run test.wdio && npm run test.testing && npm run test.analysis",
+				"test.wdio": "cd test/wdio && npm ci && npm run test",
+				"release.ci": "NODE_OPTIONS=--max-old-space-size=4096 npm run ts scripts/index.ts -- --release --ci-publish",
+				"spellcheck": "npm run spellcheck.code && npm run spellcheck.markdown",
+				"test.watch": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --watch",
+				"build.watch": "npm run build -- --watch",
+				"install.jest": "npx tsx ./src/testing/jest/install-dependencies.mts",
+				"test.testing": "node scripts/test/validate-testing.js",
+				"clean:scripts": "rimraf scripts/build",
+				"prettier.base": "prettier --cache \"./({bin,scripts,src,test}/**/*.{ts,tsx,js,jsx})|bin/stencil|.github/(**/)?*.(yml|yaml)|*.js\"",
+				"test.analysis": "cd test && npm ci && npm run analysis.build-and-analyze",
+				"test.bundlers": "cd test && npm run bundlers",
+				"test.copytask": "cd test/copy-task && npm ci && npm run test",
+				"test.watch-all": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --watchAll --coverage",
+				"spellcheck.code": "cspell --config cspell-code.json --no-progress \"src/**/*.ts\" \"src/**/*.tsx\" \"scripts/**/*.ts\"",
+				"test.docs-build": "cd test && npm run build.docs-json && npm run build.docs-readme",
+				"test.end-to-end": "cd test/end-to-end && npm ci && npm test && npm run test.dist",
+				"test.type-tests": "cd ./test/wdio && npm install && npm run build.test-sibling && npm run build.main && cd ../../ && tsc -p test/type-tests/tsconfig.json",
+				"prettier.dry-run": "npm run prettier.base -- --list-different",
+				"test.bundle-size": "cd test/bundle-size && npm test",
+				"clean.screenshots": "rimraf test/end-to-end/screenshot/builds test/end-to-end/screenshot/images",
+				"release.ci.prepare": "npm run ts scripts/index.ts -- --release --ci-prepare",
+				"test.wdio.testOnly": "cd test/wdio && npm ci && npm run wdio",
+				"spellcheck.markdown": "cspell --config cspell-markdown.json --no-progress \"*.md\" \"**/*.md\"",
+				"build.updateSelectorEngine": "npm run ts scripts/updateSelectorEngine.ts"
+			},
+			"lastModified": 0,
+			"_id": "@stencil/core@4.43.5-dev.1781506088.ca85879",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@stencil/core/-/core-4.43.5-dev.1781506088.ca85879.tgz",
+				"shasum": "278b10d0187ce4962310b8dcf3df99b2491dd0c2",
+				"integrity": "sha512-LIHx/NdSTKn5L8iK8zhFulFsSBK26dGkHc1ZXWXt/K8w9AnLMoQVJINoKkYlSawdGUMPhifazuK6doEulLZ+8g==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEUCIHKZDb93v+dq3tkt72Z2qRsIyDEIntW03j3z5L7uGUFiAiEA4nn4cS/gbR/+1wGuee7TqaTt32STxm3Gx/jvh7INHlk="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/@stencil%2fcore@4.43.5-dev.1781506088.ca85879",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "11.17.0",
+			"_npmUser": {
+				"name": "GitHub Actions",
+				"email": "npm-oidc-no-reply@github.com",
+				"trustedPublisher": {
+					"id": "github",
+					"oidcConfigId": "oidc:572e3806-71f4-4421-9a10-c8b3254fafd8"
+				}
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "ca858791094349a3d5ccfd9afbdb71612973c2cc",
+			"types": "./internal/stencil-core/index.d.ts",
+			"volta": {
+				"npm": "10.8.1",
+				"node": "22.2.0"
+			},
+			"exports": {
+				".": {
+					"types": "./internal/stencil-core/index.d.ts",
+					"import": "./internal/stencil-core/index.js",
+					"require": "./internal/stencil-core/index.cjs"
+				},
+				"./cli": {
+					"import": "./cli/index.js",
+					"require": "./cli/index.cjs"
+				},
+				"./testing": {
+					"types": "./testing/index.d.ts",
+					"import": "./testing/index.js",
+					"require": "./testing/index.js"
+				},
+				"./compiler": {
+					"types": "./compiler/stencil.d.ts",
+					"import": "./compiler/stencil.js",
+					"require": "./compiler/stencil.js"
+				},
+				"./internal": {
+					"types": "./internal/index.d.ts",
+					"import": "./internal/index.js"
+				},
+				"./mock-doc": {
+					"types": "./mock-doc/index.d.ts",
+					"import": "./mock-doc/index.js",
+					"require": "./mock-doc/index.cjs"
+				},
+				"./sys/node": {
+					"types": "./sys/node/index.d.ts",
+					"import": "./sys/node/index.js",
+					"require": "./sys/node/index.js"
+				},
+				"./testing/*": {
+					"import": "./testing/*",
+					"require": "./testing/*"
+				},
+				"./compiler/*": {
+					"types": "./compiler/*",
+					"import": "./compiler/*",
+					"require": "./compiler/*"
+				},
+				"./screenshot": {
+					"types": "./screenshot/index.d.ts",
+					"require": "./screenshot/index.js"
+				},
+				"./sys/node/*": {
+					"import": "./sys/node/*",
+					"require": "./sys/node/*"
+				},
+				"./jsx-runtime": {
+					"types": "./internal/stencil-core/jsx-runtime.d.ts",
+					"import": "./internal/stencil-core/jsx-runtime.js",
+					"require": "./internal/stencil-core/jsx-runtime.cjs"
+				},
+				"./internal/client": {
+					"import": "./internal/client/index.js",
+					"require": "./internal/client/index.js"
+				},
+				"./jsx-dev-runtime": {
+					"types": "./internal/stencil-core/jsx-dev-runtime.d.ts",
+					"import": "./internal/stencil-core/jsx-dev-runtime.js",
+					"require": "./internal/stencil-core/jsx-dev-runtime.cjs"
+				},
+				"./internal/testing": {
+					"import": "./internal/testing/index.js",
+					"require": "./internal/testing/index.js"
+				},
+				"./internal/app-data": {
+					"types": "./internal/app-data/index.d.ts",
+					"import": "./internal/app-data/index.js",
+					"require": "./internal/app-data/index.cjs"
+				},
+				"./internal/testing/*": {
+					"import": "./internal/testing/*"
+				},
+				"./testing/jest-preset": {
+					"require": "./testing/jest-preset.js"
+				},
+				"./internal/app-globals": {
+					"import": "./internal/app-globals/index.js",
+					"require": "./internal/app-globals/index.js"
+				},
+				"./internal/testing/jsx-runtime": {
+					"types": "./internal/testing/jsx-runtime.d.ts",
+					"import": "./internal/testing/jsx-runtime.js",
+					"require": "./internal/testing/jsx-runtime.js"
+				},
+				"./internal/testing/jsx-dev-runtime": {
+					"types": "./internal/testing/jsx-dev-runtime.d.ts",
+					"import": "./internal/testing/jsx-dev-runtime.js",
+					"require": "./internal/testing/jsx-dev-runtime.js"
+				}
+			},
+			"module": "./internal/stencil-core/index.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/core_4.43.5-dev.1781506088.ca85879_1781506259054_0.6433778522064442",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"readmeFilename": "readme.md",
+			"prettier": "@ionic/prettier-config",
+			"_nodeVersion": "20.20.2",
+			"contributors": []
+		},
+		"4.43.5-dev.1781592532.ca85879": {
+			"name": "@stencil/core",
+			"description": "A Compiler for Web Components and Progressive Web Apps",
+			"version": "4.43.5-dev.1781592532.ca85879",
+			"author": {
+				"name": "Ionic Team"
+			},
+			"homepage": "https://stenciljs.com/",
+			"repository": {
+				"url": "git+https://github.com/stenciljs/core.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/stenciljs/core/issues"
+			},
+			"engines": {
+				"npm": ">=7.10.0",
+				"node": ">=16.0.0"
+			},
+			"main": "./internal/stencil-core/index.cjs",
+			"optionalDependencies": {
+				"@rollup/rollup-darwin-x64": "4.44.0",
+				"@rollup/rollup-darwin-arm64": "4.44.0",
+				"@rollup/rollup-linux-x64-gnu": "4.44.0",
+				"@rollup/rollup-linux-x64-musl": "4.44.0",
+				"@rollup/rollup-win32-x64-msvc": "4.44.0",
+				"@rollup/rollup-linux-arm64-gnu": "4.44.0",
+				"@rollup/rollup-linux-arm64-musl": "4.44.0",
+				"@rollup/rollup-win32-arm64-msvc": "4.44.0"
+			},
+			"devDependencies": {
+				"ws": "8.17.1",
+				"tsx": "^4.19.2",
+				"exit": "^0.1.2",
+				"glob": "10.5.0",
+				"jest": "^27.4.5",
+				"open": "^9.0.0",
+				"execa": "9.3.0",
+				"listr": "^0.14.3",
+				"cspell": "^8.0.0",
+				"eslint": "^8.23.1",
+				"jquery": "https://github.com/jquery/jquery/tarball/c98597eaf5e144ee5e549cb41984687cd1033068",
+				"parse5": "7.2.1",
+				"rimraf": "^6.0.1",
+				"rollup": "4.44.0",
+				"semver": "^7.3.7",
+				"terser": "5.37.0",
+				"esbuild": "^0.25.0",
+				"mime-db": "^1.46.0",
+				"postcss": "^8.2.8",
+				"prompts": "2.4.2",
+				"webpack": "^5.75.0",
+				"css-what": "^7.0.0",
+				"fs-extra": "^11.0.0",
+				"jest-cli": "^27.4.5",
+				"prettier": "3.3.1",
+				"@types/ws": "^8.5.4",
+				"minimatch": "9.0.9",
+				"puppeteer": "^24.1.0",
+				"node-fetch": "3.3.2",
+				"pixelmatch": "5.3.0",
+				"typescript": "~5.8.3",
+				"@types/exit": "^0.1.31",
+				"@types/jest": "^27.0.3",
+				"@types/node": "^24.6.2",
+				"ansi-colors": "4.1.3",
+				"graceful-fs": "~4.2.6",
+				"@types/listr": "^0.14.4",
+				"@types/pngjs": "^6.0.1",
+				"autoprefixer": "10.4.19",
+				"magic-string": "^0.30.0",
+				"@types/eslint": "^8.4.6",
+				"@types/semver": "^7.3.12",
+				"@types/prompts": "^2.0.9",
+				"open-in-editor": "2.2.0",
+				"@types/fs-extra": "^11.0.0",
+				"merge-source-map": "^1.1.0",
+				"@types/pixelmatch": "^5.2.4",
+				"@yarnpkg/lockfile": "^1.1.0",
+				"@types/graceful-fs": "^4.1.5",
+				"eslint-plugin-jest": "^28.0.0",
+				"eslint-plugin-wdio": "^8.24.12",
+				"@rollup/plugin-json": "6.1.0",
+				"@rollup/pluginutils": "5.1.4",
+				"eslint-plugin-jsdoc": "^50.0.0",
+				"postcss-safe-parser": "^7.0.1",
+				"dts-bundle-generator": "~9.5.0",
+				"jest-environment-node": "^27.4.4",
+				"@ionic/prettier-config": "^4.0.0",
+				"@jridgewell/source-map": "^0.3.6",
+				"@rollup/plugin-replace": "6.0.2",
+				"esbuild-plugin-replace": "^1.4.0",
+				"eslint-config-prettier": "^9.0.0",
+				"@rollup/plugin-commonjs": "28.0.2",
+				"postcss-selector-parser": "^7.1.0",
+				"@types/yarnpkg__lockfile": "^1.1.5",
+				"@typescript-eslint/parser": "^7.0.0",
+				"conventional-changelog-cli": "^5.0.0",
+				"@rollup/plugin-node-resolve": "16.0.0",
+				"@typescript-eslint/eslint-plugin": "^7.0.0",
+				"eslint-plugin-simple-import-sort": "^12.0.0"
+			},
+			"keywords": [
+				"web components",
+				"components",
+				"stencil",
+				"ionic",
+				"webapp",
+				"custom elements",
+				"pwa",
+				"progressive web app"
+			],
+			"license": "MIT",
+			"bin": {
+				"stencil": "bin/stencil"
+			},
+			"maintainers": [
+				{
+					"name": "ionicjs",
+					"email": "hi@ionic.io"
+				},
+				{
+					"name": "gm-os",
+					"email": "goncalo.martins@outsystems.com"
+				},
+				{
+					"name": "vmfo",
+					"email": "vitor.oliveira@outsystems.com"
+				},
+				{
+					"name": "gnbm",
+					"email": "goncalo.martins.fct@gmail.com"
+				},
+				{
+					"name": "johnny.jenkins",
+					"email": "johnljenkins@hotmail.com"
+				},
+				{
+					"name": "stencil-bot",
+					"email": "sa_git_uicomponents@outsystems.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"ts": "tsc --noEmit --project scripts/tsconfig.json && tsx",
+				"lint": "eslint bin/* scripts/*.ts scripts/**/*.ts src/*.ts src/**/*.ts src/**/*.tsx test/wdio/**/*.tsx",
+				"test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --coverage",
+				"build": "npm run clean && npm run tsc.prod && npm run ts scripts/index.ts -- --prod --ci",
+				"clean": "rimraf --max-retries=2 build/ cli/ compiler/ dev-server/ internal/ mock-doc/ sys/node/ sys/ testing/ && npm run clean:scripts && npm run clean.screenshots",
+				"prettier": "npm run prettier.base -- --write",
+				"tsc.prod": "tsc",
+				"test.dist": "npm run ts scripts/index.ts -- --validate-build",
+				"test.jest": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js",
+				"test.prod": "npm run test.dist && npm run test.end-to-end && npm run test.jest && npm run test.wdio && npm run test.testing && npm run test.analysis",
+				"test.wdio": "cd test/wdio && npm ci && npm run test",
+				"release.ci": "NODE_OPTIONS=--max-old-space-size=4096 npm run ts scripts/index.ts -- --release --ci-publish",
+				"spellcheck": "npm run spellcheck.code && npm run spellcheck.markdown",
+				"test.watch": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --watch",
+				"build.watch": "npm run build -- --watch",
+				"install.jest": "npx tsx ./src/testing/jest/install-dependencies.mts",
+				"test.testing": "node scripts/test/validate-testing.js",
+				"clean:scripts": "rimraf scripts/build",
+				"prettier.base": "prettier --cache \"./({bin,scripts,src,test}/**/*.{ts,tsx,js,jsx})|bin/stencil|.github/(**/)?*.(yml|yaml)|*.js\"",
+				"test.analysis": "cd test && npm ci && npm run analysis.build-and-analyze",
+				"test.bundlers": "cd test && npm run bundlers",
+				"test.copytask": "cd test/copy-task && npm ci && npm run test",
+				"test.watch-all": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --watchAll --coverage",
+				"spellcheck.code": "cspell --config cspell-code.json --no-progress \"src/**/*.ts\" \"src/**/*.tsx\" \"scripts/**/*.ts\"",
+				"test.docs-build": "cd test && npm run build.docs-json && npm run build.docs-readme",
+				"test.end-to-end": "cd test/end-to-end && npm ci && npm test && npm run test.dist",
+				"test.type-tests": "cd ./test/wdio && npm install && npm run build.test-sibling && npm run build.main && cd ../../ && tsc -p test/type-tests/tsconfig.json",
+				"prettier.dry-run": "npm run prettier.base -- --list-different",
+				"test.bundle-size": "cd test/bundle-size && npm test",
+				"clean.screenshots": "rimraf test/end-to-end/screenshot/builds test/end-to-end/screenshot/images",
+				"release.ci.prepare": "npm run ts scripts/index.ts -- --release --ci-prepare",
+				"test.wdio.testOnly": "cd test/wdio && npm ci && npm run wdio",
+				"spellcheck.markdown": "cspell --config cspell-markdown.json --no-progress \"*.md\" \"**/*.md\"",
+				"build.updateSelectorEngine": "npm run ts scripts/updateSelectorEngine.ts"
+			},
+			"lastModified": 0,
+			"_id": "@stencil/core@4.43.5-dev.1781592532.ca85879",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@stencil/core/-/core-4.43.5-dev.1781592532.ca85879.tgz",
+				"shasum": "e9fbf5fd73c7af4f19c3c19ab2bcb5f09a38c080",
+				"integrity": "sha512-0UvgvI64uYTLIb255OLQoUBvnx8Hg4xW99/ULefZIitQOGnuPHGxeJJnOetExQLXbFVghOLyC9e9uDT4sGZV6A==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEQCIC0W6Sk97IROChCd4AoHUSehJP0SU5+vSXrnv2SAi38NAiBnkf7dguxy5wJ3qMSHzRpTJu9wZ/q31DC78XWxny0Usw=="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/@stencil%2fcore@4.43.5-dev.1781592532.ca85879",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "11.17.0",
+			"_npmUser": {
+				"name": "GitHub Actions",
+				"email": "npm-oidc-no-reply@github.com",
+				"trustedPublisher": {
+					"id": "github",
+					"oidcConfigId": "oidc:572e3806-71f4-4421-9a10-c8b3254fafd8"
+				}
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "ca858791094349a3d5ccfd9afbdb71612973c2cc",
+			"types": "./internal/stencil-core/index.d.ts",
+			"volta": {
+				"npm": "10.8.1",
+				"node": "22.2.0"
+			},
+			"exports": {
+				".": {
+					"types": "./internal/stencil-core/index.d.ts",
+					"import": "./internal/stencil-core/index.js",
+					"require": "./internal/stencil-core/index.cjs"
+				},
+				"./cli": {
+					"import": "./cli/index.js",
+					"require": "./cli/index.cjs"
+				},
+				"./testing": {
+					"types": "./testing/index.d.ts",
+					"import": "./testing/index.js",
+					"require": "./testing/index.js"
+				},
+				"./compiler": {
+					"types": "./compiler/stencil.d.ts",
+					"import": "./compiler/stencil.js",
+					"require": "./compiler/stencil.js"
+				},
+				"./internal": {
+					"types": "./internal/index.d.ts",
+					"import": "./internal/index.js"
+				},
+				"./mock-doc": {
+					"types": "./mock-doc/index.d.ts",
+					"import": "./mock-doc/index.js",
+					"require": "./mock-doc/index.cjs"
+				},
+				"./sys/node": {
+					"types": "./sys/node/index.d.ts",
+					"import": "./sys/node/index.js",
+					"require": "./sys/node/index.js"
+				},
+				"./testing/*": {
+					"import": "./testing/*",
+					"require": "./testing/*"
+				},
+				"./compiler/*": {
+					"types": "./compiler/*",
+					"import": "./compiler/*",
+					"require": "./compiler/*"
+				},
+				"./screenshot": {
+					"types": "./screenshot/index.d.ts",
+					"require": "./screenshot/index.js"
+				},
+				"./sys/node/*": {
+					"import": "./sys/node/*",
+					"require": "./sys/node/*"
+				},
+				"./jsx-runtime": {
+					"types": "./internal/stencil-core/jsx-runtime.d.ts",
+					"import": "./internal/stencil-core/jsx-runtime.js",
+					"require": "./internal/stencil-core/jsx-runtime.cjs"
+				},
+				"./internal/client": {
+					"import": "./internal/client/index.js",
+					"require": "./internal/client/index.js"
+				},
+				"./jsx-dev-runtime": {
+					"types": "./internal/stencil-core/jsx-dev-runtime.d.ts",
+					"import": "./internal/stencil-core/jsx-dev-runtime.js",
+					"require": "./internal/stencil-core/jsx-dev-runtime.cjs"
+				},
+				"./internal/testing": {
+					"import": "./internal/testing/index.js",
+					"require": "./internal/testing/index.js"
+				},
+				"./internal/app-data": {
+					"types": "./internal/app-data/index.d.ts",
+					"import": "./internal/app-data/index.js",
+					"require": "./internal/app-data/index.cjs"
+				},
+				"./internal/testing/*": {
+					"import": "./internal/testing/*"
+				},
+				"./testing/jest-preset": {
+					"require": "./testing/jest-preset.js"
+				},
+				"./internal/app-globals": {
+					"import": "./internal/app-globals/index.js",
+					"require": "./internal/app-globals/index.js"
+				},
+				"./internal/testing/jsx-runtime": {
+					"types": "./internal/testing/jsx-runtime.d.ts",
+					"import": "./internal/testing/jsx-runtime.js",
+					"require": "./internal/testing/jsx-runtime.js"
+				},
+				"./internal/testing/jsx-dev-runtime": {
+					"types": "./internal/testing/jsx-dev-runtime.d.ts",
+					"import": "./internal/testing/jsx-dev-runtime.js",
+					"require": "./internal/testing/jsx-dev-runtime.js"
+				}
+			},
+			"module": "./internal/stencil-core/index.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/core_4.43.5-dev.1781592532.ca85879_1781592708413_0.8510951981092763",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"readmeFilename": "readme.md",
+			"prettier": "@ionic/prettier-config",
+			"_nodeVersion": "20.20.2",
+			"contributors": []
 		}
 	},
 	"time": {
@@ -420745,7 +426144,7 @@
 		"4.23.0-dev.1735794112.5d29255": "2025-01-02T05:04:42.660Z",
 		"4.43.4-dev.1779431027.6cdcec7": "2026-05-22T06:26:33.370Z",
 		"4.38.2-dev.1762146131.744b783": "2025-11-03T05:04:57.149Z",
-		"modified": "2026-06-11T06:36:50.888Z",
+		"modified": "2026-06-26T06:27:34.642Z",
 		"4.3.0-dev.1695790914.cb3eac3": "2023-09-27T05:05:39.034Z",
 		"3.1.0-dev.1678424518.ea352a3": "2023-03-10T05:05:49.148Z",
 		"4.32.0-dev.1748581589.dc4bd52": "2025-05-30T05:27:20.872Z",
@@ -421477,7 +426876,27 @@
 		"4.4.1-dev.1697173338.183a05b": "2023-10-13T05:06:49.131Z",
 		"4.9.0-dev.1703048506.2c73401": "2023-12-20T05:04:51.744Z",
 		"4.27.0-dev.1740459701.8d596b0": "2025-02-25T05:04:50.821Z",
-		"4.0.3-dev.1691038929.adc5911": "2023-08-03T05:06:43.975Z"
+		"4.0.3-dev.1691038929.adc5911": "2023-08-03T05:06:43.975Z",
+		"4.43.5-dev.1781764531.ca85879": "2026-06-18T06:38:40.581Z",
+		"4.43.5-dev.1782110921.ca85879": "2026-06-22T06:51:25.063Z",
+		"4.43.5-dev.1782195838.f6d6f8c": "2026-06-23T06:26:43.518Z",
+		"4.43.5-dev.1781851551.ca85879": "2026-06-19T06:48:42.857Z",
+		"4.43.5-dev.1782368644.f6d6f8c": "2026-06-25T06:26:48.588Z",
+		"5.0.0-alpha.10": "2026-06-22T19:57:07.201Z",
+		"5.0.0-alpha.12": "2026-06-22T22:29:09.247Z",
+		"5.0.0-alpha.11": "2026-06-22T21:34:21.691Z",
+		"5.0.0-alpha.14": "2026-06-23T16:22:54.179Z",
+		"5.0.0-alpha.13": "2026-06-23T15:45:27.764Z",
+		"5.0.0-alpha.16": "2026-06-24T13:05:16.927Z",
+		"5.0.0-alpha.15": "2026-06-23T20:11:27.019Z",
+		"4.43.5-dev.1781245971.06258c8": "2026-06-12T06:35:39.448Z",
+		"4.43.5-dev.1781678626.ca85879": "2026-06-17T06:46:04.188Z",
+		"5.0.0-alpha.8": "2026-06-12T23:23:26.975Z",
+		"5.0.0-alpha.9": "2026-06-22T15:58:32.908Z",
+		"4.43.5-dev.1782282081.f6d6f8c": "2026-06-24T06:24:19.995Z",
+		"4.43.5-dev.1782455081.f6d6f8c": "2026-06-26T06:27:34.305Z",
+		"4.43.5-dev.1781506088.ca85879": "2026-06-15T06:50:59.282Z",
+		"4.43.5-dev.1781592532.ca85879": "2026-06-16T06:51:48.641Z"
 	},
 	"users": {},
 	"dist-tags": {
@@ -421487,12 +426906,12 @@
 		"v3.0.0_beta.0": "3.0.0-beta.0",
 		"v4-next": "4.0.0",
 		"v3.0.0_beta.1": "3.0.0-beta.1",
-		"nightly": "4.43.5-dev.1781159630.06258c8",
+		"nightly": "4.43.5-dev.1782455081.f6d6f8c",
 		"dev": "4.43.4-dev.1780415238.cd4f59d",
 		"v3.0.0_rc.1": "3.0.0-rc.1",
 		"v3.0.0_rc.0": "3.0.0-rc.0",
 		"v3-next": "3.0.0",
-		"alpha": "5.0.0-alpha.7",
+		"alpha": "5.0.0-alpha.16",
 		"3.0.0_alpha.1": "3.0.0-alpha.1",
 		"v3.0.0_alpha.2": "3.0.0-alpha.2",
 		"3.0.0_alpha.0": "3.0.0-alpha.0",
@@ -421503,8 +426922,8 @@
 	},
 	"_uplinks": {
 		"artifactory-sabadell": {
-			"etag": "2af1481d0f51b9f990765d628da4d7baf43c1996",
-			"fetched": 1781195917887
+			"etag": "9a359444d1559288153065395f2803372d4906ab",
+			"fetched": 1782459824295
 		}
 	},
 	"_distfiles": {
@@ -430687,6 +436106,106 @@
 			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@stencil/core/-/core-4.0.3-dev.1691038929.adc5911.tgz",
 			"sha": "db8f183b1ec2e48ea4b7786bf0c0e00f07fbba05",
 			"registry": "artifactory-sabadell"
+		},
+		"core-4.43.5-dev.1781764531.ca85879.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@stencil/core/-/core-4.43.5-dev.1781764531.ca85879.tgz",
+			"sha": "f6a1e2aed6c9541991a9ed4e25a3b3a1a5a2309d",
+			"registry": "artifactory-sabadell"
+		},
+		"core-4.43.5-dev.1782110921.ca85879.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@stencil/core/-/core-4.43.5-dev.1782110921.ca85879.tgz",
+			"sha": "03abd4bd3510853bd762c4ad37903ab6b3dd3aa0",
+			"registry": "artifactory-sabadell"
+		},
+		"core-4.43.5-dev.1782195838.f6d6f8c.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@stencil/core/-/core-4.43.5-dev.1782195838.f6d6f8c.tgz",
+			"sha": "94a16c81cb76089165663fede05fbf51b8909614",
+			"registry": "artifactory-sabadell"
+		},
+		"core-4.43.5-dev.1781851551.ca85879.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@stencil/core/-/core-4.43.5-dev.1781851551.ca85879.tgz",
+			"sha": "898dcd6516cc72720a9545c59316c673f97a6ffc",
+			"registry": "artifactory-sabadell"
+		},
+		"core-4.43.5-dev.1782368644.f6d6f8c.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@stencil/core/-/core-4.43.5-dev.1782368644.f6d6f8c.tgz",
+			"sha": "fbd2abcc636b8d1a05f79e156cc4eb3c24c99915",
+			"registry": "artifactory-sabadell"
+		},
+		"core-5.0.0-alpha.10.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@stencil/core/-/core-5.0.0-alpha.10.tgz",
+			"sha": "222a98d4b8f492a580022a49e3f91ae4956d7653",
+			"registry": "artifactory-sabadell"
+		},
+		"core-5.0.0-alpha.12.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@stencil/core/-/core-5.0.0-alpha.12.tgz",
+			"sha": "1087107bec5181a8607009974cdbdeaf2c27bd99",
+			"registry": "artifactory-sabadell"
+		},
+		"core-5.0.0-alpha.11.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@stencil/core/-/core-5.0.0-alpha.11.tgz",
+			"sha": "5011ca99458a70b2eb189bbd96194b834555d65a",
+			"registry": "artifactory-sabadell"
+		},
+		"core-5.0.0-alpha.14.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@stencil/core/-/core-5.0.0-alpha.14.tgz",
+			"sha": "979519da0be4f7e7dfeae1a7216bdd15ccdea818",
+			"registry": "artifactory-sabadell"
+		},
+		"core-5.0.0-alpha.13.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@stencil/core/-/core-5.0.0-alpha.13.tgz",
+			"sha": "1a94507ebead5cc7f9e502d64dfc18092b33d064",
+			"registry": "artifactory-sabadell"
+		},
+		"core-5.0.0-alpha.16.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@stencil/core/-/core-5.0.0-alpha.16.tgz",
+			"sha": "513c64c41beee93b6188e36440bce2476df61dec",
+			"registry": "artifactory-sabadell"
+		},
+		"core-5.0.0-alpha.15.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@stencil/core/-/core-5.0.0-alpha.15.tgz",
+			"sha": "fb4285c4d205ecb3500b65ac548e8c04fb44c7f1",
+			"registry": "artifactory-sabadell"
+		},
+		"core-4.43.5-dev.1781245971.06258c8.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@stencil/core/-/core-4.43.5-dev.1781245971.06258c8.tgz",
+			"sha": "bff65b29b8e6b0cc7da869ad83f64e6c5be9599d",
+			"registry": "artifactory-sabadell"
+		},
+		"core-4.43.5-dev.1781678626.ca85879.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@stencil/core/-/core-4.43.5-dev.1781678626.ca85879.tgz",
+			"sha": "48015f09b8aba489717b626e8f525b63a074ad0d",
+			"registry": "artifactory-sabadell"
+		},
+		"core-5.0.0-alpha.8.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@stencil/core/-/core-5.0.0-alpha.8.tgz",
+			"sha": "161d5090ce5483364fdf0f1cb924eee6640696cb",
+			"registry": "artifactory-sabadell"
+		},
+		"core-5.0.0-alpha.9.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@stencil/core/-/core-5.0.0-alpha.9.tgz",
+			"sha": "96acd45b14e1c8fb578dc824ddada0b204092e78",
+			"registry": "artifactory-sabadell"
+		},
+		"core-4.43.5-dev.1782282081.f6d6f8c.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@stencil/core/-/core-4.43.5-dev.1782282081.f6d6f8c.tgz",
+			"sha": "94dd1589e8b2e17f638d362aaa0efe971a6ebef8",
+			"registry": "artifactory-sabadell"
+		},
+		"core-4.43.5-dev.1782455081.f6d6f8c.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@stencil/core/-/core-4.43.5-dev.1782455081.f6d6f8c.tgz",
+			"sha": "83906af55be9a9fdb0d0b62c8c9be8316887b7d4",
+			"registry": "artifactory-sabadell"
+		},
+		"core-4.43.5-dev.1781506088.ca85879.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@stencil/core/-/core-4.43.5-dev.1781506088.ca85879.tgz",
+			"sha": "278b10d0187ce4962310b8dcf3df99b2491dd0c2",
+			"registry": "artifactory-sabadell"
+		},
+		"core-4.43.5-dev.1781592532.ca85879.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@stencil/core/-/core-4.43.5-dev.1781592532.ca85879.tgz",
+			"sha": "e9fbf5fd73c7af4f19c3c19ab2bcb5f09a38c080",
+			"registry": "artifactory-sabadell"
 		}
 	},
 	"_attachments": {
@@ -430694,7 +436213,7 @@
 			"shasum": "cbac84b996475b8fc983931539ed1261174e2df3"
 		}
 	},
-	"_rev": "3-98d56cd2eda50eba",
+	"_rev": "4-dfdf4f89e94d7e83",
 	"_id": "@stencil/core",
 	"readme": ""
 }

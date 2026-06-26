@@ -4291,6 +4291,225 @@
 			},
 			"type": "module",
 			"contributors": []
+		},
+		"1.0.5-dev.1782144489686": {
+			"name": "@proteo/event-decorators",
+			"version": "1.0.5-dev.1782144489686",
+			"description": "Proteo4 Frontend Core Library",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/decorators/event-decorators"
+			},
+			"publishConfig": {
+				"registry": "http://localhost:4873"
+			},
+			"main": "index.js",
+			"type": "module",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"dependencies": {
+				"@stencil/core": "2.9.0"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@proteo/esbuild-config": "1.0.2",
+				"@proteo/jest-config": "1.0.2",
+				"@proteo/tsconfig": "1.1.2",
+				"@proteo/types": "1.1.88-dev.1782144489686",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4"
+			},
+			"types": "types/index.d.ts",
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts && pnpm run build:bundle",
+				"build:bundle": "proteo-esbuild",
+				"build:ts": "tsc --build --pretty",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"_nodeVersion": "24.16.0",
+			"_id": "@proteo/event-decorators@1.0.5-dev.1782144489686",
+			"dist": {
+				"integrity": "sha512-+AIz/26X9QrKTRfPkgZubPG8xTSkyEmVNcxRhZnxw33tyP8By2OIkngT6ZHw4RhYHA47objQCQZLe9IA+AFv/Q==",
+				"shasum": "87b62e8c2aff79a721cb9f2ff247099798da0d43",
+				"tarball": "http://localhost:4873/@proteo/event-decorators/-/@proteo/event-decorators-1.0.5-dev.1782144489686.tgz"
+			},
+			"contributors": []
+		},
+		"1.0.5-dev.1782457230364": {
+			"name": "@proteo/event-decorators",
+			"version": "1.0.5-dev.1782457230364",
+			"description": "Proteo4 Frontend Core Library",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/decorators/event-decorators"
+			},
+			"publishConfig": {
+				"registry": "http://localhost:4873"
+			},
+			"main": "index.js",
+			"type": "module",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"dependencies": {
+				"@stencil/core": "2.9.0"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@proteo/esbuild-config": "1.0.2",
+				"@proteo/jest-config": "1.0.2",
+				"@proteo/tsconfig": "1.1.2",
+				"@proteo/types": "1.1.88-dev.1782457230364",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4"
+			},
+			"types": "types/index.d.ts",
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts && pnpm run build:bundle",
+				"build:bundle": "proteo-esbuild",
+				"build:ts": "tsc --build --pretty",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"_nodeVersion": "24.16.0",
+			"_id": "@proteo/event-decorators@1.0.5-dev.1782457230364",
+			"dist": {
+				"integrity": "sha512-UWKM7BfRgZHnq9lnifEdZ8a/SszazqUHANNkmZCDpy0YE3jpONwbhBXtLF1Bu/suIvvszp9K5hGRSVk3g6iPLw==",
+				"shasum": "05da6fe85da0291e5578e93a3d2d708e6d757424",
+				"tarball": "http://localhost:4873/@proteo/event-decorators/-/@proteo/event-decorators-1.0.5-dev.1782457230364.tgz"
+			},
+			"contributors": []
+		},
+		"1.0.5-dev.1782458447373": {
+			"name": "@proteo/event-decorators",
+			"version": "1.0.5-dev.1782458447373",
+			"description": "Proteo4 Frontend Core Library",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/decorators/event-decorators"
+			},
+			"publishConfig": {
+				"registry": "http://localhost:4873"
+			},
+			"main": "index.js",
+			"type": "module",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"dependencies": {
+				"@stencil/core": "2.9.0"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@proteo/esbuild-config": "1.0.2",
+				"@proteo/jest-config": "1.0.2",
+				"@proteo/tsconfig": "1.1.2",
+				"@proteo/types": "1.1.88-dev.1782458447373",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4"
+			},
+			"types": "types/index.d.ts",
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts && pnpm run build:bundle",
+				"build:bundle": "proteo-esbuild",
+				"build:ts": "tsc --build --pretty",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"_nodeVersion": "24.16.0",
+			"_id": "@proteo/event-decorators@1.0.5-dev.1782458447373",
+			"dist": {
+				"integrity": "sha512-4fyGCB321Brsp2fClOoSBSlB3nFab7DZuxKpJyTgI/6pbtsEZsFC/JEfa/5Gq12lYX02G/uWIsubKpJ2nGd7gQ==",
+				"shasum": "b3d01cfe73e95dab8bbfcba3243985b216cfe930",
+				"tarball": "http://localhost:4873/@proteo/event-decorators/-/@proteo/event-decorators-1.0.5-dev.1782458447373.tgz"
+			},
+			"contributors": []
 		}
 	},
 	"time": {
@@ -4315,7 +4534,7 @@
 		"1.1.0-dev-1": "2026-05-20T15:09:49.614Z",
 		"0.0.0-SNAPSHOT-20250902100438": "2025-09-02T10:33:40.230Z",
 		"1.0.0-next.2": "2023-01-11T13:09:13.036Z",
-		"modified": "2026-06-16T14:09:51.914Z",
+		"modified": "2026-06-26T07:20:49.331Z",
 		"1.0.0-next.1": "2023-01-11T13:09:09.585Z",
 		"1.0.0-rc.5": "2023-01-11T13:09:20.494Z",
 		"1.0.0-next.0": "2023-01-11T13:09:08.864Z",
@@ -4337,17 +4556,20 @@
 		"1.0.5-dev.1781194905727": "2026-06-11T16:21:48.605Z",
 		"1.0.5-dev.1781195668306": "2026-06-11T16:34:36.528Z",
 		"1.0.5-SNAPSHOT-100": "2026-06-16T09:34:28.184Z",
-		"1.0.5-tmp-build-test-SNAPSHOT-111": "2026-06-16T14:09:51.914Z"
+		"1.0.5-tmp-build-test-SNAPSHOT-111": "2026-06-16T14:09:51.914Z",
+		"1.0.5-dev.1782144489686": "2026-06-22T16:09:22.518Z",
+		"1.0.5-dev.1782457230364": "2026-06-26T07:00:32.039Z",
+		"1.0.5-dev.1782458447373": "2026-06-26T07:20:49.331Z"
 	},
 	"users": {},
 	"dist-tags": {
 		"latest": "1.0.5",
-		"dev": "1.0.5-dev.1781195668306"
+		"dev": "1.0.5-dev.1782458447373"
 	},
 	"_uplinks": {
 		"artifactory-sabadell": {
-			"etag": "266c2570a9b487a072b9da7d07d2d0e858ef7fff",
-			"fetched": 1781793657131
+			"etag": "51d301111627c6755b1df18faaf78616b639220a",
+			"fetched": 1782459957640
 		}
 	},
 	"_distfiles": {
@@ -4554,9 +4776,21 @@
 		"event-decorators-1.0.5-dev.1781195668306.tgz": {
 			"shasum": "4d333a0d764acbef823b4cee3a33647288f896b6",
 			"version": "1.0.5-dev.1781195668306"
+		},
+		"event-decorators-1.0.5-dev.1782144489686.tgz": {
+			"shasum": "87b62e8c2aff79a721cb9f2ff247099798da0d43",
+			"version": "1.0.5-dev.1782144489686"
+		},
+		"event-decorators-1.0.5-dev.1782457230364.tgz": {
+			"shasum": "05da6fe85da0291e5578e93a3d2d708e6d757424",
+			"version": "1.0.5-dev.1782457230364"
+		},
+		"event-decorators-1.0.5-dev.1782458447373.tgz": {
+			"shasum": "b3d01cfe73e95dab8bbfcba3243985b216cfe930",
+			"version": "1.0.5-dev.1782458447373"
 		}
 	},
-	"_rev": "15-c995f1bb7e92e855",
+	"_rev": "26-7782154942eb73cb",
 	"_id": "@proteo/event-decorators",
 	"readme": ""
 }

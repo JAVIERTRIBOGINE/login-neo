@@ -1,0 +1,740 @@
+{
+	"name": "is-weakset",
+	"versions": {
+		"2.0.0": {
+			"name": "is-weakset",
+			"description": "Is this value a JS WeakSet? This module works cross-realm/iframe, and despite ES6 @@toStringTag.",
+			"version": "2.0.0",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/inspect-js/is-weakset#readme",
+			"repository": {
+				"url": "git+https://github.com/inspect-js/is-weakset.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/inspect-js/is-weakset/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"tape": "^4.11.0",
+				"eslint": "^6.6.0",
+				"es5-shim": "^4.5.13",
+				"es6-shim": "^0.35.5",
+				"for-each": "^0.3.3",
+				"auto-changelog": "^1.16.2",
+				"object-inspect": "^1.7.0",
+				"safe-publish-latest": "^1.1.4",
+				"@ljharb/eslint-config": "^15.0.1"
+			},
+			"keywords": [
+				"map",
+				"weakmap",
+				"set",
+				"weakset",
+				"collection",
+				"is",
+				"robust"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint .",
+				"test": "npm run tests-only",
+				"pretest": "npm run lint",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"posttest": "npx aud",
+				"prepublish": "safe-publish-latest",
+				"tests-only": "node test",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\"",
+				"posttests-only": "node -e \"require('es5-shim'); require('es6-shim'); require('./test');\""
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "is-weakset@2.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/is-weakset/-/is-weakset-2.0.0.tgz",
+				"shasum": "119577bcf75528e7d5b4c7ebaa4fdee9e2d3e5d7",
+				"integrity": "sha512-bDiKqyPK2GeWiZNsm1zHf0adJJ2I0gNzwjBxu4iajQPgJH3UZiXTGUPMNmbQ3TIBYPs+tVNpiDSF/eF5U4EF7A==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIENokAs7CHbXr2qJVEyGDDa4Gu39jQhCWOmUMlK6ahXhAiEAie8meNO8y28918eS5AS5Nlnn2ih0ZvqnOTVMUNSsCGE="
+					}
+				]
+			},
+			"_npmVersion": "6.12.1",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "15d0d42f37269bdbf25f34af0b4cedcc8990bcfc",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/is-weakset_2.0.0_1573590219293_0.4392444827645412",
+				"host": "s3://npm-registry-packages"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false
+			},
+			"_nodeVersion": "13.1.0",
+			"contributors": []
+		},
+		"2.0.1": {
+			"name": "is-weakset",
+			"description": "Is this value a JS WeakSet? This module works cross-realm/iframe, and despite ES6 @@toStringTag.",
+			"version": "2.0.1",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/inspect-js/is-weakset#readme",
+			"repository": {
+				"url": "git+https://github.com/inspect-js/is-weakset.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/inspect-js/is-weakset/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"tape": "^4.12.0",
+				"eslint": "^6.7.2",
+				"es5-shim": "^4.5.13",
+				"es6-shim": "^0.35.5",
+				"for-each": "^0.3.3",
+				"auto-changelog": "^1.16.2",
+				"object-inspect": "^1.7.0",
+				"safe-publish-latest": "^1.1.4",
+				"@ljharb/eslint-config": "^15.0.2"
+			},
+			"keywords": [
+				"map",
+				"weakmap",
+				"set",
+				"weakset",
+				"collection",
+				"is",
+				"robust"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint .",
+				"test": "npm run tests-only",
+				"pretest": "npm run lint",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"posttest": "npx aud",
+				"prepublish": "safe-publish-latest",
+				"tests-only": "node test",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\"",
+				"posttests-only": "node -e \"require('es5-shim'); require('es6-shim'); require('./test');\""
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "is-weakset@2.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/is-weakset/-/is-weakset-2.0.1.tgz",
+				"shasum": "e9a0af88dbd751589f5e50d80f4c98b780884f83",
+				"integrity": "sha512-pi4vhbhVHGLxohUw7PhGsueT4vRGFoXhP7+RGN0jKIv9+8PWYCQTqtADngrxOm2g46hoH0+g8uZZBzMrvVGDmw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDBG4GICygcVytGqRggAB7SvJo8zFlIlCaTOlezvpLgpQIgGSRefF/vLnIKXIRyOR1Sf7HRAqLvJNFBY2cF3lwGqEk="
+					}
+				]
+			},
+			"_npmVersion": "6.13.1",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "ed2a5c1c3424911887a2ef8dea42bea43c7f90ed",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/is-weakset_2.0.1_1576647554177_0.3211947336392891",
+				"host": "s3://npm-registry-packages"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false
+			},
+			"_nodeVersion": "13.3.0",
+			"contributors": []
+		},
+		"2.0.4": {
+			"name": "is-weakset",
+			"description": "Is this value a JS WeakSet? This module works cross-realm/iframe, and despite ES6 @@toStringTag.",
+			"version": "2.0.4",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/inspect-js/is-weakset#readme",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/inspect-js/is-weakset.git"
+			},
+			"bugs": {
+				"url": "https://github.com/inspect-js/is-weakset/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"call-bound": "^1.0.3",
+				"get-intrinsic": "^1.2.6"
+			},
+			"devDependencies": {
+				"@arethetypeswrong/cli": "^0.17.1",
+				"@ljharb/eslint-config": "^21.1.1",
+				"@ljharb/tsconfig": "^0.2.2",
+				"@types/for-each": "^0.3.3",
+				"@types/get-intrinsic": "^1.2.3",
+				"@types/object-inspect": "^1.13.0",
+				"@types/tape": "^5.7.0",
+				"auto-changelog": "^2.5.0",
+				"core-js": "^2.6.12",
+				"encoding": "^0.1.13",
+				"es5-shim": "^4.6.7",
+				"es6-shim": "^0.35.8",
+				"eslint": "=8.8.0",
+				"for-each": "^0.3.3",
+				"in-publish": "^2.0.1",
+				"npmignore": "^0.3.1",
+				"nyc": "^10.3.2",
+				"object-inspect": "^1.13.3",
+				"safe-publish-latest": "^2.0.0",
+				"tape": "^5.9.0",
+				"typescript": "next"
+			},
+			"keywords": [
+				"map",
+				"weakmap",
+				"set",
+				"weakset",
+				"collection",
+				"is",
+				"robust"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"prepack": "npmignore --auto --commentLines=autogenerated",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\"",
+				"prepublishOnly": "safe-publish-latest",
+				"prepublish": "not-in-publish || npm run prepublishOnly",
+				"pretest": "npm run lint",
+				"lint": "eslint --ext=js,mjs .",
+				"postlint": "tsc -p . && attw -P",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"tests:shims": "nyc tape --require=es5-shim --require=es6-shim 'test/**/*.js'",
+				"tests:corejs": "nyc tape --require=core-js 'test/**/*.js'",
+				"test": "npm run tests-only && npm run tests:shims && npm run tests:corejs",
+				"posttest": "npx npm@'>=10.2' audit --production"
+			},
+			"publishConfig": {
+				"ignore": [
+					".github/workflows"
+				]
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "is-weakset@2.0.4",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/is-weakset/-/is-weakset-2.0.4.tgz",
+				"shasum": "c9f5deb0bc1906c6d6f1027f284ddf459249daca",
+				"integrity": "sha512-mfcwb6IzQyOKTs84CQMrOwW4gQcaTOAWJ0zzJCl2WSPDrWk/OzDaImWFH3djXhb24g4eudZfLRozAvPGw4d9hQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQChEZSRi//6pzgqpcfQ1n1vt6BRrBr8E93gL/GW4u6BXwIhALpjgM+zdkRWZR1yvazgCLutmuYq58i3a2lJCD8WoF0Z"
+					}
+				]
+			},
+			"_npmVersion": "10.9.2",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "3cf98e3fd0236a8457861db81cc7c5b8d1f4106d",
+			"types": "./index.d.ts",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages-npm-production",
+				"tmp": "tmp/is-weakset_2.0.4_1734413863196_0.2574897336775783"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false,
+				"hideCredit": true
+			},
+			"sideEffects": false,
+			"_nodeVersion": "23.4.0",
+			"contributors": []
+		},
+		"1.0.0": {
+			"name": "is-weakset",
+			"description": "Easily check if a givin object is an ES6 WeakSet",
+			"version": "1.0.0",
+			"author": {
+				"name": "Arthur Verschaeve",
+				"email": "contact@arthurverschaeve.be"
+			},
+			"homepage": "https://github.com/arthurvr/is-weakset",
+			"repository": {
+				"url": "https://github.com/arthurvr/is-weakset",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/arthurvr/is-weakset/issues"
+			},
+			"engines": {
+				"node": ">=0.12.0"
+			},
+			"devDependencies": {
+				"ava": "^0.0.4"
+			},
+			"keywords": [
+				"set",
+				"es6",
+				"harmony",
+				"typeof",
+				"type check",
+				"weakset"
+			],
+			"license": "MIT",
+			"files": [
+				"index.js"
+			],
+			"maintainers": [
+				{
+					"name": "arthurvr",
+					"email": "contact@arthurverschaeve.be"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "node test/test.js"
+			},
+			"lastModified": 0,
+			"_id": "is-weakset@1.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/is-weakset/-/is-weakset-1.0.0.tgz",
+				"shasum": "3fe684c08ec698c6492e588925ceff8665fd9fa1",
+				"integrity": "sha512-Nv4iOqp4k+QEEeencgxGiPormPH7WS8t6gEvMN8CD/DWbWeAlQ96rnSk8+V9k3PssolJOlfYWyY7U6pSEK2L0g==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQD1WZikzOjl9TKGhleY9aK2ER2440IUO8gj+eTqIuPc0QIhANWxqJobzTVoJiFXCPIOzgrn1vI3wc/NI0H6Tnp5cFUh"
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "2.5.1",
+			"_npmUser": {
+				"name": "arthurvr",
+				"email": "contact@arthurverschaeve.be"
+			},
+			"gitHead": "c71bd3a75b29d600fb276b2a76d47667e5c3b159",
+			"_shasum": "3fe684c08ec698c6492e588925ceff8665fd9fa1",
+			"_nodeVersion": "1.2.0",
+			"contributors": []
+		},
+		"1.0.1": {
+			"name": "is-weakset",
+			"description": "Easily check if a givin object is an ES6 WeakSet",
+			"version": "1.0.1",
+			"author": {
+				"name": "Arthur Verschaeve",
+				"email": "contact@arthurverschaeve.be"
+			},
+			"homepage": "https://github.com/arthurvr/is-weakset#readme",
+			"repository": {
+				"url": "git+https://github.com/arthurvr/is-weakset.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/arthurvr/is-weakset/issues"
+			},
+			"engines": {
+				"node": ">=0.12.0"
+			},
+			"devDependencies": {
+				"ava": "^0.0.4"
+			},
+			"keywords": [
+				"set",
+				"es6",
+				"harmony",
+				"typeof",
+				"type check",
+				"weakset"
+			],
+			"license": "MIT",
+			"files": [
+				"index.js"
+			],
+			"maintainers": [
+				{
+					"name": "arthurvr",
+					"email": "contact@arthurverschaeve.be"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "node test.js"
+			},
+			"lastModified": 0,
+			"_id": "is-weakset@1.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/is-weakset/-/is-weakset-1.0.1.tgz",
+				"shasum": "79bf1d4656abd2404f3736c1aaae62d93a73bfdc",
+				"integrity": "sha512-IAQ1mL6SDq5P2HjsT0wy4CU5/3ywc7gJB5qNoHIgekhx0Wt2QSQBSt++JDTzDuhYQurKYTSstK6zwDDUB+e2EQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIBIuWkC7lYW09AM2byemzIbxIOS2udnnRtEYR2wJJOcQAiBQoPG/CUEN8cyhf7afXOyk8E3LhIpH7bkeAGFko7rLrQ=="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "2.9.0",
+			"_npmUser": {
+				"name": "arthurvr",
+				"email": "contact@arthurverschaeve.be"
+			},
+			"gitHead": "2c0879d098cab47799a32feef0dd92c07027fb1c",
+			"_shasum": "79bf1d4656abd2404f3736c1aaae62d93a73bfdc",
+			"_nodeVersion": "2.0.1",
+			"contributors": []
+		},
+		"2.0.2": {
+			"name": "is-weakset",
+			"description": "Is this value a JS WeakSet? This module works cross-realm/iframe, and despite ES6 @@toStringTag.",
+			"version": "2.0.2",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/inspect-js/is-weakset#readme",
+			"repository": {
+				"url": "git+https://github.com/inspect-js/is-weakset.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/inspect-js/is-weakset/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"call-bind": "^1.0.2",
+				"get-intrinsic": "^1.1.1"
+			},
+			"devDependencies": {
+				"aud": "^1.1.5",
+				"nyc": "^10.3.2",
+				"tape": "^5.3.2",
+				"eslint": "^8.4.1",
+				"core-js": "^2.6.12",
+				"es5-shim": "^4.6.2",
+				"es6-shim": "^0.35.6",
+				"for-each": "^0.3.3",
+				"auto-changelog": "^2.3.0",
+				"object-inspect": "^1.11.1",
+				"safe-publish-latest": "^2.0.0",
+				"@ljharb/eslint-config": "^20.0.0"
+			},
+			"keywords": [
+				"map",
+				"weakmap",
+				"set",
+				"weakset",
+				"collection",
+				"is",
+				"robust"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint --ext=js,mjs .",
+				"test": "npm run tests-only && npm run tests:shims && npm run tests:corejs",
+				"pretest": "npm run lint",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"posttest": "aud --production",
+				"prepublish": "not-in-publish || npm run prepublishOnly",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\"",
+				"tests:shims": "nyc tape --require=es5-shim --require=es6-shim 'test/**/*.js'",
+				"tests:corejs": "nyc tape --require=core-js 'test/**/*.js'",
+				"prepublishOnly": "safe-publish-latest"
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "is-weakset@2.0.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/is-weakset/-/is-weakset-2.0.2.tgz",
+				"shasum": "4569d67a747a1ce5a994dfd4ef6dcea76e7c0a1d",
+				"integrity": "sha512-t2yVvttHkQktwnNNmBQ98AhENLdPUTDTE21uPqAQ0ARwQfGeQKRVS0NNurH7bTf7RrvcVn1OOge45CnBeHCSmg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDHJEYzlI9VQ6W2xGFCX5a98KG+5dE0RzryzUUlg+V7+QIhAIz7h7AKo3T2ZAbNHDe4sPBnU69AuO10SnaNk2XyZrKE"
+					}
+				]
+			},
+			"_npmVersion": "8.1.4",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "68a69d548ade4e1d7112a11dfb79d1be7323f75a",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/is-weakset_2.0.2_1639362356859_0.8806669371414737",
+				"host": "s3://npm-registry-packages"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"hideCredit": true,
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false
+			},
+			"_nodeVersion": "17.2.0",
+			"contributors": []
+		},
+		"2.0.3": {
+			"name": "is-weakset",
+			"description": "Is this value a JS WeakSet? This module works cross-realm/iframe, and despite ES6 @@toStringTag.",
+			"version": "2.0.3",
+			"author": {
+				"name": "Jordan Harband",
+				"email": "ljharb@gmail.com"
+			},
+			"homepage": "https://github.com/inspect-js/is-weakset#readme",
+			"repository": {
+				"url": "git+https://github.com/inspect-js/is-weakset.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/inspect-js/is-weakset/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"call-bind": "^1.0.7",
+				"get-intrinsic": "^1.2.4"
+			},
+			"devDependencies": {
+				"aud": "^2.0.4",
+				"nyc": "^10.3.2",
+				"tape": "^5.7.5",
+				"eslint": "=8.8.0",
+				"core-js": "^2.6.12",
+				"es5-shim": "^4.6.7",
+				"es6-shim": "^0.35.8",
+				"for-each": "^0.3.3",
+				"npmignore": "^0.3.1",
+				"in-publish": "^2.0.1",
+				"typescript": "next",
+				"@types/tape": "^5.6.4",
+				"auto-changelog": "^2.4.0",
+				"object-inspect": "^1.13.1",
+				"@types/for-each": "^0.3.3",
+				"@types/call-bind": "^1.0.5",
+				"safe-publish-latest": "^2.0.0",
+				"@types/get-intrinsic": "^1.2.2",
+				"@arethetypeswrong/cli": "^0.15.0",
+				"@ljharb/eslint-config": "^21.1.0",
+				"@types/object-inspect": "^1.8.4"
+			},
+			"keywords": [
+				"map",
+				"weakmap",
+				"set",
+				"weakset",
+				"collection",
+				"is",
+				"robust"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint --ext=js,mjs .",
+				"test": "npm run tests-only && npm run tests:shims && npm run tests:corejs",
+				"prepack": "npmignore --auto --commentLines=autogenerated",
+				"pretest": "npm run lint",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"postlint": "tsc -p . && attw -P",
+				"posttest": "aud --production",
+				"prepublish": "not-in-publish || npm run prepublishOnly",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\"",
+				"tests:shims": "nyc tape --require=es5-shim --require=es6-shim 'test/**/*.js'",
+				"tests:corejs": "nyc tape --require=core-js 'test/**/*.js'",
+				"prepublishOnly": "safe-publish-latest"
+			},
+			"publishConfig": {
+				"ignore": [
+					".github/workflows"
+				]
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "is-weakset@2.0.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/is-weakset/-/is-weakset-2.0.3.tgz",
+				"shasum": "e801519df8c0c43e12ff2834eead84ec9e624007",
+				"integrity": "sha512-LvIm3/KWzS9oRFHugab7d+M/GcBXuXX5xZkzPmN+NxihdQlZUQ4dWuSV1xR/sq6upL1TJEDrfBgRepHFdBtSNQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIAEngrBxyWp+c+Rqyae5AN330SfmmNZPv5hQYY5ZJslwAiEA313ZQzfix6sJ01shugDQanKArJFjx9e9b7EIPoS70mc="
+					}
+				]
+			},
+			"_npmVersion": "10.5.0",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "10b18409d54d25909a23943b6c0461c5477201da",
+			"types": "./index.d.ts",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/is-weakset_2.0.3_1709929121930_0.7669151720556282",
+				"host": "s3://npm-registry-packages"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"hideCredit": true,
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false
+			},
+			"sideEffects": false,
+			"_nodeVersion": "21.7.0",
+			"contributors": []
+		}
+	},
+	"time": {
+		"2.0.0": "2019-11-12T20:23:39.397Z",
+		"2.0.1": "2019-12-18T05:39:14.311Z",
+		"created": "2015-02-18T12:14:43.897Z",
+		"modified": "2024-12-17T05:37:43.571Z",
+		"2.0.4": "2024-12-17T05:37:43.401Z",
+		"1.0.0": "2015-02-18T12:14:43.897Z",
+		"1.0.1": "2015-06-03T17:04:46.271Z",
+		"2.0.2": "2021-12-13T02:25:57.003Z",
+		"2.0.3": "2024-03-08T20:18:42.103Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "2.0.4"
+	},
+	"_uplinks": {
+		"artifactory-sabadell": {
+			"etag": "e3fc397869245ddec6585ed6945b4a170b2465fd",
+			"fetched": 1782459829550
+		}
+	},
+	"_distfiles": {
+		"is-weakset-2.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/is-weakset/-/is-weakset-2.0.0.tgz",
+			"sha": "119577bcf75528e7d5b4c7ebaa4fdee9e2d3e5d7",
+			"registry": "artifactory-sabadell"
+		},
+		"is-weakset-2.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/is-weakset/-/is-weakset-2.0.1.tgz",
+			"sha": "e9a0af88dbd751589f5e50d80f4c98b780884f83",
+			"registry": "artifactory-sabadell"
+		},
+		"is-weakset-2.0.4.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/is-weakset/-/is-weakset-2.0.4.tgz",
+			"sha": "c9f5deb0bc1906c6d6f1027f284ddf459249daca",
+			"registry": "artifactory-sabadell"
+		},
+		"is-weakset-1.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/is-weakset/-/is-weakset-1.0.0.tgz",
+			"sha": "3fe684c08ec698c6492e588925ceff8665fd9fa1",
+			"registry": "artifactory-sabadell"
+		},
+		"is-weakset-1.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/is-weakset/-/is-weakset-1.0.1.tgz",
+			"sha": "79bf1d4656abd2404f3736c1aaae62d93a73bfdc",
+			"registry": "artifactory-sabadell"
+		},
+		"is-weakset-2.0.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/is-weakset/-/is-weakset-2.0.2.tgz",
+			"sha": "4569d67a747a1ce5a994dfd4ef6dcea76e7c0a1d",
+			"registry": "artifactory-sabadell"
+		},
+		"is-weakset-2.0.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/is-weakset/-/is-weakset-2.0.3.tgz",
+			"sha": "e801519df8c0c43e12ff2834eead84ec9e624007",
+			"registry": "artifactory-sabadell"
+		}
+	},
+	"_attachments": {},
+	"_rev": "1-14e20b4f1b3f14f5",
+	"_id": "is-weakset",
+	"readme": "# is-weakset <sup>[![Version Badge][npm-version-svg]][package-url]</sup>\n\n[![github actions][actions-image]][actions-url]\n[![coverage][codecov-image]][codecov-url]\n[![License][license-image]][license-url]\n[![Downloads][downloads-image]][downloads-url]\n\n[![npm badge][npm-badge-png]][package-url]\n\nIs this value a JS WeakSet? This module works cross-realm/iframe, and despite ES6 @@toStringTag.\n\n## Example\n\n```js\nvar isWeakSet = require('is-weakset');\nassert(!isWeakSet(function () {}));\nassert(!isWeakSet(null));\nassert(!isWeakSet(function* () { yield 42; return Infinity; });\nassert(!isWeakSet(Symbol('foo')));\nassert(!isWeakSet(1n));\nassert(!isWeakSet(Object(1n)));\n\nassert(!isWeakSet(new Set()));\nassert(!isWeakSet(new WeakMap()));\nassert(!isWeakSet(new Map()));\n\nassert(isWeakSet(new WeakSet()));\n\nclass MyWeakSet extends WeakSet {}\nassert(isWeakSet(new MyWeakSet()));\n```\n\n## Tests\nSimply clone the repo, `npm install`, and run `npm test`\n\n[package-url]: https://npmjs.org/package/is-weakset\n[npm-version-svg]: https://versionbadg.es/inspect-js/is-weakset.svg\n[deps-svg]: https://david-dm.org/inspect-js/is-weakset.svg\n[deps-url]: https://david-dm.org/inspect-js/is-weakset\n[dev-deps-svg]: https://david-dm.org/inspect-js/is-weakset/dev-status.svg\n[dev-deps-url]: https://david-dm.org/inspect-js/is-weakset#info=devDependencies\n[npm-badge-png]: https://nodei.co/npm/is-weakset.png?downloads=true&stars=true\n[license-image]: https://img.shields.io/npm/l/is-weakset.svg\n[license-url]: LICENSE\n[downloads-image]: https://img.shields.io/npm/dm/is-weakset.svg\n[downloads-url]: https://npm-stat.com/charts.html?package=is-weakset\n[codecov-image]: https://codecov.io/gh/inspect-js/is-weakset/branch/main/graphs/badge.svg\n[codecov-url]: https://app.codecov.io/gh/inspect-js/is-weakset/\n[actions-image]: https://img.shields.io/endpoint?url=https://github-actions-badge-u3jn4tfpocch.runkit.sh/inspect-js/is-weakset\n[actions-url]: https://github.com/inspect-js/is-weakset/actions"
+}

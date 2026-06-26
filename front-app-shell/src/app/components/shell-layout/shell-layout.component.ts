@@ -1,5 +1,5 @@
 import { AsyncPipe, NgFor, NgIf } from '@angular/common';
-import { CUSTOM_ELEMENTS_SCHEMA, Component, OnDestroy, OnInit, inject } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, Component, HostListener, OnDestroy, OnInit, inject } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
 import { Subscription } from 'rxjs';
 
@@ -33,8 +33,19 @@ export class ShellLayoutComponent implements OnInit, OnDestroy {
 
   readonly menu$ = this.resources.menu$;
   readonly flowSteps$ = this.flowTrace.steps$;
+  flowPanelWidth = 520;
+
+  private readonly minFlowPanelWidth = 420;
+  private readonly minMainContentWidth = 180;
+  private readonly fixedShellColumnsWidth = 210;
+  private isResizingFlowPanel = false;
 
   ngOnInit(): void {
+    /*
+     * Marcador global de POC: el MFE login lo usa para saber que esta embebido
+     * en la shell NEO. En ese modo no abre modales bloqueantes; publica steps al
+     * panel lateral y espera al boton "Siguiente".
+     */
     window.NEO_SHELL = true;
     window.addEventListener('proteoEventBusPublish', this.handleProteoEvent);
     window.addEventListener(NEO_FLOW_STEP_EVENT, this.handleFlowStepEvent);
@@ -44,6 +55,7 @@ export class ShellLayoutComponent implements OnInit, OnDestroy {
     window.removeEventListener('proteoEventBusPublish', this.handleProteoEvent);
     window.removeEventListener(NEO_FLOW_STEP_EVENT, this.handleFlowStepEvent);
     delete window.NEO_SHELL;
+    document.body.classList.remove('shell-flow-resizing');
     this.subscriptions.unsubscribe();
   }
 
@@ -53,7 +65,43 @@ export class ShellLayoutComponent implements OnInit, OnDestroy {
 
   nextFlowStep(step: FlowTraceStep): void {
     this.flowTrace.completeStep(step.id);
+    /*
+     * El click en "Siguiente" desbloquea la Promise que el MFE login dejo
+     * pendiente. Asi la demo enseña cada salto backend sin tapar la UI central.
+     */
     window.dispatchEvent(new CustomEvent(NEO_FLOW_STEP_NEXT_EVENT, { detail: { id: step.id } }));
+  }
+
+  toggleFlowStep(step: FlowTraceStep): void {
+    this.flowTrace.toggleStep(step.id);
+  }
+
+  hasActiveFlowStep(steps: FlowTraceStep[]): boolean {
+    return steps.some((step) => !step.completed);
+  }
+
+  startFlowPanelResize(event: MouseEvent): void {
+    event.preventDefault();
+    this.isResizingFlowPanel = true;
+    document.body.classList.add('shell-flow-resizing');
+  }
+
+  @HostListener('document:mousemove', ['$event'])
+  onDocumentMouseMove(event: MouseEvent): void {
+    if (!this.isResizingFlowPanel) return;
+    const width = window.innerWidth - event.clientX;
+    const maxFlowPanelWidth = Math.max(
+      this.minFlowPanelWidth,
+      window.innerWidth - this.fixedShellColumnsWidth - this.minMainContentWidth
+    );
+    this.flowPanelWidth = Math.min(maxFlowPanelWidth, Math.max(this.minFlowPanelWidth, width));
+  }
+
+  @HostListener('document:mouseup')
+  onDocumentMouseUp(): void {
+    if (!this.isResizingFlowPanel) return;
+    this.isResizingFlowPanel = false;
+    document.body.classList.remove('shell-flow-resizing');
   }
 
   navigate(label: string): void {
@@ -71,26 +119,62 @@ export class ShellLayoutComponent implements OnInit, OnDestroy {
     const topic = detail?.topic ?? '';
 
     if (topic.includes('AUTHN_REQUEST')) {
+      /*
+       * NetScaler/resources devuelve 401: se limpia el menú, pero la navegación
+       * continúa en el MFE SAML hacia /authnRequest. Solo PingAM puede decidir,
+       * al comprobar su cookie SSO, si es necesario derivar al flujo OAuth.
+       */
       this.resources.clearMenu();
-      void this.router.navigate(['/login']);
       return;
     }
 
     if (topic.includes('SAML_MANAGER:SUCCESS')) {
+      /*
+       * Cuando el MFE SAML publica exito, la shell toma el payload resources,
+       * construye el menu izquierdo y aterriza directamente en Workspace.
+       */
       this.resources.setMenuFromResponse(detail.detail);
-      void this.router.navigate(['/']);
+      void this.router.navigate(['/workspace']);
     }
   };
 
   private readonly handleFlowStepEvent = (event: Event): void => {
     const detail = (event as CustomEvent<{ id?: string; title?: string; description?: string }>).detail;
     if (!detail?.id || !detail.title || !detail.description) return;
+    if (this.shouldAutoResolveRepeatedSamlStep(detail.title)) {
+      window.dispatchEvent(new CustomEvent(NEO_FLOW_STEP_NEXT_EVENT, { detail: { id: detail.id } }));
+      return;
+    }
+    /*
+     * Canal visual de POC: cualquier proyecto puede emitir neoFlowStep y la shell
+     * lo transforma en tarjeta acumulada con descripcion y diagrama secuencial.
+     */
     this.flowTrace.addStep({
       id: detail.id,
       title: detail.title,
       description: detail.description,
     });
   };
+
+  private shouldAutoResolveRepeatedSamlStep(title: string): boolean {
+    const normalizedTitle = title.toLowerCase();
+    const isRepeatedSamlEntryStep = normalizedTitle.includes('401 resources')
+      || normalizedTitle.includes('authnrequest y redirección pingam');
+
+    if (!isRepeatedSamlEntryStep) return false;
+
+    const previousSteps = this.flowTrace.currentSteps;
+    const oauthAlreadyCompleted = previousSteps.some((step) => {
+      const text = `${step.title} ${step.description}`.toLowerCase();
+      return text.includes('autenticación ok')
+        || text.includes('autenticacion ok')
+        || text.includes('tokens')
+        || text.includes('auth_success');
+    });
+    const sameStepAlreadyShown = previousSteps.some((step) => step.title.toLowerCase() === normalizedTitle);
+
+    return oauthAlreadyCompleted && sameStepAlreadyShown;
+  }
 
   private normalizeLabel(label: string): string {
     return label

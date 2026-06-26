@@ -698,7 +698,15 @@ function runPnpm(args) {
     const proc = spawn('pnpm', args, {
       cwd: ROOT_DIR,
       shell: false,
-      stdio: 'inherit'
+      stdio: 'inherit',
+      env: {
+        ...process.env,
+        // El modo snapshot parchea temporalmente versiones del workspace antes
+        // del build. pnpm 11 puede interpretarlo como un lockfile desactualizado
+        // e intentar un `pnpm install` interactivo dentro de este subproceso.
+        pnpm_config_verify_deps_before_run:
+          process.env.pnpm_config_verify_deps_before_run ?? 'false'
+      }
     });
 
     proc.on('close', (code, signal) => {

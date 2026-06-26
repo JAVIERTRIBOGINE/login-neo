@@ -1,0 +1,861 @@
+{
+	"name": "is-date-object",
+	"versions": {
+		"1.0.3": {
+			"name": "is-date-object",
+			"description": "Is this value a JS Date object? This module works cross-realm/iframe, and despite ES6 @@toStringTag.",
+			"version": "1.0.3",
+			"author": {
+				"name": "Jordan Harband"
+			},
+			"homepage": "https://github.com/inspect-js/is-date-object#readme",
+			"repository": {
+				"url": "git://github.com/inspect-js/is-date-object.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/inspect-js/is-date-object/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"is": "^3.3.0",
+				"aud": "^1.1.5",
+				"nyc": "^10.3.2",
+				"tape": "^5.2.2",
+				"eslint": "^7.25.0",
+				"foreach": "^2.0.5",
+				"indexof": "^0.0.1",
+				"auto-changelog": "^2.2.1",
+				"safe-publish-latest": "^1.1.4",
+				"@ljharb/eslint-config": "^17.6.0"
+			},
+			"keywords": [
+				"Date",
+				"ES6",
+				"toStringTag",
+				"@@toStringTag",
+				"Date object"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint .",
+				"test": "npm run tests-only",
+				"pretest": "npm run lint",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"posttest": "aud --production",
+				"prepublish": "not-in-publish || npm run prepublishOnly",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\"",
+				"prepublishOnly": "safe-publish-latest"
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "is-date-object@1.0.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/is-date-object/-/is-date-object-1.0.3.tgz",
+				"shasum": "4c0802ae9c8097939ea8001eaae3c502f3dbe72f",
+				"integrity": "sha512-tDpEUInNcy2Yw3lNSepK3Wdw1RnXLcIVienz6Ou631Acl15cJyRWK4dgA1vCmOEgIbtOV0W7MHg+AR2Gdg1NXQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIB4gpudJMzJsuuM0+Z35LF7wj85o1jS0St4oNWfzBQJyAiEA5ZM+QukR83zNHIJyOHzbKNRdErUUg8T5VNGkf55ddMQ="
+					}
+				]
+			},
+			"_npmVersion": "7.10.0",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "1a6c7cd1ff9277fc284b65592cd25ee557f14e00",
+			"testling": {
+				"files": "test/index.js",
+				"browsers": [
+					"iexplore/6.0..latest",
+					"firefox/3.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/10.0..latest",
+					"opera/next",
+					"safari/4.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/is-date-object_1.0.3_1620253538326_0.22696927411038126",
+				"host": "s3://npm-registry-packages"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"hideCredit": true,
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false
+			},
+			"_nodeVersion": "16.0.0",
+			"contributors": []
+		},
+		"1.0.4": {
+			"name": "is-date-object",
+			"description": "Is this value a JS Date object? This module works cross-realm/iframe, and despite ES6 @@toStringTag.",
+			"version": "1.0.4",
+			"author": {
+				"name": "Jordan Harband"
+			},
+			"homepage": "https://github.com/inspect-js/is-date-object#readme",
+			"repository": {
+				"url": "git://github.com/inspect-js/is-date-object.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/inspect-js/is-date-object/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"is": "^3.3.0",
+				"aud": "^1.1.5",
+				"nyc": "^10.3.2",
+				"tape": "^5.2.2",
+				"eslint": "^7.26.0",
+				"core-js": "^3.12.0",
+				"foreach": "^2.0.5",
+				"indexof": "^0.0.1",
+				"auto-changelog": "^2.2.1",
+				"safe-publish-latest": "^1.1.4",
+				"@ljharb/eslint-config": "^17.6.0"
+			},
+			"keywords": [
+				"Date",
+				"ES6",
+				"toStringTag",
+				"@@toStringTag",
+				"Date object"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint .",
+				"test": "npm run tests-only && npm run test:corejs",
+				"pretest": "npm run lint",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"posttest": "aud --production",
+				"prepublish": "not-in-publish || npm run prepublishOnly",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\"",
+				"test:corejs": "nyc tape test-corejs.js",
+				"prepublishOnly": "safe-publish-latest"
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "is-date-object@1.0.4",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/is-date-object/-/is-date-object-1.0.4.tgz",
+				"shasum": "550cfcc03afada05eea3dd30981c7b09551f73e5",
+				"integrity": "sha512-/b4ZVsG7Z5XVtIxs/h9W8nvfLgSAyKYdtGWQLbqy6jA1icmgjf8WCoTKgeS4wy5tYaPePouzFMANbnj94c2Z+A==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIDXZY3iaRF8Ql3KUGZi5mDuv/eZ5NuBR6FB/6xqX/lu+AiBECJLVZEuLbEe0DPl8AoWt9KYDoiW1BOhvC9HmzlIUSA=="
+					}
+				]
+			},
+			"_npmVersion": "7.10.0",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "109b0b23e2fb510cd6b0cbf08d24e5f9ea3528c3",
+			"testling": {
+				"files": "test/index.js",
+				"browsers": [
+					"iexplore/6.0..latest",
+					"firefox/3.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/10.0..latest",
+					"opera/next",
+					"safari/4.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/is-date-object_1.0.4_1620451463248_0.8424227028571616",
+				"host": "s3://npm-registry-packages"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"hideCredit": true,
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false
+			},
+			"_nodeVersion": "16.0.0",
+			"contributors": []
+		},
+		"1.0.5": {
+			"name": "is-date-object",
+			"description": "Is this value a JS Date object? This module works cross-realm/iframe, and despite ES6 @@toStringTag.",
+			"version": "1.0.5",
+			"author": {
+				"name": "Jordan Harband"
+			},
+			"homepage": "https://github.com/inspect-js/is-date-object#readme",
+			"repository": {
+				"url": "git://github.com/inspect-js/is-date-object.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/inspect-js/is-date-object/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"has-tostringtag": "^1.0.0"
+			},
+			"devDependencies": {
+				"is": "^3.3.0",
+				"aud": "^1.1.5",
+				"nyc": "^10.3.2",
+				"tape": "^5.3.0",
+				"eslint": "^7.32.0",
+				"core-js": "^3.12.0",
+				"foreach": "^2.0.5",
+				"indexof": "^0.0.1",
+				"auto-changelog": "^2.3.0",
+				"safe-publish-latest": "^1.1.4",
+				"@ljharb/eslint-config": "^17.6.0"
+			},
+			"keywords": [
+				"Date",
+				"ES6",
+				"toStringTag",
+				"@@toStringTag",
+				"Date object"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint .",
+				"test": "npm run tests-only && npm run test:corejs",
+				"pretest": "npm run lint",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"posttest": "aud --production",
+				"prepublish": "not-in-publish || npm run prepublishOnly",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\"",
+				"test:corejs": "nyc tape test-corejs.js",
+				"prepublishOnly": "safe-publish-latest"
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "is-date-object@1.0.5",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/is-date-object/-/is-date-object-1.0.5.tgz",
+				"shasum": "0841d5536e724c25597bf6ea62e1bd38298df31f",
+				"integrity": "sha512-9YQaSxsAiSwcvS33MBk3wTCVnWK+HhF8VZR2jRxehM16QcVOdHqPn4VPHmRK4lSr38n9JriurInLcP90xsYNfQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIEhS/6srTi4R/SAG82JHtZLLhUVSYTTORat0X9cu/Z9FAiAVv6omiyXZZSReq+aHMSvSP/U87UqXxVa3IIpW4w5wWw=="
+					}
+				]
+			},
+			"_npmVersion": "7.19.1",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "61eab012a36b7b5141f7e7dd09a6cdd11008668f",
+			"testling": {
+				"files": "test/index.js",
+				"browsers": [
+					"iexplore/6.0..latest",
+					"firefox/3.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/10.0..latest",
+					"opera/next",
+					"safari/4.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/is-date-object_1.0.5_1628198559216_0.8308505305234615",
+				"host": "s3://npm-registry-packages"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"hideCredit": true,
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false
+			},
+			"_nodeVersion": "16.6.0",
+			"contributors": []
+		},
+		"1.0.0": {
+			"name": "is-date-object",
+			"description": "Is this value a JS Date object? This module works cross-realm/iframe, and despite ES6 @@toStringTag.",
+			"version": "1.0.0",
+			"author": {
+				"name": "Jordan Harband"
+			},
+			"homepage": "https://github.com/ljharb/is-date-object",
+			"repository": {
+				"url": "git://github.com/ljharb/is-date-object.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/ljharb/is-date-object/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {},
+			"devDependencies": {
+				"is": "~2.2.0",
+				"nsp": "~1.0.0",
+				"jscs": "~1.10.0",
+				"tape": "~3.4.0",
+				"covert": "1.0.0",
+				"eslint": "~0.12.0",
+				"semver": "~4.2.0",
+				"foreach": "~2.0.5",
+				"indexof": "~0.0.1",
+				"editorconfig-tools": "~0.0.1"
+			},
+			"keywords": [
+				"Date",
+				"ES6",
+				"toStringTag",
+				"@@toStringTag",
+				"Date object"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"jscs": "jscs test.js *.js",
+				"lint": "npm run jscs && npm run eslint",
+				"test": "npm run lint && node --harmony --es-staging test.js && npm run security",
+				"eslint": "eslint test.js *.js",
+				"eccheck": "editorconfig-tools check *.js **/*.js > /dev/null",
+				"coverage": "covert test.js",
+				"security": "nsp package",
+				"coverage-quiet": "covert test.js --quiet"
+			},
+			"lastModified": 0,
+			"_id": "is-date-object@1.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/is-date-object/-/is-date-object-1.0.0.tgz",
+				"shasum": "0510d9e2831904c731b69b54a6fdc41a1b48bc17",
+				"integrity": "sha512-gQSVHmbHatDOe13X6hIFAxI9bZFtffQZA9qFMiZjsN2N5zRQB7Pycc6QbfpabNP2DH/H6nTlcPzaveU890P9IQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQC6vYeMBv9WfrTGvsPzskxu/++/XB0Qv1EyD+8Az7P50AIhAP9IrJ01zWYq6g60y5Wmj87GqycyroLmkD/0TOfVHzd8"
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "2.3.0",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"gitHead": "8442bb71a894289ac2ff31b4abe65488fb63bb3a",
+			"testling": {
+				"files": "test.js",
+				"browsers": [
+					"iexplore/6.0..latest",
+					"firefox/3.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/10.0..latest",
+					"opera/next",
+					"safari/4.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_shasum": "0510d9e2831904c731b69b54a6fdc41a1b48bc17",
+			"_nodeVersion": "1.0.4",
+			"contributors": []
+		},
+		"1.0.1": {
+			"name": "is-date-object",
+			"description": "Is this value a JS Date object? This module works cross-realm/iframe, and despite ES6 @@toStringTag.",
+			"version": "1.0.1",
+			"author": {
+				"name": "Jordan Harband"
+			},
+			"homepage": "https://github.com/ljharb/is-date-object#readme",
+			"repository": {
+				"url": "git://github.com/ljharb/is-date-object.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/ljharb/is-date-object/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {},
+			"devDependencies": {
+				"is": "^3.1.0",
+				"nsp": "^1.1.0",
+				"jscs": "^2.1.1",
+				"tape": "^4.2.0",
+				"covert": "^1.1.0",
+				"eslint": "^1.5.1",
+				"semver": "^5.0.3",
+				"foreach": "^2.0.5",
+				"indexof": "^0.0.1",
+				"@ljharb/eslint-config": "^1.2.0"
+			},
+			"keywords": [
+				"Date",
+				"ES6",
+				"toStringTag",
+				"@@toStringTag",
+				"Date object"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"jscs": "jscs test.js *.js",
+				"lint": "npm run jscs && npm run eslint",
+				"test": "npm run lint && node --harmony --es-staging test.js && npm run security",
+				"eslint": "eslint test.js *.js",
+				"coverage": "covert test.js",
+				"security": "nsp package",
+				"coverage-quiet": "covert test.js --quiet"
+			},
+			"lastModified": 0,
+			"_id": "is-date-object@1.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/is-date-object/-/is-date-object-1.0.1.tgz",
+				"shasum": "9aa20eb6aeebbff77fbd33e74ca01b33581d3a16",
+				"integrity": "sha512-P5rExV1phPi42ppoMWy7V63N3i173RY921l4JJ7zonMSxK+OWGPj76GD+cUKUb68l4vQXcJp2SsG+r/A4ABVzg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIEfP0HcRxl2EV4J6FkDL+yYUEToVEgkHhHwqJyH29Hz3AiB/4AQ7zlz5/jrRdGQZLCg2vK+xQBq94uqn5CYiVLUL1Q=="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "2.14.4",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"gitHead": "b03d8e939fec4f139f135a01ff2a3229a424e8fd",
+			"testling": {
+				"files": "test.js",
+				"browsers": [
+					"iexplore/6.0..latest",
+					"firefox/3.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/10.0..latest",
+					"opera/next",
+					"safari/4.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_shasum": "9aa20eb6aeebbff77fbd33e74ca01b33581d3a16",
+			"_nodeVersion": "4.1.1",
+			"contributors": []
+		},
+		"1.1.0": {
+			"name": "is-date-object",
+			"description": "Is this value a JS Date object? This module works cross-realm/iframe, and despite ES6 @@toStringTag.",
+			"version": "1.1.0",
+			"author": {
+				"name": "Jordan Harband"
+			},
+			"homepage": "https://github.com/inspect-js/is-date-object#readme",
+			"repository": {
+				"type": "git",
+				"url": "git://github.com/inspect-js/is-date-object.git"
+			},
+			"bugs": {
+				"url": "https://github.com/inspect-js/is-date-object/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"call-bound": "^1.0.2",
+				"has-tostringtag": "^1.0.2"
+			},
+			"devDependencies": {
+				"@arethetypeswrong/cli": "^0.17.1",
+				"@ljharb/eslint-config": "^21.1.1",
+				"@ljharb/tsconfig": "^0.2.2",
+				"@types/core-js": "^2.5.8",
+				"@types/tape": "^5.6.5",
+				"auto-changelog": "^2.5.0",
+				"core-js": "^3.39.0",
+				"encoding": "^0.1.13",
+				"eslint": "=8.8.0",
+				"in-publish": "^2.0.1",
+				"indexof": "^0.0.1",
+				"is": "^3.3.0",
+				"npmignore": "^0.3.1",
+				"nyc": "^10.3.2",
+				"safe-publish-latest": "^2.0.0",
+				"tape": "^5.9.0",
+				"typescript": "^5.8.0-dev.20241212"
+			},
+			"keywords": [
+				"Date",
+				"ES6",
+				"toStringTag",
+				"@@toStringTag",
+				"Date object"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"prepack": "npmignore --auto --commentLines=autogenerated",
+				"prepublishOnly": "safe-publish-latest",
+				"prepublish": "not-in-publish || npm run prepublishOnly",
+				"pretest": "npm run lint",
+				"test": "npm run tests-only && npm run test:corejs",
+				"tests-only": "nyc tape 'test/**/*.js'",
+				"test:corejs": "nyc tape test-corejs.js",
+				"posttest": "npx npm@'>= 10.2' audit --production",
+				"lint": "eslint --ext=js,mjs .",
+				"postlint": "tsc && attw -P",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\""
+			},
+			"publishConfig": {
+				"ignore": [
+					".github/workflows",
+					"test-corejs.js"
+				]
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "is-date-object@1.1.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/is-date-object/-/is-date-object-1.1.0.tgz",
+				"shasum": "ad85541996fc7aa8b2729701d27b7319f95d82f7",
+				"integrity": "sha512-PwwhEakHVKTdRNVOw+/Gyh0+MzlCl4R6qKvkhuvLtPMggI1WAHt9sOwZxQLSGpUaDnrdyDsomoRgNnCfKNSXXg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIFOFgyeZuf7oGp3domcAID4Yz+uoC04ao8jDqazKyfnnAiB8rkpf9tdSuYtSWPTxmYek0WJveaWtVzTuw6mANbw2uA=="
+					}
+				]
+			},
+			"_npmVersion": "10.9.2",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "a22f8d7d60cbddb809da08e4b47ed510b40a2dd9",
+			"types": "./index.d.ts",
+			"exports": {
+				".": "./index.js",
+				"./package.json": "./package.json"
+			},
+			"testling": {
+				"files": "test/index.js",
+				"browsers": [
+					"iexplore/6.0..latest",
+					"firefox/3.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/10.0..latest",
+					"opera/next",
+					"safari/4.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages-npm-production",
+				"tmp": "tmp/is-date-object_1.1.0_1734048247957_0.9644553309927046"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false,
+				"hideCredit": true
+			},
+			"sideEffects": false,
+			"_nodeVersion": "23.4.0",
+			"contributors": []
+		},
+		"1.0.2": {
+			"name": "is-date-object",
+			"description": "Is this value a JS Date object? This module works cross-realm/iframe, and despite ES6 @@toStringTag.",
+			"version": "1.0.2",
+			"author": {
+				"name": "Jordan Harband"
+			},
+			"homepage": "https://github.com/ljharb/is-date-object#readme",
+			"repository": {
+				"url": "git://github.com/ljharb/is-date-object.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/ljharb/is-date-object/issues"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"main": "index.js",
+			"dependencies": {},
+			"devDependencies": {
+				"is": "^3.3.0",
+				"tape": "^4.12.0",
+				"covert": "^1.1.1",
+				"eslint": "^6.7.2",
+				"foreach": "^2.0.5",
+				"indexof": "^0.0.1",
+				"auto-changelog": "^1.16.2",
+				"safe-publish-latest": "^1.1.4",
+				"@ljharb/eslint-config": "^15.0.2"
+			},
+			"keywords": [
+				"Date",
+				"ES6",
+				"toStringTag",
+				"@@toStringTag",
+				"Date object"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "ljharb",
+					"email": "ljharb@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint .",
+				"test": "npm run tests-only",
+				"pretest": "npm run lint",
+				"version": "auto-changelog && git add CHANGELOG.md",
+				"coverage": "covert test/index.js",
+				"posttest": "npx aud",
+				"prepublish": "safe-publish-latest",
+				"tests-only": "node --harmony --es-staging test",
+				"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\""
+			},
+			"lastModified": 0,
+			"funding": {
+				"url": "https://github.com/sponsors/ljharb"
+			},
+			"_id": "is-date-object@1.0.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/is-date-object/-/is-date-object-1.0.2.tgz",
+				"shasum": "bda736f2cd8fd06d32844e7743bfa7494c3bfd7e",
+				"integrity": "sha512-USlDT524woQ08aoZFzh3/Z6ch9Y/EWXEHQ/AaRN0SkKq4t2Jw2R2339tSXmwuVoY7LLlBCbOIlx2myP/L5zk0g==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQD2vaMCETFVeWeQ2XAk+YjyZIp2tlH7wvTLZRNpsvryeQIhAPkWBkeaUBND9uFGeFubLw1Dx9G0C3DZgy5Ag4lWMD34"
+					}
+				]
+			},
+			"_npmVersion": "6.13.4",
+			"_npmUser": {
+				"name": "ljharb",
+				"email": "ljharb@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "e7e895d71f6820547627ce21a719632c17f3700f",
+			"testling": {
+				"files": "test/index.js",
+				"browsers": [
+					"iexplore/6.0..latest",
+					"firefox/3.0..6.0",
+					"firefox/15.0..latest",
+					"firefox/nightly",
+					"chrome/4.0..10.0",
+					"chrome/20.0..latest",
+					"chrome/canary",
+					"opera/10.0..latest",
+					"opera/next",
+					"safari/4.0..latest",
+					"ipad/6.0..latest",
+					"iphone/6.0..latest",
+					"android-browser/4.2"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/is-date-object_1.0.2_1576729099723_0.5447399920772513",
+				"host": "s3://npm-registry-packages"
+			},
+			"auto-changelog": {
+				"output": "CHANGELOG.md",
+				"template": "keepachangelog",
+				"unreleased": false,
+				"commitLimit": false,
+				"backfillLimit": false
+			},
+			"_nodeVersion": "13.5.0",
+			"contributors": []
+		}
+	},
+	"time": {
+		"1.0.3": "2021-05-05T22:25:38.583Z",
+		"1.0.4": "2021-05-08T05:24:23.361Z",
+		"1.0.5": "2021-08-05T21:22:39.367Z",
+		"created": "2015-01-28T22:24:27.244Z",
+		"modified": "2024-12-13T00:04:08.342Z",
+		"1.0.0": "2015-01-28T22:24:27.244Z",
+		"1.0.1": "2015-09-27T14:34:57.369Z",
+		"1.1.0": "2024-12-13T00:04:08.145Z",
+		"1.0.2": "2019-12-19T04:18:19.845Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "1.1.0"
+	},
+	"_uplinks": {
+		"artifactory-sabadell": {
+			"etag": "3f79ee3547594cac1fb837f79c55fe94a7cabf20",
+			"fetched": 1782459826718
+		}
+	},
+	"_distfiles": {
+		"is-date-object-1.0.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/is-date-object/-/is-date-object-1.0.3.tgz",
+			"sha": "4c0802ae9c8097939ea8001eaae3c502f3dbe72f",
+			"registry": "artifactory-sabadell"
+		},
+		"is-date-object-1.0.4.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/is-date-object/-/is-date-object-1.0.4.tgz",
+			"sha": "550cfcc03afada05eea3dd30981c7b09551f73e5",
+			"registry": "artifactory-sabadell"
+		},
+		"is-date-object-1.0.5.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/is-date-object/-/is-date-object-1.0.5.tgz",
+			"sha": "0841d5536e724c25597bf6ea62e1bd38298df31f",
+			"registry": "artifactory-sabadell"
+		},
+		"is-date-object-1.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/is-date-object/-/is-date-object-1.0.0.tgz",
+			"sha": "0510d9e2831904c731b69b54a6fdc41a1b48bc17",
+			"registry": "artifactory-sabadell"
+		},
+		"is-date-object-1.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/is-date-object/-/is-date-object-1.0.1.tgz",
+			"sha": "9aa20eb6aeebbff77fbd33e74ca01b33581d3a16",
+			"registry": "artifactory-sabadell"
+		},
+		"is-date-object-1.1.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/is-date-object/-/is-date-object-1.1.0.tgz",
+			"sha": "ad85541996fc7aa8b2729701d27b7319f95d82f7",
+			"registry": "artifactory-sabadell"
+		},
+		"is-date-object-1.0.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/is-date-object/-/is-date-object-1.0.2.tgz",
+			"sha": "bda736f2cd8fd06d32844e7743bfa7494c3bfd7e",
+			"registry": "artifactory-sabadell"
+		}
+	},
+	"_attachments": {},
+	"_rev": "1-49040c56cd8868e4",
+	"_id": "is-date-object",
+	"readme": "# is-date-object <sup>[![Version Badge][2]][1]</sup>\n\n[![github actions][actions-image]][actions-url]\n[![coverage][codecov-image]][codecov-url]\n[![dependency status][5]][6]\n[![dev dependency status][7]][8]\n[![License][license-image]][license-url]\n[![Downloads][downloads-image]][downloads-url]\n\n[![npm badge][11]][1]\n\nIs this value a JS Date object? This module works cross-realm/iframe, and despite ES6 @@toStringTag.\n\n## Example\n\n```js\nvar isDate = require('is-date-object');\nvar assert = require('assert');\n\nassert.notOk(isDate(undefined));\nassert.notOk(isDate(null));\nassert.notOk(isDate(false));\nassert.notOk(isDate(true));\nassert.notOk(isDate(42));\nassert.notOk(isDate('foo'));\nassert.notOk(isDate(function () {}));\nassert.notOk(isDate([]));\nassert.notOk(isDate({}));\nassert.notOk(isDate(/a/g));\nassert.notOk(isDate(new RegExp('a', 'g')));\n\nassert.ok(isDate(new Date()));\n```\n\n## Tests\nSimply clone the repo, `npm install`, and run `npm test`\n\n[1]: https://npmjs.org/package/is-date-object\n[2]: https://versionbadg.es/inspect-js/is-date-object.svg\n[5]: https://david-dm.org/inspect-js/is-date-object.svg\n[6]: https://david-dm.org/inspect-js/is-date-object\n[7]: https://david-dm.org/inspect-js/is-date-object/dev-status.svg\n[8]: https://david-dm.org/inspect-js/is-date-object#info=devDependencies\n[11]: https://nodei.co/npm/is-date-object.png?downloads=true&stars=true\n[license-image]: https://img.shields.io/npm/l/is-date-object.svg\n[license-url]: LICENSE\n[downloads-image]: https://img.shields.io/npm/dm/is-date-object.svg\n[downloads-url]: https://npm-stat.com/charts.html?package=is-date-object\n[codecov-image]: https://codecov.io/gh/inspect-js/is-date-object/branch/main/graphs/badge.svg\n[codecov-url]: https://app.codecov.io/gh/inspect-js/is-date-object/\n[actions-image]: https://img.shields.io/endpoint?url=https://github-actions-badge-u3jn4tfpocch.runkit.sh/inspect-js/is-date-object\n[actions-url]: https://github.com/inspect-js/is-date-object/actions"
+}

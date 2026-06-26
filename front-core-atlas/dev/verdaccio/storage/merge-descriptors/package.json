@@ -1,0 +1,750 @@
+{
+	"name": "merge-descriptors",
+	"versions": {
+		"1.0.3": {
+			"name": "merge-descriptors",
+			"description": "Merge objects using descriptors",
+			"version": "1.0.3",
+			"author": {
+				"name": "Jonathan Ong",
+				"email": "me@jongleberry.com",
+				"url": "http://jongleberry.com"
+			},
+			"homepage": "https://github.com/sindresorhus/merge-descriptors#readme",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/sindresorhus/merge-descriptors.git"
+			},
+			"contributors": [
+				{
+					"name": "Douglas Christopher Wilson",
+					"email": "doug@somethingdoug.com"
+				},
+				{
+					"name": "Mike Grabowski",
+					"email": "grabbou@gmail.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/sindresorhus/merge-descriptors/issues"
+			},
+			"devDependencies": {
+				"eslint": "5.9.0",
+				"eslint-config-standard": "12.0.0",
+				"eslint-plugin-import": "2.14.0",
+				"eslint-plugin-node": "7.0.1",
+				"eslint-plugin-promise": "4.0.1",
+				"eslint-plugin-standard": "4.0.0",
+				"mocha": "5.2.0",
+				"nyc": "13.1.0"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "juliangruber",
+					"email": "julian@juliangruber.com"
+				},
+				{
+					"name": "sindresorhus",
+					"email": "sindresorhus@gmail.com"
+				},
+				{
+					"name": "tjholowaychuk",
+					"email": "tj@vision-media.ca"
+				},
+				{
+					"name": "dougwilson",
+					"email": "doug@somethingdoug.com"
+				},
+				{
+					"name": "jonathanong",
+					"email": "jonathanrichardong@gmail.com"
+				},
+				{
+					"name": "jongleberry",
+					"email": "jonathanrichardong@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint .",
+				"test": "mocha test/",
+				"test-cov": "nyc --reporter=html --reporter=text npm test"
+			},
+			"lastModified": 0,
+			"funding": "https://github.com/sponsors/sindresorhus",
+			"_id": "merge-descriptors@1.0.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/merge-descriptors/-/merge-descriptors-1.0.3.tgz",
+				"shasum": "d80319a65f3c7935351e5cfdac8f9318504dbed5",
+				"integrity": "sha512-gaNvAS7TZ897/rVaZ0nMtAyxNyi/pdbjbAwUpFQpN70GqnVfOiXpeUUMKRBmzXaSQ8DdTX4/0ms62r2K+hE6mQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIC40Qs4u5va0yM+JhUuQIxLvoKZK5p4CHXJvFaMxLi/NAiEA4BHCvcU8buakxzZIKTnstviZOODgUBz++F2n1aCI/Bs="
+					}
+				]
+			},
+			"_npmVersion": "9.2.0",
+			"_npmUser": {
+				"name": "sindresorhus",
+				"email": "sindresorhus@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "25683826bb62861df4bd3926830a7e9ef1593240",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/merge-descriptors_1.0.3_1700155732399_0.12401600657988032"
+			},
+			"_nodeVersion": "20.9.0"
+		},
+		"2.0.0": {
+			"name": "merge-descriptors",
+			"description": "Merge objects using their property descriptors",
+			"version": "2.0.0",
+			"homepage": "https://github.com/sindresorhus/merge-descriptors#readme",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/sindresorhus/merge-descriptors.git"
+			},
+			"contributors": [
+				{
+					"name": "Jonathan Ong",
+					"email": "me@jongleberry.com"
+				},
+				{
+					"name": "Douglas Christopher Wilson",
+					"email": "doug@somethingdoug.com"
+				},
+				{
+					"name": "Mike Grabowski",
+					"email": "grabbou@gmail.com"
+				},
+				{
+					"name": "Sindre Sorhus",
+					"email": "sindresorhus@gmail.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/sindresorhus/merge-descriptors/issues"
+			},
+			"engines": {
+				"node": ">=18"
+			},
+			"main": "./index.js",
+			"devDependencies": {
+				"ava": "^5.3.1",
+				"xo": "^0.56.0"
+			},
+			"keywords": [
+				"merge",
+				"descriptors",
+				"object",
+				"property",
+				"properties",
+				"merging",
+				"getter",
+				"setter"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "juliangruber",
+					"email": "julian@juliangruber.com"
+				},
+				{
+					"name": "sindresorhus",
+					"email": "sindresorhus@gmail.com"
+				},
+				{
+					"name": "tjholowaychuk",
+					"email": "tj@vision-media.ca"
+				},
+				{
+					"name": "dougwilson",
+					"email": "doug@somethingdoug.com"
+				},
+				{
+					"name": "jonathanong",
+					"email": "jonathanrichardong@gmail.com"
+				},
+				{
+					"name": "jongleberry",
+					"email": "jonathanrichardong@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "xo && ava"
+			},
+			"lastModified": 0,
+			"funding": "https://github.com/sponsors/sindresorhus",
+			"_id": "merge-descriptors@2.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/merge-descriptors/-/merge-descriptors-2.0.0.tgz",
+				"shasum": "ea922f660635a2249ee565e0449f951e6b603808",
+				"integrity": "sha512-Snk314V5ayFLhp3fkUREub6WtjBfPdCPY1Ln8/8munuLuiYhsABgBVWsozAG+MWMbVEvcdcpbi9R7ww22l9Q3g==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCpTo0yi5Dj8yVNfLLVkLNKUlpcV4bSeYjZ2OyCRfu/7wIgSJJYX1nK6+pNepu5hwGH4BDTZvMbQkOLP4npxRA9CTo="
+					}
+				]
+			},
+			"_npmVersion": "9.2.0",
+			"_npmUser": {
+				"name": "sindresorhus",
+				"email": "sindresorhus@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "b497f611ec85031e00c2f3cdbb327a550028a7bf",
+			"types": "./index.d.ts",
+			"exports": {
+				"types": "./index.d.ts",
+				"default": "./index.js"
+			},
+			"xo": {
+				"rules": {
+					"unicorn/prefer-module": "off"
+				}
+			},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/merge-descriptors_2.0.0_1700160560530_0.0056050974304060475"
+			},
+			"sideEffects": false,
+			"_nodeVersion": "20.9.0"
+		},
+		"0.0.2": {
+			"name": "merge-descriptors",
+			"description": "Merge objects using descriptors",
+			"version": "0.0.2",
+			"author": {
+				"name": "Jonathan Ong",
+				"email": "me@jongleberry.com",
+				"url": "http://jongleberry.com"
+			},
+			"homepage": "https://github.com/component/merge-descriptors",
+			"repository": {
+				"type": "git",
+				"url": "https://github.com/component/merge-descriptors.git"
+			},
+			"bugs": {
+				"url": "https://github.com/component/merge-descriptors/issues"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "jongleberry",
+					"email": "jonathanrichardong@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "make test;"
+			},
+			"lastModified": 0,
+			"_id": "merge-descriptors@0.0.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/merge-descriptors/-/merge-descriptors-0.0.2.tgz",
+				"shasum": "c36a52a781437513c57275f39dd9d317514ac8c7",
+				"integrity": "sha512-dYBT4Ep+t/qnPeJcnMymmhTdd4g8/hn48ciaDqLAkfRf8abzLPS6Rb6EBdz5CZCL8tzZuI5ps9MhGQGxk+EuKg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIBelv09AJeKf+RJ2eyYVU9pu/Lnmnca0/kxVNgFx75k2AiATIfP1yCbe8P/mpaWrheBoMtnXmEJxnJQTx00D8XoZHA=="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "1.3.17",
+			"_npmUser": {
+				"name": "jongleberry",
+				"email": "jonathanrichardong@gmail.com"
+			},
+			"contributors": []
+		},
+		"1.0.0": {
+			"name": "merge-descriptors",
+			"description": "Merge objects using descriptors",
+			"version": "1.0.0",
+			"author": {
+				"name": "Jonathan Ong",
+				"email": "me@jongleberry.com",
+				"url": "http://jongleberry.com"
+			},
+			"homepage": "https://github.com/component/merge-descriptors",
+			"repository": {
+				"type": "git",
+				"url": "https://github.com/component/merge-descriptors.git"
+			},
+			"contributors": [
+				{
+					"name": "Douglas Christopher Wilson",
+					"email": "doug@somethingdoug.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/component/merge-descriptors/issues"
+			},
+			"license": "MIT",
+			"files": [
+				"LICENSE",
+				"README.md",
+				"index.js"
+			],
+			"maintainers": [
+				{
+					"name": "jongleberry",
+					"email": "jonathanrichardong@gmail.com"
+				},
+				{
+					"name": "tootallnate",
+					"email": "nathan@tootallnate.net"
+				},
+				{
+					"name": "juliangruber",
+					"email": "julian@juliangruber.com"
+				},
+				{
+					"name": "yields",
+					"email": "yields@icloud.com"
+				},
+				{
+					"name": "ianstormtaylor",
+					"email": "ian@ianstormtaylor.com"
+				},
+				{
+					"name": "tjholowaychuk",
+					"email": "tj@vision-media.ca"
+				},
+				{
+					"name": "timoxley",
+					"email": "secoif@gmail.com"
+				},
+				{
+					"name": "mattmueller",
+					"email": "mattmuelle@gmail.com"
+				},
+				{
+					"name": "jonathanong",
+					"email": "jonathanrichardong@gmail.com"
+				},
+				{
+					"name": "queckezz",
+					"email": "fabian.eichenberger@gmail.com"
+				},
+				{
+					"name": "anthonyshort",
+					"email": "antshort@gmail.com"
+				},
+				{
+					"name": "dominicbarnes",
+					"email": "dominic@dbarnes.info"
+				},
+				{
+					"name": "clintwood",
+					"email": "clint@anotherway.co.za"
+				},
+				{
+					"name": "thehydroimpulse",
+					"email": "dnfagnan@gmail.com"
+				},
+				{
+					"name": "stephenmathieson",
+					"email": "me@stephenmathieson.com"
+				},
+				{
+					"name": "trevorgerhardt",
+					"email": "trevorgerhardt@gmail.com"
+				},
+				{
+					"name": "timaschew",
+					"email": "timaschew@gmail.com"
+				},
+				{
+					"name": "hughsk",
+					"email": "hughskennedy@gmail.com"
+				},
+				{
+					"name": "dougwilson",
+					"email": "doug@somethingdoug.com"
+				}
+			],
+			"directories": {},
+			"scripts": {},
+			"lastModified": 0,
+			"_id": "merge-descriptors@1.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/merge-descriptors/-/merge-descriptors-1.0.0.tgz",
+				"shasum": "2169cf7538e1b0cc87fb88e1502d8474bbf79864",
+				"integrity": "sha512-YJiZmTZTkrqvgefMsWdioTKsZdHnfAhHHkEdPg+4PCqMJEGHQo5iJQjEbMv3XyBZ6y3Z2Rj1mqq1WNKq9e0yNw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIDdR1eP68e5IHritGhbE9bu1ga8dBTkWhmxYm93TfqBEAiAoDZWgjmWxDi2AQJab1ZyS1npJXBA+bED4x0ra2mnlVw=="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "1.4.28",
+			"_npmUser": {
+				"name": "dougwilson",
+				"email": "doug@somethingdoug.com"
+			},
+			"gitHead": "81d7a3c14099884c391bd237d7d8edf23c6d6f18",
+			"_shasum": "2169cf7538e1b0cc87fb88e1502d8474bbf79864"
+		},
+		"1.0.1": {
+			"name": "merge-descriptors",
+			"description": "Merge objects using descriptors",
+			"version": "1.0.1",
+			"author": {
+				"name": "Jonathan Ong",
+				"email": "me@jongleberry.com",
+				"url": "http://jongleberry.com"
+			},
+			"homepage": "https://github.com/component/merge-descriptors",
+			"repository": {
+				"type": "git",
+				"url": "https://github.com/component/merge-descriptors"
+			},
+			"contributors": [
+				{
+					"name": "Douglas Christopher Wilson",
+					"email": "doug@somethingdoug.com"
+				},
+				{
+					"name": "Mike Grabowski",
+					"email": "grabbou@gmail.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/component/merge-descriptors/issues"
+			},
+			"devDependencies": {
+				"istanbul": "0.4.1",
+				"mocha": "1.21.5"
+			},
+			"license": "MIT",
+			"files": [
+				"HISTORY.md",
+				"LICENSE",
+				"README.md",
+				"index.js"
+			],
+			"maintainers": [
+				{
+					"name": "anthonyshort",
+					"email": "antshort@gmail.com"
+				},
+				{
+					"name": "clintwood",
+					"email": "clint@anotherway.co.za"
+				},
+				{
+					"name": "dfcreative",
+					"email": "df.creative@gmail.com"
+				},
+				{
+					"name": "dominicbarnes",
+					"email": "dominic@dbarnes.info"
+				},
+				{
+					"name": "dougwilson",
+					"email": "doug@somethingdoug.com"
+				},
+				{
+					"name": "ianstormtaylor",
+					"email": "ian@ianstormtaylor.com"
+				},
+				{
+					"name": "jonathanong",
+					"email": "jonathanrichardong@gmail.com"
+				},
+				{
+					"name": "jongleberry",
+					"email": "jonathanrichardong@gmail.com"
+				},
+				{
+					"name": "juliangruber",
+					"email": "julian@juliangruber.com"
+				},
+				{
+					"name": "mattmueller",
+					"email": "mattmuelle@gmail.com"
+				},
+				{
+					"name": "queckezz",
+					"email": "fabian.eichenberger@gmail.com"
+				},
+				{
+					"name": "stephenmathieson",
+					"email": "me@stephenmathieson.com"
+				},
+				{
+					"name": "thehydroimpulse",
+					"email": "dnfagnan@gmail.com"
+				},
+				{
+					"name": "timaschew",
+					"email": "timaschew@gmail.com"
+				},
+				{
+					"name": "timoxley",
+					"email": "secoif@gmail.com"
+				},
+				{
+					"name": "tjholowaychuk",
+					"email": "tj@vision-media.ca"
+				},
+				{
+					"name": "tootallnate",
+					"email": "nathan@tootallnate.net"
+				},
+				{
+					"name": "trevorgerhardt",
+					"email": "trevorgerhardt@gmail.com"
+				},
+				{
+					"name": "yields",
+					"email": "yields@icloud.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "mocha --reporter spec --bail --check-leaks test/",
+				"test-ci": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks test/",
+				"test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot --check-leaks test/"
+			},
+			"lastModified": 0,
+			"_id": "merge-descriptors@1.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/merge-descriptors/-/merge-descriptors-1.0.1.tgz",
+				"shasum": "b00aaa556dd8b44568150ec9d1b953f3f90cbb61",
+				"integrity": "sha512-cCi6g3/Zr1iqQi6ySbseM1Xvooa98N0w31jzUYrXPX2xqObmFGHJ0tQ5u74H3mVh7wLouTseZyYIq39g8cNp1w==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIFNrN6gt6C+tUkjr9vSLHPycmhxt1e61SpK4k1v8NVKwAiEAhj5MrJHHspYdf093w3Pvji78/dtcNfokwqR0Z4sArjI="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "1.4.28",
+			"_npmUser": {
+				"name": "dougwilson",
+				"email": "doug@somethingdoug.com"
+			},
+			"gitHead": "f26c49c3b423b0b2ac31f6e32a84e1632f2d7ac2",
+			"_shasum": "b00aaa556dd8b44568150ec9d1b953f3f90cbb61"
+		},
+		"0.0.1": {
+			"name": "merge-descriptors",
+			"description": "Merge objects using descriptors",
+			"version": "0.0.1",
+			"author": {
+				"name": "Jonathan Ong",
+				"email": "me@jongleberry.com",
+				"url": "http://jongleberry.com"
+			},
+			"homepage": "https://github.com/jonathanong/merge-descriptors",
+			"repository": {
+				"type": "git",
+				"url": "https://github.com/jonathanong/merge-descriptors.git"
+			},
+			"bugs": {
+				"url": "https://github.com/jonathanong/merge-descriptors/issues"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "jongleberry",
+					"email": "jonathanrichardong@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "make test;"
+			},
+			"lastModified": 0,
+			"_id": "merge-descriptors@0.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/merge-descriptors/-/merge-descriptors-0.0.1.tgz",
+				"shasum": "2ff0980c924cf81d0b5d1fb601177cb8bb56c0d0",
+				"integrity": "sha512-1VjrOxz6kouIMS/jZ+oQTAUsXufrF8hVzkfzSxqBh0Wy/KzEqZSvy3OZe/Ntrd5QeHtNCUF1bE0bIRLslzHCcw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIGvuTLQ12a3MztrlD5cx+AMXViVdWfOievYFQzlMImtMAiBAHIzI5ETnYJxQDTxkRVWHOy/+pWlDDJ04pP7eZ7XeYg=="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "1.3.13",
+			"_npmUser": {
+				"name": "jongleberry",
+				"email": "jonathanrichardong@gmail.com"
+			},
+			"contributors": []
+		},
+		"1.0.2": {
+			"name": "merge-descriptors",
+			"description": "Merge objects using descriptors",
+			"version": "1.0.2",
+			"author": {
+				"name": "Jonathan Ong",
+				"email": "me@jongleberry.com",
+				"url": "http://jongleberry.com"
+			},
+			"homepage": "https://github.com/sindresorhus/merge-descriptors#readme",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/sindresorhus/merge-descriptors.git"
+			},
+			"contributors": [
+				{
+					"name": "Douglas Christopher Wilson",
+					"email": "doug@somethingdoug.com"
+				},
+				{
+					"name": "Mike Grabowski",
+					"email": "grabbou@gmail.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/sindresorhus/merge-descriptors/issues"
+			},
+			"devDependencies": {
+				"eslint": "5.9.0",
+				"eslint-config-standard": "12.0.0",
+				"eslint-plugin-import": "2.14.0",
+				"eslint-plugin-node": "7.0.1",
+				"eslint-plugin-promise": "4.0.1",
+				"eslint-plugin-standard": "4.0.0",
+				"mocha": "5.2.0",
+				"nyc": "13.1.0"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "juliangruber",
+					"email": "julian@juliangruber.com"
+				},
+				{
+					"name": "sindresorhus",
+					"email": "sindresorhus@gmail.com"
+				},
+				{
+					"name": "tjholowaychuk",
+					"email": "tj@vision-media.ca"
+				},
+				{
+					"name": "dougwilson",
+					"email": "doug@somethingdoug.com"
+				},
+				{
+					"name": "jonathanong",
+					"email": "jonathanrichardong@gmail.com"
+				},
+				{
+					"name": "jongleberry",
+					"email": "jonathanrichardong@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint .",
+				"test": "mocha test/",
+				"test-cov": "nyc --reporter=html --reporter=text npm test"
+			},
+			"lastModified": 0,
+			"_id": "merge-descriptors@1.0.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/merge-descriptors/-/merge-descriptors-1.0.2.tgz",
+				"shasum": "21c9c09fc9a12211d7bc66955c5b3fc1bc00963e",
+				"integrity": "sha512-mQy+fGU2VdxDEo3m+3+BqKyiDBgwQrmvdzaF6n1iDKp5Pk/VsaCprU6nmN6AKSe6LjuqYqF59xEnooYZVVCsXA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQD8HNRP/zH6vizzqiVIP53bRFW0sMZGaJKKjguc26+bBwIhAMaBK7wmKxjZmk/RMxArv7s27z+ouT1cPoT144qaWtyQ"
+					}
+				]
+			},
+			"_npmVersion": "9.2.0",
+			"_npmUser": {
+				"name": "sindresorhus",
+				"email": "sindresorhus@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "25683826bb62861df4bd3926830a7e9ef1593240",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/merge-descriptors_1.0.2_1700155675592_0.7045021476391857"
+			},
+			"_nodeVersion": "20.9.0"
+		}
+	},
+	"time": {
+		"1.0.3": "2023-11-16T17:28:52.572Z",
+		"2.0.0": "2023-11-16T18:49:20.714Z",
+		"created": "2013-10-29T20:29:05.974Z",
+		"modified": "2023-11-17T16:22:01.206Z",
+		"0.0.2": "2013-12-14T05:10:12.691Z",
+		"1.0.0": "2015-03-01T21:30:01.609Z",
+		"1.0.1": "2016-01-17T23:50:26.636Z",
+		"0.0.1": "2013-10-29T20:29:06.954Z",
+		"1.0.2": "2023-11-16T17:27:55.804Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "2.0.0"
+	},
+	"_uplinks": {
+		"artifactory-sabadell": {
+			"etag": "dcd6a083e0ca9adb5542e31f2d193f6183c4f544",
+			"fetched": 1782459822151
+		}
+	},
+	"_distfiles": {
+		"merge-descriptors-1.0.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/merge-descriptors/-/merge-descriptors-1.0.3.tgz",
+			"sha": "d80319a65f3c7935351e5cfdac8f9318504dbed5",
+			"registry": "artifactory-sabadell"
+		},
+		"merge-descriptors-2.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/merge-descriptors/-/merge-descriptors-2.0.0.tgz",
+			"sha": "ea922f660635a2249ee565e0449f951e6b603808",
+			"registry": "artifactory-sabadell"
+		},
+		"merge-descriptors-0.0.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/merge-descriptors/-/merge-descriptors-0.0.2.tgz",
+			"sha": "c36a52a781437513c57275f39dd9d317514ac8c7",
+			"registry": "artifactory-sabadell"
+		},
+		"merge-descriptors-1.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/merge-descriptors/-/merge-descriptors-1.0.0.tgz",
+			"sha": "2169cf7538e1b0cc87fb88e1502d8474bbf79864",
+			"registry": "artifactory-sabadell"
+		},
+		"merge-descriptors-1.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/merge-descriptors/-/merge-descriptors-1.0.1.tgz",
+			"sha": "b00aaa556dd8b44568150ec9d1b953f3f90cbb61",
+			"registry": "artifactory-sabadell"
+		},
+		"merge-descriptors-0.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/merge-descriptors/-/merge-descriptors-0.0.1.tgz",
+			"sha": "2ff0980c924cf81d0b5d1fb601177cb8bb56c0d0",
+			"registry": "artifactory-sabadell"
+		},
+		"merge-descriptors-1.0.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/merge-descriptors/-/merge-descriptors-1.0.2.tgz",
+			"sha": "21c9c09fc9a12211d7bc66955c5b3fc1bc00963e",
+			"registry": "artifactory-sabadell"
+		}
+	},
+	"_attachments": {},
+	"_rev": "1-334a34a3fe9ae1e2",
+	"_id": "merge-descriptors",
+	"readme": "# merge-descriptors\n\n> Merge objects using their property descriptors\n\n## Install\n\n```sh\nnpm install merge-descriptors\n```\n\n## Usage\n\n```js\nimport mergeDescriptors from 'merge-descriptors';\n\nconst thing = {\n\tget name() {\n\t\treturn 'John'\n\t}\n}\n\nconst animal = {};\n\nmergeDescriptors(animal, thing);\n\nconsole.log(animal.name);\n//=> 'John'\n```\n\n## API\n\n### merge(destination, source, overwrite?)\n\nMerges \"own\" properties from a source to a destination object, including non-enumerable and accessor-defined properties. It retains original values and descriptors, ensuring the destination receives a complete and accurate copy of the source's properties.\n\nReturns the modified destination object.\n\n#### destination\n\nType: `object`\n\nThe object to receive properties.\n\n#### source\n\nType: `object`\n\nThe object providing properties.\n\n#### overwrite\n\nType: `boolean`\\\nDefault: `true`\n\nA boolean to control overwriting of existing properties."
+}

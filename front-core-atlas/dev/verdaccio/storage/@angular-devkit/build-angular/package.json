@@ -157610,6 +157610,2030 @@
 			"readmeFilename": "README.md",
 			"_nodeVersion": "22.17.0",
 			"contributors": []
+		},
+		"22.1.0-next.0": {
+			"name": "@angular-devkit/build-angular",
+			"description": "Angular Webpack Build Facade",
+			"version": "22.1.0-next.0",
+			"author": {
+				"name": "Angular Authors"
+			},
+			"homepage": "https://github.com/angular/angular-cli",
+			"repository": {
+				"url": "git+https://github.com/angular/angular-cli.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/angular/angular-cli/issues"
+			},
+			"engines": {
+				"npm": "^6.11.0 || ^7.5.6 || >=8.0.0",
+				"node": "^22.22.3 || ^24.15.0 || >=26.0.0",
+				"yarn": ">= 1.13.0"
+			},
+			"main": "src/index.js",
+			"dependencies": {
+				"ora": "9.4.0",
+				"less": "4.6.4",
+				"open": "11.0.0",
+				"rxjs": "7.8.2",
+				"sass": "1.100.0",
+				"tslib": "2.8.1",
+				"semver": "7.8.1",
+				"terser": "5.48.0",
+				"piscina": "5.1.4",
+				"postcss": "8.5.15",
+				"webpack": "5.107.2",
+				"picomatch": "4.0.4",
+				"css-loader": "7.1.4",
+				"tinyglobby": "0.2.17",
+				"@babel/core": "7.29.7",
+				"ansi-colors": "4.1.3",
+				"less-loader": "13.0.0",
+				"sass-loader": "17.0.0",
+				"autoprefixer": "10.5.0",
+				"babel-loader": "10.1.1",
+				"browserslist": "^4.26.0",
+				"esbuild-wasm": "0.28.0",
+				"jsonc-parser": "3.3.1",
+				"loader-utils": "3.3.1",
+				"webpack-merge": "6.0.1",
+				"@angular/build": "22.1.0-next.0",
+				"@babel/runtime": "7.29.7",
+				"postcss-loader": "8.2.1",
+				"@babel/generator": "7.29.7",
+				"@ngtools/webpack": "22.1.0-next.0",
+				"@babel/preset-env": "7.29.7",
+				"source-map-loader": "5.0.0",
+				"resolve-url-loader": "5.0.0",
+				"source-map-support": "0.5.21",
+				"webpack-dev-server": "5.2.4",
+				"copy-webpack-plugin": "14.0.0",
+				"@angular-devkit/core": "22.1.0-next.0",
+				"@ampproject/remapping": "2.3.0",
+				"@discoveryjs/json-ext": "1.1.0",
+				"http-proxy-middleware": "4.0.0",
+				"license-webpack-plugin": "4.0.2",
+				"webpack-dev-middleware": "8.0.3",
+				"istanbul-lib-instrument": "6.0.3",
+				"mini-css-extract-plugin": "2.10.2",
+				"karma-source-map-support": "1.4.0",
+				"@angular-devkit/architect": "0.2201.0-next.0",
+				"@angular-devkit/build-webpack": "0.2201.0-next.0",
+				"webpack-subresource-integrity": "5.1.0",
+				"@babel/helper-annotate-as-pure": "7.29.7",
+				"@babel/plugin-transform-runtime": "7.29.7",
+				"@babel/helper-split-export-declaration": "7.24.7",
+				"@babel/plugin-transform-async-to-generator": "7.29.7",
+				"@babel/plugin-transform-async-generator-functions": "7.29.7"
+			},
+			"optionalDependencies": {
+				"esbuild": "0.28.0"
+			},
+			"peerDependencies": {
+				"karma": "^6.3.0",
+				"ng-packagr": "^22.0.0 || ^22.1.0-next.0",
+				"typescript": ">=6.0 <6.1",
+				"tailwindcss": "^2.0.0 || ^3.0.0 || ^4.0.0",
+				"@angular/ssr": "^22.1.0-next.0",
+				"browser-sync": "^3.0.2",
+				"@angular/core": "^22.0.0 || ^22.1.0-next.0",
+				"@angular/localize": "^22.0.0 || ^22.1.0-next.0",
+				"@angular/compiler-cli": "^22.0.0 || ^22.1.0-next.0",
+				"@angular/service-worker": "^22.0.0 || ^22.1.0-next.0",
+				"@angular/platform-server": "^22.0.0 || ^22.1.0-next.0",
+				"@angular/platform-browser": "^22.0.0 || ^22.1.0-next.0"
+			},
+			"keywords": [
+				"Angular CLI",
+				"Angular DevKit",
+				"angular",
+				"devkit",
+				"sdk"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "angular",
+					"email": "devops+npm@angular.io"
+				},
+				{
+					"name": "google-wombot",
+					"email": "node-team-npm+wombot@google.com"
+				}
+			],
+			"directories": {},
+			"lastModified": 0,
+			"deprecated": "Angular's Webpack support is deprecated. Use the esbuild and Vite-based \"@angular/build\" package instead.",
+			"peerDependenciesMeta": {
+				"karma": {
+					"optional": true
+				},
+				"ng-packagr": {
+					"optional": true
+				},
+				"tailwindcss": {
+					"optional": true
+				},
+				"@angular/ssr": {
+					"optional": true
+				},
+				"browser-sync": {
+					"optional": true
+				},
+				"@angular/core": {
+					"optional": true
+				},
+				"@angular/localize": {
+					"optional": true
+				},
+				"@angular/service-worker": {
+					"optional": true
+				},
+				"@angular/platform-server": {
+					"optional": true
+				},
+				"@angular/platform-browser": {
+					"optional": true
+				}
+			},
+			"_id": "@angular-devkit/build-angular@22.1.0-next.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@angular-devkit/build-angular/-/build-angular-22.1.0-next.0.tgz",
+				"shasum": "676896f9c82142166029af064b3cabc58ebd561f",
+				"integrity": "sha512-yEnacHfub+F5W5fmABk2FozHU4x+g7OpJ+rMOXBG7PevTgmUcuVXD58QB2lblgh7noTxpPdYA6ZtT8CwFzTzjA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEUCIGEcG0JgiDSe23oCCLS6IUwEn0DqwgFWWwQJ2x/18OWaAiEAxEr2x69SI/iRxY5DBn7Vq+5pzchuMC0k+xA76mBhYtY="
+					}
+				]
+			},
+			"_npmVersion": "10.9.8",
+			"_npmUser": {
+				"name": "google-wombot",
+				"email": "node-team-npm+wombot@google.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "d3b25dff78ca6499e50796f93c86df699e8f43ab",
+			"builders": "builders.json",
+			"typings": "src/index.d.ts",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/build-angular_22.1.0-next.0_1781196202777_0.9158502319175812",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"readmeFilename": "README.md",
+			"_nodeVersion": "22.22.3",
+			"contributors": []
+		},
+		"22.0.2": {
+			"name": "@angular-devkit/build-angular",
+			"description": "Angular Webpack Build Facade",
+			"version": "22.0.2",
+			"author": {
+				"name": "Angular Authors"
+			},
+			"homepage": "https://github.com/angular/angular-cli",
+			"repository": {
+				"url": "git+https://github.com/angular/angular-cli.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/angular/angular-cli/issues"
+			},
+			"engines": {
+				"npm": "^6.11.0 || ^7.5.6 || >=8.0.0",
+				"node": "^22.22.3 || ^24.15.0 || >=26.0.0",
+				"yarn": ">= 1.13.0"
+			},
+			"main": "src/index.js",
+			"dependencies": {
+				"ora": "9.4.0",
+				"less": "4.6.4",
+				"open": "11.0.0",
+				"rxjs": "7.8.2",
+				"sass": "1.99.0",
+				"tslib": "2.8.1",
+				"semver": "7.7.4",
+				"terser": "5.46.2",
+				"piscina": "5.1.4",
+				"postcss": "8.5.13",
+				"webpack": "5.106.2",
+				"picomatch": "4.0.4",
+				"css-loader": "7.1.4",
+				"tinyglobby": "0.2.16",
+				"@babel/core": "7.29.0",
+				"ansi-colors": "4.1.3",
+				"less-loader": "12.3.2",
+				"sass-loader": "16.0.7",
+				"autoprefixer": "10.5.0",
+				"babel-loader": "10.1.1",
+				"browserslist": "^4.26.0",
+				"esbuild-wasm": "0.28.1",
+				"jsonc-parser": "3.3.1",
+				"loader-utils": "3.3.1",
+				"webpack-merge": "6.0.1",
+				"@angular/build": "22.0.2",
+				"@babel/runtime": "7.29.2",
+				"postcss-loader": "8.2.1",
+				"@babel/generator": "7.29.1",
+				"@ngtools/webpack": "22.0.2",
+				"@babel/preset-env": "7.29.3",
+				"source-map-loader": "5.0.0",
+				"resolve-url-loader": "5.0.0",
+				"source-map-support": "0.5.21",
+				"webpack-dev-server": "5.2.3",
+				"copy-webpack-plugin": "14.0.0",
+				"@angular-devkit/core": "22.0.2",
+				"@ampproject/remapping": "2.3.0",
+				"@discoveryjs/json-ext": "1.1.0",
+				"http-proxy-middleware": "3.0.5",
+				"license-webpack-plugin": "4.0.2",
+				"webpack-dev-middleware": "8.0.3",
+				"istanbul-lib-instrument": "6.0.3",
+				"mini-css-extract-plugin": "2.10.2",
+				"karma-source-map-support": "1.4.0",
+				"@angular-devkit/architect": "0.2200.2",
+				"@angular-devkit/build-webpack": "0.2200.2",
+				"webpack-subresource-integrity": "5.1.0",
+				"@babel/helper-annotate-as-pure": "7.27.3",
+				"@babel/plugin-transform-runtime": "7.29.0",
+				"@babel/helper-split-export-declaration": "7.24.7",
+				"@babel/plugin-transform-async-to-generator": "7.28.6",
+				"@babel/plugin-transform-async-generator-functions": "7.29.0"
+			},
+			"optionalDependencies": {
+				"esbuild": "0.28.1"
+			},
+			"peerDependencies": {
+				"karma": "^6.3.0",
+				"ng-packagr": "^22.0.0",
+				"typescript": ">=6.0 <6.1",
+				"tailwindcss": "^2.0.0 || ^3.0.0 || ^4.0.0",
+				"@angular/ssr": "^22.0.2",
+				"browser-sync": "^3.0.2",
+				"@angular/core": "^22.0.0",
+				"@angular/localize": "^22.0.0",
+				"@angular/compiler-cli": "^22.0.0",
+				"@angular/service-worker": "^22.0.0",
+				"@angular/platform-server": "^22.0.0",
+				"@angular/platform-browser": "^22.0.0"
+			},
+			"keywords": [
+				"Angular CLI",
+				"Angular DevKit",
+				"angular",
+				"devkit",
+				"sdk"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "angular",
+					"email": "devops+npm@angular.io"
+				},
+				{
+					"name": "google-wombot",
+					"email": "node-team-npm+wombot@google.com"
+				}
+			],
+			"directories": {},
+			"lastModified": 0,
+			"deprecated": "Angular's Webpack support is deprecated. Use the esbuild and Vite-based \"@angular/build\" package instead.",
+			"peerDependenciesMeta": {
+				"karma": {
+					"optional": true
+				},
+				"ng-packagr": {
+					"optional": true
+				},
+				"tailwindcss": {
+					"optional": true
+				},
+				"@angular/ssr": {
+					"optional": true
+				},
+				"browser-sync": {
+					"optional": true
+				},
+				"@angular/core": {
+					"optional": true
+				},
+				"@angular/localize": {
+					"optional": true
+				},
+				"@angular/service-worker": {
+					"optional": true
+				},
+				"@angular/platform-server": {
+					"optional": true
+				},
+				"@angular/platform-browser": {
+					"optional": true
+				}
+			},
+			"_id": "@angular-devkit/build-angular@22.0.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@angular-devkit/build-angular/-/build-angular-22.0.2.tgz",
+				"shasum": "b510edffa91ae905adb1d60075cb670361333a1a",
+				"integrity": "sha512-wc3YlmTPN+ng+2o6f0z6eBFrNYWp7P5jAiniKZ8j0w87ba8jG7J+FdBeSvXX4wQOrYLhqOXYbHR4XqIj3uRRSw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEUCIQD3cvVyx21bkLPvAT5OThZWdGoyt6XIJvHjnZB2mUM0HQIgOHHqyo5Jk3H78x9m93oc8giFbUHyLjDHFykaX7qGpbw="
+					}
+				]
+			},
+			"_npmVersion": "10.9.8",
+			"_npmUser": {
+				"name": "google-wombot",
+				"email": "node-team-npm+wombot@google.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "59a6577e65171120890458a4a9b7a7b040ace49d",
+			"builders": "builders.json",
+			"typings": "src/index.d.ts",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/build-angular_22.0.2_1781705276163_0.11141368970652699",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"_nodeVersion": "22.22.3",
+			"contributors": []
+		},
+		"22.0.3": {
+			"name": "@angular-devkit/build-angular",
+			"description": "Angular Webpack Build Facade",
+			"version": "22.0.3",
+			"author": {
+				"name": "Angular Authors"
+			},
+			"homepage": "https://github.com/angular/angular-cli",
+			"repository": {
+				"url": "git+https://github.com/angular/angular-cli.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/angular/angular-cli/issues"
+			},
+			"engines": {
+				"npm": "^6.11.0 || ^7.5.6 || >=8.0.0",
+				"node": "^22.22.3 || ^24.15.0 || >=26.0.0",
+				"yarn": ">= 1.13.0"
+			},
+			"main": "src/index.js",
+			"dependencies": {
+				"ora": "9.4.0",
+				"less": "4.6.4",
+				"open": "11.0.0",
+				"rxjs": "7.8.2",
+				"sass": "1.99.0",
+				"tslib": "2.8.1",
+				"semver": "7.7.4",
+				"terser": "5.46.2",
+				"piscina": "5.1.4",
+				"postcss": "8.5.13",
+				"webpack": "5.106.2",
+				"picomatch": "4.0.4",
+				"css-loader": "7.1.4",
+				"tinyglobby": "0.2.16",
+				"@babel/core": "7.29.0",
+				"ansi-colors": "4.1.3",
+				"less-loader": "12.3.2",
+				"sass-loader": "16.0.7",
+				"autoprefixer": "10.5.0",
+				"babel-loader": "10.1.1",
+				"browserslist": "^4.26.0",
+				"esbuild-wasm": "0.28.1",
+				"jsonc-parser": "3.3.1",
+				"loader-utils": "3.3.1",
+				"webpack-merge": "6.0.1",
+				"@angular/build": "22.0.3",
+				"@babel/runtime": "7.29.2",
+				"postcss-loader": "8.2.1",
+				"@babel/generator": "7.29.1",
+				"@ngtools/webpack": "22.0.3",
+				"@babel/preset-env": "7.29.3",
+				"source-map-loader": "5.0.0",
+				"resolve-url-loader": "5.0.0",
+				"source-map-support": "0.5.21",
+				"webpack-dev-server": "5.2.3",
+				"copy-webpack-plugin": "14.0.0",
+				"@angular-devkit/core": "22.0.3",
+				"@ampproject/remapping": "2.3.0",
+				"@discoveryjs/json-ext": "1.1.0",
+				"http-proxy-middleware": "3.0.5",
+				"license-webpack-plugin": "4.0.2",
+				"webpack-dev-middleware": "8.0.3",
+				"istanbul-lib-instrument": "6.0.3",
+				"mini-css-extract-plugin": "2.10.2",
+				"karma-source-map-support": "1.4.0",
+				"@angular-devkit/architect": "0.2200.3",
+				"@angular-devkit/build-webpack": "0.2200.3",
+				"webpack-subresource-integrity": "5.1.0",
+				"@babel/helper-annotate-as-pure": "7.27.3",
+				"@babel/plugin-transform-runtime": "7.29.0",
+				"@babel/helper-split-export-declaration": "7.24.7",
+				"@babel/plugin-transform-async-to-generator": "7.28.6",
+				"@babel/plugin-transform-async-generator-functions": "7.29.0"
+			},
+			"optionalDependencies": {
+				"esbuild": "0.28.1"
+			},
+			"peerDependencies": {
+				"karma": "^6.3.0",
+				"ng-packagr": "^22.0.0",
+				"typescript": ">=6.0 <6.1",
+				"tailwindcss": "^2.0.0 || ^3.0.0 || ^4.0.0",
+				"@angular/ssr": "^22.0.3",
+				"browser-sync": "^3.0.2",
+				"@angular/core": "^22.0.0",
+				"@angular/localize": "^22.0.0",
+				"@angular/compiler-cli": "^22.0.0",
+				"@angular/service-worker": "^22.0.0",
+				"@angular/platform-server": "^22.0.0",
+				"@angular/platform-browser": "^22.0.0"
+			},
+			"keywords": [
+				"Angular CLI",
+				"Angular DevKit",
+				"angular",
+				"devkit",
+				"sdk"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "angular",
+					"email": "devops+npm@angular.io"
+				},
+				{
+					"name": "google-wombot",
+					"email": "node-team-npm+wombot@google.com"
+				}
+			],
+			"directories": {},
+			"lastModified": 0,
+			"deprecated": "Angular's Webpack support is deprecated. Use the esbuild and Vite-based \"@angular/build\" package instead.",
+			"peerDependenciesMeta": {
+				"karma": {
+					"optional": true
+				},
+				"ng-packagr": {
+					"optional": true
+				},
+				"tailwindcss": {
+					"optional": true
+				},
+				"@angular/ssr": {
+					"optional": true
+				},
+				"browser-sync": {
+					"optional": true
+				},
+				"@angular/core": {
+					"optional": true
+				},
+				"@angular/localize": {
+					"optional": true
+				},
+				"@angular/service-worker": {
+					"optional": true
+				},
+				"@angular/platform-server": {
+					"optional": true
+				},
+				"@angular/platform-browser": {
+					"optional": true
+				}
+			},
+			"_id": "@angular-devkit/build-angular@22.0.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@angular-devkit/build-angular/-/build-angular-22.0.3.tgz",
+				"shasum": "a4cdd08377d85d5c66874085eaae60833dd52148",
+				"integrity": "sha512-a8xRfTluA7mLI3rzL8YaW9GqWWZHiSP1JkMrA3n2HUcmWINidEnX3CntASDyDAw4nv+tB4j7IZ3aTkkpNK/l5Q==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEUCIQDd8MrvcBuAx4kPr4FZSlFez8D88THHXvEzlnfyNCPevwIgNs8UC5V4QMFyTf/kLuD8o2zyQgiae+gAUfen7oHfqGI="
+					}
+				]
+			},
+			"_npmVersion": "10.9.8",
+			"_npmUser": {
+				"name": "google-wombot",
+				"email": "node-team-npm+wombot@google.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "c69beaad6807bd4188c00098ebae7b3f1249672c",
+			"builders": "builders.json",
+			"typings": "src/index.d.ts",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/build-angular_22.0.3_1781789639738_0.2811115715358665",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"_nodeVersion": "22.22.3",
+			"contributors": []
+		},
+		"20.3.28": {
+			"name": "@angular-devkit/build-angular",
+			"description": "Angular Webpack Build Facade",
+			"version": "20.3.28",
+			"author": {
+				"name": "Angular Authors"
+			},
+			"homepage": "https://github.com/angular/angular-cli",
+			"repository": {
+				"url": "git+https://github.com/angular/angular-cli.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/angular/angular-cli/issues"
+			},
+			"engines": {
+				"npm": "^6.11.0 || ^7.5.6 || >=8.0.0",
+				"node": "^20.19.0 || ^22.12.0 || >=24.0.0",
+				"yarn": ">= 1.13.0"
+			},
+			"main": "src/index.js",
+			"dependencies": {
+				"ora": "8.2.0",
+				"less": "4.4.0",
+				"open": "10.2.0",
+				"rxjs": "7.8.2",
+				"sass": "1.90.0",
+				"tslib": "2.8.1",
+				"semver": "7.7.2",
+				"terser": "5.43.1",
+				"piscina": "5.1.3",
+				"postcss": "8.5.12",
+				"webpack": "5.105.0",
+				"fast-glob": "3.3.3",
+				"picomatch": "4.0.4",
+				"tree-kill": "1.2.2",
+				"css-loader": "7.1.2",
+				"@babel/core": "7.28.3",
+				"ansi-colors": "4.1.3",
+				"less-loader": "12.3.0",
+				"sass-loader": "16.0.5",
+				"autoprefixer": "10.4.21",
+				"babel-loader": "10.0.0",
+				"browserslist": "^4.21.5",
+				"esbuild-wasm": "0.28.0",
+				"jsonc-parser": "3.3.1",
+				"loader-utils": "3.3.1",
+				"webpack-merge": "6.0.1",
+				"@angular/build": "20.3.28",
+				"@babel/runtime": "7.28.3",
+				"postcss-loader": "8.1.1",
+				"@babel/generator": "7.28.3",
+				"@ngtools/webpack": "20.3.28",
+				"@babel/preset-env": "7.28.3",
+				"source-map-loader": "5.0.0",
+				"resolve-url-loader": "5.0.0",
+				"source-map-support": "0.5.21",
+				"webpack-dev-server": "5.2.2",
+				"copy-webpack-plugin": "14.0.0",
+				"@angular-devkit/core": "20.3.28",
+				"@ampproject/remapping": "2.3.0",
+				"@discoveryjs/json-ext": "0.6.3",
+				"http-proxy-middleware": "3.0.5",
+				"license-webpack-plugin": "4.0.2",
+				"webpack-dev-middleware": "7.4.2",
+				"istanbul-lib-instrument": "6.0.3",
+				"mini-css-extract-plugin": "2.9.4",
+				"karma-source-map-support": "1.4.0",
+				"@angular-devkit/architect": "0.2003.28",
+				"@angular-devkit/build-webpack": "0.2003.28",
+				"webpack-subresource-integrity": "5.1.0",
+				"@babel/helper-annotate-as-pure": "7.27.3",
+				"@babel/plugin-transform-runtime": "7.28.3",
+				"@babel/helper-split-export-declaration": "7.24.7",
+				"@babel/plugin-transform-async-to-generator": "7.27.1",
+				"@babel/plugin-transform-async-generator-functions": "7.28.0"
+			},
+			"optionalDependencies": {
+				"esbuild": "0.28.0"
+			},
+			"peerDependencies": {
+				"jest": "^29.5.0 || ^30.2.0",
+				"karma": "^6.3.0",
+				"ng-packagr": "^20.0.0",
+				"protractor": "^7.0.0",
+				"typescript": ">=5.8 <6.0",
+				"tailwindcss": "^2.0.0 || ^3.0.0 || ^4.0.0",
+				"@angular/ssr": "^20.3.28",
+				"browser-sync": "^3.0.2",
+				"@angular/core": "^20.0.0",
+				"@web/test-runner": "^0.20.0",
+				"@angular/localize": "^20.0.0",
+				"@angular/compiler-cli": "^20.0.0",
+				"jest-environment-jsdom": "^29.5.0 || ^30.2.0",
+				"@angular/service-worker": "^20.0.0",
+				"@angular/platform-server": "^20.0.0",
+				"@angular/platform-browser": "^20.0.0"
+			},
+			"keywords": [
+				"Angular CLI",
+				"Angular DevKit",
+				"angular",
+				"devkit",
+				"sdk"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "angular",
+					"email": "devops+npm@angular.io"
+				},
+				{
+					"name": "google-wombot",
+					"email": "node-team-npm+wombot@google.com"
+				}
+			],
+			"directories": {},
+			"lastModified": 0,
+			"peerDependenciesMeta": {
+				"jest": {
+					"optional": true
+				},
+				"karma": {
+					"optional": true
+				},
+				"ng-packagr": {
+					"optional": true
+				},
+				"protractor": {
+					"optional": true
+				},
+				"tailwindcss": {
+					"optional": true
+				},
+				"@angular/ssr": {
+					"optional": true
+				},
+				"browser-sync": {
+					"optional": true
+				},
+				"@angular/core": {
+					"optional": true
+				},
+				"@web/test-runner": {
+					"optional": true
+				},
+				"@angular/localize": {
+					"optional": true
+				},
+				"jest-environment-jsdom": {
+					"optional": true
+				},
+				"@angular/service-worker": {
+					"optional": true
+				},
+				"@angular/platform-server": {
+					"optional": true
+				},
+				"@angular/platform-browser": {
+					"optional": true
+				}
+			},
+			"_id": "@angular-devkit/build-angular@20.3.28",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@angular-devkit/build-angular/-/build-angular-20.3.28.tgz",
+				"shasum": "0aec79e3426df205e0f7cdd55c8b10cfba5b8cee",
+				"integrity": "sha512-D+OXO9Y69yNBlUMSXVKiJ2UjqCO8/bj7E8FX6sQVQpJZ/OlXgCx4A8R1PCRez/WL3K3RILh0GeohkBmBufd7Pg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEYCIQCBSbwvqiaZZywvXmJcAc14GylEGcdX2K7cJlM3hP2y1AIhAO/z8px4u9MMHypfjSULCLLA6C/cEUbdHH0jaDc9Z99z"
+					}
+				]
+			},
+			"_npmVersion": "10.9.4",
+			"_npmUser": {
+				"name": "google-wombot",
+				"email": "node-team-npm+wombot@google.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "6d7167ecaf3efc88b041a34a3dceabbf1a782d09",
+			"builders": "builders.json",
+			"typings": "src/index.d.ts",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/build-angular_20.3.28_1781195910199_0.5154060485739449",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"packageManager": "pnpm@10.19.0",
+			"readmeFilename": "README.md",
+			"_nodeVersion": "22.21.0",
+			"contributors": []
+		},
+		"20.3.29": {
+			"name": "@angular-devkit/build-angular",
+			"description": "Angular Webpack Build Facade",
+			"version": "20.3.29",
+			"author": {
+				"name": "Angular Authors"
+			},
+			"homepage": "https://github.com/angular/angular-cli",
+			"repository": {
+				"url": "git+https://github.com/angular/angular-cli.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/angular/angular-cli/issues"
+			},
+			"engines": {
+				"npm": "^6.11.0 || ^7.5.6 || >=8.0.0",
+				"node": "^20.19.0 || ^22.12.0 || >=24.0.0",
+				"yarn": ">= 1.13.0"
+			},
+			"main": "src/index.js",
+			"dependencies": {
+				"ora": "8.2.0",
+				"less": "4.4.0",
+				"open": "10.2.0",
+				"rxjs": "7.8.2",
+				"sass": "1.90.0",
+				"tslib": "2.8.1",
+				"semver": "7.7.2",
+				"terser": "5.43.1",
+				"piscina": "5.1.3",
+				"postcss": "8.5.12",
+				"webpack": "5.105.0",
+				"fast-glob": "3.3.3",
+				"picomatch": "4.0.4",
+				"tree-kill": "1.2.2",
+				"css-loader": "7.1.2",
+				"@babel/core": "7.28.3",
+				"ansi-colors": "4.1.3",
+				"less-loader": "12.3.0",
+				"sass-loader": "16.0.5",
+				"autoprefixer": "10.4.21",
+				"babel-loader": "10.0.0",
+				"browserslist": "^4.21.5",
+				"esbuild-wasm": "0.28.0",
+				"jsonc-parser": "3.3.1",
+				"loader-utils": "3.3.1",
+				"webpack-merge": "6.0.1",
+				"@angular/build": "20.3.29",
+				"@babel/runtime": "7.28.3",
+				"postcss-loader": "8.1.1",
+				"@babel/generator": "7.28.3",
+				"@ngtools/webpack": "20.3.29",
+				"@babel/preset-env": "7.28.3",
+				"source-map-loader": "5.0.0",
+				"resolve-url-loader": "5.0.0",
+				"source-map-support": "0.5.21",
+				"webpack-dev-server": "5.2.5",
+				"copy-webpack-plugin": "14.0.0",
+				"@angular-devkit/core": "20.3.29",
+				"@ampproject/remapping": "2.3.0",
+				"@discoveryjs/json-ext": "0.6.3",
+				"http-proxy-middleware": "3.0.5",
+				"license-webpack-plugin": "4.0.2",
+				"webpack-dev-middleware": "7.4.2",
+				"istanbul-lib-instrument": "6.0.3",
+				"mini-css-extract-plugin": "2.9.4",
+				"karma-source-map-support": "1.4.0",
+				"@angular-devkit/architect": "0.2003.29",
+				"@angular-devkit/build-webpack": "0.2003.29",
+				"webpack-subresource-integrity": "5.1.0",
+				"@babel/helper-annotate-as-pure": "7.27.3",
+				"@babel/plugin-transform-runtime": "7.28.3",
+				"@babel/helper-split-export-declaration": "7.24.7",
+				"@babel/plugin-transform-async-to-generator": "7.27.1",
+				"@babel/plugin-transform-async-generator-functions": "7.28.0"
+			},
+			"optionalDependencies": {
+				"esbuild": "0.28.0"
+			},
+			"peerDependencies": {
+				"jest": "^29.5.0 || ^30.2.0",
+				"karma": "^6.3.0",
+				"ng-packagr": "^20.0.0",
+				"protractor": "^7.0.0",
+				"typescript": ">=5.8 <6.0",
+				"tailwindcss": "^2.0.0 || ^3.0.0 || ^4.0.0",
+				"@angular/ssr": "^20.3.29",
+				"browser-sync": "^3.0.2",
+				"@angular/core": "^20.0.0",
+				"@web/test-runner": "^0.20.0",
+				"@angular/localize": "^20.0.0",
+				"@angular/compiler-cli": "^20.0.0",
+				"jest-environment-jsdom": "^29.5.0 || ^30.2.0",
+				"@angular/service-worker": "^20.0.0",
+				"@angular/platform-server": "^20.0.0",
+				"@angular/platform-browser": "^20.0.0"
+			},
+			"keywords": [
+				"Angular CLI",
+				"Angular DevKit",
+				"angular",
+				"devkit",
+				"sdk"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "angular",
+					"email": "devops+npm@angular.io"
+				},
+				{
+					"name": "google-wombot",
+					"email": "node-team-npm+wombot@google.com"
+				}
+			],
+			"directories": {},
+			"lastModified": 0,
+			"peerDependenciesMeta": {
+				"jest": {
+					"optional": true
+				},
+				"karma": {
+					"optional": true
+				},
+				"ng-packagr": {
+					"optional": true
+				},
+				"protractor": {
+					"optional": true
+				},
+				"tailwindcss": {
+					"optional": true
+				},
+				"@angular/ssr": {
+					"optional": true
+				},
+				"browser-sync": {
+					"optional": true
+				},
+				"@angular/core": {
+					"optional": true
+				},
+				"@web/test-runner": {
+					"optional": true
+				},
+				"@angular/localize": {
+					"optional": true
+				},
+				"jest-environment-jsdom": {
+					"optional": true
+				},
+				"@angular/service-worker": {
+					"optional": true
+				},
+				"@angular/platform-server": {
+					"optional": true
+				},
+				"@angular/platform-browser": {
+					"optional": true
+				}
+			},
+			"_id": "@angular-devkit/build-angular@20.3.29",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@angular-devkit/build-angular/-/build-angular-20.3.29.tgz",
+				"shasum": "1fcf96cd42f27fe8847a4e12bd474834e2253e57",
+				"integrity": "sha512-7x1W8sa6lxV60kWNrKxRZl7kgFnPwZO0N8oaGf32NP9bnd+BKT7XaDtkz6nrJ18vQE/uSamuE8s8WuCZznA8+A==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEUCIQC+inoNeAP+p24oOEPCWsv5sOg00BNfKTNJ4EP686138wIgUDyDjIUZKyLBlqpnuvugsRy6Uks/YzBu1IieOgEs9EU="
+					}
+				]
+			},
+			"_npmVersion": "10.9.4",
+			"_npmUser": {
+				"name": "google-wombot",
+				"email": "node-team-npm+wombot@google.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "fd1fa2c3d79d6a4c533f270a9d3f790eac740abf",
+			"builders": "builders.json",
+			"typings": "src/index.d.ts",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/build-angular_20.3.29_1781708099682_0.39645560898305265",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"packageManager": "pnpm@10.19.0",
+			"readmeFilename": "README.md",
+			"_nodeVersion": "22.21.0",
+			"contributors": []
+		},
+		"21.2.16": {
+			"name": "@angular-devkit/build-angular",
+			"description": "Angular Webpack Build Facade",
+			"version": "21.2.16",
+			"author": {
+				"name": "Angular Authors"
+			},
+			"homepage": "https://github.com/angular/angular-cli",
+			"repository": {
+				"url": "git+https://github.com/angular/angular-cli.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/angular/angular-cli/issues"
+			},
+			"engines": {
+				"npm": "^6.11.0 || ^7.5.6 || >=8.0.0",
+				"node": "^20.19.0 || ^22.12.0 || >=24.0.0",
+				"yarn": ">= 1.13.0"
+			},
+			"main": "src/index.js",
+			"dependencies": {
+				"ora": "9.3.0",
+				"less": "4.4.2",
+				"open": "11.0.0",
+				"rxjs": "7.8.2",
+				"sass": "1.97.3",
+				"tslib": "2.8.1",
+				"semver": "7.7.4",
+				"terser": "5.46.0",
+				"piscina": "5.1.4",
+				"postcss": "8.5.12",
+				"webpack": "5.105.2",
+				"picomatch": "4.0.4",
+				"tree-kill": "1.2.2",
+				"css-loader": "7.1.3",
+				"tinyglobby": "0.2.15",
+				"@babel/core": "7.29.0",
+				"ansi-colors": "4.1.3",
+				"less-loader": "12.3.1",
+				"sass-loader": "16.0.7",
+				"autoprefixer": "10.4.27",
+				"babel-loader": "10.0.0",
+				"browserslist": "^4.26.0",
+				"esbuild-wasm": "0.27.3",
+				"jsonc-parser": "3.3.1",
+				"loader-utils": "3.3.1",
+				"webpack-merge": "6.0.1",
+				"@angular/build": "21.2.16",
+				"@babel/runtime": "7.29.2",
+				"postcss-loader": "8.2.0",
+				"@babel/generator": "7.29.1",
+				"@ngtools/webpack": "21.2.16",
+				"@babel/preset-env": "7.29.2",
+				"source-map-loader": "5.0.0",
+				"resolve-url-loader": "5.0.0",
+				"source-map-support": "0.5.21",
+				"webpack-dev-server": "5.2.5",
+				"copy-webpack-plugin": "14.0.0",
+				"@angular-devkit/core": "21.2.16",
+				"@ampproject/remapping": "2.3.0",
+				"@discoveryjs/json-ext": "0.6.3",
+				"http-proxy-middleware": "3.0.5",
+				"license-webpack-plugin": "4.0.2",
+				"webpack-dev-middleware": "7.4.5",
+				"istanbul-lib-instrument": "6.0.3",
+				"mini-css-extract-plugin": "2.10.0",
+				"karma-source-map-support": "1.4.0",
+				"@angular-devkit/architect": "0.2102.16",
+				"@angular-devkit/build-webpack": "0.2102.16",
+				"webpack-subresource-integrity": "5.1.0",
+				"@babel/helper-annotate-as-pure": "7.27.3",
+				"@babel/plugin-transform-runtime": "7.29.0",
+				"@babel/helper-split-export-declaration": "7.24.7",
+				"@babel/plugin-transform-async-to-generator": "7.28.6",
+				"@babel/plugin-transform-async-generator-functions": "7.29.0"
+			},
+			"optionalDependencies": {
+				"esbuild": "0.27.3"
+			},
+			"peerDependencies": {
+				"jest": "^30.2.0",
+				"karma": "^6.3.0",
+				"ng-packagr": "^21.0.0",
+				"protractor": "^7.0.0",
+				"typescript": ">=5.9 <6.0",
+				"tailwindcss": "^2.0.0 || ^3.0.0 || ^4.0.0",
+				"@angular/ssr": "^21.2.16",
+				"browser-sync": "^3.0.2",
+				"@angular/core": "^21.0.0",
+				"@web/test-runner": "^0.20.0",
+				"@angular/localize": "^21.0.0",
+				"@angular/compiler-cli": "^21.0.0",
+				"jest-environment-jsdom": "^30.2.0",
+				"@angular/service-worker": "^21.0.0",
+				"@angular/platform-server": "^21.0.0",
+				"@angular/platform-browser": "^21.0.0"
+			},
+			"keywords": [
+				"Angular CLI",
+				"Angular DevKit",
+				"angular",
+				"devkit",
+				"sdk"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "angular",
+					"email": "devops+npm@angular.io"
+				},
+				{
+					"name": "google-wombot",
+					"email": "node-team-npm+wombot@google.com"
+				}
+			],
+			"directories": {},
+			"lastModified": 0,
+			"peerDependenciesMeta": {
+				"jest": {
+					"optional": true
+				},
+				"karma": {
+					"optional": true
+				},
+				"ng-packagr": {
+					"optional": true
+				},
+				"protractor": {
+					"optional": true
+				},
+				"tailwindcss": {
+					"optional": true
+				},
+				"@angular/ssr": {
+					"optional": true
+				},
+				"browser-sync": {
+					"optional": true
+				},
+				"@angular/core": {
+					"optional": true
+				},
+				"@web/test-runner": {
+					"optional": true
+				},
+				"@angular/localize": {
+					"optional": true
+				},
+				"jest-environment-jsdom": {
+					"optional": true
+				},
+				"@angular/service-worker": {
+					"optional": true
+				},
+				"@angular/platform-server": {
+					"optional": true
+				},
+				"@angular/platform-browser": {
+					"optional": true
+				}
+			},
+			"_id": "@angular-devkit/build-angular@21.2.16",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@angular-devkit/build-angular/-/build-angular-21.2.16.tgz",
+				"shasum": "48b4642fdd668a4683dcdb887013e74729c2ff5c",
+				"integrity": "sha512-s5rl8Xig67O88zd9P4ZmtI3L2Lro+/PAq+JaegjAOkY1j+ezOQMKtAUffMEmiGTkg69VFpgVfr7s8M99PFJSeg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEUCIQDRGavvUHj8WDe6Ujqf8tNItMfyfVUntYQhI0O/mzegWQIgeZjMjR6pDWT1gGO+5DGeX9orgwe4wuwt7UjgJ6eC3R4="
+					}
+				]
+			},
+			"_npmVersion": "10.9.7",
+			"_npmUser": {
+				"name": "google-wombot",
+				"email": "node-team-npm+wombot@google.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "55b55c04293822048685018863fb7be74a08ebf2",
+			"builders": "builders.json",
+			"typings": "src/index.d.ts",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/build-angular_21.2.16_1781710340325_0.6164692683737367",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"packageManager": "pnpm@10.33.2",
+			"readmeFilename": "README.md",
+			"_nodeVersion": "22.22.2",
+			"contributors": []
+		},
+		"21.2.15": {
+			"name": "@angular-devkit/build-angular",
+			"description": "Angular Webpack Build Facade",
+			"version": "21.2.15",
+			"author": {
+				"name": "Angular Authors"
+			},
+			"homepage": "https://github.com/angular/angular-cli",
+			"repository": {
+				"url": "git+https://github.com/angular/angular-cli.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/angular/angular-cli/issues"
+			},
+			"engines": {
+				"npm": "^6.11.0 || ^7.5.6 || >=8.0.0",
+				"node": "^20.19.0 || ^22.12.0 || >=24.0.0",
+				"yarn": ">= 1.13.0"
+			},
+			"main": "src/index.js",
+			"dependencies": {
+				"ora": "9.3.0",
+				"less": "4.4.2",
+				"open": "11.0.0",
+				"rxjs": "7.8.2",
+				"sass": "1.97.3",
+				"tslib": "2.8.1",
+				"semver": "7.7.4",
+				"terser": "5.46.0",
+				"piscina": "5.1.4",
+				"postcss": "8.5.12",
+				"webpack": "5.105.2",
+				"picomatch": "4.0.4",
+				"tree-kill": "1.2.2",
+				"css-loader": "7.1.3",
+				"tinyglobby": "0.2.15",
+				"@babel/core": "7.29.0",
+				"ansi-colors": "4.1.3",
+				"less-loader": "12.3.1",
+				"sass-loader": "16.0.7",
+				"autoprefixer": "10.4.27",
+				"babel-loader": "10.0.0",
+				"browserslist": "^4.26.0",
+				"esbuild-wasm": "0.27.3",
+				"jsonc-parser": "3.3.1",
+				"loader-utils": "3.3.1",
+				"webpack-merge": "6.0.1",
+				"@angular/build": "21.2.15",
+				"@babel/runtime": "7.29.2",
+				"postcss-loader": "8.2.0",
+				"@babel/generator": "7.29.1",
+				"@ngtools/webpack": "21.2.15",
+				"@babel/preset-env": "7.29.2",
+				"source-map-loader": "5.0.0",
+				"resolve-url-loader": "5.0.0",
+				"source-map-support": "0.5.21",
+				"webpack-dev-server": "5.2.3",
+				"copy-webpack-plugin": "14.0.0",
+				"@angular-devkit/core": "21.2.15",
+				"@ampproject/remapping": "2.3.0",
+				"@discoveryjs/json-ext": "0.6.3",
+				"http-proxy-middleware": "3.0.5",
+				"license-webpack-plugin": "4.0.2",
+				"webpack-dev-middleware": "7.4.5",
+				"istanbul-lib-instrument": "6.0.3",
+				"mini-css-extract-plugin": "2.10.0",
+				"karma-source-map-support": "1.4.0",
+				"@angular-devkit/architect": "0.2102.15",
+				"@angular-devkit/build-webpack": "0.2102.15",
+				"webpack-subresource-integrity": "5.1.0",
+				"@babel/helper-annotate-as-pure": "7.27.3",
+				"@babel/plugin-transform-runtime": "7.29.0",
+				"@babel/helper-split-export-declaration": "7.24.7",
+				"@babel/plugin-transform-async-to-generator": "7.28.6",
+				"@babel/plugin-transform-async-generator-functions": "7.29.0"
+			},
+			"optionalDependencies": {
+				"esbuild": "0.27.3"
+			},
+			"peerDependencies": {
+				"jest": "^30.2.0",
+				"karma": "^6.3.0",
+				"ng-packagr": "^21.0.0",
+				"protractor": "^7.0.0",
+				"typescript": ">=5.9 <6.0",
+				"tailwindcss": "^2.0.0 || ^3.0.0 || ^4.0.0",
+				"@angular/ssr": "^21.2.15",
+				"browser-sync": "^3.0.2",
+				"@angular/core": "^21.0.0",
+				"@web/test-runner": "^0.20.0",
+				"@angular/localize": "^21.0.0",
+				"@angular/compiler-cli": "^21.0.0",
+				"jest-environment-jsdom": "^30.2.0",
+				"@angular/service-worker": "^21.0.0",
+				"@angular/platform-server": "^21.0.0",
+				"@angular/platform-browser": "^21.0.0"
+			},
+			"keywords": [
+				"Angular CLI",
+				"Angular DevKit",
+				"angular",
+				"devkit",
+				"sdk"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "angular",
+					"email": "devops+npm@angular.io"
+				},
+				{
+					"name": "google-wombot",
+					"email": "node-team-npm+wombot@google.com"
+				}
+			],
+			"directories": {},
+			"lastModified": 0,
+			"peerDependenciesMeta": {
+				"jest": {
+					"optional": true
+				},
+				"karma": {
+					"optional": true
+				},
+				"ng-packagr": {
+					"optional": true
+				},
+				"protractor": {
+					"optional": true
+				},
+				"tailwindcss": {
+					"optional": true
+				},
+				"@angular/ssr": {
+					"optional": true
+				},
+				"browser-sync": {
+					"optional": true
+				},
+				"@angular/core": {
+					"optional": true
+				},
+				"@web/test-runner": {
+					"optional": true
+				},
+				"@angular/localize": {
+					"optional": true
+				},
+				"jest-environment-jsdom": {
+					"optional": true
+				},
+				"@angular/service-worker": {
+					"optional": true
+				},
+				"@angular/platform-server": {
+					"optional": true
+				},
+				"@angular/platform-browser": {
+					"optional": true
+				}
+			},
+			"_id": "@angular-devkit/build-angular@21.2.15",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@angular-devkit/build-angular/-/build-angular-21.2.15.tgz",
+				"shasum": "44636ea03b4c0faaf045359eeef527583017ab53",
+				"integrity": "sha512-9nXl29XokfSd4D1QqZhHIC7pLxlDxkULtH0zyfWDgb+Y2qElVlufKnpQDUPd9WBCWZFPoFaPVCaaOFwhpur08w==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEUCIQD6bb+2JB6Bu4TphIOAxjs3ZWWI8vcsJpR9GhFzXBVRiAIgSk5t8pclQI54+eQUgevYWQjJENrUx2Vrl6o5R1tSbe0="
+					}
+				]
+			},
+			"_npmVersion": "10.9.7",
+			"_npmUser": {
+				"name": "google-wombot",
+				"email": "node-team-npm+wombot@google.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "12aeae0b780247fac71ca23f6009e9c867d756b5",
+			"builders": "builders.json",
+			"typings": "src/index.d.ts",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/build-angular_21.2.15_1781193324616_0.9181588692476808",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"packageManager": "pnpm@10.33.2",
+			"readmeFilename": "README.md",
+			"_nodeVersion": "22.22.2",
+			"contributors": []
+		},
+		"22.1.0-next.1": {
+			"name": "@angular-devkit/build-angular",
+			"description": "Angular Webpack Build Facade",
+			"version": "22.1.0-next.1",
+			"author": {
+				"name": "Angular Authors"
+			},
+			"homepage": "https://github.com/angular/angular-cli",
+			"repository": {
+				"url": "git+https://github.com/angular/angular-cli.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/angular/angular-cli/issues"
+			},
+			"engines": {
+				"npm": "^6.11.0 || ^7.5.6 || >=8.0.0",
+				"node": "^22.22.3 || ^24.15.0 || >=26.0.0",
+				"yarn": ">= 1.13.0"
+			},
+			"main": "src/index.js",
+			"dependencies": {
+				"ora": "9.4.0",
+				"less": "4.6.6",
+				"open": "11.0.0",
+				"rxjs": "7.8.2",
+				"sass": "1.101.0",
+				"tslib": "2.8.1",
+				"semver": "7.8.4",
+				"terser": "5.48.0",
+				"piscina": "5.2.0",
+				"postcss": "8.5.15",
+				"webpack": "5.107.2",
+				"picomatch": "4.0.4",
+				"css-loader": "7.1.4",
+				"tinyglobby": "0.2.17",
+				"@babel/core": "8.0.1",
+				"ansi-colors": "4.1.3",
+				"less-loader": "13.0.0",
+				"sass-loader": "17.0.0",
+				"autoprefixer": "10.5.0",
+				"babel-loader": "10.1.1",
+				"browserslist": "^4.26.0",
+				"esbuild-wasm": "0.28.1",
+				"jsonc-parser": "3.3.1",
+				"loader-utils": "3.3.1",
+				"webpack-merge": "6.0.1",
+				"@angular/build": "22.1.0-next.1",
+				"@babel/runtime": "8.0.0",
+				"postcss-loader": "8.2.1",
+				"@babel/generator": "8.0.0",
+				"@ngtools/webpack": "22.1.0-next.1",
+				"@babel/preset-env": "8.0.1",
+				"source-map-loader": "5.0.0",
+				"resolve-url-loader": "5.0.0",
+				"source-map-support": "0.5.21",
+				"webpack-dev-server": "5.2.5",
+				"copy-webpack-plugin": "14.0.0",
+				"@angular-devkit/core": "22.1.0-next.1",
+				"@ampproject/remapping": "2.3.0",
+				"@discoveryjs/json-ext": "1.1.0",
+				"http-proxy-middleware": "4.1.1",
+				"license-webpack-plugin": "4.0.2",
+				"webpack-dev-middleware": "8.0.3",
+				"istanbul-lib-instrument": "6.0.3",
+				"mini-css-extract-plugin": "2.10.2",
+				"karma-source-map-support": "1.4.0",
+				"@angular-devkit/architect": "0.2201.0-next.1",
+				"@angular-devkit/build-webpack": "0.2201.0-next.1",
+				"webpack-subresource-integrity": "5.1.0",
+				"@babel/helper-annotate-as-pure": "8.0.0",
+				"@babel/plugin-transform-runtime": "8.0.1",
+				"@babel/helper-split-export-declaration": "7.24.7",
+				"@babel/plugin-transform-async-to-generator": "8.0.1",
+				"@babel/plugin-transform-async-generator-functions": "8.0.1"
+			},
+			"optionalDependencies": {
+				"esbuild": "0.28.1"
+			},
+			"peerDependencies": {
+				"karma": "^6.3.0",
+				"ng-packagr": "^22.0.0 || ^22.1.0-next.0",
+				"typescript": ">=6.0 <6.1",
+				"tailwindcss": "^2.0.0 || ^3.0.0 || ^4.0.0",
+				"@angular/ssr": "^22.1.0-next.1",
+				"browser-sync": "^3.0.2",
+				"@angular/core": "^22.0.0 || ^22.1.0-next.0",
+				"@angular/localize": "^22.0.0 || ^22.1.0-next.0",
+				"@angular/compiler-cli": "^22.0.0 || ^22.1.0-next.0",
+				"@angular/service-worker": "^22.0.0 || ^22.1.0-next.0",
+				"@angular/platform-server": "^22.0.0 || ^22.1.0-next.0",
+				"@angular/platform-browser": "^22.0.0 || ^22.1.0-next.0"
+			},
+			"keywords": [
+				"Angular CLI",
+				"Angular DevKit",
+				"angular",
+				"devkit",
+				"sdk"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "angular",
+					"email": "devops+npm@angular.io"
+				},
+				{
+					"name": "google-wombot",
+					"email": "node-team-npm+wombot@google.com"
+				}
+			],
+			"directories": {},
+			"lastModified": 0,
+			"deprecated": "Angular's Webpack support is deprecated. Use the esbuild and Vite-based \"@angular/build\" package instead.",
+			"peerDependenciesMeta": {
+				"karma": {
+					"optional": true
+				},
+				"ng-packagr": {
+					"optional": true
+				},
+				"tailwindcss": {
+					"optional": true
+				},
+				"@angular/ssr": {
+					"optional": true
+				},
+				"browser-sync": {
+					"optional": true
+				},
+				"@angular/core": {
+					"optional": true
+				},
+				"@angular/localize": {
+					"optional": true
+				},
+				"@angular/service-worker": {
+					"optional": true
+				},
+				"@angular/platform-server": {
+					"optional": true
+				},
+				"@angular/platform-browser": {
+					"optional": true
+				}
+			},
+			"_id": "@angular-devkit/build-angular@22.1.0-next.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@angular-devkit/build-angular/-/build-angular-22.1.0-next.1.tgz",
+				"shasum": "d136630aa5fee0330e4f3d736dd857e49eab1086",
+				"integrity": "sha512-MNCBmfVu1c5uJUNeJaGkv1axj/tmGhnjuic5WY36BzodBogo7s4L65l10vhqBMsCwXXiKTGYRQuTpyqley9gqw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEYCIQCDZu+z8xjmFGIK0iqvCT3pQVsxoLntqVpl7ghOhkOZKQIhAMur9TdFLXewSfdkQbHryrvNrYRqifUH7wJ2Q+/RfwgG"
+					}
+				]
+			},
+			"_npmVersion": "10.9.8",
+			"_npmUser": {
+				"name": "google-wombot",
+				"email": "node-team-npm+wombot@google.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "f7f7772bb58f639957e0efbb8d71cb439cca876a",
+			"builders": "builders.json",
+			"typings": "src/index.d.ts",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/build-angular_22.1.0-next.1_1782292823836_0.22756038592831507",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"readmeFilename": "README.md",
+			"_nodeVersion": "22.23.1",
+			"contributors": []
+		},
+		"22.0.4": {
+			"name": "@angular-devkit/build-angular",
+			"description": "Angular Webpack Build Facade",
+			"version": "22.0.4",
+			"author": {
+				"name": "Angular Authors"
+			},
+			"homepage": "https://github.com/angular/angular-cli",
+			"repository": {
+				"url": "git+https://github.com/angular/angular-cli.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/angular/angular-cli/issues"
+			},
+			"engines": {
+				"npm": "^6.11.0 || ^7.5.6 || >=8.0.0",
+				"node": "^22.22.3 || ^24.15.0 || >=26.0.0",
+				"yarn": ">= 1.13.0"
+			},
+			"main": "src/index.js",
+			"dependencies": {
+				"ora": "9.4.0",
+				"less": "4.6.4",
+				"open": "11.0.0",
+				"rxjs": "7.8.2",
+				"sass": "1.99.0",
+				"tslib": "2.8.1",
+				"semver": "7.7.4",
+				"terser": "5.46.2",
+				"piscina": "5.2.0",
+				"postcss": "8.5.13",
+				"webpack": "5.106.2",
+				"picomatch": "4.0.4",
+				"css-loader": "7.1.4",
+				"tinyglobby": "0.2.16",
+				"@babel/core": "7.29.0",
+				"ansi-colors": "4.1.3",
+				"less-loader": "12.3.2",
+				"sass-loader": "16.0.7",
+				"autoprefixer": "10.5.0",
+				"babel-loader": "10.1.1",
+				"browserslist": "^4.26.0",
+				"esbuild-wasm": "0.28.1",
+				"jsonc-parser": "3.3.1",
+				"loader-utils": "3.3.1",
+				"webpack-merge": "6.0.1",
+				"@angular/build": "22.0.4",
+				"@babel/runtime": "7.29.2",
+				"postcss-loader": "8.2.1",
+				"@babel/generator": "7.29.1",
+				"@ngtools/webpack": "22.0.4",
+				"@babel/preset-env": "7.29.3",
+				"source-map-loader": "5.0.0",
+				"resolve-url-loader": "5.0.0",
+				"source-map-support": "0.5.21",
+				"webpack-dev-server": "5.2.3",
+				"copy-webpack-plugin": "14.0.0",
+				"@angular-devkit/core": "22.0.4",
+				"@ampproject/remapping": "2.3.0",
+				"@discoveryjs/json-ext": "1.1.0",
+				"http-proxy-middleware": "3.0.5",
+				"license-webpack-plugin": "4.0.2",
+				"webpack-dev-middleware": "8.0.3",
+				"istanbul-lib-instrument": "6.0.3",
+				"mini-css-extract-plugin": "2.10.2",
+				"karma-source-map-support": "1.4.0",
+				"@angular-devkit/architect": "0.2200.4",
+				"@angular-devkit/build-webpack": "0.2200.4",
+				"webpack-subresource-integrity": "5.1.0",
+				"@babel/helper-annotate-as-pure": "7.27.3",
+				"@babel/plugin-transform-runtime": "7.29.0",
+				"@babel/helper-split-export-declaration": "7.24.7",
+				"@babel/plugin-transform-async-to-generator": "7.28.6",
+				"@babel/plugin-transform-async-generator-functions": "7.29.0"
+			},
+			"optionalDependencies": {
+				"esbuild": "0.28.1"
+			},
+			"peerDependencies": {
+				"karma": "^6.3.0",
+				"ng-packagr": "^22.0.0",
+				"typescript": ">=6.0 <6.1",
+				"tailwindcss": "^2.0.0 || ^3.0.0 || ^4.0.0",
+				"@angular/ssr": "^22.0.4",
+				"browser-sync": "^3.0.2",
+				"@angular/core": "^22.0.0",
+				"@angular/localize": "^22.0.0",
+				"@angular/compiler-cli": "^22.0.0",
+				"@angular/service-worker": "^22.0.0",
+				"@angular/platform-server": "^22.0.0",
+				"@angular/platform-browser": "^22.0.0"
+			},
+			"keywords": [
+				"Angular CLI",
+				"Angular DevKit",
+				"angular",
+				"devkit",
+				"sdk"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "angular",
+					"email": "devops+npm@angular.io"
+				},
+				{
+					"name": "google-wombot",
+					"email": "node-team-npm+wombot@google.com"
+				}
+			],
+			"directories": {},
+			"lastModified": 0,
+			"deprecated": "Angular's Webpack support is deprecated. Use the esbuild and Vite-based \"@angular/build\" package instead.",
+			"peerDependenciesMeta": {
+				"karma": {
+					"optional": true
+				},
+				"ng-packagr": {
+					"optional": true
+				},
+				"tailwindcss": {
+					"optional": true
+				},
+				"@angular/ssr": {
+					"optional": true
+				},
+				"browser-sync": {
+					"optional": true
+				},
+				"@angular/core": {
+					"optional": true
+				},
+				"@angular/localize": {
+					"optional": true
+				},
+				"@angular/service-worker": {
+					"optional": true
+				},
+				"@angular/platform-server": {
+					"optional": true
+				},
+				"@angular/platform-browser": {
+					"optional": true
+				}
+			},
+			"_id": "@angular-devkit/build-angular@22.0.4",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@angular-devkit/build-angular/-/build-angular-22.0.4.tgz",
+				"shasum": "3203714a29c9763262b02746e4dd6d7115639ddd",
+				"integrity": "sha512-UmS7ZheF6qqB3pZKlLQUsdGRIxIaXQIvHwgonXt63ePoZdzSFKqf/FbO049V2KG5suIJvVDJ8NYu/hkTLG1iaQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEUCID4bnzrVU9UzGHVIfkHO7K7iyNwxFon+Qts24Cml94KUAiEAjmBhkH4i1h7GCWuXElT8Gd3xt5IMLlQOmHhQAAY+Z+M="
+					}
+				]
+			},
+			"_npmVersion": "10.9.8",
+			"_npmUser": {
+				"name": "google-wombot",
+				"email": "node-team-npm+wombot@google.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "994417ce4e88d285d5cc9f47d3ac854dfa466f6d",
+			"builders": "builders.json",
+			"typings": "src/index.d.ts",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/build-angular_22.0.4_1782291905917_0.9412379809606921",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"_nodeVersion": "22.23.1",
+			"contributors": []
+		},
+		"20.3.30": {
+			"name": "@angular-devkit/build-angular",
+			"description": "Angular Webpack Build Facade",
+			"version": "20.3.30",
+			"author": {
+				"name": "Angular Authors"
+			},
+			"homepage": "https://github.com/angular/angular-cli",
+			"repository": {
+				"url": "git+https://github.com/angular/angular-cli.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/angular/angular-cli/issues"
+			},
+			"engines": {
+				"npm": "^6.11.0 || ^7.5.6 || >=8.0.0",
+				"node": "^20.19.0 || ^22.12.0 || >=24.0.0",
+				"yarn": ">= 1.13.0"
+			},
+			"main": "src/index.js",
+			"dependencies": {
+				"ora": "8.2.0",
+				"less": "4.4.0",
+				"open": "10.2.0",
+				"rxjs": "7.8.2",
+				"sass": "1.90.0",
+				"tslib": "2.8.1",
+				"semver": "7.7.2",
+				"terser": "5.43.1",
+				"piscina": "5.2.0",
+				"postcss": "8.5.12",
+				"webpack": "5.105.0",
+				"fast-glob": "3.3.3",
+				"picomatch": "4.0.4",
+				"tree-kill": "1.2.2",
+				"css-loader": "7.1.2",
+				"@babel/core": "7.29.7",
+				"ansi-colors": "4.1.3",
+				"less-loader": "12.3.0",
+				"sass-loader": "16.0.5",
+				"autoprefixer": "10.4.21",
+				"babel-loader": "10.0.0",
+				"browserslist": "^4.21.5",
+				"esbuild-wasm": "0.28.1",
+				"jsonc-parser": "3.3.1",
+				"loader-utils": "3.3.1",
+				"webpack-merge": "6.0.1",
+				"@angular/build": "20.3.30",
+				"@babel/runtime": "7.28.3",
+				"postcss-loader": "8.1.1",
+				"@babel/generator": "7.28.3",
+				"@ngtools/webpack": "20.3.30",
+				"@babel/preset-env": "7.28.3",
+				"source-map-loader": "5.0.0",
+				"resolve-url-loader": "5.0.0",
+				"source-map-support": "0.5.21",
+				"webpack-dev-server": "5.2.5",
+				"copy-webpack-plugin": "14.0.0",
+				"@angular-devkit/core": "20.3.30",
+				"@ampproject/remapping": "2.3.0",
+				"@discoveryjs/json-ext": "0.6.3",
+				"http-proxy-middleware": "3.0.5",
+				"license-webpack-plugin": "4.0.2",
+				"webpack-dev-middleware": "7.4.2",
+				"istanbul-lib-instrument": "6.0.3",
+				"mini-css-extract-plugin": "2.9.4",
+				"karma-source-map-support": "1.4.0",
+				"@angular-devkit/architect": "0.2003.30",
+				"@angular-devkit/build-webpack": "0.2003.30",
+				"webpack-subresource-integrity": "5.1.0",
+				"@babel/helper-annotate-as-pure": "7.27.3",
+				"@babel/plugin-transform-runtime": "7.28.3",
+				"@babel/helper-split-export-declaration": "7.24.7",
+				"@babel/plugin-transform-async-to-generator": "7.27.1",
+				"@babel/plugin-transform-async-generator-functions": "7.28.0"
+			},
+			"optionalDependencies": {
+				"esbuild": "0.28.1"
+			},
+			"peerDependencies": {
+				"jest": "^29.5.0 || ^30.2.0",
+				"karma": "^6.3.0",
+				"ng-packagr": "^20.0.0",
+				"protractor": "^7.0.0",
+				"typescript": ">=5.8 <6.0",
+				"tailwindcss": "^2.0.0 || ^3.0.0 || ^4.0.0",
+				"@angular/ssr": "^20.3.30",
+				"browser-sync": "^3.0.2",
+				"@angular/core": "^20.0.0",
+				"@web/test-runner": "^0.20.0",
+				"@angular/localize": "^20.0.0",
+				"@angular/compiler-cli": "^20.0.0",
+				"jest-environment-jsdom": "^29.5.0 || ^30.2.0",
+				"@angular/service-worker": "^20.0.0",
+				"@angular/platform-server": "^20.0.0",
+				"@angular/platform-browser": "^20.0.0"
+			},
+			"keywords": [
+				"Angular CLI",
+				"Angular DevKit",
+				"angular",
+				"devkit",
+				"sdk"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "angular",
+					"email": "devops+npm@angular.io"
+				},
+				{
+					"name": "google-wombot",
+					"email": "node-team-npm+wombot@google.com"
+				}
+			],
+			"directories": {},
+			"lastModified": 0,
+			"peerDependenciesMeta": {
+				"jest": {
+					"optional": true
+				},
+				"karma": {
+					"optional": true
+				},
+				"ng-packagr": {
+					"optional": true
+				},
+				"protractor": {
+					"optional": true
+				},
+				"tailwindcss": {
+					"optional": true
+				},
+				"@angular/ssr": {
+					"optional": true
+				},
+				"browser-sync": {
+					"optional": true
+				},
+				"@angular/core": {
+					"optional": true
+				},
+				"@web/test-runner": {
+					"optional": true
+				},
+				"@angular/localize": {
+					"optional": true
+				},
+				"jest-environment-jsdom": {
+					"optional": true
+				},
+				"@angular/service-worker": {
+					"optional": true
+				},
+				"@angular/platform-server": {
+					"optional": true
+				},
+				"@angular/platform-browser": {
+					"optional": true
+				}
+			},
+			"_id": "@angular-devkit/build-angular@20.3.30",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@angular-devkit/build-angular/-/build-angular-20.3.30.tgz",
+				"shasum": "867aaa5d809845550d0ca2dff73fd1a580f2c7d0",
+				"integrity": "sha512-4v5/BXj9O66TMehc2Oj9aZ+GIPjxCTb6qgtbcrDWvXR2DIlWxhin/FlyEC6ndX7E/0W5Bb3l02ayA3JLNgJV4w==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEYCIQCD89glvEM6zRPUcOYmc9Ca5w5ZHSa2KiUdSNYJaIHzoAIhAI4fOSvMU20Wux+JMdPqWSIHiCy/oU3MguHDaXB3Ev+j"
+					}
+				]
+			},
+			"_npmVersion": "10.9.4",
+			"_npmUser": {
+				"name": "google-wombot",
+				"email": "node-team-npm+wombot@google.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "4aa38eff25c32b43d5838e3d9955cd11a3589e8d",
+			"builders": "builders.json",
+			"typings": "src/index.d.ts",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/build-angular_20.3.30_1782291080143_0.6852085414967013",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"packageManager": "pnpm@10.19.0",
+			"readmeFilename": "README.md",
+			"_nodeVersion": "22.21.0",
+			"contributors": []
+		},
+		"21.2.17": {
+			"name": "@angular-devkit/build-angular",
+			"description": "Angular Webpack Build Facade",
+			"version": "21.2.17",
+			"author": {
+				"name": "Angular Authors"
+			},
+			"homepage": "https://github.com/angular/angular-cli",
+			"repository": {
+				"url": "git+https://github.com/angular/angular-cli.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/angular/angular-cli/issues"
+			},
+			"engines": {
+				"npm": "^6.11.0 || ^7.5.6 || >=8.0.0",
+				"node": "^20.19.0 || ^22.12.0 || >=24.0.0",
+				"yarn": ">= 1.13.0"
+			},
+			"main": "src/index.js",
+			"dependencies": {
+				"ora": "9.3.0",
+				"less": "4.4.2",
+				"open": "11.0.0",
+				"rxjs": "7.8.2",
+				"sass": "1.97.3",
+				"tslib": "2.8.1",
+				"semver": "7.7.4",
+				"terser": "5.46.0",
+				"piscina": "5.2.0",
+				"postcss": "8.5.12",
+				"webpack": "5.105.2",
+				"picomatch": "4.0.4",
+				"tree-kill": "1.2.2",
+				"css-loader": "7.1.3",
+				"tinyglobby": "0.2.15",
+				"@babel/core": "7.29.7",
+				"ansi-colors": "4.1.3",
+				"less-loader": "12.3.1",
+				"sass-loader": "16.0.7",
+				"autoprefixer": "10.4.27",
+				"babel-loader": "10.0.0",
+				"browserslist": "^4.26.0",
+				"esbuild-wasm": "0.28.1",
+				"jsonc-parser": "3.3.1",
+				"loader-utils": "3.3.1",
+				"webpack-merge": "6.0.1",
+				"@angular/build": "21.2.17",
+				"@babel/runtime": "7.29.2",
+				"postcss-loader": "8.2.0",
+				"@babel/generator": "7.29.1",
+				"@ngtools/webpack": "21.2.17",
+				"@babel/preset-env": "7.29.2",
+				"source-map-loader": "5.0.0",
+				"resolve-url-loader": "5.0.0",
+				"source-map-support": "0.5.21",
+				"webpack-dev-server": "5.2.5",
+				"copy-webpack-plugin": "14.0.0",
+				"@angular-devkit/core": "21.2.17",
+				"@ampproject/remapping": "2.3.0",
+				"@discoveryjs/json-ext": "0.6.3",
+				"http-proxy-middleware": "3.0.5",
+				"license-webpack-plugin": "4.0.2",
+				"webpack-dev-middleware": "7.4.5",
+				"istanbul-lib-instrument": "6.0.3",
+				"mini-css-extract-plugin": "2.10.0",
+				"karma-source-map-support": "1.4.0",
+				"@angular-devkit/architect": "0.2102.17",
+				"@angular-devkit/build-webpack": "0.2102.17",
+				"webpack-subresource-integrity": "5.1.0",
+				"@babel/helper-annotate-as-pure": "7.27.3",
+				"@babel/plugin-transform-runtime": "7.29.0",
+				"@babel/helper-split-export-declaration": "7.24.7",
+				"@babel/plugin-transform-async-to-generator": "7.28.6",
+				"@babel/plugin-transform-async-generator-functions": "7.29.0"
+			},
+			"optionalDependencies": {
+				"esbuild": "0.28.1"
+			},
+			"peerDependencies": {
+				"jest": "^30.2.0",
+				"karma": "^6.3.0",
+				"ng-packagr": "^21.0.0",
+				"protractor": "^7.0.0",
+				"typescript": ">=5.9 <6.0",
+				"tailwindcss": "^2.0.0 || ^3.0.0 || ^4.0.0",
+				"@angular/ssr": "^21.2.17",
+				"browser-sync": "^3.0.2",
+				"@angular/core": "^21.0.0",
+				"@web/test-runner": "^0.20.0",
+				"@angular/localize": "^21.0.0",
+				"@angular/compiler-cli": "^21.0.0",
+				"jest-environment-jsdom": "^30.2.0",
+				"@angular/service-worker": "^21.0.0",
+				"@angular/platform-server": "^21.0.0",
+				"@angular/platform-browser": "^21.0.0"
+			},
+			"keywords": [
+				"Angular CLI",
+				"Angular DevKit",
+				"angular",
+				"devkit",
+				"sdk"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "angular",
+					"email": "devops+npm@angular.io"
+				},
+				{
+					"name": "google-wombot",
+					"email": "node-team-npm+wombot@google.com"
+				}
+			],
+			"directories": {},
+			"lastModified": 0,
+			"peerDependenciesMeta": {
+				"jest": {
+					"optional": true
+				},
+				"karma": {
+					"optional": true
+				},
+				"ng-packagr": {
+					"optional": true
+				},
+				"protractor": {
+					"optional": true
+				},
+				"tailwindcss": {
+					"optional": true
+				},
+				"@angular/ssr": {
+					"optional": true
+				},
+				"browser-sync": {
+					"optional": true
+				},
+				"@angular/core": {
+					"optional": true
+				},
+				"@web/test-runner": {
+					"optional": true
+				},
+				"@angular/localize": {
+					"optional": true
+				},
+				"jest-environment-jsdom": {
+					"optional": true
+				},
+				"@angular/service-worker": {
+					"optional": true
+				},
+				"@angular/platform-server": {
+					"optional": true
+				},
+				"@angular/platform-browser": {
+					"optional": true
+				}
+			},
+			"_id": "@angular-devkit/build-angular@21.2.17",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@angular-devkit/build-angular/-/build-angular-21.2.17.tgz",
+				"shasum": "21d3bc67325763f7db597e59d0ac0a7f80fd6b17",
+				"integrity": "sha512-4gnG0JTWx2AGsHgbpLt3YM1zkzjolyPP0A+ULdC0IQd6BZ4rz48gquFZRqylOAILcAI3mdDcdu5S57D2mb9DGg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEYCIQDG0kH7N4EABWgsF/p5uN9Mij5YxQphqKGf77glJSQkMQIhAMOz3dZVJSuyhqKqEF+bKTryIi+MDkNDPU6iDCMchHDI"
+					}
+				]
+			},
+			"_npmVersion": "10.9.7",
+			"_npmUser": {
+				"name": "google-wombot",
+				"email": "node-team-npm+wombot@google.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "508335a74448d6e84f791eea67c64def91643abe",
+			"builders": "builders.json",
+			"typings": "src/index.d.ts",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/build-angular_21.2.17_1782291335681_0.6763201733005837",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"packageManager": "pnpm@10.33.2",
+			"readmeFilename": "README.md",
+			"_nodeVersion": "22.22.2",
+			"contributors": []
 		}
 	},
 	"time": {
@@ -157857,7 +159881,7 @@
 		"19.1.0-next.2": "2024-12-18T22:30:48.910Z",
 		"16.2.0-rc.1": "2023-08-04T17:41:14.397Z",
 		"19.1.0-next.0": "2024-12-04T15:09:49.282Z",
-		"modified": "2026-06-10T22:59:24.155Z",
+		"modified": "2026-06-24T09:20:52.193Z",
 		"0.13.0-beta.0": "2019-01-17T00:42:50.751Z",
 		"14.2.6": "2022-10-12T16:34:16.654Z",
 		"14.2.5": "2022-10-05T23:37:49.510Z",
@@ -158557,18 +160581,29 @@
 		"0.801.0-beta.2": "2019-06-13T23:10:45.157Z",
 		"0.801.0-beta.3": "2019-06-24T20:48:55.494Z",
 		"17.0.10": "2024-01-10T19:10:28.566Z",
-		"20.1.0-rc.0": "2025-07-01T22:12:29.525Z"
+		"20.1.0-rc.0": "2025-07-01T22:12:29.525Z",
+		"22.1.0-next.0": "2026-06-11T16:43:22.996Z",
+		"22.0.2": "2026-06-17T14:07:56.294Z",
+		"22.0.3": "2026-06-18T13:33:59.880Z",
+		"20.3.28": "2026-06-11T16:38:30.343Z",
+		"20.3.29": "2026-06-17T14:54:59.928Z",
+		"21.2.16": "2026-06-17T15:32:20.575Z",
+		"21.2.15": "2026-06-11T15:55:24.813Z",
+		"22.1.0-next.1": "2026-06-24T09:20:24.035Z",
+		"22.0.4": "2026-06-24T09:05:06.060Z",
+		"20.3.30": "2026-06-24T08:51:20.352Z",
+		"21.2.17": "2026-06-24T08:55:35.833Z"
 	},
 	"users": {},
 	"dist-tags": {
-		"next": "22.0.0",
+		"next": "22.1.0-next.1",
 		"v17-lts": "17.3.17",
 		"v10-lts": "0.1002.4",
 		"v15-lts": "15.2.11",
 		"v12-lts": "12.2.18",
 		"v7-lts": "0.13.10",
 		"v8-lts": "0.803.29",
-		"v21-lts": "21.2.14",
+		"v21-lts": "21.2.17",
 		"v19-lts": "19.2.27",
 		"v11-lts": "0.1102.19",
 		"v16-lts": "16.2.16",
@@ -158577,13 +160612,13 @@
 		"v9-lts": "0.901.15",
 		"v13-lts": "13.3.11",
 		"v14-lts": "14.2.13",
-		"v20-lts": "20.3.27",
-		"latest": "22.0.1"
+		"v20-lts": "20.3.30",
+		"latest": "22.0.4"
 	},
 	"_uplinks": {
 		"artifactory-sabadell": {
-			"etag": "5b065d268167911e3b9e27a19a9322f1bdf1b65c",
-			"fetched": 1781195712127
+			"etag": "8d59a01b57e38df2e69762492d2031a270ecb930",
+			"fetched": 1782459808834
 		}
 	},
 	"_distfiles": {
@@ -163291,10 +165326,65 @@
 			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@angular-devkit/build-angular/-/build-angular-20.1.0-rc.0.tgz",
 			"sha": "0d92d405c92b8aba2e9070cee84eb99e31219b16",
 			"registry": "artifactory-sabadell"
+		},
+		"build-angular-22.1.0-next.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@angular-devkit/build-angular/-/build-angular-22.1.0-next.0.tgz",
+			"sha": "676896f9c82142166029af064b3cabc58ebd561f",
+			"registry": "artifactory-sabadell"
+		},
+		"build-angular-22.0.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@angular-devkit/build-angular/-/build-angular-22.0.2.tgz",
+			"sha": "b510edffa91ae905adb1d60075cb670361333a1a",
+			"registry": "artifactory-sabadell"
+		},
+		"build-angular-22.0.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@angular-devkit/build-angular/-/build-angular-22.0.3.tgz",
+			"sha": "a4cdd08377d85d5c66874085eaae60833dd52148",
+			"registry": "artifactory-sabadell"
+		},
+		"build-angular-20.3.28.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@angular-devkit/build-angular/-/build-angular-20.3.28.tgz",
+			"sha": "0aec79e3426df205e0f7cdd55c8b10cfba5b8cee",
+			"registry": "artifactory-sabadell"
+		},
+		"build-angular-20.3.29.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@angular-devkit/build-angular/-/build-angular-20.3.29.tgz",
+			"sha": "1fcf96cd42f27fe8847a4e12bd474834e2253e57",
+			"registry": "artifactory-sabadell"
+		},
+		"build-angular-21.2.16.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@angular-devkit/build-angular/-/build-angular-21.2.16.tgz",
+			"sha": "48b4642fdd668a4683dcdb887013e74729c2ff5c",
+			"registry": "artifactory-sabadell"
+		},
+		"build-angular-21.2.15.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@angular-devkit/build-angular/-/build-angular-21.2.15.tgz",
+			"sha": "44636ea03b4c0faaf045359eeef527583017ab53",
+			"registry": "artifactory-sabadell"
+		},
+		"build-angular-22.1.0-next.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@angular-devkit/build-angular/-/build-angular-22.1.0-next.1.tgz",
+			"sha": "d136630aa5fee0330e4f3d736dd857e49eab1086",
+			"registry": "artifactory-sabadell"
+		},
+		"build-angular-22.0.4.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@angular-devkit/build-angular/-/build-angular-22.0.4.tgz",
+			"sha": "3203714a29c9763262b02746e4dd6d7115639ddd",
+			"registry": "artifactory-sabadell"
+		},
+		"build-angular-20.3.30.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@angular-devkit/build-angular/-/build-angular-20.3.30.tgz",
+			"sha": "867aaa5d809845550d0ca2dff73fd1a580f2c7d0",
+			"registry": "artifactory-sabadell"
+		},
+		"build-angular-21.2.17.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@angular-devkit/build-angular/-/build-angular-21.2.17.tgz",
+			"sha": "21d3bc67325763f7db597e59d0ac0a7f80fd6b17",
+			"registry": "artifactory-sabadell"
 		}
 	},
 	"_attachments": {},
-	"_rev": "1-6125a4b3ee462eb6",
+	"_rev": "4-39a1f331d8e9d554",
 	"_id": "@angular-devkit/build-angular",
-	"readme": "# @angular-devkit/build-angular\n\nThis package contains [Architect builders](/packages/angular_devkit/architect/README.md) used to build and test Angular applications and libraries.\n\n## Builders\n\n| Name            | Description                                                                                                                                                                                             |\n| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| application     | Build an Angular application targeting a browser and server environment using [esbuild](https://esbuild.github.io).                                                                                     |\n| app-shell       | Build an Angular [App shell](https://angular.dev/ecosystem/service-workers/app-shell).                                                                                                                  |\n| browser         | Build an Angular application targeting a browser environment using [Webpack](https://webpack.js.org).                                                                                                   |\n| browser-esbuild | Build an Angular application targeting a browser environment using [esbuild](https://esbuild.github.io).                                                                                                |\n| dev-server      | A development server that provides live reloading.                                                                                                                                                      |\n| extract-i18n    | Extract i18n messages from an Angular application.                                                                                                                                                      |\n| karma           | Execute unit tests using [Karma](https://github.com/karma-runner/karma) test runner.                                                                                                                    |\n| ng-packagr      | Build and package an Angular library in [Angular Package Format (APF)](https://angular.dev/tools/libraries/angular-package-format) format using [ng-packagr](https://github.com/ng-packagr/ng-packagr). |\n| prerender       | [Prerender](https://angular.dev/guide/prerendering) pages of your application. Prerendering is the process where a dynamic page is processed at build time generating static HTML.                      |\n| server          | Build an Angular application targeting a [Node.js](https://nodejs.org) environment.                                                                                                                     |\n| ssr-dev-server  | A development server which offers live reload during development, but uses server-side rendering.                                                                                                       |\n\n## Disclaimer\n\nWhile the builders when executed via the Angular CLI and their associated options are considered stable, the programmatic APIs are not considered officially supported and are not subject to the breaking change guarantees of SemVer."
+	"readme": ""
 }

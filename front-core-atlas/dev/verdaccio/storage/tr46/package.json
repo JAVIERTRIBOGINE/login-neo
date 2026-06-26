@@ -1,0 +1,1719 @@
+{
+	"name": "tr46",
+	"versions": {
+		"2.0.0": {
+			"name": "tr46",
+			"description": "An implementation of the Unicode TR46 spec",
+			"version": "2.0.0",
+			"author": {
+				"name": "Sebastian Mayr",
+				"email": "npm@smayr.name"
+			},
+			"repository": {
+				"url": "https://github.com/jsdom/tr46.js",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"name": "Timothy Gu",
+					"email": "timothygu99@gmail.com"
+				}
+			],
+			"engines": {
+				"node": ">=8"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"punycode": "^2.1.1"
+			},
+			"devDependencies": {
+				"mocha": "^6.2.2",
+				"eslint": "^6.8.0",
+				"request": "^2.88.0",
+				"regenerate": "^1.4.0",
+				"unicode-12.1.0": "^0.8.0"
+			},
+			"keywords": [
+				"unicode",
+				"tr46",
+				"url",
+				"whatwg"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "domenic",
+					"email": "d@domenic.me"
+				},
+				{
+					"name": "joris-van-der-wel",
+					"email": "joris@jorisvanderwel.com"
+				},
+				{
+					"name": "sebmaster",
+					"email": "sebmaster16@gmail.com"
+				},
+				{
+					"name": "timothygu",
+					"email": "timothygu99@gmail.com"
+				},
+				{
+					"name": "tmpvar",
+					"email": "tmpvar@gmail.com"
+				},
+				{
+					"name": "zirro",
+					"email": "code@zirro.se"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint .",
+				"test": "mocha",
+				"pretest": "node scripts/getLatestTests.js",
+				"prepublish": "node scripts/generateMappingTable.js && node scripts/generateRegexes.js"
+			},
+			"lastModified": 0,
+			"_id": "tr46@2.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/tr46/-/tr46-2.0.0.tgz",
+				"shasum": "a85da3f8511231357b347caa686abb3dfb150634",
+				"integrity": "sha512-LrErSqfhdUw73AC/eXV2fEmNkvgSYxfm5lvxnLvuVgoVDknvD28Pa5FeDGc8RuVouDxUD3GnHHFv7xnBp7As5w==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDGJHDN7SehtT7DOltf2SgjFE7jGOJlN5hi/IPxIup7pAIgMyGRCwNe1ie+i4OiB/ecvFF6F2DQAr+NFzeUMmxBbbY="
+					}
+				]
+			},
+			"_npmUser": {
+				"name": "timothygu",
+				"email": "timothygu99@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"licenseText": "The MIT License (MIT)\n\nCopyright (c) 2016 Sebastian Mayr\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+			"unicodeVersion": "12.1.0",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/tr46_2.0.0_1577945129387_0.8387283270153352",
+				"host": "s3://npm-registry-packages"
+			}
+		},
+		"2.0.1": {
+			"name": "tr46",
+			"description": "An implementation of the Unicode UTS #46: Unicode IDNA Compatibility Processing",
+			"version": "2.0.1",
+			"author": {
+				"name": "Sebastian Mayr",
+				"email": "npm@smayr.name"
+			},
+			"repository": {
+				"url": "https://github.com/jsdom/tr46",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"name": "Timothy Gu",
+					"email": "timothygu99@gmail.com"
+				}
+			],
+			"engines": {
+				"node": ">=8"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"punycode": "^2.1.1"
+			},
+			"devDependencies": {
+				"pump": "^3.0.0",
+				"mocha": "^6.2.2",
+				"eslint": "^6.8.0",
+				"node-fetch": "^2.6.0",
+				"regenerate": "^1.4.0",
+				"unicode-12.1.0": "^0.8.0"
+			},
+			"keywords": [
+				"unicode",
+				"tr46",
+				"uts46",
+				"punycode",
+				"url",
+				"whatwg"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "domenic",
+					"email": "d@domenic.me"
+				},
+				{
+					"name": "joris-van-der-wel",
+					"email": "joris@jorisvanderwel.com"
+				},
+				{
+					"name": "sebmaster",
+					"email": "sebmaster16@gmail.com"
+				},
+				{
+					"name": "timothygu",
+					"email": "timothygu99@gmail.com"
+				},
+				{
+					"name": "tmpvar",
+					"email": "tmpvar@gmail.com"
+				},
+				{
+					"name": "zirro",
+					"email": "code@zirro.se"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint .",
+				"test": "mocha",
+				"pretest": "node scripts/getLatestTests.js",
+				"prepublish": "node scripts/generateMappingTable.js && node scripts/generateRegexes.js"
+			},
+			"lastModified": 0,
+			"_id": "tr46@2.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/tr46/-/tr46-2.0.1.tgz",
+				"shasum": "ffc413a775a745866bc1c493ad3536c2b406c573",
+				"integrity": "sha512-WE2Oku6mSbwUP8601U7r5dW7KOJ4+WPpRufzsZPkkBNNwU004V6opMem0X7R0lSpdpAy0vjRPwPTEcFpgtmc+A==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIHUo2vzjgd0R74aP7O54FsQW/0w8hbA5FfoEOyIA9O3wAiAoXjoVsB1a/mWJUcYVjmCAICFj3EvoPy71Sxr7qPBXAQ=="
+					}
+				]
+			},
+			"_npmUser": {
+				"name": "timothygu",
+				"email": "timothygu99@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"licenseText": "The MIT License (MIT)\n\nCopyright (c) 2016 Sebastian Mayr\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+			"unicodeVersion": "12.1.0",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/tr46_2.0.1_1582173039771_0.48082004913141674",
+				"host": "s3://npm-registry-packages"
+			}
+		},
+		"2.1.0": {
+			"name": "tr46",
+			"description": "An implementation of the Unicode UTS #46: Unicode IDNA Compatibility Processing",
+			"version": "2.1.0",
+			"author": {
+				"name": "Sebastian Mayr",
+				"email": "npm@smayr.name"
+			},
+			"repository": {
+				"url": "https://github.com/jsdom/tr46",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"name": "Timothy Gu",
+					"email": "timothygu99@gmail.com"
+				}
+			],
+			"engines": {
+				"node": ">=8"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"punycode": "^2.1.1"
+			},
+			"devDependencies": {
+				"mocha": "^8.4.0",
+				"eslint": "^7.27.0",
+				"node-fetch": "^2.6.0",
+				"regenerate": "^1.4.2",
+				"unicode-13.0.0": "^0.8.0"
+			},
+			"keywords": [
+				"unicode",
+				"tr46",
+				"uts46",
+				"punycode",
+				"url",
+				"whatwg"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "timothygu",
+					"email": "timothygu99@gmail.com"
+				},
+				{
+					"name": "domenic",
+					"email": "d@domenic.me"
+				},
+				{
+					"name": "sebmaster",
+					"email": "sebmaster16@gmail.com"
+				},
+				{
+					"name": "zirro",
+					"email": "code@zirro.se"
+				},
+				{
+					"name": "tmpvar",
+					"email": "tmpvar@gmail.com"
+				},
+				{
+					"name": "joris-van-der-wel",
+					"email": "joris@jorisvanderwel.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint .",
+				"test": "mocha",
+				"pretest": "node scripts/getLatestTests.js",
+				"prepublish": "node scripts/generateMappingTable.js && node scripts/generateRegexes.js"
+			},
+			"lastModified": 0,
+			"_id": "tr46@2.1.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/tr46/-/tr46-2.1.0.tgz",
+				"shasum": "fa87aa81ca5d5941da8cbf1f9b749dc969a4e240",
+				"integrity": "sha512-15Ih7phfcdP5YxqiB+iDtLoaTz4Nd35+IiAv0kQ5FNKHzXgdWqPoTIqEDDJmXceQt4JZk6lVPT8lnDlPpGDppw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIFJhTMI1HKWfsHe7GgWacwk1JrZoPCRibhxQ0T3VF+GfAiEApEFrRKSGzD6MZhM2nUPpOiZYnN6corlvByOQXmJQjog="
+					}
+				]
+			},
+			"_npmUser": {
+				"name": "timothygu",
+				"email": "timothygu99@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"licenseText": "The MIT License (MIT)\n\nCopyright (c) 2016 Sebastian Mayr\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+			"unicodeVersion": "13.0.0",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/tr46_2.1.0_1621678028324_0.2069129795651361",
+				"host": "s3://npm-registry-packages"
+			}
+		},
+		"4.1.1": {
+			"name": "tr46",
+			"description": "An implementation of the Unicode UTS #46: Unicode IDNA Compatibility Processing",
+			"version": "4.1.1",
+			"author": {
+				"name": "Sebastian Mayr",
+				"email": "npm@smayr.name"
+			},
+			"homepage": "https://github.com/jsdom/tr46#readme",
+			"repository": {
+				"url": "git+https://github.com/jsdom/tr46.git",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"name": "Timothy Gu",
+					"email": "timothygu99@gmail.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/jsdom/tr46/issues"
+			},
+			"engines": {
+				"node": ">=14"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"punycode": "^2.3.0"
+			},
+			"devDependencies": {
+				"mocha": "^10.2.0",
+				"eslint": "^8.32.0",
+				"regenerate": "^1.4.2",
+				"minipass-fetch": "^3.0.1",
+				"@domenic/eslint-config": "^3.0.0",
+				"@unicode/unicode-15.0.0": "^1.3.1"
+			},
+			"keywords": [
+				"unicode",
+				"tr46",
+				"uts46",
+				"punycode",
+				"url",
+				"whatwg"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "timothygu",
+					"email": "timothygu99@gmail.com"
+				},
+				{
+					"name": "domenic",
+					"email": "d@domenic.me"
+				},
+				{
+					"name": "sebmaster",
+					"email": "sebmaster16@gmail.com"
+				},
+				{
+					"name": "zirro",
+					"email": "code@zirro.se"
+				},
+				{
+					"name": "tmpvar",
+					"email": "tmpvar@gmail.com"
+				},
+				{
+					"name": "joris-van-der-wel",
+					"email": "joris@jorisvanderwel.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint .",
+				"test": "mocha",
+				"pretest": "node scripts/getLatestTests.js",
+				"prepublish": "node scripts/generateMappingTable.js && node scripts/generateRegexes.js"
+			},
+			"lastModified": 0,
+			"_id": "tr46@4.1.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/tr46/-/tr46-4.1.1.tgz",
+				"shasum": "281a758dcc82aeb4fe38c7dfe4d11a395aac8469",
+				"integrity": "sha512-2lv/66T7e5yNyhAAC4NaKe5nVavzuGJQVVtRYLyQ2OI8tsJ61PMLlelehb0wi2Hx6+hT/OJUWZcw8MjlSRnxvw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIAQhvxkazhon325eADBrUhCtEdIAJLn1j/rTpay0jvJkAiBa7GTKUWyR2HtIaSu7/KAEPCdrwWBbMPGT1BgB5GUVYQ=="
+					}
+				]
+			},
+			"_npmVersion": "9.4.0",
+			"_npmUser": {
+				"name": "domenic",
+				"email": "d@domenic.me"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "b5302aff326ed603602935b3944e5be2fc5b6a0f",
+			"unicodeVersion": "15.0.0",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/tr46_4.1.1_1678258602013_0.23444372439696548",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "19.6.0"
+		},
+		"4.0.0": {
+			"name": "tr46",
+			"description": "An implementation of the Unicode UTS #46: Unicode IDNA Compatibility Processing",
+			"version": "4.0.0",
+			"author": {
+				"name": "Sebastian Mayr",
+				"email": "npm@smayr.name"
+			},
+			"homepage": "https://github.com/jsdom/tr46#readme",
+			"repository": {
+				"url": "git+https://github.com/jsdom/tr46.git",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"name": "Timothy Gu",
+					"email": "timothygu99@gmail.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/jsdom/tr46/issues"
+			},
+			"engines": {
+				"node": ">=14"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"punycode": "^2.3.0"
+			},
+			"devDependencies": {
+				"mocha": "^10.2.0",
+				"eslint": "^8.32.0",
+				"regenerate": "^1.4.2",
+				"minipass-fetch": "^3.0.1",
+				"@domenic/eslint-config": "^3.0.0",
+				"@unicode/unicode-15.0.0": "^1.3.1"
+			},
+			"keywords": [
+				"unicode",
+				"tr46",
+				"uts46",
+				"punycode",
+				"url",
+				"whatwg"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "timothygu",
+					"email": "timothygu99@gmail.com"
+				},
+				{
+					"name": "domenic",
+					"email": "d@domenic.me"
+				},
+				{
+					"name": "sebmaster",
+					"email": "sebmaster16@gmail.com"
+				},
+				{
+					"name": "zirro",
+					"email": "code@zirro.se"
+				},
+				{
+					"name": "tmpvar",
+					"email": "tmpvar@gmail.com"
+				},
+				{
+					"name": "joris-van-der-wel",
+					"email": "joris@jorisvanderwel.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint .",
+				"test": "mocha",
+				"pretest": "node scripts/getLatestTests.js",
+				"prepublish": "node scripts/generateMappingTable.js && node scripts/generateRegexes.js"
+			},
+			"lastModified": 0,
+			"_id": "tr46@4.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/tr46/-/tr46-4.0.0.tgz",
+				"shasum": "0a89d333bafbd1d854d82fdf89e34f38d04d0918",
+				"integrity": "sha512-ypD+VaTN1WUKb+rvVGVCbhnFxAjlQWTHZXz3Q+sUOBXTuxWFv2ZF0guJav45fLdvMLFq5Le4Li9o0Bs56CNLcQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQC1WIi7j5sgu1F+Zc7R58vl1lUN/aW7JKM/GTGMj/iIDwIhAJFKHA3/tYRZcGJzIvnFGPt3ajHLuAVamBhHIOjsB6y6"
+					}
+				]
+			},
+			"_npmVersion": "8.19.3",
+			"_npmUser": {
+				"name": "domenic",
+				"email": "d@domenic.me"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "cba76a80a52d775129001110ca8c3d22ed3e6245",
+			"unicodeVersion": "15.0.0",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/tr46_4.0.0_1674443736590_0.4993116147482981",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "19.2.0"
+		},
+		"4.1.0": {
+			"name": "tr46",
+			"description": "An implementation of the Unicode UTS #46: Unicode IDNA Compatibility Processing",
+			"version": "4.1.0",
+			"author": {
+				"name": "Sebastian Mayr",
+				"email": "npm@smayr.name"
+			},
+			"homepage": "https://github.com/jsdom/tr46#readme",
+			"repository": {
+				"url": "git+https://github.com/jsdom/tr46.git",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"name": "Timothy Gu",
+					"email": "timothygu99@gmail.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/jsdom/tr46/issues"
+			},
+			"engines": {
+				"node": ">=14"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"punycode": "^2.3.0"
+			},
+			"devDependencies": {
+				"mocha": "^10.2.0",
+				"eslint": "^8.32.0",
+				"regenerate": "^1.4.2",
+				"minipass-fetch": "^3.0.1",
+				"@domenic/eslint-config": "^3.0.0",
+				"@unicode/unicode-15.0.0": "^1.3.1"
+			},
+			"keywords": [
+				"unicode",
+				"tr46",
+				"uts46",
+				"punycode",
+				"url",
+				"whatwg"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "timothygu",
+					"email": "timothygu99@gmail.com"
+				},
+				{
+					"name": "domenic",
+					"email": "d@domenic.me"
+				},
+				{
+					"name": "sebmaster",
+					"email": "sebmaster16@gmail.com"
+				},
+				{
+					"name": "zirro",
+					"email": "code@zirro.se"
+				},
+				{
+					"name": "tmpvar",
+					"email": "tmpvar@gmail.com"
+				},
+				{
+					"name": "joris-van-der-wel",
+					"email": "joris@jorisvanderwel.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint .",
+				"test": "mocha",
+				"pretest": "node scripts/getLatestTests.js",
+				"prepublish": "node scripts/generateMappingTable.js && node scripts/generateRegexes.js"
+			},
+			"lastModified": 0,
+			"_id": "tr46@4.1.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/tr46/-/tr46-4.1.0.tgz",
+				"shasum": "c8f9dd5275ebb87c9a55d91324543dcb413473e7",
+				"integrity": "sha512-CbwCbLo1wAnGIJpVX97P+d1Bggf4E4zQ7GdcyxmTeHNES2LV+eOI3xe+apCHq0UVrlnI652guuycPjMEhRdNnA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIFHodWBOktLm231qbDU7ozCUG6VulKOLvY/PMIJuubWYAiEAtoCvU/bPFvoNpZBQtZKXLz88JXTZGYeBcUN8IqOXTb8="
+					}
+				]
+			},
+			"_npmVersion": "8.19.3",
+			"_npmUser": {
+				"name": "domenic",
+				"email": "d@domenic.me"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "82234230c8be3b3a015a298b8d142e8a2d4ce984",
+			"unicodeVersion": "15.0.0",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/tr46_4.1.0_1674613229699_0.6581178546683062",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "19.2.0"
+		},
+		"0.0.2": {
+			"name": "tr46",
+			"description": "An implementation of the Unicode TR46 spec",
+			"version": "0.0.2",
+			"author": {
+				"name": "Sebastian Mayr",
+				"email": "npm@smayr.name"
+			},
+			"homepage": "https://github.com/Sebmaster/tr46.js#readme",
+			"repository": {
+				"url": "git+https://github.com/Sebmaster/tr46.js.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/Sebmaster/tr46.js/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"mocha": "^2.2.5",
+				"request": "^2.57.0"
+			},
+			"keywords": [
+				"unicode",
+				"tr46",
+				"url",
+				"whatwg"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "sebmaster",
+					"email": "sebmaster16@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "mocha",
+				"pretest": "node scripts/getLatestUnicodeTests.js",
+				"prepublish": "node scripts/generateMappingTable.js"
+			},
+			"lastModified": 0,
+			"_id": "tr46@0.0.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/tr46/-/tr46-0.0.2.tgz",
+				"shasum": "847ca51535dcb1c9bd5df07a1e0ee7c3ed3f1479",
+				"integrity": "sha512-Hifn/q4SuHkr7CP28KLnSXCEVQN27uGvP+jI4ZbKy2W4Hnx0sZJMmghzf3nADGoziqKRxqhdZHfTti0PtdeIQQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIGhgbUwaBbAIDCf9+f4TFmDb4K0iN03Q0ee9oA0hSu+0AiEAy42uptmMmCqwrSn9/1Dc5RT59lqXBIH6WeX1LZ1hvN8="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "2.11.0",
+			"_npmUser": {
+				"name": "sebmaster",
+				"email": "sebmaster16@gmail.com"
+			},
+			"gitHead": "fe029c592abe09154512f0d0ddb90d8d0e24dd87",
+			"_shasum": "847ca51535dcb1c9bd5df07a1e0ee7c3ed3f1479",
+			"_nodeVersion": "2.2.1",
+			"contributors": []
+		},
+		"0.0.3": {
+			"name": "tr46",
+			"description": "An implementation of the Unicode TR46 spec",
+			"version": "0.0.3",
+			"author": {
+				"name": "Sebastian Mayr",
+				"email": "npm@smayr.name"
+			},
+			"homepage": "https://github.com/Sebmaster/tr46.js#readme",
+			"repository": {
+				"url": "git+https://github.com/Sebmaster/tr46.js.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/Sebmaster/tr46.js/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"mocha": "^2.2.5",
+				"request": "^2.57.0"
+			},
+			"keywords": [
+				"unicode",
+				"tr46",
+				"url",
+				"whatwg"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "sebmaster",
+					"email": "sebmaster16@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "mocha",
+				"pretest": "node scripts/getLatestUnicodeTests.js",
+				"prepublish": "node scripts/generateMappingTable.js"
+			},
+			"lastModified": 0,
+			"_id": "tr46@0.0.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/tr46/-/tr46-0.0.3.tgz",
+				"shasum": "8184fd347dac9cdc185992f3a6622e14b9d9ab6a",
+				"integrity": "sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQCUrUj2itfC5h6uLF7nT69DcaiOyeOICexYW6ev9JGRQAIhAN/aPMT9PK0tD0xWc3TobFmgoP+XPw2e49OIWLB8ZjHB"
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "3.3.12",
+			"_npmUser": {
+				"name": "sebmaster",
+				"email": "sebmaster16@gmail.com"
+			},
+			"gitHead": "a8009f9ce80ff5dbe71dd71e203afe4e4c878d28",
+			"_shasum": "8184fd347dac9cdc185992f3a6622e14b9d9ab6a",
+			"_nodeVersion": "5.4.1",
+			"contributors": []
+		},
+		"2.0.2": {
+			"name": "tr46",
+			"description": "An implementation of the Unicode UTS #46: Unicode IDNA Compatibility Processing",
+			"version": "2.0.2",
+			"author": {
+				"name": "Sebastian Mayr",
+				"email": "npm@smayr.name"
+			},
+			"repository": {
+				"url": "https://github.com/jsdom/tr46",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"name": "Timothy Gu",
+					"email": "timothygu99@gmail.com"
+				}
+			],
+			"engines": {
+				"node": ">=8"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"punycode": "^2.1.1"
+			},
+			"devDependencies": {
+				"pump": "^3.0.0",
+				"mocha": "^6.2.2",
+				"eslint": "^6.8.0",
+				"node-fetch": "^2.6.0",
+				"regenerate": "^1.4.0",
+				"unicode-12.1.0": "^0.8.0"
+			},
+			"keywords": [
+				"unicode",
+				"tr46",
+				"uts46",
+				"punycode",
+				"url",
+				"whatwg"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "domenic",
+					"email": "d@domenic.me"
+				},
+				{
+					"name": "joris-van-der-wel",
+					"email": "joris@jorisvanderwel.com"
+				},
+				{
+					"name": "sebmaster",
+					"email": "sebmaster16@gmail.com"
+				},
+				{
+					"name": "timothygu",
+					"email": "timothygu99@gmail.com"
+				},
+				{
+					"name": "tmpvar",
+					"email": "tmpvar@gmail.com"
+				},
+				{
+					"name": "zirro",
+					"email": "code@zirro.se"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint .",
+				"test": "mocha",
+				"pretest": "node scripts/getLatestTests.js",
+				"prepublish": "node scripts/generateMappingTable.js && node scripts/generateRegexes.js"
+			},
+			"lastModified": 0,
+			"_id": "tr46@2.0.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/tr46/-/tr46-2.0.2.tgz",
+				"shasum": "03273586def1595ae08fedb38d7733cee91d2479",
+				"integrity": "sha512-3n1qG+/5kg+jrbTzwAykB5yRYtQCTqOGKq5U5PE3b0a1/mzo6snDhjGS0zJVJunO0NrT3Dg1MLy5TjWP/UJppg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCUwkjwCL61XAc9fjM9SNTRnGQK2v86HtPrqwu6yy2TxgIgHUDKJ2W1ZV+4w/rg9CLT9XW7qBs2h20cq4WWFOq7SZY="
+					}
+				]
+			},
+			"_npmUser": {
+				"name": "timothygu",
+				"email": "timothygu99@gmail.com"
+			},
+			"_hasShrinkwrap": false,
+			"licenseText": "The MIT License (MIT)\n\nCopyright (c) 2016 Sebastian Mayr\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+			"unicodeVersion": "12.1.0",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/tr46_2.0.2_1582173169710_0.6400932710120866",
+				"host": "s3://npm-registry-packages"
+			}
+		},
+		"0.0.1": {
+			"name": "tr46",
+			"description": "An implementation of the Unicode TR46 spec",
+			"version": "0.0.1",
+			"author": {
+				"name": "Sebastian Mayr",
+				"email": "npm@smayr.name"
+			},
+			"homepage": "https://github.com/Sebmaster/tr46.js#readme",
+			"repository": {
+				"url": "git+https://github.com/Sebmaster/tr46.js.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/Sebmaster/tr46.js/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"mocha": "^2.2.5",
+				"request": "^2.57.0"
+			},
+			"keywords": [
+				"unicode",
+				"tr46",
+				"url",
+				"whatwg"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "sebmaster",
+					"email": "sebmaster16@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "mocha",
+				"prepublish": "node scripts/generate_mapping_table.js"
+			},
+			"lastModified": 0,
+			"_id": "tr46@0.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/tr46/-/tr46-0.0.1.tgz",
+				"shasum": "b09da8c4b972bc43ba0cd750292358167a2b1dae",
+				"integrity": "sha512-Jxc8qgb0Ulw7BZWke/eoMIAhRpo5dSfEM/DvDU1CWcr6jkwOWJY+eU7qrLmjGpmTSBGY2e0N+Al4rfwVynoAtg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIGOnDcrir6U1p6HhAZhMM/acDa1q4QJS5OABd4iuf4jsAiEA4NDtW3BAe6vqip2anhr+5n90WiJOGxSnI1IAGcbkRLY="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "2.11.0",
+			"_npmUser": {
+				"name": "sebmaster",
+				"email": "sebmaster16@gmail.com"
+			},
+			"gitHead": "b22c3e63e038c82b9e96aa1c274162cdec52e002",
+			"_shasum": "b09da8c4b972bc43ba0cd750292358167a2b1dae",
+			"_nodeVersion": "2.2.1",
+			"contributors": []
+		},
+		"3.0.0": {
+			"name": "tr46",
+			"description": "An implementation of the Unicode UTS #46: Unicode IDNA Compatibility Processing",
+			"version": "3.0.0",
+			"author": {
+				"name": "Sebastian Mayr",
+				"email": "npm@smayr.name"
+			},
+			"homepage": "https://github.com/jsdom/tr46#readme",
+			"repository": {
+				"url": "git+https://github.com/jsdom/tr46.git",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"name": "Timothy Gu",
+					"email": "timothygu99@gmail.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/jsdom/tr46/issues"
+			},
+			"engines": {
+				"node": ">=12"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"punycode": "^2.1.1"
+			},
+			"devDependencies": {
+				"mocha": "^9.1.1",
+				"eslint": "^7.32.0",
+				"regenerate": "^1.4.2",
+				"minipass-fetch": "^1.4.1",
+				"@domenic/eslint-config": "^1.4.0",
+				"@unicode/unicode-14.0.0": "^1.2.1"
+			},
+			"keywords": [
+				"unicode",
+				"tr46",
+				"uts46",
+				"punycode",
+				"url",
+				"whatwg"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "timothygu",
+					"email": "timothygu99@gmail.com"
+				},
+				{
+					"name": "domenic",
+					"email": "d@domenic.me"
+				},
+				{
+					"name": "sebmaster",
+					"email": "sebmaster16@gmail.com"
+				},
+				{
+					"name": "zirro",
+					"email": "code@zirro.se"
+				},
+				{
+					"name": "tmpvar",
+					"email": "tmpvar@gmail.com"
+				},
+				{
+					"name": "joris-van-der-wel",
+					"email": "joris@jorisvanderwel.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint .",
+				"test": "mocha",
+				"pretest": "node scripts/getLatestTests.js",
+				"prepublish": "node scripts/generateMappingTable.js && node scripts/generateRegexes.js"
+			},
+			"lastModified": 0,
+			"_id": "tr46@3.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/tr46/-/tr46-3.0.0.tgz",
+				"shasum": "555c4e297a950617e8eeddef633c87d4d9d6cbf9",
+				"integrity": "sha512-l7FvfAHlcmulp8kr+flpQZmVwtu7nfRV7NZujtN0OqES8EL4O4e0qqzL0DC5gAvx/ZC/9lk6rhcUwYvkBnBnYA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIFRK32xp1FNn2Ge2Obbww786y3Y4GjqKpINwuFGsAw0sAiAlWUu2ocpO90EKon+ggWcp6XzSoLNkiQT4hoEmYbbiuQ=="
+					}
+				]
+			},
+			"_npmVersion": "7.21.1",
+			"_npmUser": {
+				"name": "domenic",
+				"email": "d@domenic.me"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "e937be8d9c04b7938707fc3701e50118b7c023a5",
+			"unicodeVersion": "14.0.0",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/tr46_3.0.0_1633302184390_0.5771107328600107",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "16.9.1"
+		},
+		"6.0.0": {
+			"name": "tr46",
+			"description": "An implementation of the Unicode UTS #46: Unicode IDNA Compatibility Processing",
+			"version": "6.0.0",
+			"author": {
+				"name": "Sebastian Mayr",
+				"email": "npm@smayr.name"
+			},
+			"homepage": "https://github.com/jsdom/tr46#readme",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/jsdom/tr46.git"
+			},
+			"contributors": [
+				{
+					"name": "Timothy Gu",
+					"email": "timothygu99@gmail.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/jsdom/tr46/issues"
+			},
+			"engines": {
+				"node": ">=20"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"punycode": "^2.3.1"
+			},
+			"devDependencies": {
+				"@domenic/eslint-config": "^4.0.1",
+				"@unicode/unicode-17.0.0": "^1.6.12",
+				"eslint": "^9.35.0",
+				"globals": "^16.4.0",
+				"regenerate": "^1.4.2"
+			},
+			"keywords": [
+				"unicode",
+				"tr46",
+				"uts46",
+				"punycode",
+				"url",
+				"whatwg"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "timothygu",
+					"email": "timothygu99@gmail.com"
+				},
+				{
+					"name": "domenic",
+					"email": "d@domenic.me"
+				},
+				{
+					"name": "sebmaster",
+					"email": "sebmaster16@gmail.com"
+				},
+				{
+					"name": "zirro",
+					"email": "code@zirro.se"
+				},
+				{
+					"name": "tmpvar",
+					"email": "tmpvar@gmail.com"
+				},
+				{
+					"name": "joris-van-der-wel",
+					"email": "joris@jorisvanderwel.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "node --test",
+				"lint": "eslint",
+				"pretest": "node scripts/getLatestTests.js",
+				"prepublish": "node scripts/generateMappingTable.js && node scripts/generateRegexes.js"
+			},
+			"lastModified": 0,
+			"_id": "tr46@6.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/tr46/-/tr46-6.0.0.tgz",
+				"shasum": "f5a1ae546a0adb32a277a2278d0d17fa2f9093e6",
+				"integrity": "sha512-bLVMLPtstlZ4iMQHpFHTR7GAGj2jxi8Dg0s2h2MafAE4uSWF98FC/3MomU51iQAMf8/qDUbKWf5GxuvvVcXEhw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEUCIQDdMrhbjDWvShw0S6Czz96oPt0IpLhMzBgnHffLeGBjnwIgbKCBcI0Q6iwEZnZXsAht3mx5p5j0vU3BiGfR6sPO4m0="
+					}
+				]
+			},
+			"_npmVersion": "11.5.1",
+			"_npmUser": {
+				"name": "domenic",
+				"email": "d@domenic.me"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "7f1eb920768c794be40962a4f0cbad670a398d04",
+			"unicodeVersion": "17.0.0",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages-npm-production",
+				"tmp": "tmp/tr46_6.0.0_1758156151418_0.22190274528294474"
+			},
+			"_nodeVersion": "24.7.0"
+		},
+		"5.0.0": {
+			"name": "tr46",
+			"description": "An implementation of the Unicode UTS #46: Unicode IDNA Compatibility Processing",
+			"version": "5.0.0",
+			"author": {
+				"name": "Sebastian Mayr",
+				"email": "npm@smayr.name"
+			},
+			"homepage": "https://github.com/jsdom/tr46#readme",
+			"repository": {
+				"url": "git+https://github.com/jsdom/tr46.git",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"name": "Timothy Gu",
+					"email": "timothygu99@gmail.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/jsdom/tr46/issues"
+			},
+			"engines": {
+				"node": ">=18"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"punycode": "^2.3.1"
+			},
+			"devDependencies": {
+				"eslint": "^8.53.0",
+				"regenerate": "^1.4.2",
+				"@domenic/eslint-config": "^3.0.0",
+				"@unicode/unicode-15.1.0": "^1.5.2"
+			},
+			"keywords": [
+				"unicode",
+				"tr46",
+				"uts46",
+				"punycode",
+				"url",
+				"whatwg"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "timothygu",
+					"email": "timothygu99@gmail.com"
+				},
+				{
+					"name": "domenic",
+					"email": "d@domenic.me"
+				},
+				{
+					"name": "sebmaster",
+					"email": "sebmaster16@gmail.com"
+				},
+				{
+					"name": "zirro",
+					"email": "code@zirro.se"
+				},
+				{
+					"name": "tmpvar",
+					"email": "tmpvar@gmail.com"
+				},
+				{
+					"name": "joris-van-der-wel",
+					"email": "joris@jorisvanderwel.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint .",
+				"test": "node --test",
+				"pretest": "node scripts/getLatestTests.js",
+				"prepublish": "node scripts/generateMappingTable.js && node scripts/generateRegexes.js"
+			},
+			"lastModified": 0,
+			"_id": "tr46@5.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/tr46/-/tr46-5.0.0.tgz",
+				"shasum": "3b46d583613ec7283020d79019f1335723801cec",
+				"integrity": "sha512-tk2G5R2KRwBd+ZN0zaEXpmzdKyOYksXwywulIX95MBODjSzMIuQnQ3m8JxgbhnL1LeVo7lqQKsYa1O3Htl7K5g==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQCnQ0KiAombfYeg0HPkl0t4Om5KWeCVwTCs8RU7UON/mgIhAI27PbxLZLonzxSJE85Rb80kTT/AaV8nMifWc5+Z3KCC"
+					}
+				]
+			},
+			"_npmVersion": "10.2.0",
+			"_npmUser": {
+				"name": "domenic",
+				"email": "d@domenic.me"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "d6cd9a73bb9eb4b3defb50c348db2a60704d1367",
+			"unicodeVersion": "15.1.0",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/tr46_5.0.0_1699160109646_0.3188651946817458",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "21.1.0"
+		},
+		"5.1.0": {
+			"name": "tr46",
+			"description": "An implementation of the Unicode UTS #46: Unicode IDNA Compatibility Processing",
+			"version": "5.1.0",
+			"author": {
+				"name": "Sebastian Mayr",
+				"email": "npm@smayr.name"
+			},
+			"homepage": "https://github.com/jsdom/tr46#readme",
+			"repository": {
+				"url": "git+https://github.com/jsdom/tr46.git",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"name": "Timothy Gu",
+					"email": "timothygu99@gmail.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/jsdom/tr46/issues"
+			},
+			"engines": {
+				"node": ">=18"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"punycode": "^2.3.1"
+			},
+			"devDependencies": {
+				"eslint": "^9.22.0",
+				"globals": "^16.0.0",
+				"regenerate": "^1.4.2",
+				"@domenic/eslint-config": "^4.0.1",
+				"@unicode/unicode-16.0.0": "^1.6.5"
+			},
+			"keywords": [
+				"unicode",
+				"tr46",
+				"uts46",
+				"punycode",
+				"url",
+				"whatwg"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "timothygu",
+					"email": "timothygu99@gmail.com"
+				},
+				{
+					"name": "domenic",
+					"email": "d@domenic.me"
+				},
+				{
+					"name": "sebmaster",
+					"email": "sebmaster16@gmail.com"
+				},
+				{
+					"name": "zirro",
+					"email": "code@zirro.se"
+				},
+				{
+					"name": "tmpvar",
+					"email": "tmpvar@gmail.com"
+				},
+				{
+					"name": "joris-van-der-wel",
+					"email": "joris@jorisvanderwel.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint",
+				"test": "node --test",
+				"pretest": "node scripts/getLatestTests.js",
+				"prepublish": "node scripts/generateMappingTable.js && node scripts/generateRegexes.js"
+			},
+			"lastModified": 0,
+			"_id": "tr46@5.1.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/tr46/-/tr46-5.1.0.tgz",
+				"shasum": "4a077922360ae807e172075ce5beb79b36e4a101",
+				"integrity": "sha512-IUWnUK7ADYR5Sl1fZlO1INDUhVhatWl7BtJWsIhwJ0UAK7ilzzIa8uIqOO/aYVWHZPJkKbEL+362wrzoeRF7bw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEUCIF4OxWwdRtlyxr1z+P780l3Yo2G+yWfywexXvonCffyEAiEAxYQp0cgm3UZlKtmm8w531w1u6g4qamCBz/LqG8OTGyw="
+					}
+				]
+			},
+			"_npmVersion": "10.9.2",
+			"_npmUser": {
+				"name": "domenic",
+				"email": "d@domenic.me"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "a034468f6f484d092da6ec24bc82cac4d2d4b596",
+			"unicodeVersion": "16.0.0",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/tr46_5.1.0_1742021399096_0.8984161523183427",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"_nodeVersion": "23.7.0"
+		},
+		"5.1.1": {
+			"name": "tr46",
+			"description": "An implementation of the Unicode UTS #46: Unicode IDNA Compatibility Processing",
+			"version": "5.1.1",
+			"author": {
+				"name": "Sebastian Mayr",
+				"email": "npm@smayr.name"
+			},
+			"homepage": "https://github.com/jsdom/tr46#readme",
+			"repository": {
+				"url": "git+https://github.com/jsdom/tr46.git",
+				"type": "git"
+			},
+			"contributors": [
+				{
+					"name": "Timothy Gu",
+					"email": "timothygu99@gmail.com"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/jsdom/tr46/issues"
+			},
+			"engines": {
+				"node": ">=18"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"punycode": "^2.3.1"
+			},
+			"devDependencies": {
+				"eslint": "^9.22.0",
+				"globals": "^16.0.0",
+				"regenerate": "^1.4.2",
+				"@domenic/eslint-config": "^4.0.1",
+				"@unicode/unicode-16.0.0": "^1.6.5"
+			},
+			"keywords": [
+				"unicode",
+				"tr46",
+				"uts46",
+				"punycode",
+				"url",
+				"whatwg"
+			],
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "timothygu",
+					"email": "timothygu99@gmail.com"
+				},
+				{
+					"name": "domenic",
+					"email": "d@domenic.me"
+				},
+				{
+					"name": "sebmaster",
+					"email": "sebmaster16@gmail.com"
+				},
+				{
+					"name": "zirro",
+					"email": "code@zirro.se"
+				},
+				{
+					"name": "tmpvar",
+					"email": "tmpvar@gmail.com"
+				},
+				{
+					"name": "joris-van-der-wel",
+					"email": "joris@jorisvanderwel.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint",
+				"test": "node --test",
+				"pretest": "node scripts/getLatestTests.js",
+				"prepublish": "node scripts/generateMappingTable.js && node scripts/generateRegexes.js"
+			},
+			"lastModified": 0,
+			"_id": "tr46@5.1.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/tr46/-/tr46-5.1.1.tgz",
+				"shasum": "96ae867cddb8fdb64a49cc3059a8d428bcf238ca",
+				"integrity": "sha512-hdF5ZgjTqgAntKkklYw0R03MG2x/bSzTtkxmIRw/sTNV8YXsCJ1tfLAX23lhxhHJlEf3CRCOCGGWw3vI3GaSPw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEYCIQCM5FspyM1JqI952qATQNDdTUWl5ww/y+c4pbi1BkNOowIhAOr0kzhk2lavDFpu7UXMDicPJTpdYbzrlOysqVU3Yunr"
+					}
+				]
+			},
+			"_npmVersion": "10.9.2",
+			"_npmUser": {
+				"name": "domenic",
+				"email": "d@domenic.me"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "1999828c4c60e8f5672f0eb1fd4387e3f194923a",
+			"unicodeVersion": "16.0.0",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/tr46_5.1.1_1744850857969_0.06598419533962097",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"_nodeVersion": "23.9.0"
+		},
+		"1.0.0": {
+			"name": "tr46",
+			"description": "An implementation of the Unicode TR46 spec",
+			"version": "1.0.0",
+			"author": {
+				"name": "Sebastian Mayr",
+				"email": "npm@smayr.name"
+			},
+			"homepage": "https://github.com/sebmaster/tr46.js#readme",
+			"repository": {
+				"url": "git+https://github.com/sebmaster/tr46.js.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/sebmaster/tr46.js/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"punycode": "^2.1.0"
+			},
+			"devDependencies": {
+				"mocha": "^3.2.0",
+				"eslint": "^3.13.0",
+				"request": "^2.79.0",
+				"regenerate": "^1.3.2",
+				"unicode-10.0.0": "^0.7.4"
+			},
+			"keywords": [
+				"unicode",
+				"tr46",
+				"url",
+				"whatwg"
+			],
+			"license": "MIT",
+			"files": [
+				"index.js",
+				"lib/mappingTable.json",
+				"lib/regexes.js"
+			],
+			"maintainers": [
+				{
+					"name": "sebmaster",
+					"email": "sebmaster16@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint .",
+				"test": "mocha",
+				"pretest": "node scripts/getLatestUnicodeTests.js",
+				"prepublish": "node scripts/generateMappingTable.js && node scripts/generateRegexes.js"
+			},
+			"lastModified": 0,
+			"deprecated": "1.0.0 has some bugs with host name validation, mainly wrt BiDi rules. Please wait for v1.0.1.",
+			"_id": "tr46@1.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/tr46/-/tr46-1.0.0.tgz",
+				"shasum": "78aa45b58a8f60382fcc66598d1499e38ac1b953",
+				"integrity": "sha512-XbVuqZaeYPi6jb3dRTRLU1P1Y2MYcQauF/ZOYRsq5g7X6v4/CRVRpGuiOMULaFsVe6AdFDnENCQ5x/Mzo103rQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDRIZM6QItlwYKD7bbTlEscMS2r8bQ5XzovEFb+k5IaDAIhAOOuiD509dvtgSV4+FR14v1lHGBBh8SpXEpJcVhj1mXF"
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "4.2.0",
+			"_npmUser": {
+				"name": "sebmaster",
+				"email": "sebmaster16@gmail.com"
+			},
+			"gitHead": "fe7e40f3464ff14b9da11c1d64e1470b60fed043",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/tr46-1.0.0.tgz_1501195911430_0.7034000705461949",
+				"host": "s3://npm-registry-packages"
+			},
+			"_shasum": "78aa45b58a8f60382fcc66598d1499e38ac1b953",
+			"_nodeVersion": "7.9.0",
+			"contributors": []
+		},
+		"1.0.1": {
+			"name": "tr46",
+			"description": "An implementation of the Unicode TR46 spec",
+			"version": "1.0.1",
+			"author": {
+				"name": "Sebastian Mayr",
+				"email": "npm@smayr.name"
+			},
+			"homepage": "https://github.com/sebmaster/tr46.js#readme",
+			"repository": {
+				"url": "git+https://github.com/sebmaster/tr46.js.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/sebmaster/tr46.js/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"punycode": "^2.1.0"
+			},
+			"devDependencies": {
+				"mocha": "^3.2.0",
+				"eslint": "^3.13.0",
+				"request": "^2.79.0",
+				"regenerate": "^1.3.2",
+				"unicode-10.0.0": "^0.7.4"
+			},
+			"keywords": [
+				"unicode",
+				"tr46",
+				"url",
+				"whatwg"
+			],
+			"license": "MIT",
+			"files": [
+				"index.js",
+				"lib/mappingTable.json",
+				"lib/regexes.js"
+			],
+			"maintainers": [
+				{
+					"name": "sebmaster",
+					"email": "sebmaster16@gmail.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint .",
+				"test": "mocha",
+				"pretest": "node scripts/getLatestTests.js",
+				"prepublish": "node scripts/generateMappingTable.js && node scripts/generateRegexes.js"
+			},
+			"lastModified": 0,
+			"_id": "tr46@1.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/tr46/-/tr46-1.0.1.tgz",
+				"shasum": "a8b13fd6bfd2489519674ccde55ba3693b706d09",
+				"integrity": "sha512-dTpowEjclQ7Kgx5SdBkqRzVhERQXov8/l9Ft9dVM9fmg0W0KQSVaXX9T4i6twCPNtYiZM53lpSSUAwJbFPOHxA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIGiAK7YkrBBNtYN2842NTEUAUP0mFpfQw9rubF1YK9pTAiEA5scC+rEItjpZwbmPX1urrnHKdgJkB7GfaSWBcu1uft0="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "4.1.2",
+			"_npmUser": {
+				"name": "sebmaster",
+				"email": "sebmaster16@gmail.com"
+			},
+			"gitHead": "89825520a434d1d750103e05b6fa19b1a75b7ab4",
+			"unicodeVersion": "10.0.0",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/tr46-1.0.1.tgz_1504404535111_0.9779330701567233",
+				"host": "s3://npm-registry-packages"
+			},
+			"_shasum": "a8b13fd6bfd2489519674ccde55ba3693b706d09",
+			"_nodeVersion": "7.7.2",
+			"contributors": []
+		}
+	},
+	"time": {
+		"2.0.0": "2020-01-02T06:05:29.532Z",
+		"2.0.1": "2020-02-20T04:30:39.918Z",
+		"2.1.0": "2021-05-22T10:07:08.518Z",
+		"created": "2015-06-06T07:11:07.303Z",
+		"4.1.1": "2023-03-08T06:56:42.196Z",
+		"4.0.0": "2023-01-23T03:15:36.813Z",
+		"4.1.0": "2023-01-25T02:20:29.915Z",
+		"0.0.2": "2015-06-06T15:17:30.114Z",
+		"0.0.3": "2016-01-20T02:08:54.875Z",
+		"2.0.2": "2020-02-20T04:32:49.819Z",
+		"0.0.1": "2015-06-06T07:11:07.303Z",
+		"3.0.0": "2021-10-03T23:03:04.584Z",
+		"6.0.0": "2025-09-18T00:42:31.639Z",
+		"modified": "2025-09-18T00:42:31.874Z",
+		"5.0.0": "2023-11-05T04:55:09.811Z",
+		"5.1.0": "2025-03-15T06:49:59.284Z",
+		"5.1.1": "2025-04-17T00:47:38.158Z",
+		"1.0.0": "2017-07-27T22:51:52.630Z",
+		"1.0.1": "2017-09-03T02:08:56.379Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "6.0.0"
+	},
+	"_uplinks": {
+		"artifactory-sabadell": {
+			"etag": "b0286a7f2fdce387e79e29563ed8729baba6e2e8",
+			"fetched": 1782459825482
+		}
+	},
+	"_distfiles": {
+		"tr46-2.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/tr46/-/tr46-2.0.0.tgz",
+			"sha": "a85da3f8511231357b347caa686abb3dfb150634",
+			"registry": "artifactory-sabadell"
+		},
+		"tr46-2.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/tr46/-/tr46-2.0.1.tgz",
+			"sha": "ffc413a775a745866bc1c493ad3536c2b406c573",
+			"registry": "artifactory-sabadell"
+		},
+		"tr46-2.1.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/tr46/-/tr46-2.1.0.tgz",
+			"sha": "fa87aa81ca5d5941da8cbf1f9b749dc969a4e240",
+			"registry": "artifactory-sabadell"
+		},
+		"tr46-4.1.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/tr46/-/tr46-4.1.1.tgz",
+			"sha": "281a758dcc82aeb4fe38c7dfe4d11a395aac8469",
+			"registry": "artifactory-sabadell"
+		},
+		"tr46-4.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/tr46/-/tr46-4.0.0.tgz",
+			"sha": "0a89d333bafbd1d854d82fdf89e34f38d04d0918",
+			"registry": "artifactory-sabadell"
+		},
+		"tr46-4.1.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/tr46/-/tr46-4.1.0.tgz",
+			"sha": "c8f9dd5275ebb87c9a55d91324543dcb413473e7",
+			"registry": "artifactory-sabadell"
+		},
+		"tr46-0.0.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/tr46/-/tr46-0.0.2.tgz",
+			"sha": "847ca51535dcb1c9bd5df07a1e0ee7c3ed3f1479",
+			"registry": "artifactory-sabadell"
+		},
+		"tr46-0.0.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/tr46/-/tr46-0.0.3.tgz",
+			"sha": "8184fd347dac9cdc185992f3a6622e14b9d9ab6a",
+			"registry": "artifactory-sabadell"
+		},
+		"tr46-2.0.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/tr46/-/tr46-2.0.2.tgz",
+			"sha": "03273586def1595ae08fedb38d7733cee91d2479",
+			"registry": "artifactory-sabadell"
+		},
+		"tr46-0.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/tr46/-/tr46-0.0.1.tgz",
+			"sha": "b09da8c4b972bc43ba0cd750292358167a2b1dae",
+			"registry": "artifactory-sabadell"
+		},
+		"tr46-3.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/tr46/-/tr46-3.0.0.tgz",
+			"sha": "555c4e297a950617e8eeddef633c87d4d9d6cbf9",
+			"registry": "artifactory-sabadell"
+		},
+		"tr46-6.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/tr46/-/tr46-6.0.0.tgz",
+			"sha": "f5a1ae546a0adb32a277a2278d0d17fa2f9093e6",
+			"registry": "artifactory-sabadell"
+		},
+		"tr46-5.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/tr46/-/tr46-5.0.0.tgz",
+			"sha": "3b46d583613ec7283020d79019f1335723801cec",
+			"registry": "artifactory-sabadell"
+		},
+		"tr46-5.1.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/tr46/-/tr46-5.1.0.tgz",
+			"sha": "4a077922360ae807e172075ce5beb79b36e4a101",
+			"registry": "artifactory-sabadell"
+		},
+		"tr46-5.1.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/tr46/-/tr46-5.1.1.tgz",
+			"sha": "96ae867cddb8fdb64a49cc3059a8d428bcf238ca",
+			"registry": "artifactory-sabadell"
+		},
+		"tr46-1.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/tr46/-/tr46-1.0.0.tgz",
+			"sha": "78aa45b58a8f60382fcc66598d1499e38ac1b953",
+			"registry": "artifactory-sabadell"
+		},
+		"tr46-1.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/tr46/-/tr46-1.0.1.tgz",
+			"sha": "a8b13fd6bfd2489519674ccde55ba3693b706d09",
+			"registry": "artifactory-sabadell"
+		}
+	},
+	"_attachments": {},
+	"_rev": "1-3bfe97852ccb659f",
+	"_id": "tr46",
+	"readme": "# tr46\n\nAn JavaScript implementation of [Unicode Technical Standard #46: Unicode IDNA Compatibility Processing](https://unicode.org/reports/tr46/).\n\n## API\n\n### `toASCII(domainName[, options])`\n\nConverts a string of Unicode symbols to a case-folded Punycode string of ASCII symbols.\n\nAvailable options:\n\n* [`checkBidi`](#checkbidi)\n* [`checkHyphens`](#checkhyphens)\n* [`checkJoiners`](#checkjoiners)\n* [`ignoreInvalidPunycode`](#ignoreinvalidpunycode)\n* [`transitionalProcessing`](#transitionalprocessing)\n* [`useSTD3ASCIIRules`](#usestd3asciirules)\n* [`verifyDNSLength`](#verifydnslength)\n\n### `toUnicode(domainName[, options])`\n\nConverts a case-folded Punycode string of ASCII symbols to a string of Unicode symbols.\n\nAvailable options:\n\n* [`checkBidi`](#checkbidi)\n* [`checkHyphens`](#checkhyphens)\n* [`checkJoiners`](#checkjoiners)\n* [`ignoreInvalidPunycode`](#ignoreinvalidpunycode)\n* [`transitionalProcessing`](#transitionalprocessing)\n* [`useSTD3ASCIIRules`](#usestd3asciirules)\n\n## Options\n\n### `checkBidi`\n\nType: `boolean`\nDefault value: `false`\nWhen set to `true`, any bi-directional text within the input will be checked for validation.\n\n### `checkHyphens`\n\nType: `boolean`\nDefault value: `false`\nWhen set to `true`, the positions of any hyphen characters within the input will be checked for validation.\n\n### `checkJoiners`\n\nType: `boolean`\nDefault value: `false`\nWhen set to `true`, any word joiner characters within the input will be checked for validation.\n\n### `ignoreInvalidPunycode`\n\nType: `boolean`\nDefault value: `false`\nWhen set to `true`, invalid Punycode strings within the input will be allowed.\n\n### `transitionalProcessing`\n\nType: `boolean`\nDefault value: `false`\nWhen set to `true`, uses [transitional (compatibility) processing](https://unicode.org/reports/tr46/#Compatibility_Processing) of the deviation characters.\n\n### `useSTD3ASCIIRules`\n\nType: `boolean`\nDefault value: `false`\nWhen set to `true`, input will be validated according to [STD3 Rules](http://unicode.org/reports/tr46/#STD3_Rules).\n\n### `verifyDNSLength`\n\nType: `boolean`\nDefault value: `false`\nWhen set to `true`, the length of each DNS label within the input will be checked for validation."
+}

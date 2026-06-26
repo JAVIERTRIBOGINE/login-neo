@@ -1,4 +1,4 @@
-import type { AuthConfig } from './authorization-utils.js';
+import type { AuthConfig, SamlConfig } from './authorization-utils.js';
 import type { InitEventResponsePayload } from './bridge-events.js';
 import type { IDataManagerDriver } from './data-manager-drivers.js';
 import type { AuthorizationTokens, AvailableDrivers } from './data-manager.js';
@@ -142,6 +142,7 @@ export interface BaseConfig {
 export type BaseAppConfig = BaseConfig & {
   DATAMANAGER_CONFIG: DataManagerConfig;
   AUTH_CONFIG?: AuthConfig;
+  SAML_CONFIG?: SamlConfig;
   CONFIG_VERSION: string;
   TAG_MANAGER_CONFIG?: TagManagerConfig;
   INIT_DATA?: InitEventResponsePayload;

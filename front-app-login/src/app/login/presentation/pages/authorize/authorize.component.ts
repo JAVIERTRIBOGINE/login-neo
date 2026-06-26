@@ -57,17 +57,36 @@ export class AuthorizeComponent implements OnInit{
   async authorizing(){
     const csrf = this.loginDataService.successData().tokenId;
     if (!csrf) {
+      /*
+       * Sin tokenId no hay sesion PingAM validada: se vuelve al formulario para
+       * reconstruir el arbol de autenticacion desde el inicio.
+       */
       this.router.navigate([`../${ROUTE_DATA.LOGIN}`], { relativeTo: this.route });
       return;
     }
 
+    const authConfig = this.getAuthorizationConfig();
+    if (!authConfig.clientId || !authConfig.redirectUri) {
+      /*
+       * En primera carga remota puede ocurrir que window.BsAuthorizationConfig aun
+       * no exista. Si tampoco hay AUTH_CONFIG inyectada, el flujo no puede pedir
+       * authorization code y se publica error controlado.
+       */
+      this.publishService.publishEvent(LOGIN_EVENTS.ERROR);
+      return;
+    }
+
+    /*
+     * POST /authorize mockeado: usa el tokenId SSO como assertion/csrf para pedir
+     * un authorization code OAuth. La respuesta contiene una URL con code/state.
+     */
     const authorizeParams: AuthorizeRequest =  {
-      clientId:  window.BsAuthorizationConfig.clientID,
-      redirectUri:  window.BsAuthorizationConfig.redirectUri,
+      clientId:  authConfig.clientId,
+      redirectUri:  authConfig.redirectUri,
       method: 'post',
       csrf,
     }
-    if (window.BsAuthorizationConfig.scopes) authorizeParams.scope = window.BsAuthorizationConfig.scopes.join(' ')
+    if (authConfig.scopes?.length) authorizeParams.scope = authConfig.scopes.join(' ')
 
     try {
       this.authorizeResponse = await this.authorize( authorizeParams );
@@ -95,6 +114,26 @@ export class AuthorizeComponent implements OnInit{
     this.router.navigate( [`../${ROUTE_DATA.GET_TOKENS}` ], { queryParams: qeuryObj, relativeTo: this.route});
 }
 
+private getAuthorizationConfig(): { clientId?: string; redirectUri?: string; scopes?: string[] } {
+   /*
+    * Fallback doble:
+    * - window.BsAuthorizationConfig: formato que genera authorization-utils.
+    * - window.NEO_LOGIN_AUTH_CONFIG: JSON original capturado por Application.
+    * Esto cubre la primera navegacion del MFE, cuando el global puede no estar
+    * preparado todavia pero bootstrap() ya ha leido la configuracion.
+    */
+   const windowConfig = window.BsAuthorizationConfig;
+   const authConfig = window.NEO_LOGIN_AUTH_CONFIG as Record<string, unknown> | undefined;
+
+   const scopes = windowConfig?.scopes ?? authConfig?.['SCOPES'];
+
+   return {
+      clientId: windowConfig?.clientID ?? authConfig?.['CLIENT_ID'] as string | undefined,
+      redirectUri: windowConfig?.redirectUri ?? authConfig?.['REDIRECT_URI'] as string | undefined,
+      scopes: Array.isArray(scopes) ? scopes as string[] : undefined,
+   }
+}
+
   
 private getQueryParam(url: string, key: string): string | null {
    const match = url.match(new RegExp(`[?&]${key}=([^&]+)`));
@@ -102,6 +141,3 @@ private getQueryParam(url: string, key: string): string | null {
    }
  }
  
-
-
-

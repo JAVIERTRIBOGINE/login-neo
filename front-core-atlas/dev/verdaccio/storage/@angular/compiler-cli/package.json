@@ -124390,6 +124390,522 @@
 			},
 			"_nodeVersion": "12.14.1",
 			"contributors": []
+		},
+		"22.1.0-next.1": {
+			"name": "@angular/compiler-cli",
+			"description": "Angular - the compiler CLI for Node.js",
+			"version": "22.1.0-next.1",
+			"homepage": "https://github.com/angular/angular/tree/main/packages/compiler-cli",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/angular/angular.git",
+				"directory": "packages/compiler-cli"
+			},
+			"bugs": {
+				"url": "https://github.com/angular/angular/issues"
+			},
+			"engines": {
+				"node": "^22.22.3 || ^24.15.0 || >=26.0.0"
+			},
+			"dependencies": {
+				"@babel/core": "7.29.7",
+				"@jridgewell/sourcemap-codec": "^1.4.14",
+				"reflect-metadata": "^0.2.0",
+				"chokidar": "^5.0.0",
+				"convert-source-map": "^1.5.1",
+				"semver": "^7.0.0",
+				"tslib": "^2.3.0",
+				"yargs": "^18.0.0"
+			},
+			"devDependencies": {
+				"typescript": "6.0.3",
+				"@types/convert-source-map": "^2.0.0"
+			},
+			"peerDependencies": {
+				"@angular/compiler": "22.1.0-next.1",
+				"typescript": ">=6.0 <6.1"
+			},
+			"keywords": [
+				"angular",
+				"compiler"
+			],
+			"license": "MIT",
+			"bin": {
+				"ngc": "bundles/src/bin/ngc.js",
+				"ng-xi18n": "bundles/src/bin/ng_xi18n.js"
+			},
+			"maintainers": [
+				{
+					"name": "angular",
+					"email": "devops+npm@angular.io"
+				},
+				{
+					"name": "google-wombot",
+					"email": "node-team-npm+wombot@google.com"
+				}
+			],
+			"directories": {},
+			"lastModified": 0,
+			"peerDependenciesMeta": {
+				"typescript": {
+					"optional": true
+				}
+			},
+			"_id": "@angular/compiler-cli@22.1.0-next.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@angular/compiler-cli/-/compiler-cli-22.1.0-next.1.tgz",
+				"shasum": "626d1ce2e0e9c19abb7d043932f7825c119c6dc9",
+				"integrity": "sha512-yebPqQ2Tl6pwyiafRz6Y5wBnD2cydkr2WkBfiaLGLRymhhRhOc4hqMtYuFfDi3sfC4RylkMAmAUtc7NCcyPB7g==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEQCIFyewr+9fZfNECmP7dTQpkkUAlReuFwyp96NVnMg65BiAiA2NQRW+IJIEa0CY07NDdvBLISL9Lp03X8ZcljJXNNUDA=="
+					}
+				]
+			},
+			"_npmVersion": "10.9.8",
+			"_npmUser": {
+				"name": "google-wombot",
+				"email": "node-team-npm+wombot@google.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "83e56c281a8c78b2f6f9303540266b4fbdcc165b",
+			"typings": "index.d.ts",
+			"ng-update": {
+				"packageGroup": [
+					"@angular/core",
+					"@angular/bazel",
+					"@angular/common",
+					"@angular/compiler",
+					"@angular/compiler-cli",
+					"@angular/animations",
+					"@angular/elements",
+					"@angular/platform-browser",
+					"@angular/platform-browser-dynamic",
+					"@angular/forms",
+					"@angular/platform-server",
+					"@angular/upgrade",
+					"@angular/router",
+					"@angular/language-service",
+					"@angular/localize",
+					"@angular/service-worker"
+				]
+			},
+			"exports": {
+				".": {
+					"types": "./index.d.ts",
+					"default": "./bundles/index.js"
+				},
+				"./package.json": {
+					"default": "./package.json"
+				},
+				"./linker": {
+					"types": "./linker/index.d.ts",
+					"default": "./bundles/linker/index.js"
+				},
+				"./linker/babel": {
+					"types": "./linker/babel/index.d.ts",
+					"default": "./bundles/linker/babel/index.js"
+				},
+				"./private/*": {
+					"types": "./private/*.d.ts",
+					"default": "./bundles/private/*.js"
+				}
+			},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages-npm-production",
+				"tmp": "tmp/compiler-cli_22.1.0-next.1_1781730991460_0.773279905946922"
+			},
+			"type": "module",
+			"_nodeVersion": "22.22.3",
+			"contributors": []
+		},
+		"22.0.2": {
+			"name": "@angular/compiler-cli",
+			"description": "Angular - the compiler CLI for Node.js",
+			"version": "22.0.2",
+			"homepage": "https://github.com/angular/angular/tree/main/packages/compiler-cli",
+			"repository": {
+				"url": "git+https://github.com/angular/angular.git",
+				"type": "git",
+				"directory": "packages/compiler-cli"
+			},
+			"bugs": {
+				"url": "https://github.com/angular/angular/issues"
+			},
+			"engines": {
+				"node": "^22.22.3 || ^24.15.0 || >=26.0.0"
+			},
+			"dependencies": {
+				"tslib": "^2.3.0",
+				"yargs": "^18.0.0",
+				"semver": "^7.0.0",
+				"chokidar": "^5.0.0",
+				"@babel/core": "7.29.0",
+				"reflect-metadata": "^0.2.0",
+				"convert-source-map": "^1.5.1",
+				"@jridgewell/sourcemap-codec": "^1.4.14"
+			},
+			"devDependencies": {
+				"typescript": "6.0.3",
+				"@types/convert-source-map": "^2.0.0"
+			},
+			"peerDependencies": {
+				"typescript": ">=6.0 <6.1",
+				"@angular/compiler": "22.0.2"
+			},
+			"keywords": [
+				"angular",
+				"compiler"
+			],
+			"license": "MIT",
+			"bin": {
+				"ngc": "bundles/src/bin/ngc.js",
+				"ng-xi18n": "bundles/src/bin/ng_xi18n.js"
+			},
+			"maintainers": [
+				{
+					"name": "angular",
+					"email": "devops+npm@angular.io"
+				},
+				{
+					"name": "google-wombot",
+					"email": "node-team-npm+wombot@google.com"
+				}
+			],
+			"directories": {},
+			"lastModified": 0,
+			"peerDependenciesMeta": {
+				"typescript": {
+					"optional": true
+				}
+			},
+			"_id": "@angular/compiler-cli@22.0.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@angular/compiler-cli/-/compiler-cli-22.0.2.tgz",
+				"shasum": "20727dbf133d1928300062bd8496a15f989aad84",
+				"integrity": "sha512-jBGGWdbrPQhIHWUz523CLQqEh/iYWxzZt7U9y0Ocdbas4/OlHcqaERO/K4ULkxclWX8MWYQoxal/MZbYOBfXgw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEUCIQCYnk904rdB5QOTrkGPBkroeZGXKWc30y70BUFOgiLK1QIgY9Sei8t5qMK14OtcQSPxbqrt/PrgO5e6kRLhBF6uhto="
+					}
+				]
+			},
+			"_npmVersion": "10.9.8",
+			"_npmUser": {
+				"name": "google-wombot",
+				"email": "node-team-npm+wombot@google.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "10e9506cd56a3af80d2dd7d0dffe6b8ee14b8b19",
+			"typings": "index.d.ts",
+			"ng-update": {
+				"packageGroup": [
+					"@angular/core",
+					"@angular/bazel",
+					"@angular/common",
+					"@angular/compiler",
+					"@angular/compiler-cli",
+					"@angular/animations",
+					"@angular/elements",
+					"@angular/platform-browser",
+					"@angular/platform-browser-dynamic",
+					"@angular/forms",
+					"@angular/platform-server",
+					"@angular/upgrade",
+					"@angular/router",
+					"@angular/language-service",
+					"@angular/localize",
+					"@angular/service-worker"
+				]
+			},
+			"exports": {
+				".": {
+					"types": "./index.d.ts",
+					"default": "./bundles/index.js"
+				},
+				"./linker": {
+					"types": "./linker/index.d.ts",
+					"default": "./bundles/linker/index.js"
+				},
+				"./private/*": {
+					"types": "./private/*.d.ts",
+					"default": "./bundles/private/*.js"
+				},
+				"./linker/babel": {
+					"types": "./linker/babel/index.d.ts",
+					"default": "./bundles/linker/babel/index.js"
+				},
+				"./package.json": {
+					"default": "./package.json"
+				}
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/compiler-cli_22.0.2_1781730510764_0.0880932488728774",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"type": "module",
+			"_nodeVersion": "22.22.3",
+			"contributors": []
+		},
+		"22.1.0-next.2": {
+			"name": "@angular/compiler-cli",
+			"description": "Angular - the compiler CLI for Node.js",
+			"version": "22.1.0-next.2",
+			"homepage": "https://github.com/angular/angular/tree/main/packages/compiler-cli",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/angular/angular.git",
+				"directory": "packages/compiler-cli"
+			},
+			"bugs": {
+				"url": "https://github.com/angular/angular/issues"
+			},
+			"engines": {
+				"node": "^22.22.3 || ^24.15.0 || >=26.0.0"
+			},
+			"dependencies": {
+				"@babel/core": "7.29.7",
+				"@jridgewell/sourcemap-codec": "^1.4.14",
+				"reflect-metadata": "^0.2.0",
+				"chokidar": "^5.0.0",
+				"convert-source-map": "^1.5.1",
+				"semver": "^7.0.0",
+				"tslib": "^2.3.0",
+				"yargs": "^18.0.0"
+			},
+			"devDependencies": {
+				"typescript": "6.0.3",
+				"@types/convert-source-map": "^2.0.0"
+			},
+			"peerDependencies": {
+				"@angular/compiler": "22.1.0-next.2",
+				"typescript": ">=6.0 <6.1"
+			},
+			"keywords": [
+				"angular",
+				"compiler"
+			],
+			"license": "MIT",
+			"bin": {
+				"ngc": "bundles/src/bin/ngc.js",
+				"ng-xi18n": "bundles/src/bin/ng_xi18n.js"
+			},
+			"maintainers": [
+				{
+					"name": "angular",
+					"email": "devops+npm@angular.io"
+				},
+				{
+					"name": "google-wombot",
+					"email": "node-team-npm+wombot@google.com"
+				}
+			],
+			"directories": {},
+			"lastModified": 0,
+			"peerDependenciesMeta": {
+				"typescript": {
+					"optional": true
+				}
+			},
+			"_id": "@angular/compiler-cli@22.1.0-next.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@angular/compiler-cli/-/compiler-cli-22.1.0-next.2.tgz",
+				"shasum": "4f8c5ebfc3eb351002a8eab0a62f890413c4d4aa",
+				"integrity": "sha512-cXwt2cDAU/L32sMHC40yWd4Eo6ovXxkZ1T0ik1t6hMXWKkzZ09LKWerN2QIk3kiRrIMEYmjMtEbpnqku5efuZw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEQCICIrYuj2PeX/b7PBCNVZVZHPNo4HIWlqOSta/ueJhKTvAiACR+gOaQbSyI558f6viQeufsZX5qjPPlO8RJjJjQK0iQ=="
+					}
+				]
+			},
+			"_npmVersion": "10.9.8",
+			"_npmUser": {
+				"name": "google-wombot",
+				"email": "node-team-npm+wombot@google.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "31c249c70c70cee2cfd59a0ea0689f9edae3d71a",
+			"typings": "index.d.ts",
+			"ng-update": {
+				"packageGroup": [
+					"@angular/core",
+					"@angular/bazel",
+					"@angular/common",
+					"@angular/compiler",
+					"@angular/compiler-cli",
+					"@angular/animations",
+					"@angular/elements",
+					"@angular/platform-browser",
+					"@angular/platform-browser-dynamic",
+					"@angular/forms",
+					"@angular/platform-server",
+					"@angular/upgrade",
+					"@angular/router",
+					"@angular/language-service",
+					"@angular/localize",
+					"@angular/service-worker"
+				]
+			},
+			"exports": {
+				".": {
+					"types": "./index.d.ts",
+					"default": "./bundles/index.js"
+				},
+				"./package.json": {
+					"default": "./package.json"
+				},
+				"./linker": {
+					"types": "./linker/index.d.ts",
+					"default": "./bundles/linker/index.js"
+				},
+				"./linker/babel": {
+					"types": "./linker/babel/index.d.ts",
+					"default": "./bundles/linker/babel/index.js"
+				},
+				"./private/*": {
+					"types": "./private/*.d.ts",
+					"default": "./bundles/private/*.js"
+				}
+			},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages-npm-production",
+				"tmp": "tmp/compiler-cli_22.1.0-next.2_1782401672601_0.11310916524427794"
+			},
+			"type": "module",
+			"_nodeVersion": "22.23.1",
+			"contributors": []
+		},
+		"22.0.3": {
+			"name": "@angular/compiler-cli",
+			"description": "Angular - the compiler CLI for Node.js",
+			"version": "22.0.3",
+			"homepage": "https://github.com/angular/angular/tree/main/packages/compiler-cli",
+			"repository": {
+				"url": "git+https://github.com/angular/angular.git",
+				"type": "git",
+				"directory": "packages/compiler-cli"
+			},
+			"bugs": {
+				"url": "https://github.com/angular/angular/issues"
+			},
+			"engines": {
+				"node": "^22.22.3 || ^24.15.0 || >=26.0.0"
+			},
+			"dependencies": {
+				"tslib": "^2.3.0",
+				"yargs": "^18.0.0",
+				"semver": "^7.0.0",
+				"chokidar": "^5.0.0",
+				"@babel/core": "7.29.7",
+				"reflect-metadata": "^0.2.0",
+				"convert-source-map": "^1.5.1",
+				"@jridgewell/sourcemap-codec": "^1.4.14"
+			},
+			"devDependencies": {
+				"typescript": "6.0.3",
+				"@types/convert-source-map": "^2.0.0"
+			},
+			"peerDependencies": {
+				"typescript": ">=6.0 <6.1",
+				"@angular/compiler": "22.0.3"
+			},
+			"keywords": [
+				"angular",
+				"compiler"
+			],
+			"license": "MIT",
+			"bin": {
+				"ngc": "bundles/src/bin/ngc.js",
+				"ng-xi18n": "bundles/src/bin/ng_xi18n.js"
+			},
+			"maintainers": [
+				{
+					"name": "angular",
+					"email": "devops+npm@angular.io"
+				},
+				{
+					"name": "google-wombot",
+					"email": "node-team-npm+wombot@google.com"
+				}
+			],
+			"directories": {},
+			"lastModified": 0,
+			"peerDependenciesMeta": {
+				"typescript": {
+					"optional": true
+				}
+			},
+			"_id": "@angular/compiler-cli@22.0.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@angular/compiler-cli/-/compiler-cli-22.0.3.tgz",
+				"shasum": "43904a42c601870c11abfe8e691978f11b1521bf",
+				"integrity": "sha512-TMpKn2KefhGXM1FzcLYeyTMsBbxtFJU83bYnlI0pTw7k3jBAmN6H+ydRcNhdEYr3R2Ja3ncOXGV98RWLm9ElcQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEUCIQDRK7TBmHKKBNXfbCyp74AAKxA4gvj8FcTiMIpjr6qJDwIgAgZx9dXozMJj7MQFQ1dC7GBssEVqTyVEKME3qfhP7pQ="
+					}
+				]
+			},
+			"_npmVersion": "10.9.8",
+			"_npmUser": {
+				"name": "google-wombot",
+				"email": "node-team-npm+wombot@google.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "72c9a3f6a6b30224c557510dd36fb30624af8f36",
+			"typings": "index.d.ts",
+			"ng-update": {
+				"packageGroup": [
+					"@angular/core",
+					"@angular/bazel",
+					"@angular/common",
+					"@angular/compiler",
+					"@angular/compiler-cli",
+					"@angular/animations",
+					"@angular/elements",
+					"@angular/platform-browser",
+					"@angular/platform-browser-dynamic",
+					"@angular/forms",
+					"@angular/platform-server",
+					"@angular/upgrade",
+					"@angular/router",
+					"@angular/language-service",
+					"@angular/localize",
+					"@angular/service-worker"
+				]
+			},
+			"exports": {
+				".": {
+					"types": "./index.d.ts",
+					"default": "./bundles/index.js"
+				},
+				"./linker": {
+					"types": "./linker/index.d.ts",
+					"default": "./bundles/linker/index.js"
+				},
+				"./private/*": {
+					"types": "./private/*.d.ts",
+					"default": "./bundles/private/*.js"
+				},
+				"./linker/babel": {
+					"types": "./linker/babel/index.d.ts",
+					"default": "./bundles/linker/babel/index.js"
+				},
+				"./package.json": {
+					"default": "./package.json"
+				}
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/compiler-cli_22.0.3_1782400256323_0.37735583220110236",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"type": "module",
+			"_nodeVersion": "22.23.1",
+			"contributors": []
 		}
 	},
 	"time": {
@@ -124579,7 +125095,7 @@
 		"19.1.0-next.1": "2024-12-04T15:21:48.671Z",
 		"19.1.0-next.2": "2024-12-04T19:30:36.332Z",
 		"19.1.0-next.0": "2024-11-26T17:59:15.519Z",
-		"modified": "2026-06-10T20:41:27.233Z",
+		"modified": "2026-06-25T15:34:32.921Z",
 		"19.1.0-next.3": "2024-12-12T22:42:59.063Z",
 		"19.1.0-next.4": "2024-12-18T19:06:06.772Z",
 		"14.2.6": "2022-10-12T17:52:05.233Z",
@@ -125454,11 +125970,15 @@
 		"10.0.7": "2020-07-30T23:47:36.067Z",
 		"10.0.6": "2020-07-28T21:58:37.246Z",
 		"5.0.0-rc.9": "2017-10-31T04:22:36.535Z",
-		"10.0.5": "2020-07-22T16:44:50.689Z"
+		"10.0.5": "2020-07-22T16:44:50.689Z",
+		"22.1.0-next.1": "2026-06-17T21:16:31.662Z",
+		"22.0.2": "2026-06-17T21:08:30.942Z",
+		"22.1.0-next.2": "2026-06-25T15:34:32.794Z",
+		"22.0.3": "2026-06-25T15:10:56.480Z"
 	},
 	"users": {},
 	"dist-tags": {
-		"next": "22.1.0-next.0",
+		"next": "22.1.0-next.2",
 		"v5-lts": "5.2.11",
 		"v17-lts": "17.3.12",
 		"v10-lts": "10.2.5",
@@ -125477,12 +125997,12 @@
 		"v13-lts": "13.4.0",
 		"v14-lts": "14.3.0",
 		"v20-lts": "20.3.25",
-		"latest": "22.0.1"
+		"latest": "22.0.3"
 	},
 	"_uplinks": {
 		"artifactory-sabadell": {
-			"etag": "713fe2ad9b83943e1941d7cbdb3709aee4ca5868",
-			"fetched": 1781195714150
+			"etag": "5dcc2676f6e1e02df16663dbd05e01d56c3180c6",
+			"fetched": 1782459808834
 		}
 	},
 	"_distfiles": {
@@ -130780,10 +131300,30 @@
 			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@angular/compiler-cli/-/compiler-cli-10.0.5.tgz",
 			"sha": "372813445b2d8d9b94bcb314569d6d4a6b8c64b8",
 			"registry": "artifactory-sabadell"
+		},
+		"compiler-cli-22.1.0-next.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@angular/compiler-cli/-/compiler-cli-22.1.0-next.1.tgz",
+			"sha": "626d1ce2e0e9c19abb7d043932f7825c119c6dc9",
+			"registry": "artifactory-sabadell"
+		},
+		"compiler-cli-22.0.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@angular/compiler-cli/-/compiler-cli-22.0.2.tgz",
+			"sha": "20727dbf133d1928300062bd8496a15f989aad84",
+			"registry": "artifactory-sabadell"
+		},
+		"compiler-cli-22.1.0-next.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@angular/compiler-cli/-/compiler-cli-22.1.0-next.2.tgz",
+			"sha": "4f8c5ebfc3eb351002a8eab0a62f890413c4d4aa",
+			"registry": "artifactory-sabadell"
+		},
+		"compiler-cli-22.0.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@angular/compiler-cli/-/compiler-cli-22.0.3.tgz",
+			"sha": "43904a42c601870c11abfe8e691978f11b1521bf",
+			"registry": "artifactory-sabadell"
 		}
 	},
 	"_attachments": {},
-	"_rev": "1-ddad1713dbf59ce6",
+	"_rev": "4-c856ba8e2ab6c4a1",
 	"_id": "@angular/compiler-cli",
 	"readme": ""
 }

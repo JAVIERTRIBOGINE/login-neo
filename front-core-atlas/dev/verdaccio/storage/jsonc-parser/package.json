@@ -1,0 +1,4384 @@
+{
+	"name": "jsonc-parser",
+	"versions": {
+		"0.4.2": {
+			"name": "jsonc-parser",
+			"description": "Scanner and parser for JSON with comments.",
+			"version": "0.4.2",
+			"author": {
+				"name": "Microsoft Corporation"
+			},
+			"homepage": "https://github.com/Microsoft/node-jsonc-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/Microsoft/node-jsonc-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/Microsoft/node-jsonc-parser/issues"
+			},
+			"main": "./lib/main.js",
+			"dependencies": {
+				"vscode-nls": "^2.0.2"
+			},
+			"devDependencies": {
+				"mocha": "^2.4.5",
+				"typescript": "^2.1.5",
+				"@types/node": "^6.0.46",
+				"@types/mocha": "^2.2.32"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "aeschli",
+					"email": "martinae@microsoft.com"
+				},
+				{
+					"name": "alexandrudima",
+					"email": "alexdima@microsoft.com"
+				},
+				{
+					"name": "aweinand",
+					"email": "aweinand@microsoft.com"
+				},
+				{
+					"name": "bpasero",
+					"email": "benjpas@microsoft.com"
+				},
+				{
+					"name": "chrisdias",
+					"email": "cdias@microsoft.com"
+				},
+				{
+					"name": "dbaeumer",
+					"email": "dirk.baeumer@gmail.com"
+				},
+				{
+					"name": "egamma",
+					"email": "egamma@microsoft.com"
+				},
+				{
+					"name": "isidor",
+					"email": "inikolic@microsoft.com"
+				},
+				{
+					"name": "joaomoreno.ms",
+					"email": "joao.moreno@microsoft.com"
+				},
+				{
+					"name": "jrieken",
+					"email": "jrieken@microsoft.com"
+				},
+				{
+					"name": "microsoft",
+					"email": "npmjs@microsoft.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tsc -p ./src && mocha",
+				"watch": "tsc -w -p ./src",
+				"compile": "tsc -p ./src",
+				"prepublish": "tsc -p ./src"
+			},
+			"lastModified": 0,
+			"_id": "jsonc-parser@0.4.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-0.4.2.tgz",
+				"shasum": "a4b2caf67d1a72394283066060130f715051331d",
+				"integrity": "sha512-kXc81GOZuHWX+85D2zZyR/D0sCpx4f7yXoyBupOend4NbE+9XbBCwOdQpDg9ON4rplq0G+Smajm799/+Aibpgg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDZZCFvwSwudzo4IlCDqhlPmbKrVdpJHoOTcrd691YHvgIhAOUbkNCBTG1SQKo26t4IH6eTl6wGpAQjKqM5e2pfkRIb"
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "4.4.4",
+			"_npmUser": {
+				"name": "aeschli",
+				"email": "martinae@microsoft.com"
+			},
+			"gitHead": "8485a9ccb80029899bc687861fbf199a649b2146",
+			"typings": "./lib/main",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/jsonc-parser-0.4.2.tgz_1493991764791_0.6369449393823743",
+				"host": "packages-18-east.internal.npmjs.com"
+			},
+			"_shasum": "a4b2caf67d1a72394283066060130f715051331d",
+			"_nodeVersion": "5.12.0",
+			"contributors": []
+		},
+		"4.0.0-next.2": {
+			"name": "jsonc-parser",
+			"description": "Scanner and parser for JSON with comments.",
+			"version": "4.0.0-next.2",
+			"author": {
+				"name": "Microsoft Corporation"
+			},
+			"homepage": "https://github.com/microsoft/node-jsonc-parser#readme",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/microsoft/node-jsonc-parser.git"
+			},
+			"bugs": {
+				"url": "https://github.com/microsoft/node-jsonc-parser/issues"
+			},
+			"devDependencies": {
+				"@types/node": "22.x",
+				"@typescript-eslint/eslint-plugin": "^8.35.1",
+				"@typescript-eslint/parser": "^8.35.1",
+				"eslint": "^9.30.0",
+				"rimraf": "^6.0.1",
+				"typescript": "^5.8.3"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "microsoft1es",
+					"email": "npmjs@microsoft.com"
+				},
+				{
+					"name": "microsoft-oss-releases",
+					"email": "microsoft-oss-publishing@microsoft.com"
+				},
+				{
+					"name": "alexandrudima",
+					"email": "alexdima@microsoft.com"
+				},
+				{
+					"name": "joaomoreno.ms",
+					"email": "joao.moreno@microsoft.com"
+				},
+				{
+					"name": "kaimaetzel",
+					"email": "kamaet@microsoft.com"
+				},
+				{
+					"name": "sbatten",
+					"email": "steven.m.batten@outlook.com"
+				},
+				{
+					"name": "lszomoru",
+					"email": "lszomoru@microsoft.com"
+				},
+				{
+					"name": "vscode-bot",
+					"email": "vscode-bot-npm@microsoft.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"prepack": "npm run clean && npm run compile && npm run test && npm run remove-sourcemap-refs",
+				"compile": "tsc -p ./src && npm run lint",
+				"remove-sourcemap-refs": "node ./build/remove-sourcemap-refs.cjs",
+				"clean": "rimraf lib",
+				"watch": "tsc -w -p ./src",
+				"test": "npm run compile && node --enable-source-maps --test ./lib/esm/test/*.test.js",
+				"lint": "eslint src/**/*.ts"
+			},
+			"lastModified": 0,
+			"_id": "jsonc-parser@4.0.0-next.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-4.0.0-next.2.tgz",
+				"shasum": "ce32284da18b51de00a9b56091006b25a6836693",
+				"integrity": "sha512-Trhud0eeme3Iv1yPXVd1xJK7e8GFM0fgXIneMmN9yDW09TR8EvA6OdXnAjCD3on7Ao8fdLJvrFrlQ6UHobVGPA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEYCIQCSEm1AUIUgsJWgzbm709Vo8pYAIqd6wAfhlxvLeAl9xAIhAMPAuiwYZY6O35iVW5vJzGD7k/QB3mUtrmWTHY4NUN5O"
+					}
+				]
+			},
+			"_from": "file:M:\\SvcFab\\_App\\MS.Ess.PackageManager.Publisher_App1\\temp\\85dbc79e-d042-46fa-86b9-782588baca15\\jsonc-parser-4.0.0-next.2.tgz",
+			"_npmUser": {
+				"name": "microsoft1es",
+				"email": "npmjs@microsoft.com"
+			},
+			"_hasShrinkwrap": false,
+			"types": "./lib/esm/main.d.ts",
+			"exports": {
+				".": {
+					"types": "./lib/esm/main.d.ts",
+					"import": "./lib/esm/main.js"
+				}
+			},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages-npm-production",
+				"tmp": "tmp/jsonc-parser_4.0.0-next.2_1781648353111_0.2805638146182854"
+			},
+			"readmeFilename": "README.md",
+			"_resolved": "M:\\SvcFab\\_App\\MS.Ess.PackageManager.Publisher_App1\\temp\\85dbc79e-d042-46fa-86b9-782588baca15\\jsonc-parser-4.0.0-next.2.tgz",
+			"tag": "next",
+			"type": "module",
+			"_integrity": "sha512-Trhud0eeme3Iv1yPXVd1xJK7e8GFM0fgXIneMmN9yDW09TR8EvA6OdXnAjCD3on7Ao8fdLJvrFrlQ6UHobVGPA==",
+			"_nodeVersion": "18.5.0",
+			"contributors": []
+		},
+		"0.1.3": {
+			"name": "jsonc-parser",
+			"description": "Scanner and parser for JSON with comments.",
+			"version": "0.1.3",
+			"author": {
+				"name": "Microsoft Corporation"
+			},
+			"homepage": "https://github.com/Microsoft/node-jsonc-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/Microsoft/node-jsonc-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/Microsoft/node-jsonc-parser/issues"
+			},
+			"main": "./lib/main.js",
+			"dependencies": {
+				"vscode-nls": "^1.0.4"
+			},
+			"devDependencies": {
+				"mocha": "^2.4.5",
+				"typescript": "^1.8.9"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "aeschli",
+					"email": "martinae@microsoft.com"
+				},
+				{
+					"name": "alexandrudima",
+					"email": "alexdima@microsoft.com"
+				},
+				{
+					"name": "aweinand",
+					"email": "aweinand@microsoft.com"
+				},
+				{
+					"name": "bpasero",
+					"email": "benjpas@microsoft.com"
+				},
+				{
+					"name": "chrisdias",
+					"email": "cdias@microsoft.com"
+				},
+				{
+					"name": "dbaeumer",
+					"email": "dirk.baeumer@gmail.com"
+				},
+				{
+					"name": "egamma",
+					"email": "egamma@microsoft.com"
+				},
+				{
+					"name": "isidor",
+					"email": "inikolic@microsoft.com"
+				},
+				{
+					"name": "joaomoreno.ms",
+					"email": "joao.moreno@microsoft.com"
+				},
+				{
+					"name": "jrieken",
+					"email": "jrieken@microsoft.com"
+				},
+				{
+					"name": "microsoft",
+					"email": "npmjs@microsoft.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tsc -p ./src && mocha",
+				"watch": "tsc -w -p ./src",
+				"compile": "tsc -p ./src",
+				"prepublish": "tsc -p ./src"
+			},
+			"lastModified": 0,
+			"_id": "jsonc-parser@0.1.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-0.1.3.tgz",
+				"shasum": "b61ec6f43b6811f033ef2560d969c0a209bd7857",
+				"integrity": "sha512-f+W2ex4Sse9huGJwy56Fv/elCQYkqzi8WO7UU/M0bxJCe5Hz/Um9NDukX2TXF5uNX9ZqncOqaKDTF4Qk3nhlCQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDdA0cPaHYnt+L0UyL+8TqQErgtsJLolBU172Zwym1sGAIhAMYbTT+yddFUaQyOCj/6umMlsm+Ubeb2uXy2tSBWnHWe"
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "3.6.0",
+			"_npmUser": {
+				"name": "aeschli",
+				"email": "martinae@microsoft.com"
+			},
+			"gitHead": "1ff32a8231827284895ff091f4190516f9217991",
+			"typings": "./lib/main",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/jsonc-parser-0.1.3.tgz_1463340685643_0.6315974046010524",
+				"host": "packages-12-west.internal.npmjs.com"
+			},
+			"_shasum": "b61ec6f43b6811f033ef2560d969c0a209bd7857",
+			"_nodeVersion": "5.7.1",
+			"contributors": []
+		},
+		"0.2.2": {
+			"name": "jsonc-parser",
+			"description": "Scanner and parser for JSON with comments.",
+			"version": "0.2.2",
+			"author": {
+				"name": "Microsoft Corporation"
+			},
+			"homepage": "https://github.com/Microsoft/node-jsonc-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/Microsoft/node-jsonc-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/Microsoft/node-jsonc-parser/issues"
+			},
+			"main": "./lib/main.js",
+			"dependencies": {
+				"vscode-nls": "^1.0.4"
+			},
+			"devDependencies": {
+				"mocha": "^2.4.5",
+				"typescript": "^1.8.9"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "aeschli",
+					"email": "martinae@microsoft.com"
+				},
+				{
+					"name": "alexandrudima",
+					"email": "alexdima@microsoft.com"
+				},
+				{
+					"name": "aweinand",
+					"email": "aweinand@microsoft.com"
+				},
+				{
+					"name": "bpasero",
+					"email": "benjpas@microsoft.com"
+				},
+				{
+					"name": "chrisdias",
+					"email": "cdias@microsoft.com"
+				},
+				{
+					"name": "dbaeumer",
+					"email": "dirk.baeumer@gmail.com"
+				},
+				{
+					"name": "egamma",
+					"email": "egamma@microsoft.com"
+				},
+				{
+					"name": "isidor",
+					"email": "inikolic@microsoft.com"
+				},
+				{
+					"name": "joaomoreno.ms",
+					"email": "joao.moreno@microsoft.com"
+				},
+				{
+					"name": "jrieken",
+					"email": "jrieken@microsoft.com"
+				},
+				{
+					"name": "microsoft",
+					"email": "npmjs@microsoft.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tsc -p ./src && mocha",
+				"watch": "tsc -w -p ./src",
+				"compile": "tsc -p ./src",
+				"prepublish": "tsc -p ./src"
+			},
+			"lastModified": 0,
+			"_id": "jsonc-parser@0.2.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-0.2.2.tgz",
+				"shasum": "db4418c1402ce55bc8d21fde22b847789b00991f",
+				"integrity": "sha512-Sn3OODcXokNmhToDVFbN+yBU4mUPy2MDzrObMeXwqN8ZvxpVeAtU0hwtyrKbuOAMGZHqOpO0nZSqFTG0GzRITw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDWuFUmym7N54wfJTiFO0ef+DneKDyFftphnUOPtaYfzwIhAOrwu2GzTzBhhEG1Lnon39PKQoVFGYWy/hy/b5JYcIkc"
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "3.6.0",
+			"_npmUser": {
+				"name": "aeschli",
+				"email": "martinae@microsoft.com"
+			},
+			"gitHead": "592e6a72618e71146de4d933c1f66f246edf4586",
+			"typings": "./lib/main",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/jsonc-parser-0.2.2.tgz_1465926666944_0.9689547382295132",
+				"host": "packages-12-west.internal.npmjs.com"
+			},
+			"_shasum": "db4418c1402ce55bc8d21fde22b847789b00991f",
+			"_nodeVersion": "5.7.1",
+			"contributors": []
+		},
+		"0.3.1": {
+			"name": "jsonc-parser",
+			"description": "Scanner and parser for JSON with comments.",
+			"version": "0.3.1",
+			"author": {
+				"name": "Microsoft Corporation"
+			},
+			"homepage": "https://github.com/Microsoft/node-jsonc-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/Microsoft/node-jsonc-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/Microsoft/node-jsonc-parser/issues"
+			},
+			"main": "./lib/main.js",
+			"dependencies": {
+				"vscode-nls": "^2.0.2"
+			},
+			"devDependencies": {
+				"mocha": "^2.4.5",
+				"typescript": "^2.1.5",
+				"@types/node": "^6.0.46",
+				"@types/mocha": "^2.2.32"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "aeschli",
+					"email": "martinae@microsoft.com"
+				},
+				{
+					"name": "alexandrudima",
+					"email": "alexdima@microsoft.com"
+				},
+				{
+					"name": "aweinand",
+					"email": "aweinand@microsoft.com"
+				},
+				{
+					"name": "bpasero",
+					"email": "benjpas@microsoft.com"
+				},
+				{
+					"name": "chrisdias",
+					"email": "cdias@microsoft.com"
+				},
+				{
+					"name": "dbaeumer",
+					"email": "dirk.baeumer@gmail.com"
+				},
+				{
+					"name": "egamma",
+					"email": "egamma@microsoft.com"
+				},
+				{
+					"name": "isidor",
+					"email": "inikolic@microsoft.com"
+				},
+				{
+					"name": "joaomoreno.ms",
+					"email": "joao.moreno@microsoft.com"
+				},
+				{
+					"name": "jrieken",
+					"email": "jrieken@microsoft.com"
+				},
+				{
+					"name": "microsoft",
+					"email": "npmjs@microsoft.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tsc -p ./src && mocha",
+				"watch": "tsc -w -p ./src",
+				"compile": "tsc -p ./src",
+				"prepublish": "tsc -p ./src"
+			},
+			"lastModified": 0,
+			"_id": "jsonc-parser@0.3.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-0.3.1.tgz",
+				"shasum": "6ebf5c75224368d4b07ef4c26f9434e657472e95",
+				"integrity": "sha512-VxP3eQ0ma5/aWXJWRxQQcxgcbQftgPwB6fe1WOxe1VGfaYZC3VURgdmhn8K9NNg6UWDKXMhR+8u493xRriO7FQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIArJhjv90xpRT5jjeodKlxh9hpGuJ0oIIHjFNKJV8PLoAiAy1pDFwpNTeZIpUk2jCu9ceeLVk+RURMEZq409VYdTSw=="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "3.8.6",
+			"_npmUser": {
+				"name": "aeschli",
+				"email": "martinae@microsoft.com"
+			},
+			"gitHead": "b6f3556f8264722b3a2fcba9a15ecfb2b2640b42",
+			"typings": "./lib/main",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/jsonc-parser-0.3.1.tgz_1485425708357_0.4385204501450062",
+				"host": "packages-12-west.internal.npmjs.com"
+			},
+			"_shasum": "6ebf5c75224368d4b07ef4c26f9434e657472e95",
+			"_nodeVersion": "5.12.0",
+			"contributors": []
+		},
+		"0.4.0": {
+			"name": "jsonc-parser",
+			"description": "Scanner and parser for JSON with comments.",
+			"version": "0.4.0",
+			"author": {
+				"name": "Microsoft Corporation"
+			},
+			"homepage": "https://github.com/Microsoft/node-jsonc-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/Microsoft/node-jsonc-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/Microsoft/node-jsonc-parser/issues"
+			},
+			"main": "./lib/main.js",
+			"dependencies": {
+				"vscode-nls": "^2.0.2"
+			},
+			"devDependencies": {
+				"mocha": "^2.4.5",
+				"typescript": "^2.1.5",
+				"@types/node": "^6.0.46",
+				"@types/mocha": "^2.2.32"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "aeschli",
+					"email": "martinae@microsoft.com"
+				},
+				{
+					"name": "alexandrudima",
+					"email": "alexdima@microsoft.com"
+				},
+				{
+					"name": "aweinand",
+					"email": "aweinand@microsoft.com"
+				},
+				{
+					"name": "bpasero",
+					"email": "benjpas@microsoft.com"
+				},
+				{
+					"name": "chrisdias",
+					"email": "cdias@microsoft.com"
+				},
+				{
+					"name": "dbaeumer",
+					"email": "dirk.baeumer@gmail.com"
+				},
+				{
+					"name": "egamma",
+					"email": "egamma@microsoft.com"
+				},
+				{
+					"name": "isidor",
+					"email": "inikolic@microsoft.com"
+				},
+				{
+					"name": "joaomoreno.ms",
+					"email": "joao.moreno@microsoft.com"
+				},
+				{
+					"name": "jrieken",
+					"email": "jrieken@microsoft.com"
+				},
+				{
+					"name": "microsoft",
+					"email": "npmjs@microsoft.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tsc -p ./src && mocha",
+				"watch": "tsc -w -p ./src",
+				"compile": "tsc -p ./src",
+				"prepublish": "tsc -p ./src"
+			},
+			"lastModified": 0,
+			"_id": "jsonc-parser@0.4.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-0.4.0.tgz",
+				"shasum": "9e23b8a03ced45c5c9f305088005fc8279a1bded",
+				"integrity": "sha512-JQnV7ju4xhc7YHF1+XheV41qtTZcZ1LC/DKGlOe0tAmDkhglC1syzAH2zvNvtpbAd+kOJahZ21ZS0YmnQc88mA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQCkF40nuzZWlx3RnpRkfpmVTq20z4VV/lcBpfI26Ps2mwIhAL3D947AT5zT84oomeIfO02JjiNZnfzUufUbS58FA0jd"
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "3.8.6",
+			"_npmUser": {
+				"name": "aeschli",
+				"email": "martinae@microsoft.com"
+			},
+			"gitHead": "02c80bc9258ce250aba02d195d15e598481e587f",
+			"typings": "./lib/main",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/jsonc-parser-0.4.0.tgz_1487853331031_0.4463982214219868",
+				"host": "packages-12-west.internal.npmjs.com"
+			},
+			"_shasum": "9e23b8a03ced45c5c9f305088005fc8279a1bded",
+			"_nodeVersion": "5.12.0",
+			"contributors": []
+		},
+		"0.2.3": {
+			"name": "jsonc-parser",
+			"description": "Scanner and parser for JSON with comments.",
+			"version": "0.2.3",
+			"author": {
+				"name": "Microsoft Corporation"
+			},
+			"homepage": "https://github.com/Microsoft/node-jsonc-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/Microsoft/node-jsonc-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/Microsoft/node-jsonc-parser/issues"
+			},
+			"main": "./lib/main.js",
+			"dependencies": {
+				"vscode-nls": "^1.0.4"
+			},
+			"devDependencies": {
+				"mocha": "^2.4.5",
+				"typescript": "^1.8.9"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "aeschli",
+					"email": "martinae@microsoft.com"
+				},
+				{
+					"name": "alexandrudima",
+					"email": "alexdima@microsoft.com"
+				},
+				{
+					"name": "aweinand",
+					"email": "aweinand@microsoft.com"
+				},
+				{
+					"name": "bpasero",
+					"email": "benjpas@microsoft.com"
+				},
+				{
+					"name": "chrisdias",
+					"email": "cdias@microsoft.com"
+				},
+				{
+					"name": "dbaeumer",
+					"email": "dirk.baeumer@gmail.com"
+				},
+				{
+					"name": "egamma",
+					"email": "egamma@microsoft.com"
+				},
+				{
+					"name": "isidor",
+					"email": "inikolic@microsoft.com"
+				},
+				{
+					"name": "joaomoreno.ms",
+					"email": "joao.moreno@microsoft.com"
+				},
+				{
+					"name": "jrieken",
+					"email": "jrieken@microsoft.com"
+				},
+				{
+					"name": "microsoft",
+					"email": "npmjs@microsoft.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tsc -p ./src && mocha",
+				"watch": "tsc -w -p ./src",
+				"compile": "tsc -p ./src",
+				"prepublish": "tsc -p ./src"
+			},
+			"lastModified": 0,
+			"_id": "jsonc-parser@0.2.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-0.2.3.tgz",
+				"shasum": "5f4c256202bf44486848fbb5c7da40ee6b8e16f8",
+				"integrity": "sha512-t1EPB0bkqMxr6nXx+lP759DYbeBYhsmSaHMq+3s+iZFEHUiYVTo8QRwpFhs+CNWMNSLiK8+mzAkzURt0YXnkOA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDBdyIxAi3OFPJr1pOHMJ2HVmDPQAxBcYn6tTivr+jMqgIgceFTmvluYXfCxCG7EvW8JiIrFANcfKSJAdosOs3tBkk="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "3.6.0",
+			"_npmUser": {
+				"name": "aeschli",
+				"email": "martinae@microsoft.com"
+			},
+			"gitHead": "7172c684b1e1f9162842cd018f0f1ff023253721",
+			"typings": "./lib/main",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/jsonc-parser-0.2.3.tgz_1466884586611_0.11554742115549743",
+				"host": "packages-16-east.internal.npmjs.com"
+			},
+			"_shasum": "5f4c256202bf44486848fbb5c7da40ee6b8e16f8",
+			"_nodeVersion": "5.7.1",
+			"contributors": []
+		},
+		"0.4.1": {
+			"name": "jsonc-parser",
+			"description": "Scanner and parser for JSON with comments.",
+			"version": "0.4.1",
+			"author": {
+				"name": "Microsoft Corporation"
+			},
+			"homepage": "https://github.com/Microsoft/node-jsonc-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/Microsoft/node-jsonc-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/Microsoft/node-jsonc-parser/issues"
+			},
+			"main": "./lib/main.js",
+			"dependencies": {
+				"vscode-nls": "^2.0.2"
+			},
+			"devDependencies": {
+				"mocha": "^2.4.5",
+				"typescript": "^2.1.5",
+				"@types/node": "^6.0.46",
+				"@types/mocha": "^2.2.32"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "aeschli",
+					"email": "martinae@microsoft.com"
+				},
+				{
+					"name": "alexandrudima",
+					"email": "alexdima@microsoft.com"
+				},
+				{
+					"name": "aweinand",
+					"email": "aweinand@microsoft.com"
+				},
+				{
+					"name": "bpasero",
+					"email": "benjpas@microsoft.com"
+				},
+				{
+					"name": "chrisdias",
+					"email": "cdias@microsoft.com"
+				},
+				{
+					"name": "dbaeumer",
+					"email": "dirk.baeumer@gmail.com"
+				},
+				{
+					"name": "egamma",
+					"email": "egamma@microsoft.com"
+				},
+				{
+					"name": "isidor",
+					"email": "inikolic@microsoft.com"
+				},
+				{
+					"name": "joaomoreno.ms",
+					"email": "joao.moreno@microsoft.com"
+				},
+				{
+					"name": "jrieken",
+					"email": "jrieken@microsoft.com"
+				},
+				{
+					"name": "microsoft",
+					"email": "npmjs@microsoft.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tsc -p ./src && mocha",
+				"watch": "tsc -w -p ./src",
+				"compile": "tsc -p ./src",
+				"prepublish": "tsc -p ./src"
+			},
+			"lastModified": 0,
+			"_id": "jsonc-parser@0.4.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-0.4.1.tgz",
+				"shasum": "57e57ffb21d9aa04c5b3c9e64183944991e44d13",
+				"integrity": "sha512-Qgfa14A31foKVvEzrHJLforlnQKZ6NGWu1uH58qxrsBnMvTAYCxAEvA1d9leuKAhKydMFvDbD5Op95D7GUL2Mg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQCebzNDGl6BdPSeSf7qLNMEpU3h4DaV+2EddSRpjO7+CAIhAOhFnxPuFcfyCyaev936xEd+mDjTI1r7Xoh/LEj2sBwY"
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "3.8.6",
+			"_npmUser": {
+				"name": "aeschli",
+				"email": "martinae@microsoft.com"
+			},
+			"gitHead": "85a63d3bf4d7e70c6e6746b2a2626a627e822183",
+			"typings": "./lib/main",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/jsonc-parser-0.4.1.tgz_1491291792290_0.8526146032381803",
+				"host": "packages-12-west.internal.npmjs.com"
+			},
+			"_shasum": "57e57ffb21d9aa04c5b3c9e64183944991e44d13",
+			"_nodeVersion": "5.12.0",
+			"contributors": []
+		},
+		"4.0.0-next.1": {
+			"name": "jsonc-parser",
+			"description": "Scanner and parser for JSON with comments.",
+			"version": "4.0.0-next.1",
+			"author": {
+				"name": "Microsoft Corporation"
+			},
+			"homepage": "https://github.com/microsoft/node-jsonc-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/microsoft/node-jsonc-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/microsoft/node-jsonc-parser/issues"
+			},
+			"devDependencies": {
+				"eslint": "^9.30.0",
+				"rimraf": "^6.0.1",
+				"typescript": "^5.8.3",
+				"@types/node": "22.x",
+				"@typescript-eslint/parser": "^8.35.1",
+				"@typescript-eslint/eslint-plugin": "^8.35.1"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "microsoft1es",
+					"email": "npmjs@microsoft.com"
+				},
+				{
+					"name": "microsoft-oss-releases",
+					"email": "microsoft-oss-publishing@microsoft.com"
+				},
+				{
+					"name": "alexandrudima",
+					"email": "alexdima@microsoft.com"
+				},
+				{
+					"name": "joaomoreno.ms",
+					"email": "joao.moreno@microsoft.com"
+				},
+				{
+					"name": "kaimaetzel",
+					"email": "kamaet@microsoft.com"
+				},
+				{
+					"name": "sbatten",
+					"email": "steven.m.batten@outlook.com"
+				},
+				{
+					"name": "lszomoru",
+					"email": "lszomoru@microsoft.com"
+				},
+				{
+					"name": "vscode-bot",
+					"email": "vscode-bot-npm@microsoft.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint src/**/*.ts",
+				"test": "npm run compile && node --enable-source-maps --test ./lib/esm/test/*.test.js",
+				"clean": "rimraf lib",
+				"watch": "tsc -w -p ./src",
+				"compile": "tsc -p ./src && npm run lint",
+				"prepack": "npm run clean && npm run compile && npm run test && npm run remove-sourcemap-refs",
+				"remove-sourcemap-refs": "node ./build/remove-sourcemap-refs.cjs"
+			},
+			"lastModified": 0,
+			"_id": "jsonc-parser@4.0.0-next.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-4.0.0-next.1.tgz",
+				"shasum": "170928d899735c0f86653a942aa30d0be7fd5599",
+				"integrity": "sha512-hHbZBY6wf/jvnF9bGTJ0VN3c73ch4VEHalHBPlKVnga5hnYOPNz8RDGS2lLivA8a0HAlfCJiJ9NEbbpKz6+zgg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEQCIHRZRNpGl96bjpTvQpwpwtO0gsQcyaSocswVlmptNC78AiBk3vf9DmWxR9atIVZ85Mgxtg0ydy8J7bbCKE8OkecXGw=="
+					}
+				]
+			},
+			"_from": "file:M:\\SvcFab\\_App\\MS.Ess.PackageManager.Publisher_App2\\temp\\cd5ecae5-5e8c-4039-8783-7276f93c7d99\\jsonc-parser-4.0.0-next.1.tgz",
+			"_npmUser": {
+				"name": "microsoft1es",
+				"email": "npmjs@microsoft.com"
+			},
+			"_hasShrinkwrap": false,
+			"types": "./lib/esm/main.d.ts",
+			"exports": {
+				".": {
+					"types": "./lib/esm/main.d.ts",
+					"import": "./lib/esm/main.js"
+				}
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/jsonc-parser_4.0.0-next.1_1773134656052_0.17800642077693096",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"tag": "next",
+			"_resolved": "M:\\SvcFab\\_App\\MS.Ess.PackageManager.Publisher_App2\\temp\\cd5ecae5-5e8c-4039-8783-7276f93c7d99\\jsonc-parser-4.0.0-next.1.tgz",
+			"readmeFilename": "README.md",
+			"type": "module",
+			"_integrity": "sha512-hHbZBY6wf/jvnF9bGTJ0VN3c73ch4VEHalHBPlKVnga5hnYOPNz8RDGS2lLivA8a0HAlfCJiJ9NEbbpKz6+zgg==",
+			"_nodeVersion": "18.5.0",
+			"contributors": []
+		},
+		"0.0.2": {
+			"name": "jsonc-parser",
+			"description": "Scanner and parser for JSON with comments.",
+			"version": "0.0.2",
+			"author": {
+				"name": "Microsoft Corporation"
+			},
+			"homepage": "https://github.com/Microsoft/node-jsonc-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/Microsoft/node-jsonc-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/Microsoft/node-jsonc-parser/issues"
+			},
+			"main": "./lib/main.js",
+			"dependencies": {
+				"vscode-nls": "^1.0.4"
+			},
+			"devDependencies": {
+				"mocha": "^2.4.5",
+				"typescript": "^1.8.9"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "aeschli",
+					"email": "martinae@microsoft.com"
+				},
+				{
+					"name": "alexandrudima",
+					"email": "alexdima@microsoft.com"
+				},
+				{
+					"name": "aweinand",
+					"email": "aweinand@microsoft.com"
+				},
+				{
+					"name": "bpasero",
+					"email": "benjpas@microsoft.com"
+				},
+				{
+					"name": "chrisdias",
+					"email": "cdias@microsoft.com"
+				},
+				{
+					"name": "dbaeumer",
+					"email": "dirk.baeumer@gmail.com"
+				},
+				{
+					"name": "egamma",
+					"email": "egamma@microsoft.com"
+				},
+				{
+					"name": "isidor",
+					"email": "inikolic@microsoft.com"
+				},
+				{
+					"name": "joaomoreno.ms",
+					"email": "joao.moreno@microsoft.com"
+				},
+				{
+					"name": "jrieken",
+					"email": "jrieken@microsoft.com"
+				},
+				{
+					"name": "microsoft",
+					"email": "npmjs@microsoft.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"watch": "tsc -w -p ./src",
+				"compile": "tsc -p ./src",
+				"prepublish": "tsc -p ./src"
+			},
+			"lastModified": 0,
+			"_id": "jsonc-parser@0.0.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-0.0.2.tgz",
+				"shasum": "bc3dabf7852a471bad10b30ed8b44bea1f0dc8d4",
+				"integrity": "sha512-VwnQs91yPMetXSnzocIvFhFcqkgObvfUhTVZavq5MyexFDIDug3lsgFHY1iK5H3syE3kxOxf1YM+PGIqBL5Ttg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIEtxoGK7i065nuprjGGUeyvhqK1lJ+K+7Yj1fKz22KDbAiAoyiW1M3Zot8ciWZP8ZBAMnR9gj37QG1Q9swv6RgfQmQ=="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "3.8.0",
+			"_npmUser": {
+				"name": "aeschli",
+				"email": "martinae@microsoft.com"
+			},
+			"gitHead": "18c302bffe6ee1374af446077fdeecdaf381df61",
+			"typings": "./lib/main",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/jsonc-parser-0.0.2.tgz_1461057979814_0.30831223633140326",
+				"host": "packages-16-east.internal.npmjs.com"
+			},
+			"_shasum": "bc3dabf7852a471bad10b30ed8b44bea1f0dc8d4",
+			"_nodeVersion": "5.7.0",
+			"contributors": []
+		},
+		"0.1.1": {
+			"name": "jsonc-parser",
+			"description": "Scanner and parser for JSON with comments.",
+			"version": "0.1.1",
+			"author": {
+				"name": "Microsoft Corporation"
+			},
+			"homepage": "https://github.com/Microsoft/node-jsonc-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/Microsoft/node-jsonc-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/Microsoft/node-jsonc-parser/issues"
+			},
+			"main": "./lib/main.js",
+			"dependencies": {
+				"vscode-nls": "^1.0.4"
+			},
+			"devDependencies": {
+				"mocha": "^2.4.5",
+				"typescript": "^1.8.9"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "aeschli",
+					"email": "martinae@microsoft.com"
+				},
+				{
+					"name": "alexandrudima",
+					"email": "alexdima@microsoft.com"
+				},
+				{
+					"name": "aweinand",
+					"email": "aweinand@microsoft.com"
+				},
+				{
+					"name": "bpasero",
+					"email": "benjpas@microsoft.com"
+				},
+				{
+					"name": "chrisdias",
+					"email": "cdias@microsoft.com"
+				},
+				{
+					"name": "dbaeumer",
+					"email": "dirk.baeumer@gmail.com"
+				},
+				{
+					"name": "egamma",
+					"email": "egamma@microsoft.com"
+				},
+				{
+					"name": "isidor",
+					"email": "inikolic@microsoft.com"
+				},
+				{
+					"name": "joaomoreno.ms",
+					"email": "joao.moreno@microsoft.com"
+				},
+				{
+					"name": "jrieken",
+					"email": "jrieken@microsoft.com"
+				},
+				{
+					"name": "microsoft",
+					"email": "npmjs@microsoft.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tsc -p ./src && mocha",
+				"watch": "tsc -w -p ./src",
+				"compile": "tsc -p ./src",
+				"prepublish": "tsc -p ./src"
+			},
+			"lastModified": 0,
+			"_id": "jsonc-parser@0.1.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-0.1.1.tgz",
+				"shasum": "cc9741117abaa895098ce676b621bbe5f5d9fe43",
+				"integrity": "sha512-ZTDb0a0Di4Wdy/FyoaWb3xJXE8PTBKPvZstYegMJdfNyQR+snOXlKFyMzD8QJ3UbfSENTvhOli2ugr+Fkd8+3A==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDkUX/VCYVYOoy5LF4X8C7uhoeb48cujLM/RdUIQzaUrwIgQsLJroZrYKYukyeob0aBQyQH6GZvX5oSc1a8FyVvfxs="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "3.8.0",
+			"_npmUser": {
+				"name": "aeschli",
+				"email": "martinae@microsoft.com"
+			},
+			"gitHead": "0c8d9b691eadf9e78343f7d3190c6e58e89017f6",
+			"typings": "./lib/main",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/jsonc-parser-0.1.1.tgz_1461077940879_0.578954518539831",
+				"host": "packages-12-west.internal.npmjs.com"
+			},
+			"_shasum": "cc9741117abaa895098ce676b621bbe5f5d9fe43",
+			"_nodeVersion": "5.7.0",
+			"contributors": []
+		},
+		"0.2.0": {
+			"name": "jsonc-parser",
+			"description": "Scanner and parser for JSON with comments.",
+			"version": "0.2.0",
+			"author": {
+				"name": "Microsoft Corporation"
+			},
+			"homepage": "https://github.com/Microsoft/node-jsonc-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/Microsoft/node-jsonc-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/Microsoft/node-jsonc-parser/issues"
+			},
+			"main": "./lib/main.js",
+			"dependencies": {
+				"vscode-nls": "^1.0.4"
+			},
+			"devDependencies": {
+				"mocha": "^2.4.5",
+				"typescript": "^1.8.9"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "aeschli",
+					"email": "martinae@microsoft.com"
+				},
+				{
+					"name": "alexandrudima",
+					"email": "alexdima@microsoft.com"
+				},
+				{
+					"name": "aweinand",
+					"email": "aweinand@microsoft.com"
+				},
+				{
+					"name": "bpasero",
+					"email": "benjpas@microsoft.com"
+				},
+				{
+					"name": "chrisdias",
+					"email": "cdias@microsoft.com"
+				},
+				{
+					"name": "dbaeumer",
+					"email": "dirk.baeumer@gmail.com"
+				},
+				{
+					"name": "egamma",
+					"email": "egamma@microsoft.com"
+				},
+				{
+					"name": "isidor",
+					"email": "inikolic@microsoft.com"
+				},
+				{
+					"name": "joaomoreno.ms",
+					"email": "joao.moreno@microsoft.com"
+				},
+				{
+					"name": "jrieken",
+					"email": "jrieken@microsoft.com"
+				},
+				{
+					"name": "microsoft",
+					"email": "npmjs@microsoft.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tsc -p ./src && mocha",
+				"watch": "tsc -w -p ./src",
+				"compile": "tsc -p ./src",
+				"prepublish": "tsc -p ./src"
+			},
+			"lastModified": 0,
+			"_id": "jsonc-parser@0.2.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-0.2.0.tgz",
+				"shasum": "4a5e2cb387d311325014db9e5db563030d4c3cf1",
+				"integrity": "sha512-oOIf3bIs17QU/UMxUXEH/MlBlNtAsHqnVHCjuCp5rifijos9c0TAw4RnEBMkUl7VLmoB/I/ce4bPJWTQ7hxFlw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQD2drTakZUuR4asOvkAx/qabi1yKGRrvG2SFHEYATR7OQIhAJgFRccm6ECqTB6U3zWsyrDjpstFdnzHHoz8qlHwaHtd"
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "3.8.0",
+			"_npmUser": {
+				"name": "aeschli",
+				"email": "martinae@microsoft.com"
+			},
+			"gitHead": "d4f3853c1262526f3417407ceb65bde54851361c",
+			"typings": "./lib/main",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/jsonc-parser-0.2.0.tgz_1461153422390_0.22161052422598004",
+				"host": "packages-12-west.internal.npmjs.com"
+			},
+			"_shasum": "4a5e2cb387d311325014db9e5db563030d4c3cf1",
+			"_nodeVersion": "5.7.0",
+			"contributors": []
+		},
+		"0.0.3": {
+			"name": "jsonc-parser",
+			"description": "Scanner and parser for JSON with comments.",
+			"version": "0.0.3",
+			"author": {
+				"name": "Microsoft Corporation"
+			},
+			"homepage": "https://github.com/Microsoft/node-jsonc-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/Microsoft/node-jsonc-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/Microsoft/node-jsonc-parser/issues"
+			},
+			"main": "./lib/main.js",
+			"dependencies": {
+				"vscode-nls": "^1.0.4"
+			},
+			"devDependencies": {
+				"mocha": "^2.4.5",
+				"typescript": "^1.8.9"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "aeschli",
+					"email": "martinae@microsoft.com"
+				},
+				{
+					"name": "alexandrudima",
+					"email": "alexdima@microsoft.com"
+				},
+				{
+					"name": "aweinand",
+					"email": "aweinand@microsoft.com"
+				},
+				{
+					"name": "bpasero",
+					"email": "benjpas@microsoft.com"
+				},
+				{
+					"name": "chrisdias",
+					"email": "cdias@microsoft.com"
+				},
+				{
+					"name": "dbaeumer",
+					"email": "dirk.baeumer@gmail.com"
+				},
+				{
+					"name": "egamma",
+					"email": "egamma@microsoft.com"
+				},
+				{
+					"name": "isidor",
+					"email": "inikolic@microsoft.com"
+				},
+				{
+					"name": "joaomoreno.ms",
+					"email": "joao.moreno@microsoft.com"
+				},
+				{
+					"name": "jrieken",
+					"email": "jrieken@microsoft.com"
+				},
+				{
+					"name": "microsoft",
+					"email": "npmjs@microsoft.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"watch": "tsc -w -p ./src",
+				"compile": "tsc -p ./src",
+				"prepublish": "tsc -p ./src"
+			},
+			"lastModified": 0,
+			"_id": "jsonc-parser@0.0.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-0.0.3.tgz",
+				"shasum": "fed73f889e0d4ca94ba1634a102ff640226982fc",
+				"integrity": "sha512-a9LgSFQ9muT9UleqjgfaognBviD+HY6Ld6DO40as7iKGDJDpUx6JqiC5Wh23kl21IKc5y6bObUhdY3hE0xVzcQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIEK+LOhAxMZ51/0LgVPghEuf9NBkibke5AVKLra2QKZaAiAWnrI69U9Hxz7rbR+FYFVGH9KCHaY5KQZic2L/fTmYlg=="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "3.8.0",
+			"_npmUser": {
+				"name": "aeschli",
+				"email": "martinae@microsoft.com"
+			},
+			"gitHead": "18c302bffe6ee1374af446077fdeecdaf381df61",
+			"typings": "./lib/main",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/jsonc-parser-0.0.3.tgz_1461058343612_0.04355362104251981",
+				"host": "packages-16-east.internal.npmjs.com"
+			},
+			"_shasum": "fed73f889e0d4ca94ba1634a102ff640226982fc",
+			"_nodeVersion": "5.7.0",
+			"contributors": []
+		},
+		"0.1.2": {
+			"name": "jsonc-parser",
+			"description": "Scanner and parser for JSON with comments.",
+			"version": "0.1.2",
+			"author": {
+				"name": "Microsoft Corporation"
+			},
+			"homepage": "https://github.com/Microsoft/node-jsonc-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/Microsoft/node-jsonc-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/Microsoft/node-jsonc-parser/issues"
+			},
+			"main": "./lib/main.js",
+			"dependencies": {
+				"vscode-nls": "^1.0.4"
+			},
+			"devDependencies": {
+				"mocha": "^2.4.5",
+				"typescript": "^1.8.9"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "aeschli",
+					"email": "martinae@microsoft.com"
+				},
+				{
+					"name": "alexandrudima",
+					"email": "alexdima@microsoft.com"
+				},
+				{
+					"name": "aweinand",
+					"email": "aweinand@microsoft.com"
+				},
+				{
+					"name": "bpasero",
+					"email": "benjpas@microsoft.com"
+				},
+				{
+					"name": "chrisdias",
+					"email": "cdias@microsoft.com"
+				},
+				{
+					"name": "dbaeumer",
+					"email": "dirk.baeumer@gmail.com"
+				},
+				{
+					"name": "egamma",
+					"email": "egamma@microsoft.com"
+				},
+				{
+					"name": "isidor",
+					"email": "inikolic@microsoft.com"
+				},
+				{
+					"name": "joaomoreno.ms",
+					"email": "joao.moreno@microsoft.com"
+				},
+				{
+					"name": "jrieken",
+					"email": "jrieken@microsoft.com"
+				},
+				{
+					"name": "microsoft",
+					"email": "npmjs@microsoft.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tsc -p ./src && mocha",
+				"watch": "tsc -w -p ./src",
+				"compile": "tsc -p ./src",
+				"prepublish": "tsc -p ./src"
+			},
+			"lastModified": 0,
+			"_id": "jsonc-parser@0.1.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-0.1.2.tgz",
+				"shasum": "afcfcda6b8c00d583658a1906e715bdf3f10b872",
+				"integrity": "sha512-OcqNXQ3DDCHjQ5Byhnpkh93V8R5JP2i0OkckBYxQ3Nor3FedX1j4qKoBECE/+vb9OVLtNy7oUpGF1NJhpjMYcQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDhwalgyJ6m2Ufbd0d9R8QTZcJTnCGpUcFiL8kc6rpMwQIhAIUAgUZTI7uq08z80cFrEGF7XoJtR6ttuHFc5RsBjX2y"
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "3.8.0",
+			"_npmUser": {
+				"name": "aeschli",
+				"email": "martinae@microsoft.com"
+			},
+			"gitHead": "651347e1748564670a7f3cbb03db02bb9a7e36e2",
+			"typings": "./lib/main",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/jsonc-parser-0.1.2.tgz_1461078019469_0.15133634489029646",
+				"host": "packages-16-east.internal.npmjs.com"
+			},
+			"_shasum": "afcfcda6b8c00d583658a1906e715bdf3f10b872",
+			"_nodeVersion": "5.7.0",
+			"contributors": []
+		},
+		"0.2.1": {
+			"name": "jsonc-parser",
+			"description": "Scanner and parser for JSON with comments.",
+			"version": "0.2.1",
+			"author": {
+				"name": "Microsoft Corporation"
+			},
+			"homepage": "https://github.com/Microsoft/node-jsonc-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/Microsoft/node-jsonc-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/Microsoft/node-jsonc-parser/issues"
+			},
+			"main": "./lib/main.js",
+			"dependencies": {
+				"vscode-nls": "^1.0.4"
+			},
+			"devDependencies": {
+				"mocha": "^2.4.5",
+				"typescript": "^1.8.9"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "aeschli",
+					"email": "martinae@microsoft.com"
+				},
+				{
+					"name": "alexandrudima",
+					"email": "alexdima@microsoft.com"
+				},
+				{
+					"name": "aweinand",
+					"email": "aweinand@microsoft.com"
+				},
+				{
+					"name": "bpasero",
+					"email": "benjpas@microsoft.com"
+				},
+				{
+					"name": "chrisdias",
+					"email": "cdias@microsoft.com"
+				},
+				{
+					"name": "dbaeumer",
+					"email": "dirk.baeumer@gmail.com"
+				},
+				{
+					"name": "egamma",
+					"email": "egamma@microsoft.com"
+				},
+				{
+					"name": "isidor",
+					"email": "inikolic@microsoft.com"
+				},
+				{
+					"name": "joaomoreno.ms",
+					"email": "joao.moreno@microsoft.com"
+				},
+				{
+					"name": "jrieken",
+					"email": "jrieken@microsoft.com"
+				},
+				{
+					"name": "microsoft",
+					"email": "npmjs@microsoft.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tsc -p ./src && mocha",
+				"watch": "tsc -w -p ./src",
+				"compile": "tsc -p ./src",
+				"prepublish": "tsc -p ./src"
+			},
+			"lastModified": 0,
+			"_id": "jsonc-parser@0.2.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-0.2.1.tgz",
+				"shasum": "6accd942103100e759c93ba18044521dcb6f5257",
+				"integrity": "sha512-uqpJIkACZKm1jNzukJtDO/cj+4btphg8uKWv+/CK4X0rCWCrE+41wskBxIoFH+/q+lo8TetY8iGV/yPZIkMq3Q==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCq+oeUhon8SGrSE54CmShB/eybuxb3inaOXzezC/GaQQIgekwvxJLGZzD00inSDbMjrWSqrCR/eo3xSpf5rwEk1T8="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "3.6.0",
+			"_npmUser": {
+				"name": "aeschli",
+				"email": "martinae@microsoft.com"
+			},
+			"gitHead": "b217888068bc8d42fae0de3dda5066e9120bdbc0",
+			"typings": "./lib/main",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/jsonc-parser-0.2.1.tgz_1463559711514_0.550632341299206",
+				"host": "packages-16-east.internal.npmjs.com"
+			},
+			"_shasum": "6accd942103100e759c93ba18044521dcb6f5257",
+			"_nodeVersion": "5.7.1",
+			"contributors": []
+		},
+		"0.3.0": {
+			"name": "jsonc-parser",
+			"description": "Scanner and parser for JSON with comments.",
+			"version": "0.3.0",
+			"author": {
+				"name": "Microsoft Corporation"
+			},
+			"homepage": "https://github.com/Microsoft/node-jsonc-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/Microsoft/node-jsonc-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/Microsoft/node-jsonc-parser/issues"
+			},
+			"main": "./lib/main.js",
+			"dependencies": {
+				"vscode-nls": "^2.0.2"
+			},
+			"devDependencies": {
+				"mocha": "^2.4.5",
+				"typescript": "^2.1.5",
+				"@types/node": "^6.0.46",
+				"@types/mocha": "^2.2.32"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "aeschli",
+					"email": "martinae@microsoft.com"
+				},
+				{
+					"name": "alexandrudima",
+					"email": "alexdima@microsoft.com"
+				},
+				{
+					"name": "aweinand",
+					"email": "aweinand@microsoft.com"
+				},
+				{
+					"name": "bpasero",
+					"email": "benjpas@microsoft.com"
+				},
+				{
+					"name": "chrisdias",
+					"email": "cdias@microsoft.com"
+				},
+				{
+					"name": "dbaeumer",
+					"email": "dirk.baeumer@gmail.com"
+				},
+				{
+					"name": "egamma",
+					"email": "egamma@microsoft.com"
+				},
+				{
+					"name": "isidor",
+					"email": "inikolic@microsoft.com"
+				},
+				{
+					"name": "joaomoreno.ms",
+					"email": "joao.moreno@microsoft.com"
+				},
+				{
+					"name": "jrieken",
+					"email": "jrieken@microsoft.com"
+				},
+				{
+					"name": "microsoft",
+					"email": "npmjs@microsoft.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tsc -p ./src && mocha",
+				"watch": "tsc -w -p ./src",
+				"compile": "tsc -p ./src",
+				"prepublish": "tsc -p ./src"
+			},
+			"lastModified": 0,
+			"_id": "jsonc-parser@0.3.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-0.3.0.tgz",
+				"shasum": "bf456cfeefff7165be2837133d79f50c5cd54cfa",
+				"integrity": "sha512-RKeRnv3g35Eohcz5UG8844v1P7S3neWqiWH3dJvjy+bkSAevm+2c/8wYRJNS25tawkoWONN3Xw5pSLmCBDqUAg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQC1fWHPLQoaYNgfigXEavOn0shGO70ccG4eKvdIQI7fZAIhAK90+/gdIxosfhJ36NxlA0TIgip+OfdNKb2PAsNLGS9Z"
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "3.8.6",
+			"_npmUser": {
+				"name": "aeschli",
+				"email": "martinae@microsoft.com"
+			},
+			"gitHead": "7fa8e6751ec8c815ddf1ee06a73886eec79f7c9c",
+			"typings": "./lib/main",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/jsonc-parser-0.3.0.tgz_1484687982391_0.2303994451649487",
+				"host": "packages-18-east.internal.npmjs.com"
+			},
+			"_shasum": "bf456cfeefff7165be2837133d79f50c5cd54cfa",
+			"_nodeVersion": "5.12.0",
+			"contributors": []
+		},
+		"0.0.1": {
+			"name": "jsonc-parser",
+			"description": "Scanner and parser for JSON with comments.",
+			"version": "0.0.1",
+			"author": {
+				"name": "Microsoft Corporation"
+			},
+			"homepage": "https://github.com/Microsoft/node-jsonc-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/Microsoft/node-jsonc-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/Microsoft/node-jsonc-parser/issues"
+			},
+			"main": "./lib/main.js",
+			"dependencies": {
+				"vscode-nls": "^1.0.4"
+			},
+			"devDependencies": {
+				"mocha": "^2.4.5",
+				"typescript": "^1.8.9"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "aeschli",
+					"email": "martinae@microsoft.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"watch": "tsc -w -p ./src",
+				"compile": "tsc -p ./src",
+				"prepublish": "tsc -p ./src"
+			},
+			"lastModified": 0,
+			"_id": "jsonc-parser@0.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-0.0.1.tgz",
+				"shasum": "7eff45de8fa7215315903eb4b612fdc465259ca8",
+				"integrity": "sha512-GMHSStlerLu6bnGOCB3fAOnqzVtTvELI16xxrSABLKjgzqhAoJBP+JsotVWJ8GsH+NNzDW81Elta0SbYjc9C3w==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCyV2S7VcU7MSsmdzMb8y3mjCsjo7JFu5VOeAL8xV0VQgIgYieeE7WURM1AGQ6Fuhnb1qAhppfOCz+3FlS3cBygd2Q="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "3.8.0",
+			"_npmUser": {
+				"name": "aeschli",
+				"email": "martinae@microsoft.com"
+			},
+			"gitHead": "6c37cc3c2fbb50a00e3024a4e79d1dfc43a5524a",
+			"typings": "./lib/main",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/jsonc-parser-0.0.1.tgz_1460983653814_0.1593442289158702",
+				"host": "packages-16-east.internal.npmjs.com"
+			},
+			"_shasum": "7eff45de8fa7215315903eb4b612fdc465259ca8",
+			"_nodeVersion": "5.7.0",
+			"contributors": []
+		},
+		"0.1.0": {
+			"name": "jsonc-parser",
+			"description": "Scanner and parser for JSON with comments.",
+			"version": "0.1.0",
+			"author": {
+				"name": "Microsoft Corporation"
+			},
+			"homepage": "https://github.com/Microsoft/node-jsonc-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/Microsoft/node-jsonc-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/Microsoft/node-jsonc-parser/issues"
+			},
+			"main": "./lib/main.js",
+			"dependencies": {
+				"vscode-nls": "^1.0.4"
+			},
+			"devDependencies": {
+				"mocha": "^2.4.5",
+				"typescript": "^1.8.9"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "aeschli",
+					"email": "martinae@microsoft.com"
+				},
+				{
+					"name": "alexandrudima",
+					"email": "alexdima@microsoft.com"
+				},
+				{
+					"name": "aweinand",
+					"email": "aweinand@microsoft.com"
+				},
+				{
+					"name": "bpasero",
+					"email": "benjpas@microsoft.com"
+				},
+				{
+					"name": "chrisdias",
+					"email": "cdias@microsoft.com"
+				},
+				{
+					"name": "dbaeumer",
+					"email": "dirk.baeumer@gmail.com"
+				},
+				{
+					"name": "egamma",
+					"email": "egamma@microsoft.com"
+				},
+				{
+					"name": "isidor",
+					"email": "inikolic@microsoft.com"
+				},
+				{
+					"name": "joaomoreno.ms",
+					"email": "joao.moreno@microsoft.com"
+				},
+				{
+					"name": "jrieken",
+					"email": "jrieken@microsoft.com"
+				},
+				{
+					"name": "microsoft",
+					"email": "npmjs@microsoft.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tsc -p ./src && mocha",
+				"watch": "tsc -w -p ./src",
+				"compile": "tsc -p ./src",
+				"prepublish": "tsc -p ./src"
+			},
+			"lastModified": 0,
+			"_id": "jsonc-parser@0.1.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-0.1.0.tgz",
+				"shasum": "17476e87e2fa64470778892d0e98fc18e305ead1",
+				"integrity": "sha512-97g38XidhCnMLn+IgY+UmbaCS1f93u07BkTQW+Zt9epA/t7aSg3pUyu66dyF7f4zSx0qdY1OOY8U4DNmr5uIQA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDIL4umYb/2nXQATWAow+2ffpjL73zj2MmZ2jtZrozJbwIhANl9zTPUydr8mHQTqneTTWVVD14TsSKUUapnSdpEvbZ7"
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "3.8.0",
+			"_npmUser": {
+				"name": "aeschli",
+				"email": "martinae@microsoft.com"
+			},
+			"gitHead": "b4ee22c22346f70163953460e979206bf2bc7fda",
+			"typings": "./lib/main",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/jsonc-parser-0.1.0.tgz_1461061904208_0.2785438180435449",
+				"host": "packages-16-east.internal.npmjs.com"
+			},
+			"_shasum": "17476e87e2fa64470778892d0e98fc18e305ead1",
+			"_nodeVersion": "5.7.0",
+			"contributors": []
+		},
+		"3.0.0": {
+			"name": "jsonc-parser",
+			"description": "Scanner and parser for JSON with comments.",
+			"version": "3.0.0",
+			"author": {
+				"name": "Microsoft Corporation"
+			},
+			"homepage": "https://github.com/microsoft/node-jsonc-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/microsoft/node-jsonc-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/microsoft/node-jsonc-parser/issues"
+			},
+			"main": "./lib/umd/main.js",
+			"devDependencies": {
+				"mocha": "^8.2.1",
+				"eslint": "^7.13.0",
+				"rimraf": "^3.0.2",
+				"typescript": "^4.0.5",
+				"@types/node": "^10.12.12",
+				"@types/mocha": "^5.2.7",
+				"@typescript-eslint/parser": "^4.7.0",
+				"@typescript-eslint/eslint-plugin": "^4.7.0"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "microsoft",
+					"email": "npmjs@microsoft.com"
+				},
+				{
+					"name": "jrieken",
+					"email": "jrieken@microsoft.com"
+				},
+				{
+					"name": "egamma",
+					"email": "egamma@microsoft.com"
+				},
+				{
+					"name": "chrisdias",
+					"email": "cdias@microsoft.com"
+				},
+				{
+					"name": "alexandrudima",
+					"email": "alexdima@microsoft.com"
+				},
+				{
+					"name": "aeschli",
+					"email": "martinae@microsoft.com"
+				},
+				{
+					"name": "dbaeumer",
+					"email": "dirk.baeumer@gmail.com"
+				},
+				{
+					"name": "bpasero",
+					"email": "benjpas@microsoft.com"
+				},
+				{
+					"name": "isidor",
+					"email": "inikolic@microsoft.com"
+				},
+				{
+					"name": "joaomoreno.ms",
+					"email": "joao.moreno@microsoft.com"
+				},
+				{
+					"name": "aweinand",
+					"email": "aweinand@microsoft.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint src/**/*.ts",
+				"test": "npm run compile && mocha ./lib/umd/test",
+				"clean": "rimraf lib",
+				"watch": "tsc -w -p ./src",
+				"compile": "tsc -p ./src && npm run lint",
+				"preversion": "npm test",
+				"compile-esm": "tsc -p ./src/tsconfig.esm.json",
+				"postpublish": "node ./build/post-publish.js",
+				"postversion": "git push && git push --tags",
+				"prepublishOnly": "npm run clean && npm run compile-esm && npm run test && npm run remove-sourcemap-refs",
+				"remove-sourcemap-refs": "node ./build/remove-sourcemap-refs.js"
+			},
+			"lastModified": 0,
+			"_id": "jsonc-parser@3.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-3.0.0.tgz",
+				"shasum": "abdd785701c7e7eaca8a9ec8cf070ca51a745a22",
+				"integrity": "sha512-fQzRfAbIBnR0IQvftw9FJveWiHp72Fg20giDrHz6TdfB12UH/uue0D3hm57UB5KgAVuniLMCaS8P1IMj9NR7cA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIEsVWRj/X0olwitqPklE0Jh4o7GTgixlBT+J8cd/8tsGAiEA5QmsLZNLD11FBVTeV7aXLJXhI6TueVsHvJiisKqAC4Y="
+					}
+				]
+			},
+			"_npmVersion": "6.9.0",
+			"_npmUser": {
+				"name": "aeschli",
+				"email": "martinae@microsoft.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "d9b2655bbe4730a27e405063896af94f17d5b22e",
+			"typings": "./lib/umd/main",
+			"module": "./lib/esm/main.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/jsonc-parser_3.0.0_1605281682641_0.19150569274460483",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "12.4.0",
+			"contributors": []
+		},
+		"3.1.0": {
+			"name": "jsonc-parser",
+			"description": "Scanner and parser for JSON with comments.",
+			"version": "3.1.0",
+			"author": {
+				"name": "Microsoft Corporation"
+			},
+			"homepage": "https://github.com/microsoft/node-jsonc-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/microsoft/node-jsonc-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/microsoft/node-jsonc-parser/issues"
+			},
+			"main": "./lib/umd/main.js",
+			"devDependencies": {
+				"mocha": "^10.0.0",
+				"eslint": "^8.19.0",
+				"rimraf": "^3.0.2",
+				"typescript": "^4.7.4",
+				"@types/node": "^16.x",
+				"@types/mocha": "^9.1.1",
+				"@typescript-eslint/parser": "^5.30.5",
+				"@typescript-eslint/eslint-plugin": "^5.30.5"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "jrieken",
+					"email": "jrieken@microsoft.com"
+				},
+				{
+					"name": "egamma",
+					"email": "egamma@microsoft.com"
+				},
+				{
+					"name": "chrisdias",
+					"email": "cdias@microsoft.com"
+				},
+				{
+					"name": "alexandrudima",
+					"email": "alexdima@microsoft.com"
+				},
+				{
+					"name": "aeschli",
+					"email": "martinae@microsoft.com"
+				},
+				{
+					"name": "dbaeumer",
+					"email": "dirk.baeumer@gmail.com"
+				},
+				{
+					"name": "bpasero",
+					"email": "benjpas@microsoft.com"
+				},
+				{
+					"name": "isidor",
+					"email": "inikolic@microsoft.com"
+				},
+				{
+					"name": "joaomoreno.ms",
+					"email": "joao.moreno@microsoft.com"
+				},
+				{
+					"name": "aweinand",
+					"email": "aweinand@microsoft.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint src/**/*.ts",
+				"test": "npm run compile && mocha ./lib/umd/test",
+				"clean": "rimraf lib",
+				"watch": "tsc -w -p ./src",
+				"compile": "tsc -p ./src && npm run lint",
+				"preversion": "npm test",
+				"compile-esm": "tsc -p ./src/tsconfig.esm.json",
+				"postpublish": "node ./build/post-publish.js",
+				"postversion": "git push && git push --tags",
+				"prepublishOnly": "npm run clean && npm run compile-esm && npm run test && npm run remove-sourcemap-refs",
+				"remove-sourcemap-refs": "node ./build/remove-sourcemap-refs.js"
+			},
+			"lastModified": 0,
+			"_id": "jsonc-parser@3.1.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-3.1.0.tgz",
+				"shasum": "73b8f0e5c940b83d03476bc2e51a20ef0932615d",
+				"integrity": "sha512-DRf0QjnNeCUds3xTjKlQQ3DpJD51GvDjJfnxUVWg6PZTo2otSm+slzNAxU/35hF8/oJIKoG9slq30JYOsF2azg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIHSyzziG2zYWqJA1nIxTiB6cVUa176lpDfuhZmA2Ji1DAiEA6P6ppbAL8D3E0kN63xamMMAaz6cOalaHJ/6eP73d87w="
+					}
+				]
+			},
+			"_npmVersion": "8.11.0",
+			"_npmUser": {
+				"name": "aeschli",
+				"email": "martinae@microsoft.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "33f744b7e51a8f254f9b09cb2544ef3432e930aa",
+			"typings": "./lib/umd/main.d.ts",
+			"module": "./lib/esm/main.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/jsonc-parser_3.1.0_1657570984012_0.8953405596145101",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "16.15.1",
+			"contributors": []
+		},
+		"3.2.0": {
+			"name": "jsonc-parser",
+			"description": "Scanner and parser for JSON with comments.",
+			"version": "3.2.0",
+			"author": {
+				"name": "Microsoft Corporation"
+			},
+			"homepage": "https://github.com/microsoft/node-jsonc-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/microsoft/node-jsonc-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/microsoft/node-jsonc-parser/issues"
+			},
+			"main": "./lib/umd/main.js",
+			"devDependencies": {
+				"mocha": "^10.0.0",
+				"eslint": "^8.23.0",
+				"rimraf": "^3.0.2",
+				"typescript": "^4.8.2",
+				"@types/node": "^16.x",
+				"@types/mocha": "^9.1.1",
+				"@typescript-eslint/parser": "^5.36.0",
+				"@typescript-eslint/eslint-plugin": "^5.36.0"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "jrieken",
+					"email": "jrieken@microsoft.com"
+				},
+				{
+					"name": "egamma",
+					"email": "egamma@microsoft.com"
+				},
+				{
+					"name": "chrisdias",
+					"email": "cdias@microsoft.com"
+				},
+				{
+					"name": "alexandrudima",
+					"email": "alexdima@microsoft.com"
+				},
+				{
+					"name": "aeschli",
+					"email": "martinae@microsoft.com"
+				},
+				{
+					"name": "dbaeumer",
+					"email": "dirk.baeumer@gmail.com"
+				},
+				{
+					"name": "bpasero",
+					"email": "benjpas@microsoft.com"
+				},
+				{
+					"name": "isidor",
+					"email": "inikolic@microsoft.com"
+				},
+				{
+					"name": "joaomoreno.ms",
+					"email": "joao.moreno@microsoft.com"
+				},
+				{
+					"name": "aweinand",
+					"email": "aweinand@microsoft.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint src/**/*.ts",
+				"test": "npm run compile && mocha ./lib/umd/test",
+				"clean": "rimraf lib",
+				"watch": "tsc -w -p ./src",
+				"compile": "tsc -p ./src && npm run lint",
+				"preversion": "npm test",
+				"compile-esm": "tsc -p ./src/tsconfig.esm.json",
+				"postpublish": "node ./build/post-publish.js",
+				"postversion": "git push && git push --tags",
+				"prepublishOnly": "npm run clean && npm run compile-esm && npm run test && npm run remove-sourcemap-refs",
+				"remove-sourcemap-refs": "node ./build/remove-sourcemap-refs.js"
+			},
+			"lastModified": 0,
+			"_id": "jsonc-parser@3.2.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-3.2.0.tgz",
+				"shasum": "31ff3f4c2b9793f89c67212627c51c6394f88e76",
+				"integrity": "sha512-gfFQZrcTc8CnKXp6Y4/CBT3fTc0OVuDofpre4aEeEpSBPV5X5v4+Vmx+8snU7RLPrNHPKSgLxGo9YuQzz20o+w==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDoQO5CtREEjWXKbS5wJDT1LzSh/ANqxASDFlzk8I/i0QIhAP8o3R8PQUxEn3HBEwdJJKYVDL83cWpiuV+9BZSIdcam"
+					}
+				]
+			},
+			"_npmVersion": "8.11.0",
+			"_npmUser": {
+				"name": "aeschli",
+				"email": "martinae@microsoft.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "852e855fdf43a8badff9f129b017ea782947575d",
+			"typings": "./lib/umd/main.d.ts",
+			"module": "./lib/esm/main.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/jsonc-parser_3.2.0_1661858817742_0.49628818108643835",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "16.15.1",
+			"contributors": []
+		},
+		"3.2.1": {
+			"name": "jsonc-parser",
+			"description": "Scanner and parser for JSON with comments.",
+			"version": "3.2.1",
+			"author": {
+				"name": "Microsoft Corporation"
+			},
+			"homepage": "https://github.com/microsoft/node-jsonc-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/microsoft/node-jsonc-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/microsoft/node-jsonc-parser/issues"
+			},
+			"main": "./lib/umd/main.js",
+			"devDependencies": {
+				"mocha": "^10.2.0",
+				"eslint": "^8.56.0",
+				"rimraf": "^5.0.5",
+				"typescript": "^5.3.3",
+				"@types/node": "^16.x",
+				"@types/mocha": "^10.0.6",
+				"@typescript-eslint/parser": "^6.19.1",
+				"@typescript-eslint/eslint-plugin": "^6.19.1"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "alexandrudima",
+					"email": "alexdima@microsoft.com"
+				},
+				{
+					"name": "joaomoreno.ms",
+					"email": "joao.moreno@microsoft.com"
+				},
+				{
+					"name": "kaimaetzel",
+					"email": "kamaet@microsoft.com"
+				},
+				{
+					"name": "sbatten",
+					"email": "steven.m.batten@outlook.com"
+				},
+				{
+					"name": "microsoft1es",
+					"email": "npmjs@microsoft.com"
+				},
+				{
+					"name": "lszomoru",
+					"email": "lszomoru@microsoft.com"
+				},
+				{
+					"name": "vscode-bot",
+					"email": "vscode-bot-npm@microsoft.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint src/**/*.ts",
+				"test": "npm run compile && mocha ./lib/umd/test",
+				"clean": "rimraf lib",
+				"watch": "tsc -w -p ./src",
+				"compile": "tsc -p ./src && npm run lint",
+				"prepack": "npm run clean && npm run compile-esm && npm run test && npm run remove-sourcemap-refs",
+				"compile-esm": "tsc -p ./src/tsconfig.esm.json",
+				"remove-sourcemap-refs": "node ./build/remove-sourcemap-refs.js"
+			},
+			"lastModified": 0,
+			"_id": "jsonc-parser@3.2.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-3.2.1.tgz",
+				"shasum": "031904571ccf929d7670ee8c547545081cb37f1a",
+				"integrity": "sha512-AilxAyFOAcK5wA1+LeaySVBrHsGQvUFCDWXKpZjzaL0PqW+xfBOttn8GNtWKFWqneyMZj41MWF9Kl6iPWLwgOA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQCKvl4LkOczDTgQo3UhVz59y5n1aAZ6yd+9vuNu697B2AIhANBuB/Uee6Fbx9H7Mgp5PinHjVzkfylG7I1FfL1h1P30"
+					}
+				]
+			},
+			"_from": "file:jsonc-parser-3.2.1.tgz",
+			"_npmVersion": "9.6.7",
+			"_npmUser": {
+				"name": "vscode-bot",
+				"email": "vscode-bot-npm@microsoft.com"
+			},
+			"_hasShrinkwrap": false,
+			"typings": "./lib/umd/main.d.ts",
+			"module": "./lib/esm/main.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/jsonc-parser_3.2.1_1705958639319_0.6996835668356207",
+				"host": "s3://npm-registry-packages"
+			},
+			"_resolved": "/mnt/vss/_work/1/jsonc-parser/jsonc-parser-3.2.1.tgz",
+			"_integrity": "sha512-AilxAyFOAcK5wA1+LeaySVBrHsGQvUFCDWXKpZjzaL0PqW+xfBOttn8GNtWKFWqneyMZj41MWF9Kl6iPWLwgOA==",
+			"_nodeVersion": "18.17.1",
+			"contributors": []
+		},
+		"3.3.0": {
+			"name": "jsonc-parser",
+			"description": "Scanner and parser for JSON with comments.",
+			"version": "3.3.0",
+			"author": {
+				"name": "Microsoft Corporation"
+			},
+			"homepage": "https://github.com/microsoft/node-jsonc-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/microsoft/node-jsonc-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/microsoft/node-jsonc-parser/issues"
+			},
+			"main": "./lib/umd/main.js",
+			"devDependencies": {
+				"mocha": "^10.4.0",
+				"eslint": "^8.57.0",
+				"rimraf": "^5.0.7",
+				"typescript": "^5.4.2",
+				"@types/node": "^18.x",
+				"@types/mocha": "^10.0.7",
+				"@typescript-eslint/parser": "^7.13.1",
+				"@typescript-eslint/eslint-plugin": "^7.13.1"
+			},
+			"license": "MIT",
+			"directories": {},
+			"scripts": {
+				"lint": "eslint src/**/*.ts",
+				"test": "npm run compile && mocha ./lib/umd/test",
+				"clean": "rimraf lib",
+				"watch": "tsc -w -p ./src",
+				"compile": "tsc -p ./src && npm run lint",
+				"prepack": "npm run clean && npm run compile-esm && npm run test && npm run remove-sourcemap-refs",
+				"compile-esm": "tsc -p ./src/tsconfig.esm.json",
+				"remove-sourcemap-refs": "node ./build/remove-sourcemap-refs.js"
+			},
+			"lastModified": 0,
+			"_id": "jsonc-parser@3.3.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-3.3.0.tgz",
+				"shasum": "030d182672c8ffc2805db95467c83ffc0b033d9d",
+				"integrity": "sha512-RK1Xb5alM78sdXpB2hqqK7jxAE5jTRH05GvUiLWqh7Vbp6OPHuJYlsAMRUDYNYJTAQgkmhHgkdwOEknxwP4ojQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIHs56Q2uZT7ZniAzM2t1ThhTHpz+DySY0vqrgaVgJTFVAiEArIhhos9pREppTzdr1OsuxZM5TBAPFyg8TkmHqCjixsM="
+					}
+				]
+			},
+			"_from": "file:jsonc-parser-3.3.0.tgz",
+			"_npmVersion": "10.7.0",
+			"_npmUser": {
+				"name": "vscode-bot",
+				"email": "vscode-bot-npm@microsoft.com"
+			},
+			"_hasShrinkwrap": false,
+			"typings": "./lib/umd/main.d.ts",
+			"exports": {
+				"types": "./lib/umd/main.d.ts",
+				"import": "./lib/esm/main.js",
+				"browser": "./lib/esm/main.js",
+				"require": "./lib/umd/main.js"
+			},
+			"module": "./lib/esm/main.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/jsonc-parser_3.3.0_1719243796639_0.46909094822554276",
+				"host": "s3://npm-registry-packages"
+			},
+			"_resolved": "/mnt/vss/_work/1/jsonc-parser/jsonc-parser-3.3.0.tgz",
+			"_integrity": "sha512-RK1Xb5alM78sdXpB2hqqK7jxAE5jTRH05GvUiLWqh7Vbp6OPHuJYlsAMRUDYNYJTAQgkmhHgkdwOEknxwP4ojQ==",
+			"_nodeVersion": "20.14.0",
+			"contributors": []
+		},
+		"3.3.1": {
+			"name": "jsonc-parser",
+			"description": "Scanner and parser for JSON with comments.",
+			"version": "3.3.1",
+			"author": {
+				"name": "Microsoft Corporation"
+			},
+			"homepage": "https://github.com/microsoft/node-jsonc-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/microsoft/node-jsonc-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/microsoft/node-jsonc-parser/issues"
+			},
+			"main": "./lib/umd/main.js",
+			"devDependencies": {
+				"mocha": "^10.4.0",
+				"eslint": "^8.57.0",
+				"rimraf": "^5.0.7",
+				"typescript": "^5.4.2",
+				"@types/node": "^18.x",
+				"@types/mocha": "^10.0.7",
+				"@typescript-eslint/parser": "^7.13.1",
+				"@typescript-eslint/eslint-plugin": "^7.13.1"
+			},
+			"license": "MIT",
+			"directories": {},
+			"scripts": {
+				"lint": "eslint src/**/*.ts",
+				"test": "npm run compile && mocha ./lib/umd/test",
+				"clean": "rimraf lib",
+				"watch": "tsc -w -p ./src",
+				"compile": "tsc -p ./src && npm run lint",
+				"prepack": "npm run clean && npm run compile-esm && npm run test && npm run remove-sourcemap-refs",
+				"compile-esm": "tsc -p ./src/tsconfig.esm.json",
+				"remove-sourcemap-refs": "node ./build/remove-sourcemap-refs.js"
+			},
+			"lastModified": 0,
+			"_id": "jsonc-parser@3.3.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-3.3.1.tgz",
+				"shasum": "f2a524b4f7fd11e3d791e559977ad60b98b798b4",
+				"integrity": "sha512-HUgH65KyejrUFPvHFPbqOY0rsFip3Bo5wb4ngvdi1EpCYWUQDC5V+Y7mZws+DLkr4M//zQJoanu1SP+87Dv1oQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIDSbkjGtpapd1HAX9+ZiZbtgDMhqZPXHT6KwmEFPUlKRAiEA785PDON6DayZiilBUTVCGgyL/ooKHwX1ocr/gLAsN3k="
+					}
+				]
+			},
+			"_from": "file:jsonc-parser-3.3.1.tgz",
+			"_npmVersion": "10.7.0",
+			"_npmUser": {
+				"name": "vscode-bot",
+				"email": "vscode-bot-npm@microsoft.com"
+			},
+			"_hasShrinkwrap": false,
+			"typings": "./lib/umd/main.d.ts",
+			"module": "./lib/esm/main.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/jsonc-parser_3.3.1_1719263565242_0.16147859681932708",
+				"host": "s3://npm-registry-packages"
+			},
+			"_resolved": "/mnt/vss/_work/1/jsonc-parser/jsonc-parser-3.3.1.tgz",
+			"_integrity": "sha512-HUgH65KyejrUFPvHFPbqOY0rsFip3Bo5wb4ngvdi1EpCYWUQDC5V+Y7mZws+DLkr4M//zQJoanu1SP+87Dv1oQ==",
+			"_nodeVersion": "20.14.0",
+			"contributors": []
+		},
+		"2.0.0": {
+			"name": "jsonc-parser",
+			"description": "Scanner and parser for JSON with comments.",
+			"version": "2.0.0",
+			"author": {
+				"name": "Microsoft Corporation"
+			},
+			"homepage": "https://github.com/Microsoft/node-jsonc-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/Microsoft/node-jsonc-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/Microsoft/node-jsonc-parser/issues"
+			},
+			"main": "./lib/umd/main.js",
+			"devDependencies": {
+				"mocha": "^5.0.4",
+				"rimraf": "^2.6.2",
+				"tslint": "^5.9.1",
+				"typescript": "^2.8.1",
+				"@types/node": "^7.0.43",
+				"@types/mocha": "^2.2.32"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "aeschli",
+					"email": "martinae@microsoft.com"
+				},
+				{
+					"name": "alexandrudima",
+					"email": "alexdima@microsoft.com"
+				},
+				{
+					"name": "aweinand",
+					"email": "aweinand@microsoft.com"
+				},
+				{
+					"name": "bpasero",
+					"email": "benjpas@microsoft.com"
+				},
+				{
+					"name": "chrisdias",
+					"email": "cdias@microsoft.com"
+				},
+				{
+					"name": "dbaeumer",
+					"email": "dirk.baeumer@gmail.com"
+				},
+				{
+					"name": "egamma",
+					"email": "egamma@microsoft.com"
+				},
+				{
+					"name": "isidor",
+					"email": "inikolic@microsoft.com"
+				},
+				{
+					"name": "joaomoreno.ms",
+					"email": "joao.moreno@microsoft.com"
+				},
+				{
+					"name": "jrieken",
+					"email": "jrieken@microsoft.com"
+				},
+				{
+					"name": "microsoft",
+					"email": "npmjs@microsoft.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run compile && mocha",
+				"clean": "rimraf lib",
+				"watch": "tsc -w -p ./src",
+				"compile": "tsc -p ./src",
+				"preversion": "npm test",
+				"compile-esm": "tsc -p ./src/tsconfig.esm.json",
+				"postpublish": "node ./build/post-publish.js",
+				"postversion": "git push && git push --tags",
+				"prepublishOnly": "npm run clean && npm run compile-esm && npm run test"
+			},
+			"lastModified": 0,
+			"_id": "jsonc-parser@2.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-2.0.0.tgz",
+				"shasum": "62ff087a7e753875febf3c55f1fc0cd737c36b5a",
+				"integrity": "sha512-gYk8VcFDwky0AjrKeJSWgCm/lYGteP9hszGWtgg67Elz4owvhJF9qATjuIRAk5jgBMGM65MPAc+I4RTeoqoykA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIE7ptuhm/4ua/rbKe8NV0V7ZYrkIdcUrKi+bLHVMv21HAiEAjVw/FNFMGOaSFEnu8ZZVKdk3Q6oPgSmvwm+FO/U5yjo="
+					}
+				]
+			},
+			"_npmVersion": "5.5.1",
+			"_npmUser": {
+				"name": "aeschli",
+				"email": "martinae@microsoft.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "2f674265fb1cfd265bfc55258d155f960272ae55",
+			"typings": "./lib/umd/main",
+			"module": "./lib/esm/main.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/jsonc-parser_2.0.0_1523567607539_0.2587846255307127",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "8.9.1",
+			"contributors": []
+		},
+		"2.0.1": {
+			"name": "jsonc-parser",
+			"description": "Scanner and parser for JSON with comments.",
+			"version": "2.0.1",
+			"author": {
+				"name": "Microsoft Corporation"
+			},
+			"homepage": "https://github.com/Microsoft/node-jsonc-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/Microsoft/node-jsonc-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/Microsoft/node-jsonc-parser/issues"
+			},
+			"main": "./lib/umd/main.js",
+			"devDependencies": {
+				"mocha": "^5.0.4",
+				"rimraf": "^2.6.2",
+				"tslint": "^5.9.1",
+				"typescript": "^2.8.1",
+				"@types/node": "^7.0.43",
+				"@types/mocha": "^2.2.32"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "aeschli",
+					"email": "martinae@microsoft.com"
+				},
+				{
+					"name": "alexandrudima",
+					"email": "alexdima@microsoft.com"
+				},
+				{
+					"name": "aweinand",
+					"email": "aweinand@microsoft.com"
+				},
+				{
+					"name": "bpasero",
+					"email": "benjpas@microsoft.com"
+				},
+				{
+					"name": "chrisdias",
+					"email": "cdias@microsoft.com"
+				},
+				{
+					"name": "dbaeumer",
+					"email": "dirk.baeumer@gmail.com"
+				},
+				{
+					"name": "egamma",
+					"email": "egamma@microsoft.com"
+				},
+				{
+					"name": "isidor",
+					"email": "inikolic@microsoft.com"
+				},
+				{
+					"name": "joaomoreno.ms",
+					"email": "joao.moreno@microsoft.com"
+				},
+				{
+					"name": "jrieken",
+					"email": "jrieken@microsoft.com"
+				},
+				{
+					"name": "microsoft",
+					"email": "npmjs@microsoft.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run compile && mocha",
+				"clean": "rimraf lib",
+				"watch": "tsc -w -p ./src",
+				"compile": "tsc -p ./src",
+				"preversion": "npm test",
+				"compile-esm": "tsc -p ./src/tsconfig.esm.json",
+				"postpublish": "node ./build/post-publish.js",
+				"postversion": "git push && git push --tags",
+				"prepublishOnly": "npm run clean && npm run compile-esm && npm run test"
+			},
+			"lastModified": 0,
+			"_id": "jsonc-parser@2.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-2.0.1.tgz",
+				"shasum": "9d23cd2709714fff508a1a6679d82135bee1ae60",
+				"integrity": "sha512-9w/QyN9qF1dTlffzkmyITa6qAYt6sDArlVZqaP+CXnRh66V73wImQGG8GIBkuas0XLAxddWEWYQ8PPFoK5KNQA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDYUmrz1SXErFRV5rpjzwurtuWe0kIsUyKAwT0zFOzHtAIgcfWI8YZjQXFj58gAEF5LkqOeC/mRso+R5l2q40e9QEg="
+					}
+				]
+			},
+			"_npmVersion": "5.5.1",
+			"_npmUser": {
+				"name": "aeschli",
+				"email": "martinae@microsoft.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "5d3db883d94c43d084c68161758ad5d26e87cdb4",
+			"typings": "./lib/umd/main",
+			"module": "./lib/esm/main.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/jsonc-parser_2.0.1_1529932517235_0.8468730976943415",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "8.9.1",
+			"contributors": []
+		},
+		"2.1.0": {
+			"name": "jsonc-parser",
+			"description": "Scanner and parser for JSON with comments.",
+			"version": "2.1.0",
+			"author": {
+				"name": "Microsoft Corporation"
+			},
+			"homepage": "https://github.com/Microsoft/node-jsonc-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/Microsoft/node-jsonc-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/Microsoft/node-jsonc-parser/issues"
+			},
+			"main": "./lib/umd/main.js",
+			"devDependencies": {
+				"mocha": "^6.0.2",
+				"rimraf": "^2.6.3",
+				"tslint": "^5.14.0",
+				"typescript": "^3.3.4000",
+				"@types/node": "^7.0.43",
+				"@types/mocha": "^2.2.32"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "aeschli",
+					"email": "martinae@microsoft.com"
+				},
+				{
+					"name": "alexandrudima",
+					"email": "alexdima@microsoft.com"
+				},
+				{
+					"name": "aweinand",
+					"email": "aweinand@microsoft.com"
+				},
+				{
+					"name": "bpasero",
+					"email": "benjpas@microsoft.com"
+				},
+				{
+					"name": "chrisdias",
+					"email": "cdias@microsoft.com"
+				},
+				{
+					"name": "dbaeumer",
+					"email": "dirk.baeumer@gmail.com"
+				},
+				{
+					"name": "egamma",
+					"email": "egamma@microsoft.com"
+				},
+				{
+					"name": "isidor",
+					"email": "inikolic@microsoft.com"
+				},
+				{
+					"name": "joaomoreno.ms",
+					"email": "joao.moreno@microsoft.com"
+				},
+				{
+					"name": "jrieken",
+					"email": "jrieken@microsoft.com"
+				},
+				{
+					"name": "microsoft",
+					"email": "npmjs@microsoft.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run compile && mocha",
+				"clean": "rimraf lib",
+				"watch": "tsc -w -p ./src",
+				"compile": "tsc -p ./src",
+				"preversion": "npm test",
+				"compile-esm": "tsc -p ./src/tsconfig.esm.json",
+				"postpublish": "node ./build/post-publish.js",
+				"postversion": "git push && git push --tags",
+				"prepublishOnly": "npm run clean && npm run compile-esm && npm run test"
+			},
+			"lastModified": 0,
+			"_id": "jsonc-parser@2.1.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-2.1.0.tgz",
+				"shasum": "eb0d0c7a3c33048524ce3574c57c7278fb2f1bf3",
+				"integrity": "sha512-n9GrT8rrr2fhvBbANa1g+xFmgGK5X91KFeDwlKQ3+SJfmH5+tKv/M/kahx/TXOMflfWHKGKqKyfHQaLKTNzJ6w==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDkta5EM66umrRtXFxbEdy1ZdZX5WYJO4VGQOpRGY0ASwIgCLT9m3luMmC4Kzq1kZNKfWsRretfNuqjW9z6ZFKOTq8="
+					}
+				]
+			},
+			"_npmVersion": "6.4.1",
+			"_npmUser": {
+				"name": "aeschli",
+				"email": "martinae@microsoft.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "a3674142134945fb7109c91a6be088b5a899b6e6",
+			"typings": "./lib/umd/main",
+			"module": "./lib/esm/main.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/jsonc-parser_2.1.0_1553869395509_0.5619601313477678",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "10.15.1",
+			"contributors": []
+		},
+		"2.0.0-next.1": {
+			"name": "jsonc-parser",
+			"description": "Scanner and parser for JSON with comments.",
+			"version": "2.0.0-next.1",
+			"author": {
+				"name": "Microsoft Corporation"
+			},
+			"homepage": "https://github.com/Microsoft/node-jsonc-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/Microsoft/node-jsonc-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/Microsoft/node-jsonc-parser/issues"
+			},
+			"main": "./lib/umd/main.js",
+			"devDependencies": {
+				"mocha": "^5.0.4",
+				"rimraf": "^2.6.2",
+				"tslint": "^5.9.1",
+				"typescript": "^2.7.2",
+				"@types/node": "^7.0.43",
+				"@types/mocha": "^2.2.32"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "aeschli",
+					"email": "martinae@microsoft.com"
+				},
+				{
+					"name": "alexandrudima",
+					"email": "alexdima@microsoft.com"
+				},
+				{
+					"name": "aweinand",
+					"email": "aweinand@microsoft.com"
+				},
+				{
+					"name": "bpasero",
+					"email": "benjpas@microsoft.com"
+				},
+				{
+					"name": "chrisdias",
+					"email": "cdias@microsoft.com"
+				},
+				{
+					"name": "dbaeumer",
+					"email": "dirk.baeumer@gmail.com"
+				},
+				{
+					"name": "egamma",
+					"email": "egamma@microsoft.com"
+				},
+				{
+					"name": "isidor",
+					"email": "inikolic@microsoft.com"
+				},
+				{
+					"name": "joaomoreno.ms",
+					"email": "joao.moreno@microsoft.com"
+				},
+				{
+					"name": "jrieken",
+					"email": "jrieken@microsoft.com"
+				},
+				{
+					"name": "microsoft",
+					"email": "npmjs@microsoft.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run compile && mocha",
+				"clean": "rimraf lib",
+				"watch": "tsc -w -p ./src",
+				"compile": "tsc -p ./src",
+				"preversion": "npm test",
+				"compile-esm": "tsc -p ./src/tsconfig.esm.json",
+				"postversion": "git push && git push --tags",
+				"prepublishOnly": "npm run clean && npm run compile-esm && npm run test"
+			},
+			"lastModified": 0,
+			"_id": "jsonc-parser@2.0.0-next.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-2.0.0-next.1.tgz",
+				"shasum": "445a824f765a96abfbb286d759a9b1d226b18088",
+				"integrity": "sha512-7BRgtZ0wPCWOUz8oD1m0qo9KKWq8LF1R6Ko38ofbTG3PLa84ucKLIkC/8PLvjFBInfqRo+ah5aazBLscsLTd2Q==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIEVJT8yb9u26oFC9jjl8ZgZj4x6I4vY0gvyjaq0Nm4TAAiAeUfE8hWMLyj0ZyQeU63YhCzjgJ/tNfq6lmAXFSoD1GQ=="
+					}
+				]
+			},
+			"_npmVersion": "5.5.1",
+			"_npmUser": {
+				"name": "aeschli",
+				"email": "martinae@microsoft.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "a65f945f66d46ba6546f01289f74bebfea2044f3",
+			"typings": "./lib/umd/main",
+			"module": "./lib/esm/main.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/jsonc-parser_2.0.0-next.1_1520515883996_0.3197754837243043",
+				"host": "s3://npm-registry-packages"
+			},
+			"readmeFilename": "README.md",
+			"_nodeVersion": "8.9.1",
+			"contributors": []
+		},
+		"2.3.1": {
+			"name": "jsonc-parser",
+			"description": "Scanner and parser for JSON with comments.",
+			"version": "2.3.1",
+			"author": {
+				"name": "Microsoft Corporation"
+			},
+			"homepage": "https://github.com/microsoft/node-jsonc-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/microsoft/node-jsonc-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/microsoft/node-jsonc-parser/issues"
+			},
+			"main": "./lib/umd/main.js",
+			"devDependencies": {
+				"mocha": "^8.1.3",
+				"eslint": "^7.9.0",
+				"rimraf": "^3.0.2",
+				"typescript": "^4.0.2",
+				"@types/node": "^10.12.12",
+				"@types/mocha": "^5.2.7",
+				"@typescript-eslint/parser": "^4.1.1",
+				"@typescript-eslint/eslint-plugin": "^4.1.1"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "microsoft",
+					"email": "npmjs@microsoft.com"
+				},
+				{
+					"name": "jrieken",
+					"email": "jrieken@microsoft.com"
+				},
+				{
+					"name": "egamma",
+					"email": "egamma@microsoft.com"
+				},
+				{
+					"name": "chrisdias",
+					"email": "cdias@microsoft.com"
+				},
+				{
+					"name": "alexandrudima",
+					"email": "alexdima@microsoft.com"
+				},
+				{
+					"name": "aeschli",
+					"email": "martinae@microsoft.com"
+				},
+				{
+					"name": "dbaeumer",
+					"email": "dirk.baeumer@gmail.com"
+				},
+				{
+					"name": "bpasero",
+					"email": "benjpas@microsoft.com"
+				},
+				{
+					"name": "isidor",
+					"email": "inikolic@microsoft.com"
+				},
+				{
+					"name": "joaomoreno.ms",
+					"email": "joao.moreno@microsoft.com"
+				},
+				{
+					"name": "aweinand",
+					"email": "aweinand@microsoft.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint src/**/*.ts",
+				"test": "npm run compile && mocha ./lib/umd/test",
+				"clean": "rimraf lib",
+				"watch": "tsc -w -p ./src",
+				"compile": "tsc -p ./src && npm run lint",
+				"preversion": "npm test",
+				"compile-esm": "tsc -p ./src/tsconfig.esm.json",
+				"postpublish": "node ./build/post-publish.js",
+				"postversion": "git push && git push --tags",
+				"prepublishOnly": "npm run clean && npm run compile-esm && npm run test && npm run remove-sourcemap-refs",
+				"remove-sourcemap-refs": "node ./build/remove-sourcemap-refs.js"
+			},
+			"lastModified": 0,
+			"_id": "jsonc-parser@2.3.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-2.3.1.tgz",
+				"shasum": "59549150b133f2efacca48fe9ce1ec0659af2342",
+				"integrity": "sha512-H8jvkz1O50L3dMZCsLqiuB2tA7muqbSg1AtGEkN0leAqGjsUzDJir3Zwr02BhqdcITPg3ei3mZ+HjMocAknhhg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIAFzIjwHlIo4HML/Ipv/7J/nG7bp8ASnsEGKQ8Ph7R9sAiEA7lNz53IFGvQlAXcxWyNqszqBPmAWCOJ2AIPVGlIzYOc="
+					}
+				]
+			},
+			"_npmVersion": "6.9.0",
+			"_npmUser": {
+				"name": "aeschli",
+				"email": "martinae@microsoft.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "4b182b7a6ed4a096041113929929e006620f806b",
+			"typings": "./lib/umd/main",
+			"module": "./lib/esm/main.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/jsonc-parser_2.3.1_1600242750975_0.5519129731729977",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "12.4.0",
+			"contributors": []
+		},
+		"2.0.2": {
+			"name": "jsonc-parser",
+			"description": "Scanner and parser for JSON with comments.",
+			"version": "2.0.2",
+			"author": {
+				"name": "Microsoft Corporation"
+			},
+			"homepage": "https://github.com/Microsoft/node-jsonc-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/Microsoft/node-jsonc-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/Microsoft/node-jsonc-parser/issues"
+			},
+			"main": "./lib/umd/main.js",
+			"devDependencies": {
+				"mocha": "^5.0.4",
+				"rimraf": "^2.6.2",
+				"tslint": "^5.9.1",
+				"typescript": "^2.8.1",
+				"@types/node": "^7.0.43",
+				"@types/mocha": "^2.2.32"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "aeschli",
+					"email": "martinae@microsoft.com"
+				},
+				{
+					"name": "alexandrudima",
+					"email": "alexdima@microsoft.com"
+				},
+				{
+					"name": "aweinand",
+					"email": "aweinand@microsoft.com"
+				},
+				{
+					"name": "bpasero",
+					"email": "benjpas@microsoft.com"
+				},
+				{
+					"name": "chrisdias",
+					"email": "cdias@microsoft.com"
+				},
+				{
+					"name": "dbaeumer",
+					"email": "dirk.baeumer@gmail.com"
+				},
+				{
+					"name": "egamma",
+					"email": "egamma@microsoft.com"
+				},
+				{
+					"name": "isidor",
+					"email": "inikolic@microsoft.com"
+				},
+				{
+					"name": "joaomoreno.ms",
+					"email": "joao.moreno@microsoft.com"
+				},
+				{
+					"name": "jrieken",
+					"email": "jrieken@microsoft.com"
+				},
+				{
+					"name": "microsoft",
+					"email": "npmjs@microsoft.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run compile && mocha",
+				"clean": "rimraf lib",
+				"watch": "tsc -w -p ./src",
+				"compile": "tsc -p ./src",
+				"preversion": "npm test",
+				"compile-esm": "tsc -p ./src/tsconfig.esm.json",
+				"postpublish": "node ./build/post-publish.js",
+				"postversion": "git push && git push --tags",
+				"prepublishOnly": "npm run clean && npm run compile-esm && npm run test"
+			},
+			"lastModified": 0,
+			"_id": "jsonc-parser@2.0.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-2.0.2.tgz",
+				"shasum": "42fcf56d70852a043fadafde51ddb4a85649978d",
+				"integrity": "sha512-TSU435K5tEKh3g7bam1AFf+uZrISheoDsLlpmAo6wWZYqjsnd09lHYK1Qo+moK4Ikifev1Gdpa69g4NELKnCrQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQCx8Zi3fJ89X2wORM8uMizF1NbCDzJmZopeGWjKgyWbfAIhAKZHrkiLKUENUA2GY6yViWRlYd9sXCJu1yiSf/fDnYJr"
+					}
+				]
+			},
+			"_npmVersion": "5.5.1",
+			"_npmUser": {
+				"name": "aeschli",
+				"email": "martinae@microsoft.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "5316a76c92adab6a8de4d5a4d34ddad41c1c9cd6",
+			"typings": "./lib/umd/main",
+			"module": "./lib/esm/main.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/jsonc-parser_2.0.2_1535382867900_0.6737065711348806",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "8.9.3",
+			"contributors": []
+		},
+		"2.1.1": {
+			"name": "jsonc-parser",
+			"description": "Scanner and parser for JSON with comments.",
+			"version": "2.1.1",
+			"author": {
+				"name": "Microsoft Corporation"
+			},
+			"homepage": "https://github.com/Microsoft/node-jsonc-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/Microsoft/node-jsonc-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/Microsoft/node-jsonc-parser/issues"
+			},
+			"main": "./lib/umd/main.js",
+			"devDependencies": {
+				"mocha": "^6.2.0",
+				"rimraf": "^3.0.0",
+				"tslint": "^5.19.0",
+				"typescript": "^3.5.3",
+				"@types/node": "^10.12.12",
+				"@types/mocha": "^5.2.7"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "aeschli",
+					"email": "martinae@microsoft.com"
+				},
+				{
+					"name": "alexandrudima",
+					"email": "alexdima@microsoft.com"
+				},
+				{
+					"name": "aweinand",
+					"email": "aweinand@microsoft.com"
+				},
+				{
+					"name": "bpasero",
+					"email": "benjpas@microsoft.com"
+				},
+				{
+					"name": "chrisdias",
+					"email": "cdias@microsoft.com"
+				},
+				{
+					"name": "dbaeumer",
+					"email": "dirk.baeumer@gmail.com"
+				},
+				{
+					"name": "egamma",
+					"email": "egamma@microsoft.com"
+				},
+				{
+					"name": "isidor",
+					"email": "inikolic@microsoft.com"
+				},
+				{
+					"name": "joaomoreno.ms",
+					"email": "joao.moreno@microsoft.com"
+				},
+				{
+					"name": "jrieken",
+					"email": "jrieken@microsoft.com"
+				},
+				{
+					"name": "microsoft",
+					"email": "npmjs@microsoft.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run compile && mocha",
+				"clean": "rimraf lib",
+				"watch": "tsc -w -p ./src",
+				"compile": "tsc -p ./src",
+				"preversion": "npm test",
+				"compile-esm": "tsc -p ./src/tsconfig.esm.json",
+				"postpublish": "node ./build/post-publish.js",
+				"postversion": "git push && git push --tags",
+				"prepublishOnly": "npm run clean && npm run compile-esm && npm run test"
+			},
+			"lastModified": 0,
+			"_id": "jsonc-parser@2.1.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-2.1.1.tgz",
+				"shasum": "83dc3d7a6e7186346b889b1280eefa04446c6d3e",
+				"integrity": "sha512-VC0CjnWJylKB1iov4u76/W/5Ef0ydDkjtYWxoZ9t3HdWlSnZQwZL5MgFikaB/EtQ4RmMEw3tmQzuYnZA2/Ja1g==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIHrYSOuBID2o1holerCdS3/cAQ9w5IBsvY4o2YdlWT7ZAiEA8mJIoB3stLesB5W0tqZdARqLwr79TcLZw7E35ZlHoYE="
+					}
+				]
+			},
+			"_npmVersion": "6.4.1",
+			"_npmUser": {
+				"name": "aeschli",
+				"email": "martinae@microsoft.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "6f56688e5767b3379b41efffdedde265c7b2a2f1",
+			"typings": "./lib/umd/main",
+			"module": "./lib/esm/main.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/jsonc-parser_2.1.1_1566396820855_0.6058473492520533",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "10.15.1",
+			"contributors": []
+		},
+		"2.2.0": {
+			"name": "jsonc-parser",
+			"description": "Scanner and parser for JSON with comments.",
+			"version": "2.2.0",
+			"author": {
+				"name": "Microsoft Corporation"
+			},
+			"homepage": "https://github.com/microsoft/node-jsonc-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/microsoft/node-jsonc-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/microsoft/node-jsonc-parser/issues"
+			},
+			"main": "./lib/umd/main.js",
+			"devDependencies": {
+				"mocha": "^6.2.2",
+				"rimraf": "^3.0.0",
+				"tslint": "^5.20.0",
+				"typescript": "^3.6.4",
+				"@types/node": "^10.12.12",
+				"@types/mocha": "^5.2.7"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "aeschli",
+					"email": "martinae@microsoft.com"
+				},
+				{
+					"name": "alexandrudima",
+					"email": "alexdima@microsoft.com"
+				},
+				{
+					"name": "aweinand",
+					"email": "aweinand@microsoft.com"
+				},
+				{
+					"name": "bpasero",
+					"email": "benjpas@microsoft.com"
+				},
+				{
+					"name": "chrisdias",
+					"email": "cdias@microsoft.com"
+				},
+				{
+					"name": "dbaeumer",
+					"email": "dirk.baeumer@gmail.com"
+				},
+				{
+					"name": "egamma",
+					"email": "egamma@microsoft.com"
+				},
+				{
+					"name": "isidor",
+					"email": "inikolic@microsoft.com"
+				},
+				{
+					"name": "joaomoreno.ms",
+					"email": "joao.moreno@microsoft.com"
+				},
+				{
+					"name": "jrieken",
+					"email": "jrieken@microsoft.com"
+				},
+				{
+					"name": "microsoft",
+					"email": "npmjs@microsoft.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run compile && mocha",
+				"clean": "rimraf lib",
+				"watch": "tsc -w -p ./src",
+				"compile": "tsc -p ./src",
+				"preversion": "npm test",
+				"compile-esm": "tsc -p ./src/tsconfig.esm.json",
+				"postpublish": "node ./build/post-publish.js",
+				"postversion": "git push && git push --tags",
+				"prepublishOnly": "npm run clean && npm run compile-esm && npm run test && npm run remove-sourcemap-refs",
+				"remove-sourcemap-refs": "node ./build/remove-sourcemap-refs.js"
+			},
+			"lastModified": 0,
+			"_id": "jsonc-parser@2.2.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-2.2.0.tgz",
+				"shasum": "f206f87f9d49d644b7502052c04e82dd6392e9ef",
+				"integrity": "sha512-4fLQxW1j/5fWj6p78vAlAafoCKtuBm6ghv+Ij5W2DrDx0qE+ZdEl2c6Ko1mgJNF5ftX1iEWQQ4Ap7+3GlhjkOA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIBV+sbtvg59qnx3cqQqbSi+O6GYivXoQBNJ41LUNGuFbAiEA+rLX3ABhkX92ubD3T3Bp4iKGA89gV723BZwHHpiVNSI="
+					}
+				]
+			},
+			"_npmVersion": "6.4.1",
+			"_npmUser": {
+				"name": "aeschli",
+				"email": "martinae@microsoft.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "390c1abadf24dc820891e2185fa9da489cb57834",
+			"typings": "./lib/umd/main",
+			"module": "./lib/esm/main.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/jsonc-parser_2.2.0_1571999154404_0.1523903000834801",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "10.15.1",
+			"contributors": []
+		},
+		"2.0.3": {
+			"name": "jsonc-parser",
+			"description": "Scanner and parser for JSON with comments.",
+			"version": "2.0.3",
+			"author": {
+				"name": "Microsoft Corporation"
+			},
+			"homepage": "https://github.com/Microsoft/node-jsonc-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/Microsoft/node-jsonc-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/Microsoft/node-jsonc-parser/issues"
+			},
+			"main": "./lib/umd/main.js",
+			"devDependencies": {
+				"mocha": "^5.2.0",
+				"rimraf": "^2.6.2",
+				"tslint": "^5.11.0",
+				"typescript": "^3.1.3",
+				"@types/node": "^7.0.43",
+				"@types/mocha": "^2.2.32"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "aeschli",
+					"email": "martinae@microsoft.com"
+				},
+				{
+					"name": "alexandrudima",
+					"email": "alexdima@microsoft.com"
+				},
+				{
+					"name": "aweinand",
+					"email": "aweinand@microsoft.com"
+				},
+				{
+					"name": "bpasero",
+					"email": "benjpas@microsoft.com"
+				},
+				{
+					"name": "chrisdias",
+					"email": "cdias@microsoft.com"
+				},
+				{
+					"name": "dbaeumer",
+					"email": "dirk.baeumer@gmail.com"
+				},
+				{
+					"name": "egamma",
+					"email": "egamma@microsoft.com"
+				},
+				{
+					"name": "isidor",
+					"email": "inikolic@microsoft.com"
+				},
+				{
+					"name": "joaomoreno.ms",
+					"email": "joao.moreno@microsoft.com"
+				},
+				{
+					"name": "jrieken",
+					"email": "jrieken@microsoft.com"
+				},
+				{
+					"name": "microsoft",
+					"email": "npmjs@microsoft.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run compile && mocha",
+				"clean": "rimraf lib",
+				"watch": "tsc -w -p ./src",
+				"compile": "tsc -p ./src",
+				"preversion": "npm test",
+				"compile-esm": "tsc -p ./src/tsconfig.esm.json",
+				"postpublish": "node ./build/post-publish.js",
+				"postversion": "git push && git push --tags",
+				"prepublishOnly": "npm run clean && npm run compile-esm && npm run test"
+			},
+			"lastModified": 0,
+			"_id": "jsonc-parser@2.0.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-2.0.3.tgz",
+				"shasum": "6d4199ccab7f21ff5d2a4225050c54e981fb21a2",
+				"integrity": "sha512-WJi9y9ABL01C8CxTKxRRQkkSpY/x2bo4Gy0WuiZGrInxQqgxQpvkBCLNcDYcHOSdhx4ODgbFcgAvfL49C+PHgQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIHBz2acZIro7EVs0d9NSCbqZZn7VKn8VztVuL51yzMnpAiEAiR1Pru7kycejDMptYBvl6jQnA8/pQzBbUpwLgDgpcqs="
+					}
+				]
+			},
+			"_npmVersion": "5.6.0",
+			"_npmUser": {
+				"name": "aeschli",
+				"email": "martinae@microsoft.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "1b2cba781e309f9e575f0fe65499ff4a58e668d1",
+			"typings": "./lib/umd/main",
+			"module": "./lib/esm/main.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/jsonc-parser_2.0.3_1549287581322_0.18101172998245496",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "8.11.1",
+			"contributors": []
+		},
+		"2.2.1": {
+			"name": "jsonc-parser",
+			"description": "Scanner and parser for JSON with comments.",
+			"version": "2.2.1",
+			"author": {
+				"name": "Microsoft Corporation"
+			},
+			"homepage": "https://github.com/microsoft/node-jsonc-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/microsoft/node-jsonc-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/microsoft/node-jsonc-parser/issues"
+			},
+			"main": "./lib/umd/main.js",
+			"devDependencies": {
+				"mocha": "^6.2.2",
+				"rimraf": "^3.0.0",
+				"tslint": "^5.20.0",
+				"typescript": "^3.6.4",
+				"@types/node": "^10.12.12",
+				"@types/mocha": "^5.2.7"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "aeschli",
+					"email": "martinae@microsoft.com"
+				},
+				{
+					"name": "alexandrudima",
+					"email": "alexdima@microsoft.com"
+				},
+				{
+					"name": "aweinand",
+					"email": "aweinand@microsoft.com"
+				},
+				{
+					"name": "bpasero",
+					"email": "benjpas@microsoft.com"
+				},
+				{
+					"name": "chrisdias",
+					"email": "cdias@microsoft.com"
+				},
+				{
+					"name": "dbaeumer",
+					"email": "dirk.baeumer@gmail.com"
+				},
+				{
+					"name": "egamma",
+					"email": "egamma@microsoft.com"
+				},
+				{
+					"name": "isidor",
+					"email": "inikolic@microsoft.com"
+				},
+				{
+					"name": "joaomoreno.ms",
+					"email": "joao.moreno@microsoft.com"
+				},
+				{
+					"name": "jrieken",
+					"email": "jrieken@microsoft.com"
+				},
+				{
+					"name": "microsoft",
+					"email": "npmjs@microsoft.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run compile && mocha",
+				"clean": "rimraf lib",
+				"watch": "tsc -w -p ./src",
+				"compile": "tsc -p ./src",
+				"preversion": "npm test",
+				"compile-esm": "tsc -p ./src/tsconfig.esm.json",
+				"postpublish": "node ./build/post-publish.js",
+				"postversion": "git push && git push --tags",
+				"prepublishOnly": "npm run clean && npm run compile-esm && npm run test && npm run remove-sourcemap-refs",
+				"remove-sourcemap-refs": "node ./build/remove-sourcemap-refs.js"
+			},
+			"lastModified": 0,
+			"_id": "jsonc-parser@2.2.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-2.2.1.tgz",
+				"shasum": "db73cd59d78cce28723199466b2a03d1be1df2bc",
+				"integrity": "sha512-o6/yDBYccGvTz1+QFevz6l6OBZ2+fMVu2JZ9CIhzsYRX4mjaK5IyX9eldUdCmga16zlgQxyrj5pt9kzuj2C02w==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIGtkwOHomWJPKohTgPIY4jAfHiAnAeicoQtcUT6ibbMaAiBfvsSju4/OnNuIf7Cy8e6cN6bbmm/HRufhfJGAx5Iifw=="
+					}
+				]
+			},
+			"_npmVersion": "6.4.1",
+			"_npmUser": {
+				"name": "aeschli",
+				"email": "martinae@microsoft.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "e38baa7f22ee391e6dc0581d70750bdb746d855d",
+			"typings": "./lib/umd/main",
+			"module": "./lib/esm/main.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/jsonc-parser_2.2.1_1582277330046_0.17993487175279443",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "10.15.1",
+			"contributors": []
+		},
+		"2.3.0": {
+			"name": "jsonc-parser",
+			"description": "Scanner and parser for JSON with comments.",
+			"version": "2.3.0",
+			"author": {
+				"name": "Microsoft Corporation"
+			},
+			"homepage": "https://github.com/microsoft/node-jsonc-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/microsoft/node-jsonc-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/microsoft/node-jsonc-parser/issues"
+			},
+			"main": "./lib/umd/main.js",
+			"devDependencies": {
+				"mocha": "^7.1.2",
+				"eslint": "^7.3.1",
+				"rimraf": "^3.0.2",
+				"typescript": "^3.6.4",
+				"@types/node": "^10.12.12",
+				"@types/mocha": "^5.2.7",
+				"@typescript-eslint/parser": "^2.30.0",
+				"@typescript-eslint/eslint-plugin": "^2.30.0"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "aeschli",
+					"email": "martinae@microsoft.com"
+				},
+				{
+					"name": "alexandrudima",
+					"email": "alexdima@microsoft.com"
+				},
+				{
+					"name": "aweinand",
+					"email": "aweinand@microsoft.com"
+				},
+				{
+					"name": "bpasero",
+					"email": "benjpas@microsoft.com"
+				},
+				{
+					"name": "chrisdias",
+					"email": "cdias@microsoft.com"
+				},
+				{
+					"name": "dbaeumer",
+					"email": "dirk.baeumer@gmail.com"
+				},
+				{
+					"name": "egamma",
+					"email": "egamma@microsoft.com"
+				},
+				{
+					"name": "isidor",
+					"email": "inikolic@microsoft.com"
+				},
+				{
+					"name": "joaomoreno.ms",
+					"email": "joao.moreno@microsoft.com"
+				},
+				{
+					"name": "jrieken",
+					"email": "jrieken@microsoft.com"
+				},
+				{
+					"name": "microsoft",
+					"email": "npmjs@microsoft.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint src/**/*.ts",
+				"test": "npm run compile && mocha",
+				"clean": "rimraf lib",
+				"watch": "tsc -w -p ./src",
+				"compile": "tsc -p ./src && npm run lint",
+				"preversion": "npm test",
+				"compile-esm": "tsc -p ./src/tsconfig.esm.json",
+				"postpublish": "node ./build/post-publish.js",
+				"postversion": "git push && git push --tags",
+				"prepublishOnly": "npm run clean && npm run compile-esm && npm run test && npm run remove-sourcemap-refs",
+				"remove-sourcemap-refs": "node ./build/remove-sourcemap-refs.js"
+			},
+			"lastModified": 0,
+			"_id": "jsonc-parser@2.3.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-2.3.0.tgz",
+				"shasum": "7c7fc988ee1486d35734faaaa866fadb00fa91ee",
+				"integrity": "sha512-b0EBt8SWFNnixVdvoR2ZtEGa9ZqLhbJnOjezn+WP+8kspFm+PFYDN8Z4Bc7pRlDjvuVcADSUkroIuTWWn/YiIA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIAw2N1RdADZozPfNuhNhi4aT4Z7jfG5zGr+uhzYYChzqAiBgNcOMYYhYbKcn2MsavWrmLd6KsuomEuOB9BT+xfDE2A=="
+					}
+				]
+			},
+			"_npmVersion": "6.9.0",
+			"_npmUser": {
+				"name": "aeschli",
+				"email": "martinae@microsoft.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "f170a139a5ad059775a95a62099e33c052708da7",
+			"typings": "./lib/umd/main",
+			"module": "./lib/esm/main.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/jsonc-parser_2.3.0_1593807300939_0.8393971920630945",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "12.4.0",
+			"contributors": []
+		},
+		"1.0.3": {
+			"name": "jsonc-parser",
+			"description": "Scanner and parser for JSON with comments.",
+			"version": "1.0.3",
+			"author": {
+				"name": "Microsoft Corporation"
+			},
+			"homepage": "https://github.com/Microsoft/node-jsonc-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/Microsoft/node-jsonc-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/Microsoft/node-jsonc-parser/issues"
+			},
+			"main": "./lib/umd/main.js",
+			"devDependencies": {
+				"mocha": "^2.4.5",
+				"tslint": "^5.9.1",
+				"typescript": "^2.7.2",
+				"@types/node": "^7.0.43",
+				"@types/mocha": "^2.2.32"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "aeschli",
+					"email": "martinae@microsoft.com"
+				},
+				{
+					"name": "alexandrudima",
+					"email": "alexdima@microsoft.com"
+				},
+				{
+					"name": "aweinand",
+					"email": "aweinand@microsoft.com"
+				},
+				{
+					"name": "bpasero",
+					"email": "benjpas@microsoft.com"
+				},
+				{
+					"name": "chrisdias",
+					"email": "cdias@microsoft.com"
+				},
+				{
+					"name": "dbaeumer",
+					"email": "dirk.baeumer@gmail.com"
+				},
+				{
+					"name": "egamma",
+					"email": "egamma@microsoft.com"
+				},
+				{
+					"name": "isidor",
+					"email": "inikolic@microsoft.com"
+				},
+				{
+					"name": "joaomoreno.ms",
+					"email": "joao.moreno@microsoft.com"
+				},
+				{
+					"name": "jrieken",
+					"email": "jrieken@microsoft.com"
+				},
+				{
+					"name": "microsoft",
+					"email": "npmjs@microsoft.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "npm run compile && mocha",
+				"watch": "tsc -w -p ./src",
+				"compile": "tsc -p ./src && tsc -p ./src/tsconfig.esm.json",
+				"prepare": "npm run compile",
+				"preversion": "npm test",
+				"postversion": "git push && git push --tags"
+			},
+			"lastModified": 0,
+			"_id": "jsonc-parser@1.0.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-1.0.3.tgz",
+				"shasum": "1d53d7160e401a783dbceabaad82473f80e6ad7e",
+				"integrity": "sha512-hk/69oAeaIzchq/v3lS50PXuzn5O2ynldopMC+SWBql7J2WtdptfB9dy8Y7+Og5rPkTCpn83zTiO8FMcqlXJ/g==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCOYmZfYAnKPfmswjgpbJGjHZvc2PPKrWuWMHBCIUYggwIgGTgjcTKMmC0GYlPzEuD9NarUj1pJa0hAB3AX930Bz/M="
+					}
+				]
+			},
+			"_npmVersion": "5.5.1",
+			"_npmUser": {
+				"name": "aeschli",
+				"email": "martinae@microsoft.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "42ec16f9c91582d4267a0c48199cdac283c90fc9",
+			"typings": "./lib/umd/main",
+			"module": "./lib/esm/main.js",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/jsonc-parser_1.0.3_1520462630696_0.5828021351734272",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "8.9.1",
+			"contributors": []
+		},
+		"1.0.0": {
+			"name": "jsonc-parser",
+			"description": "Scanner and parser for JSON with comments.",
+			"version": "1.0.0",
+			"author": {
+				"name": "Microsoft Corporation"
+			},
+			"homepage": "https://github.com/Microsoft/node-jsonc-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/Microsoft/node-jsonc-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/Microsoft/node-jsonc-parser/issues"
+			},
+			"main": "./lib/main.js",
+			"devDependencies": {
+				"mocha": "^2.4.5",
+				"typescript": "^2.1.5",
+				"@types/node": "^6.0.46",
+				"@types/mocha": "^2.2.32"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "aeschli",
+					"email": "martinae@microsoft.com"
+				},
+				{
+					"name": "alexandrudima",
+					"email": "alexdima@microsoft.com"
+				},
+				{
+					"name": "aweinand",
+					"email": "aweinand@microsoft.com"
+				},
+				{
+					"name": "bpasero",
+					"email": "benjpas@microsoft.com"
+				},
+				{
+					"name": "chrisdias",
+					"email": "cdias@microsoft.com"
+				},
+				{
+					"name": "dbaeumer",
+					"email": "dirk.baeumer@gmail.com"
+				},
+				{
+					"name": "egamma",
+					"email": "egamma@microsoft.com"
+				},
+				{
+					"name": "isidor",
+					"email": "inikolic@microsoft.com"
+				},
+				{
+					"name": "joaomoreno.ms",
+					"email": "joao.moreno@microsoft.com"
+				},
+				{
+					"name": "jrieken",
+					"email": "jrieken@microsoft.com"
+				},
+				{
+					"name": "microsoft",
+					"email": "npmjs@microsoft.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tsc -p ./src && mocha",
+				"watch": "tsc -w -p ./src",
+				"compile": "tsc -p ./src",
+				"prepublish": "tsc -p ./src"
+			},
+			"lastModified": 0,
+			"_id": "jsonc-parser@1.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-1.0.0.tgz",
+				"shasum": "ddcc864ae708e60a7a6dd36daea00172fa8d9272",
+				"integrity": "sha512-7+oqMcbujbS8atCrT5ODeA9L6IFaRvqVUflW+hIS2vj1YiQPu6Oiu2foL5wsBXztMTcac+VSwwHzrpUUlRaI6g==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIFh5x23CQYvfpStvxmimcGoN0DdvYhfArkwrvGqhfVgTAiApGlPVK5fvlo3C5msC2hBjag3/ombFYOgJmQW55p6XNQ=="
+					}
+				]
+			},
+			"_from": ".",
+			"_npmVersion": "4.4.4",
+			"_npmUser": {
+				"name": "aeschli",
+				"email": "martinae@microsoft.com"
+			},
+			"gitHead": "caa7edea2eb13722b82c673f7eac74ab2d63c399",
+			"typings": "./lib/main",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/jsonc-parser-1.0.0.tgz_1494401257194_0.8932426266837865",
+				"host": "packages-12-west.internal.npmjs.com"
+			},
+			"_shasum": "ddcc864ae708e60a7a6dd36daea00172fa8d9272",
+			"_nodeVersion": "5.12.0",
+			"contributors": []
+		},
+		"1.0.1": {
+			"name": "jsonc-parser",
+			"description": "Scanner and parser for JSON with comments.",
+			"version": "1.0.1",
+			"author": {
+				"name": "Microsoft Corporation"
+			},
+			"homepage": "https://github.com/Microsoft/node-jsonc-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/Microsoft/node-jsonc-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/Microsoft/node-jsonc-parser/issues"
+			},
+			"main": "./lib/main.js",
+			"devDependencies": {
+				"mocha": "^2.4.5",
+				"tslint": "^5.9.1",
+				"typescript": "^2.7.1",
+				"@types/node": "^7.0.43",
+				"@types/mocha": "^2.2.32"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "aweinand",
+					"email": "aweinand@microsoft.com"
+				},
+				{
+					"name": "jrieken",
+					"email": "jrieken@microsoft.com"
+				},
+				{
+					"name": "isidor",
+					"email": "inikolic@microsoft.com"
+				},
+				{
+					"name": "egamma",
+					"email": "egamma@microsoft.com"
+				},
+				{
+					"name": "chrisdias",
+					"email": "cdias@microsoft.com"
+				},
+				{
+					"name": "bpasero",
+					"email": "benjpas@microsoft.com"
+				},
+				{
+					"name": "alexandrudima",
+					"email": "alexdima@microsoft.com"
+				},
+				{
+					"name": "dbaeumer",
+					"email": "dirk.baeumer@gmail.com"
+				},
+				{
+					"name": "joaomoreno.ms",
+					"email": "joao.moreno@microsoft.com"
+				},
+				{
+					"name": "microsoft",
+					"email": "npmjs@microsoft.com"
+				},
+				{
+					"name": "aeschli",
+					"email": "martinae@microsoft.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tsc -p ./src && mocha",
+				"watch": "tsc -w -p ./src",
+				"compile": "tsc -p ./src",
+				"prepare": "tsc -p ./src"
+			},
+			"lastModified": 0,
+			"_id": "jsonc-parser@1.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-1.0.1.tgz",
+				"shasum": "7f8f296414e6e7c4a33b9e4914fc8c47e4421675",
+				"integrity": "sha512-CFJcfIRF751s7MypvvQX8MDWYrPjYlaAvXtaWRXT+cYgUE182BtHhvzpOIUtckCQe1N+WFoYtSl8ar9tAWjqBg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCRLt+9z6YnWfRDBjo7Jr+H0OH8YiWMdeTpn0VPJnivJwIgSAaamgnNzGMdzZpVnZDUlsBHwHo7schxvYZASWtYwm4="
+					}
+				]
+			},
+			"_npmVersion": "5.5.1",
+			"_npmUser": {
+				"name": "aeschli",
+				"email": "martinae@microsoft.com"
+			},
+			"gitHead": "a6994d6341a1bf6f2ab48095d4564d6c7b58007f",
+			"typings": "./lib/main",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/jsonc-parser-1.0.1.tgz_1517928224953_0.519907264271751",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "8.9.1",
+			"contributors": []
+		},
+		"1.0.2": {
+			"name": "jsonc-parser",
+			"description": "Scanner and parser for JSON with comments.",
+			"version": "1.0.2",
+			"author": {
+				"name": "Microsoft Corporation"
+			},
+			"homepage": "https://github.com/Microsoft/node-jsonc-parser#readme",
+			"repository": {
+				"url": "git+https://github.com/Microsoft/node-jsonc-parser.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/Microsoft/node-jsonc-parser/issues"
+			},
+			"main": "./lib/main.js",
+			"devDependencies": {
+				"mocha": "^2.4.5",
+				"tslint": "^5.9.1",
+				"typescript": "^2.7.2",
+				"@types/node": "^7.0.43",
+				"@types/mocha": "^2.2.32"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "aeschli",
+					"email": "martinae@microsoft.com"
+				},
+				{
+					"name": "alexandrudima",
+					"email": "alexdima@microsoft.com"
+				},
+				{
+					"name": "aweinand",
+					"email": "aweinand@microsoft.com"
+				},
+				{
+					"name": "bpasero",
+					"email": "benjpas@microsoft.com"
+				},
+				{
+					"name": "chrisdias",
+					"email": "cdias@microsoft.com"
+				},
+				{
+					"name": "dbaeumer",
+					"email": "dirk.baeumer@gmail.com"
+				},
+				{
+					"name": "egamma",
+					"email": "egamma@microsoft.com"
+				},
+				{
+					"name": "isidor",
+					"email": "inikolic@microsoft.com"
+				},
+				{
+					"name": "joaomoreno.ms",
+					"email": "joao.moreno@microsoft.com"
+				},
+				{
+					"name": "jrieken",
+					"email": "jrieken@microsoft.com"
+				},
+				{
+					"name": "microsoft",
+					"email": "npmjs@microsoft.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tsc -p ./src && mocha",
+				"watch": "tsc -w -p ./src",
+				"compile": "tsc -p ./src",
+				"prepare": "tsc -p ./src",
+				"preversion": "npm test",
+				"postversion": "git push && git push --tags"
+			},
+			"lastModified": 0,
+			"_id": "jsonc-parser@1.0.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-1.0.2.tgz",
+				"shasum": "3fe86c0237db206fe5693872d93eec3bc3b05055",
+				"integrity": "sha512-vGO+gFGllf2ZDn0Kac0bcvj80o1qaqPtVsXab45Fd4kPyf/BI8l3IdbYoTHLthlMbDCfwNgQ++PkamUxe8ztLg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIEOBNhzhPtsfengkKrUBotrnEMKZFvgzkp2cwSAQAiO6AiEA1CMpVIGR/hIe+oQh6/llTcca9o+F/KYQIjU/UGwZZwg="
+					}
+				]
+			},
+			"_npmVersion": "5.5.1",
+			"_npmUser": {
+				"name": "aeschli",
+				"email": "martinae@microsoft.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "1f91c3e649a6238af6ea7bf7e2a4db374aba9720",
+			"typings": "./lib/main",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/jsonc-parser_1.0.2_1520259575624_0.43954012641453066",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "8.9.1",
+			"contributors": []
+		}
+	},
+	"time": {
+		"0.4.2": "2017-05-05T13:42:46.936Z",
+		"4.0.0-next.2": "2026-06-16T22:19:13.250Z",
+		"0.1.3": "2016-05-15T19:31:28.131Z",
+		"0.2.2": "2016-06-14T17:51:09.517Z",
+		"0.3.1": "2017-01-26T10:15:10.261Z",
+		"0.4.0": "2017-02-23T12:35:32.981Z",
+		"0.2.3": "2016-06-25T19:56:28.991Z",
+		"0.4.1": "2017-04-04T07:43:14.271Z",
+		"4.0.0-next.1": "2026-03-10T09:24:16.211Z",
+		"0.0.2": "2016-04-19T09:26:21.093Z",
+		"0.1.1": "2016-04-19T14:59:02.969Z",
+		"0.2.0": "2016-04-20T11:57:04.884Z",
+		"0.0.3": "2016-04-19T09:32:24.887Z",
+		"0.1.2": "2016-04-19T15:00:20.639Z",
+		"0.2.1": "2016-05-18T08:21:54.216Z",
+		"0.3.0": "2017-01-17T21:19:43.096Z",
+		"0.0.1": "2016-04-18T12:47:35.022Z",
+		"0.1.0": "2016-04-19T10:31:45.368Z",
+		"3.0.0": "2020-11-13T15:34:42.773Z",
+		"modified": "2026-06-16T22:19:13.413Z",
+		"3.1.0": "2022-07-11T20:23:04.148Z",
+		"3.2.0": "2022-08-30T11:26:57.901Z",
+		"3.2.1": "2024-01-22T21:23:59.508Z",
+		"3.3.0": "2024-06-24T15:43:16.824Z",
+		"3.3.1": "2024-06-24T21:12:45.445Z",
+		"2.0.0": "2018-04-12T21:13:27.611Z",
+		"2.0.1": "2018-06-25T13:15:37.218Z",
+		"2.1.0": "2019-03-29T14:23:15.686Z",
+		"2.0.0-next.1": "2018-03-08T13:31:24.062Z",
+		"created": "2016-04-18T12:47:35.022Z",
+		"2.3.1": "2020-09-16T07:52:31.088Z",
+		"2.0.2": "2018-08-27T15:14:27.979Z",
+		"2.1.1": "2019-08-21T14:13:41.038Z",
+		"2.2.0": "2019-10-25T10:25:54.544Z",
+		"2.0.3": "2019-02-04T13:39:41.416Z",
+		"2.2.1": "2020-02-21T09:28:50.131Z",
+		"2.3.0": "2020-07-03T20:15:01.085Z",
+		"1.0.3": "2018-03-07T22:43:50.750Z",
+		"1.0.0": "2017-05-10T07:27:39.197Z",
+		"1.0.1": "2018-02-06T14:43:45.136Z",
+		"1.0.2": "2018-03-05T14:19:35.700Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"next": "4.0.0-next.2",
+		"latest": "3.3.1"
+	},
+	"_uplinks": {
+		"artifactory-sabadell": {
+			"etag": "5f93ababeb25d63a61526e9ca5260ff9dde3dfbb",
+			"fetched": 1782459810213
+		}
+	},
+	"_distfiles": {
+		"jsonc-parser-0.4.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-0.4.2.tgz",
+			"sha": "a4b2caf67d1a72394283066060130f715051331d",
+			"registry": "artifactory-sabadell"
+		},
+		"jsonc-parser-4.0.0-next.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-4.0.0-next.2.tgz",
+			"sha": "ce32284da18b51de00a9b56091006b25a6836693",
+			"registry": "artifactory-sabadell"
+		},
+		"jsonc-parser-0.1.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-0.1.3.tgz",
+			"sha": "b61ec6f43b6811f033ef2560d969c0a209bd7857",
+			"registry": "artifactory-sabadell"
+		},
+		"jsonc-parser-0.2.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-0.2.2.tgz",
+			"sha": "db4418c1402ce55bc8d21fde22b847789b00991f",
+			"registry": "artifactory-sabadell"
+		},
+		"jsonc-parser-0.3.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-0.3.1.tgz",
+			"sha": "6ebf5c75224368d4b07ef4c26f9434e657472e95",
+			"registry": "artifactory-sabadell"
+		},
+		"jsonc-parser-0.4.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-0.4.0.tgz",
+			"sha": "9e23b8a03ced45c5c9f305088005fc8279a1bded",
+			"registry": "artifactory-sabadell"
+		},
+		"jsonc-parser-0.2.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-0.2.3.tgz",
+			"sha": "5f4c256202bf44486848fbb5c7da40ee6b8e16f8",
+			"registry": "artifactory-sabadell"
+		},
+		"jsonc-parser-0.4.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-0.4.1.tgz",
+			"sha": "57e57ffb21d9aa04c5b3c9e64183944991e44d13",
+			"registry": "artifactory-sabadell"
+		},
+		"jsonc-parser-4.0.0-next.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-4.0.0-next.1.tgz",
+			"sha": "170928d899735c0f86653a942aa30d0be7fd5599",
+			"registry": "artifactory-sabadell"
+		},
+		"jsonc-parser-0.0.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-0.0.2.tgz",
+			"sha": "bc3dabf7852a471bad10b30ed8b44bea1f0dc8d4",
+			"registry": "artifactory-sabadell"
+		},
+		"jsonc-parser-0.1.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-0.1.1.tgz",
+			"sha": "cc9741117abaa895098ce676b621bbe5f5d9fe43",
+			"registry": "artifactory-sabadell"
+		},
+		"jsonc-parser-0.2.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-0.2.0.tgz",
+			"sha": "4a5e2cb387d311325014db9e5db563030d4c3cf1",
+			"registry": "artifactory-sabadell"
+		},
+		"jsonc-parser-0.0.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-0.0.3.tgz",
+			"sha": "fed73f889e0d4ca94ba1634a102ff640226982fc",
+			"registry": "artifactory-sabadell"
+		},
+		"jsonc-parser-0.1.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-0.1.2.tgz",
+			"sha": "afcfcda6b8c00d583658a1906e715bdf3f10b872",
+			"registry": "artifactory-sabadell"
+		},
+		"jsonc-parser-0.2.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-0.2.1.tgz",
+			"sha": "6accd942103100e759c93ba18044521dcb6f5257",
+			"registry": "artifactory-sabadell"
+		},
+		"jsonc-parser-0.3.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-0.3.0.tgz",
+			"sha": "bf456cfeefff7165be2837133d79f50c5cd54cfa",
+			"registry": "artifactory-sabadell"
+		},
+		"jsonc-parser-0.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-0.0.1.tgz",
+			"sha": "7eff45de8fa7215315903eb4b612fdc465259ca8",
+			"registry": "artifactory-sabadell"
+		},
+		"jsonc-parser-0.1.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-0.1.0.tgz",
+			"sha": "17476e87e2fa64470778892d0e98fc18e305ead1",
+			"registry": "artifactory-sabadell"
+		},
+		"jsonc-parser-3.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-3.0.0.tgz",
+			"sha": "abdd785701c7e7eaca8a9ec8cf070ca51a745a22",
+			"registry": "artifactory-sabadell"
+		},
+		"jsonc-parser-3.1.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-3.1.0.tgz",
+			"sha": "73b8f0e5c940b83d03476bc2e51a20ef0932615d",
+			"registry": "artifactory-sabadell"
+		},
+		"jsonc-parser-3.2.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-3.2.0.tgz",
+			"sha": "31ff3f4c2b9793f89c67212627c51c6394f88e76",
+			"registry": "artifactory-sabadell"
+		},
+		"jsonc-parser-3.2.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-3.2.1.tgz",
+			"sha": "031904571ccf929d7670ee8c547545081cb37f1a",
+			"registry": "artifactory-sabadell"
+		},
+		"jsonc-parser-3.3.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-3.3.0.tgz",
+			"sha": "030d182672c8ffc2805db95467c83ffc0b033d9d",
+			"registry": "artifactory-sabadell"
+		},
+		"jsonc-parser-3.3.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-3.3.1.tgz",
+			"sha": "f2a524b4f7fd11e3d791e559977ad60b98b798b4",
+			"registry": "artifactory-sabadell"
+		},
+		"jsonc-parser-2.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-2.0.0.tgz",
+			"sha": "62ff087a7e753875febf3c55f1fc0cd737c36b5a",
+			"registry": "artifactory-sabadell"
+		},
+		"jsonc-parser-2.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-2.0.1.tgz",
+			"sha": "9d23cd2709714fff508a1a6679d82135bee1ae60",
+			"registry": "artifactory-sabadell"
+		},
+		"jsonc-parser-2.1.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-2.1.0.tgz",
+			"sha": "eb0d0c7a3c33048524ce3574c57c7278fb2f1bf3",
+			"registry": "artifactory-sabadell"
+		},
+		"jsonc-parser-2.0.0-next.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-2.0.0-next.1.tgz",
+			"sha": "445a824f765a96abfbb286d759a9b1d226b18088",
+			"registry": "artifactory-sabadell"
+		},
+		"jsonc-parser-2.3.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-2.3.1.tgz",
+			"sha": "59549150b133f2efacca48fe9ce1ec0659af2342",
+			"registry": "artifactory-sabadell"
+		},
+		"jsonc-parser-2.0.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-2.0.2.tgz",
+			"sha": "42fcf56d70852a043fadafde51ddb4a85649978d",
+			"registry": "artifactory-sabadell"
+		},
+		"jsonc-parser-2.1.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-2.1.1.tgz",
+			"sha": "83dc3d7a6e7186346b889b1280eefa04446c6d3e",
+			"registry": "artifactory-sabadell"
+		},
+		"jsonc-parser-2.2.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-2.2.0.tgz",
+			"sha": "f206f87f9d49d644b7502052c04e82dd6392e9ef",
+			"registry": "artifactory-sabadell"
+		},
+		"jsonc-parser-2.0.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-2.0.3.tgz",
+			"sha": "6d4199ccab7f21ff5d2a4225050c54e981fb21a2",
+			"registry": "artifactory-sabadell"
+		},
+		"jsonc-parser-2.2.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-2.2.1.tgz",
+			"sha": "db73cd59d78cce28723199466b2a03d1be1df2bc",
+			"registry": "artifactory-sabadell"
+		},
+		"jsonc-parser-2.3.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-2.3.0.tgz",
+			"sha": "7c7fc988ee1486d35734faaaa866fadb00fa91ee",
+			"registry": "artifactory-sabadell"
+		},
+		"jsonc-parser-1.0.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-1.0.3.tgz",
+			"sha": "1d53d7160e401a783dbceabaad82473f80e6ad7e",
+			"registry": "artifactory-sabadell"
+		},
+		"jsonc-parser-1.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-1.0.0.tgz",
+			"sha": "ddcc864ae708e60a7a6dd36daea00172fa8d9272",
+			"registry": "artifactory-sabadell"
+		},
+		"jsonc-parser-1.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-1.0.1.tgz",
+			"sha": "7f8f296414e6e7c4a33b9e4914fc8c47e4421675",
+			"registry": "artifactory-sabadell"
+		},
+		"jsonc-parser-1.0.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/jsonc-parser/-/jsonc-parser-1.0.2.tgz",
+			"sha": "3fe86c0237db206fe5693872d93eec3bc3b05055",
+			"registry": "artifactory-sabadell"
+		}
+	},
+	"_attachments": {},
+	"_rev": "1-cbc1d14a81103e5f",
+	"_id": "jsonc-parser",
+	"readme": ""
+}

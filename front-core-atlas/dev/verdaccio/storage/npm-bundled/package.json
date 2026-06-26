@@ -1,0 +1,1525 @@
+{
+	"name": "npm-bundled",
+	"versions": {
+		"2.0.0": {
+			"name": "npm-bundled",
+			"description": "list things in node_modules that are bundledDependencies, or transitive dependencies thereof",
+			"version": "2.0.0",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/npm-bundled#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/npm-bundled.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-bundled/issues"
+			},
+			"engines": {
+				"node": "^12.13.0 || ^14.15.0 || >=16.0.0"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"npm-normalize-package-bin": "^1.0.1"
+			},
+			"devDependencies": {
+				"tap": "^16.3.0",
+				"mkdirp": "^1.0.4",
+				"rimraf": "^3.0.2",
+				"mutate-fs": "^2.1.1",
+				"@npmcli/template-oss": "3.5.0",
+				"@npmcli/eslint-config": "^3.1.0"
+			},
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "lukekarrys",
+					"email": "luke@lukekarrys.com"
+				},
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				},
+				{
+					"name": "zkat",
+					"email": "npm@zkat.tech"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint \"**/*.js\"",
+				"snap": "tap",
+				"test": "tap",
+				"lintfix": "npm run lint -- --fix",
+				"postlint": "template-oss-check",
+				"posttest": "npm run lint",
+				"preversion": "npm test",
+				"postpublish": "git push origin --all; git push origin --tags",
+				"postversion": "npm publish",
+				"prepublishOnly": "git push origin --follow-tags",
+				"template-oss-apply": "template-oss-apply --force"
+			},
+			"lastModified": 0,
+			"_id": "npm-bundled@2.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-bundled/-/npm-bundled-2.0.0.tgz",
+				"shasum": "fcf0ddb4499dfa1b0145374d720ad0dc09e99c1d",
+				"integrity": "sha512-ZnkDgpakv39F6w9D6uZNmmXohXEHW5EC1MDziHvXeLeyBmJ/FpfM1n+v8PkQ2Y1TcNHzuAVTZQIgabkgskR77A==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIA7/PcCJ7jqDeNX3JB3kb4iIW1fY82yaOwcIxp5PgvGtAiEAyQgJVVnHR4N9vGLGXgXPulQTVmXyOMhlJdTC32QNpzY="
+					}
+				]
+			},
+			"_npmVersion": "8.18.0",
+			"_npmUser": {
+				"name": "lukekarrys",
+				"email": "luke@lukekarrys.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "143f882cc767656d0ba347f32708507179e9d653",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-bundled_2.0.0_1661275058041_0.8821980173727482",
+				"host": "s3://npm-registry-packages"
+			},
+			"templateOSS": {
+				"version": "3.5.0",
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+			},
+			"_nodeVersion": "18.7.0",
+			"contributors": []
+		},
+		"2.0.1": {
+			"name": "npm-bundled",
+			"description": "list things in node_modules that are bundledDependencies, or transitive dependencies thereof",
+			"version": "2.0.1",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/npm-bundled#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/npm-bundled.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-bundled/issues"
+			},
+			"engines": {
+				"node": "^12.13.0 || ^14.15.0 || >=16.0.0"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"npm-normalize-package-bin": "^2.0.0"
+			},
+			"devDependencies": {
+				"tap": "^16.3.0",
+				"mkdirp": "^1.0.4",
+				"rimraf": "^3.0.2",
+				"mutate-fs": "^2.1.1",
+				"@npmcli/template-oss": "3.5.0",
+				"@npmcli/eslint-config": "^3.1.0"
+			},
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "lukekarrys",
+					"email": "luke@lukekarrys.com"
+				},
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				},
+				{
+					"name": "zkat",
+					"email": "npm@zkat.tech"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint \"**/*.js\"",
+				"snap": "tap",
+				"test": "tap",
+				"lintfix": "npm run lint -- --fix",
+				"postlint": "template-oss-check",
+				"posttest": "npm run lint",
+				"preversion": "npm test",
+				"postpublish": "git push origin --all; git push origin --tags",
+				"postversion": "npm publish",
+				"prepublishOnly": "git push origin --follow-tags",
+				"template-oss-apply": "template-oss-apply --force"
+			},
+			"lastModified": 0,
+			"_id": "npm-bundled@2.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-bundled/-/npm-bundled-2.0.1.tgz",
+				"shasum": "94113f7eb342cd7a67de1e789f896b04d2c600f4",
+				"integrity": "sha512-gZLxXdjEzE/+mOstGDqR6b0EkhJ+kM6fxM6vUuckuctuVPh80Q6pw/rSZj9s4Gex9GxWtIicO1pc8DB9KZWudw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIGRfN0kGWD2zpd92K8DHTfKNlbFciVOLbzJ/8y4tYT5cAiEAy0NqtOIxCD3XIMI6X32b1nGwEhXoZuA7bUYsN7bWkOY="
+					}
+				]
+			},
+			"_npmVersion": "8.18.0",
+			"_npmUser": {
+				"name": "lukekarrys",
+				"email": "luke@lukekarrys.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "be15ab3679720c9d978f851a326a03cb35eb6b0c",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-bundled_2.0.1_1661457276445_0.7726096125936053",
+				"host": "s3://npm-registry-packages"
+			},
+			"templateOSS": {
+				"version": "3.5.0",
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+			},
+			"_nodeVersion": "18.7.0",
+			"contributors": []
+		},
+		"4.0.0": {
+			"name": "npm-bundled",
+			"description": "list things in node_modules that are bundledDependencies, or transitive dependencies thereof",
+			"version": "4.0.0",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/npm-bundled#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/npm-bundled.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-bundled/issues"
+			},
+			"engines": {
+				"node": "^18.17.0 || >=20.5.0"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"npm-normalize-package-bin": "^4.0.0"
+			},
+			"devDependencies": {
+				"tap": "^16.3.0",
+				"mutate-fs": "^2.1.1",
+				"@npmcli/template-oss": "4.23.3",
+				"@npmcli/eslint-config": "^5.0.0"
+			},
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "hashtagchris",
+					"email": "hashtagchris@github.com"
+				},
+				{
+					"name": "reggi",
+					"email": "reggi@github.com"
+				},
+				{
+					"name": "npm-cli-ops",
+					"email": "npm-cli+bot@github.com"
+				},
+				{
+					"name": "saquibkhan",
+					"email": "saquibkhan@github.com"
+				},
+				{
+					"name": "fritzy",
+					"email": "fritzy@github.com"
+				},
+				{
+					"name": "gar",
+					"email": "gar+npm@danger.computer"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "npm run eslint",
+				"snap": "tap",
+				"test": "tap",
+				"eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
+				"lintfix": "npm run eslint -- --fix",
+				"postlint": "template-oss-check",
+				"posttest": "npm run lint",
+				"template-oss-apply": "template-oss-apply --force"
+			},
+			"lastModified": 0,
+			"_id": "npm-bundled@4.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-bundled/-/npm-bundled-4.0.0.tgz",
+				"shasum": "f5b983f053fe7c61566cf07241fab2d4e9d513d3",
+				"integrity": "sha512-IxaQZDMsqfQ2Lz37VvyyEtKLe8FsRZuysmedy/N06TU1RyVppYKXrO4xIhR0F+7ubIBox6Q7nir6fQI3ej39iA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQCDa5VVE9Iz/aqWBmWK+Crrgw7w6H6XQYuambY2uP+VUQIhAI73ffiaRQOtngbVswhaVLIUDp7Br9CDISskXITmM1y4"
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/npm-bundled@4.0.0",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "10.8.3",
+			"_npmUser": {
+				"name": "npm-cli-ops",
+				"email": "npm-cli+bot@github.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "e1ec0dcb89d0dfa77202f8d80ed59650d25af4eb",
+			"tap": {
+				"nyc-arg": [
+					"--exclude",
+					"tap-snapshots/**"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-bundled_4.0.0_1727284384111_0.9743738938808912",
+				"host": "s3://npm-registry-packages"
+			},
+			"templateOSS": {
+				"publish": true,
+				"version": "4.23.3",
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+			},
+			"_nodeVersion": "22.9.0",
+			"contributors": []
+		},
+		"1.0.3": {
+			"name": "npm-bundled",
+			"description": "list things in node_modules that are bundledDependencies, or transitive dependencies thereof",
+			"version": "1.0.3",
+			"author": {
+				"url": "http://blog.izs.me/",
+				"name": "Isaac Z. Schlueter",
+				"email": "i@izs.me"
+			},
+			"homepage": "https://github.com/npm/npm-bundled#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/npm-bundled.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-bundled/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"tap": "^10.3.2",
+				"mkdirp": "^0.5.1",
+				"rimraf": "^2.6.1",
+				"mutate-fs": "^1.1.0"
+			},
+			"license": "ISC",
+			"files": [
+				"index.js"
+			],
+			"maintainers": [
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap test/*.js -J --100",
+				"preversion": "npm test",
+				"postpublish": "git push origin --all; git push origin --tags",
+				"postversion": "npm publish"
+			},
+			"lastModified": 0,
+			"_id": "npm-bundled@1.0.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-bundled/-/npm-bundled-1.0.3.tgz",
+				"shasum": "7e71703d973af3370a9591bafe3a63aca0be2308",
+				"integrity": "sha512-ByQ3oJ/5ETLyglU2+8dBObvhfWXX8dtPZDMePCahptliFX2iIuhyEszyFk401PZUNQH20vvdW5MLjJxkwU80Ow==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIFlV91LZ8n0HNXUZ6NJDKheNZl4044sfsLpbCc8o76kvAiBgXUV3HKscXT9fKxUrFlnxC/+BV6+0AqCv5sR5UxyaiQ=="
+					}
+				]
+			},
+			"_npmVersion": "5.0.0",
+			"_npmUser": {
+				"name": "isaacs",
+				"email": "i@izs.me"
+			},
+			"gitHead": "77a4481aafcdd10729dfda47632d05c339395669",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-bundled-1.0.3.tgz_1496082674163_0.7330161512363702",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "8.0.0-pre",
+			"contributors": []
+		},
+		"1.1.2": {
+			"name": "npm-bundled",
+			"description": "list things in node_modules that are bundledDependencies, or transitive dependencies thereof",
+			"version": "1.1.2",
+			"author": {
+				"url": "http://blog.izs.me/",
+				"name": "Isaac Z. Schlueter",
+				"email": "i@izs.me"
+			},
+			"homepage": "https://github.com/npm/npm-bundled#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/npm-bundled.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-bundled/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"npm-normalize-package-bin": "^1.0.1"
+			},
+			"devDependencies": {
+				"tap": "^12.0.1",
+				"mkdirp": "^0.5.1",
+				"rimraf": "^2.6.1",
+				"mutate-fs": "^1.1.0"
+			},
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				},
+				{
+					"name": "zkat",
+					"email": "npm@zkat.tech"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap test/*.js -J --100",
+				"preversion": "npm test",
+				"postpublish": "git push origin --all; git push origin --tags",
+				"postversion": "npm publish"
+			},
+			"lastModified": 0,
+			"_id": "npm-bundled@1.1.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-bundled/-/npm-bundled-1.1.2.tgz",
+				"shasum": "944c78789bd739035b70baa2ca5cc32b8d860bc1",
+				"integrity": "sha512-x5DHup0SuyQcmL3s7Rx/YQ8sbw/Hzg0rj48eN0dV7hf5cmQq5PXIeioroH3raV1QC1yh3uTYuMThvEQF3iKgGQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIAHUF/IPNc15UHeejijbPmq9J/iAIlWzz4r9vxH3JGcLAiAyJ2U3JCo89Tjv+GuJBJpBJRKRuQP8RkM5XJqDUQyPiw=="
+					}
+				]
+			},
+			"_npmVersion": "7.10.0",
+			"_npmUser": {
+				"name": "isaacs",
+				"email": "i@izs.me"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "3b9f9efb4752768811868ab6b7303a5990307825",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-bundled_1.1.2_1619042975496_0.7769575964084918",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "16.0.0",
+			"contributors": []
+		},
+		"1.0.4": {
+			"name": "npm-bundled",
+			"description": "list things in node_modules that are bundledDependencies, or transitive dependencies thereof",
+			"version": "1.0.4",
+			"author": {
+				"url": "http://blog.izs.me/",
+				"name": "Isaac Z. Schlueter",
+				"email": "i@izs.me"
+			},
+			"homepage": "https://github.com/npm/npm-bundled#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/npm-bundled.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-bundled/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"tap": "^12.0.1",
+				"mkdirp": "^0.5.1",
+				"rimraf": "^2.6.1",
+				"mutate-fs": "^1.1.0"
+			},
+			"license": "ISC",
+			"files": [
+				"index.js"
+			],
+			"maintainers": [
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				},
+				{
+					"name": "zkat",
+					"email": "kat@sykosomatic.org"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap test/*.js -J --100",
+				"preversion": "npm test",
+				"postpublish": "git push origin --all; git push origin --tags",
+				"postversion": "npm publish"
+			},
+			"lastModified": 0,
+			"_id": "npm-bundled@1.0.4",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-bundled/-/npm-bundled-1.0.4.tgz",
+				"shasum": "81ee67cb61f13f6f2dabe6728283ee35a5821829",
+				"integrity": "sha512-FLIrRxfuX2EOA9krlthXp8lyFR5vW21zNu6ORrfWGD5ZYWTqx3tOCUwsPUSuzPdUBLxLD7bwPkG3YfgWSfqOtg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIDJ76Mq6VJuoNbGDCx0aQYW91OqOH2DruBFCX2G9KOaiAiAY0WkqkrjHmc2+N3qud47w5F/3Oucc9q9tis/l5o/Wgg=="
+					}
+				]
+			},
+			"_npmVersion": "6.3.0",
+			"_npmUser": {
+				"name": "isaacs",
+				"email": "i@izs.me"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "6358b0ddf9c524f8b83b3edc9470efd0620c8edd",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-bundled_1.0.4_1533860000563_0.9584505160684789",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "10.0.0",
+			"contributors": []
+		},
+		"1.0.5": {
+			"name": "npm-bundled",
+			"description": "list things in node_modules that are bundledDependencies, or transitive dependencies thereof",
+			"version": "1.0.5",
+			"author": {
+				"url": "http://blog.izs.me/",
+				"name": "Isaac Z. Schlueter",
+				"email": "i@izs.me"
+			},
+			"homepage": "https://github.com/npm/npm-bundled#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/npm-bundled.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-bundled/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"tap": "^12.0.1",
+				"mkdirp": "^0.5.1",
+				"rimraf": "^2.6.1",
+				"mutate-fs": "^1.1.0"
+			},
+			"license": "ISC",
+			"files": [
+				"index.js"
+			],
+			"maintainers": [
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				},
+				{
+					"name": "zkat",
+					"email": "kat@sykosomatic.org"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap test/*.js -J --100",
+				"preversion": "npm test",
+				"postpublish": "git push origin --all; git push origin --tags",
+				"postversion": "npm publish"
+			},
+			"lastModified": 0,
+			"_id": "npm-bundled@1.0.5",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-bundled/-/npm-bundled-1.0.5.tgz",
+				"shasum": "3c1732b7ba936b3a10325aef616467c0ccbcc979",
+				"integrity": "sha512-m/e6jgWu8/v5niCUKQi9qQl8QdeEduFA96xHDDzFGqly0OOjI7c+60KM/2sppfnUU9JJagf+zs+yGhqSOFj71g==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQC7ZTP+6MDfFktTiFBeoeoXSH6J+H9wrggMoDTOmK1igwIgcNnMZ+YjYd8vD3lw14q3Qf/O5BT6Qpp//ZHul1xxNXI="
+					}
+				]
+			},
+			"_npmVersion": "6.3.0",
+			"_npmUser": {
+				"name": "isaacs",
+				"email": "i@izs.me"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "4bb5560dfe7b6f187aa196783ab9a25189e6f434",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-bundled_1.0.5_1533919453196_0.754967539495657",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "10.0.0",
+			"contributors": []
+		},
+		"1.0.6": {
+			"name": "npm-bundled",
+			"description": "list things in node_modules that are bundledDependencies, or transitive dependencies thereof",
+			"version": "1.0.6",
+			"author": {
+				"url": "http://blog.izs.me/",
+				"name": "Isaac Z. Schlueter",
+				"email": "i@izs.me"
+			},
+			"homepage": "https://github.com/npm/npm-bundled#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/npm-bundled.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-bundled/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"tap": "^12.0.1",
+				"mkdirp": "^0.5.1",
+				"rimraf": "^2.6.1",
+				"mutate-fs": "^1.1.0"
+			},
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				},
+				{
+					"name": "zkat",
+					"email": "kat@sykosomatic.org"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap test/*.js -J --100",
+				"preversion": "npm test",
+				"postpublish": "git push origin --all; git push origin --tags",
+				"postversion": "npm publish"
+			},
+			"lastModified": 0,
+			"_id": "npm-bundled@1.0.6",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-bundled/-/npm-bundled-1.0.6.tgz",
+				"shasum": "e7ba9aadcef962bb61248f91721cd932b3fe6bdd",
+				"integrity": "sha512-8/JCaftHwbd//k6y2rEWp6k1wxVfpFzB6t1p825+cUb7Ym2XQfhwIC5KwhrvzZRJu+LtDE585zVaS32+CGtf0g==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDlrdQc6PbF0Dvdkqua+pr2a+oVbdiasZ4yihBGx2wykAIgIPi/vKNBYJwAapzatLLBmLRfHDJaKuAsRU4stiYpZXg="
+					}
+				]
+			},
+			"_npmVersion": "6.7.0",
+			"_npmUser": {
+				"name": "isaacs",
+				"email": "i@izs.me"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "59c71778359f7801b8fe5070f2c87a5a31974304",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-bundled_1.0.6_1549342347372_0.4080858580056823",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "11.8.0",
+			"contributors": []
+		},
+		"3.0.0": {
+			"name": "npm-bundled",
+			"description": "list things in node_modules that are bundledDependencies, or transitive dependencies thereof",
+			"version": "3.0.0",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/npm-bundled#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/npm-bundled.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-bundled/issues"
+			},
+			"engines": {
+				"node": "^14.17.0 || ^16.13.0 || >=18.0.0"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"npm-normalize-package-bin": "^3.0.0"
+			},
+			"devDependencies": {
+				"tap": "^16.3.0",
+				"mkdirp": "^1.0.4",
+				"rimraf": "^3.0.2",
+				"mutate-fs": "^2.1.1",
+				"@npmcli/template-oss": "4.5.1",
+				"@npmcli/eslint-config": "^4.0.0"
+			},
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "lukekarrys",
+					"email": "luke@lukekarrys.com"
+				},
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				},
+				{
+					"name": "zkat",
+					"email": "npm@zkat.tech"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint \"**/*.js\"",
+				"snap": "tap",
+				"test": "tap",
+				"lintfix": "npm run lint -- --fix",
+				"postlint": "template-oss-check",
+				"posttest": "npm run lint",
+				"template-oss-apply": "template-oss-apply --force"
+			},
+			"lastModified": 0,
+			"_id": "npm-bundled@3.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-bundled/-/npm-bundled-3.0.0.tgz",
+				"shasum": "7e8e2f8bb26b794265028491be60321a25a39db7",
+				"integrity": "sha512-Vq0eyEQy+elFpzsKjMss9kxqb9tG3YHg4dsyWuUENuzvSUWe1TCnW/vV9FkhvBk/brEDoDiVd+M1Btosa6ImdQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCICH/JIE9EDzOXZlOGuWwhtIC1YPxkmTAdChnW2i5DiRhAiBPMQK2UKH9tdoy/5YLkyEgso6oUnRLZCns8dOsxHYsBA=="
+					}
+				]
+			},
+			"_npmVersion": "8.19.2",
+			"_npmUser": {
+				"name": "lukekarrys",
+				"email": "luke@lukekarrys.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "ce6c228eb3302b5c983076367ce97301085a29e2",
+			"tap": {
+				"nyc-arg": [
+					"--exclude",
+					"tap-snapshots/**"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-bundled_3.0.0_1665769948797_0.8032754139820923",
+				"host": "s3://npm-registry-packages"
+			},
+			"templateOSS": {
+				"version": "4.5.1",
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+			},
+			"_nodeVersion": "18.10.0",
+			"contributors": []
+		},
+		"6.0.0": {
+			"name": "npm-bundled",
+			"description": "list things in node_modules that are bundledDependencies, or transitive dependencies thereof",
+			"version": "6.0.0",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/npm-bundled#readme",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/npm/npm-bundled.git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-bundled/issues"
+			},
+			"engines": {
+				"node": "^22.22.2 || ^24.15.0 || >=26.0.0"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"npm-normalize-package-bin": "^6.0.0"
+			},
+			"devDependencies": {
+				"@npmcli/eslint-config": "^6.0.0",
+				"@npmcli/template-oss": "5.1.0",
+				"mutate-fs": "^2.1.1",
+				"tap": "^16.3.0"
+			},
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "saquibkhan",
+					"email": "saquibkhan@github.com"
+				},
+				{
+					"name": "npm-cli-ops",
+					"email": "npm-cli+bot@github.com"
+				},
+				{
+					"name": "reggi",
+					"email": "reggi@github.com"
+				},
+				{
+					"name": "owlstronaut",
+					"email": "owlstronaut@github.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap",
+				"lint": "npm run eslint",
+				"postlint": "template-oss-check",
+				"template-oss-apply": "template-oss-apply --force",
+				"lintfix": "npm run eslint -- --fix",
+				"snap": "tap",
+				"posttest": "npm run lint",
+				"eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\""
+			},
+			"lastModified": 0,
+			"_id": "npm-bundled@6.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-bundled/-/npm-bundled-6.0.0.tgz",
+				"shasum": "6e9653423047eaac4297717d98eef1685ff4ce07",
+				"integrity": "sha512-EqdodKEW6pYM+dPxA66TZQfMEqVDiuzjDM9edSjuPI1mXUbUJwVxkgqMZSJvs8RTXz2CGq8HUol/AffTZX5g8w==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEYCIQDV1gfmZNzoGOWPGzVsYZyyEWz/5vvq0PMks9AcZMp2HAIhALblww65f7J8lKXB7ZKVvddcRKYW28GRTzCb3lFa22vx"
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/npm-bundled@6.0.0",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "11.14.1",
+			"_npmUser": {
+				"name": "GitHub Actions",
+				"email": "npm-oidc-no-reply@github.com",
+				"trustedPublisher": {
+					"id": "github",
+					"oidcConfigId": "oidc:6fb5c8c6-c992-4ed4-8295-f6cddb388c41"
+				}
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "ebb458cd23a8e47ddbc6e64320d17ba46496a0d7",
+			"tap": {
+				"nyc-arg": [
+					"--exclude",
+					"tap-snapshots/**"
+				]
+			},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages-npm-production",
+				"tmp": "tmp/npm-bundled_6.0.0_1778870755053_0.17376426258180167"
+			},
+			"templateOSS": {
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten.",
+				"version": "5.1.0",
+				"publish": true
+			},
+			"_nodeVersion": "26.1.0",
+			"contributors": []
+		},
+		"5.0.0": {
+			"name": "npm-bundled",
+			"description": "list things in node_modules that are bundledDependencies, or transitive dependencies thereof",
+			"version": "5.0.0",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/npm-bundled#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/npm-bundled.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-bundled/issues"
+			},
+			"engines": {
+				"node": "^20.17.0 || >=22.9.0"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"npm-normalize-package-bin": "^5.0.0"
+			},
+			"devDependencies": {
+				"tap": "^16.3.0",
+				"mutate-fs": "^2.1.1",
+				"@npmcli/template-oss": "4.27.1",
+				"@npmcli/eslint-config": "^5.0.0"
+			},
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "gar",
+					"email": "gar+npm@danger.computer"
+				},
+				{
+					"name": "saquibkhan",
+					"email": "saquibkhan@github.com"
+				},
+				{
+					"name": "npm-cli-ops",
+					"email": "npm-cli+bot@github.com"
+				},
+				{
+					"name": "reggi",
+					"email": "reggi@github.com"
+				},
+				{
+					"name": "hashtagchris",
+					"email": "hashtagchris@github.com"
+				},
+				{
+					"name": "owlstronaut",
+					"email": "owlstronaut@github.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "npm run eslint",
+				"snap": "tap",
+				"test": "tap",
+				"eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
+				"lintfix": "npm run eslint -- --fix",
+				"postlint": "template-oss-check",
+				"posttest": "npm run lint",
+				"template-oss-apply": "template-oss-apply --force"
+			},
+			"lastModified": 0,
+			"_id": "npm-bundled@5.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-bundled/-/npm-bundled-5.0.0.tgz",
+				"shasum": "5025d847cfd06c7b8d9432df01695d0133d9ee80",
+				"integrity": "sha512-JLSpbzh6UUXIEoqPsYBvVNVmyrjVZ1fzEFbqxKkTJQkWBO3xFzFT+KDnSKQWwOQNbuWRwt5LSD6HOTLGIWzfrw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEQCIDHwmlFuZWBsMxu+Tcl7Jdr70iONpclCT6vVwzMcgVPMAiB2e0/+b+POS/j+i6goK0J1YDdKtoAwf9JHOGzzIbdJQg=="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/npm-bundled@5.0.0",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "11.6.2",
+			"_npmUser": {
+				"name": "GitHub Actions",
+				"email": "npm-oidc-no-reply@github.com",
+				"trustedPublisher": {
+					"id": "github",
+					"oidcConfigId": "oidc:6fb5c8c6-c992-4ed4-8295-f6cddb388c41"
+				}
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "754e0af10c996f2bb5d676d92094b942254136f5",
+			"tap": {
+				"nyc-arg": [
+					"--exclude",
+					"tap-snapshots/**"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-bundled_5.0.0_1761240234140_0.49825013810700547",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"templateOSS": {
+				"publish": true,
+				"version": "4.27.1",
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+			},
+			"_nodeVersion": "22.20.0",
+			"contributors": []
+		},
+		"3.0.1": {
+			"name": "npm-bundled",
+			"description": "list things in node_modules that are bundledDependencies, or transitive dependencies thereof",
+			"version": "3.0.1",
+			"author": {
+				"name": "GitHub Inc."
+			},
+			"homepage": "https://github.com/npm/npm-bundled#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/npm-bundled.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-bundled/issues"
+			},
+			"engines": {
+				"node": "^14.17.0 || ^16.13.0 || >=18.0.0"
+			},
+			"main": "lib/index.js",
+			"dependencies": {
+				"npm-normalize-package-bin": "^3.0.0"
+			},
+			"devDependencies": {
+				"tap": "^16.3.0",
+				"mutate-fs": "^2.1.1",
+				"@npmcli/template-oss": "4.22.0",
+				"@npmcli/eslint-config": "^4.0.0"
+			},
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "npm-cli-ops",
+					"email": "npm-cli+bot@github.com"
+				},
+				{
+					"name": "saquibkhan",
+					"email": "saquibkhan@github.com"
+				},
+				{
+					"name": "fritzy",
+					"email": "fritzy@github.com"
+				},
+				{
+					"name": "gar",
+					"email": "gar+npm@danger.computer"
+				},
+				{
+					"name": "lukekarrys",
+					"email": "luke@lukekarrys.com"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"lint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
+				"snap": "tap",
+				"test": "tap",
+				"lintfix": "npm run lint -- --fix",
+				"postlint": "template-oss-check",
+				"posttest": "npm run lint",
+				"template-oss-apply": "template-oss-apply --force"
+			},
+			"lastModified": 0,
+			"_id": "npm-bundled@3.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-bundled/-/npm-bundled-3.0.1.tgz",
+				"shasum": "cca73e15560237696254b10170d8f86dad62da25",
+				"integrity": "sha512-+AvaheE/ww1JEwRHOrn4WHNzOxGtVp+adrg2AeZS/7KuxGUYFuBta98wYpfHBbJp6Tg6j1NKSEVHNcfZzJHQwQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCICzt/Gl6bs5hKi90YejayadN9WVtMVxRgBEEAqy9oO9JAiEAwhDCbGyhBzeBmb5tF2hptJzv0rX1ty7WndlURPR1LpE="
+					}
+				],
+				"attestations": {
+					"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/yarn-node-remote/-/npm/v1/attestations/npm-bundled@3.0.1",
+					"provenance": {
+						"predicateType": "https://slsa.dev/provenance/v1"
+					}
+				}
+			},
+			"_npmVersion": "10.7.0",
+			"_npmUser": {
+				"name": "npm-cli-ops",
+				"email": "npm-cli+bot@github.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "13735dbb89ddef6119646b55af248b64ab86bef6",
+			"tap": {
+				"nyc-arg": [
+					"--exclude",
+					"tap-snapshots/**"
+				]
+			},
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-bundled_3.0.1_1715018948819_0.6545261958335571",
+				"host": "s3://npm-registry-packages"
+			},
+			"templateOSS": {
+				"publish": true,
+				"version": "4.22.0",
+				"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+			},
+			"_nodeVersion": "22.1.0",
+			"contributors": []
+		},
+		"1.0.0": {
+			"name": "npm-bundled",
+			"description": "list things in node_modules that are bundledDependencies, or transitive dependencies thereof",
+			"version": "1.0.0",
+			"author": {
+				"url": "http://blog.izs.me/",
+				"name": "Isaac Z. Schlueter",
+				"email": "i@izs.me"
+			},
+			"homepage": "https://github.com/npm/npm-bundled#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/npm-bundled.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-bundled/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"tap": "^10.3.2",
+				"mkdirp": "^0.5.1",
+				"rimraf": "^2.6.1",
+				"mutate-fs": "^1.1.0"
+			},
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap test/*.js -J --100",
+				"preversion": "npm test",
+				"postpublish": "git push origin --all; git push origin --tags",
+				"postversion": "npm publish"
+			},
+			"lastModified": 0,
+			"_id": "npm-bundled@1.0.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-bundled/-/npm-bundled-1.0.0.tgz",
+				"shasum": "72171452c17da572cb533da5d91e06b5f3775a06",
+				"integrity": "sha512-w2OOeop+SL30vVGsSThlUfadnPobRsTCXmbsxF0H/0XjwWKWOf5+J+WeV8068AFhPFI4SJhgB9F+hClA2edMrw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCW7qmDswyRMNIhy+IsplmuS69rZ9keAoybLnm7cs16RgIgLSuWpizbeNSlzXaDaxw32tPvd7Gdd4g5K0z6gRx+4QU="
+					}
+				]
+			},
+			"_npmVersion": "5.0.0",
+			"_npmUser": {
+				"name": "isaacs",
+				"email": "i@izs.me"
+			},
+			"gitHead": "28f6116b2f99733bcbad1153d279113919babd72",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-bundled-1.0.0.tgz_1496033214996_0.765760192181915",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "8.0.0-pre",
+			"contributors": []
+		},
+		"1.0.1": {
+			"name": "npm-bundled",
+			"description": "list things in node_modules that are bundledDependencies, or transitive dependencies thereof",
+			"version": "1.0.1",
+			"author": {
+				"url": "http://blog.izs.me/",
+				"name": "Isaac Z. Schlueter",
+				"email": "i@izs.me"
+			},
+			"homepage": "https://github.com/npm/npm-bundled#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/npm-bundled.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-bundled/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"tap": "^10.3.2",
+				"mkdirp": "^0.5.1",
+				"rimraf": "^2.6.1",
+				"mutate-fs": "^1.1.0"
+			},
+			"license": "ISC",
+			"files": [
+				"index.js"
+			],
+			"maintainers": [
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap test/*.js -J --100",
+				"preversion": "npm test",
+				"postpublish": "git push origin --all; git push origin --tags",
+				"postversion": "npm publish"
+			},
+			"lastModified": 0,
+			"_id": "npm-bundled@1.0.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-bundled/-/npm-bundled-1.0.1.tgz",
+				"shasum": "a62b7e1e424d337a3abfc7621d88a2d53a4fe159",
+				"integrity": "sha512-vNAytGm4E7KCPt45sBNEB4T9CsJMHrLAhcHCiY4fbcaXhdlii7b4njJuEPUS2P4xanfcifX7SXO9te38xKMj6w==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCM7b6QLM7LLNWixDq0nZPuoxFkMZ0g6TQjY6ftw70E8wIgW8p3VDfdmcMgjAiEh2ENO0KZ6hwcGumHPuVlW8Ax/B8="
+					}
+				]
+			},
+			"_npmVersion": "5.0.0",
+			"_npmUser": {
+				"name": "isaacs",
+				"email": "i@izs.me"
+			},
+			"gitHead": "f8b8caa0a7cf7733f39db044d3b03834c95dfabd",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-bundled-1.0.1.tgz_1496033352931_0.6128222134429961",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "8.0.0-pre",
+			"contributors": []
+		},
+		"1.1.0": {
+			"name": "npm-bundled",
+			"description": "list things in node_modules that are bundledDependencies, or transitive dependencies thereof",
+			"version": "1.1.0",
+			"author": {
+				"url": "http://blog.izs.me/",
+				"name": "Isaac Z. Schlueter",
+				"email": "i@izs.me"
+			},
+			"homepage": "https://github.com/npm/npm-bundled#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/npm-bundled.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-bundled/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"tap": "^12.0.1",
+				"mkdirp": "^0.5.1",
+				"rimraf": "^2.6.1",
+				"mutate-fs": "^1.1.0"
+			},
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				},
+				{
+					"name": "zkat",
+					"email": "kat@sykosomatic.org"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap test/*.js -J --100",
+				"preversion": "npm test",
+				"postpublish": "git push origin --all; git push origin --tags",
+				"postversion": "npm publish"
+			},
+			"lastModified": 0,
+			"_id": "npm-bundled@1.1.0",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-bundled/-/npm-bundled-1.1.0.tgz",
+				"shasum": "2e8fdb7e69eff2df963937b696243316537c284b",
+				"integrity": "sha512-ez6dcKBFNo4FvlMqscBEFUum6M2FTLW5grqm3DyBKB5XOyKVCeeWvAuoZtbmW/5Cv8EM2bQUOA6ufxa/TKVN0g==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQCC10Jq+MhuActO2FxStA3nfPxMM63maHip+IixRUX7pQIhAK13AaKpBZ0DRUdodkPmZKqZfmbaK86upis/Q2qX6Kv+"
+					}
+				]
+			},
+			"_npmVersion": "6.13.2",
+			"_npmUser": {
+				"name": "isaacs",
+				"email": "i@izs.me"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "029622e06f817d7437d4542a2d40aa1222c69241",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-bundled_1.1.0_1575762054367_0.46249469612023764",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "12.12.0",
+			"contributors": []
+		},
+		"1.0.2": {
+			"name": "npm-bundled",
+			"description": "list things in node_modules that are bundledDependencies, or transitive dependencies thereof",
+			"version": "1.0.2",
+			"author": {
+				"url": "http://blog.izs.me/",
+				"name": "Isaac Z. Schlueter",
+				"email": "i@izs.me"
+			},
+			"homepage": "https://github.com/npm/npm-bundled#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/npm-bundled.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-bundled/issues"
+			},
+			"main": "index.js",
+			"devDependencies": {
+				"tap": "^10.3.2",
+				"mkdirp": "^0.5.1",
+				"rimraf": "^2.6.1",
+				"mutate-fs": "^1.1.0"
+			},
+			"license": "ISC",
+			"files": [
+				"index.js"
+			],
+			"maintainers": [
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap test/*.js -J --100",
+				"preversion": "npm test",
+				"postpublish": "git push origin --all; git push origin --tags",
+				"postversion": "npm publish"
+			},
+			"lastModified": 0,
+			"_id": "npm-bundled@1.0.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-bundled/-/npm-bundled-1.0.2.tgz",
+				"shasum": "eaf2b45d21ab6a2146e7e1b7f18426edb39ba42a",
+				"integrity": "sha512-Albr4Rw2hvE+iUSZz59Lt8YREM5g13biRBkLqRDaFaSJNbTZy8TS4fjdsETH6MgQIRnuie+Zlg5LthWUxbRklQ==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIBHpxEUoNUY1lnt0FOdqIBRj8Ylm9mn40G37hwctlAJhAiEAzQeMpcNf2So2f81JIn5j4HN4OW4JNPerhxP8Fuj4z0Q="
+					}
+				]
+			},
+			"_npmVersion": "5.0.0",
+			"_npmUser": {
+				"name": "isaacs",
+				"email": "i@izs.me"
+			},
+			"gitHead": "a7eb30329c4f6a076954097e447209a1caf70b33",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-bundled-1.0.2.tgz_1496074462950_0.4532763354945928",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "8.0.0-pre",
+			"contributors": []
+		},
+		"1.1.1": {
+			"name": "npm-bundled",
+			"description": "list things in node_modules that are bundledDependencies, or transitive dependencies thereof",
+			"version": "1.1.1",
+			"author": {
+				"url": "http://blog.izs.me/",
+				"name": "Isaac Z. Schlueter",
+				"email": "i@izs.me"
+			},
+			"homepage": "https://github.com/npm/npm-bundled#readme",
+			"repository": {
+				"url": "git+https://github.com/npm/npm-bundled.git",
+				"type": "git"
+			},
+			"bugs": {
+				"url": "https://github.com/npm/npm-bundled/issues"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"npm-normalize-package-bin": "^1.0.1"
+			},
+			"devDependencies": {
+				"tap": "^12.0.1",
+				"mkdirp": "^0.5.1",
+				"rimraf": "^2.6.1",
+				"mutate-fs": "^1.1.0"
+			},
+			"license": "ISC",
+			"maintainers": [
+				{
+					"name": "isaacs",
+					"email": "i@izs.me"
+				},
+				{
+					"name": "zkat",
+					"email": "kat@sykosomatic.org"
+				}
+			],
+			"directories": {},
+			"scripts": {
+				"test": "tap test/*.js -J --100",
+				"preversion": "npm test",
+				"postpublish": "git push origin --all; git push origin --tags",
+				"postversion": "npm publish"
+			},
+			"lastModified": 0,
+			"_id": "npm-bundled@1.1.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-bundled/-/npm-bundled-1.1.1.tgz",
+				"shasum": "1edd570865a94cdb1bc8220775e29466c9fb234b",
+				"integrity": "sha512-gqkfgGePhTpAEgUsGEgcq1rqPXA+tv/aVBlgEzfXwA1yiUJF7xtEt3CtVwOjNYQOVknDk0F20w58Fnm3EtG0fA==",
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCICouHQnwteYzeakyrG9pzp8fG646q8zyNCZ0iOBrf4qxAiEAiqN0N1NjVPO5a89iLCmuBeUCe8tD9+b1/B6DNQ4nHTY="
+					}
+				]
+			},
+			"_npmVersion": "6.13.2",
+			"_npmUser": {
+				"name": "isaacs",
+				"email": "i@izs.me"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "bcbf3dfd4091b75de3299fa9e73549ed171a144a",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/npm-bundled_1.1.1_1575936093337_0.9017831822562536",
+				"host": "s3://npm-registry-packages"
+			},
+			"_nodeVersion": "12.12.0",
+			"contributors": []
+		}
+	},
+	"time": {
+		"2.0.0": "2022-08-23T17:17:38.229Z",
+		"2.0.1": "2022-08-25T19:54:36.596Z",
+		"created": "2017-05-29T04:46:55.130Z",
+		"4.0.0": "2024-09-25T17:13:04.780Z",
+		"1.0.3": "2017-05-29T18:31:14.332Z",
+		"1.1.2": "2021-04-21T22:09:35.643Z",
+		"1.0.4": "2018-08-10T00:13:20.647Z",
+		"1.0.5": "2018-08-10T16:44:13.386Z",
+		"1.0.6": "2019-02-05T04:52:27.458Z",
+		"3.0.0": "2022-10-14T17:52:28.969Z",
+		"6.0.0": "2026-05-15T18:45:55.204Z",
+		"modified": "2026-05-15T18:45:55.536Z",
+		"5.0.0": "2025-10-23T17:23:54.331Z",
+		"3.0.1": "2024-05-06T18:09:09.044Z",
+		"1.0.0": "2017-05-29T04:46:55.130Z",
+		"1.0.1": "2017-05-29T04:49:13.072Z",
+		"1.1.0": "2019-12-07T23:40:54.497Z",
+		"1.0.2": "2017-05-29T16:14:23.049Z",
+		"1.1.1": "2019-12-10T00:01:33.467Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "6.0.0"
+	},
+	"_uplinks": {
+		"artifactory-sabadell": {
+			"etag": "1fab03f94bb5f7ab27dd0cf845045736c7be952e",
+			"fetched": 1782459825360
+		}
+	},
+	"_distfiles": {
+		"npm-bundled-2.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-bundled/-/npm-bundled-2.0.0.tgz",
+			"sha": "fcf0ddb4499dfa1b0145374d720ad0dc09e99c1d",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-bundled-2.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-bundled/-/npm-bundled-2.0.1.tgz",
+			"sha": "94113f7eb342cd7a67de1e789f896b04d2c600f4",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-bundled-4.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-bundled/-/npm-bundled-4.0.0.tgz",
+			"sha": "f5b983f053fe7c61566cf07241fab2d4e9d513d3",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-bundled-1.0.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-bundled/-/npm-bundled-1.0.3.tgz",
+			"sha": "7e71703d973af3370a9591bafe3a63aca0be2308",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-bundled-1.1.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-bundled/-/npm-bundled-1.1.2.tgz",
+			"sha": "944c78789bd739035b70baa2ca5cc32b8d860bc1",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-bundled-1.0.4.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-bundled/-/npm-bundled-1.0.4.tgz",
+			"sha": "81ee67cb61f13f6f2dabe6728283ee35a5821829",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-bundled-1.0.5.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-bundled/-/npm-bundled-1.0.5.tgz",
+			"sha": "3c1732b7ba936b3a10325aef616467c0ccbcc979",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-bundled-1.0.6.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-bundled/-/npm-bundled-1.0.6.tgz",
+			"sha": "e7ba9aadcef962bb61248f91721cd932b3fe6bdd",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-bundled-3.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-bundled/-/npm-bundled-3.0.0.tgz",
+			"sha": "7e8e2f8bb26b794265028491be60321a25a39db7",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-bundled-6.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-bundled/-/npm-bundled-6.0.0.tgz",
+			"sha": "6e9653423047eaac4297717d98eef1685ff4ce07",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-bundled-5.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-bundled/-/npm-bundled-5.0.0.tgz",
+			"sha": "5025d847cfd06c7b8d9432df01695d0133d9ee80",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-bundled-3.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-bundled/-/npm-bundled-3.0.1.tgz",
+			"sha": "cca73e15560237696254b10170d8f86dad62da25",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-bundled-1.0.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-bundled/-/npm-bundled-1.0.0.tgz",
+			"sha": "72171452c17da572cb533da5d91e06b5f3775a06",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-bundled-1.0.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-bundled/-/npm-bundled-1.0.1.tgz",
+			"sha": "a62b7e1e424d337a3abfc7621d88a2d53a4fe159",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-bundled-1.1.0.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-bundled/-/npm-bundled-1.1.0.tgz",
+			"sha": "2e8fdb7e69eff2df963937b696243316537c284b",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-bundled-1.0.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-bundled/-/npm-bundled-1.0.2.tgz",
+			"sha": "eaf2b45d21ab6a2146e7e1b7f18426edb39ba42a",
+			"registry": "artifactory-sabadell"
+		},
+		"npm-bundled-1.1.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/npm-bundled/-/npm-bundled-1.1.1.tgz",
+			"sha": "1edd570865a94cdb1bc8220775e29466c9fb234b",
+			"registry": "artifactory-sabadell"
+		}
+	},
+	"_attachments": {},
+	"_rev": "1-9d682826209a93d9",
+	"_id": "npm-bundled",
+	"readme": "# npm-bundled\n\nRun this in a node package, and it'll tell you which things in\nnode_modules are bundledDependencies, or transitive dependencies of\nbundled dependencies.\n\n[![Build Status](https://img.shields.io/github/actions/workflow/status/npm/npm-bundled/ci.yml?branch=main)](https://github.com/npm/npm-bundled)\n\n## USAGE\n\nTo get the list of deps at the top level that are bundled (or\ntransitive deps of a bundled dep) run this:\n\n```js\nconst bundled = require('npm-bundled')\n\n// async version\nbundled({ path: '/path/to/pkg/defaults/to/cwd'}, (er, list) => {\n  // er means it had an error, which is _hella_ weird\n  // list is a list of package names, like `fooblz` or `@corp/blerg`\n  // the might not all be deps of the top level, because transitives\n})\n\n// async promise version\nbundled({ path: '/path/to/pkg/defaults/to/cwd'}).then(list => {\n  // so promisey!\n  // actually the callback version returns a promise, too, it just\n  // attaches the supplied callback to the promise\n})\n\n// sync version, throws if there's an error\nconst list = bundled.sync({ path: '/path/to/pkg/defaults/to/cwd'})\n```\n\nThat's basically all you need to know.  If you care to dig into it,\nyou can also use the `bundled.Walker` and `bundled.WalkerSync`\nclasses to get fancy.\n\nThis library does not write anything to the filesystem, but it _may_\nhave undefined behavior if the structure of `node_modules` changes\nwhile it's reading deps.\n\nAll symlinks are followed.  This means that it can lead to surprising\nresults if a symlinked bundled dependency has a missing dependency\nthat is satisfied at the top level.  Since package creation resolves\nsymlinks as well, this is an edge case where package creation and\ndevelopment environment are not going to be aligned, and is best\navoided."
+}

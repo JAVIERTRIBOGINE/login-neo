@@ -116580,6 +116580,508 @@
 			],
 			"_nodeVersion": "12.14.1",
 			"contributors": []
+		},
+		"22.1.0-next.1": {
+			"name": "@angular/common",
+			"description": "Angular - commonly needed directives and services",
+			"version": "22.1.0-next.1",
+			"author": {
+				"name": "angular"
+			},
+			"homepage": "https://github.com/angular/angular#readme",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/angular/angular.git",
+				"directory": "packages/common"
+			},
+			"bugs": {
+				"url": "https://github.com/angular/angular/issues"
+			},
+			"engines": {
+				"node": "^22.22.3 || ^24.15.0 || >=26.0.0"
+			},
+			"dependencies": {
+				"tslib": "^2.3.0"
+			},
+			"peerDependencies": {
+				"@angular/core": "22.1.0-next.1",
+				"rxjs": "^6.5.3 || ^7.4.0"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "angular",
+					"email": "devops+npm@angular.io"
+				},
+				{
+					"name": "google-wombot",
+					"email": "node-team-npm+wombot@google.com"
+				}
+			],
+			"directories": {},
+			"lastModified": 0,
+			"_id": "@angular/common@22.1.0-next.1",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@angular/common/-/common-22.1.0-next.1.tgz",
+				"shasum": "090829fbaa5e67cd138dbccb580604606ad50e61",
+				"integrity": "sha512-tNyKQ8BQyFOUbtZnNbAjkICkATppr5Z+6l2u6R9bwiMVjdqmMX42oY32Z1Sc7i/iOZig7vTuEuNcSISUmL6qIw==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEQCIAv5nQ7ddRTyOVbpH3SgtAF6GoKQFW3jPQG9TheiJhYEAiB0Wb7B96SAIo2Pg9jn49r9IMjVIT7fJN3dWSPO2QZidw=="
+					}
+				]
+			},
+			"_npmVersion": "10.9.8",
+			"_npmUser": {
+				"name": "google-wombot",
+				"email": "node-team-npm+wombot@google.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "83e56c281a8c78b2f6f9303540266b4fbdcc165b",
+			"locales": "locales",
+			"ng-update": {
+				"packageGroup": [
+					"@angular/core",
+					"@angular/bazel",
+					"@angular/common",
+					"@angular/compiler",
+					"@angular/compiler-cli",
+					"@angular/animations",
+					"@angular/elements",
+					"@angular/platform-browser",
+					"@angular/platform-browser-dynamic",
+					"@angular/forms",
+					"@angular/platform-server",
+					"@angular/upgrade",
+					"@angular/router",
+					"@angular/language-service",
+					"@angular/localize",
+					"@angular/service-worker"
+				]
+			},
+			"typings": "./types/common.d.ts",
+			"exports": {
+				"./locales/global/*": {
+					"default": "./locales/global/*.js"
+				},
+				"./locales/*": {
+					"types": "./locales/*.d.ts",
+					"default": "./locales/*.js"
+				},
+				"./package.json": {
+					"default": "./package.json"
+				},
+				".": {
+					"types": "./types/common.d.ts",
+					"default": "./fesm2022/common.mjs"
+				},
+				"./http": {
+					"types": "./types/http.d.ts",
+					"default": "./fesm2022/http.mjs"
+				},
+				"./http/testing": {
+					"types": "./types/http-testing.d.ts",
+					"default": "./fesm2022/http-testing.mjs"
+				},
+				"./testing": {
+					"types": "./types/testing.d.ts",
+					"default": "./fesm2022/testing.mjs"
+				},
+				"./upgrade": {
+					"types": "./types/upgrade.d.ts",
+					"default": "./fesm2022/upgrade.mjs"
+				}
+			},
+			"module": "./fesm2022/common.mjs",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages-npm-production",
+				"tmp": "tmp/common_22.1.0-next.1_1781730982314_0.9056547908079622"
+			},
+			"readmeFilename": "README.md",
+			"type": "module",
+			"sideEffects": [
+				"**/global/*.js",
+				"**/closure-locale.*"
+			],
+			"_nodeVersion": "22.22.3",
+			"contributors": []
+		},
+		"22.0.2": {
+			"name": "@angular/common",
+			"description": "Angular - commonly needed directives and services",
+			"version": "22.0.2",
+			"author": {
+				"name": "angular"
+			},
+			"homepage": "https://github.com/angular/angular#readme",
+			"repository": {
+				"url": "git+https://github.com/angular/angular.git",
+				"type": "git",
+				"directory": "packages/common"
+			},
+			"bugs": {
+				"url": "https://github.com/angular/angular/issues"
+			},
+			"engines": {
+				"node": "^22.22.3 || ^24.15.0 || >=26.0.0"
+			},
+			"dependencies": {
+				"tslib": "^2.3.0"
+			},
+			"peerDependencies": {
+				"rxjs": "^6.5.3 || ^7.4.0",
+				"@angular/core": "22.0.2"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "angular",
+					"email": "devops+npm@angular.io"
+				},
+				{
+					"name": "google-wombot",
+					"email": "node-team-npm+wombot@google.com"
+				}
+			],
+			"directories": {},
+			"lastModified": 0,
+			"_id": "@angular/common@22.0.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@angular/common/-/common-22.0.2.tgz",
+				"shasum": "985017d57f31af9b0ccf0f8c00f082b892d89000",
+				"integrity": "sha512-XSkHYRwrM54v4GZ+fg9KU1KbSIE/iQF33VXKo5zqVNKO11MnAbJ59qzyqX/5EzSeogHyBoHApprFKACsCAKm/Q==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEUCIF1+EhAZqSfFHzeFmvSgcOy/Q4eI1B2lOkNsfe6Chl4YAiEA/OtYQzIRBXkv6D4bKclfK0aTVbE7py2ArfVZSwTit2w="
+					}
+				]
+			},
+			"_npmVersion": "10.9.8",
+			"_npmUser": {
+				"name": "google-wombot",
+				"email": "node-team-npm+wombot@google.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "10e9506cd56a3af80d2dd7d0dffe6b8ee14b8b19",
+			"locales": "locales",
+			"typings": "./types/common.d.ts",
+			"ng-update": {
+				"packageGroup": [
+					"@angular/core",
+					"@angular/bazel",
+					"@angular/common",
+					"@angular/compiler",
+					"@angular/compiler-cli",
+					"@angular/animations",
+					"@angular/elements",
+					"@angular/platform-browser",
+					"@angular/platform-browser-dynamic",
+					"@angular/forms",
+					"@angular/platform-server",
+					"@angular/upgrade",
+					"@angular/router",
+					"@angular/language-service",
+					"@angular/localize",
+					"@angular/service-worker"
+				]
+			},
+			"exports": {
+				".": {
+					"types": "./types/common.d.ts",
+					"default": "./fesm2022/common.mjs"
+				},
+				"./http": {
+					"types": "./types/http.d.ts",
+					"default": "./fesm2022/http.mjs"
+				},
+				"./testing": {
+					"types": "./types/testing.d.ts",
+					"default": "./fesm2022/testing.mjs"
+				},
+				"./upgrade": {
+					"types": "./types/upgrade.d.ts",
+					"default": "./fesm2022/upgrade.mjs"
+				},
+				"./locales/*": {
+					"types": "./locales/*.d.ts",
+					"default": "./locales/*.js"
+				},
+				"./http/testing": {
+					"types": "./types/http-testing.d.ts",
+					"default": "./fesm2022/http-testing.mjs"
+				},
+				"./package.json": {
+					"default": "./package.json"
+				},
+				"./locales/global/*": {
+					"default": "./locales/global/*.js"
+				}
+			},
+			"module": "./fesm2022/common.mjs",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/common_22.0.2_1781730502269_0.28439767364516433",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"type": "module",
+			"sideEffects": [
+				"**/global/*.js",
+				"**/closure-locale.*"
+			],
+			"_nodeVersion": "22.22.3",
+			"contributors": []
+		},
+		"22.1.0-next.2": {
+			"name": "@angular/common",
+			"description": "Angular - commonly needed directives and services",
+			"version": "22.1.0-next.2",
+			"author": {
+				"name": "angular"
+			},
+			"homepage": "https://github.com/angular/angular#readme",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/angular/angular.git",
+				"directory": "packages/common"
+			},
+			"bugs": {
+				"url": "https://github.com/angular/angular/issues"
+			},
+			"engines": {
+				"node": "^22.22.3 || ^24.15.0 || >=26.0.0"
+			},
+			"dependencies": {
+				"tslib": "^2.3.0"
+			},
+			"peerDependencies": {
+				"@angular/core": "22.1.0-next.2",
+				"rxjs": "^6.5.3 || ^7.4.0"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "angular",
+					"email": "devops+npm@angular.io"
+				},
+				{
+					"name": "google-wombot",
+					"email": "node-team-npm+wombot@google.com"
+				}
+			],
+			"directories": {},
+			"lastModified": 0,
+			"_id": "@angular/common@22.1.0-next.2",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@angular/common/-/common-22.1.0-next.2.tgz",
+				"shasum": "7def00cf1562ce68f48f9e36d8eb6b7bcbc5c352",
+				"integrity": "sha512-5Ev6DI+xEQGK/4RS8uoSwwwNZqnNWZoOAn50xWZYFgzLe/FfOooZEFK3CJnf2KaK3Y0PjiHaowxCZ+ME6M+0Mg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEQCIBewEIz42FqDBhDunbCBRC5KTFPbK8kwWaBRhCxKS9QVAiAdVndZSFmoZYh0/ER61j11BgEwNPqD8ompmnYyqdjjXg=="
+					}
+				]
+			},
+			"_npmVersion": "10.9.8",
+			"_npmUser": {
+				"name": "google-wombot",
+				"email": "node-team-npm+wombot@google.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "31c249c70c70cee2cfd59a0ea0689f9edae3d71a",
+			"locales": "locales",
+			"ng-update": {
+				"packageGroup": [
+					"@angular/core",
+					"@angular/bazel",
+					"@angular/common",
+					"@angular/compiler",
+					"@angular/compiler-cli",
+					"@angular/animations",
+					"@angular/elements",
+					"@angular/platform-browser",
+					"@angular/platform-browser-dynamic",
+					"@angular/forms",
+					"@angular/platform-server",
+					"@angular/upgrade",
+					"@angular/router",
+					"@angular/language-service",
+					"@angular/localize",
+					"@angular/service-worker"
+				]
+			},
+			"typings": "./types/common.d.ts",
+			"exports": {
+				"./locales/global/*": {
+					"default": "./locales/global/*.js"
+				},
+				"./locales/*": {
+					"types": "./locales/*.d.ts",
+					"default": "./locales/*.js"
+				},
+				"./package.json": {
+					"default": "./package.json"
+				},
+				".": {
+					"types": "./types/common.d.ts",
+					"default": "./fesm2022/common.mjs"
+				},
+				"./http": {
+					"types": "./types/http.d.ts",
+					"default": "./fesm2022/http.mjs"
+				},
+				"./http/testing": {
+					"types": "./types/http-testing.d.ts",
+					"default": "./fesm2022/http-testing.mjs"
+				},
+				"./testing": {
+					"types": "./types/testing.d.ts",
+					"default": "./fesm2022/testing.mjs"
+				},
+				"./upgrade": {
+					"types": "./types/upgrade.d.ts",
+					"default": "./fesm2022/upgrade.mjs"
+				}
+			},
+			"module": "./fesm2022/common.mjs",
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages-npm-production",
+				"tmp": "tmp/common_22.1.0-next.2_1782401664525_0.4697294963793852"
+			},
+			"readmeFilename": "README.md",
+			"type": "module",
+			"sideEffects": [
+				"**/global/*.js",
+				"**/closure-locale.*"
+			],
+			"_nodeVersion": "22.23.1",
+			"contributors": []
+		},
+		"22.0.3": {
+			"name": "@angular/common",
+			"description": "Angular - commonly needed directives and services",
+			"version": "22.0.3",
+			"author": {
+				"name": "angular"
+			},
+			"homepage": "https://github.com/angular/angular#readme",
+			"repository": {
+				"url": "git+https://github.com/angular/angular.git",
+				"type": "git",
+				"directory": "packages/common"
+			},
+			"bugs": {
+				"url": "https://github.com/angular/angular/issues"
+			},
+			"engines": {
+				"node": "^22.22.3 || ^24.15.0 || >=26.0.0"
+			},
+			"dependencies": {
+				"tslib": "^2.3.0"
+			},
+			"peerDependencies": {
+				"rxjs": "^6.5.3 || ^7.4.0",
+				"@angular/core": "22.0.3"
+			},
+			"license": "MIT",
+			"maintainers": [
+				{
+					"name": "angular",
+					"email": "devops+npm@angular.io"
+				},
+				{
+					"name": "google-wombot",
+					"email": "node-team-npm+wombot@google.com"
+				}
+			],
+			"directories": {},
+			"lastModified": 0,
+			"_id": "@angular/common@22.0.3",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@angular/common/-/common-22.0.3.tgz",
+				"shasum": "ebd025107adccbaac8186297d7720ea45829a776",
+				"integrity": "sha512-LRglsR4Xerw/vrqoEMd489fF5PMJZ3kqGAPwO1332S42lN5KXlYITCB8WJw1iIqvoBqZvlR9R8u85cLUsfDzbg==",
+				"signatures": [
+					{
+						"keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+						"sig": "MEUCIQDPhPZtRkQrpOuMD/mUvAdLUZRPT7cNZHOYNbU5l64JEQIgXuZicFyN6aS3L7Bw+8/BdtIi/TB8oMf6Pl2CYcgBMdo="
+					}
+				]
+			},
+			"_npmVersion": "10.9.8",
+			"_npmUser": {
+				"name": "google-wombot",
+				"email": "node-team-npm+wombot@google.com"
+			},
+			"_hasShrinkwrap": false,
+			"gitHead": "72c9a3f6a6b30224c557510dd36fb30624af8f36",
+			"locales": "locales",
+			"typings": "./types/common.d.ts",
+			"ng-update": {
+				"packageGroup": [
+					"@angular/core",
+					"@angular/bazel",
+					"@angular/common",
+					"@angular/compiler",
+					"@angular/compiler-cli",
+					"@angular/animations",
+					"@angular/elements",
+					"@angular/platform-browser",
+					"@angular/platform-browser-dynamic",
+					"@angular/forms",
+					"@angular/platform-server",
+					"@angular/upgrade",
+					"@angular/router",
+					"@angular/language-service",
+					"@angular/localize",
+					"@angular/service-worker"
+				]
+			},
+			"exports": {
+				".": {
+					"types": "./types/common.d.ts",
+					"default": "./fesm2022/common.mjs"
+				},
+				"./http": {
+					"types": "./types/http.d.ts",
+					"default": "./fesm2022/http.mjs"
+				},
+				"./testing": {
+					"types": "./types/testing.d.ts",
+					"default": "./fesm2022/testing.mjs"
+				},
+				"./upgrade": {
+					"types": "./types/upgrade.d.ts",
+					"default": "./fesm2022/upgrade.mjs"
+				},
+				"./locales/*": {
+					"types": "./locales/*.d.ts",
+					"default": "./locales/*.js"
+				},
+				"./http/testing": {
+					"types": "./types/http-testing.d.ts",
+					"default": "./fesm2022/http-testing.mjs"
+				},
+				"./package.json": {
+					"default": "./package.json"
+				},
+				"./locales/global/*": {
+					"default": "./locales/global/*.js"
+				}
+			},
+			"module": "./fesm2022/common.mjs",
+			"_npmOperationalInternal": {
+				"tmp": "tmp/common_22.0.3_1782400244515_0.5515979498375823",
+				"host": "s3://npm-registry-packages-npm-production"
+			},
+			"type": "module",
+			"sideEffects": [
+				"**/global/*.js",
+				"**/closure-locale.*"
+			],
+			"_nodeVersion": "22.23.1",
+			"contributors": []
 		}
 	},
 	"time": {
@@ -116769,7 +117271,7 @@
 		"19.1.0-next.1": "2024-12-04T15:21:34.034Z",
 		"19.1.0-next.2": "2024-12-04T19:30:21.072Z",
 		"19.1.0-next.0": "2024-11-26T17:59:04.855Z",
-		"modified": "2026-06-10T20:41:16.334Z",
+		"modified": "2026-06-25T15:34:24.914Z",
 		"19.1.0-next.3": "2024-12-12T22:42:44.002Z",
 		"19.1.0-next.4": "2024-12-18T19:05:53.961Z",
 		"14.2.6": "2022-10-12T17:51:51.846Z",
@@ -117653,11 +118155,15 @@
 		"10.0.7": "2020-07-30T23:48:08.050Z",
 		"10.0.6": "2020-07-28T21:59:18.051Z",
 		"5.0.0-rc.9": "2017-10-31T04:22:29.830Z",
-		"10.0.5": "2020-07-22T16:45:26.936Z"
+		"10.0.5": "2020-07-22T16:45:26.936Z",
+		"22.1.0-next.1": "2026-06-17T21:16:22.554Z",
+		"22.0.2": "2026-06-17T21:08:22.492Z",
+		"22.1.0-next.2": "2026-06-25T15:34:24.791Z",
+		"22.0.3": "2026-06-25T15:10:44.656Z"
 	},
 	"users": {},
 	"dist-tags": {
-		"next": "22.1.0-next.0",
+		"next": "22.1.0-next.2",
 		"v5-lts": "5.2.11",
 		"v17-lts": "17.3.12",
 		"v10-lts": "10.2.5",
@@ -117676,12 +118182,12 @@
 		"v13-lts": "13.4.0",
 		"v14-lts": "14.3.0",
 		"v20-lts": "20.3.25",
-		"latest": "22.0.1"
+		"latest": "22.0.3"
 	},
 	"_uplinks": {
 		"artifactory-sabadell": {
-			"etag": "28fcdfe6258b38f684b8a99778b471a135db6697",
-			"fetched": 1781195914463
+			"etag": "c74916909efce0dcfe8f47d7db851404e641814f",
+			"fetched": 1782459808772
 		}
 	},
 	"_distfiles": {
@@ -123019,10 +123525,30 @@
 			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@angular/common/-/common-10.0.5.tgz",
 			"sha": "f1c1b8671dbacc263d5d4f63606a82bc968644ff",
 			"registry": "artifactory-sabadell"
+		},
+		"common-22.1.0-next.1.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@angular/common/-/common-22.1.0-next.1.tgz",
+			"sha": "090829fbaa5e67cd138dbccb580604606ad50e61",
+			"registry": "artifactory-sabadell"
+		},
+		"common-22.0.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@angular/common/-/common-22.0.2.tgz",
+			"sha": "985017d57f31af9b0ccf0f8c00f082b892d89000",
+			"registry": "artifactory-sabadell"
+		},
+		"common-22.1.0-next.2.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@angular/common/-/common-22.1.0-next.2.tgz",
+			"sha": "7def00cf1562ce68f48f9e36d8eb6b7bcbc5c352",
+			"registry": "artifactory-sabadell"
+		},
+		"common-22.0.3.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@angular/common/-/common-22.0.3.tgz",
+			"sha": "ebd025107adccbaac8186297d7720ea45829a776",
+			"registry": "artifactory-sabadell"
 		}
 	},
 	"_attachments": {},
-	"_rev": "5-c5a1334d548b08ef",
+	"_rev": "8-fafe082dfb4e69ec",
 	"_id": "@angular/common",
 	"readme": ""
 }
