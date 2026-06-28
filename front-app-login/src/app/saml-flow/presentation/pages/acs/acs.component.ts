@@ -54,6 +54,11 @@ export class ACSComponent implements OnInit {
 
   private async forwardSamlResponseToNetScaler(response: AcsResponse, netscalerAcsUrl: string): Promise<void> {
     await this.flowConfirmation.confirm({
+      title: 'Paso SAML: adaptador ACS local completado',
+      description: 'El navegador ha llegado a /saml/acs?responseId=... y Angular ha recuperado SAMLResponse y RelayState desde el adaptador local. Termina aqui la intervencion del adaptador SAML de la POC.',
+    });
+
+    await this.flowConfirmation.confirm({
       title: 'Paso SAML: validateSAMLResponse NetScaler',
       description: `NEO ha recuperado SAMLResponse y RelayState. Construye un formulario POST hacia ${netscalerAcsUrl}; el navegador lo enviará a NetScaler para validar la aserción y emitir la cookie Citrix.`,
     });

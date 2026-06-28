@@ -63,12 +63,15 @@ export class FlowTraceService {
       second: '2-digit',
     }).format(new Date());
 
+    const diagram = this.createDiagram(step);
+    this.logStepToConsole(step, diagram);
+
     this.updateSteps([
       ...this.stepsSubject.value.map((currentStep) => ({ ...currentStep, expanded: false })),
       {
         ...step,
         timestamp,
-        diagram: this.createDiagram(step),
+        diagram,
         completed: false,
         expanded: true,
       },
@@ -200,19 +203,19 @@ export class FlowTraceService {
       };
     }
 
-    if (text.includes('validatesamlresponse')) {
+    if (text.includes('adaptador acs local completado')) {
       return {
         left: 'Neo Angular',
-        right: 'NetScaler',
+        right: 'PingAM',
         leftFrame: 'Navegador',
-        request: 'POST /validateSAMLResponse',
-        response: '302 /saml/resources',
+        request: 'GET /SSORedirect',
+        response: '200 payload ACS',
         requestFromFrame: true,
         responseToFrame: true,
         zone: 'saml',
-        backendInfo: '1. Tras /token, Angular carga /saml/authorization-request.\n2. Ese componente formaliza /authnRequest contra NetScaler.\n3. NetScaler responde 302 Location a PingAM con SAMLRequest + RelayState.\n4. El navegador sigue /SSORedirect con SSO Cookie.\n5. PingAM responde 200 OK text/html con form autoenviado a ACS NEO.\n6. Angular recupera SAMLResponse + RelayState.\n7. Navegador envia POST /validateSAMLResponse.\n\nbody form-urlencoded:\nSAMLResponse=<base64>\nRelayState=<relay>\n\nRespuesta esperada:\n302 Location: /saml/resources\nSet-Cookie: Citrix Session Cookie',
+        backendInfo: '1. Tras /token, Angular carga /saml/authorization-request.\n2. Ese componente formaliza /authnRequest contra NetScaler.\n3. NetScaler responde 302 Location a PingAM con SAMLRequest + RelayState.\n4. El navegador sigue /SSORedirect con SSO Cookie.\n5. PingAM responde 200 OK text/html al navegador: HTML con form autoenviado.\n6. Local: el form POST llega al adaptador ACS, que guarda SAMLResponse + RelayState y responde 303 a /saml/acs?responseId=...\n7. Angular ACS carga esa ruta y recupera el payload por responseId.\n\nFin de la intervencion del adaptador local:\n{ samlResponse, relayState }',
         sequence: {
-          actors: ['Neo Angular', 'Navegador', 'NetScaler', 'PingAM', 'ACS NEO / adaptador local'],
+          actors: ['Neo Angular', 'Navegador', 'NetScaler', 'PingAM', 'Adaptador ACS local'],
           messages: [
             {
               from: 0,
@@ -242,30 +245,30 @@ export class FlowTraceService {
               from: 3,
               to: 1,
               label: '200 OK text/html',
-              detail: 'HTML con form autoenviado y campos SAMLResponse + RelayState',
+              detail: 'Respuesta al navegador: HTML con form autoenviado y campos SAMLResponse + RelayState',
             },
             {
               from: 1,
               to: 4,
-              label: 'POST ACS NEO',
-              detail: 'ACS URL registrada en PingAM; formulario autoenviado, no XHR',
+              label: 'POST /saml/acs',
+              detail: 'Local: recibe SAMLResponse + RelayState del form autoenviado; no es XHR',
             },
             {
               from: 4,
               to: 1,
               label: '303 See Other',
-              detail: 'Local: el adaptador redirige a Angular con responseId',
+              detail: 'Location: /saml/acs?responseId=...; solo viaja el id, no la SAMLResponse',
             },
             {
               from: 1,
               to: 0,
-              label: 'GET /saml/acs',
+              label: 'GET /saml/acs?responseId=...',
               detail: 'El navegador carga la ruta ACS de Angular',
             },
             {
               from: 0,
               to: 4,
-              label: 'GET acs-response',
+              label: 'GET /saml/acs-response/{responseId}',
               detail: 'Solo local: Angular recupera SAMLResponse + RelayState por responseId',
             },
             {
@@ -274,6 +277,25 @@ export class FlowTraceService {
               label: '200 payload ACS',
               detail: '{ samlResponse, relayState }',
             },
+          ],
+        },
+      };
+    }
+
+    if (text.includes('validatesamlresponse')) {
+      return {
+        left: 'Neo Angular',
+        right: 'NetScaler',
+        leftFrame: 'Navegador',
+        request: 'POST /validateSAMLResponse',
+        response: '302 /saml/resources',
+        requestFromFrame: true,
+        responseToFrame: true,
+        zone: 'saml',
+        backendInfo: '1. Angular ya tiene SAMLResponse + RelayState.\n2. Angular crea un formulario POST hacia NetScaler.\n3. El navegador envia POST /validateSAMLResponse.\n4. NetScaler valida la asercion SAML, emite la Citrix Session Cookie y redirige a /saml/resources.\n\nbody form-urlencoded:\nSAMLResponse=<base64>\nRelayState=<relay>\n\nRespuesta esperada:\n302 Location: /saml/resources\nSet-Cookie: Citrix Session Cookie',
+        sequence: {
+          actors: ['Neo Angular', 'Navegador', 'NetScaler'],
+          messages: [
             {
               from: 0,
               to: 1,
@@ -318,11 +340,12 @@ export class FlowTraceService {
     if (text.includes('oauth: inicio')) {
       return {
         left: 'Neo Angular',
-        right: 'Zona OAuth',
+        right: 'PingAM',
         leftFrame: 'Navegador',
-        request: 'Inicia flujo',
-        response: 'Prepara authorize tree',
+        request: 'POST /authenticate {}',
+        response: '200 RedirectCallback',
         zone: 'oauth',
+        backendInfo: 'POST /authenticate\n\nbody: {}\nresponse: 200 OK\n{ authId, callbacks: [RedirectCallback] }',
       };
     }
 
@@ -332,48 +355,70 @@ export class FlowTraceService {
         right: 'Apigee / PingAM',
         leftFrame: 'Navegador',
         request: 'POST /authenticate',
-        response: 'Evalua arbol',
+        response: '200 RedirectCallback',
         zone: 'oauth',
-        backendInfo: 'POST /authenticate\n\nbody: <empty>\nresponse: primer callback del arbol',
+        backendInfo: 'POST /authenticate\n\nbody: {}\nresponse: primer callback del arbol: RedirectCallback',
       };
     }
 
     if (text.includes('redirectcallback')) {
       return {
         left: 'Neo Angular',
-        right: 'Entra ID',
+        right: 'PingAM / Entra ID',
         leftFrame: 'Navegador',
-        request: 'RedirectCallback',
-        response: 'SSO / error',
+        request: 'form GET redirectUrl',
+        response: 'navegacion externa',
         requestFromFrame: true,
         responseToFrame: true,
         zone: 'oauth',
-        backendInfo: 'RedirectCallback\n\nobjetivo: Entra ID\nfallback: continuar arbol PingAM',
+        backendInfo: '200 RedirectCallback\n\nAngular extrae output.redirectUrl y crea un form GET. El navegador abandona Angular hacia Entra ID/PingAM.',
+        sequence: {
+          actors: ['Neo Angular', 'Navegador', 'PingAM', 'Entra ID'],
+          messages: [
+            {
+              from: 2,
+              to: 0,
+              label: '200 RedirectCallback',
+              detail: 'authId + output.redirectUrl',
+            },
+            {
+              from: 0,
+              to: 1,
+              label: 'form GET redirectUrl',
+              detail: 'Angular no rellena el callback; usa redirectUrl',
+            },
+            {
+              from: 1,
+              to: 3,
+              label: 'GET Entra ID /authorize',
+              detail: 'El navegador sale del contexto Angular',
+            },
+          ],
+        },
       };
     }
 
     if (text.includes('fallback transparente completo')) {
       return {
-        left: 'Neo Angular',
+        left: 'Navegador',
         right: 'PingAM',
-        leftFrame: 'Navegador',
-        request: 'Árbol transparente',
-        response: '200 callbacks',
+        leftFrame: 'Entra ID',
+        request: 'GET Entra ID /authorize',
+        response: '303 See Other',
+        requestFromFrame: true,
+        responseToFrame: true,
         zone: 'oauth',
-        backendInfo: 'PingAM resuelve internamente Entra ID y Kerberos.\n\nResultado final para Angular:\nHTTP 200 OK\nNameCallback + PasswordCallback',
+        backendInfo: 'Navegacion externa tras RedirectCallback\n\nInicio: navegador llega a Entra ID/PingAM\nFin: PingAM responde 303 See Other\nLocation: /login?authId=...',
         sequence: {
-          actors: ['Neo Angular', 'Navegador', 'PingAM', 'Entra ID', 'Kerberos ADGBS.com', 'Kerberos Atenea'],
+          actors: ['Navegador', 'PingAM', 'Entra ID', 'Kerberos ADGBS.com', 'Kerberos Atenea'],
           messages: [
-            { from: 0, to: 2, label: 'POST /authentication {}', detail: 'XHR inicial del árbol OAuth' },
-            { from: 2, to: 0, label: '200 RedirectCallback', detail: 'PingAM devuelve redirectUrl hacia Entra ID' },
-            { from: 0, to: 1, label: 'form GET redirectUrl', detail: 'Angular crea el formulario y el navegador toma el control' },
-            { from: 1, to: 3, label: 'GET /authorize', detail: 'Navegación hacia Entra ID' },
-            { from: 3, to: 2, label: 'error /social/redirect', detail: 'Entra ID devuelve error a PingAM' },
-            { from: 2, to: 4, label: 'validar Kerberos', detail: 'PingAM prueba ADGBS.com internamente' },
-            { from: 4, to: 2, label: 'GSS/KRB error', detail: 'Ticket ausente, inválido o rechazado' },
-            { from: 2, to: 5, label: 'validar Kerberos', detail: 'PingAM prueba Atenea internamente' },
-            { from: 5, to: 2, label: 'GSS/KRB error', detail: 'Segundo dominio Kerberos rechazado' },
-            { from: 2, to: 0, label: '200 Name + Password', detail: 'PingAM cae a credenciales y Angular pinta formulario' },
+            { from: 0, to: 2, label: 'GET Entra ID /authorize', detail: 'El navegador llega a Entra ID/PingAM desde RedirectCallback' },
+            { from: 2, to: 1, label: 'error /social/redirect', detail: 'Entra ID devuelve error a PingAM' },
+            { from: 1, to: 3, label: 'validar Kerberos', detail: 'PingAM prueba ADGBS.com internamente' },
+            { from: 3, to: 1, label: 'GSS/KRB error', detail: 'Ticket ausente, inválido o rechazado' },
+            { from: 1, to: 4, label: 'validar Kerberos', detail: 'PingAM prueba Atenea internamente' },
+            { from: 4, to: 1, label: 'GSS/KRB error', detail: 'Segundo dominio Kerberos rechazado' },
+            { from: 1, to: 0, label: '303 See Other', detail: 'Location: /login?authId=...' },
           ],
         },
       };
@@ -389,7 +434,7 @@ export class FlowTraceService {
         requestFromFrame: true,
         responseToFrame: true,
         zone: 'oauth',
-        backendInfo: 'Entra ID\n\nresultado: error controlado\nsiguiente nodo: Kerberos / HttpCallback',
+        backendInfo: 'Entra ID\n\nresultado: error controlado\nsiguiente nodo: Kerberos interno en PingAM',
       };
     }
 
@@ -398,10 +443,39 @@ export class FlowTraceService {
         left: 'Neo Angular',
         right: 'PingAM',
         leftFrame: 'Navegador',
-        request: 'POST authId',
-        response: 'HttpCallback',
+        request: 'POST /authenticate { authId }',
+        response: '200 callbacks',
         zone: 'oauth',
-        backendInfo: 'POST /authenticate\n\nbody: { authId, callbacks }\nresponse: HttpCallback / siguiente nodo',
+        backendInfo: 'El navegador ha vuelto a /login?authId=...\n\nAngular retoma el árbol:\nPOST /authenticate { authId }\nRespuesta esperada: NameCallback + PasswordCallback',
+        sequence: {
+          actors: ['Neo Angular', 'Navegador', 'PingAM'],
+          messages: [
+            {
+              from: 2,
+              to: 1,
+              label: '303 See Other',
+              detail: 'PingAM devuelve control al navegador',
+            },
+            {
+              from: 1,
+              to: 0,
+              label: 'GET /login?authId=...',
+              detail: 'Angular recupera control y lee authId',
+            },
+            {
+              from: 0,
+              to: 2,
+              label: 'POST /authenticate { authId }',
+              detail: 'XHR de reanudacion del arbol',
+            },
+            {
+              from: 2,
+              to: 0,
+              label: '200 Name + Password',
+              detail: 'Callback de credenciales',
+            },
+          ],
+        },
       };
     }
 
@@ -432,6 +506,79 @@ export class FlowTraceService {
       };
     }
 
+    if (text.includes('autenticación ok') || text.includes('autenticacion ok')) {
+      return {
+        left: 'Neo Angular',
+        right: 'PingAM',
+        leftFrame: 'Navegador',
+        request: 'POST /authenticate',
+        response: '200 tokenId + SSO',
+        responseToFrame: true,
+        zone: 'oauth',
+        backendInfo: 'POST /authenticate\n\nbody: { authId, NameCallback, PasswordCallback }\nresponse: 200 OK + tokenId\nSet-Cookie: SSO Cookie',
+        sequence: {
+          actors: ['Neo Angular', 'Navegador', 'PingAM'],
+          messages: [
+            {
+              from: 0,
+              to: 2,
+              label: 'POST /authenticate',
+              detail: 'body: authId + callbacks con usuario/password',
+            },
+            {
+              from: 2,
+              to: 0,
+              label: '200 OK tokenId',
+              detail: 'Set-Cookie SSO; Angular recibe AUTH_SUCCESS',
+            },
+          ],
+        },
+      };
+    }
+
+    if (text.includes('authorize')) {
+      return {
+        left: 'Neo Angular',
+        right: 'PingAM',
+        leftFrame: 'Navegador',
+        request: 'POST /authorize',
+        response: '302 /token',
+        requestFromFrame: true,
+        responseToFrame: true,
+        zone: 'oauth',
+        backendInfo: 'form POST /authorize\n\nparams: client_id, redirect_uri, response_type=code, scope, state, code_challenge, csrf/assertion=tokenId\nRespuesta: 302 Found\nLocation: /token?code=...&state=...',
+        sequence: {
+          actors: ['Neo Angular', 'Navegador', 'PingAM'],
+          messages: [
+            {
+              from: 0,
+              to: 1,
+              label: 'form POST /authorize',
+              detail: 'Angular crea formulario con params OAuth; no authId',
+            },
+            {
+              from: 1,
+              to: 2,
+              label: 'POST /authorize',
+              detail: 'El navegador envia params + csrf/assertion=tokenId',
+            },
+            {
+              from: 2,
+              to: 1,
+              label: '302 Found',
+              detail: 'Location: /token?code=...&state=...',
+            },
+            {
+              from: 1,
+              to: 0,
+              label: 'GET /token?code=...&state=...',
+              detail: 'El navegador carga la ruta Angular de tokens',
+            },
+          ],
+        },
+      };
+    }
+
     if (text.includes('credenciales')) {
       return {
         left: 'Neo Angular',
@@ -444,42 +591,32 @@ export class FlowTraceService {
       };
     }
 
-    if (text.includes('autenticacion ok')) {
-      return {
-        left: 'Neo Angular',
-        right: 'PingAM',
-        leftFrame: 'Navegador',
-        request: 'Set-Cookie SSO',
-        response: 'AUTH_SUCCESS',
-        responseToFrame: true,
-        zone: 'oauth',
-        backendInfo: 'AUTH_SUCCESS\n\nsuccessUrl: /dashboard\ntokenId: mock-token\nrealm: /',
-      };
-    }
-
-    if (text.includes('authorize')) {
-      return {
-        left: 'Neo Angular',
-        right: 'PingAM OAuth',
-        leftFrame: 'Navegador',
-        request: 'GET /authorize',
-        response: 'code + state',
-        requestFromFrame: true,
-        responseToFrame: true,
-        zone: 'oauth',
-        backendInfo: 'POST /authorize\n\nparams: clientId, redirectUri, csrf\nresponse: code + state',
-      };
-    }
-
     if (text.includes('token')) {
       return {
         left: 'Neo Angular',
         right: 'PingAM OAuth',
         leftFrame: 'Navegador',
         request: 'POST /token',
-        response: 'OIDC/OAuth tokens',
+        response: '200 OIDC/OAuth tokens',
         zone: 'oauth',
-        backendInfo: 'POST /token\n\nbody: authorization_code\nresponse: id_token + access_token',
+        backendInfo: 'POST /token\n\nbody: code, state, clientId, redirectUri\nSSO/tokenId: token_sso\nresponse: id_token + access_token',
+        sequence: {
+          actors: ['Neo Angular', 'Navegador', 'PingAM'],
+          messages: [
+            {
+              from: 0,
+              to: 2,
+              label: 'POST /token',
+              detail: 'TokensComponent envia code/state + clientId/redirectUri',
+            },
+            {
+              from: 2,
+              to: 0,
+              label: '200 OK tokens',
+              detail: 'id_token + access_token; Angular guarda OIDC/OAuth',
+            },
+          ],
+        },
       };
     }
 
@@ -490,5 +627,17 @@ export class FlowTraceService {
       request: 'Accion',
       response: 'Respuesta',
     };
+  }
+
+  private logStepToConsole(
+    step: Pick<FlowTraceStep, 'title' | 'description'>,
+    diagram: FlowTraceDiagram
+  ): void {
+    const logger = console as Console & { groupCollapsed?: (...data: unknown[]) => void; groupEnd?: () => void };
+    logger.groupCollapsed?.(`[NEO flow] ${step.title}`);
+    console.log(step.description);
+    if (diagram.backendInfo) console.log(diagram.backendInfo);
+    if (diagram.sequence) console.log('sequence', diagram.sequence);
+    logger.groupEnd?.();
   }
 }

@@ -30,6 +30,65 @@
   cursor: pointer;
 }
 
+.shell-header__cookies {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.shell-cookie {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 32px;
+  padding: 0 12px;
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+  background: #f8fafc;
+  border: 1px solid #d8dee6;
+  border-radius: 999px;
+}
+
+.shell-cookie__check {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 50%;
+}
+
+.shell-cookie__check::after {
+  content: '';
+  width: 7px;
+  height: 4px;
+  border-left: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  transform: rotate(-45deg) translate(1px, -1px);
+}
+
+.shell-cookie--active {
+  color: #0f5132;
+  background: #ecfdf3;
+  border-color: #86efac;
+}
+
+.shell-cookie--active .shell-cookie__check {
+  background: #16a34a;
+  border-color: #16a34a;
+}
+
+.shell-cookie--active .shell-cookie__check::after {
+  border-color: #ffffff;
+}
+
 .shell-body {
   display: grid;
   grid-template-columns: 200px minmax(180px, 1fr) 10px var(--flow-panel-width, 520px);
@@ -356,16 +415,6 @@
   pointer-events: none;
 }
 
-.shell-sequence--with-info {
-  cursor: help;
-}
-
-.shell-sequence--with-info:hover,
-.shell-sequence--with-info:focus {
-  outline: 1px solid #93c5fd;
-  outline-offset: 2px;
-}
-
 .shell-sequence-wide {
   max-width: 100%;
   overflow-x: auto;
@@ -504,39 +553,6 @@
 .shell-sequence-wide__message--back .shell-sequence-wide__detail {
   margin-left: auto;
   text-align: right;
-}
-
-.shell-sequence__tooltip {
-  position: absolute;
-  left: 50%;
-  top: 18px;
-  z-index: 3;
-  width: min(360px, calc(100% - 32px));
-  max-height: 150px;
-  margin: 0;
-  padding: 14px 16px;
-  overflow: auto;
-  color: #f8fafc;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
-  font-size: 12px;
-  line-height: 1.45;
-  white-space: pre-wrap;
-  background: rgba(17, 24, 39, 0.94);
-  border: 1px solid rgba(148, 163, 184, 0.35);
-  border-radius: 6px;
-  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.28);
-  opacity: 0;
-  pointer-events: none;
-  transform: translate(-50%, 6px);
-  transition:
-    opacity 0.16s ease,
-    transform 0.16s ease;
-}
-
-.shell-sequence--with-info:hover .shell-sequence__tooltip,
-.shell-sequence--with-info:focus .shell-sequence__tooltip {
-  opacity: 1;
-  transform: translate(-50%, 0);
 }
 
 .shell-sequence__actor {

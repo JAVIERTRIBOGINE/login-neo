@@ -90,27 +90,27 @@ hasta `access_token` + `id_token`.
 
 | Punto | De -> A | Tipo de llamada | Status y respuesta | Resultado en front |
 |---:|---|---|---|---|
-| 4 | Angular `LoginComponent` -> PingAM | XHR (`AuthManagerService.makeDriverCall`; DataManager o `HttpClient/fetch`) | `POST /employees/party-authentication/v1/authentication` con body `{}`. Esperado: `200 OK` JSON con `RedirectCallback`. | `AuthManager` guarda `authId` y procesa el primer callback. |
-| 5 | PingAM -> Angular y Angular -> Entra ID | Respuesta XHR + formulario `GET` construido por Angular | PingAM responde `200 OK` JSON con `RedirectCallback`. Angular no enriquece el callback: extrae `output.redirectUrl`, construye form `GET` y lo envía. | El navegador navega a Entra ID; Angular abandona temporalmente el contexto. |
-| 6 | Entra ID -> Navegador -> PingAM | Redirect del navegador | Entra ID responde con redirect a `redirect_uri` de PingAM: `GET /social/redirect?error=...&error_description=...&state=...`. Body: ninguno. | PingAM consume el error de Entra ID y continúa el árbol. Angular no interviene. |
-| 7 | PingAM | Evaluación interna del árbol | Sin llamada front. PingAM consume el error de Entra ID y pasa a autenticación transparente. | Angular no interviene. |
+| 4 | Angular `LoginComponent` -> PingAM | XHR (`AuthManagerService.makeDriverCall`; DataManager o `HttpClient/fetch`) | `POST /employees/party-authentication/v1/authentication` con body `{}`. Respuesta `200 OK` JSON `{ authId, callbacks: [RedirectCallback] }`. | `AuthManager` guarda `authId` y usa `RedirectCallback.output.redirectUrl`. |
+| 5 | Angular/Navegador -> Entra ID/PingAM | Formulario `GET` autoenviado; no es XHR | Angular crea form con los datos de `redirectUrl`. El navegador sale del contexto Angular hacia Entra ID/PingAM. | Angular abandona contexto temporalmente. |
+| 6 | Entra ID -> PingAM | Redirect/error federado | Entra ID falla y vuelve al `redirect_uri` de PingAM con `error`, `error_description`, `state` o equivalente. | Angular no recibe este error. |
+| 7 | PingAM | Evaluación interna del árbol | PingAM consume el error de Entra ID y decide probar autenticación transparente. | Angular no interviene. |
 | 7.1 | PingAM -> Kerberos ADGBS.com | Validación interna Kerberos/SPNEGO | Sin HTTP front. Resultado esperado en este escenario: fallo por ausencia de ticket válido o validación rechazada. | El fallo no se expone al navegador. |
 | 7.2 | PingAM -> Kerberos Atenea | Validación interna Kerberos/SPNEGO | Sin HTTP front. Resultado esperado en este escenario: fallo por ausencia de ticket válido o validación rechazada. | El fallo no se expone al navegador. |
 | 7.3 | Kerberos/SPNEGO -> PingAM | Error interno GSS/Kerberos | No es JSON front. PingAM detecta error SPNEGO/Kerberos (`GSSException` o `KRB-ERROR`) y decide caer a credenciales. | Angular sigue sin intervenir. |
-| 8 | PingAM -> Angular | Respuesta al XHR de reanudación de árbol | Objetivo: `200 OK` JSON `{ authId, callbacks: [NameCallback, PasswordCallback] }`. | Angular publica `REDIRECT_CREDENTIALS` y pinta formulario usuario/password. |
-| 9 | Usuario -> Angular | Interacción UI | Sin HTTP | Usuario introduce credenciales en `LoginComponent`. |
-| 10 | Angular -> PingAM | XHR (`AuthManagerService.submitCredentials`) | `POST /authentication` con `{ authId, callbacks: [NameCallback, PasswordCallback] }`. Esperado: `200 OK` JSON de éxito. | PingAM valida usuario/password. |
-| 11 | PingAM -> Angular/navegador | Respuesta XHR con cookie | `200 OK` JSON `{ successUrl, tokenId, realm }` + `Set-Cookie` SSO HttpOnly. | `AuthManager` publica `AUTH_SUCCESS`; `LoginComponent` navega a `/authorize`. |
-| 12 | Angular `AuthorizeComponent` -> PingAM | XHR/DataManager o `fetch` local | `POST /oauth2/authorize`. Local/mock: `200 OK` JSON `{ url: "<redirectUri>?code=...&state=..." }`; real puede devolver `302 Location` capturado por DataManager. | Angular extrae `code` + `state` y navega internamente a `/token?code=&state=`. |
-| 13 | Angular `GetTokensComponent` -> PingAM | XHR/DataManager o `fetch` local | `POST /oauth2/token`. Esperado: `200 OK` JSON `{ access_token, id_token }` + refresh de SSO Cookie si aplica. | Angular guarda tokens en Data Manager. |
-| 14 | Angular/Navegador -> NetScaler | Navegación de navegador; no es XHR | `GET /authnRequest` o `POST /authnRequest` según configuración. NetScaler responde `302 Found` + `Location: <PingAM SSO>?SAMLRequest=...&RelayState=...`. | Se continúa SAML para obtener `SAMLResponse`; no se llama aún a `/resources`. |
+| 8 | PingAM -> Navegador -> Angular | Redirect de navegador | PingAM redirige a Angular: `303 See Other` / `Location: /login?authId=...`. | El navegador devuelve control a `LoginComponent`. |
+| 9 | Angular `LoginComponent` -> PingAM | XHR de reanudación | `POST /authentication` con body `{ authId }`. Respuesta `200 OK` JSON `{ authId, callbacks: [NameCallback, PasswordCallback] }`. | Angular publica `REDIRECT_CREDENTIALS` y pinta formulario usuario/password. |
+| 10 | Usuario -> Angular | Interacción UI | Sin HTTP | Usuario introduce credenciales en `LoginComponent`. |
+| 11 | Angular -> PingAM | XHR (`AuthManagerService.submitCredentials`) | `POST /authentication` con `{ authId, callbacks: [NameCallback, PasswordCallback] }` rellenados. | PingAM valida usuario/password. |
+| 12 | PingAM -> Angular/navegador | Respuesta XHR con cookie | `200 OK` JSON `{ successUrl, tokenId, realm }` + `Set-Cookie` SSO HttpOnly. | `AuthManager` publica `AUTH_SUCCESS`; `LoginComponent` navega a `/authorize`. |
+| 13 | Angular/Navegador -> PingAM | Formulario POST autoenviado; no es XHR | `POST /oauth2/authorize` con params OAuth y `csrf/assertion=tokenId`. Respuesta esperada: `302 Found` + `Location: /token?code=...&state=...`. | El navegador sigue el redirect y carga `GetTokensComponent`. |
+| 14 | Angular `GetTokensComponent` -> PingAM | XHR/DataManager o `fetch` local | `POST /oauth2/token`. Esperado: `200 OK` JSON `{ access_token, id_token }` + refresh de SSO Cookie si aplica. | Angular guarda tokens en Data Manager. |
+| 15 | Angular/Navegador -> NetScaler | Navegación de navegador; no es XHR | `GET /authnRequest` o `POST /authnRequest` según configuración. NetScaler responde `302 Found` + `Location: <PingAM SSO>?SAMLRequest=...&RelayState=...`. | Se continúa SAML para obtener `SAMLResponse`; no se llama aún a `/resources`. |
 
-**Punto crítico de auditoría:** el front no debe pintar pasos intermedios entre
-`RedirectCallback` y la caída a credenciales. La demo debe mostrar un único step
-cuando Angular recibe el `200 OK` con `NameCallback` + `PasswordCallback`,
-explicando ahí el tramo completo PingAM -> Entra ID -> PingAM -> Kerberos
-ADGBS.com -> PingAM -> Kerberos Atenea -> PingAM. En local, el mock simula esa
-vuelta llamando a `resumeAuth(authId)` sin navegación real a Entra ID.
+**Punto crítico de auditoría:** el front debe distinguir tres llamadas
+`/authenticate`: inicio `{}`, reanudación `{ authId }` y credenciales
+rellenadas `{ authId, callbacks }`. Entra ID y Kerberos no se exponen como XHR
+Angular; se representan mediante navegación del navegador y retorno a
+`/login?authId=...`.
 
 ### 3.3 Reentrada SAML tras OAuth y validación de SAMLResponse
 
@@ -144,7 +144,7 @@ Content-Type: application/json
 {}
 ```
 
-#### Punto 5 - `RedirectCallback` de PingAM
+Respuesta:
 
 ```typescript
 {
@@ -153,10 +153,7 @@ Content-Type: application/json
     {
       type: "RedirectCallback",
       output: [
-        {
-          name: "redirectUrl",
-          value: "https://login.microsoftonline.com/{tenant}/oauth2/v2.0/authorize?client_id=...&response_type=code&scope=openid&redirect_uri=https://pingam.../social/redirect&state=..."
-        },
+        { name: "redirectUrl", value: "https://.../authorize?...&state=..." },
         { name: "redirectMethod", value: "GET" }
       ],
       input: [{ name: "IDToken1", value: "" }]
@@ -165,24 +162,52 @@ Content-Type: application/json
 }
 ```
 
-Angular no reenvía este callback enriquecido a `/authenticate`. Usa
-`output.redirectUrl` para crear un formulario `GET` hacia Entra ID:
+#### Punto 5 - salida por RedirectCallback
+
+Angular no enriquece el callback. Extrae `output.redirectUrl`, crea un
+formulario `GET` y el navegador abandona temporalmente Angular hacia
+Entra ID/PingAM.
+
+#### Punto 6 - vuelta a Angular con authId
+
+Tras fallar Entra ID y Kerberos, PingAM devuelve el control al navegador:
 
 ```http
-GET https://login.microsoftonline.com/.../authorize
+303 See Other
+Location: /login?authId=...
 ```
 
-Parámetros habituales: `client_id`, `response_type=code`, `scope=openid`,
-`redirect_uri`, `state`, `nonce` y/o `code_challenge`. Body: ninguno.
+Angular lee `authId` y reanuda:
 
-#### Punto 6 - vuelta de Entra ID a PingAM con error
+```typescript
+POST /employees/party-authentication/v1/authentication
+Content-Type: application/json
 
-```http
-GET https://pingam.../social/redirect?error=login_required&error_description=...&state=...
+{ authId: "eyJhbGci..." }
 ```
 
-La respuesta de Entra ID vuelve a PingAM. Angular no recibe el `error` ni el
-`state` de Entra ID porque el `redirect_uri` pertenece a PingAM.
+Respuesta:
+
+```typescript
+{
+  authId: "eyJhbGci...",
+  callbacks: [
+    {
+      type: "NameCallback",
+      output: [{ name: "prompt", value: "User Name" }],
+      input: [{ name: "IDToken1", value: "" }]
+    },
+    {
+      type: "PasswordCallback",
+      output: [{ name: "prompt", value: "Password" }],
+      input: [{ name: "IDToken2", value: "" }]
+    }
+  ]
+}
+```
+
+Respuesta `200 OK` del segundo `POST /authenticate`. Angular pinta el
+formulario de credenciales y reutiliza estos callbacks rellenando sus `input`.
 
 #### Punto 7.3 - error interno Kerberos/SPNEGO
 
@@ -205,7 +230,7 @@ como fallo GSS/Kerberos, representable así para documentación:
 }
 ```
 
-#### Punto 8 - caída a credenciales
+#### Punto 9 - caída a credenciales
 
 ```typescript
 {
@@ -225,7 +250,7 @@ como fallo GSS/Kerberos, representable así para documentación:
 }
 ```
 
-#### Punto 10 - envío de credenciales
+#### Punto 11 - envío de credenciales
 
 ```typescript
 {
@@ -245,7 +270,7 @@ como fallo GSS/Kerberos, representable así para documentación:
 }
 ```
 
-#### Punto 11 - éxito de autenticación
+#### Punto 12 - éxito de autenticación
 
 ```typescript
 {
@@ -373,15 +398,15 @@ o
 
 | Punto | Estado actual | Acción para cumplir contrato objetivo |
 |---:|---|---|
-| 4 | Implementado en `AuthManagerService.initiateAuth()` con body `{}`. | OK. |
-| 5 | Implementado: `submitRedirectCallback()` crea form `GET`. En local, si la URL contiene `localhost` o `mock-entra-id`, se evita la navegación y se llama a `resumeAuth(authId)`. | OK para real; el atajo local debe mantenerse como simulación explícita. |
-| 6 | En local se simula la vuelta de Entra ID desde `resumeAuth(authId)`; en real la navegación a Entra ID/PingAM debe devolver el árbol ya resuelto o un mecanismo equivalente. | Mantener como contrato con PingAM/Apigee: Angular no pinta pasos intermedios antes del callback de credenciales. |
+| 4 | Implementado en `AuthManagerService.initiateAuth()` con body `{}`. El mock devuelve `RedirectCallback`. | OK. |
+| 5 | Implementado: `submitRedirectCallback()` crea form `GET` con `redirectUrl`; el navegador sale a PingAM/Entra. | OK. No es XHR. |
+| 6-8 | Implementado en mock: `GET /mock-entra-id` simula error Entra ID + Kerberos y redirige `303 /login?authId=...`. | OK como simulación local del tramo externo. |
 | 7 | Front ya no ejecuta Kerberos. Si PingAM devolviera `HttpCallback`, `AuthManager` lo trata como error de contrato. | OK. Kerberos ADGBS.com y Atenea deben resolverse internamente en PingAM. |
-| 8 | El contrato objetivo es `200 OK` con `NameCallback` + `PasswordCallback`; el mock devuelve ese callback con status 200 tras simular Entra ID/Kerberos internamente. | OK. |
-| 10 | Angular reutiliza el callback de credenciales entregado por PingAM y solo rellena los `input` (`IDToken1`, `IDToken2`). | OK. |
-| 11 | Implementado: `AUTH_SUCCESS` guarda `successData` y navega a `/authorize`. | OK. |
-| 12 | Implementado: `authorize()` local usa JSON; DataManager real usa `application/x-www-form-urlencoded`. | Validar con Apigee/PingAM qué content-type espera el entorno real. |
-| 13-14 | Implementado: `getTokens()` obtiene tokens, llama a `setAuthorization()` y navega a `/saml/authorization-request`, que formaliza `/authnRequest`. | OK. No debe navegar a `/saml/resources` antes de validar `SAMLResponse`. |
+| 9 | Implementado: al entrar en `/login?authId=...`, `AuthManagerService.authenticate()` hace `POST /authenticate { authId }` y recibe `NameCallback` + `PasswordCallback`. | OK. |
+| 11 | Angular reutiliza el callback de credenciales entregado por PingAM y solo rellena los `input` (`IDToken1`, `IDToken2`). | OK. |
+| 12 | Implementado: `AUTH_SUCCESS` guarda `successData` y navega a `/authorize`. | OK. |
+| 13 | Implementado: `authorize()` crea formulario POST y el mock responde `302 Location: /token?code=...&state=...`. | OK. Debe verse como navegación/redirect del navegador, no como XHR. |
+| 14-15 | Implementado: `getTokens()` obtiene tokens, llama a `setAuthorization()` y navega a `/saml/authorization-request`, que formaliza `/authnRequest`. | OK. No debe navegar a `/saml/resources` antes de validar `SAMLResponse`. |
 | S6-S7 | Implementado: `GetAuthorizationRequestComponent` rellama `/authnRequest`; `mock-citrix` responde `302` a PingAM; `mock-pingam` devuelve `SAMLResponse` si hay SSO Cookie. | OK. |
 | S8-S9 | Implementado para local: `SamlAcsController` guarda el form POST y `ACSComponent` recupera `{ samlResponse, relayState }` por `responseId`. | OK como adaptador SPA local; en real debe cerrarse cómo llega el POST ACS a Angular/infra NEO. |
 | S10 | Implementado: `ACSComponent` prepara el form y `SamlFormComponent` autoenvía `POST /validateSAMLResponse`; `mock-citrix` valida y responde `302` + Citrix cookie. | OK. El step visual se muestra antes del autoenvío. |
@@ -423,23 +448,15 @@ Instancia Proteo4
 **OAuth Flow — componentes internos:**
 ```
 OAuthFlowComponent (entry point, lazy)
-    └── GET /authorize
-        ├── 200 OK → notifica LoginService: oauth:success
-        └── 401 → navega a AuthenticateComponent
-
-AuthenticateComponent
-    └── POST /authenticate → PingAM vía Apigee
-        └── 302 redirectTo Entra ID
-            [Angular abandona contexto]
-            [Entra ID autentica]
-            [PingAM redirige a NEO /token con ?code=&state=]
-
-CallbackComponent (ruta: /token)
-    └── recibe code + state (verificación anti-CSRF)
-        └── POST /token → access_token + id_token
-            └── almacena en Data Manager
-                └── SSO Cookie establecida en navegador
-                    └── emite oauth:success → LoginService
+    ├── POST /authenticate {} → 200 RedirectCallback
+    ├── form GET redirectUrl → Entra ID/PingAM → 303 /login?authId=...
+    ├── POST /authenticate { authId } → 200 NameCallback + PasswordCallback
+    ├── POST /authenticate { authId, callbacks usuario/password } → 200 tokenId + Set-Cookie SSO
+    ├── form POST /authorize → 302 Location /token?code=&state=
+    └── CallbackComponent (ruta: /token)
+        ├── recibe code + state
+        ├── POST /token → access_token + id_token
+        └── almacena tokens en Data Manager
 ```
 
 **SAML Flow — componentes internos** (implementado en `src/app/saml-flow/`; detalle del flujo en el apartado 3 y en `context-SAML.md`):
@@ -629,7 +646,7 @@ src/app/login/
     │   └── store/           ← NgRx reducers, actions, effects
     └── presentation/
         └── pages/           ← componentes Angular
-            ├── authorize/   ← OAuthFlowComponent (GET /authorize)
+            ├── authorize/   ← AuthorizeComponent (form POST /authorize)
             ├── get-tokens/  ← CallbackComponent (POST /token)
             └── login/ ← LoginComponent (entry point)
 ```
@@ -698,43 +715,38 @@ El `authId` es el identificador de estado del árbol en PingAM. Debe preservarse
 
 ---
 
-### CASO 2 — EntraID falla → navega a Kerberos
+### CASO 2 — EntraID/Kerberos fallan → vuelta a Angular con authId
 
 1-3. Igual que Caso 1 pasos 1-3
 4. EntraID: falla y redirige a PingAM `/social/redirect?error=...`
-5. PingAM: mueve el árbol al nodo Kerberos y responde con `302` hacia `/authenticate?authId=eyJhbGci...`
-6. FRONT: retoma contexto en `/authenticate`, lee `authId` de la URL y ejecuta POST `/authenticate` con body `{ authId: "eyJhbGci..." }`
-7. PingAM: responde con `HttpCallback`
+5. PingAM: prueba Kerberos ADGBS.com internamente y falla
+6. PingAM: prueba Kerberos Atenea internamente y falla
+7. PingAM: redirige al navegador de vuelta a Angular:
+```http
+303 See Other
+Location: /login?authId=eyJhbGci...
+```
+8. FRONT: `LoginComponent` lee `authId` de la URL y ejecuta:
 ```typescript
-{ authId: "eyJhbGci...", callbacks: [{ type: "HttpCallback",
-    output: [{ name: "httpHeader", value: "WWW-Authenticate: Negotiate" }],
-    input:  [{ name: "IDToken1", value: "" }] }] }
+POST /authenticate
+{ authId: "eyJhbGci..." }
+```
+9. PingAM responde:
+```typescript
+{ authId: "eyJhbGci...",
+  callbacks: [
+    { type: "NameCallback",     output: [{ name: "prompt", value: "User Name" }], input: [{ name: "IDToken1", value: "" }] },
+    { type: "PasswordCallback", output: [{ name: "prompt", value: "Password"  }], input: [{ name: "IDToken2", value: "" }] }
+  ] }
 ```
 
 ---
 
-### CASO 3 — Kerberos con éxito
+### CASO 3 — Credenciales
 
-1-2. Igual que Caso 2 pasos 6-7
-3. FRONT: POST `/authenticate` con `{ authId, callbacks }` + `withCredentials: true`. El browser adjunta `Authorization: Negotiate <token>` automáticamente en el header HTTP. El `IDToken1` del body sigue vacío — el token Kerberos (SPNEGO) viaja en el header HTTP, no en el JSON.
-4. PingAM: valida el ticket Kerberos, establece SSO Cookie (`Set-Cookie`) y responde:
-```typescript
-{ successUrl: "/dashboard", tokenId: "AQIC5wM...", realm: "/" }
-```
-
-**Nota sobre `withCredentials: true`:** No es una cabecera HTTP — es una opción del `HttpClient` de Angular que instruye al browser a incluir credenciales del OS (tickets Kerberos, cookies) en la XHR. El browser es quien añade físicamente el header `Authorization: Negotiate`.
-
-**Nota sobre Kerberos Opción B (zero-page):** Si el equipo está en red corporativa con zona de confianza configurada por GPO, el browser puede adjuntar el ticket Kerberos desde la primera llamada sin necesidad del `HttpCallback` intermediario. En este caso el Caso 3 se resuelve directamente desde el primer POST sin pasar por el Caso 2. Esto corresponde al escenario de empleado trabajando desde la oficina.
-
----
-
-### CASO 4 — Kerberos falla → credenciales
-
-1. Igual que Caso 3 paso 3
-2. PingAM: no encuentra `Authorization: Negotiate` válido → responde `401` (**pendiente confirmar con back si el `authId` se preserva en la respuesta del 401**)
-3. FRONT: `catchError(401)` → navega al componente de formulario de credenciales
-4. FRONT: usuario introduce credenciales
-5. FRONT: POST `/authenticate` con:
+1. FRONT: usuario introduce credenciales
+2. FRONT: reutiliza los callbacks recibidos y rellena sus `input`
+3. FRONT: POST `/authenticate` con:
 ```typescript
 { authId: "eyJhbGci...",
   callbacks: [
@@ -742,7 +754,7 @@ El `authId` es el identificador de estado del árbol en PingAM. Debe preservarse
     { type: "PasswordCallback", output: [{ name: "prompt", value: "Password"  }], input: [{ name: "IDToken2", value: "••••••••" }] }
   ] }
 ```
-6. PingAM: valida credenciales, establece SSO Cookie (`Set-Cookie`) y responde:
+4. PingAM: valida credenciales, establece SSO Cookie (`Set-Cookie`) y responde:
 ```typescript
 { successUrl: "/dashboard", tokenId: "AQIC5wM...", realm: "/" }
 ```
@@ -755,10 +767,10 @@ El `authId` es el identificador de estado del árbol en PingAM. Debe preservarse
 |---|---|
 | `authId` | Identifica el estado del árbol PingAM. Sin él, el árbol reinicia desde EntraID. Debe preservarse entre llamadas. |
 | `RedirectCallback` | PingAM pide al front que navegue a una URL externa. El front crea un form y hace submit. Angular pierde el contexto. |
-| `HttpCallback` | PingAM señaliza que necesita Kerberos. El front reenvía con `withCredentials: true`. El browser adjunta el ticket. |
+| `HttpCallback` | No debe llegar al front en esta POC. Kerberos ADGBS.com y Atenea se resuelven internamente en PingAM. |
 | `NameCallback` + `PasswordCallback` | PingAM pide credenciales. El front las recoge del formulario y las envía en el input de cada callback. |
 | SSO Cookie | Se establece como `Set-Cookie` en la respuesta del `/authenticate` exitoso. El front nunca la lee (HttpOnly). Su presencia se infiere por el `200 OK` con `ISuccessOtpRespone`. |
-| `withCredentials: true` | Opción de XHR que permite al browser adjuntar automáticamente el token SPNEGO (Kerberos) en el header `Authorization: Negotiate`. No es una cabecera HTTP — es una instrucción al browser. |
+| `withCredentials: true` | Se mantiene para cookies/credenciales de navegador en llamadas XHR, pero el token SPNEGO no se modela como responsabilidad del front. |
 
 ---
 
@@ -849,12 +861,12 @@ Durante la segunda iteración se consolidó una POC local con `front-app-shell` 
 - El flujo queda pausado hasta pulsar `Siguiente` en la tarjeta correspondiente (`neoFlowStepNext`).
 - Los loaders fullscreen del MFE no se renderizan cuando `window.NEO_SHELL` está activo, para no tapar la traza lateral.
 
-### Pendiente funcional principal
+### Árbol OAuth local
 
-El mock `mock-pingam` todavía simula directamente el caso de formulario (`NameCallback` + `PasswordCallback`). Para representar el árbol real de PingAM en la POC debe ampliarse a:
+El mock `mock-pingam` representa ya el tramo federado con reanudación:
 
-1. `RedirectCallback` hacia Entra ID.
-2. Retorno/fallo controlado de Entra ID.
-3. `HttpCallback` para Kerberos.
-4. Fallo controlado de Kerberos.
-5. Formulario de credenciales.
+1. `POST /authenticate {}` devuelve `RedirectCallback`.
+2. Angular envía un form `GET` con `redirectUrl`.
+3. `GET /mock-entra-id` simula error Entra ID + Kerberos y redirige a `/login?authId=...`.
+4. Angular ejecuta `POST /authenticate { authId }`.
+5. PingAM devuelve `NameCallback` + `PasswordCallback`.

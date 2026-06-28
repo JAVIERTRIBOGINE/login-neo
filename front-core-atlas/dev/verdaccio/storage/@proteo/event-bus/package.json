@@ -7043,13 +7043,244 @@
 				"tarball": "http://localhost:4873/@proteo/event-bus/-/@proteo/event-bus-2.1.6-dev.1782458447373.tgz"
 			},
 			"contributors": []
+		},
+		"2.1.6-dev.1782583969231": {
+			"name": "@proteo/event-bus",
+			"version": "2.1.6-dev.1782583969231",
+			"description": "Proteo4 Frontend Core Library",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/event-bus"
+			},
+			"publishConfig": {
+				"registry": "http://localhost:4873"
+			},
+			"main": "index.js",
+			"type": "module",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"dependencies": {
+				"@proteo/logger-utils": "1.2.0-dev.1782583969231",
+				"@proteo/string-utils": "1.0.3-dev.1782583969231",
+				"@proteo/uuid-utils": "1.0.6-dev.1782583969231",
+				"pubsub-js": "^1.9.4"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@proteo/jest-config": "1.0.2",
+				"@proteo/tsconfig": "1.1.2",
+				"@proteo/types": "1.1.88-dev.1782583969231",
+				"@types/jest": "^29.5.12",
+				"@types/pubsub-js": "^1.8.3",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"jest-fetch-mock": "^3.0.3",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/rolldown-config": "1.0.0"
+			},
+			"types": "types/index.d.ts",
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"_nodeVersion": "24.16.0",
+			"_id": "@proteo/event-bus@2.1.6-dev.1782583969231",
+			"dist": {
+				"integrity": "sha512-Tm3mGhkaOE5au+OTPzTz2kLvQJmHzw78tufmiBedv83GjWdAUqxKLbpb0fbcA0J6FrCH1iCIEkW7Rbd0wd1Yyg==",
+				"shasum": "323f035c761b8d457775b624b8799c5a61d9d65e",
+				"tarball": "http://localhost:4873/@proteo/event-bus/-/@proteo/event-bus-2.1.6-dev.1782583969231.tgz"
+			},
+			"contributors": []
+		},
+		"2.1.6-dev.1782584293561": {
+			"name": "@proteo/event-bus",
+			"version": "2.1.6-dev.1782584293561",
+			"description": "Proteo4 Frontend Core Library",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/event-bus"
+			},
+			"publishConfig": {
+				"registry": "http://localhost:4873"
+			},
+			"main": "index.js",
+			"type": "module",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"dependencies": {
+				"@proteo/logger-utils": "1.2.0-dev.1782584293561",
+				"@proteo/string-utils": "1.0.3-dev.1782584293561",
+				"@proteo/uuid-utils": "1.0.6-dev.1782584293561",
+				"pubsub-js": "^1.9.4"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@proteo/jest-config": "1.0.2",
+				"@proteo/tsconfig": "1.1.2",
+				"@proteo/types": "1.1.88-dev.1782584293561",
+				"@types/jest": "^29.5.12",
+				"@types/pubsub-js": "^1.8.3",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"jest-fetch-mock": "^3.0.3",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/rolldown-config": "1.0.0"
+			},
+			"types": "types/index.d.ts",
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"_nodeVersion": "24.16.0",
+			"_id": "@proteo/event-bus@2.1.6-dev.1782584293561",
+			"dist": {
+				"integrity": "sha512-tPDcuX8b/LhYMM7sn7NYs5/qj1Mb5bqp/Z4EZ5tZ/WeLKiYat0wC6tAUoWLne8V0cWx4plCy265XS0ajL0jolA==",
+				"shasum": "cb4033d42a474f6f72a8928c59ee92db1039405b",
+				"tarball": "http://localhost:4873/@proteo/event-bus/-/@proteo/event-bus-2.1.6-dev.1782584293561.tgz"
+			},
+			"contributors": []
+		},
+		"2.1.6-dev.1782586570087": {
+			"name": "@proteo/event-bus",
+			"version": "2.1.6-dev.1782586570087",
+			"description": "Proteo4 Frontend Core Library",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/event-bus"
+			},
+			"publishConfig": {
+				"registry": "http://localhost:4873"
+			},
+			"main": "index.js",
+			"type": "module",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"dependencies": {
+				"@proteo/logger-utils": "1.2.0-dev.1782586570087",
+				"@proteo/string-utils": "1.0.3-dev.1782586570087",
+				"@proteo/uuid-utils": "1.0.6-dev.1782586570087",
+				"pubsub-js": "^1.9.4"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@proteo/jest-config": "1.0.2",
+				"@proteo/tsconfig": "1.1.2",
+				"@proteo/types": "1.1.88-dev.1782586570087",
+				"@types/jest": "^29.5.12",
+				"@types/pubsub-js": "^1.8.3",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"jest-fetch-mock": "^3.0.3",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/rolldown-config": "1.0.0"
+			},
+			"types": "types/index.d.ts",
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"_nodeVersion": "24.16.0",
+			"_id": "@proteo/event-bus@2.1.6-dev.1782586570087",
+			"dist": {
+				"integrity": "sha512-mXtAeVqq7X7mfuvgYc8g4VvcASgI0rZUAlKnChjIZgm49DaucgDUgZzXOoe8OSXRBp/8muAyUS/BaqhXsIUJ+w==",
+				"shasum": "f82a826d00131edf1c8813e6232ce44172af7a09",
+				"tarball": "http://localhost:4873/@proteo/event-bus/-/@proteo/event-bus-2.1.6-dev.1782586570087.tgz"
+			},
+			"contributors": []
 		}
 	},
 	"time": {
 		"unpublished": null,
 		"0.0.0": "2023-01-11T13:08:52.700Z",
 		"0.0.0-SNAPSHOT-20250902100438": "2025-09-02T10:34:08.436Z",
-		"modified": "2026-06-26T07:20:49.531Z",
+		"modified": "2026-06-27T18:56:12.127Z",
 		"2.1.0": "2025-11-12T16:27:31.520Z",
 		"created": "2026-06-01T15:49:23.000Z",
 		"2.1.5": "2025-12-01T12:26:49.923Z",
@@ -7105,17 +7336,20 @@
 		"2.1.6-SNAPSHOT-100": "2026-06-16T09:34:30.436Z",
 		"2.1.6-dev.1782144489686": "2026-06-22T16:09:22.745Z",
 		"2.1.6-dev.1782457230364": "2026-06-26T07:00:32.217Z",
-		"2.1.6-dev.1782458447373": "2026-06-26T07:20:49.531Z"
+		"2.1.6-dev.1782458447373": "2026-06-26T07:20:49.531Z",
+		"2.1.6-dev.1782583969231": "2026-06-27T18:12:51.238Z",
+		"2.1.6-dev.1782584293561": "2026-06-27T18:18:19.717Z",
+		"2.1.6-dev.1782586570087": "2026-06-27T18:56:12.127Z"
 	},
 	"users": {},
 	"dist-tags": {
 		"latest": "2.1.6",
-		"dev": "2.1.6-dev.1782458447373"
+		"dev": "2.1.6-dev.1782586570087"
 	},
 	"_uplinks": {
 		"artifactory-sabadell": {
 			"etag": "081b14364692dba224cd28845def575512ad2caa",
-			"fetched": 1782459958602
+			"fetched": 1782587127309
 		}
 	},
 	"_distfiles": {
@@ -7400,9 +7634,21 @@
 		"event-bus-2.1.6-dev.1782458447373.tgz": {
 			"shasum": "e1b83adfd2f17f3cff9b81a561e4b2c7d34edbcd",
 			"version": "2.1.6-dev.1782458447373"
+		},
+		"event-bus-2.1.6-dev.1782583969231.tgz": {
+			"shasum": "323f035c761b8d457775b624b8799c5a61d9d65e",
+			"version": "2.1.6-dev.1782583969231"
+		},
+		"event-bus-2.1.6-dev.1782584293561.tgz": {
+			"shasum": "cb4033d42a474f6f72a8928c59ee92db1039405b",
+			"version": "2.1.6-dev.1782584293561"
+		},
+		"event-bus-2.1.6-dev.1782586570087.tgz": {
+			"shasum": "f82a826d00131edf1c8813e6232ce44172af7a09",
+			"version": "2.1.6-dev.1782586570087"
 		}
 	},
-	"_rev": "26-75b92754f24a7659",
+	"_rev": "38-7458ec6167e2e81f",
 	"_id": "@proteo/event-bus",
 	"readme": ""
 }

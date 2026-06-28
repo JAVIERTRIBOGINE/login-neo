@@ -5,7 +5,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,8 +18,7 @@ import java.nio.charset.StandardCharsets;
  * Mock de los endpoints OAuth2/OIDC de PingAM (CONTEXT.md secc. 3, Fase 1).
  *
  * - POST /oauth2/authorize: requiere SSO Cookie + csrf (tokenId emitido en /authenticate).
- *   Responde 302 hacia redirectUri con ?code=&state= (igual que el AuthorizeComponent espera
- *   leer de `response.url` / `error.url`, ver authorize.component.ts).
+ *   Responde 302 hacia redirectUri con ?code=&state=.
  * - POST /oauth2/token: intercambia code+state por access_token/id_token.
  */
 @RestController
@@ -34,17 +32,18 @@ public class OAuthController {
     }
 
     @PostMapping("/authorize")
-    public ResponseEntity<?> authorize(@RequestBody Map<String, Object> body,
-                                       @RequestHeader(value = "Accept", required = false) String accept,
-                                       HttpServletRequest request) {
-        String csrf = (String) body.getOrDefault("csrf", body.get("assertion"));
-        String redirectUri = (String) body.get("redirectUri");
-        String requestedState = (String) body.get("state");
+    public ResponseEntity<?> authorize(HttpServletRequest request) {
+        String csrf = firstNonBlank(request.getParameter("csrf"), request.getParameter("assertion"));
+        String redirectUri = firstNonBlank(request.getParameter("redirect_uri"), request.getParameter("redirectUri"));
+        String requestedState = request.getParameter("state");
         String ssoCookie = readCookie(request, "PA_SSO");
 
         if (csrf == null || csrf.isBlank() || ssoCookie == null
                 || !store.tokenIdToUpn.containsKey(csrf) || !csrf.equals(ssoCookie)) {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+        }
+        if (redirectUri == null || redirectUri.isBlank()) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
         }
 
         String code = "mock-code-" + UUID.randomUUID();
@@ -53,10 +52,6 @@ public class OAuthController {
 
         String location = redirectUri + (redirectUri.contains("?") ? "&" : "?")
                 + "code=" + code + "&state=" + state;
-
-        if (accept != null && accept.contains(MediaType.APPLICATION_JSON_VALUE)) {
-            return ResponseEntity.ok(Map.of("url", location));
-        }
 
         return ResponseEntity.status(HttpStatus.FOUND)
                 .header(HttpHeaders.LOCATION, location)
@@ -113,5 +108,9 @@ public class OAuthController {
             if (name.equals(cookie.getName())) return cookie.getValue();
         }
         return null;
+    }
+
+    private String firstNonBlank(String first, String second) {
+        return first != null && !first.isBlank() ? first : second;
     }
 }

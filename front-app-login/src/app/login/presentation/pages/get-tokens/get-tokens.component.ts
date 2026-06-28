@@ -10,6 +10,7 @@ import { END_SESSION_FN, GET_TOKENS_FN, REVOKE_FN } from '@app/login/domain/cons
 import { getTokensEndpoint } from '@app/login/application/services/oauth-endpoints';
 import { SamlRuntimeConfigService } from '@app/saml-flow/application/services/saml-runtime-config.service';
 import { SAML_ROUTE_DATA } from '@app/saml-flow/domain/constants/path.constant';
+import { FlowConfirmationModalService } from '@app/login/application/services/flow-confirmation-modal.service';
 
 
 @Component({
@@ -42,6 +43,7 @@ export class GetTokensComponent implements OnInit{
     authorizeResponse!: TokensResponse;
     loginDataService!: LoginDataService;
     samlRuntimeConfig = inject(SamlRuntimeConfigService);
+    flowConfirmation = inject(FlowConfirmationModalService);
     getTokens = inject(GET_TOKENS_FN);
     storedTokens = storedTokens;
     
@@ -83,6 +85,10 @@ export class GetTokensComponent implements OnInit{
       const url = getTokensEndpoint();
      
       try {
+        await this.flowConfirmation.confirm({
+          title: 'Paso OAuth: token request',
+          description: 'TokensComponent lee code/state de la URL y solicita OIDC/OAuth tokens a PingAM con POST /token.',
+        });
         this.authorizeResponse =  (await this.getTokens(url, token_sso, params)).data as TokensResponse;
         
         /*
@@ -107,10 +113,14 @@ export class GetTokensComponent implements OnInit{
        */
       const windowConfig = window.BsAuthorizationConfig;
       const authConfig = window.NEO_LOGIN_AUTH_CONFIG as Record<string, unknown> | undefined;
+      const configuredRedirectUri = windowConfig?.redirectUri ?? authConfig?.['REDIRECT_URI'] as string | undefined;
+      const shellRedirectUri = (window as Window & { NEO_SHELL?: boolean }).NEO_SHELL
+        ? `${window.location.origin}/token`
+        : configuredRedirectUri;
 
       return {
         clientId: windowConfig?.clientID ?? authConfig?.['CLIENT_ID'] as string | undefined,
-        redirectUri: windowConfig?.redirectUri ?? authConfig?.['REDIRECT_URI'] as string | undefined,
+        redirectUri: shellRedirectUri,
       }
     }
 

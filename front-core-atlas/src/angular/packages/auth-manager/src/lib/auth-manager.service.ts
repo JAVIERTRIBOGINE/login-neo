@@ -42,8 +42,8 @@ export class AuthManagerService {
 
     if (config.resumeAuthId) {
       await this.confirm({
-        title: 'Paso OAuth: resume',
-        description: 'Se ha detectado authId en la URL. Se va a retomar el árbol de autenticación.',
+        title: 'Paso OAuth: fallback transparente completo',
+        description: 'Tras el redirect a Entra ID, PingAM procesa el error, prueba Kerberos ADGBS.com y Atenea, y devuelve 303 /login?authId=....',
       });
       this.authId = config.resumeAuthId;
       this.resumeAuth(config.resumeAuthId);
@@ -74,10 +74,6 @@ export class AuthManagerService {
   }
 
   async submitCredentials(username: string, password: string): Promise<void> {
-    await this.confirm({
-      title: 'Paso OAuth: credenciales',
-      description: 'Se van a enviar usuario y password al árbol de autenticación.',
-    });
     this.credentialsAuth(username, password);
   }
 
@@ -123,8 +119,8 @@ export class AuthManagerService {
     } else if (callbackType === NAME_CB || callbackType === PASSWORD_CB) {
       this.credentialCallbacks = callbacks ?? [];
       await this.confirm({
-        title: 'Paso OAuth: fallback transparente completo',
-        description: 'PingAM ha probado Entra ID, Kerberos ADGBS.com y Kerberos Atenea internamente; devuelve NameCallback y PasswordCallback con 200 OK.',
+        title: 'Paso OAuth: resume',
+        description: 'Tras volver a /login con authId, Angular reanuda el árbol. PingAM devuelve NameCallback y PasswordCallback con 200 OK.',
       });
       this.publish({ type: AUTH_MANAGER_EVENTS.REDIRECT_CREDENTIALS });
     } else if (this.isSuccess(response)) {
@@ -141,10 +137,6 @@ export class AuthManagerService {
   }
 
   private async handleError(error: HttpErrorResponse): Promise<void> {
-    if (error.status === 401) {
-      this.publish({ type: AUTH_MANAGER_EVENTS.REDIRECT_CREDENTIALS });
-      return;
-    }
     this.publish({ type: AUTH_MANAGER_EVENTS.AUTH_ERROR, payload: error });
   }
 
@@ -179,10 +171,10 @@ export class AuthManagerService {
     const redirectUrl = typeof rawRedirectUrl === 'string' ? rawRedirectUrl : '';
     if (!redirectUrl) return;
 
-    if (redirectUrl.includes('localhost') || redirectUrl.includes('mock-entra-id')) {
-      this.resumeAuth(this.authId);
-      return;
-    }
+    await this.confirm({
+      title: 'Paso OAuth: RedirectCallback hacia Entra ID',
+      description: 'PingAM ha respondido RedirectCallback. Angular crea un formulario GET con redirectUrl y el navegador sale hacia Entra ID/PingAM.',
+    });
 
     const url = new URL(redirectUrl);
     const form = document.createElement('form');

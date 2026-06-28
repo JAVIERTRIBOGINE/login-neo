@@ -2,6 +2,16 @@
   <div class="shell-header__brand" routerLink="/" aria-label="NEO">
     <span>NEO</span>
   </div>
+  <div class="shell-header__cookies" aria-label="Estado de cookies del flujo">
+    <span class="shell-cookie" [class.shell-cookie--active]="ssoCookieEnabled">
+      <span class="shell-cookie__check" aria-hidden="true"></span>
+      <span>SSO Cookie</span>
+    </span>
+    <span class="shell-cookie" [class.shell-cookie--active]="citrixCookieEnabled">
+      <span class="shell-cookie__check" aria-hidden="true"></span>
+      <span>Citrix Cookie</span>
+    </span>
+  </div>
   <nav class="shell-header__actions" aria-label="Acciones">
     <bs-button variant="tertiary">Ayuda</bs-button>
   </nav>
@@ -119,14 +129,11 @@
             <ng-template #compactSequence>
               <div
                 class="shell-sequence"
-                [class.shell-sequence--with-info]="step.diagram.backendInfo"
                 [class.shell-sequence--from-frame]="step.diagram.requestFromFrame"
                 [class.shell-sequence--to-frame]="step.diagram.responseToFrame"
                 [class.shell-sequence--saml]="step.diagram.zone === 'saml'"
                 [class.shell-sequence--oauth]="step.diagram.zone === 'oauth'"
                 [class.shell-sequence--with-redirect]="step.diagram.redirectTarget"
-                [attr.tabindex]="step.diagram.backendInfo ? 0 : null"
-                [attr.aria-label]="step.diagram.backendInfo ? 'Detalle de llamada backend' : null"
               >
                 <div class="shell-sequence__actor shell-sequence__actor--left">{{ step.diagram.left }}</div>
                 <div class="shell-sequence__actor shell-sequence__actor--browser" *ngIf="step.diagram.leftFrame">
@@ -149,7 +156,6 @@
                 <div class="shell-sequence__arrow shell-sequence__arrow--redirect" *ngIf="step.diagram.redirect">
                   <span>{{ step.diagram.redirect }}</span>
                 </div>
-                <pre class="shell-sequence__tooltip" *ngIf="step.diagram.backendInfo">{{ step.diagram.backendInfo }}</pre>
               </div>
             </ng-template>
 

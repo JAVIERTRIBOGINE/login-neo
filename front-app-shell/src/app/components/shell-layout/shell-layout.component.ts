@@ -1,5 +1,5 @@
 import { AsyncPipe, NgFor, NgIf } from '@angular/common';
-import { CUSTOM_ELEMENTS_SCHEMA, Component, HostListener, OnDestroy, OnInit, inject } from '@angular/core';
+import { ChangeDetectorRef, CUSTOM_ELEMENTS_SCHEMA, Component, HostListener, OnDestroy, OnInit, inject } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
 import { Subscription } from 'rxjs';
 
@@ -29,10 +29,13 @@ export class ShellLayoutComponent implements OnInit, OnDestroy {
   private readonly router = inject(Router);
   private readonly resources = inject(ResourcesService);
   private readonly flowTrace = inject(FlowTraceService);
+  private readonly changeDetector = inject(ChangeDetectorRef);
   private readonly subscriptions = new Subscription();
 
   readonly menu$ = this.resources.menu$;
   readonly flowSteps$ = this.flowTrace.steps$;
+  ssoCookieEnabled = false;
+  citrixCookieEnabled = false;
   flowPanelWidth = 520;
 
   private readonly minFlowPanelWidth = 420;
@@ -49,6 +52,7 @@ export class ShellLayoutComponent implements OnInit, OnDestroy {
     window.NEO_SHELL = true;
     window.addEventListener('proteoEventBusPublish', this.handleProteoEvent);
     window.addEventListener(NEO_FLOW_STEP_EVENT, this.handleFlowStepEvent);
+    this.restoreCookieIndicatorsFromTrace();
   }
 
   ngOnDestroy(): void {
@@ -61,6 +65,9 @@ export class ShellLayoutComponent implements OnInit, OnDestroy {
 
   clearFlowTrace(): void {
     this.flowTrace.clear();
+    this.ssoCookieEnabled = false;
+    this.citrixCookieEnabled = false;
+    this.changeDetector.markForCheck();
   }
 
   nextFlowStep(step: FlowTraceStep): void {
@@ -128,13 +135,21 @@ export class ShellLayoutComponent implements OnInit, OnDestroy {
       return;
     }
 
+    if (topic.includes('TOKENS_OK')) {
+      this.ssoCookieEnabled = true;
+      this.changeDetector.markForCheck();
+      return;
+    }
+
     if (topic.includes('SAML_MANAGER:SUCCESS')) {
       /*
        * Cuando el MFE SAML publica exito, la shell toma el payload resources,
        * construye el menu izquierdo y aterriza directamente en Workspace.
        */
+      this.citrixCookieEnabled = true;
       this.resources.setMenuFromResponse(detail.detail);
       void this.router.navigate(['/workspace']);
+      this.changeDetector.markForCheck();
     }
   };
 
@@ -149,6 +164,7 @@ export class ShellLayoutComponent implements OnInit, OnDestroy {
      * Canal visual de POC: cualquier proyecto puede emitir neoFlowStep y la shell
      * lo transforma en tarjeta acumulada con descripcion y diagrama secuencial.
      */
+    this.updateCookieIndicatorsFromStep(detail.title, detail.description);
     this.flowTrace.addStep({
       id: detail.id,
       title: detail.title,
@@ -158,8 +174,7 @@ export class ShellLayoutComponent implements OnInit, OnDestroy {
 
   private shouldAutoResolveRepeatedSamlStep(title: string): boolean {
     const normalizedTitle = title.toLowerCase();
-    const isRepeatedSamlEntryStep = normalizedTitle.includes('401 resources')
-      || normalizedTitle.includes('authnrequest y redirección pingam');
+    const isRepeatedSamlEntryStep = normalizedTitle.includes('401 resources');
 
     if (!isRepeatedSamlEntryStep) return false;
 
@@ -182,5 +197,44 @@ export class ShellLayoutComponent implements OnInit, OnDestroy {
       .replace(/[\u0300-\u036f]/g, '')
       .toLowerCase()
       .trim();
+  }
+
+  private updateCookieIndicatorsFromStep(title: string, description: string): void {
+    const text = `${title} ${description}`.toLowerCase();
+    if (
+      text.includes('autenticación ok')
+      || text.includes('autenticacion ok')
+      || text.includes('set-cookie sso')
+      || text.includes('auth_success')
+    ) {
+      this.ssoCookieEnabled = true;
+    }
+
+    if (
+      text.includes('set-cookie citrix')
+      || text.includes('saml_success')
+      || text.includes('resources ok')
+      || text.includes('200 ok recursos')
+    ) {
+      this.citrixCookieEnabled = true;
+    }
+
+    this.changeDetector.markForCheck();
+  }
+
+  private restoreCookieIndicatorsFromTrace(): void {
+    const text = this.flowTrace.currentSteps
+      .map((step) => `${step.title} ${step.description}`)
+      .join(' ')
+      .toLowerCase();
+
+    this.ssoCookieEnabled = text.includes('autenticación ok')
+      || text.includes('autenticacion ok')
+      || text.includes('tokens')
+      || text.includes('auth_success');
+    this.citrixCookieEnabled = text.includes('saml_success')
+      || text.includes('resources ok')
+      || text.includes('200 ok recursos')
+      || text.includes('set-cookie citrix');
   }
 }

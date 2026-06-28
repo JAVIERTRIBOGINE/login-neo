@@ -12405,6 +12405,240 @@
 				"tarball": "http://localhost:4873/@proteo/data-manager-driver-legacy/-/@proteo/data-manager-driver-legacy-2.1.25-dev.1782458447373.tgz"
 			},
 			"contributors": []
+		},
+		"2.1.25-dev.1782583969231": {
+			"name": "@proteo/data-manager-driver-legacy",
+			"version": "2.1.25-dev.1782583969231",
+			"description": "Proteo4 Frontend Core Library",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/data-manager-driver-legacy"
+			},
+			"publishConfig": {
+				"registry": "http://localhost:4873"
+			},
+			"main": "index.js",
+			"type": "module",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"dependencies": {
+				"@proteo/data-manager-driver": "2.4.1-dev.1782583969231",
+				"@proteo/data-manager-utils": "1.1.8-dev.1782583969231",
+				"@proteo/event-bus": "2.1.6-dev.1782583969231",
+				"@proteo/keep-alive": "1.0.18-dev.1782583969231",
+				"@proteo/logger-utils": "1.2.0-dev.1782583969231",
+				"@proteo/platform-utils": "1.0.5-dev.1782583969231"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@proteo/error-management-utils": "1.5.1-dev.1782583969231",
+				"@proteo/jest-config": "1.0.2",
+				"@proteo/tsconfig": "1.1.2",
+				"@proteo/types": "1.1.88-dev.1782583969231",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/rolldown-config": "1.0.0"
+			},
+			"types": "types/index.d.ts",
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --maxWorkers=25% --silent"
+			},
+			"_nodeVersion": "24.16.0",
+			"_id": "@proteo/data-manager-driver-legacy@2.1.25-dev.1782583969231",
+			"dist": {
+				"integrity": "sha512-64dz5Vzcku+bhP+dAZh09U6r+3oburVKsb8TYlnWRLyEdA5b8vTSn3Axw27XeEWeXq7PBpcsLpLgDAxxl4jkhw==",
+				"shasum": "8c5c696ffe6876997e0045217e6afe8d5350f7c2",
+				"tarball": "http://localhost:4873/@proteo/data-manager-driver-legacy/-/@proteo/data-manager-driver-legacy-2.1.25-dev.1782583969231.tgz"
+			},
+			"contributors": []
+		},
+		"2.1.25-dev.1782584293561": {
+			"name": "@proteo/data-manager-driver-legacy",
+			"version": "2.1.25-dev.1782584293561",
+			"description": "Proteo4 Frontend Core Library",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/data-manager-driver-legacy"
+			},
+			"publishConfig": {
+				"registry": "http://localhost:4873"
+			},
+			"main": "index.js",
+			"type": "module",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"dependencies": {
+				"@proteo/data-manager-driver": "2.4.1-dev.1782584293561",
+				"@proteo/data-manager-utils": "1.1.8-dev.1782584293561",
+				"@proteo/event-bus": "2.1.6-dev.1782584293561",
+				"@proteo/keep-alive": "1.0.18-dev.1782584293561",
+				"@proteo/logger-utils": "1.2.0-dev.1782584293561",
+				"@proteo/platform-utils": "1.0.5-dev.1782584293561"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@proteo/error-management-utils": "1.5.1-dev.1782584293561",
+				"@proteo/jest-config": "1.0.2",
+				"@proteo/tsconfig": "1.1.2",
+				"@proteo/types": "1.1.88-dev.1782584293561",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/rolldown-config": "1.0.0"
+			},
+			"types": "types/index.d.ts",
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --maxWorkers=25% --silent"
+			},
+			"_nodeVersion": "24.16.0",
+			"_id": "@proteo/data-manager-driver-legacy@2.1.25-dev.1782584293561",
+			"dist": {
+				"integrity": "sha512-iZmq7OPsqVitcr81pTa2wRI+d081guQbxMrlmcrg+KT40H6cQnluC6mZCDFb+AWRxizYU1HcsR6tqiqmTQsrNw==",
+				"shasum": "179c08ddffe642f7ef3abe57924deb5438781838",
+				"tarball": "http://localhost:4873/@proteo/data-manager-driver-legacy/-/@proteo/data-manager-driver-legacy-2.1.25-dev.1782584293561.tgz"
+			},
+			"contributors": []
+		},
+		"2.1.25-dev.1782586570087": {
+			"name": "@proteo/data-manager-driver-legacy",
+			"version": "2.1.25-dev.1782586570087",
+			"description": "Proteo4 Frontend Core Library",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/data-manager-driver-legacy"
+			},
+			"publishConfig": {
+				"registry": "http://localhost:4873"
+			},
+			"main": "index.js",
+			"type": "module",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"dependencies": {
+				"@proteo/data-manager-driver": "2.4.1-dev.1782586570087",
+				"@proteo/data-manager-utils": "1.1.8-dev.1782586570087",
+				"@proteo/event-bus": "2.1.6-dev.1782586570087",
+				"@proteo/keep-alive": "1.0.18-dev.1782586570087",
+				"@proteo/logger-utils": "1.2.0-dev.1782586570087",
+				"@proteo/platform-utils": "1.0.5-dev.1782586570087"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@proteo/error-management-utils": "1.5.1-dev.1782586570087",
+				"@proteo/jest-config": "1.0.2",
+				"@proteo/tsconfig": "1.1.2",
+				"@proteo/types": "1.1.88-dev.1782586570087",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/rolldown-config": "1.0.0"
+			},
+			"types": "types/index.d.ts",
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --maxWorkers=25% --silent"
+			},
+			"_nodeVersion": "24.16.0",
+			"_id": "@proteo/data-manager-driver-legacy@2.1.25-dev.1782586570087",
+			"dist": {
+				"integrity": "sha512-X88SkZRit4OcHCzTQ0+j+OfzVVswlB6OzJUiiGTk/J+fKPCBvc8JIZ0WIT/ATWpSXnLTSkBfxQ2bzfxo5M7tCw==",
+				"shasum": "904eadce41913a188d23a93c86b4af155be02900",
+				"tarball": "http://localhost:4873/@proteo/data-manager-driver-legacy/-/@proteo/data-manager-driver-legacy-2.1.25-dev.1782586570087.tgz"
+			},
+			"contributors": []
 		}
 	},
 	"time": {
@@ -12412,7 +12646,7 @@
 		"0.0.0": "2023-01-11T12:53:02.006Z",
 		"2.0.18": "2025-01-21T12:04:50.576Z",
 		"0.0.0-SNAPSHOT-20250902100438": "2025-09-02T10:34:00.022Z",
-		"modified": "2026-06-26T07:20:49.488Z",
+		"modified": "2026-06-27T18:56:12.080Z",
 		"2.1.0": "2025-02-12T12:11:34.852Z",
 		"created": "2026-06-01T15:49:28.038Z",
 		"2.1.20": "2025-12-16T07:29:31.439Z",
@@ -12498,17 +12732,20 @@
 		"2.1.25-tmp-build-test-SNAPSHOT-111": "2026-06-16T14:09:58.874Z",
 		"2.1.25-dev.1782144489686": "2026-06-22T16:09:22.698Z",
 		"2.1.25-dev.1782457230364": "2026-06-26T07:00:32.177Z",
-		"2.1.25-dev.1782458447373": "2026-06-26T07:20:49.488Z"
+		"2.1.25-dev.1782458447373": "2026-06-26T07:20:49.488Z",
+		"2.1.25-dev.1782583969231": "2026-06-27T18:12:51.195Z",
+		"2.1.25-dev.1782584293561": "2026-06-27T18:18:19.610Z",
+		"2.1.25-dev.1782586570087": "2026-06-27T18:56:12.080Z"
 	},
 	"users": {},
 	"dist-tags": {
 		"latest": "2.1.25",
-		"dev": "2.1.25-dev.1782458447373"
+		"dev": "2.1.25-dev.1782586570087"
 	},
 	"_uplinks": {
 		"artifactory-sabadell": {
 			"etag": "97f54c67a23c0f6fb517d93fbf3a3d302f853c6d",
-			"fetched": 1782459957627
+			"fetched": 1782587218664
 		}
 	},
 	"_distfiles": {
@@ -12948,9 +13185,21 @@
 		"data-manager-driver-legacy-2.1.25-dev.1782458447373.tgz": {
 			"shasum": "10b9e58369ea0ae6dda4a831c3cb570cfb03a344",
 			"version": "2.1.25-dev.1782458447373"
+		},
+		"data-manager-driver-legacy-2.1.25-dev.1782583969231.tgz": {
+			"shasum": "8c5c696ffe6876997e0045217e6afe8d5350f7c2",
+			"version": "2.1.25-dev.1782583969231"
+		},
+		"data-manager-driver-legacy-2.1.25-dev.1782584293561.tgz": {
+			"shasum": "179c08ddffe642f7ef3abe57924deb5438781838",
+			"version": "2.1.25-dev.1782584293561"
+		},
+		"data-manager-driver-legacy-2.1.25-dev.1782586570087.tgz": {
+			"shasum": "904eadce41913a188d23a93c86b4af155be02900",
+			"version": "2.1.25-dev.1782586570087"
 		}
 	},
-	"_rev": "23-a7d575b22869e019",
+	"_rev": "35-97f6320962fb67cb",
 	"_id": "@proteo/data-manager-driver-legacy",
 	"readme": ""
 }

@@ -12,7 +12,7 @@ import java.util.concurrent.ConcurrentHashMap;
 @Component
 public class PingamSessionStore {
 
-    /** authId -> stage del árbol ("AWAITING_CREDENTIALS", "AUTHENTICATED") */
+    /** authId -> stage del árbol ("AWAITING_ENTRA_ID", "AWAITING_CREDENTIALS", "AUTHENTICATED") */
     public final Map<String, String> authTrees = new ConcurrentHashMap<>();
 
     /** tokenId (emitido en /authenticate, viaja como SSO Cookie y como csrf) -> UPN del usuario */

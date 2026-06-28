@@ -17,6 +17,11 @@ export class RedirectHandlerComponent implements OnInit {
   @Input() params: Record<string, string> = {};
 
   ngOnInit(): void {
+    /*
+     * Si Citrix/back confirma POST para /authnRequest:
+     * - opcion corta: cambiar AUTHN_REQUEST_METHOD a POST y enviar un form vacio autoenviado.
+     * - opcion larga: anadir params configurables si /authnRequest exige campos hidden.
+     */
     if (this.method === 'GET') window.location.assign(this.url);
   }
 }

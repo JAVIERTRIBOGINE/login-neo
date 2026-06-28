@@ -62,6 +62,25 @@ const postJson = async <T>(url: string, body: Record<string, unknown>): Promise<
   return toDataManagerResponse(response, data, redirectUrl);
 };
 
+const postFormAndLeaveApp = <T>(url: string, params: URLSearchParams): Promise<DataManagerResponse<T>> => {
+  const form = document.createElement('form');
+  form.method = 'POST';
+  form.action = url;
+
+  params.forEach((value, name) => {
+    const input = document.createElement('input');
+    input.type = 'hidden';
+    input.name = name;
+    input.value = value;
+    form.appendChild(input);
+  });
+
+  document.body.appendChild(form);
+  form.submit();
+
+  return new Promise<DataManagerResponse<T>>(() => undefined);
+};
+
 
 /**
  * GET TOKENS */
@@ -181,27 +200,5 @@ export const authorize = async (request: AuthorizeRequest): Promise<DataManagerR
     params.set('csrf', token_id);
   }
 
-  const driver = getConfiguredDriver();
-  if (!driver) {
-    return postJson<AuthorizeResponse>(url, {
-      responseType: request.responseType || 'code',
-      clientId: request.clientId,
-      codeChallengeMethod: request.codeChallengeMethod ?? 'S256',
-      scope: request.scope ?? '',
-      redirectUri: request.redirectUri,
-      state,
-      codeChallenge: code_challenge,
-      csrf: token_id,
-      assertion: token_id,
-    });
-  }
-
-  const headers: Record<string, string> = {
-    'Accept': 'application/json',
-    'Content-Type': DEFAULT_CONTENT_TYPE,
-    'Accept-Language': 'es_ES',
-    'Content-Language': 'es-ES'
-  };
-
-  return driver.post(url, params, headers);
+  return postFormAndLeaveApp<AuthorizeResponse>(url, params);
 }

@@ -1418,6 +1418,219 @@
 				"tarball": "http://localhost:4873/@proteo/observer/-/@proteo/observer-0.0.2-dev.1782458447373.tgz"
 			},
 			"contributors": []
+		},
+		"0.0.2-dev.1782583969231": {
+			"name": "@proteo/observer",
+			"version": "0.0.2-dev.1782583969231",
+			"description": "Proteo4 Frontend Core Library - Observer Utility",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/observer"
+			},
+			"publishConfig": {
+				"registry": "http://localhost:4873"
+			},
+			"main": "index.js",
+			"type": "module",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"dependencies": {
+				"@proteo/logger-utils": "1.2.0-dev.1782583969231"
+			},
+			"devDependencies": {
+				"@proteo/jest-config": "1.0.2",
+				"@proteo/tsconfig": "1.1.2",
+				"@proteo/types": "1.1.88-dev.1782583969231",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/rolldown-config": "1.0.0"
+			},
+			"types": "types/index.d.ts",
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"_nodeVersion": "24.16.0",
+			"_id": "@proteo/observer@0.0.2-dev.1782583969231",
+			"dist": {
+				"integrity": "sha512-YeDbOFIRn7kiq/gFkbvXIiAP8pEUGX46E0e6JleL1JGhLRPh3cqtUqivX1HYZPy37ohIFKjhN2MqPnJPoQnwuw==",
+				"shasum": "a8f266f990b31e7fbb33e9caa49b12522811376a",
+				"tarball": "http://localhost:4873/@proteo/observer/-/@proteo/observer-0.0.2-dev.1782583969231.tgz"
+			},
+			"contributors": []
+		},
+		"0.0.2-dev.1782584293561": {
+			"name": "@proteo/observer",
+			"version": "0.0.2-dev.1782584293561",
+			"description": "Proteo4 Frontend Core Library - Observer Utility",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/observer"
+			},
+			"publishConfig": {
+				"registry": "http://localhost:4873"
+			},
+			"main": "index.js",
+			"type": "module",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"dependencies": {
+				"@proteo/logger-utils": "1.2.0-dev.1782584293561"
+			},
+			"devDependencies": {
+				"@proteo/jest-config": "1.0.2",
+				"@proteo/tsconfig": "1.1.2",
+				"@proteo/types": "1.1.88-dev.1782584293561",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/rolldown-config": "1.0.0"
+			},
+			"types": "types/index.d.ts",
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"_nodeVersion": "24.16.0",
+			"_id": "@proteo/observer@0.0.2-dev.1782584293561",
+			"dist": {
+				"integrity": "sha512-3Ut6zIWJZI8T9ZJqvci4RbyRWpfADtjWcfSsVSEmKLZtie2J7U1jmWANsv2TpLhB5Cf5hT/G3fyHPVO3zwq3eg==",
+				"shasum": "0931501ca17f1633baca620f07b2b8241b95531e",
+				"tarball": "http://localhost:4873/@proteo/observer/-/@proteo/observer-0.0.2-dev.1782584293561.tgz"
+			},
+			"contributors": []
+		},
+		"0.0.2-dev.1782586570087": {
+			"name": "@proteo/observer",
+			"version": "0.0.2-dev.1782586570087",
+			"description": "Proteo4 Frontend Core Library - Observer Utility",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/observer"
+			},
+			"publishConfig": {
+				"registry": "http://localhost:4873"
+			},
+			"main": "index.js",
+			"type": "module",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"dependencies": {
+				"@proteo/logger-utils": "1.2.0-dev.1782586570087"
+			},
+			"devDependencies": {
+				"@proteo/jest-config": "1.0.2",
+				"@proteo/tsconfig": "1.1.2",
+				"@proteo/types": "1.1.88-dev.1782586570087",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/rolldown-config": "1.0.0"
+			},
+			"types": "types/index.d.ts",
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"_nodeVersion": "24.16.0",
+			"_id": "@proteo/observer@0.0.2-dev.1782586570087",
+			"dist": {
+				"integrity": "sha512-zERBK/ivVzCLXE/8mXZtr2sPnITwS573ogLxt9NKYPT8w/oLFz4Gczpw2/si4X8Gk3F2yMx/Aa7yfKu3jlHUyA==",
+				"shasum": "9a329d2b911d26d2121d9c92ce1832044db97cfa",
+				"tarball": "http://localhost:4873/@proteo/observer/-/@proteo/observer-0.0.2-dev.1782586570087.tgz"
+			},
+			"contributors": []
 		}
 	},
 	"time": {
@@ -1426,7 +1639,7 @@
 		"0.1.0-dev-1": "2026-05-20T15:09:58.115Z",
 		"0.0.2-SNAPSHOT-72": "2026-06-01T15:49:23.157Z",
 		"0.0.2-SNAPSHOT-83": "2026-06-02T08:26:47.611Z",
-		"modified": "2026-06-26T07:20:49.541Z",
+		"modified": "2026-06-27T18:56:12.138Z",
 		"0.0.0-20251017111651": "2025-10-20T11:33:53.811Z",
 		"0.0.2-SNAPSHOT-85": "2026-06-02T16:43:35.736Z",
 		"0.1.0-dev-2": "2026-05-20T16:30:00.444Z",
@@ -1439,17 +1652,20 @@
 		"0.0.2-SNAPSHOT-100": "2026-06-16T09:34:30.623Z",
 		"0.0.2-dev.1782144489686": "2026-06-22T16:09:22.756Z",
 		"0.0.2-dev.1782457230364": "2026-06-26T07:00:32.229Z",
-		"0.0.2-dev.1782458447373": "2026-06-26T07:20:49.541Z"
+		"0.0.2-dev.1782458447373": "2026-06-26T07:20:49.541Z",
+		"0.0.2-dev.1782583969231": "2026-06-27T18:12:51.247Z",
+		"0.0.2-dev.1782584293561": "2026-06-27T18:18:19.744Z",
+		"0.0.2-dev.1782586570087": "2026-06-27T18:56:12.138Z"
 	},
 	"users": {},
 	"dist-tags": {
 		"latest": "0.0.2",
-		"dev": "0.0.2-dev.1782458447373"
+		"dev": "0.0.2-dev.1782586570087"
 	},
 	"_uplinks": {
 		"artifactory-sabadell": {
 			"etag": "ce6e3510a2cdb46a42fb633dcacb1f5bcf73fe84",
-			"fetched": 1782459958683
+			"fetched": 1782587219069
 		}
 	},
 	"_distfiles": {
@@ -1529,9 +1745,21 @@
 		"observer-0.0.2-dev.1782458447373.tgz": {
 			"shasum": "1e8c8acee7b39788d09a8a46085bc238e15e3a83",
 			"version": "0.0.2-dev.1782458447373"
+		},
+		"observer-0.0.2-dev.1782583969231.tgz": {
+			"shasum": "a8f266f990b31e7fbb33e9caa49b12522811376a",
+			"version": "0.0.2-dev.1782583969231"
+		},
+		"observer-0.0.2-dev.1782584293561.tgz": {
+			"shasum": "0931501ca17f1633baca620f07b2b8241b95531e",
+			"version": "0.0.2-dev.1782584293561"
+		},
+		"observer-0.0.2-dev.1782586570087.tgz": {
+			"shasum": "9a329d2b911d26d2121d9c92ce1832044db97cfa",
+			"version": "0.0.2-dev.1782586570087"
 		}
 	},
-	"_rev": "23-7e45635e1f92c52a",
+	"_rev": "35-164b36ab5d5a5c4e",
 	"_id": "@proteo/observer",
 	"readme": ""
 }

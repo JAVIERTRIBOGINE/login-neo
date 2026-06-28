@@ -9,6 +9,7 @@ import { LOGIN_EVENTS } from '@app/login/domain/constants/event.enum';
 import { HttpErrorResponse } from '@angular/common/http';
 import { ROUTE_DATA } from '@app/login/domain/constants/path.constant';
 import { AUTHORIZE_FN } from '@app/login/domain/constants/global.constants';
+import { FlowConfirmationModalService } from '@app/login/application/services/flow-confirmation-modal.service';
 
 
 
@@ -36,6 +37,7 @@ export class AuthorizeComponent implements OnInit{
   route: ActivatedRoute
   publishService: PublishService;
   loginDataService: LoginDataService;
+  flowConfirmation: FlowConfirmationModalService;
   authorize = inject(AUTHORIZE_FN)
 
 
@@ -46,6 +48,7 @@ export class AuthorizeComponent implements OnInit{
     this.route = inject(ActivatedRoute);
     this.publishService = inject(PublishService);
     this.loginDataService = inject(LoginDataService);
+    this.flowConfirmation = inject(FlowConfirmationModalService);
   }
 
   ngOnInit(): void {
@@ -78,7 +81,7 @@ export class AuthorizeComponent implements OnInit{
 
     /*
      * POST /authorize mockeado: usa el tokenId SSO como assertion/csrf para pedir
-     * un authorization code OAuth. La respuesta contiene una URL con code/state.
+     * un authorization code OAuth. PingAM responde 302 Location hacia /token.
      */
     const authorizeParams: AuthorizeRequest =  {
       clientId:  authConfig.clientId,
@@ -89,11 +92,13 @@ export class AuthorizeComponent implements OnInit{
     if (authConfig.scopes?.length) authorizeParams.scope = authConfig.scopes.join(' ')
 
     try {
-      this.authorizeResponse = await this.authorize( authorizeParams );
-
       this.processing.set(false);
+      await this.flowConfirmation.confirm({
+        title: 'Paso OAuth: authorize redirect',
+        description: 'Tras credenciales, Angular llama a authorize con params OAuth y csrf/assertion=tokenId. PingAM responde 302 Location /token?code=...&state=....',
+      });
 
-      this.conformUrl(this.authorizeResponse?.url as string)
+      await this.authorize( authorizeParams );
 
     } catch( error  ) {
       const resolvedError = error as unknown as HttpErrorResponse
@@ -126,10 +131,14 @@ private getAuthorizationConfig(): { clientId?: string; redirectUri?: string; sco
    const authConfig = window.NEO_LOGIN_AUTH_CONFIG as Record<string, unknown> | undefined;
 
    const scopes = windowConfig?.scopes ?? authConfig?.['SCOPES'];
+   const configuredRedirectUri = windowConfig?.redirectUri ?? authConfig?.['REDIRECT_URI'] as string | undefined;
+   const shellRedirectUri = (window as Window & { NEO_SHELL?: boolean }).NEO_SHELL
+      ? `${window.location.origin}/${ROUTE_DATA.GET_TOKENS}`
+      : configuredRedirectUri;
 
    return {
       clientId: windowConfig?.clientID ?? authConfig?.['CLIENT_ID'] as string | undefined,
-      redirectUri: windowConfig?.redirectUri ?? authConfig?.['REDIRECT_URI'] as string | undefined,
+      redirectUri: shellRedirectUri,
       scopes: Array.isArray(scopes) ? scopes as string[] : undefined,
    }
 }
