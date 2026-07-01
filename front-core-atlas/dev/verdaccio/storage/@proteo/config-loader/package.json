@@ -4559,6 +4559,809 @@
 			},
 			"type": "module",
 			"contributors": []
+		},
+		"2.0.1-test-auto-pr-SNAPSHOT-130": {
+			"name": "@proteo/config-loader",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "2.0.1-test-auto-pr-SNAPSHOT-130",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/config-loader"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@proteo/logger-utils": "1.2.0-test-auto-pr-SNAPSHOT-130"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"jest-fetch-mock": "^3.0.3",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/tsconfig": "1.1.2-test-auto-pr-SNAPSHOT-130",
+				"@proteo/jest-config": "1.0.2-test-auto-pr-SNAPSHOT-130",
+				"@proteo/rolldown-config": "1.0.0",
+				"@proteo/types": "1.1.88-test-auto-pr-SNAPSHOT-130"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1782813677490,
+			"_id": "@proteo/config-loader@2.0.1-test-auto-pr-SNAPSHOT-130",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/config-loader/-/@proteo/config-loader-2.0.1-test-auto-pr-SNAPSHOT-130.tgz",
+				"shasum": "b4668e3252bb65538b6eeef91953afc2ae993602",
+				"integrity": "sha512-UrXEgSGerqwQxdoeWEzGC/3tHF+FGKaNcl4puBh5yjDMSj3tAFzPjaYLUaXXBW2g+Kvd6ZZa9BTk+f+tZ9jrOA=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"2.0.1-test-auto-pr-SNAPSHOT-128": {
+			"name": "@proteo/config-loader",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "2.0.1-test-auto-pr-SNAPSHOT-128",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/config-loader"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@proteo/logger-utils": "1.2.0-test-auto-pr-SNAPSHOT-128"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"jest-fetch-mock": "^3.0.3",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/jest-config": "1.0.2-test-auto-pr-SNAPSHOT-128",
+				"@proteo/tsconfig": "1.1.2-test-auto-pr-SNAPSHOT-128",
+				"@proteo/rolldown-config": "1.0.0",
+				"@proteo/types": "1.1.88-test-auto-pr-SNAPSHOT-128"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1782808912767,
+			"_id": "@proteo/config-loader@2.0.1-test-auto-pr-SNAPSHOT-128",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/config-loader/-/@proteo/config-loader-2.0.1-test-auto-pr-SNAPSHOT-128.tgz",
+				"shasum": "88ba082ea88a13c7547c367c6c4069be5ca01467",
+				"integrity": "sha512-cSGtL8YEzZVIMNOFyNfb6n/sFe7oakM9DDlqER85+LS2/Ce+StpJar4XA4Gm67jljVGN+8nbSBGPPmcVfHwNFA=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"2.0.1-test-auto-pr-SNAPSHOT-129": {
+			"name": "@proteo/config-loader",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "2.0.1-test-auto-pr-SNAPSHOT-129",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/config-loader"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@proteo/logger-utils": "1.2.0-test-auto-pr-SNAPSHOT-129"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"jest-fetch-mock": "^3.0.3",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/jest-config": "1.0.2-test-auto-pr-SNAPSHOT-129",
+				"@proteo/tsconfig": "1.1.2-test-auto-pr-SNAPSHOT-129",
+				"@proteo/rolldown-config": "1.0.0",
+				"@proteo/types": "1.1.88-test-auto-pr-SNAPSHOT-129"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1782813315509,
+			"_id": "@proteo/config-loader@2.0.1-test-auto-pr-SNAPSHOT-129",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/config-loader/-/@proteo/config-loader-2.0.1-test-auto-pr-SNAPSHOT-129.tgz",
+				"shasum": "7ba7c3d148f4ddb108fe2f0a7a0349b631677ca0",
+				"integrity": "sha512-DTM7QYYFjcToNiroBCZwZnH37pMLHxySrSC18dVnRE1e9QG28DKiL8rz1V3+Gz1FpXt+5Bx4oBQSagpmmvnXvQ=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"2.0.1-test-auto-pr-SNAPSHOT-122": {
+			"name": "@proteo/config-loader",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "2.0.1-test-auto-pr-SNAPSHOT-122",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/config-loader"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@proteo/logger-utils": "1.2.0-test-auto-pr-SNAPSHOT-122"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"jest-fetch-mock": "^3.0.3",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/tsconfig": "1.1.2-test-auto-pr-SNAPSHOT-122",
+				"@proteo/jest-config": "1.0.2-test-auto-pr-SNAPSHOT-122",
+				"@proteo/rolldown-config": "1.0.0",
+				"@proteo/types": "1.1.88-test-auto-pr-SNAPSHOT-122"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1782741694168,
+			"_id": "@proteo/config-loader@2.0.1-test-auto-pr-SNAPSHOT-122",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/config-loader/-/@proteo/config-loader-2.0.1-test-auto-pr-SNAPSHOT-122.tgz",
+				"shasum": "1a32ddf010a1b9cb204534b02beb6e16c43e1bf4",
+				"integrity": "sha512-F4gdur+kvHVpy7lS/xqnbc+rujurS1PBq6VQ1v0/7MNgAM63gGjgg3Ebcm05ymHAM/5qzvYvlxmnb32YMxFcRg=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"2.0.1-test-auto-pr-SNAPSHOT-123": {
+			"name": "@proteo/config-loader",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "2.0.1-test-auto-pr-SNAPSHOT-123",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/config-loader"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@proteo/logger-utils": "1.2.0-test-auto-pr-SNAPSHOT-123"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"jest-fetch-mock": "^3.0.3",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/jest-config": "1.0.2-test-auto-pr-SNAPSHOT-123",
+				"@proteo/types": "1.1.88-test-auto-pr-SNAPSHOT-123",
+				"@proteo/rolldown-config": "1.0.0",
+				"@proteo/tsconfig": "1.1.2-test-auto-pr-SNAPSHOT-123"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1782742234424,
+			"_id": "@proteo/config-loader@2.0.1-test-auto-pr-SNAPSHOT-123",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/config-loader/-/@proteo/config-loader-2.0.1-test-auto-pr-SNAPSHOT-123.tgz",
+				"shasum": "d426c6924bf6c3dc71fd32957766dadb6003942d",
+				"integrity": "sha512-UZqtcK6n5dXpf3q7kVNCrR9hodydKZxVGMM5q87EKznTdmfo+oxEtYw6nMXfEaRmpuSqXvQuG/9ho4dff+mAWA=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"2.0.1-test-auto-pr-SNAPSHOT-120": {
+			"name": "@proteo/config-loader",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "2.0.1-test-auto-pr-SNAPSHOT-120",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/config-loader"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@proteo/logger-utils": "1.2.0-test-auto-pr-SNAPSHOT-120"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"jest-fetch-mock": "^3.0.3",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/jest-config": "1.0.2-test-auto-pr-SNAPSHOT-120",
+				"@proteo/tsconfig": "1.1.2-test-auto-pr-SNAPSHOT-120",
+				"@proteo/types": "1.1.88-test-auto-pr-SNAPSHOT-120",
+				"@proteo/rolldown-config": "1.0.0"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1782738785211,
+			"_id": "@proteo/config-loader@2.0.1-test-auto-pr-SNAPSHOT-120",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/config-loader/-/@proteo/config-loader-2.0.1-test-auto-pr-SNAPSHOT-120.tgz",
+				"shasum": "36746a7a08a9a18998b5e38b054b5c6edd5d1f59",
+				"integrity": "sha512-eM7H6xdpcx37+qUJ1fkcdtbuORxQOGtDjrxYpijgNLLcrgZNDzWLUqtsRv8PVKgj+ORtsujQlcaPCk1KVV0Hmg=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"2.0.1-test-auto-pr-SNAPSHOT-121": {
+			"name": "@proteo/config-loader",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "2.0.1-test-auto-pr-SNAPSHOT-121",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/config-loader"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@proteo/logger-utils": "1.2.0-test-auto-pr-SNAPSHOT-121"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"jest-fetch-mock": "^3.0.3",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/jest-config": "1.0.2-test-auto-pr-SNAPSHOT-121",
+				"@proteo/tsconfig": "1.1.2-test-auto-pr-SNAPSHOT-121",
+				"@proteo/rolldown-config": "1.0.0",
+				"@proteo/types": "1.1.88-test-auto-pr-SNAPSHOT-121"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1782739930256,
+			"_id": "@proteo/config-loader@2.0.1-test-auto-pr-SNAPSHOT-121",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/config-loader/-/@proteo/config-loader-2.0.1-test-auto-pr-SNAPSHOT-121.tgz",
+				"shasum": "e13c879af10ef0f4d498d753b348206468bfffe9",
+				"integrity": "sha512-ULzZtM8H1Hy+h39SiGKDr04/re27jqemOP1kOyH0lJq1qcXmXv4K340Lcfllp49N8cL3Mgplf/m6v+kf+Hb4Uw=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"2.0.1-test-auto-pr-SNAPSHOT-126": {
+			"name": "@proteo/config-loader",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "2.0.1-test-auto-pr-SNAPSHOT-126",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/config-loader"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@proteo/logger-utils": "1.2.0-test-auto-pr-SNAPSHOT-126"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"jest-fetch-mock": "^3.0.3",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/jest-config": "1.0.2-test-auto-pr-SNAPSHOT-126",
+				"@proteo/types": "1.1.88-test-auto-pr-SNAPSHOT-126",
+				"@proteo/tsconfig": "1.1.2-test-auto-pr-SNAPSHOT-126",
+				"@proteo/rolldown-config": "1.0.0"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1782806926131,
+			"_id": "@proteo/config-loader@2.0.1-test-auto-pr-SNAPSHOT-126",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/config-loader/-/@proteo/config-loader-2.0.1-test-auto-pr-SNAPSHOT-126.tgz",
+				"shasum": "c6dc6e80902f39852c19f33704b32dea3ad403a2",
+				"integrity": "sha512-jjei1WJdSqjqo3WpYQTOdVKnnkZ2jBQP9YZX6rh2eOeZxmWt12hqtHLV8iEOY02T3CHYW3LIsITM6jEXlTgyHw=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"2.0.1-test-auto-pr-SNAPSHOT-127": {
+			"name": "@proteo/config-loader",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "2.0.1-test-auto-pr-SNAPSHOT-127",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/config-loader"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@proteo/logger-utils": "1.2.0-test-auto-pr-SNAPSHOT-127"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"jest-fetch-mock": "^3.0.3",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/tsconfig": "1.1.2-test-auto-pr-SNAPSHOT-127",
+				"@proteo/jest-config": "1.0.2-test-auto-pr-SNAPSHOT-127",
+				"@proteo/rolldown-config": "1.0.0",
+				"@proteo/types": "1.1.88-test-auto-pr-SNAPSHOT-127"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1782807412640,
+			"_id": "@proteo/config-loader@2.0.1-test-auto-pr-SNAPSHOT-127",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/config-loader/-/@proteo/config-loader-2.0.1-test-auto-pr-SNAPSHOT-127.tgz",
+				"shasum": "b241d26a13dfef486966bed8db2a3ad70c8a36a7",
+				"integrity": "sha512-s6suiMcdJdvctm04Cydaw2Q8+mk1OA8Kc9H8PzuKbvbsM5P67RuspKJQYL2GDm0VVGEe0t75NMgezMLCVSKUhw=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"2.0.1-test-auto-pr-SNAPSHOT-124": {
+			"name": "@proteo/config-loader",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "2.0.1-test-auto-pr-SNAPSHOT-124",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/config-loader"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@proteo/logger-utils": "1.2.0-test-auto-pr-SNAPSHOT-124"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"jest-fetch-mock": "^3.0.3",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/jest-config": "1.0.2-test-auto-pr-SNAPSHOT-124",
+				"@proteo/tsconfig": "1.1.2-test-auto-pr-SNAPSHOT-124",
+				"@proteo/types": "1.1.88-test-auto-pr-SNAPSHOT-124",
+				"@proteo/rolldown-config": "1.0.0"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1782743769580,
+			"_id": "@proteo/config-loader@2.0.1-test-auto-pr-SNAPSHOT-124",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/config-loader/-/@proteo/config-loader-2.0.1-test-auto-pr-SNAPSHOT-124.tgz",
+				"shasum": "d75fc4bc822041feca1f4edcb7523c16d9718ab9",
+				"integrity": "sha512-NYLnsc0v3ZXRg956BqfEYWDpa58MsulvUfKZFB6Z7jYrk+Z+x7dw7scHtLddhSMW/fCdR9k9tw76DVWS/cUHVg=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"2.0.1-test-auto-pr-SNAPSHOT-119": {
+			"name": "@proteo/config-loader",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "2.0.1-test-auto-pr-SNAPSHOT-119",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/config-loader"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@proteo/logger-utils": "1.2.0-test-auto-pr-SNAPSHOT-119"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"jest-fetch-mock": "^3.0.3",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/jest-config": "1.0.2-test-auto-pr-SNAPSHOT-119",
+				"@proteo/tsconfig": "1.1.2-test-auto-pr-SNAPSHOT-119",
+				"@proteo/types": "1.1.88-test-auto-pr-SNAPSHOT-119",
+				"@proteo/rolldown-config": "1.0.0"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1782737029395,
+			"_id": "@proteo/config-loader@2.0.1-test-auto-pr-SNAPSHOT-119",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/config-loader/-/@proteo/config-loader-2.0.1-test-auto-pr-SNAPSHOT-119.tgz",
+				"shasum": "1b52e461992a498d23f16cf4bd9a8eee6571c782",
+				"integrity": "sha512-wyxOrk/Y4qH1ySplmTlq9J7XlL/gyhzqRFrDV1XuAaPW+G4mgqc2//aw63ECiFI1oBabtV3ViAXBY+mBxjIVgQ=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
 		}
 	},
 	"time": {
@@ -4579,7 +5382,7 @@
 		"0.0.0-SNAPSHOT-20250902100438": "2025-09-02T10:33:50.921Z",
 		"1.0.0-next.2": "2023-01-11T12:41:58.320Z",
 		"2.0.1-SNAPSHOT-72": "2026-06-01T15:49:22.212Z",
-		"modified": "2026-06-16T14:09:53.171Z",
+		"modified": "2026-06-30T10:01:17.490Z",
 		"1.0.0-next.1": "2023-01-11T12:41:54.879Z",
 		"1.0.0-rc.5": "2023-01-11T12:42:05.828Z",
 		"1.0.0-next.0": "2023-01-11T12:41:54.226Z",
@@ -4606,7 +5409,18 @@
 		"2.0.1-dev.1781194532158": "2026-06-11T16:15:39.865Z",
 		"2.0.1-dev.1781195668306": "2026-06-11T16:34:36.504Z",
 		"2.0.1-tmp-build-test-SNAPSHOT-111": "2026-06-16T14:09:53.171Z",
-		"2.0.1-SNAPSHOT-100": "2026-06-16T09:34:29.571Z"
+		"2.0.1-SNAPSHOT-100": "2026-06-16T09:34:29.571Z",
+		"2.0.1-test-auto-pr-SNAPSHOT-130": "2026-06-30T10:01:17.490Z",
+		"2.0.1-test-auto-pr-SNAPSHOT-128": "2026-06-30T08:41:52.767Z",
+		"2.0.1-test-auto-pr-SNAPSHOT-129": "2026-06-30T09:55:15.509Z",
+		"2.0.1-test-auto-pr-SNAPSHOT-122": "2026-06-29T14:01:34.168Z",
+		"2.0.1-test-auto-pr-SNAPSHOT-123": "2026-06-29T14:10:34.424Z",
+		"2.0.1-test-auto-pr-SNAPSHOT-120": "2026-06-29T13:13:05.211Z",
+		"2.0.1-test-auto-pr-SNAPSHOT-121": "2026-06-29T13:32:10.256Z",
+		"2.0.1-test-auto-pr-SNAPSHOT-126": "2026-06-30T08:08:46.131Z",
+		"2.0.1-test-auto-pr-SNAPSHOT-127": "2026-06-30T08:16:52.640Z",
+		"2.0.1-test-auto-pr-SNAPSHOT-124": "2026-06-29T14:36:09.580Z",
+		"2.0.1-test-auto-pr-SNAPSHOT-119": "2026-06-29T12:43:49.395Z"
 	},
 	"users": {},
 	"dist-tags": {
@@ -4615,8 +5429,8 @@
 	},
 	"_uplinks": {
 		"artifactory-sabadell": {
-			"etag": "e7dfb01131e948288d91764e8cb307222e99707a",
-			"fetched": 1782682730369
+			"etag": "1ff41802944df575a59bdb1f14b0ae66cbc884b8",
+			"fetched": 1782898243014
 		}
 	},
 	"_distfiles": {
@@ -4819,6 +5633,61 @@
 			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/config-loader/-/@proteo/config-loader-2.0.1-SNAPSHOT-100.tgz",
 			"sha": "200daeaec62c91f1b941d756c7aefc957cf9961d",
 			"registry": "artifactory-sabadell"
+		},
+		"config-loader-2.0.1-test-auto-pr-SNAPSHOT-130.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/config-loader/-/@proteo/config-loader-2.0.1-test-auto-pr-SNAPSHOT-130.tgz",
+			"sha": "b4668e3252bb65538b6eeef91953afc2ae993602",
+			"registry": "artifactory-sabadell"
+		},
+		"config-loader-2.0.1-test-auto-pr-SNAPSHOT-128.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/config-loader/-/@proteo/config-loader-2.0.1-test-auto-pr-SNAPSHOT-128.tgz",
+			"sha": "88ba082ea88a13c7547c367c6c4069be5ca01467",
+			"registry": "artifactory-sabadell"
+		},
+		"config-loader-2.0.1-test-auto-pr-SNAPSHOT-129.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/config-loader/-/@proteo/config-loader-2.0.1-test-auto-pr-SNAPSHOT-129.tgz",
+			"sha": "7ba7c3d148f4ddb108fe2f0a7a0349b631677ca0",
+			"registry": "artifactory-sabadell"
+		},
+		"config-loader-2.0.1-test-auto-pr-SNAPSHOT-122.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/config-loader/-/@proteo/config-loader-2.0.1-test-auto-pr-SNAPSHOT-122.tgz",
+			"sha": "1a32ddf010a1b9cb204534b02beb6e16c43e1bf4",
+			"registry": "artifactory-sabadell"
+		},
+		"config-loader-2.0.1-test-auto-pr-SNAPSHOT-123.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/config-loader/-/@proteo/config-loader-2.0.1-test-auto-pr-SNAPSHOT-123.tgz",
+			"sha": "d426c6924bf6c3dc71fd32957766dadb6003942d",
+			"registry": "artifactory-sabadell"
+		},
+		"config-loader-2.0.1-test-auto-pr-SNAPSHOT-120.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/config-loader/-/@proteo/config-loader-2.0.1-test-auto-pr-SNAPSHOT-120.tgz",
+			"sha": "36746a7a08a9a18998b5e38b054b5c6edd5d1f59",
+			"registry": "artifactory-sabadell"
+		},
+		"config-loader-2.0.1-test-auto-pr-SNAPSHOT-121.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/config-loader/-/@proteo/config-loader-2.0.1-test-auto-pr-SNAPSHOT-121.tgz",
+			"sha": "e13c879af10ef0f4d498d753b348206468bfffe9",
+			"registry": "artifactory-sabadell"
+		},
+		"config-loader-2.0.1-test-auto-pr-SNAPSHOT-126.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/config-loader/-/@proteo/config-loader-2.0.1-test-auto-pr-SNAPSHOT-126.tgz",
+			"sha": "c6dc6e80902f39852c19f33704b32dea3ad403a2",
+			"registry": "artifactory-sabadell"
+		},
+		"config-loader-2.0.1-test-auto-pr-SNAPSHOT-127.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/config-loader/-/@proteo/config-loader-2.0.1-test-auto-pr-SNAPSHOT-127.tgz",
+			"sha": "b241d26a13dfef486966bed8db2a3ad70c8a36a7",
+			"registry": "artifactory-sabadell"
+		},
+		"config-loader-2.0.1-test-auto-pr-SNAPSHOT-124.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/config-loader/-/@proteo/config-loader-2.0.1-test-auto-pr-SNAPSHOT-124.tgz",
+			"sha": "d75fc4bc822041feca1f4edcb7523c16d9718ab9",
+			"registry": "artifactory-sabadell"
+		},
+		"config-loader-2.0.1-test-auto-pr-SNAPSHOT-119.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/config-loader/-/@proteo/config-loader-2.0.1-test-auto-pr-SNAPSHOT-119.tgz",
+			"sha": "1b52e461992a498d23f16cf4bd9a8eee6571c782",
+			"registry": "artifactory-sabadell"
 		}
 	},
 	"_attachments": {
@@ -4831,7 +5700,7 @@
 			"version": "2.0.1-dev.1781195668306"
 		}
 	},
-	"_rev": "20-3ea1df632a4c48e0",
+	"_rev": "21-3bf3a295b94a910b",
 	"_id": "@proteo/config-loader",
 	"readme": ""
 }

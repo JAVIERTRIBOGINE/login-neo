@@ -341,7 +341,7 @@ private handleEvent(event: SamlManagerEvent): void {
     return [
       {
         description: 'El manager SAML ejecuta la llamada real a /resources; si llega un 401, publica AUTHN_REQUEST para que el micro inicie el flujo SAML.',
-        file: 'front-core-atlas/src/angular/packages/auth-manager/src/lib/saml-manager.service.ts',
+        file: 'front-core-atlas/src/typescript/packages/auth/auth-manager/src/lib/saml-manager.service.ts',
         startLine: 26,
         endLine: 58,
         language: 'typescript',
@@ -413,7 +413,7 @@ private async handleError(error: HttpErrorResponse | Error): Promise<void> {
     return [
       {
         description: 'OauthManager conserva el contexto SAML como evento de coordinacion para que shell/micro conozcan la necesidad de AuthnRequest.',
-        file: 'front-core-atlas/src/angular/packages/auth-manager/src/lib/oauth-manager.service.ts',
+        file: 'front-core-atlas/src/typescript/packages/auth/auth-manager/src/lib/oauth-manager.service.ts',
         startLine: 66,
         endLine: 72,
         language: 'typescript',
@@ -427,7 +427,7 @@ requireSamlAuthorization(context: SamlAuthorizationContext): void {
       },
       {
         description: 'publish duplica la notificacion: stream interno del servicio y EventBus global de Proteo para consumidores externos.',
-        file: 'front-core-atlas/src/angular/packages/auth-manager/src/lib/oauth-manager.service.ts',
+        file: 'front-core-atlas/src/typescript/packages/auth/auth-manager/src/lib/oauth-manager.service.ts',
         startLine: 414,
         endLine: 417,
         language: 'typescript',
@@ -555,7 +555,7 @@ void this.router.navigate([SAML_ROUTE_DATA.AUTHORIZATION_REQUEST]);`,
     return [
       {
         description: 'OauthManager entra en el camino de inicio normal porque no hay authId de reanudacion y lanza initiateAuth().',
-        file: 'front-core-atlas/src/angular/packages/auth-manager/src/lib/oauth-manager.service.ts',
+        file: 'front-core-atlas/src/typescript/packages/auth/auth-manager/src/lib/oauth-manager.service.ts',
         startLine: 46,
         endLine: 64,
         language: 'typescript',
@@ -581,7 +581,7 @@ void this.router.navigate([SAML_ROUTE_DATA.AUTHORIZATION_REQUEST]);`,
       },
       {
         description: 'initiateAuth ejecuta la primera llamada del arbol con body vacio; la respuesta se procesara como callbacks de PingAM.',
-        file: 'front-core-atlas/src/angular/packages/auth-manager/src/lib/oauth-manager.service.ts',
+        file: 'front-core-atlas/src/typescript/packages/auth/auth-manager/src/lib/oauth-manager.service.ts',
         startLine: 148,
         endLine: 153,
         language: 'typescript',
@@ -594,7 +594,7 @@ void this.router.navigate([SAML_ROUTE_DATA.AUTHORIZATION_REQUEST]);`,
       },
       {
         description: 'makeDriverCall materializa el POST /authenticate; en local usa HttpClient con cookies y en runtime real puede usar DataManager.',
-        file: 'front-core-atlas/src/angular/packages/auth-manager/src/lib/oauth-manager.service.ts',
+        file: 'front-core-atlas/src/typescript/packages/auth/auth-manager/src/lib/oauth-manager.service.ts',
         startLine: 211,
         endLine: 227,
         language: 'typescript',
@@ -625,7 +625,7 @@ void this.router.navigate([SAML_ROUTE_DATA.AUTHORIZATION_REQUEST]);`,
     return [
       {
         description: 'OauthManager inspecciona el primer callback recibido desde PingAM; si es RedirectCallback, delega en submitRedirectCallback().',
-        file: 'front-core-atlas/src/angular/packages/auth-manager/src/lib/oauth-manager.service.ts',
+        file: 'front-core-atlas/src/typescript/packages/auth/auth-manager/src/lib/oauth-manager.service.ts',
         startLine: 174,
         endLine: 197,
         language: 'typescript',
@@ -655,7 +655,7 @@ void this.router.navigate([SAML_ROUTE_DATA.AUTHORIZATION_REQUEST]);`,
       },
       {
         description: 'Aqui se extrae redirectUrl y se crea el formulario GET autoenviado; form.submit() hace que el navegador salga hacia Entra ID/PingAM.',
-        file: 'front-core-atlas/src/angular/packages/auth-manager/src/lib/oauth-manager.service.ts',
+        file: 'front-core-atlas/src/typescript/packages/auth/auth-manager/src/lib/oauth-manager.service.ts',
         startLine: 237,
         endLine: 260,
         language: 'typescript',
@@ -722,7 +722,7 @@ void this.router.navigate([SAML_ROUTE_DATA.AUTHORIZATION_REQUEST]);`,
     return [
       {
         description: 'OauthManager detecta resumeAuthId, guarda el authId y salta al POST de reanudacion del arbol.',
-        file: 'front-core-atlas/src/angular/packages/auth-manager/src/lib/oauth-manager.service.ts',
+        file: 'front-core-atlas/src/typescript/packages/auth/auth-manager/src/lib/oauth-manager.service.ts',
         startLine: 49,
         endLine: 57,
         language: 'typescript',
@@ -738,7 +738,7 @@ void this.router.navigate([SAML_ROUTE_DATA.AUTHORIZATION_REQUEST]);`,
       },
       {
         description: 'resumeAuth envia POST /authenticate con body { authId }; PingAM devuelve los callbacks de credenciales si el fallback transparente termina ahi.',
-        file: 'front-core-atlas/src/angular/packages/auth-manager/src/lib/oauth-manager.service.ts',
+        file: 'front-core-atlas/src/typescript/packages/auth/auth-manager/src/lib/oauth-manager.service.ts',
         startLine: 155,
         endLine: 160,
         language: 'typescript',
@@ -751,7 +751,7 @@ void this.router.navigate([SAML_ROUTE_DATA.AUTHORIZATION_REQUEST]);`,
       },
       {
         description: 'Al recibir NameCallback o PasswordCallback, OauthManager conserva los callbacks y publica REDIRECT_CREDENTIALS para que el micro pinte el formulario.',
-        file: 'front-core-atlas/src/angular/packages/auth-manager/src/lib/oauth-manager.service.ts',
+        file: 'front-core-atlas/src/typescript/packages/auth/auth-manager/src/lib/oauth-manager.service.ts',
         startLine: 187,
         endLine: 193,
         language: 'typescript',
@@ -840,7 +840,7 @@ this.credentialListenersAttached = true;`,
     return [
       {
         description: 'OauthManager publica REDIRECT_CREDENTIALS tras recibir NameCallback o PasswordCallback; ese evento es la orden para que el micro pinte el formulario.',
-        file: 'front-core-atlas/src/angular/packages/auth-manager/src/lib/oauth-manager.service.ts',
+        file: 'front-core-atlas/src/typescript/packages/auth/auth-manager/src/lib/oauth-manager.service.ts',
         startLine: 187,
         endLine: 193,
         language: 'typescript',
@@ -880,7 +880,7 @@ submitCredentials(): void {
     return [
       {
         description: 'submitCredentials es la API publica del manager para el formulario; internamente delega en credentialsAuth().',
-        file: 'front-core-atlas/src/angular/packages/auth-manager/src/lib/oauth-manager.service.ts',
+        file: 'front-core-atlas/src/typescript/packages/auth/auth-manager/src/lib/oauth-manager.service.ts',
         startLine: 82,
         endLine: 84,
         language: 'typescript',
@@ -890,7 +890,7 @@ submitCredentials(): void {
       },
       {
         description: 'credentialsAuth construye el body con authId y callbacks rellenados, y ejecuta POST /authenticate mediante makeDriverCall().',
-        file: 'front-core-atlas/src/angular/packages/auth-manager/src/lib/oauth-manager.service.ts',
+        file: 'front-core-atlas/src/typescript/packages/auth/auth-manager/src/lib/oauth-manager.service.ts',
         startLine: 162,
         endLine: 171,
         language: 'typescript',
@@ -908,7 +908,7 @@ submitCredentials(): void {
       },
       {
         description: 'buildCredentialCallbacks inyecta username/password en los inputs que espera PingAM: IDToken1 para NameCallback e IDToken2 para PasswordCallback.',
-        file: 'front-core-atlas/src/angular/packages/auth-manager/src/lib/oauth-manager.service.ts',
+        file: 'front-core-atlas/src/typescript/packages/auth/auth-manager/src/lib/oauth-manager.service.ts',
         startLine: 369,
         endLine: 386,
         language: 'typescript',
@@ -973,7 +973,7 @@ export enum ROUTE_DATA  {
     return [
       {
         description: 'La respuesta OK del POST de credenciales entra en handleSuccess; ahi se registra el step y se publica AUTH_SUCCESS con el payload.',
-        file: 'front-core-atlas/src/angular/packages/auth-manager/src/lib/oauth-manager.service.ts',
+        file: 'front-core-atlas/src/typescript/packages/auth/auth-manager/src/lib/oauth-manager.service.ts',
         startLine: 199,
         endLine: 205,
         language: 'typescript',
@@ -1036,7 +1036,7 @@ export enum ROUTE_DATA  {
     return [
       {
         description: 'exchangeAuthorizationCode valida code/state, prepara body/cabeceras y ejecuta el POST /token usando driver o HTTP local.',
-        file: 'front-core-atlas/src/angular/packages/auth-manager/src/lib/oauth-manager.service.ts',
+        file: 'front-core-atlas/src/typescript/packages/auth/auth-manager/src/lib/oauth-manager.service.ts',
         startLine: 113,
         endLine: 146,
         language: 'typescript',
@@ -1136,7 +1136,7 @@ export enum ROUTE_DATA  {
     return [
       {
         description: 'authorize vive ahora en auth-manager: genera state/PKCE, anade assertion/csrf y delega la salida al formulario POST.',
-        file: 'front-core-atlas/src/angular/packages/auth-manager/src/lib/oauth-manager.service.ts',
+        file: 'front-core-atlas/src/typescript/packages/auth/auth-manager/src/lib/oauth-manager.service.ts',
         startLine: 86,
         endLine: 110,
         language: 'typescript',
@@ -1169,7 +1169,7 @@ export enum ROUTE_DATA  {
       },
       {
         description: 'postFormAndLeaveApp materializa la navegacion real: crea hidden inputs y hace submit del formulario fuera de Angular.',
-        file: 'front-core-atlas/src/angular/packages/auth-manager/src/lib/oauth-manager.service.ts',
+        file: 'front-core-atlas/src/typescript/packages/auth/auth-manager/src/lib/oauth-manager.service.ts',
         startLine: 262,
         endLine: 278,
         language: 'typescript',

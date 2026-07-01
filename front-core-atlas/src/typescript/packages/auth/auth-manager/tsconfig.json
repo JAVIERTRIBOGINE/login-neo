@@ -5,14 +5,26 @@
     "module": "es2022",
     "moduleResolution": "bundler",
     "useDefineForClassFields": false,
-    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": false,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
     "composite": false,
-    "verbatimModuleSyntax": false
+    "incremental": false,
+    "verbatimModuleSyntax": false,
+    "importsNotUsedAsValues": "preserve"
   },
   "files": [],
   "include": [],
-  "references": [{ "path": "./tsconfig.lib.json" }],
+  "references": [
+    {
+      "path": "./tsconfig.lib.json"
+    }
+  ],
   "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true

@@ -3,12 +3,9 @@ import { inject, Injectable } from '@angular/core';
 import { EventManager } from '@proteo/event-bus';
 import { Subject, timeout } from 'rxjs';
 
-import { AuthStepConfirmation } from './oauth-manager.models';
-import {
-  SAML_MANAGER_EVENTS,
-  SamlManagerConfig,
-  SamlManagerEvent,
-} from './saml-manager.models';
+import type { AuthStepConfirmation } from './oauth-manager.models';
+import { SAML_MANAGER_EVENTS } from './saml-manager.models';
+import type { SamlManagerConfig, SamlManagerEvent } from './saml-manager.models';
 
 @Injectable({ providedIn: 'root' })
 export class SamlManagerService {

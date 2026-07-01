@@ -21106,6 +21106,820 @@
 			},
 			"type": "module",
 			"contributors": []
+		},
+		"2.1.8-test-auto-pr-SNAPSHOT-121": {
+			"name": "@proteo/bridge-web-ee",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "2.1.8-test-auto-pr-SNAPSHOT-121",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/bridge-web-ee"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@proteo/bridge": "2.1.49-test-auto-pr-SNAPSHOT-121",
+				"@proteo/logger-utils": "1.2.0-test-auto-pr-SNAPSHOT-121"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/event-bus": "2.1.6-test-auto-pr-SNAPSHOT-121",
+				"@proteo/jest-config": "1.0.2-test-auto-pr-SNAPSHOT-121",
+				"@proteo/tsconfig": "1.1.2-test-auto-pr-SNAPSHOT-121",
+				"@proteo/types": "1.1.88-test-auto-pr-SNAPSHOT-121",
+				"@proteo/rolldown-config": "1.0.0"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1782739937564,
+			"_id": "@proteo/bridge-web-ee@2.1.8-test-auto-pr-SNAPSHOT-121",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/bridge-web-ee/-/@proteo/bridge-web-ee-2.1.8-test-auto-pr-SNAPSHOT-121.tgz",
+				"shasum": "5f917dcfaf0b3813236d33acd38556f272a8da0f",
+				"integrity": "sha512-nkamD4+BAK1/fVsoJ7vhY7iU1uB6GWVENvdomV7xgO0aJ9Trl+NGxMR8upCXj6iqqwTLDPEqg8PRByudXoZPVw=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"2.1.8-test-auto-pr-SNAPSHOT-120": {
+			"name": "@proteo/bridge-web-ee",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "2.1.8-test-auto-pr-SNAPSHOT-120",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/bridge-web-ee"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@proteo/bridge": "2.1.49-test-auto-pr-SNAPSHOT-120",
+				"@proteo/logger-utils": "1.2.0-test-auto-pr-SNAPSHOT-120"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/tsconfig": "1.1.2-test-auto-pr-SNAPSHOT-120",
+				"@proteo/rolldown-config": "1.0.0",
+				"@proteo/event-bus": "2.1.6-test-auto-pr-SNAPSHOT-120",
+				"@proteo/jest-config": "1.0.2-test-auto-pr-SNAPSHOT-120",
+				"@proteo/types": "1.1.88-test-auto-pr-SNAPSHOT-120"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1782738792718,
+			"_id": "@proteo/bridge-web-ee@2.1.8-test-auto-pr-SNAPSHOT-120",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/bridge-web-ee/-/@proteo/bridge-web-ee-2.1.8-test-auto-pr-SNAPSHOT-120.tgz",
+				"shasum": "f9ef171a8e50aa1d0312c5bd26d0aa801c96296e",
+				"integrity": "sha512-qnjodsdK0qOyQeCUrgyeP8lmwEmNbqbRkP3c04t3itd2i1H5IXhr1qPse8lxbMYqLt281n8/ymEypU85lCQw+w=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"2.1.8-test-auto-pr-SNAPSHOT-123": {
+			"name": "@proteo/bridge-web-ee",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "2.1.8-test-auto-pr-SNAPSHOT-123",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/bridge-web-ee"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@proteo/bridge": "2.1.49-test-auto-pr-SNAPSHOT-123",
+				"@proteo/logger-utils": "1.2.0-test-auto-pr-SNAPSHOT-123"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/event-bus": "2.1.6-test-auto-pr-SNAPSHOT-123",
+				"@proteo/jest-config": "1.0.2-test-auto-pr-SNAPSHOT-123",
+				"@proteo/tsconfig": "1.1.2-test-auto-pr-SNAPSHOT-123",
+				"@proteo/types": "1.1.88-test-auto-pr-SNAPSHOT-123",
+				"@proteo/rolldown-config": "1.0.0"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1782742241662,
+			"_id": "@proteo/bridge-web-ee@2.1.8-test-auto-pr-SNAPSHOT-123",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/bridge-web-ee/-/@proteo/bridge-web-ee-2.1.8-test-auto-pr-SNAPSHOT-123.tgz",
+				"shasum": "568d989a2b984f219082a5bba37278b7cfcb35ec",
+				"integrity": "sha512-NAtQo2h8WFrHZqroVjUySrExQbk6gvVy5weaSqd44G7T8AfqXORUvueiUdyvSAre14oa4nWsl5sjOr+t5mAQRg=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"2.1.8-test-auto-pr-SNAPSHOT-122": {
+			"name": "@proteo/bridge-web-ee",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "2.1.8-test-auto-pr-SNAPSHOT-122",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/bridge-web-ee"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@proteo/bridge": "2.1.49-test-auto-pr-SNAPSHOT-122",
+				"@proteo/logger-utils": "1.2.0-test-auto-pr-SNAPSHOT-122"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/event-bus": "2.1.6-test-auto-pr-SNAPSHOT-122",
+				"@proteo/jest-config": "1.0.2-test-auto-pr-SNAPSHOT-122",
+				"@proteo/tsconfig": "1.1.2-test-auto-pr-SNAPSHOT-122",
+				"@proteo/types": "1.1.88-test-auto-pr-SNAPSHOT-122",
+				"@proteo/rolldown-config": "1.0.0"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1782741701958,
+			"_id": "@proteo/bridge-web-ee@2.1.8-test-auto-pr-SNAPSHOT-122",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/bridge-web-ee/-/@proteo/bridge-web-ee-2.1.8-test-auto-pr-SNAPSHOT-122.tgz",
+				"shasum": "594e038b716fd377e3417eb9de391fbfeccee1e0",
+				"integrity": "sha512-AqSbm7MV/0FxhS5nNTZ5KqTNTJynhCZoQtHNn3SW6nR1UPRWTM0sr0FREeTv0vmSlg6t+iSXGe5FJe/lAhbehg=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"2.1.8-test-auto-pr-SNAPSHOT-124": {
+			"name": "@proteo/bridge-web-ee",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "2.1.8-test-auto-pr-SNAPSHOT-124",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/bridge-web-ee"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@proteo/bridge": "2.1.49-test-auto-pr-SNAPSHOT-124",
+				"@proteo/logger-utils": "1.2.0-test-auto-pr-SNAPSHOT-124"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/event-bus": "2.1.6-test-auto-pr-SNAPSHOT-124",
+				"@proteo/jest-config": "1.0.2-test-auto-pr-SNAPSHOT-124",
+				"@proteo/types": "1.1.88-test-auto-pr-SNAPSHOT-124",
+				"@proteo/rolldown-config": "1.0.0",
+				"@proteo/tsconfig": "1.1.2-test-auto-pr-SNAPSHOT-124"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1782743778147,
+			"_id": "@proteo/bridge-web-ee@2.1.8-test-auto-pr-SNAPSHOT-124",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/bridge-web-ee/-/@proteo/bridge-web-ee-2.1.8-test-auto-pr-SNAPSHOT-124.tgz",
+				"shasum": "5a7efa9006a2585b3542c5c55f7856f99f2794c5",
+				"integrity": "sha512-SkHECurYjeqU4UdnXW5hu21GKDxtshA/5EEN7h722mWdewUkO6MQt8jbGRI5ON1xIofZlVtPgXdEz6vHCd8VJw=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"2.1.8-test-auto-pr-SNAPSHOT-127": {
+			"name": "@proteo/bridge-web-ee",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "2.1.8-test-auto-pr-SNAPSHOT-127",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/bridge-web-ee"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@proteo/bridge": "2.1.49-test-auto-pr-SNAPSHOT-127",
+				"@proteo/logger-utils": "1.2.0-test-auto-pr-SNAPSHOT-127"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/event-bus": "2.1.6-test-auto-pr-SNAPSHOT-127",
+				"@proteo/jest-config": "1.0.2-test-auto-pr-SNAPSHOT-127",
+				"@proteo/types": "1.1.88-test-auto-pr-SNAPSHOT-127",
+				"@proteo/tsconfig": "1.1.2-test-auto-pr-SNAPSHOT-127",
+				"@proteo/rolldown-config": "1.0.0"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1782807420446,
+			"_id": "@proteo/bridge-web-ee@2.1.8-test-auto-pr-SNAPSHOT-127",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/bridge-web-ee/-/@proteo/bridge-web-ee-2.1.8-test-auto-pr-SNAPSHOT-127.tgz",
+				"shasum": "c084b30bff039afa57b503681618b086278bf750",
+				"integrity": "sha512-NmQR8bzkifOlMG1BnJw7Q4elpA781E5vfQeUeqNqIYpqDabK5memwVq+shyRSK7HHRgENTz/y37UuylEBdpGDA=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"2.1.8-test-auto-pr-SNAPSHOT-126": {
+			"name": "@proteo/bridge-web-ee",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "2.1.8-test-auto-pr-SNAPSHOT-126",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/bridge-web-ee"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@proteo/bridge": "2.1.49-test-auto-pr-SNAPSHOT-126",
+				"@proteo/logger-utils": "1.2.0-test-auto-pr-SNAPSHOT-126"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/tsconfig": "1.1.2-test-auto-pr-SNAPSHOT-126",
+				"@proteo/jest-config": "1.0.2-test-auto-pr-SNAPSHOT-126",
+				"@proteo/event-bus": "2.1.6-test-auto-pr-SNAPSHOT-126",
+				"@proteo/types": "1.1.88-test-auto-pr-SNAPSHOT-126",
+				"@proteo/rolldown-config": "1.0.0"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1782806933820,
+			"_id": "@proteo/bridge-web-ee@2.1.8-test-auto-pr-SNAPSHOT-126",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/bridge-web-ee/-/@proteo/bridge-web-ee-2.1.8-test-auto-pr-SNAPSHOT-126.tgz",
+				"shasum": "86841370ac1446c3853b9f7243f83d9718757e2e",
+				"integrity": "sha512-GaIDptqVz/S/VHwOuJeGk7juIveJypAqxIB6tJf5hEms8GlwmtJYKugIs3hQVYN+cOLMnANKB+ZtFjH92cn7+g=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"2.1.8-test-auto-pr-SNAPSHOT-129": {
+			"name": "@proteo/bridge-web-ee",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "2.1.8-test-auto-pr-SNAPSHOT-129",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/bridge-web-ee"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@proteo/bridge": "2.1.49-test-auto-pr-SNAPSHOT-129",
+				"@proteo/logger-utils": "1.2.0-test-auto-pr-SNAPSHOT-129"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/event-bus": "2.1.6-test-auto-pr-SNAPSHOT-129",
+				"@proteo/jest-config": "1.0.2-test-auto-pr-SNAPSHOT-129",
+				"@proteo/tsconfig": "1.1.2-test-auto-pr-SNAPSHOT-129",
+				"@proteo/types": "1.1.88-test-auto-pr-SNAPSHOT-129",
+				"@proteo/rolldown-config": "1.0.0"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1782813322971,
+			"_id": "@proteo/bridge-web-ee@2.1.8-test-auto-pr-SNAPSHOT-129",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/bridge-web-ee/-/@proteo/bridge-web-ee-2.1.8-test-auto-pr-SNAPSHOT-129.tgz",
+				"shasum": "97cb9e5ae55f6faa770ff95c76ff9be9f985260d",
+				"integrity": "sha512-UNgJ2QBvxwmY5g2780nB6qajVnjhVHRMvl4b3XRfK+m//pirz1LXILnMetMUH6ZwFXDoFAGuoie8tGW5LfELTQ=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"2.1.8-test-auto-pr-SNAPSHOT-128": {
+			"name": "@proteo/bridge-web-ee",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "2.1.8-test-auto-pr-SNAPSHOT-128",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/bridge-web-ee"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@proteo/bridge": "2.1.49-test-auto-pr-SNAPSHOT-128",
+				"@proteo/logger-utils": "1.2.0-test-auto-pr-SNAPSHOT-128"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/event-bus": "2.1.6-test-auto-pr-SNAPSHOT-128",
+				"@proteo/tsconfig": "1.1.2-test-auto-pr-SNAPSHOT-128",
+				"@proteo/jest-config": "1.0.2-test-auto-pr-SNAPSHOT-128",
+				"@proteo/types": "1.1.88-test-auto-pr-SNAPSHOT-128",
+				"@proteo/rolldown-config": "1.0.0"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1782808920454,
+			"_id": "@proteo/bridge-web-ee@2.1.8-test-auto-pr-SNAPSHOT-128",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/bridge-web-ee/-/@proteo/bridge-web-ee-2.1.8-test-auto-pr-SNAPSHOT-128.tgz",
+				"shasum": "88066e9614f2ffd809dc3c0bd211b4fc077ef05b",
+				"integrity": "sha512-n/nFckD2ToED+ZMNKE1DCgmo3P6fL8Lf2tzxq/mBdgmR36XMoYKLh1fCUprFJGs8ekPAMwSJofQRXYFmfeswmw=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"2.1.8-test-auto-pr-SNAPSHOT-130": {
+			"name": "@proteo/bridge-web-ee",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "2.1.8-test-auto-pr-SNAPSHOT-130",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/bridge-web-ee"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@proteo/bridge": "2.1.49-test-auto-pr-SNAPSHOT-130",
+				"@proteo/logger-utils": "1.2.0-test-auto-pr-SNAPSHOT-130"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/event-bus": "2.1.6-test-auto-pr-SNAPSHOT-130",
+				"@proteo/jest-config": "1.0.2-test-auto-pr-SNAPSHOT-130",
+				"@proteo/types": "1.1.88-test-auto-pr-SNAPSHOT-130",
+				"@proteo/tsconfig": "1.1.2-test-auto-pr-SNAPSHOT-130",
+				"@proteo/rolldown-config": "1.0.0"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1782813685048,
+			"_id": "@proteo/bridge-web-ee@2.1.8-test-auto-pr-SNAPSHOT-130",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/bridge-web-ee/-/@proteo/bridge-web-ee-2.1.8-test-auto-pr-SNAPSHOT-130.tgz",
+				"shasum": "28174c31428f1e09a976182592b990319436dce2",
+				"integrity": "sha512-+AHI8B4WICcCt23oXaBNlJTHRqQpksLjz8WOCcMjf0RcxNn6oR2ovQaWLzGnvZFgIFIW6msg90D6nuAJOhED1Q=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"2.1.8-test-auto-pr-SNAPSHOT-119": {
+			"name": "@proteo/bridge-web-ee",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "2.1.8-test-auto-pr-SNAPSHOT-119",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/bridge-web-ee"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@proteo/bridge": "2.1.49-test-auto-pr-SNAPSHOT-119",
+				"@proteo/logger-utils": "1.2.0-test-auto-pr-SNAPSHOT-119"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/event-bus": "2.1.6-test-auto-pr-SNAPSHOT-119",
+				"@proteo/jest-config": "1.0.2-test-auto-pr-SNAPSHOT-119",
+				"@proteo/tsconfig": "1.1.2-test-auto-pr-SNAPSHOT-119",
+				"@proteo/rolldown-config": "1.0.0",
+				"@proteo/types": "1.1.88-test-auto-pr-SNAPSHOT-119"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1782737037516,
+			"_id": "@proteo/bridge-web-ee@2.1.8-test-auto-pr-SNAPSHOT-119",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/bridge-web-ee/-/@proteo/bridge-web-ee-2.1.8-test-auto-pr-SNAPSHOT-119.tgz",
+				"shasum": "dd5af09d28c5471401bf92d2979c0c6a575a237e",
+				"integrity": "sha512-gRuGRlCUQyNw7a7xxh5yzfsPYWOn2/k8VuNPlY569bSnexAjw+SKLWywr/2xYTFopx9fURW30pHFZ5juJnjpsg=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
 		}
 	},
 	"time": {
@@ -21202,7 +22016,7 @@
 		"2.0.66": "2025-10-08T08:47:49.015Z",
 		"2.0.68": "2025-10-14T10:15:13.725Z",
 		"0.0.0": "2023-01-11T12:40:39.959Z",
-		"modified": "2026-06-16T14:10:00.557Z",
+		"modified": "2026-06-30T10:01:25.048Z",
 		"2.0.84-EARCH-39024.1": "2026-01-27T10:14:56.802Z",
 		"2.0.84-EARCH-39024.0": "2026-01-26T15:28:30.029Z",
 		"2.0.50": "2025-03-27T11:00:45.564Z",
@@ -21253,7 +22067,18 @@
 		"2.1.8-dev.1781194532158": "2026-06-11T16:15:40.383Z",
 		"2.1.8-dev.1781195668306": "2026-06-11T16:34:36.489Z",
 		"2.1.8-SNAPSHOT-100": "2026-06-16T09:34:37.842Z",
-		"2.1.8-tmp-build-test-SNAPSHOT-111": "2026-06-16T14:10:00.557Z"
+		"2.1.8-tmp-build-test-SNAPSHOT-111": "2026-06-16T14:10:00.557Z",
+		"2.1.8-test-auto-pr-SNAPSHOT-121": "2026-06-29T13:32:17.564Z",
+		"2.1.8-test-auto-pr-SNAPSHOT-120": "2026-06-29T13:13:12.718Z",
+		"2.1.8-test-auto-pr-SNAPSHOT-123": "2026-06-29T14:10:41.662Z",
+		"2.1.8-test-auto-pr-SNAPSHOT-122": "2026-06-29T14:01:41.958Z",
+		"2.1.8-test-auto-pr-SNAPSHOT-124": "2026-06-29T14:36:18.147Z",
+		"2.1.8-test-auto-pr-SNAPSHOT-127": "2026-06-30T08:17:00.446Z",
+		"2.1.8-test-auto-pr-SNAPSHOT-126": "2026-06-30T08:08:53.820Z",
+		"2.1.8-test-auto-pr-SNAPSHOT-129": "2026-06-30T09:55:22.971Z",
+		"2.1.8-test-auto-pr-SNAPSHOT-128": "2026-06-30T08:42:00.454Z",
+		"2.1.8-test-auto-pr-SNAPSHOT-130": "2026-06-30T10:01:25.048Z",
+		"2.1.8-test-auto-pr-SNAPSHOT-119": "2026-06-29T12:43:57.516Z"
 	},
 	"users": {},
 	"dist-tags": {
@@ -21264,8 +22089,8 @@
 	},
 	"_uplinks": {
 		"artifactory-sabadell": {
-			"etag": "54682913531a346099e33da4057e86725a5c1e27",
-			"fetched": 1782682730369
+			"etag": "294dcdf3bc36480294afed7f2b93d5619dd5b0e2",
+			"fetched": 1782898241628
 		}
 	},
 	"_distfiles": {
@@ -21968,6 +22793,61 @@
 			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/bridge-web-ee/-/@proteo/bridge-web-ee-2.1.8-tmp-build-test-SNAPSHOT-111.tgz",
 			"sha": "23b2ef98ff095b125f1aba29a26589f305a15ff3",
 			"registry": "artifactory-sabadell"
+		},
+		"bridge-web-ee-2.1.8-test-auto-pr-SNAPSHOT-121.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/bridge-web-ee/-/@proteo/bridge-web-ee-2.1.8-test-auto-pr-SNAPSHOT-121.tgz",
+			"sha": "5f917dcfaf0b3813236d33acd38556f272a8da0f",
+			"registry": "artifactory-sabadell"
+		},
+		"bridge-web-ee-2.1.8-test-auto-pr-SNAPSHOT-120.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/bridge-web-ee/-/@proteo/bridge-web-ee-2.1.8-test-auto-pr-SNAPSHOT-120.tgz",
+			"sha": "f9ef171a8e50aa1d0312c5bd26d0aa801c96296e",
+			"registry": "artifactory-sabadell"
+		},
+		"bridge-web-ee-2.1.8-test-auto-pr-SNAPSHOT-123.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/bridge-web-ee/-/@proteo/bridge-web-ee-2.1.8-test-auto-pr-SNAPSHOT-123.tgz",
+			"sha": "568d989a2b984f219082a5bba37278b7cfcb35ec",
+			"registry": "artifactory-sabadell"
+		},
+		"bridge-web-ee-2.1.8-test-auto-pr-SNAPSHOT-122.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/bridge-web-ee/-/@proteo/bridge-web-ee-2.1.8-test-auto-pr-SNAPSHOT-122.tgz",
+			"sha": "594e038b716fd377e3417eb9de391fbfeccee1e0",
+			"registry": "artifactory-sabadell"
+		},
+		"bridge-web-ee-2.1.8-test-auto-pr-SNAPSHOT-124.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/bridge-web-ee/-/@proteo/bridge-web-ee-2.1.8-test-auto-pr-SNAPSHOT-124.tgz",
+			"sha": "5a7efa9006a2585b3542c5c55f7856f99f2794c5",
+			"registry": "artifactory-sabadell"
+		},
+		"bridge-web-ee-2.1.8-test-auto-pr-SNAPSHOT-127.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/bridge-web-ee/-/@proteo/bridge-web-ee-2.1.8-test-auto-pr-SNAPSHOT-127.tgz",
+			"sha": "c084b30bff039afa57b503681618b086278bf750",
+			"registry": "artifactory-sabadell"
+		},
+		"bridge-web-ee-2.1.8-test-auto-pr-SNAPSHOT-126.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/bridge-web-ee/-/@proteo/bridge-web-ee-2.1.8-test-auto-pr-SNAPSHOT-126.tgz",
+			"sha": "86841370ac1446c3853b9f7243f83d9718757e2e",
+			"registry": "artifactory-sabadell"
+		},
+		"bridge-web-ee-2.1.8-test-auto-pr-SNAPSHOT-129.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/bridge-web-ee/-/@proteo/bridge-web-ee-2.1.8-test-auto-pr-SNAPSHOT-129.tgz",
+			"sha": "97cb9e5ae55f6faa770ff95c76ff9be9f985260d",
+			"registry": "artifactory-sabadell"
+		},
+		"bridge-web-ee-2.1.8-test-auto-pr-SNAPSHOT-128.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/bridge-web-ee/-/@proteo/bridge-web-ee-2.1.8-test-auto-pr-SNAPSHOT-128.tgz",
+			"sha": "88066e9614f2ffd809dc3c0bd211b4fc077ef05b",
+			"registry": "artifactory-sabadell"
+		},
+		"bridge-web-ee-2.1.8-test-auto-pr-SNAPSHOT-130.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/bridge-web-ee/-/@proteo/bridge-web-ee-2.1.8-test-auto-pr-SNAPSHOT-130.tgz",
+			"sha": "28174c31428f1e09a976182592b990319436dce2",
+			"registry": "artifactory-sabadell"
+		},
+		"bridge-web-ee-2.1.8-test-auto-pr-SNAPSHOT-119.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/bridge-web-ee/-/@proteo/bridge-web-ee-2.1.8-test-auto-pr-SNAPSHOT-119.tgz",
+			"sha": "dd5af09d28c5471401bf92d2979c0c6a575a237e",
+			"registry": "artifactory-sabadell"
 		}
 	},
 	"_attachments": {
@@ -21980,7 +22860,7 @@
 			"version": "2.1.8-dev.1781195668306"
 		}
 	},
-	"_rev": "15-9080ecc45c610b33",
+	"_rev": "16-bc312672a7c343cc",
 	"_id": "@proteo/bridge-web-ee",
 	"readme": ""
 }

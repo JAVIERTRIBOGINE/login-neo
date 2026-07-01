@@ -3824,6 +3824,776 @@
 			},
 			"type": "module",
 			"contributors": []
+		},
+		"1.0.5-test-auto-pr-SNAPSHOT-130": {
+			"name": "@proteo/currency-utils",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.5-test-auto-pr-SNAPSHOT-130",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/currency-utils"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@proteo/sanitization": "1.0.4-test-auto-pr-SNAPSHOT-130"
+			},
+			"devDependencies": {
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/jest-config": "1.0.2-test-auto-pr-SNAPSHOT-130",
+				"@proteo/tsconfig": "1.1.2-test-auto-pr-SNAPSHOT-130",
+				"@proteo/rolldown-config": "1.0.0"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1782813676363,
+			"_id": "@proteo/currency-utils@1.0.5-test-auto-pr-SNAPSHOT-130",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/currency-utils/-/@proteo/currency-utils-1.0.5-test-auto-pr-SNAPSHOT-130.tgz",
+				"shasum": "9d9dd189f008779aff3966bd16e1923402dd172a",
+				"integrity": "sha512-PYCjX6Uf1Kg5cSK7T8K3Wzzn4D5aok5wCbGmMB94UYKn0FazeDJZIVuoAo0NGCAtnJ0Hr7Y5fHDHonDfIZlmIw=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"1.0.5-test-auto-pr-SNAPSHOT-129": {
+			"name": "@proteo/currency-utils",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.5-test-auto-pr-SNAPSHOT-129",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/currency-utils"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@proteo/sanitization": "1.0.4-test-auto-pr-SNAPSHOT-129"
+			},
+			"devDependencies": {
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/tsconfig": "1.1.2-test-auto-pr-SNAPSHOT-129",
+				"@proteo/jest-config": "1.0.2-test-auto-pr-SNAPSHOT-129",
+				"@proteo/rolldown-config": "1.0.0"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1782813314356,
+			"_id": "@proteo/currency-utils@1.0.5-test-auto-pr-SNAPSHOT-129",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/currency-utils/-/@proteo/currency-utils-1.0.5-test-auto-pr-SNAPSHOT-129.tgz",
+				"shasum": "e8c0c6609cc3508f548236ca199a4ad54410edbf",
+				"integrity": "sha512-RrLPPFAvmC1gGx68GsY6dbMZhafn3Cu4KcRAzZSTLg6mI0t11R3gpMGTrFCEl/3j0CJ/UCU3Z9UDfSt6wCGj7w=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"1.0.5-test-auto-pr-SNAPSHOT-126": {
+			"name": "@proteo/currency-utils",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.5-test-auto-pr-SNAPSHOT-126",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/currency-utils"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@proteo/sanitization": "1.0.4-test-auto-pr-SNAPSHOT-126"
+			},
+			"devDependencies": {
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/jest-config": "1.0.2-test-auto-pr-SNAPSHOT-126",
+				"@proteo/rolldown-config": "1.0.0",
+				"@proteo/tsconfig": "1.1.2-test-auto-pr-SNAPSHOT-126"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1782806924964,
+			"_id": "@proteo/currency-utils@1.0.5-test-auto-pr-SNAPSHOT-126",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/currency-utils/-/@proteo/currency-utils-1.0.5-test-auto-pr-SNAPSHOT-126.tgz",
+				"shasum": "885915692cf85fbb9396772c2819683269888100",
+				"integrity": "sha512-KJq/visfr6dFK0Qy1lVh8MvQf/eHXFPZj5eAWAYC0z3Mnw6rF1e3SvZezC5ssaJEtAMMryjsj5UahFnjhFQJ4w=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"1.0.5-test-auto-pr-SNAPSHOT-128": {
+			"name": "@proteo/currency-utils",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.5-test-auto-pr-SNAPSHOT-128",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/currency-utils"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@proteo/sanitization": "1.0.4-test-auto-pr-SNAPSHOT-128"
+			},
+			"devDependencies": {
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/jest-config": "1.0.2-test-auto-pr-SNAPSHOT-128",
+				"@proteo/rolldown-config": "1.0.0",
+				"@proteo/tsconfig": "1.1.2-test-auto-pr-SNAPSHOT-128"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1782808911581,
+			"_id": "@proteo/currency-utils@1.0.5-test-auto-pr-SNAPSHOT-128",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/currency-utils/-/@proteo/currency-utils-1.0.5-test-auto-pr-SNAPSHOT-128.tgz",
+				"shasum": "7e9ba5dfdafeb19862af0faa7b57b8ec640824ed",
+				"integrity": "sha512-QSvxDrs+VgD7Oe76PQDF95c8Q7OOt5fKC2szjQYPgyZm4xKmCCUPjq4Ew3r/cVqANr6c5qLC1RNJmTCZkUABhw=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"1.0.5-test-auto-pr-SNAPSHOT-127": {
+			"name": "@proteo/currency-utils",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.5-test-auto-pr-SNAPSHOT-127",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/currency-utils"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@proteo/sanitization": "1.0.4-test-auto-pr-SNAPSHOT-127"
+			},
+			"devDependencies": {
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/jest-config": "1.0.2-test-auto-pr-SNAPSHOT-127",
+				"@proteo/rolldown-config": "1.0.0",
+				"@proteo/tsconfig": "1.1.2-test-auto-pr-SNAPSHOT-127"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1782807411528,
+			"_id": "@proteo/currency-utils@1.0.5-test-auto-pr-SNAPSHOT-127",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/currency-utils/-/@proteo/currency-utils-1.0.5-test-auto-pr-SNAPSHOT-127.tgz",
+				"shasum": "05d20cd03c35baf161e4a413bdd49fa9935ee6da",
+				"integrity": "sha512-QeWLr5QxU8RwFnX0ikD9vHWmSif+gWdTFtYneoAw9CLtpuL0BW5nsnC4CczTQ+odqbAvfBNrG+Z9BlZj8hE7/A=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"1.0.5-test-auto-pr-SNAPSHOT-122": {
+			"name": "@proteo/currency-utils",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.5-test-auto-pr-SNAPSHOT-122",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/currency-utils"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@proteo/sanitization": "1.0.4-test-auto-pr-SNAPSHOT-122"
+			},
+			"devDependencies": {
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/jest-config": "1.0.2-test-auto-pr-SNAPSHOT-122",
+				"@proteo/tsconfig": "1.1.2-test-auto-pr-SNAPSHOT-122",
+				"@proteo/rolldown-config": "1.0.0"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1782741692944,
+			"_id": "@proteo/currency-utils@1.0.5-test-auto-pr-SNAPSHOT-122",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/currency-utils/-/@proteo/currency-utils-1.0.5-test-auto-pr-SNAPSHOT-122.tgz",
+				"shasum": "6cc1b77b6628b4ff6939c41e7e143dd3ede23f9d",
+				"integrity": "sha512-Q0/irt2lfIR56/AuI253FAj43y4YOEqhFOTgr0igixOWMK9ga6ipWBXCuBUk7sdu4B4+OsfhFFx1HgDCpNSdIw=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"1.0.5-test-auto-pr-SNAPSHOT-121": {
+			"name": "@proteo/currency-utils",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.5-test-auto-pr-SNAPSHOT-121",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/currency-utils"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@proteo/sanitization": "1.0.4-test-auto-pr-SNAPSHOT-121"
+			},
+			"devDependencies": {
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/jest-config": "1.0.2-test-auto-pr-SNAPSHOT-121",
+				"@proteo/tsconfig": "1.1.2-test-auto-pr-SNAPSHOT-121",
+				"@proteo/rolldown-config": "1.0.0"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1782739929171,
+			"_id": "@proteo/currency-utils@1.0.5-test-auto-pr-SNAPSHOT-121",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/currency-utils/-/@proteo/currency-utils-1.0.5-test-auto-pr-SNAPSHOT-121.tgz",
+				"shasum": "84e825e5b3ef1f9f6cee60cfad7a97f1038a410a",
+				"integrity": "sha512-re7jfpbLJyvrmJZRkdUWUmFi9ay4qJouxm1K6XUO+9vp7J3khjoVH7Y46826PDuQmFjoS+Ef5n0G01W0zt5DjQ=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"1.0.5-test-auto-pr-SNAPSHOT-124": {
+			"name": "@proteo/currency-utils",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.5-test-auto-pr-SNAPSHOT-124",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/currency-utils"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@proteo/sanitization": "1.0.4-test-auto-pr-SNAPSHOT-124"
+			},
+			"devDependencies": {
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/jest-config": "1.0.2-test-auto-pr-SNAPSHOT-124",
+				"@proteo/tsconfig": "1.1.2-test-auto-pr-SNAPSHOT-124",
+				"@proteo/rolldown-config": "1.0.0"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1782743768399,
+			"_id": "@proteo/currency-utils@1.0.5-test-auto-pr-SNAPSHOT-124",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/currency-utils/-/@proteo/currency-utils-1.0.5-test-auto-pr-SNAPSHOT-124.tgz",
+				"shasum": "f9ae26eee7a7b44f8ee26634c86538936abd0c9c",
+				"integrity": "sha512-2PSx4v0zGfFf5AD7LMjYjJaodII6IlpXrN5Qe0aBk6slJ8gC9VhSXnLYZ2K3nkPxqpni1shzRgcj8YG4T4BbgQ=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"1.0.5-test-auto-pr-SNAPSHOT-123": {
+			"name": "@proteo/currency-utils",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.5-test-auto-pr-SNAPSHOT-123",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/currency-utils"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@proteo/sanitization": "1.0.4-test-auto-pr-SNAPSHOT-123"
+			},
+			"devDependencies": {
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/tsconfig": "1.1.2-test-auto-pr-SNAPSHOT-123",
+				"@proteo/jest-config": "1.0.2-test-auto-pr-SNAPSHOT-123",
+				"@proteo/rolldown-config": "1.0.0"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1782742233276,
+			"_id": "@proteo/currency-utils@1.0.5-test-auto-pr-SNAPSHOT-123",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/currency-utils/-/@proteo/currency-utils-1.0.5-test-auto-pr-SNAPSHOT-123.tgz",
+				"shasum": "f57d9fcc0878dc6afcc33833227912169ebd63a6",
+				"integrity": "sha512-6EVfbNZmhA5qVxg0zZPpMnfVnU0FrbDVrOdM0g8JP4uVa/VpAxe3laR4n5cRfWPArkEheMPv/6WZS0c0aj+ycA=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"1.0.5-test-auto-pr-SNAPSHOT-120": {
+			"name": "@proteo/currency-utils",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.5-test-auto-pr-SNAPSHOT-120",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/currency-utils"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@proteo/sanitization": "1.0.4-test-auto-pr-SNAPSHOT-120"
+			},
+			"devDependencies": {
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/jest-config": "1.0.2-test-auto-pr-SNAPSHOT-120",
+				"@proteo/rolldown-config": "1.0.0",
+				"@proteo/tsconfig": "1.1.2-test-auto-pr-SNAPSHOT-120"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1782738784067,
+			"_id": "@proteo/currency-utils@1.0.5-test-auto-pr-SNAPSHOT-120",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/currency-utils/-/@proteo/currency-utils-1.0.5-test-auto-pr-SNAPSHOT-120.tgz",
+				"shasum": "be2ba54eba6438f9ecb28c7d0463de270aec2b4c",
+				"integrity": "sha512-6iHYkYgF6ohBnn6wal8aQHAkdXpeKWU0xkZ3S7LUsHC7NjXQL9Mb7v+Gu3ON7WWp7H32/dMqYD128ARojMjTeQ=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"1.0.5-test-auto-pr-SNAPSHOT-119": {
+			"name": "@proteo/currency-utils",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "1.0.5-test-auto-pr-SNAPSHOT-119",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/currency-utils"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@proteo/sanitization": "1.0.4-test-auto-pr-SNAPSHOT-119"
+			},
+			"devDependencies": {
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/rolldown-config": "1.0.0",
+				"@proteo/tsconfig": "1.1.2-test-auto-pr-SNAPSHOT-119",
+				"@proteo/jest-config": "1.0.2-test-auto-pr-SNAPSHOT-119"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1782737028214,
+			"_id": "@proteo/currency-utils@1.0.5-test-auto-pr-SNAPSHOT-119",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/currency-utils/-/@proteo/currency-utils-1.0.5-test-auto-pr-SNAPSHOT-119.tgz",
+				"shasum": "5fc0564bafb275edf2dcdf78d48ec4a0f96c4153",
+				"integrity": "sha512-gmt/oxdQaM7nEKEA/8pVchwlzPGfUITzo+B6bU79GPHhekq+x1ICrt/It9jhvGjEC/UcD5aZJm9QwBv0UhG4Nw=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
 		}
 	},
 	"time": {
@@ -3847,7 +4617,7 @@
 		"1.1.0-dev-2": "2026-05-20T16:29:52.509Z",
 		"1.1.0-dev-1": "2026-05-20T15:09:50.137Z",
 		"1.0.0-next.2": "2023-01-11T12:52:04.552Z",
-		"modified": "2026-06-16T14:09:52.095Z",
+		"modified": "2026-06-30T10:01:16.363Z",
 		"1.0.0-next.1": "2023-01-11T12:52:01.159Z",
 		"1.0.0-rc.5": "2023-01-11T12:52:12.279Z",
 		"1.0.0-next.0": "2023-01-11T12:52:00.344Z",
@@ -3867,7 +4637,18 @@
 		"1.0.5-dev.1781194532158": "2026-06-11T16:15:39.801Z",
 		"1.0.5-dev.1781195668306": "2026-06-11T16:34:36.609Z",
 		"1.0.5-SNAPSHOT-100": "2026-06-16T09:34:28.355Z",
-		"1.0.5-tmp-build-test-SNAPSHOT-111": "2026-06-16T14:09:52.095Z"
+		"1.0.5-tmp-build-test-SNAPSHOT-111": "2026-06-16T14:09:52.095Z",
+		"1.0.5-test-auto-pr-SNAPSHOT-122": "2026-06-29T14:01:32.944Z",
+		"1.0.5-test-auto-pr-SNAPSHOT-121": "2026-06-29T13:32:09.171Z",
+		"1.0.5-test-auto-pr-SNAPSHOT-124": "2026-06-29T14:36:08.399Z",
+		"1.0.5-test-auto-pr-SNAPSHOT-123": "2026-06-29T14:10:33.276Z",
+		"1.0.5-test-auto-pr-SNAPSHOT-120": "2026-06-29T13:13:04.067Z",
+		"1.0.5-test-auto-pr-SNAPSHOT-119": "2026-06-29T12:43:48.214Z",
+		"1.0.5-test-auto-pr-SNAPSHOT-130": "2026-06-30T10:01:16.363Z",
+		"1.0.5-test-auto-pr-SNAPSHOT-129": "2026-06-30T09:55:14.356Z",
+		"1.0.5-test-auto-pr-SNAPSHOT-126": "2026-06-30T08:08:44.964Z",
+		"1.0.5-test-auto-pr-SNAPSHOT-128": "2026-06-30T08:41:51.581Z",
+		"1.0.5-test-auto-pr-SNAPSHOT-127": "2026-06-30T08:16:51.528Z"
 	},
 	"users": {},
 	"dist-tags": {
@@ -3876,8 +4657,8 @@
 	},
 	"_uplinks": {
 		"artifactory-sabadell": {
-			"etag": "1dd4442f2440579a12dc8c9d370642c67783c835",
-			"fetched": 1782682730298
+			"etag": "bc1c4c85ee98cd7d8bdb474e3be42871c693d55a",
+			"fetched": 1782898242777
 		}
 	},
 	"_distfiles": {
@@ -4060,6 +4841,61 @@
 			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/currency-utils/-/@proteo/currency-utils-1.0.5-tmp-build-test-SNAPSHOT-111.tgz",
 			"sha": "eb7f3ff0980ef0fc73180a824605e8d5c599571c",
 			"registry": "artifactory-sabadell"
+		},
+		"currency-utils-1.0.5-test-auto-pr-SNAPSHOT-130.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/currency-utils/-/@proteo/currency-utils-1.0.5-test-auto-pr-SNAPSHOT-130.tgz",
+			"sha": "9d9dd189f008779aff3966bd16e1923402dd172a",
+			"registry": "artifactory-sabadell"
+		},
+		"currency-utils-1.0.5-test-auto-pr-SNAPSHOT-129.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/currency-utils/-/@proteo/currency-utils-1.0.5-test-auto-pr-SNAPSHOT-129.tgz",
+			"sha": "e8c0c6609cc3508f548236ca199a4ad54410edbf",
+			"registry": "artifactory-sabadell"
+		},
+		"currency-utils-1.0.5-test-auto-pr-SNAPSHOT-126.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/currency-utils/-/@proteo/currency-utils-1.0.5-test-auto-pr-SNAPSHOT-126.tgz",
+			"sha": "885915692cf85fbb9396772c2819683269888100",
+			"registry": "artifactory-sabadell"
+		},
+		"currency-utils-1.0.5-test-auto-pr-SNAPSHOT-128.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/currency-utils/-/@proteo/currency-utils-1.0.5-test-auto-pr-SNAPSHOT-128.tgz",
+			"sha": "7e9ba5dfdafeb19862af0faa7b57b8ec640824ed",
+			"registry": "artifactory-sabadell"
+		},
+		"currency-utils-1.0.5-test-auto-pr-SNAPSHOT-127.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/currency-utils/-/@proteo/currency-utils-1.0.5-test-auto-pr-SNAPSHOT-127.tgz",
+			"sha": "05d20cd03c35baf161e4a413bdd49fa9935ee6da",
+			"registry": "artifactory-sabadell"
+		},
+		"currency-utils-1.0.5-test-auto-pr-SNAPSHOT-122.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/currency-utils/-/@proteo/currency-utils-1.0.5-test-auto-pr-SNAPSHOT-122.tgz",
+			"sha": "6cc1b77b6628b4ff6939c41e7e143dd3ede23f9d",
+			"registry": "artifactory-sabadell"
+		},
+		"currency-utils-1.0.5-test-auto-pr-SNAPSHOT-121.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/currency-utils/-/@proteo/currency-utils-1.0.5-test-auto-pr-SNAPSHOT-121.tgz",
+			"sha": "84e825e5b3ef1f9f6cee60cfad7a97f1038a410a",
+			"registry": "artifactory-sabadell"
+		},
+		"currency-utils-1.0.5-test-auto-pr-SNAPSHOT-124.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/currency-utils/-/@proteo/currency-utils-1.0.5-test-auto-pr-SNAPSHOT-124.tgz",
+			"sha": "f9ae26eee7a7b44f8ee26634c86538936abd0c9c",
+			"registry": "artifactory-sabadell"
+		},
+		"currency-utils-1.0.5-test-auto-pr-SNAPSHOT-123.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/currency-utils/-/@proteo/currency-utils-1.0.5-test-auto-pr-SNAPSHOT-123.tgz",
+			"sha": "f57d9fcc0878dc6afcc33833227912169ebd63a6",
+			"registry": "artifactory-sabadell"
+		},
+		"currency-utils-1.0.5-test-auto-pr-SNAPSHOT-120.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/currency-utils/-/@proteo/currency-utils-1.0.5-test-auto-pr-SNAPSHOT-120.tgz",
+			"sha": "be2ba54eba6438f9ecb28c7d0463de270aec2b4c",
+			"registry": "artifactory-sabadell"
+		},
+		"currency-utils-1.0.5-test-auto-pr-SNAPSHOT-119.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/currency-utils/-/@proteo/currency-utils-1.0.5-test-auto-pr-SNAPSHOT-119.tgz",
+			"sha": "5fc0564bafb275edf2dcdf78d48ec4a0f96c4153",
+			"registry": "artifactory-sabadell"
 		}
 	},
 	"_attachments": {
@@ -4072,7 +4908,7 @@
 			"version": "1.0.5-dev.1781195668306"
 		}
 	},
-	"_rev": "15-dc6975f32ee07879",
+	"_rev": "16-091b0c1c5189ac28",
 	"_id": "@proteo/currency-utils",
 	"readme": ""
 }

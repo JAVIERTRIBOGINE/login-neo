@@ -1,40 +1,58 @@
 {
   "name": "@proteo/auth-manager",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Proteo4 authentication flow coordinator",
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+    "directory": "src/typescript/packages/auth/auth-manager"
+  },
+  "publishConfig": {
+    "registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-local/",
+    "directory": "./dist"
+  },
   "type": "module",
   "scripts": {
-    "build": "ng build auth-manager",
+    "build": "ng-packagr -p ng-package.json",
+    "postbuild": "node ../../../../../scripts/postbuild/strip-publish-config.cjs",
     "test": "jest",
     "test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage",
-    "clean": "rimraf dist .ng_build .ng_pkg_build",
-    "postbuild": "node ../../../../scripts/postbuild/strip-publish-config.cjs"
+    "clean": "rimraf dist .ng_build .ng_pkg_build types/ test/ coverage/ development/ *.tsbuildinfo index.js index.js.map"
   },
   "peerDependencies": {
     "@angular/common": "17.3.6",
     "@angular/core": "17.3.6",
-    "@proteo/data-manager": "workspace:*",
-    "@proteo/event-bus": "workspace:*",
-    "@proteo/storage-utils": "workspace:*",
-    "@proteo/string-utils": "workspace:*",
-    "@proteo/types": "workspace:*",
+    "@proteo/data-manager": ">=2.4.16-dev.0 <3.0.0",
+    "@proteo/event-bus": ">=2.1.6-dev.0 <3.0.0",
+    "@proteo/storage-utils": ">=1.0.6-dev.0 <2.0.0",
+    "@proteo/string-utils": ">=1.0.3-dev.0 <2.0.0",
+    "@proteo/types": ">=1.1.87 <2.0.0",
     "rxjs": "~7.8.0"
   },
   "dependencies": {
     "tslib": "^2.6.2"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "17.3.6",
+    "@angular/compiler": "17.3.6",
     "@angular/compiler-cli": "17.3.6",
+    "@proteo/data-manager": "workspace:*",
+    "@proteo/event-bus": "workspace:*",
+    "@proteo/jest-config": "workspace:*",
+    "@proteo/storage-utils": "workspace:*",
+    "@proteo/string-utils": "workspace:*",
+    "@proteo/tsconfig": "workspace:*",
+    "@proteo/types": "workspace:*",
+    "@types/jest": "^29.5.12",
     "cross-env": "^7.0.3",
     "jest": "^29.7.0",
-    "jest-preset-angular": "14.5.5",
+    "jest-environment-jsdom": "^29.7.0",
     "ng-packagr": "^17.3.0",
     "rimraf": "^5.0.5",
+    "ts-jest": "^29.1.5",
     "typescript": "5.4.5"
   },
   "sideEffects": false,
-  "publishConfig": {
-    "directory": "./dist"
+  "directories": {
+    "test": "test"
   }
 }

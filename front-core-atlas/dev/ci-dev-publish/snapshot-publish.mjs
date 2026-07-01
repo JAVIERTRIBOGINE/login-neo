@@ -464,7 +464,8 @@ function runPublish(dir, registryUrl, extraFlags = []) {
 
     const proc = spawn('pnpm', ['publish', '--registry', registryUrl, '--no-git-checks', ...extraFlags], {
       cwd: dir,
-      shell: false
+      shell: false,
+      env: buildPnpmPublishEnv()
     });
 
     proc.stdout.on('data', (d) => {
@@ -485,6 +486,21 @@ function runPublish(dir, registryUrl, extraFlags = []) {
 
     proc.on('error', reject);
   });
+}
+
+function buildPnpmPublishEnv() {
+  return {
+    ...process.env,
+    // El modo snapshot parchea temporalmente versiones del workspace antes
+    // del build. pnpm 11 puede interpretarlo como un lockfile desactualizado
+    // e intentar un `pnpm install` interactivo dentro de este subproceso.
+    pnpm_config_verify_deps_before_run:
+      process.env.pnpm_config_verify_deps_before_run ?? 'false',
+    // Durante el publish de paquetes Angular desde dist/, auto-instalar peers
+    // hace que pnpm intente resolver paquetes privados @proteo/* contra npmjs.
+    pnpm_config_auto_install_peers:
+      process.env.pnpm_config_auto_install_peers ?? 'false'
+  };
 }
 
 /**
@@ -699,14 +715,7 @@ function runPnpm(args) {
       cwd: ROOT_DIR,
       shell: false,
       stdio: 'inherit',
-      env: {
-        ...process.env,
-        // El modo snapshot parchea temporalmente versiones del workspace antes
-        // del build. pnpm 11 puede interpretarlo como un lockfile desactualizado
-        // e intentar un `pnpm install` interactivo dentro de este subproceso.
-        pnpm_config_verify_deps_before_run:
-          process.env.pnpm_config_verify_deps_before_run ?? 'false'
-      }
+      env: buildPnpmPublishEnv()
     });
 
     proc.on('close', (code, signal) => {
@@ -923,15 +932,19 @@ export async function publishAll(packages, _allPackages, timestamp, registryUrl,
       workspacePackageMap
     );
     await buildPackages(plan.buildPackages);
-    await patchPublishContentSnapshotVersions(
-      plan.publishPackages,
-      timestamp,
-      registryUrl,
-      snapshotVersionMap,
-      workspacePackageMap
-    );
-    await publishPackagesWithPnpm(plan.publishPackages, registryUrl);
-    return buildPublishResults(plan.publishPackages, timestamp, true);
+    const results = [];
+    for (const pkg of sortPackagesByWorkspaceDependencies(plan.publishPackages)) {
+      const snapshotVersion = generateSnapshotVersion(pkg.pkgJson.version, timestamp);
+      results.push(await publishPackage(
+        pkg,
+        snapshotVersion,
+        registryUrl,
+        false,
+        snapshotVersionMap,
+        workspacePackageMap
+      ));
+    }
+    return results;
   } catch (e) {
     return buildPublishResults(plan.publishPackages, timestamp, false, e.message);
   } finally {

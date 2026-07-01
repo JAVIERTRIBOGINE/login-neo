@@ -1,4 +1,4 @@
-import { AuthStepConfirmation } from './oauth-manager.models';
+import type { AuthStepConfirmation } from './oauth-manager.models';
 
 export interface SamlManagerConfig {
   endpoints: {

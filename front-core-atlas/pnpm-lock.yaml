@@ -98,86 +98,6 @@ importers:
         specifier: 5.4.5
         version: 5.4.5
 
-  src/angular/packages/auth-manager:
-    dependencies:
-      '@angular/common':
-        specifier: 17.3.6
-        version: 17.3.6(@angular/core@17.3.6(rxjs@7.8.2)(zone.js@0.14.10))(rxjs@7.8.2)
-      '@angular/core':
-        specifier: 17.3.6
-        version: 17.3.6(rxjs@7.8.2)(zone.js@0.14.10)
-      '@proteo/data-manager':
-        specifier: workspace:*
-        version: link:../../../typescript/packages/network/data-manager
-      '@proteo/event-bus':
-        specifier: workspace:*
-        version: link:../../../typescript/packages/observability/event-bus
-      '@proteo/storage-utils':
-        specifier: workspace:*
-        version: link:../../../typescript/packages/storage/storage-utils
-      '@proteo/string-utils':
-        specifier: workspace:*
-        version: link:../../../typescript/packages/formatting/string-utils
-      '@proteo/types':
-        specifier: workspace:*
-        version: link:../../../typescript/packages/types
-      rxjs:
-        specifier: ~7.8.0
-        version: 7.8.2
-      tslib:
-        specifier: ^2.6.2
-        version: 2.8.1
-    devDependencies:
-      '@angular-devkit/build-angular':
-        specifier: 17.3.6
-        version: 17.3.6(@angular/compiler-cli@17.3.6(@angular/compiler@17.3.6(@angular/core@17.3.6(rxjs@7.8.2)(zone.js@0.14.10)))(typescript@5.4.5))(@types/express@4.17.25)(@types/node@25.9.1)(chokidar@3.6.0)(jest-environment-jsdom@29.7.0)(jest@29.7.0(@types/node@25.9.1)(ts-node@10.9.2(@types/node@25.9.1)(typescript@5.4.5)))(ng-packagr@17.3.0(@angular/compiler-cli@17.3.6(@angular/compiler@17.3.6(@angular/core@17.3.6(rxjs@7.8.2)(zone.js@0.14.10)))(typescript@5.4.5))(tslib@2.8.1)(typescript@5.4.5))(typescript@5.4.5)
-      '@angular/compiler-cli':
-        specifier: 17.3.6
-        version: 17.3.6(@angular/compiler@17.3.6(@angular/core@17.3.6(rxjs@7.8.2)(zone.js@0.14.10)))(typescript@5.4.5)
-      cross-env:
-        specifier: ^7.0.3
-        version: 7.0.3
-      jest:
-        specifier: ^29.7.0
-        version: 29.7.0(@types/node@25.9.1)(ts-node@10.9.2(@types/node@25.9.1)(typescript@5.4.5))
-      jest-preset-angular:
-        specifier: 14.5.5
-        version: 14.5.5(@angular/compiler-cli@17.3.6(@angular/compiler@17.3.6(@angular/core@17.3.6(rxjs@7.8.2)(zone.js@0.14.10)))(typescript@5.4.5))(@angular/core@17.3.6(rxjs@7.8.2)(zone.js@0.14.10))(@angular/platform-browser-dynamic@17.3.6(@angular/common@17.3.6(@angular/core@17.3.6(rxjs@7.8.2)(zone.js@0.14.10))(rxjs@7.8.2))(@angular/compiler@17.3.6(@angular/core@17.3.6(rxjs@7.8.2)(zone.js@0.14.10)))(@angular/core@17.3.6(rxjs@7.8.2)(zone.js@0.14.10))(@angular/platform-browser@17.3.6(@angular/common@17.3.6(@angular/core@17.3.6(rxjs@7.8.2)(zone.js@0.14.10))(rxjs@7.8.2))(@angular/core@17.3.6(rxjs@7.8.2)(zone.js@0.14.10))))(@babel/core@7.29.7)(@jest/transform@29.7.0)(@jest/types@29.6.3)(babel-jest@29.7.0(@babel/core@7.29.7))(jest@29.7.0(@types/node@25.9.1)(ts-node@10.9.2(@types/node@25.9.1)(typescript@5.4.5)))(jsdom@20.0.3)(typescript@5.4.5)
-      ng-packagr:
-        specifier: ^17.3.0
-        version: 17.3.0(@angular/compiler-cli@17.3.6(@angular/compiler@17.3.6(@angular/core@17.3.6(rxjs@7.8.2)(zone.js@0.14.10)))(typescript@5.4.5))(tslib@2.8.1)(typescript@5.4.5)
-      rimraf:
-        specifier: ^5.0.0
-        version: 5.0.10
-      typescript:
-        specifier: 5.4.5
-        version: 5.4.5
-    publishDirectory: ./dist
-
-  src/angular/packages/auth-manager/dist:
-    dependencies:
-      '@angular/common':
-        specifier: 17.3.6
-        version: 17.3.6(@angular/core@17.3.6(rxjs@7.8.2)(zone.js@0.14.10))(rxjs@7.8.2)
-      '@angular/core':
-        specifier: 17.3.6
-        version: 17.3.6(rxjs@7.8.2)(zone.js@0.14.10)
-      '@proteo/data-manager':
-        specifier: workspace:*
-        version: link:../../../../typescript/packages/network/data-manager
-      '@proteo/event-bus':
-        specifier: workspace:*
-        version: link:../../../../typescript/packages/observability/event-bus
-      '@proteo/types':
-        specifier: workspace:*
-        version: link:../../../../typescript/packages/types
-      rxjs:
-        specifier: ~7.8.0
-        version: 7.8.2
-      tslib:
-        specifier: ^2.6.2
-        version: 2.8.1
-
   src/angular/packages/ng-bootstrap:
     dependencies:
       '@angular-architects/module-federation':
@@ -1122,6 +1042,74 @@ importers:
       typescript:
         specifier: ^5.5.4
         version: 5.9.3
+
+  src/typescript/packages/auth/auth-manager:
+    dependencies:
+      '@angular/common':
+        specifier: 17.3.6
+        version: 17.3.6(@angular/core@17.3.6(rxjs@7.8.2)(zone.js@0.14.10))(rxjs@7.8.2)
+      '@angular/core':
+        specifier: 17.3.6
+        version: 17.3.6(rxjs@7.8.2)(zone.js@0.14.10)
+      rxjs:
+        specifier: ~7.8.0
+        version: 7.8.2
+      tslib:
+        specifier: ^2.6.2
+        version: 2.8.1
+    devDependencies:
+      '@angular/compiler':
+        specifier: 17.3.6
+        version: 17.3.6(@angular/core@17.3.6(rxjs@7.8.2)(zone.js@0.14.10))
+      '@angular/compiler-cli':
+        specifier: 17.3.6
+        version: 17.3.6(@angular/compiler@17.3.6(@angular/core@17.3.6(rxjs@7.8.2)(zone.js@0.14.10)))(typescript@5.4.5)
+      '@proteo/data-manager':
+        specifier: workspace:*
+        version: link:../../network/data-manager
+      '@proteo/event-bus':
+        specifier: workspace:*
+        version: link:../../observability/event-bus
+      '@proteo/jest-config':
+        specifier: workspace:*
+        version: link:../../../../config/packages/jest
+      '@proteo/storage-utils':
+        specifier: workspace:*
+        version: link:../../storage/storage-utils
+      '@proteo/string-utils':
+        specifier: workspace:*
+        version: link:../../formatting/string-utils
+      '@proteo/tsconfig':
+        specifier: workspace:*
+        version: link:../../../../config/packages/tsconfig
+      '@proteo/types':
+        specifier: workspace:*
+        version: link:../../types
+      '@types/jest':
+        specifier: ^29.5.12
+        version: 29.5.14
+      cross-env:
+        specifier: ^7.0.3
+        version: 7.0.3
+      jest:
+        specifier: ^29.7.0
+        version: 29.7.0(@types/node@25.9.1)(ts-node@10.9.2(@types/node@25.9.1)(typescript@5.9.3))
+      jest-environment-jsdom:
+        specifier: ^29.7.0
+        version: 29.7.0
+      ng-packagr:
+        specifier: ^17.3.0
+        version: 17.3.0(@angular/compiler-cli@17.3.6(@angular/compiler@17.3.6(@angular/core@17.3.6(rxjs@7.8.2)(zone.js@0.14.10)))(typescript@5.4.5))(tslib@2.8.1)(typescript@5.4.5)
+      rimraf:
+        specifier: ^5.0.0
+        version: 5.0.10
+      ts-jest:
+        specifier: ^29.1.5
+        version: 29.4.11(@babel/core@7.29.7)(@jest/transform@29.7.0)(@jest/types@29.6.3)(babel-jest@29.7.0(@babel/core@7.29.7))(esbuild@0.21.5)(jest-util@29.7.0)(jest@29.7.0(@types/node@25.9.1)(ts-node@10.9.2(@types/node@25.9.1)(typescript@5.9.3)))(typescript@5.9.3)
+      typescript:
+        specifier: 5.4.5
+        version: 5.4.5
+    publishDirectory: ./dist
 
   src/typescript/packages/auth/authorization-utils:
     dependencies:

@@ -175,7 +175,7 @@
                 </div>
               </div>
             </ng-template>
-
+            ---{{step.completed}}---
             <button class="shell-flow__next" type="button" *ngIf="!step.completed" (click)="nextFlowStep(step)">
               Siguiente
             </button>

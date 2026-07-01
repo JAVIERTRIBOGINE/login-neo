@@ -137,7 +137,10 @@ export class OauthManagerService {
     StorageManager.getInstance().remove('STATE');
     StorageManager.getInstance().remove('CODE_VERIFIER');
 
-    const driver = this.getTokenDriver(request.dataManager);
+    const localHttp = request.tokenUrl.startsWith('/')
+      || request.tokenUrl.startsWith('http://localhost')
+      || request.tokenUrl.startsWith('http://127.0.0.1');
+    const driver = localHttp ? null : this.getTokenDriver(request.dataManager);
     if (!driver) {
       return this.postJson<TokensResponse>(request.tokenUrl, body);
     }

@@ -41077,6 +41077,1106 @@
 			},
 			"type": "module",
 			"contributors": []
+		},
+		"2.5.23-test-auto-pr-SNAPSHOT-119": {
+			"name": "@proteo/bootstrap",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "2.5.23-test-auto-pr-SNAPSHOT-119",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/bootstrap"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@proteo/amount-utils": "1.0.22-test-auto-pr-SNAPSHOT-119",
+				"@proteo/authorization-utils": "2.4.0-test-auto-pr-SNAPSHOT-119",
+				"@proteo/bridge": "2.1.49-test-auto-pr-SNAPSHOT-119",
+				"@proteo/bridge-bsm-android": "2.0.99-test-auto-pr-SNAPSHOT-119",
+				"@proteo/bridge-web": "2.0.98-test-auto-pr-SNAPSHOT-119",
+				"@proteo/bridge-bsm-ios": "2.0.99-test-auto-pr-SNAPSHOT-119",
+				"@proteo/bridge-web-ee": "2.1.8-test-auto-pr-SNAPSHOT-119",
+				"@proteo/data-manager": "2.4.16-test-auto-pr-SNAPSHOT-119",
+				"@proteo/data-manager-driver-http": "2.1.26-test-auto-pr-SNAPSHOT-119",
+				"@proteo/data-manager-driver-proteo4": "2.13.7-test-auto-pr-SNAPSHOT-119",
+				"@proteo/date-utils": "1.3.16-test-auto-pr-SNAPSHOT-119",
+				"@proteo/data-manager-driver-legacy": "2.1.25-test-auto-pr-SNAPSHOT-119",
+				"@proteo/event-bus": "2.1.6-test-auto-pr-SNAPSHOT-119",
+				"@proteo/i18n-utils": "1.3.14-test-auto-pr-SNAPSHOT-119",
+				"@proteo/keep-alive": "1.0.18-test-auto-pr-SNAPSHOT-119",
+				"@proteo/maintenance-loader": "1.0.22-test-auto-pr-SNAPSHOT-119",
+				"@proteo/logger-utils": "1.2.0-test-auto-pr-SNAPSHOT-119",
+				"@proteo/storage-utils": "1.0.6-test-auto-pr-SNAPSHOT-119",
+				"@proteo/tag-manager": "2.2.2-test-auto-pr-SNAPSHOT-119",
+				"@proteo/platform-utils": "1.0.5-test-auto-pr-SNAPSHOT-119",
+				"@proteo/tag-manager-driver-tealium-info": "1.1.15-test-auto-pr-SNAPSHOT-119",
+				"@proteo/cookies-policy-utils": "1.1.12-test-auto-pr-SNAPSHOT-119",
+				"@proteo/tag-manager-driver-tealium-tx-p4": "2.2.9-test-auto-pr-SNAPSHOT-119",
+				"@proteo/tag-manager-driver-tealium-tx": "1.1.15-test-auto-pr-SNAPSHOT-119",
+				"@proteo/biocatch-util": "1.2.8-test-auto-pr-SNAPSHOT-119",
+				"@proteo/dynatrace-utils": "1.1.1-test-auto-pr-SNAPSHOT-119",
+				"@proteo/cookie-utils": "1.0.5-test-auto-pr-SNAPSHOT-119",
+				"@proteo/feature-manager": "2.0.7-test-auto-pr-SNAPSHOT-119",
+				"@proteo/string-utils": "1.0.3-test-auto-pr-SNAPSHOT-119",
+				"@proteo/rsa-util": "1.1.8-test-auto-pr-SNAPSHOT-119"
+			},
+			"devDependencies": {
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/tsconfig": "1.1.2-test-auto-pr-SNAPSHOT-119",
+				"@proteo/jest-config": "1.0.2-test-auto-pr-SNAPSHOT-119",
+				"@proteo/types": "1.1.88-test-auto-pr-SNAPSHOT-119",
+				"@proteo/rolldown-config": "1.0.0"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1782737038001,
+			"_id": "@proteo/bootstrap@2.5.23-test-auto-pr-SNAPSHOT-119",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/bootstrap/-/@proteo/bootstrap-2.5.23-test-auto-pr-SNAPSHOT-119.tgz",
+				"shasum": "7567cdf0297c910321dc96d41524b31572f4766c",
+				"integrity": "sha512-2TUIdSOYYtJJ3L4EFFPFaRs5CmQJCNeN+drAKiZs2gMDNOWM3EQFLroVEPg58eZbW5XmuGbeGHge4IyvTGQAOA=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"2.5.23-test-auto-pr-SNAPSHOT-120": {
+			"name": "@proteo/bootstrap",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "2.5.23-test-auto-pr-SNAPSHOT-120",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/bootstrap"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@proteo/amount-utils": "1.0.22-test-auto-pr-SNAPSHOT-120",
+				"@proteo/authorization-utils": "2.4.0-test-auto-pr-SNAPSHOT-120",
+				"@proteo/bridge": "2.1.49-test-auto-pr-SNAPSHOT-120",
+				"@proteo/bridge-bsm-android": "2.0.99-test-auto-pr-SNAPSHOT-120",
+				"@proteo/bridge-bsm-ios": "2.0.99-test-auto-pr-SNAPSHOT-120",
+				"@proteo/bridge-web": "2.0.98-test-auto-pr-SNAPSHOT-120",
+				"@proteo/data-manager": "2.4.16-test-auto-pr-SNAPSHOT-120",
+				"@proteo/bridge-web-ee": "2.1.8-test-auto-pr-SNAPSHOT-120",
+				"@proteo/data-manager-driver-http": "2.1.26-test-auto-pr-SNAPSHOT-120",
+				"@proteo/data-manager-driver-legacy": "2.1.25-test-auto-pr-SNAPSHOT-120",
+				"@proteo/data-manager-driver-proteo4": "2.13.7-test-auto-pr-SNAPSHOT-120",
+				"@proteo/date-utils": "1.3.16-test-auto-pr-SNAPSHOT-120",
+				"@proteo/event-bus": "2.1.6-test-auto-pr-SNAPSHOT-120",
+				"@proteo/i18n-utils": "1.3.14-test-auto-pr-SNAPSHOT-120",
+				"@proteo/keep-alive": "1.0.18-test-auto-pr-SNAPSHOT-120",
+				"@proteo/logger-utils": "1.2.0-test-auto-pr-SNAPSHOT-120",
+				"@proteo/maintenance-loader": "1.0.22-test-auto-pr-SNAPSHOT-120",
+				"@proteo/platform-utils": "1.0.5-test-auto-pr-SNAPSHOT-120",
+				"@proteo/storage-utils": "1.0.6-test-auto-pr-SNAPSHOT-120",
+				"@proteo/tag-manager": "2.2.2-test-auto-pr-SNAPSHOT-120",
+				"@proteo/tag-manager-driver-tealium-info": "1.1.15-test-auto-pr-SNAPSHOT-120",
+				"@proteo/tag-manager-driver-tealium-tx": "1.1.15-test-auto-pr-SNAPSHOT-120",
+				"@proteo/tag-manager-driver-tealium-tx-p4": "2.2.9-test-auto-pr-SNAPSHOT-120",
+				"@proteo/cookies-policy-utils": "1.1.12-test-auto-pr-SNAPSHOT-120",
+				"@proteo/biocatch-util": "1.2.8-test-auto-pr-SNAPSHOT-120",
+				"@proteo/dynatrace-utils": "1.1.1-test-auto-pr-SNAPSHOT-120",
+				"@proteo/feature-manager": "2.0.7-test-auto-pr-SNAPSHOT-120",
+				"@proteo/cookie-utils": "1.0.5-test-auto-pr-SNAPSHOT-120",
+				"@proteo/string-utils": "1.0.3-test-auto-pr-SNAPSHOT-120",
+				"@proteo/rsa-util": "1.1.8-test-auto-pr-SNAPSHOT-120"
+			},
+			"devDependencies": {
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/jest-config": "1.0.2-test-auto-pr-SNAPSHOT-120",
+				"@proteo/tsconfig": "1.1.2-test-auto-pr-SNAPSHOT-120",
+				"@proteo/types": "1.1.88-test-auto-pr-SNAPSHOT-120",
+				"@proteo/rolldown-config": "1.0.0"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1782738793202,
+			"_id": "@proteo/bootstrap@2.5.23-test-auto-pr-SNAPSHOT-120",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/bootstrap/-/@proteo/bootstrap-2.5.23-test-auto-pr-SNAPSHOT-120.tgz",
+				"shasum": "712c850da2a833149b2350112a3f7548aa4fdca6",
+				"integrity": "sha512-dfwYvMhe5VOECgTDAH+WsO1VX7As7RSyBJ5VCwCxHAFGYL1y1K7liahOQ7mtIWRGy/PtzzNKF626PsijHmj/FQ=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"2.5.23-test-auto-pr-SNAPSHOT-123": {
+			"name": "@proteo/bootstrap",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "2.5.23-test-auto-pr-SNAPSHOT-123",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/bootstrap"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@proteo/amount-utils": "1.0.22-test-auto-pr-SNAPSHOT-123",
+				"@proteo/authorization-utils": "2.4.0-test-auto-pr-SNAPSHOT-123",
+				"@proteo/bridge": "2.1.49-test-auto-pr-SNAPSHOT-123",
+				"@proteo/bridge-bsm-android": "2.0.99-test-auto-pr-SNAPSHOT-123",
+				"@proteo/bridge-bsm-ios": "2.0.99-test-auto-pr-SNAPSHOT-123",
+				"@proteo/bridge-web-ee": "2.1.8-test-auto-pr-SNAPSHOT-123",
+				"@proteo/bridge-web": "2.0.98-test-auto-pr-SNAPSHOT-123",
+				"@proteo/data-manager": "2.4.16-test-auto-pr-SNAPSHOT-123",
+				"@proteo/data-manager-driver-http": "2.1.26-test-auto-pr-SNAPSHOT-123",
+				"@proteo/data-manager-driver-legacy": "2.1.25-test-auto-pr-SNAPSHOT-123",
+				"@proteo/data-manager-driver-proteo4": "2.13.7-test-auto-pr-SNAPSHOT-123",
+				"@proteo/date-utils": "1.3.16-test-auto-pr-SNAPSHOT-123",
+				"@proteo/event-bus": "2.1.6-test-auto-pr-SNAPSHOT-123",
+				"@proteo/i18n-utils": "1.3.14-test-auto-pr-SNAPSHOT-123",
+				"@proteo/keep-alive": "1.0.18-test-auto-pr-SNAPSHOT-123",
+				"@proteo/logger-utils": "1.2.0-test-auto-pr-SNAPSHOT-123",
+				"@proteo/maintenance-loader": "1.0.22-test-auto-pr-SNAPSHOT-123",
+				"@proteo/platform-utils": "1.0.5-test-auto-pr-SNAPSHOT-123",
+				"@proteo/storage-utils": "1.0.6-test-auto-pr-SNAPSHOT-123",
+				"@proteo/tag-manager": "2.2.2-test-auto-pr-SNAPSHOT-123",
+				"@proteo/tag-manager-driver-tealium-info": "1.1.15-test-auto-pr-SNAPSHOT-123",
+				"@proteo/tag-manager-driver-tealium-tx": "1.1.15-test-auto-pr-SNAPSHOT-123",
+				"@proteo/tag-manager-driver-tealium-tx-p4": "2.2.9-test-auto-pr-SNAPSHOT-123",
+				"@proteo/cookies-policy-utils": "1.1.12-test-auto-pr-SNAPSHOT-123",
+				"@proteo/biocatch-util": "1.2.8-test-auto-pr-SNAPSHOT-123",
+				"@proteo/cookie-utils": "1.0.5-test-auto-pr-SNAPSHOT-123",
+				"@proteo/dynatrace-utils": "1.1.1-test-auto-pr-SNAPSHOT-123",
+				"@proteo/string-utils": "1.0.3-test-auto-pr-SNAPSHOT-123",
+				"@proteo/feature-manager": "2.0.7-test-auto-pr-SNAPSHOT-123",
+				"@proteo/rsa-util": "1.1.8-test-auto-pr-SNAPSHOT-123"
+			},
+			"devDependencies": {
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/jest-config": "1.0.2-test-auto-pr-SNAPSHOT-123",
+				"@proteo/tsconfig": "1.1.2-test-auto-pr-SNAPSHOT-123",
+				"@proteo/types": "1.1.88-test-auto-pr-SNAPSHOT-123",
+				"@proteo/rolldown-config": "1.0.0"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1782742242138,
+			"_id": "@proteo/bootstrap@2.5.23-test-auto-pr-SNAPSHOT-123",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/bootstrap/-/@proteo/bootstrap-2.5.23-test-auto-pr-SNAPSHOT-123.tgz",
+				"shasum": "ca8a79df6e7438d1bbc9783b9459fd73693cfed4",
+				"integrity": "sha512-uSq1vmzfnFsxtdqma1Rgn3/h7Cxj0WL9Gh+zYwb3h3jra8FcK+DIgJCzqaBJT040EbAITL8aBG5WqtkpiFE4WA=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"2.5.23-test-auto-pr-SNAPSHOT-124": {
+			"name": "@proteo/bootstrap",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "2.5.23-test-auto-pr-SNAPSHOT-124",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/bootstrap"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@proteo/amount-utils": "1.0.22-test-auto-pr-SNAPSHOT-124",
+				"@proteo/bridge": "2.1.49-test-auto-pr-SNAPSHOT-124",
+				"@proteo/bridge-bsm-android": "2.0.99-test-auto-pr-SNAPSHOT-124",
+				"@proteo/authorization-utils": "2.4.0-test-auto-pr-SNAPSHOT-124",
+				"@proteo/bridge-bsm-ios": "2.0.99-test-auto-pr-SNAPSHOT-124",
+				"@proteo/bridge-web": "2.0.98-test-auto-pr-SNAPSHOT-124",
+				"@proteo/bridge-web-ee": "2.1.8-test-auto-pr-SNAPSHOT-124",
+				"@proteo/data-manager-driver-http": "2.1.26-test-auto-pr-SNAPSHOT-124",
+				"@proteo/data-manager": "2.4.16-test-auto-pr-SNAPSHOT-124",
+				"@proteo/data-manager-driver-legacy": "2.1.25-test-auto-pr-SNAPSHOT-124",
+				"@proteo/data-manager-driver-proteo4": "2.13.7-test-auto-pr-SNAPSHOT-124",
+				"@proteo/date-utils": "1.3.16-test-auto-pr-SNAPSHOT-124",
+				"@proteo/event-bus": "2.1.6-test-auto-pr-SNAPSHOT-124",
+				"@proteo/i18n-utils": "1.3.14-test-auto-pr-SNAPSHOT-124",
+				"@proteo/keep-alive": "1.0.18-test-auto-pr-SNAPSHOT-124",
+				"@proteo/logger-utils": "1.2.0-test-auto-pr-SNAPSHOT-124",
+				"@proteo/maintenance-loader": "1.0.22-test-auto-pr-SNAPSHOT-124",
+				"@proteo/storage-utils": "1.0.6-test-auto-pr-SNAPSHOT-124",
+				"@proteo/tag-manager": "2.2.2-test-auto-pr-SNAPSHOT-124",
+				"@proteo/tag-manager-driver-tealium-info": "1.1.15-test-auto-pr-SNAPSHOT-124",
+				"@proteo/platform-utils": "1.0.5-test-auto-pr-SNAPSHOT-124",
+				"@proteo/tag-manager-driver-tealium-tx": "1.1.15-test-auto-pr-SNAPSHOT-124",
+				"@proteo/tag-manager-driver-tealium-tx-p4": "2.2.9-test-auto-pr-SNAPSHOT-124",
+				"@proteo/cookies-policy-utils": "1.1.12-test-auto-pr-SNAPSHOT-124",
+				"@proteo/biocatch-util": "1.2.8-test-auto-pr-SNAPSHOT-124",
+				"@proteo/cookie-utils": "1.0.5-test-auto-pr-SNAPSHOT-124",
+				"@proteo/dynatrace-utils": "1.1.1-test-auto-pr-SNAPSHOT-124",
+				"@proteo/string-utils": "1.0.3-test-auto-pr-SNAPSHOT-124",
+				"@proteo/rsa-util": "1.1.8-test-auto-pr-SNAPSHOT-124",
+				"@proteo/feature-manager": "2.0.7-test-auto-pr-SNAPSHOT-124"
+			},
+			"devDependencies": {
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/jest-config": "1.0.2-test-auto-pr-SNAPSHOT-124",
+				"@proteo/tsconfig": "1.1.2-test-auto-pr-SNAPSHOT-124",
+				"@proteo/types": "1.1.88-test-auto-pr-SNAPSHOT-124",
+				"@proteo/rolldown-config": "1.0.0"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1782743778691,
+			"_id": "@proteo/bootstrap@2.5.23-test-auto-pr-SNAPSHOT-124",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/bootstrap/-/@proteo/bootstrap-2.5.23-test-auto-pr-SNAPSHOT-124.tgz",
+				"shasum": "6fdb9cf49849320e80d0286ed3a71c96c1ceca99",
+				"integrity": "sha512-cFTdPT2LIqvZt9hEMeasYjzpTer84sSdd7tPlwMWiEW4ShrAXdZ/57+NOQBqIRI2A31jEyfEI2aWrvaGMlPZhw=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"2.5.23-test-auto-pr-SNAPSHOT-121": {
+			"name": "@proteo/bootstrap",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "2.5.23-test-auto-pr-SNAPSHOT-121",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/bootstrap"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@proteo/amount-utils": "1.0.22-test-auto-pr-SNAPSHOT-121",
+				"@proteo/bridge": "2.1.49-test-auto-pr-SNAPSHOT-121",
+				"@proteo/authorization-utils": "2.4.0-test-auto-pr-SNAPSHOT-121",
+				"@proteo/bridge-bsm-ios": "2.0.99-test-auto-pr-SNAPSHOT-121",
+				"@proteo/bridge-web": "2.0.98-test-auto-pr-SNAPSHOT-121",
+				"@proteo/bridge-bsm-android": "2.0.99-test-auto-pr-SNAPSHOT-121",
+				"@proteo/data-manager": "2.4.16-test-auto-pr-SNAPSHOT-121",
+				"@proteo/data-manager-driver-http": "2.1.26-test-auto-pr-SNAPSHOT-121",
+				"@proteo/bridge-web-ee": "2.1.8-test-auto-pr-SNAPSHOT-121",
+				"@proteo/data-manager-driver-legacy": "2.1.25-test-auto-pr-SNAPSHOT-121",
+				"@proteo/data-manager-driver-proteo4": "2.13.7-test-auto-pr-SNAPSHOT-121",
+				"@proteo/date-utils": "1.3.16-test-auto-pr-SNAPSHOT-121",
+				"@proteo/i18n-utils": "1.3.14-test-auto-pr-SNAPSHOT-121",
+				"@proteo/keep-alive": "1.0.18-test-auto-pr-SNAPSHOT-121",
+				"@proteo/event-bus": "2.1.6-test-auto-pr-SNAPSHOT-121",
+				"@proteo/logger-utils": "1.2.0-test-auto-pr-SNAPSHOT-121",
+				"@proteo/maintenance-loader": "1.0.22-test-auto-pr-SNAPSHOT-121",
+				"@proteo/platform-utils": "1.0.5-test-auto-pr-SNAPSHOT-121",
+				"@proteo/storage-utils": "1.0.6-test-auto-pr-SNAPSHOT-121",
+				"@proteo/tag-manager": "2.2.2-test-auto-pr-SNAPSHOT-121",
+				"@proteo/tag-manager-driver-tealium-info": "1.1.15-test-auto-pr-SNAPSHOT-121",
+				"@proteo/tag-manager-driver-tealium-tx": "1.1.15-test-auto-pr-SNAPSHOT-121",
+				"@proteo/tag-manager-driver-tealium-tx-p4": "2.2.9-test-auto-pr-SNAPSHOT-121",
+				"@proteo/cookies-policy-utils": "1.1.12-test-auto-pr-SNAPSHOT-121",
+				"@proteo/biocatch-util": "1.2.8-test-auto-pr-SNAPSHOT-121",
+				"@proteo/cookie-utils": "1.0.5-test-auto-pr-SNAPSHOT-121",
+				"@proteo/dynatrace-utils": "1.1.1-test-auto-pr-SNAPSHOT-121",
+				"@proteo/feature-manager": "2.0.7-test-auto-pr-SNAPSHOT-121",
+				"@proteo/string-utils": "1.0.3-test-auto-pr-SNAPSHOT-121",
+				"@proteo/rsa-util": "1.1.8-test-auto-pr-SNAPSHOT-121"
+			},
+			"devDependencies": {
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/jest-config": "1.0.2-test-auto-pr-SNAPSHOT-121",
+				"@proteo/tsconfig": "1.1.2-test-auto-pr-SNAPSHOT-121",
+				"@proteo/types": "1.1.88-test-auto-pr-SNAPSHOT-121",
+				"@proteo/rolldown-config": "1.0.0"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1782739938051,
+			"_id": "@proteo/bootstrap@2.5.23-test-auto-pr-SNAPSHOT-121",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/bootstrap/-/@proteo/bootstrap-2.5.23-test-auto-pr-SNAPSHOT-121.tgz",
+				"shasum": "e96af68632dd0bffd4a255e14589a61f5695f8ed",
+				"integrity": "sha512-26I5nDWMb8iJSn+4s+CsXxAfFnlh2O9Z6OoW8s5MPCJtzt7RTHwVk+cB7mgDHA1GU9itW5ao3bb/jJV2m2H6gA=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"2.5.23-test-auto-pr-SNAPSHOT-122": {
+			"name": "@proteo/bootstrap",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "2.5.23-test-auto-pr-SNAPSHOT-122",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/bootstrap"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@proteo/amount-utils": "1.0.22-test-auto-pr-SNAPSHOT-122",
+				"@proteo/authorization-utils": "2.4.0-test-auto-pr-SNAPSHOT-122",
+				"@proteo/bridge": "2.1.49-test-auto-pr-SNAPSHOT-122",
+				"@proteo/bridge-bsm-ios": "2.0.99-test-auto-pr-SNAPSHOT-122",
+				"@proteo/bridge-web": "2.0.98-test-auto-pr-SNAPSHOT-122",
+				"@proteo/bridge-web-ee": "2.1.8-test-auto-pr-SNAPSHOT-122",
+				"@proteo/data-manager": "2.4.16-test-auto-pr-SNAPSHOT-122",
+				"@proteo/bridge-bsm-android": "2.0.99-test-auto-pr-SNAPSHOT-122",
+				"@proteo/data-manager-driver-http": "2.1.26-test-auto-pr-SNAPSHOT-122",
+				"@proteo/data-manager-driver-legacy": "2.1.25-test-auto-pr-SNAPSHOT-122",
+				"@proteo/data-manager-driver-proteo4": "2.13.7-test-auto-pr-SNAPSHOT-122",
+				"@proteo/event-bus": "2.1.6-test-auto-pr-SNAPSHOT-122",
+				"@proteo/date-utils": "1.3.16-test-auto-pr-SNAPSHOT-122",
+				"@proteo/i18n-utils": "1.3.14-test-auto-pr-SNAPSHOT-122",
+				"@proteo/keep-alive": "1.0.18-test-auto-pr-SNAPSHOT-122",
+				"@proteo/logger-utils": "1.2.0-test-auto-pr-SNAPSHOT-122",
+				"@proteo/maintenance-loader": "1.0.22-test-auto-pr-SNAPSHOT-122",
+				"@proteo/storage-utils": "1.0.6-test-auto-pr-SNAPSHOT-122",
+				"@proteo/tag-manager": "2.2.2-test-auto-pr-SNAPSHOT-122",
+				"@proteo/platform-utils": "1.0.5-test-auto-pr-SNAPSHOT-122",
+				"@proteo/tag-manager-driver-tealium-info": "1.1.15-test-auto-pr-SNAPSHOT-122",
+				"@proteo/tag-manager-driver-tealium-tx": "1.1.15-test-auto-pr-SNAPSHOT-122",
+				"@proteo/biocatch-util": "1.2.8-test-auto-pr-SNAPSHOT-122",
+				"@proteo/tag-manager-driver-tealium-tx-p4": "2.2.9-test-auto-pr-SNAPSHOT-122",
+				"@proteo/cookies-policy-utils": "1.1.12-test-auto-pr-SNAPSHOT-122",
+				"@proteo/dynatrace-utils": "1.1.1-test-auto-pr-SNAPSHOT-122",
+				"@proteo/cookie-utils": "1.0.5-test-auto-pr-SNAPSHOT-122",
+				"@proteo/feature-manager": "2.0.7-test-auto-pr-SNAPSHOT-122",
+				"@proteo/string-utils": "1.0.3-test-auto-pr-SNAPSHOT-122",
+				"@proteo/rsa-util": "1.1.8-test-auto-pr-SNAPSHOT-122"
+			},
+			"devDependencies": {
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/jest-config": "1.0.2-test-auto-pr-SNAPSHOT-122",
+				"@proteo/tsconfig": "1.1.2-test-auto-pr-SNAPSHOT-122",
+				"@proteo/rolldown-config": "1.0.0",
+				"@proteo/types": "1.1.88-test-auto-pr-SNAPSHOT-122"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1782741702479,
+			"_id": "@proteo/bootstrap@2.5.23-test-auto-pr-SNAPSHOT-122",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/bootstrap/-/@proteo/bootstrap-2.5.23-test-auto-pr-SNAPSHOT-122.tgz",
+				"shasum": "ffd2a6ee085c3b4451bad05bddf8fd8169be3a9e",
+				"integrity": "sha512-3EqDrE1hoTghnsnFI0U236CS9gfsVshgPKyyIr5y7rF87KKO0UibULCpUXeSiwhCeZSeae4AHXE5drNRCQxneQ=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"2.5.23-test-auto-pr-SNAPSHOT-127": {
+			"name": "@proteo/bootstrap",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "2.5.23-test-auto-pr-SNAPSHOT-127",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/bootstrap"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@proteo/amount-utils": "1.0.22-test-auto-pr-SNAPSHOT-127",
+				"@proteo/authorization-utils": "2.4.0-test-auto-pr-SNAPSHOT-127",
+				"@proteo/bridge": "2.1.49-test-auto-pr-SNAPSHOT-127",
+				"@proteo/bridge-bsm-android": "2.0.99-test-auto-pr-SNAPSHOT-127",
+				"@proteo/bridge-bsm-ios": "2.0.99-test-auto-pr-SNAPSHOT-127",
+				"@proteo/bridge-web-ee": "2.1.8-test-auto-pr-SNAPSHOT-127",
+				"@proteo/data-manager": "2.4.16-test-auto-pr-SNAPSHOT-127",
+				"@proteo/data-manager-driver-http": "2.1.26-test-auto-pr-SNAPSHOT-127",
+				"@proteo/data-manager-driver-legacy": "2.1.25-test-auto-pr-SNAPSHOT-127",
+				"@proteo/bridge-web": "2.0.98-test-auto-pr-SNAPSHOT-127",
+				"@proteo/date-utils": "1.3.16-test-auto-pr-SNAPSHOT-127",
+				"@proteo/data-manager-driver-proteo4": "2.13.7-test-auto-pr-SNAPSHOT-127",
+				"@proteo/i18n-utils": "1.3.14-test-auto-pr-SNAPSHOT-127",
+				"@proteo/event-bus": "2.1.6-test-auto-pr-SNAPSHOT-127",
+				"@proteo/keep-alive": "1.0.18-test-auto-pr-SNAPSHOT-127",
+				"@proteo/logger-utils": "1.2.0-test-auto-pr-SNAPSHOT-127",
+				"@proteo/platform-utils": "1.0.5-test-auto-pr-SNAPSHOT-127",
+				"@proteo/maintenance-loader": "1.0.22-test-auto-pr-SNAPSHOT-127",
+				"@proteo/storage-utils": "1.0.6-test-auto-pr-SNAPSHOT-127",
+				"@proteo/tag-manager": "2.2.2-test-auto-pr-SNAPSHOT-127",
+				"@proteo/tag-manager-driver-tealium-info": "1.1.15-test-auto-pr-SNAPSHOT-127",
+				"@proteo/tag-manager-driver-tealium-tx-p4": "2.2.9-test-auto-pr-SNAPSHOT-127",
+				"@proteo/tag-manager-driver-tealium-tx": "1.1.15-test-auto-pr-SNAPSHOT-127",
+				"@proteo/cookies-policy-utils": "1.1.12-test-auto-pr-SNAPSHOT-127",
+				"@proteo/biocatch-util": "1.2.8-test-auto-pr-SNAPSHOT-127",
+				"@proteo/cookie-utils": "1.0.5-test-auto-pr-SNAPSHOT-127",
+				"@proteo/dynatrace-utils": "1.1.1-test-auto-pr-SNAPSHOT-127",
+				"@proteo/feature-manager": "2.0.7-test-auto-pr-SNAPSHOT-127",
+				"@proteo/string-utils": "1.0.3-test-auto-pr-SNAPSHOT-127",
+				"@proteo/rsa-util": "1.1.8-test-auto-pr-SNAPSHOT-127"
+			},
+			"devDependencies": {
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/jest-config": "1.0.2-test-auto-pr-SNAPSHOT-127",
+				"@proteo/tsconfig": "1.1.2-test-auto-pr-SNAPSHOT-127",
+				"@proteo/types": "1.1.88-test-auto-pr-SNAPSHOT-127",
+				"@proteo/rolldown-config": "1.0.0"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1782807420941,
+			"_id": "@proteo/bootstrap@2.5.23-test-auto-pr-SNAPSHOT-127",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/bootstrap/-/@proteo/bootstrap-2.5.23-test-auto-pr-SNAPSHOT-127.tgz",
+				"shasum": "57a0ed7570265fc00a7ad8eb885e240d5d742cb5",
+				"integrity": "sha512-G4NkmNwzA3LgWBT6300dy35/eQ96pg3U0uuG0olLa5DniQlXUT0PYV2VM6u0PLUCseeaRinsJAF8dlpcK+C71Q=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"2.5.23-test-auto-pr-SNAPSHOT-128": {
+			"name": "@proteo/bootstrap",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "2.5.23-test-auto-pr-SNAPSHOT-128",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/bootstrap"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@proteo/amount-utils": "1.0.22-test-auto-pr-SNAPSHOT-128",
+				"@proteo/authorization-utils": "2.4.0-test-auto-pr-SNAPSHOT-128",
+				"@proteo/bridge-bsm-android": "2.0.99-test-auto-pr-SNAPSHOT-128",
+				"@proteo/bridge": "2.1.49-test-auto-pr-SNAPSHOT-128",
+				"@proteo/bridge-bsm-ios": "2.0.99-test-auto-pr-SNAPSHOT-128",
+				"@proteo/bridge-web": "2.0.98-test-auto-pr-SNAPSHOT-128",
+				"@proteo/data-manager": "2.4.16-test-auto-pr-SNAPSHOT-128",
+				"@proteo/data-manager-driver-http": "2.1.26-test-auto-pr-SNAPSHOT-128",
+				"@proteo/data-manager-driver-legacy": "2.1.25-test-auto-pr-SNAPSHOT-128",
+				"@proteo/bridge-web-ee": "2.1.8-test-auto-pr-SNAPSHOT-128",
+				"@proteo/date-utils": "1.3.16-test-auto-pr-SNAPSHOT-128",
+				"@proteo/data-manager-driver-proteo4": "2.13.7-test-auto-pr-SNAPSHOT-128",
+				"@proteo/event-bus": "2.1.6-test-auto-pr-SNAPSHOT-128",
+				"@proteo/i18n-utils": "1.3.14-test-auto-pr-SNAPSHOT-128",
+				"@proteo/logger-utils": "1.2.0-test-auto-pr-SNAPSHOT-128",
+				"@proteo/maintenance-loader": "1.0.22-test-auto-pr-SNAPSHOT-128",
+				"@proteo/keep-alive": "1.0.18-test-auto-pr-SNAPSHOT-128",
+				"@proteo/platform-utils": "1.0.5-test-auto-pr-SNAPSHOT-128",
+				"@proteo/tag-manager": "2.2.2-test-auto-pr-SNAPSHOT-128",
+				"@proteo/tag-manager-driver-tealium-info": "1.1.15-test-auto-pr-SNAPSHOT-128",
+				"@proteo/storage-utils": "1.0.6-test-auto-pr-SNAPSHOT-128",
+				"@proteo/tag-manager-driver-tealium-tx": "1.1.15-test-auto-pr-SNAPSHOT-128",
+				"@proteo/tag-manager-driver-tealium-tx-p4": "2.2.9-test-auto-pr-SNAPSHOT-128",
+				"@proteo/cookies-policy-utils": "1.1.12-test-auto-pr-SNAPSHOT-128",
+				"@proteo/cookie-utils": "1.0.5-test-auto-pr-SNAPSHOT-128",
+				"@proteo/dynatrace-utils": "1.1.1-test-auto-pr-SNAPSHOT-128",
+				"@proteo/biocatch-util": "1.2.8-test-auto-pr-SNAPSHOT-128",
+				"@proteo/feature-manager": "2.0.7-test-auto-pr-SNAPSHOT-128",
+				"@proteo/rsa-util": "1.1.8-test-auto-pr-SNAPSHOT-128",
+				"@proteo/string-utils": "1.0.3-test-auto-pr-SNAPSHOT-128"
+			},
+			"devDependencies": {
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/tsconfig": "1.1.2-test-auto-pr-SNAPSHOT-128",
+				"@proteo/jest-config": "1.0.2-test-auto-pr-SNAPSHOT-128",
+				"@proteo/types": "1.1.88-test-auto-pr-SNAPSHOT-128",
+				"@proteo/rolldown-config": "1.0.0"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1782808920998,
+			"_id": "@proteo/bootstrap@2.5.23-test-auto-pr-SNAPSHOT-128",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/bootstrap/-/@proteo/bootstrap-2.5.23-test-auto-pr-SNAPSHOT-128.tgz",
+				"shasum": "b8c3a0649fc7a9452e5540e24373c9bf0774f5a8",
+				"integrity": "sha512-nBKAuqrAFy2eOqqeCe123lG0/YluPQueN9d2RuJkn4iJ1KyEbmrnm0rcvBvdz05EGq4/g9Ie6UUJBFijcPzmXA=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"2.5.23-test-auto-pr-SNAPSHOT-126": {
+			"name": "@proteo/bootstrap",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "2.5.23-test-auto-pr-SNAPSHOT-126",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/bootstrap"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@proteo/amount-utils": "1.0.22-test-auto-pr-SNAPSHOT-126",
+				"@proteo/bridge-bsm-android": "2.0.99-test-auto-pr-SNAPSHOT-126",
+				"@proteo/authorization-utils": "2.4.0-test-auto-pr-SNAPSHOT-126",
+				"@proteo/bridge-web-ee": "2.1.8-test-auto-pr-SNAPSHOT-126",
+				"@proteo/bridge-web": "2.0.98-test-auto-pr-SNAPSHOT-126",
+				"@proteo/bridge-bsm-ios": "2.0.99-test-auto-pr-SNAPSHOT-126",
+				"@proteo/bridge": "2.1.49-test-auto-pr-SNAPSHOT-126",
+				"@proteo/data-manager-driver-http": "2.1.26-test-auto-pr-SNAPSHOT-126",
+				"@proteo/data-manager": "2.4.16-test-auto-pr-SNAPSHOT-126",
+				"@proteo/data-manager-driver-legacy": "2.1.25-test-auto-pr-SNAPSHOT-126",
+				"@proteo/data-manager-driver-proteo4": "2.13.7-test-auto-pr-SNAPSHOT-126",
+				"@proteo/date-utils": "1.3.16-test-auto-pr-SNAPSHOT-126",
+				"@proteo/event-bus": "2.1.6-test-auto-pr-SNAPSHOT-126",
+				"@proteo/i18n-utils": "1.3.14-test-auto-pr-SNAPSHOT-126",
+				"@proteo/logger-utils": "1.2.0-test-auto-pr-SNAPSHOT-126",
+				"@proteo/keep-alive": "1.0.18-test-auto-pr-SNAPSHOT-126",
+				"@proteo/maintenance-loader": "1.0.22-test-auto-pr-SNAPSHOT-126",
+				"@proteo/storage-utils": "1.0.6-test-auto-pr-SNAPSHOT-126",
+				"@proteo/tag-manager": "2.2.2-test-auto-pr-SNAPSHOT-126",
+				"@proteo/platform-utils": "1.0.5-test-auto-pr-SNAPSHOT-126",
+				"@proteo/tag-manager-driver-tealium-info": "1.1.15-test-auto-pr-SNAPSHOT-126",
+				"@proteo/tag-manager-driver-tealium-tx": "1.1.15-test-auto-pr-SNAPSHOT-126",
+				"@proteo/tag-manager-driver-tealium-tx-p4": "2.2.9-test-auto-pr-SNAPSHOT-126",
+				"@proteo/biocatch-util": "1.2.8-test-auto-pr-SNAPSHOT-126",
+				"@proteo/cookies-policy-utils": "1.1.12-test-auto-pr-SNAPSHOT-126",
+				"@proteo/cookie-utils": "1.0.5-test-auto-pr-SNAPSHOT-126",
+				"@proteo/feature-manager": "2.0.7-test-auto-pr-SNAPSHOT-126",
+				"@proteo/dynatrace-utils": "1.1.1-test-auto-pr-SNAPSHOT-126",
+				"@proteo/string-utils": "1.0.3-test-auto-pr-SNAPSHOT-126",
+				"@proteo/rsa-util": "1.1.8-test-auto-pr-SNAPSHOT-126"
+			},
+			"devDependencies": {
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/jest-config": "1.0.2-test-auto-pr-SNAPSHOT-126",
+				"@proteo/tsconfig": "1.1.2-test-auto-pr-SNAPSHOT-126",
+				"@proteo/types": "1.1.88-test-auto-pr-SNAPSHOT-126",
+				"@proteo/rolldown-config": "1.0.0"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1782806934504,
+			"_id": "@proteo/bootstrap@2.5.23-test-auto-pr-SNAPSHOT-126",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/bootstrap/-/@proteo/bootstrap-2.5.23-test-auto-pr-SNAPSHOT-126.tgz",
+				"shasum": "e4edcc29aece0b6f5878f3fb7b11b8c38cb7b25a",
+				"integrity": "sha512-60p6LRtFz/y2Gg777iwEBEWg3VGkv0Z9tcOpCc7ah1vM6wnoU1Oez/8thz3jTzaz8VTaT+2JkzFvY9hE6QlHcA=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"2.5.23-test-auto-pr-SNAPSHOT-129": {
+			"name": "@proteo/bootstrap",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "2.5.23-test-auto-pr-SNAPSHOT-129",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/bootstrap"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@proteo/amount-utils": "1.0.22-test-auto-pr-SNAPSHOT-129",
+				"@proteo/authorization-utils": "2.4.0-test-auto-pr-SNAPSHOT-129",
+				"@proteo/bridge": "2.1.49-test-auto-pr-SNAPSHOT-129",
+				"@proteo/bridge-bsm-ios": "2.0.99-test-auto-pr-SNAPSHOT-129",
+				"@proteo/bridge-bsm-android": "2.0.99-test-auto-pr-SNAPSHOT-129",
+				"@proteo/bridge-web-ee": "2.1.8-test-auto-pr-SNAPSHOT-129",
+				"@proteo/data-manager-driver-http": "2.1.26-test-auto-pr-SNAPSHOT-129",
+				"@proteo/data-manager": "2.4.16-test-auto-pr-SNAPSHOT-129",
+				"@proteo/bridge-web": "2.0.98-test-auto-pr-SNAPSHOT-129",
+				"@proteo/data-manager-driver-proteo4": "2.13.7-test-auto-pr-SNAPSHOT-129",
+				"@proteo/event-bus": "2.1.6-test-auto-pr-SNAPSHOT-129",
+				"@proteo/date-utils": "1.3.16-test-auto-pr-SNAPSHOT-129",
+				"@proteo/keep-alive": "1.0.18-test-auto-pr-SNAPSHOT-129",
+				"@proteo/i18n-utils": "1.3.14-test-auto-pr-SNAPSHOT-129",
+				"@proteo/data-manager-driver-legacy": "2.1.25-test-auto-pr-SNAPSHOT-129",
+				"@proteo/maintenance-loader": "1.0.22-test-auto-pr-SNAPSHOT-129",
+				"@proteo/logger-utils": "1.2.0-test-auto-pr-SNAPSHOT-129",
+				"@proteo/platform-utils": "1.0.5-test-auto-pr-SNAPSHOT-129",
+				"@proteo/storage-utils": "1.0.6-test-auto-pr-SNAPSHOT-129",
+				"@proteo/tag-manager": "2.2.2-test-auto-pr-SNAPSHOT-129",
+				"@proteo/tag-manager-driver-tealium-info": "1.1.15-test-auto-pr-SNAPSHOT-129",
+				"@proteo/tag-manager-driver-tealium-tx": "1.1.15-test-auto-pr-SNAPSHOT-129",
+				"@proteo/tag-manager-driver-tealium-tx-p4": "2.2.9-test-auto-pr-SNAPSHOT-129",
+				"@proteo/cookies-policy-utils": "1.1.12-test-auto-pr-SNAPSHOT-129",
+				"@proteo/dynatrace-utils": "1.1.1-test-auto-pr-SNAPSHOT-129",
+				"@proteo/feature-manager": "2.0.7-test-auto-pr-SNAPSHOT-129",
+				"@proteo/string-utils": "1.0.3-test-auto-pr-SNAPSHOT-129",
+				"@proteo/rsa-util": "1.1.8-test-auto-pr-SNAPSHOT-129",
+				"@proteo/biocatch-util": "1.2.8-test-auto-pr-SNAPSHOT-129",
+				"@proteo/cookie-utils": "1.0.5-test-auto-pr-SNAPSHOT-129"
+			},
+			"devDependencies": {
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/types": "1.1.88-test-auto-pr-SNAPSHOT-129",
+				"@proteo/tsconfig": "1.1.2-test-auto-pr-SNAPSHOT-129",
+				"@proteo/jest-config": "1.0.2-test-auto-pr-SNAPSHOT-129",
+				"@proteo/rolldown-config": "1.0.0"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1782813323481,
+			"_id": "@proteo/bootstrap@2.5.23-test-auto-pr-SNAPSHOT-129",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/bootstrap/-/@proteo/bootstrap-2.5.23-test-auto-pr-SNAPSHOT-129.tgz",
+				"shasum": "438694a56969a8cda356be10d68ead5982842312",
+				"integrity": "sha512-Boj3a0eA9uHI5J1ciXtpBwMG8e9s5OxbYUcDXywDehP2PdJwZvr89Kq8TW8pRXbVEg+5Eu66SghAtwwoZqx0YQ=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
+		},
+		"2.5.23-test-auto-pr-SNAPSHOT-130": {
+			"name": "@proteo/bootstrap",
+			"description": "Proteo4 Frontend Core Library",
+			"version": "2.5.23-test-auto-pr-SNAPSHOT-130",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/bootstrap"
+			},
+			"main": "index.js",
+			"dependencies": {
+				"@proteo/amount-utils": "1.0.22-test-auto-pr-SNAPSHOT-130",
+				"@proteo/authorization-utils": "2.4.0-test-auto-pr-SNAPSHOT-130",
+				"@proteo/bridge": "2.1.49-test-auto-pr-SNAPSHOT-130",
+				"@proteo/bridge-bsm-android": "2.0.99-test-auto-pr-SNAPSHOT-130",
+				"@proteo/bridge-web": "2.0.98-test-auto-pr-SNAPSHOT-130",
+				"@proteo/bridge-bsm-ios": "2.0.99-test-auto-pr-SNAPSHOT-130",
+				"@proteo/data-manager": "2.4.16-test-auto-pr-SNAPSHOT-130",
+				"@proteo/bridge-web-ee": "2.1.8-test-auto-pr-SNAPSHOT-130",
+				"@proteo/data-manager-driver-legacy": "2.1.25-test-auto-pr-SNAPSHOT-130",
+				"@proteo/data-manager-driver-proteo4": "2.13.7-test-auto-pr-SNAPSHOT-130",
+				"@proteo/data-manager-driver-http": "2.1.26-test-auto-pr-SNAPSHOT-130",
+				"@proteo/date-utils": "1.3.16-test-auto-pr-SNAPSHOT-130",
+				"@proteo/event-bus": "2.1.6-test-auto-pr-SNAPSHOT-130",
+				"@proteo/i18n-utils": "1.3.14-test-auto-pr-SNAPSHOT-130",
+				"@proteo/maintenance-loader": "1.0.22-test-auto-pr-SNAPSHOT-130",
+				"@proteo/logger-utils": "1.2.0-test-auto-pr-SNAPSHOT-130",
+				"@proteo/keep-alive": "1.0.18-test-auto-pr-SNAPSHOT-130",
+				"@proteo/storage-utils": "1.0.6-test-auto-pr-SNAPSHOT-130",
+				"@proteo/platform-utils": "1.0.5-test-auto-pr-SNAPSHOT-130",
+				"@proteo/tag-manager-driver-tealium-tx": "1.1.15-test-auto-pr-SNAPSHOT-130",
+				"@proteo/tag-manager": "2.2.2-test-auto-pr-SNAPSHOT-130",
+				"@proteo/tag-manager-driver-tealium-tx-p4": "2.2.9-test-auto-pr-SNAPSHOT-130",
+				"@proteo/tag-manager-driver-tealium-info": "1.1.15-test-auto-pr-SNAPSHOT-130",
+				"@proteo/biocatch-util": "1.2.8-test-auto-pr-SNAPSHOT-130",
+				"@proteo/cookie-utils": "1.0.5-test-auto-pr-SNAPSHOT-130",
+				"@proteo/dynatrace-utils": "1.1.1-test-auto-pr-SNAPSHOT-130",
+				"@proteo/cookies-policy-utils": "1.1.12-test-auto-pr-SNAPSHOT-130",
+				"@proteo/string-utils": "1.0.3-test-auto-pr-SNAPSHOT-130",
+				"@proteo/feature-manager": "2.0.7-test-auto-pr-SNAPSHOT-130",
+				"@proteo/rsa-util": "1.1.8-test-auto-pr-SNAPSHOT-130"
+			},
+			"devDependencies": {
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/tsconfig": "1.1.2-test-auto-pr-SNAPSHOT-130",
+				"@proteo/jest-config": "1.0.2-test-auto-pr-SNAPSHOT-130",
+				"@proteo/types": "1.1.88-test-auto-pr-SNAPSHOT-130",
+				"@proteo/rolldown-config": "1.0.0"
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"publishConfig": {
+				"registry": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-snapshot-local/"
+			},
+			"lastModified": 1782813685540,
+			"_id": "@proteo/bootstrap@2.5.23-test-auto-pr-SNAPSHOT-130",
+			"dist": {
+				"tarball": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/bootstrap/-/@proteo/bootstrap-2.5.23-test-auto-pr-SNAPSHOT-130.tgz",
+				"shasum": "2ccc40e73c743db5a2a285c8921de96b0c69c752",
+				"integrity": "sha512-mCL4X2tKgmPadjctNJQ+K2nNEHnoa7OYOFRuQQWDPpNUJShzWvxxoS7nkgon+7ICJ7FY4INpLHRSXoH1JS/Ttg=="
+			},
+			"types": "types/index.d.ts",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"type": "module",
+			"contributors": []
 		}
 	},
 	"time": {
@@ -41265,7 +42365,7 @@
 		"2.4.8": "2025-11-21T11:26:54.240Z",
 		"2.4.9": "2025-11-26T10:01:26.317Z",
 		"2.4.6": "2025-11-19T08:52:32.716Z",
-		"modified": "2026-06-16T14:10:01.031Z",
+		"modified": "2026-06-30T10:01:25.540Z",
 		"2.4.11": "2025-12-01T12:26:41.512Z",
 		"2.4.12": "2025-12-11T16:34:18.619Z",
 		"created": "2026-06-01T15:49:30.115Z",
@@ -41291,7 +42391,18 @@
 		"2.5.23-dev.1781194532158": "2026-06-11T16:15:40.464Z",
 		"2.5.23-dev.1781195668306": "2026-06-11T16:34:36.338Z",
 		"2.5.23-tmp-build-test-SNAPSHOT-111": "2026-06-16T14:10:01.031Z",
-		"2.5.23-SNAPSHOT-100": "2026-06-16T09:34:38.393Z"
+		"2.5.23-SNAPSHOT-100": "2026-06-16T09:34:38.393Z",
+		"2.5.23-test-auto-pr-SNAPSHOT-119": "2026-06-29T12:43:58.001Z",
+		"2.5.23-test-auto-pr-SNAPSHOT-120": "2026-06-29T13:13:13.202Z",
+		"2.5.23-test-auto-pr-SNAPSHOT-123": "2026-06-29T14:10:42.138Z",
+		"2.5.23-test-auto-pr-SNAPSHOT-124": "2026-06-29T14:36:18.691Z",
+		"2.5.23-test-auto-pr-SNAPSHOT-121": "2026-06-29T13:32:18.051Z",
+		"2.5.23-test-auto-pr-SNAPSHOT-122": "2026-06-29T14:01:42.479Z",
+		"2.5.23-test-auto-pr-SNAPSHOT-127": "2026-06-30T08:17:00.941Z",
+		"2.5.23-test-auto-pr-SNAPSHOT-128": "2026-06-30T08:42:00.998Z",
+		"2.5.23-test-auto-pr-SNAPSHOT-126": "2026-06-30T08:08:54.504Z",
+		"2.5.23-test-auto-pr-SNAPSHOT-129": "2026-06-30T09:55:23.481Z",
+		"2.5.23-test-auto-pr-SNAPSHOT-130": "2026-06-30T10:01:25.540Z"
 	},
 	"users": {},
 	"dist-tags": {
@@ -41302,8 +42413,8 @@
 	},
 	"_uplinks": {
 		"artifactory-sabadell": {
-			"etag": "d0bb900219ad0fbb4feb198e49a9c899cc8ed4de",
-			"fetched": 1782682730416
+			"etag": "42b61ce252972cff65f1317bba6618214daf06f6",
+			"fetched": 1782898241695
 		}
 	},
 	"_distfiles": {
@@ -42341,6 +43452,61 @@
 			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/bootstrap/-/@proteo/bootstrap-2.5.23-SNAPSHOT-100.tgz",
 			"sha": "817b61fbe272899f48daef8445defd6b6343b2b2",
 			"registry": "artifactory-sabadell"
+		},
+		"bootstrap-2.5.23-test-auto-pr-SNAPSHOT-119.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/bootstrap/-/@proteo/bootstrap-2.5.23-test-auto-pr-SNAPSHOT-119.tgz",
+			"sha": "7567cdf0297c910321dc96d41524b31572f4766c",
+			"registry": "artifactory-sabadell"
+		},
+		"bootstrap-2.5.23-test-auto-pr-SNAPSHOT-120.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/bootstrap/-/@proteo/bootstrap-2.5.23-test-auto-pr-SNAPSHOT-120.tgz",
+			"sha": "712c850da2a833149b2350112a3f7548aa4fdca6",
+			"registry": "artifactory-sabadell"
+		},
+		"bootstrap-2.5.23-test-auto-pr-SNAPSHOT-123.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/bootstrap/-/@proteo/bootstrap-2.5.23-test-auto-pr-SNAPSHOT-123.tgz",
+			"sha": "ca8a79df6e7438d1bbc9783b9459fd73693cfed4",
+			"registry": "artifactory-sabadell"
+		},
+		"bootstrap-2.5.23-test-auto-pr-SNAPSHOT-124.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/bootstrap/-/@proteo/bootstrap-2.5.23-test-auto-pr-SNAPSHOT-124.tgz",
+			"sha": "6fdb9cf49849320e80d0286ed3a71c96c1ceca99",
+			"registry": "artifactory-sabadell"
+		},
+		"bootstrap-2.5.23-test-auto-pr-SNAPSHOT-121.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/bootstrap/-/@proteo/bootstrap-2.5.23-test-auto-pr-SNAPSHOT-121.tgz",
+			"sha": "e96af68632dd0bffd4a255e14589a61f5695f8ed",
+			"registry": "artifactory-sabadell"
+		},
+		"bootstrap-2.5.23-test-auto-pr-SNAPSHOT-122.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/bootstrap/-/@proteo/bootstrap-2.5.23-test-auto-pr-SNAPSHOT-122.tgz",
+			"sha": "ffd2a6ee085c3b4451bad05bddf8fd8169be3a9e",
+			"registry": "artifactory-sabadell"
+		},
+		"bootstrap-2.5.23-test-auto-pr-SNAPSHOT-127.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/bootstrap/-/@proteo/bootstrap-2.5.23-test-auto-pr-SNAPSHOT-127.tgz",
+			"sha": "57a0ed7570265fc00a7ad8eb885e240d5d742cb5",
+			"registry": "artifactory-sabadell"
+		},
+		"bootstrap-2.5.23-test-auto-pr-SNAPSHOT-128.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/bootstrap/-/@proteo/bootstrap-2.5.23-test-auto-pr-SNAPSHOT-128.tgz",
+			"sha": "b8c3a0649fc7a9452e5540e24373c9bf0774f5a8",
+			"registry": "artifactory-sabadell"
+		},
+		"bootstrap-2.5.23-test-auto-pr-SNAPSHOT-126.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/bootstrap/-/@proteo/bootstrap-2.5.23-test-auto-pr-SNAPSHOT-126.tgz",
+			"sha": "e4edcc29aece0b6f5878f3fb7b11b8c38cb7b25a",
+			"registry": "artifactory-sabadell"
+		},
+		"bootstrap-2.5.23-test-auto-pr-SNAPSHOT-129.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/bootstrap/-/@proteo/bootstrap-2.5.23-test-auto-pr-SNAPSHOT-129.tgz",
+			"sha": "438694a56969a8cda356be10d68ead5982842312",
+			"registry": "artifactory-sabadell"
+		},
+		"bootstrap-2.5.23-test-auto-pr-SNAPSHOT-130.tgz": {
+			"url": "https://artifactory.apps.devops.aws.bancsabadell.com/artifactory/api/npm/npm-virtual/@proteo/bootstrap/-/@proteo/bootstrap-2.5.23-test-auto-pr-SNAPSHOT-130.tgz",
+			"sha": "2ccc40e73c743db5a2a285c8921de96b0c69c752",
+			"registry": "artifactory-sabadell"
 		}
 	},
 	"_attachments": {
@@ -42353,7 +43519,7 @@
 			"version": "2.5.23-dev.1781195668306"
 		}
 	},
-	"_rev": "18-d1cd15f20f2e1bc9",
+	"_rev": "19-37e9b97b04e54759",
 	"_id": "@proteo/bootstrap",
 	"readme": ""
 }

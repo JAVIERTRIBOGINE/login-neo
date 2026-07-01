@@ -8,7 +8,6 @@ import { LoginDataService } from '@app/login/application/services/login-data.ser
 import { LOGIN_EVENTS } from '@app/login/domain/constants/event.enum';
 import { END_SESSION_FN, REVOKE_FN } from '@app/login/domain/constants/global.constants';
 import { getTokensEndpoint } from '@app/login/application/services/oauth-endpoints';
-import { SamlRuntimeConfigService } from '@app/saml-flow/application/services/saml-runtime-config.service';
 import { SAML_ROUTE_DATA } from '@app/saml-flow/domain/constants/path.constant';
 import { FlowConfirmationModalService } from '@app/login/application/services/flow-confirmation-modal.service';
 import { OauthManagerService } from '@proteo/auth-manager';
@@ -43,7 +42,6 @@ export class GetTokensComponent implements OnInit{
     error!: WritableSignal<boolean>;
     authorizeResponse!: TokensResponse;
     loginDataService!: LoginDataService;
-    samlRuntimeConfig = inject(SamlRuntimeConfigService);
     flowConfirmation = inject(FlowConfirmationModalService);
     oauthManager = inject(OauthManagerService);
     storedTokens = storedTokens;
@@ -106,9 +104,10 @@ export class GetTokensComponent implements OnInit{
         setAuthorization({OIDC: this.authorizeResponse.id_token, OAUTH: this.authorizeResponse.access_token} as AuthorizationTokens)
         this.publishService.publishOauthEvent(LOGIN_EVENTS.TOKENS)
         this.processing.set(false);
-        await this.samlRuntimeConfig.whenReady();
         void this.router.navigate([SAML_ROUTE_DATA.AUTHORIZATION_REQUEST]);
       } catch (error) {
+          this.processing.set(false);
+          this.error.set(true);
           this.publishService.publishEvent(LOGIN_EVENTS.ERROR) 
       }
     }
