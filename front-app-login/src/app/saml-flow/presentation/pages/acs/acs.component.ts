@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, inject, signal } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { AuthManagerService } from '@proteo/auth-manager';
+import { OauthManagerService } from '@proteo/auth-manager';
 import { buildSamlManagerConfig } from '@app/saml-flow/domain/constants/global.constants';
 import { AcsResponse } from '@app/saml-flow/domain/models/acs-response.model';
 import { SamlLoaderComponent } from '../../shared/loader.component';
@@ -28,7 +28,7 @@ import { FlowConfirmationModalService } from '@app/login/application/services/fl
 export class ACSComponent implements OnInit {
   private readonly route = inject(ActivatedRoute);
   private readonly http = inject(HttpClient);
-  private readonly authManager = inject(AuthManagerService);
+  private readonly oauthManager = inject(OauthManagerService);
   private readonly runtimeConfig = inject(SamlRuntimeConfigService);
   private readonly flowConfirmation = inject(FlowConfirmationModalService);
 
@@ -71,7 +71,7 @@ export class ACSComponent implements OnInit {
   }
 
   private fail(error: unknown): void {
-    this.authManager.failSamlAuthorization(error);
+    this.oauthManager.failSamlAuthorization(error);
     this.loading.set(false);
   }
 }

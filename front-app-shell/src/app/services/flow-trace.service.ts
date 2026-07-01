@@ -90,6 +90,10 @@ export class FlowTraceService {
     );
   }
 
+  collapseAll(): void {
+    this.updateSteps(this.stepsSubject.value.map((step) => ({ ...step, expanded: false })));
+  }
+
   clear(): void {
     this.updateSteps([]);
     try {

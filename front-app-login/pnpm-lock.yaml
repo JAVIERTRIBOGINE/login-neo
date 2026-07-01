@@ -42,8 +42,8 @@ importers:
         specifier: 17.2.0
         version: 17.2.0(@ngrx/store@17.2.0(@angular/core@17.3.6(rxjs@7.8.2)(zone.js@0.14.10))(rxjs@7.8.2))(rxjs@7.8.2)
       '@proteo/auth-manager':
-        specifier: 1.0.0-dev.1782586570087
-        version: 1.0.0-dev.1782586570087(@angular/common@17.3.6(@angular/core@17.3.6(rxjs@7.8.2)(zone.js@0.14.10))(rxjs@7.8.2))(@angular/core@17.3.6(rxjs@7.8.2)(zone.js@0.14.10))(@proteo/data-manager@2.4.16-dev.1781195668306)(@proteo/event-bus@2.1.6-dev.1781195668306)(@proteo/types@1.1.88)(rxjs@7.8.2)
+        specifier: 1.0.0-dev.1782737691169
+        version: 1.0.0-dev.1782737691169(@angular/common@17.3.6(@angular/core@17.3.6(rxjs@7.8.2)(zone.js@0.14.10))(rxjs@7.8.2))(@angular/core@17.3.6(rxjs@7.8.2)(zone.js@0.14.10))(@proteo/data-manager@2.4.16-dev.1781195668306)(@proteo/event-bus@2.1.6-dev.1781195668306)(@proteo/storage-utils@1.0.6-dev.1781195668306)(@proteo/string-utils@1.0.3-dev.1781195668306)(@proteo/types@1.1.88)(rxjs@7.8.2)
       '@proteo/authorization-utils':
         specifier: 2.4.0-dev.1781195668306
         version: 2.4.0-dev.1781195668306
@@ -1690,14 +1690,16 @@ packages:
   '@proteo/amount-utils@1.0.22-dev.1781195668306':
     resolution: {integrity: sha512-rTekbOe0TUDlsGm4vGgQrD1NCqGi8yo6kclXNULaufuead5T4OyztoKnY8L8tz3DnfBiN/ASPxrf9QmxMlhK6w==}
 
-  '@proteo/auth-manager@1.0.0-dev.1782586570087':
-    resolution: {integrity: sha512-+NQfOFr1loHgydZNdwtJV6nOj3pFfrMXxjZ7MDBXhMVblDwYZwcHa/LLcKq2FBw+ybCXA/UopTg8Cj/O884xpg==}
+  '@proteo/auth-manager@1.0.0-dev.1782737691169':
+    resolution: {integrity: sha512-fZH9u1xW6G0ONAHD3F6DELkdy4fLFT2WRye2RHjtoZ8FgLZx3FDUTiv86RwTU6H1nn543TYamXgxRYpxp+LtcA==}
     peerDependencies:
       '@angular/common': 17.3.6
       '@angular/core': 17.3.6
-      '@proteo/data-manager': 2.4.16-dev.1782586570087
-      '@proteo/event-bus': 2.1.6-dev.1782586570087
-      '@proteo/types': 1.1.88-dev.1782586570087
+      '@proteo/data-manager': 2.4.16-dev.1782737691169
+      '@proteo/event-bus': 2.1.6-dev.1782737691169
+      '@proteo/storage-utils': 1.0.6-dev.1782737691169
+      '@proteo/string-utils': 1.0.3-dev.1782737691169
+      '@proteo/types': 1.1.88-dev.1782737691169
       rxjs: ~7.8.0
 
   '@proteo/authorization-utils@2.4.0-dev.1781195668306':
@@ -8645,12 +8647,14 @@ snapshots:
       '@proteo/logger-utils': 1.2.0-dev.1781195668306
       '@proteo/sanitization': 1.0.4-dev.1781195668306
 
-  '@proteo/auth-manager@1.0.0-dev.1782586570087(@angular/common@17.3.6(@angular/core@17.3.6(rxjs@7.8.2)(zone.js@0.14.10))(rxjs@7.8.2))(@angular/core@17.3.6(rxjs@7.8.2)(zone.js@0.14.10))(@proteo/data-manager@2.4.16-dev.1781195668306)(@proteo/event-bus@2.1.6-dev.1781195668306)(@proteo/types@1.1.88)(rxjs@7.8.2)':
+  '@proteo/auth-manager@1.0.0-dev.1782737691169(@angular/common@17.3.6(@angular/core@17.3.6(rxjs@7.8.2)(zone.js@0.14.10))(rxjs@7.8.2))(@angular/core@17.3.6(rxjs@7.8.2)(zone.js@0.14.10))(@proteo/data-manager@2.4.16-dev.1781195668306)(@proteo/event-bus@2.1.6-dev.1781195668306)(@proteo/storage-utils@1.0.6-dev.1781195668306)(@proteo/string-utils@1.0.3-dev.1781195668306)(@proteo/types@1.1.88)(rxjs@7.8.2)':
     dependencies:
       '@angular/common': 17.3.6(@angular/core@17.3.6(rxjs@7.8.2)(zone.js@0.14.10))(rxjs@7.8.2)
       '@angular/core': 17.3.6(rxjs@7.8.2)(zone.js@0.14.10)
       '@proteo/data-manager': 2.4.16-dev.1781195668306
       '@proteo/event-bus': 2.1.6-dev.1781195668306
+      '@proteo/storage-utils': 1.0.6-dev.1781195668306
+      '@proteo/string-utils': 1.0.3-dev.1781195668306
       '@proteo/types': 1.1.88
       rxjs: 7.8.2
       tslib: 2.8.1

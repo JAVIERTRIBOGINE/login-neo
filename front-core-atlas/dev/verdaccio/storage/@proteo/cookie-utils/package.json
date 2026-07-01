@@ -4271,6 +4271,142 @@
 				"tarball": "http://localhost:4873/@proteo/cookie-utils/-/@proteo/cookie-utils-1.0.5-dev.1782586570087.tgz"
 			},
 			"contributors": []
+		},
+		"1.0.5-dev.1782682360219": {
+			"name": "@proteo/cookie-utils",
+			"version": "1.0.5-dev.1782682360219",
+			"description": "Proteo4 Frontend Core Library",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/cookie-utils"
+			},
+			"publishConfig": {
+				"registry": "http://localhost:4873"
+			},
+			"main": "index.js",
+			"type": "module",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@proteo/jest-config": "1.0.2",
+				"@proteo/tsconfig": "1.1.2",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/rolldown-config": "1.0.0"
+			},
+			"types": "types/index.d.ts",
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"_nodeVersion": "24.16.0",
+			"_id": "@proteo/cookie-utils@1.0.5-dev.1782682360219",
+			"dist": {
+				"integrity": "sha512-SG4QxQ8DeERtenIVjjyoYpLwNB2E1lroJYyEJx01BewGwuqDDb2vfoY3GCdsHmnEfXhU0pWSlr3Kbfqfklx/rw==",
+				"shasum": "004c6d7cf8d8acdde0d44cf4b66f432ba5a068ec",
+				"tarball": "http://localhost:4873/@proteo/cookie-utils/-/@proteo/cookie-utils-1.0.5-dev.1782682360219.tgz"
+			},
+			"contributors": []
+		},
+		"1.0.5-dev.1782737691169": {
+			"name": "@proteo/cookie-utils",
+			"version": "1.0.5-dev.1782737691169",
+			"description": "Proteo4 Frontend Core Library",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/cookie-utils"
+			},
+			"publishConfig": {
+				"registry": "http://localhost:4873"
+			},
+			"main": "index.js",
+			"type": "module",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@proteo/jest-config": "1.0.2",
+				"@proteo/tsconfig": "1.1.2",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/rolldown-config": "1.0.0"
+			},
+			"types": "types/index.d.ts",
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"_nodeVersion": "24.16.0",
+			"_id": "@proteo/cookie-utils@1.0.5-dev.1782737691169",
+			"dist": {
+				"integrity": "sha512-s8pKGfjnohs5EjOeaLrVndOMToUPlAYxVZlaII6nv3VM/ngKC+HVi3un0KHV2UDqi9kOlr14zsmNsnWd2nGDcg==",
+				"shasum": "0c239ff2991b98d1ebefbcf8676bd493912e2698",
+				"tarball": "http://localhost:4873/@proteo/cookie-utils/-/@proteo/cookie-utils-1.0.5-dev.1782737691169.tgz"
+			},
+			"contributors": []
 		}
 	},
 	"time": {
@@ -4295,7 +4431,7 @@
 		"1.1.0-dev-1": "2026-05-20T15:09:46.427Z",
 		"0.0.0-SNAPSHOT-20250902100438": "2025-09-02T10:33:50.925Z",
 		"1.0.0-next.2": "2023-01-11T12:42:12.370Z",
-		"modified": "2026-06-27T18:56:12.157Z",
+		"modified": "2026-06-29T12:54:53.196Z",
 		"1.0.0-next.1": "2023-01-11T12:42:08.668Z",
 		"1.0.0-rc.5": "2023-01-11T12:42:19.982Z",
 		"1.0.0-next.0": "2023-01-11T12:42:07.818Z",
@@ -4321,17 +4457,19 @@
 		"1.0.5-dev.1782458447373": "2026-06-26T07:20:49.564Z",
 		"1.0.5-dev.1782583969231": "2026-06-27T18:12:51.265Z",
 		"1.0.5-dev.1782584293561": "2026-06-27T18:18:19.792Z",
-		"1.0.5-dev.1782586570087": "2026-06-27T18:56:12.157Z"
+		"1.0.5-dev.1782586570087": "2026-06-27T18:56:12.157Z",
+		"1.0.5-dev.1782682360219": "2026-06-28T21:32:42.095Z",
+		"1.0.5-dev.1782737691169": "2026-06-29T12:54:53.196Z"
 	},
 	"users": {},
 	"dist-tags": {
 		"latest": "1.0.5",
-		"dev": "1.0.5-dev.1782586570087"
+		"dev": "1.0.5-dev.1782737691169"
 	},
 	"_uplinks": {
 		"artifactory-sabadell": {
 			"etag": "fbec34d92f145582ff003b170a6ad7069e9c3ad1",
-			"fetched": 1782587218592
+			"fetched": 1782682730369
 		}
 	},
 	"_distfiles": {
@@ -4553,9 +4691,17 @@
 		"cookie-utils-1.0.5-dev.1782586570087.tgz": {
 			"shasum": "6e6c9194904fc3d2131282d49a70f082028567eb",
 			"version": "1.0.5-dev.1782586570087"
+		},
+		"cookie-utils-1.0.5-dev.1782682360219.tgz": {
+			"shasum": "004c6d7cf8d8acdde0d44cf4b66f432ba5a068ec",
+			"version": "1.0.5-dev.1782682360219"
+		},
+		"cookie-utils-1.0.5-dev.1782737691169.tgz": {
+			"shasum": "0c239ff2991b98d1ebefbcf8676bd493912e2698",
+			"version": "1.0.5-dev.1782737691169"
 		}
 	},
-	"_rev": "37-76bfdd3d12b0837d",
+	"_rev": "44-4d818bef80b51ca5",
 	"_id": "@proteo/cookie-utils",
 	"readme": ""
 }

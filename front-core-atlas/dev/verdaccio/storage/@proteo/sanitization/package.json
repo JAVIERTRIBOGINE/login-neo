@@ -4049,6 +4049,144 @@
 				"tarball": "http://localhost:4873/@proteo/sanitization/-/@proteo/sanitization-1.0.4-dev.1782586570087.tgz"
 			},
 			"contributors": []
+		},
+		"1.0.4-dev.1782682360219": {
+			"name": "@proteo/sanitization",
+			"version": "1.0.4-dev.1782682360219",
+			"description": "Proteo4 Frontend Core Library",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/sanitization"
+			},
+			"publishConfig": {
+				"registry": "http://localhost:4873"
+			},
+			"main": "index.js",
+			"type": "module",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@proteo/esbuild-config": "1.0.2",
+				"@proteo/jest-config": "1.0.2",
+				"@proteo/tsconfig": "1.1.2",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4"
+			},
+			"types": "types/index.d.ts",
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts && pnpm run build:bundle",
+				"build:bundle": "proteo-esbuild",
+				"build:ts": "tsc --build --pretty",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"_nodeVersion": "24.16.0",
+			"_id": "@proteo/sanitization@1.0.4-dev.1782682360219",
+			"dist": {
+				"integrity": "sha512-3+sqoYvQOS1dJljs/mo7GyP0RR0I9c+av0gX97LnWELa2rxQy0goVfbMHC8bmmU4gY/I9R/ZiykwYrPvIK/2dQ==",
+				"shasum": "36034ecb63d84a9b2dff36346b8eaceb97b6129f",
+				"tarball": "http://localhost:4873/@proteo/sanitization/-/@proteo/sanitization-1.0.4-dev.1782682360219.tgz"
+			},
+			"contributors": []
+		},
+		"1.0.4-dev.1782737691169": {
+			"name": "@proteo/sanitization",
+			"version": "1.0.4-dev.1782737691169",
+			"description": "Proteo4 Frontend Core Library",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/sanitization"
+			},
+			"publishConfig": {
+				"registry": "http://localhost:4873"
+			},
+			"main": "index.js",
+			"type": "module",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@proteo/esbuild-config": "1.0.2",
+				"@proteo/jest-config": "1.0.2",
+				"@proteo/tsconfig": "1.1.2",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4"
+			},
+			"types": "types/index.d.ts",
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts && pnpm run build:bundle",
+				"build:bundle": "proteo-esbuild",
+				"build:ts": "tsc --build --pretty",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"_nodeVersion": "24.16.0",
+			"_id": "@proteo/sanitization@1.0.4-dev.1782737691169",
+			"dist": {
+				"integrity": "sha512-bqRubf5eVdHLkgovnFqm1qXbYTxkYpOy/CTeRRyQj+9lyIHY1CAJ6KbUktZb+1Qix0HTHIM8rlqhsHqGJetKkQ==",
+				"shasum": "777166c465261f59b9715d09baedbe22bced4554",
+				"tarball": "http://localhost:4873/@proteo/sanitization/-/@proteo/sanitization-1.0.4-dev.1782737691169.tgz"
+			},
+			"contributors": []
 		}
 	},
 	"time": {
@@ -4072,7 +4210,7 @@
 		"1.1.0-dev-2": "2026-05-20T16:29:50.960Z",
 		"1.1.0-dev-1": "2026-05-20T15:09:48.553Z",
 		"1.0.0-next.2": "2023-01-11T14:30:33.515Z",
-		"modified": "2026-06-27T18:56:12.148Z",
+		"modified": "2026-06-29T12:54:53.186Z",
 		"1.0.0-next.1": "2023-01-11T14:30:29.851Z",
 		"1.0.0-rc.5": "2023-01-11T14:30:41.175Z",
 		"1.0.0-next.0": "2023-01-11T14:30:29.174Z",
@@ -4098,17 +4236,19 @@
 		"1.0.4-dev.1782458447373": "2026-06-26T07:20:49.554Z",
 		"1.0.4-dev.1782583969231": "2026-06-27T18:12:51.256Z",
 		"1.0.4-dev.1782584293561": "2026-06-27T18:18:19.767Z",
-		"1.0.4-dev.1782586570087": "2026-06-27T18:56:12.148Z"
+		"1.0.4-dev.1782586570087": "2026-06-27T18:56:12.148Z",
+		"1.0.4-dev.1782682360219": "2026-06-28T21:32:42.086Z",
+		"1.0.4-dev.1782737691169": "2026-06-29T12:54:53.186Z"
 	},
 	"users": {},
 	"dist-tags": {
 		"latest": "1.0.4",
-		"dev": "1.0.4-dev.1782586570087"
+		"dev": "1.0.4-dev.1782737691169"
 	},
 	"_uplinks": {
 		"artifactory-sabadell": {
 			"etag": "388a7dcacd3b104f59bd1ac49571c2f06abfacc9",
-			"fetched": 1782587219120
+			"fetched": 1782682730864
 		}
 	},
 	"_distfiles": {
@@ -4324,9 +4464,17 @@
 		"sanitization-1.0.4-dev.1782586570087.tgz": {
 			"shasum": "ffce4fd7a7f7b95e4f2d72060c5d8c8fc16e6cea",
 			"version": "1.0.4-dev.1782586570087"
+		},
+		"sanitization-1.0.4-dev.1782682360219.tgz": {
+			"shasum": "36034ecb63d84a9b2dff36346b8eaceb97b6129f",
+			"version": "1.0.4-dev.1782682360219"
+		},
+		"sanitization-1.0.4-dev.1782737691169.tgz": {
+			"shasum": "777166c465261f59b9715d09baedbe22bced4554",
+			"version": "1.0.4-dev.1782737691169"
 		}
 	},
-	"_rev": "38-46a81e6bdbae282d",
+	"_rev": "45-0d6998d9c9784b36",
 	"_id": "@proteo/sanitization",
 	"readme": ""
 }

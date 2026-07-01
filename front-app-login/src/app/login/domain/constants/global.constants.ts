@@ -1,8 +1,7 @@
 import { InjectionToken } from "@angular/core";
 import { TLinkName, TStep, TTealiumEventDataLogin, TTeliumTraceDataLogin } from "../models/tealium.model";
-import { AuthConfig, AuthorizeRequest, AuthorizeResponse, DataManagerResponse, TokensRequest, TokensResponse } from "@proteo/types";
+import { AuthConfig } from "@proteo/types";
 import { endSession, initialize, revoke } from "@proteo/authorization-utils";
-import { authorize, getTokens } from "@app/login/application/services/utils";
 import type { SamlShellConfig } from "@app/saml-flow/domain/models/saml-shell-config.model";
 
 declare global {
@@ -78,17 +77,6 @@ export const CHANEL_DEFAULT = "UNDEFINED_CHANNEL";
 export const INITIALIZE_FN: InjectionToken<(authConfig: AuthConfig) => void> = new InjectionToken("INITIALIZE_FN", {
     providedIn: 'root',
     factory: () => initialize,
-})
-
-export const GET_TOKENS_FN: InjectionToken<(url: string, tokenId: string, request: TokensRequest) => Promise<DataManagerResponse<TokensResponse>>> =
-new InjectionToken("GET_TOKENS_FN", {
-    providedIn: 'root',
-    factory: () => getTokens,
-});
-
-export const AUTHORIZE_FN: InjectionToken<(request: AuthorizeRequest) => Promise<DataManagerResponse<AuthorizeResponse>>> = new InjectionToken("AUTHORIZE_FN", {
-    providedIn: 'root',
-    factory: () => authorize,
 })
 
 export const END_SESSION_FN: InjectionToken<(clientId: string, driver: string) => Promise<void>> = new InjectionToken("END_SESSION_FN", {

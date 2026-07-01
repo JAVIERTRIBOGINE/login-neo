@@ -2,14 +2,15 @@ import { CommonModule } from '@angular/common';
 import { CUSTOM_ELEMENTS_SCHEMA, Component, OnInit, WritableSignal, inject, signal } from '@angular/core';
 import { ActivatedRoute, Router, RouterOutlet } from '@angular/router';
 import { TranslatePipe } from '@proteo/ng-translate';
-import { AuthorizeRequest, AuthorizeResponse, DataManagerResponse } from '@proteo/types';
 import { PublishService } from '@app/login/application/services/publish.service';
 import { LoginDataService } from '@app/login/application/services/login-data.service';
 import { LOGIN_EVENTS } from '@app/login/domain/constants/event.enum';
 import { HttpErrorResponse } from '@angular/common/http';
 import { ROUTE_DATA } from '@app/login/domain/constants/path.constant';
-import { AUTHORIZE_FN } from '@app/login/domain/constants/global.constants';
 import { FlowConfirmationModalService } from '@app/login/application/services/flow-confirmation-modal.service';
+import { getAuthorizeEndpoint } from '@app/login/application/services/oauth-endpoints';
+import { OauthManagerService } from '@proteo/auth-manager';
+import type { OauthAuthorizeRequest } from '@proteo/auth-manager';
 
 
 
@@ -31,14 +32,12 @@ import { FlowConfirmationModalService } from '@app/login/application/services/fl
 export class AuthorizeComponent implements OnInit{
   processing: WritableSignal<boolean>;
   error: WritableSignal<boolean>;
-  conformedRedirectUri: WritableSignal<string> = signal("");
-  authorizeResponse!: DataManagerResponse<AuthorizeResponse>;
   router: Router;
   route: ActivatedRoute
   publishService: PublishService;
   loginDataService: LoginDataService;
   flowConfirmation: FlowConfirmationModalService;
-  authorize = inject(AUTHORIZE_FN)
+  oauthManager = inject(OauthManagerService);
 
 
   constructor(){
@@ -83,10 +82,10 @@ export class AuthorizeComponent implements OnInit{
      * POST /authorize mockeado: usa el tokenId SSO como assertion/csrf para pedir
      * un authorization code OAuth. PingAM responde 302 Location hacia /token.
      */
-    const authorizeParams: AuthorizeRequest =  {
+    const authorizeParams: OauthAuthorizeRequest =  {
+      authorizeUrl: getAuthorizeEndpoint(),
       clientId:  authConfig.clientId,
       redirectUri:  authConfig.redirectUri,
-      method: 'post',
       csrf,
     }
     if (authConfig.scopes?.length) authorizeParams.scope = authConfig.scopes.join(' ')
@@ -98,7 +97,7 @@ export class AuthorizeComponent implements OnInit{
         description: 'Tras credenciales, Angular llama a authorize con params OAuth y csrf/assertion=tokenId. PingAM responde 302 Location /token?code=...&state=....',
       });
 
-      await this.authorize( authorizeParams );
+      await this.oauthManager.authorize(authorizeParams);
 
     } catch( error  ) {
       const resolvedError = error as unknown as HttpErrorResponse

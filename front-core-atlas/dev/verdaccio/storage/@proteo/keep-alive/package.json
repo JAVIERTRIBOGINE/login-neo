@@ -7065,6 +7065,152 @@
 				"tarball": "http://localhost:4873/@proteo/keep-alive/-/@proteo/keep-alive-1.0.18-dev.1782586570087.tgz"
 			},
 			"contributors": []
+		},
+		"1.0.18-dev.1782682360219": {
+			"name": "@proteo/keep-alive",
+			"version": "1.0.18-dev.1782682360219",
+			"description": "Proteo4 Frontend Core Library",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/keep-alive"
+			},
+			"publishConfig": {
+				"registry": "http://localhost:4873"
+			},
+			"main": "index.js",
+			"type": "module",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"dependencies": {
+				"@proteo/event-bus": "2.1.6-dev.1782682360219",
+				"@proteo/logger-utils": "1.2.0-dev.1782682360219"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@proteo/jest-config": "1.0.2",
+				"@proteo/tsconfig": "1.1.2",
+				"@proteo/types": "1.1.88-dev.1782682360219",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/rolldown-config": "1.0.0"
+			},
+			"types": "types/index.d.ts",
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"_nodeVersion": "24.16.0",
+			"_id": "@proteo/keep-alive@1.0.18-dev.1782682360219",
+			"dist": {
+				"integrity": "sha512-AMXCBzB+s3Js0RrLYDZPrfbugQcGIxVl69wfZZvRXxNmYmZmTKCwbstP0k/0FZM11LryM3uYVYbtyaC+EkoxHg==",
+				"shasum": "3a61f287cd8d1b5f72d0e6a1427f6198ba6157a4",
+				"tarball": "http://localhost:4873/@proteo/keep-alive/-/@proteo/keep-alive-1.0.18-dev.1782682360219.tgz"
+			},
+			"contributors": []
+		},
+		"1.0.18-dev.1782737691169": {
+			"name": "@proteo/keep-alive",
+			"version": "1.0.18-dev.1782737691169",
+			"description": "Proteo4 Frontend Core Library",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/keep-alive"
+			},
+			"publishConfig": {
+				"registry": "http://localhost:4873"
+			},
+			"main": "index.js",
+			"type": "module",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"dependencies": {
+				"@proteo/event-bus": "2.1.6-dev.1782737691169",
+				"@proteo/logger-utils": "1.2.0-dev.1782737691169"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@proteo/jest-config": "1.0.2",
+				"@proteo/tsconfig": "1.1.2",
+				"@proteo/types": "1.1.88-dev.1782737691169",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/rolldown-config": "1.0.0"
+			},
+			"types": "types/index.d.ts",
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+			},
+			"_nodeVersion": "24.16.0",
+			"_id": "@proteo/keep-alive@1.0.18-dev.1782737691169",
+			"dist": {
+				"integrity": "sha512-zh0RBAftnaJayI41slQZ3n5YD6fOAnqFjQSLvILh1j4W0vBCDO/atWoLgFfuELHu9uG1JDeJTuROthsYgfYmzQ==",
+				"shasum": "459d066f40f16a528ff51b5d1957adb5945b4323",
+				"tarball": "http://localhost:4873/@proteo/keep-alive/-/@proteo/keep-alive-1.0.18-dev.1782737691169.tgz"
+			},
+			"contributors": []
 		}
 	},
 	"time": {
@@ -7076,7 +7222,7 @@
 		"1.0.11": "2025-11-12T16:27:31.520Z",
 		"0.0.0": "2023-01-11T14:12:26.707Z",
 		"0.0.0-SNAPSHOT-20250902100438": "2025-09-02T10:34:08.725Z",
-		"modified": "2026-06-27T18:56:11.883Z",
+		"modified": "2026-06-29T12:54:52.917Z",
 		"created": "2026-06-01T15:49:24.336Z",
 		"1.0.18-SNAPSHOT-72": "2026-06-01T15:49:24.336Z",
 		"1.0.15-snapshot.0": "2025-11-25T10:58:57.008Z",
@@ -7130,17 +7276,19 @@
 		"1.0.18-dev.1782458447373": "2026-06-26T07:20:49.287Z",
 		"1.0.18-dev.1782583969231": "2026-06-27T18:12:51.018Z",
 		"1.0.18-dev.1782584293561": "2026-06-27T18:18:19.147Z",
-		"1.0.18-dev.1782586570087": "2026-06-27T18:56:11.883Z"
+		"1.0.18-dev.1782586570087": "2026-06-27T18:56:11.883Z",
+		"1.0.18-dev.1782682360219": "2026-06-28T21:32:41.811Z",
+		"1.0.18-dev.1782737691169": "2026-06-29T12:54:52.917Z"
 	},
 	"users": {},
 	"dist-tags": {
 		"latest": "1.0.18",
-		"dev": "1.0.18-dev.1782586570087"
+		"dev": "1.0.18-dev.1782737691169"
 	},
 	"_uplinks": {
 		"artifactory-sabadell": {
 			"etag": "385d8a2366105662eb0c12219d32d2aa4b9dce02",
-			"fetched": 1782587218636
+			"fetched": 1782682730300
 		}
 	},
 	"_distfiles": {
@@ -7437,9 +7585,17 @@
 		"keep-alive-1.0.18-dev.1782586570087.tgz": {
 			"shasum": "d764dfde8c2b6273e1d6b18dd0cae482b4cc76de",
 			"version": "1.0.18-dev.1782586570087"
+		},
+		"keep-alive-1.0.18-dev.1782682360219.tgz": {
+			"shasum": "3a61f287cd8d1b5f72d0e6a1427f6198ba6157a4",
+			"version": "1.0.18-dev.1782682360219"
+		},
+		"keep-alive-1.0.18-dev.1782737691169.tgz": {
+			"shasum": "459d066f40f16a528ff51b5d1957adb5945b4323",
+			"version": "1.0.18-dev.1782737691169"
 		}
 	},
-	"_rev": "37-1273bc36ebb1f66e",
+	"_rev": "44-2ae4167455e5fc5f",
 	"_id": "@proteo/keep-alive",
 	"readme": ""
 }

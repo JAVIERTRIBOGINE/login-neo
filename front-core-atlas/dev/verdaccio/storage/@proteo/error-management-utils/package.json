@@ -4803,6 +4803,150 @@
 				"tarball": "http://localhost:4873/@proteo/error-management-utils/-/@proteo/error-management-utils-1.5.1-dev.1782586570087.tgz"
 			},
 			"contributors": []
+		},
+		"1.5.1-dev.1782682360219": {
+			"name": "@proteo/error-management-utils",
+			"version": "1.5.1-dev.1782682360219",
+			"description": "Proteo4 Frontend Core Library",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/error-management-utils"
+			},
+			"publishConfig": {
+				"registry": "http://localhost:4873"
+			},
+			"main": "index.js",
+			"type": "module",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"dependencies": {
+				"@proteo/event-bus": "2.1.6-dev.1782682360219",
+				"@proteo/observer": "0.0.2-dev.1782682360219"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@proteo/jest-config": "1.0.2",
+				"@proteo/tsconfig": "1.1.2",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/rolldown-config": "1.0.0"
+			},
+			"types": "types/index.d.ts",
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules --inspect node_modules/jest/bin/jest.js"
+			},
+			"_nodeVersion": "24.16.0",
+			"_id": "@proteo/error-management-utils@1.5.1-dev.1782682360219",
+			"dist": {
+				"integrity": "sha512-13vmk/iUeSlCSbHYWTPjWNErQyYpQd65f9pqHDpqNVKwC3SRV/xxQbc1x/1tx/8lLwv8kf7bp5DoJTCOr0ohcg==",
+				"shasum": "d906dc2943b3dc4348e9278eddff0baddf9332f0",
+				"tarball": "http://localhost:4873/@proteo/error-management-utils/-/@proteo/error-management-utils-1.5.1-dev.1782682360219.tgz"
+			},
+			"contributors": []
+		},
+		"1.5.1-dev.1782737691169": {
+			"name": "@proteo/error-management-utils",
+			"version": "1.5.1-dev.1782737691169",
+			"description": "Proteo4 Frontend Core Library",
+			"repository": {
+				"type": "git",
+				"url": "https://bitbucket.apps.devops.aws.bancsabadell.com/scm/p4des/front-core-monorepo.git",
+				"directory": "src/utils/error-management-utils"
+			},
+			"publishConfig": {
+				"registry": "http://localhost:4873"
+			},
+			"main": "index.js",
+			"type": "module",
+			"exports": {
+				".": {
+					"types": "./types/index.d.ts",
+					"development": "./development/index.js",
+					"default": "./index.js"
+				}
+			},
+			"files": [
+				"**/*.{d.ts,d.ts.map,js,js.map}",
+				"!test/**",
+				"!coverage/**",
+				"CHANGELOG.md"
+			],
+			"dependencies": {
+				"@proteo/event-bus": "2.1.6-dev.1782737691169",
+				"@proteo/observer": "0.0.2-dev.1782737691169"
+			},
+			"devDependencies": {
+				"@jest/globals": "^29.7.0",
+				"@proteo/jest-config": "1.0.2",
+				"@proteo/tsconfig": "1.1.2",
+				"@types/jest": "^29.5.12",
+				"cross-env": "^7.0.3",
+				"jest": "^29.7.0",
+				"jest-environment-jsdom": "^29.7.0",
+				"rimraf": "^3.0.2",
+				"ts-jest": "^29.1.5",
+				"typescript": "^5.5.4",
+				"@proteo/rolldown-config": "1.0.0"
+			},
+			"types": "types/index.d.ts",
+			"directories": {
+				"test": "test"
+			},
+			"scripts": {
+				"build": "pnpm run build:ts",
+				"build:ts": "rolldown -c rolldown.config.mjs && tsc --emitDeclarationOnly",
+				"link:dev": "npm link",
+				"format": "pnpm run format:eslint && pnpm run format:prettier",
+				"format:eslint": "pnpm run lint:eslint -- --fix",
+				"format:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --write",
+				"lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+				"lint:eslint": "eslint --quiet --color --cache --cache-location .eslintcache --ignore-path ../../../.gitignore .",
+				"lint:prettier": "prettier \"**/*.{md,html,mjs,cjs,js,json}\" --ignore-path ../../../.gitignore --check",
+				"clean": "rimraf \"./!(*.config).{js,mjs,cjs,js.map,ts,d.ts,d.ts.map}\" types/ test/ coverage/ development/ *.tsbuildinfo",
+				"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --changedSince master --passWithNoTests --maxWorkers=25% --silent",
+				"test:full": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --passWithNoTests --maxWorkers=25%",
+				"test:debug": "node --experimental-vm-modules --inspect node_modules/jest/bin/jest.js"
+			},
+			"_nodeVersion": "24.16.0",
+			"_id": "@proteo/error-management-utils@1.5.1-dev.1782737691169",
+			"dist": {
+				"integrity": "sha512-szJ71qMuWRWO2dYMQKyQRmFRTmWJQPGufU1TjpjIZTsrxnV0H8oUbuUXQJs0kOyYyVAJjBY5DQ+ToSE/YQsPLQ==",
+				"shasum": "36965f1928b788996266e79690402efc3ff1c3bd",
+				"tarball": "http://localhost:4873/@proteo/error-management-utils/-/@proteo/error-management-utils-1.5.1-dev.1782737691169.tgz"
+			},
+			"contributors": []
 		}
 	},
 	"time": {
@@ -4812,7 +4956,7 @@
 		"1.5.1-SNAPSHOT-83": "2026-06-02T08:26:49.379Z",
 		"1.4.7": "2025-12-01T12:26:49.517Z",
 		"0.0.0-SNAPSHOT-20250902100438": "2025-09-02T10:34:08.420Z",
-		"modified": "2026-06-27T18:56:11.938Z",
+		"modified": "2026-06-29T12:54:52.985Z",
 		"1.6.0-dev-1": "2026-05-20T15:10:01.877Z",
 		"created": "2026-06-01T15:49:24.802Z",
 		"1.5.1-SNAPSHOT-72": "2026-06-01T15:49:24.802Z",
@@ -4846,17 +4990,19 @@
 		"1.5.1-dev.1782458447373": "2026-06-26T07:20:49.344Z",
 		"1.5.1-dev.1782583969231": "2026-06-27T18:12:51.066Z",
 		"1.5.1-dev.1782584293561": "2026-06-27T18:18:19.274Z",
-		"1.5.1-dev.1782586570087": "2026-06-27T18:56:11.938Z"
+		"1.5.1-dev.1782586570087": "2026-06-27T18:56:11.938Z",
+		"1.5.1-dev.1782682360219": "2026-06-28T21:32:41.862Z",
+		"1.5.1-dev.1782737691169": "2026-06-29T12:54:52.985Z"
 	},
 	"users": {},
 	"dist-tags": {
 		"latest": "1.5.1",
-		"dev": "1.5.1-dev.1782586570087"
+		"dev": "1.5.1-dev.1782737691169"
 	},
 	"_uplinks": {
 		"artifactory-sabadell": {
 			"etag": "59d46e9ea58028f5924494833857f5a92d384987",
-			"fetched": 1782587218609
+			"fetched": 1782682730416
 		}
 	},
 	"_distfiles": {
@@ -5043,9 +5189,17 @@
 		"error-management-utils-1.5.1-dev.1782586570087.tgz": {
 			"shasum": "a3aec54064e61acff1383fe5a850312c91d8f083",
 			"version": "1.5.1-dev.1782586570087"
+		},
+		"error-management-utils-1.5.1-dev.1782682360219.tgz": {
+			"shasum": "d906dc2943b3dc4348e9278eddff0baddf9332f0",
+			"version": "1.5.1-dev.1782682360219"
+		},
+		"error-management-utils-1.5.1-dev.1782737691169.tgz": {
+			"shasum": "36965f1928b788996266e79690402efc3ff1c3bd",
+			"version": "1.5.1-dev.1782737691169"
 		}
 	},
-	"_rev": "36-660cd127d9f88bd3",
+	"_rev": "43-c40e6fdb9674a489",
 	"_id": "@proteo/error-management-utils",
 	"readme": ""
 }

@@ -12,9 +12,26 @@
       <span>Citrix Cookie</span>
     </span>
   </div>
-  <nav class="shell-header__actions" aria-label="Acciones">
-    <bs-button variant="tertiary">Ayuda</bs-button>
-  </nav>
+  <ng-container *ngIf="flowSteps$ | async as headerSteps">
+    <nav class="shell-header__actions" aria-label="Código del flujo">
+      <button
+        class="shell-code-button"
+        type="button"
+        [disabled]="!hasCodeSnippets('micro', headerSteps)"
+        (click)="openCodeModal('micro', headerSteps)"
+      >
+        Código micro
+      </button>
+      <button
+        class="shell-code-button"
+        type="button"
+        [disabled]="!hasCodeSnippets('oauthManager', headerSteps)"
+        (click)="openCodeModal('oauthManager', headerSteps)"
+      >
+        Código auth-manager
+      </button>
+    </nav>
+  </ng-container>
 </header>
 
 <div class="shell-body" [style.--flow-panel-width.px]="flowPanelWidth">
@@ -54,7 +71,7 @@
         <p class="shell-flow__eyebrow">Back flow</p>
         <h2>Acciones</h2>
       </div>
-      <button class="shell-flow__clear" type="button" (click)="clearFlowTrace()">Limpiar</button>
+      <button class="shell-flow__clear" type="button" (click)="collapseFlowTrace()">Colapsar</button>
     </div>
 
     <ng-container *ngIf="flowSteps$ | async as steps">
@@ -172,3 +189,30 @@
 <bs-footer class="shell-footer">
   <span>NEO Shell</span>
 </bs-footer>
+
+<div class="shell-code-modal" *ngIf="codeModal as modal" role="dialog" aria-modal="true" [attr.aria-label]="modal.title">
+  <button class="shell-code-modal__backdrop" type="button" aria-label="Cerrar modal" (click)="closeCodeModal()"></button>
+  <section class="shell-code-modal__panel">
+    <header class="shell-code-modal__header">
+      <h2>{{ modal.title }}</h2>
+      <button class="shell-code-modal__close" type="button" aria-label="Cerrar modal" (click)="closeCodeModal()">Cerrar</button>
+    </header>
+
+    <div class="shell-code-modal__body">
+      <p class="shell-code-modal__empty" *ngIf="modal.snippets.length === 0">
+        No hay fragmentos de código definidos para este step.
+      </p>
+
+      <article class="shell-code-snippet" *ngFor="let snippet of modal.snippets">
+        <p class="shell-code-snippet__description">{{ snippet.description }}</p>
+        <p class="shell-code-snippet__file">
+          {{ snippet.file }}:{{ snippet.startLine }} - {{ snippet.endLine }}
+        </p>
+        <pre><code><span class="shell-code-line" *ngFor="let line of highlightCode(snippet.code)"><span
+          *ngFor="let token of line"
+          [class]="'shell-code-token shell-code-token--' + token.kind"
+        >{{ token.text }}</span></span></code></pre>
+      </article>
+    </div>
+  </section>
+</div>

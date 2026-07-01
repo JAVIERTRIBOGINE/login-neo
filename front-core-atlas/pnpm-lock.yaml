@@ -112,6 +112,12 @@ importers:
       '@proteo/event-bus':
         specifier: workspace:*
         version: link:../../../typescript/packages/observability/event-bus
+      '@proteo/storage-utils':
+        specifier: workspace:*
+        version: link:../../../typescript/packages/storage/storage-utils
+      '@proteo/string-utils':
+        specifier: workspace:*
+        version: link:../../../typescript/packages/formatting/string-utils
       '@proteo/types':
         specifier: workspace:*
         version: link:../../../typescript/packages/types
@@ -171,7 +177,6 @@ importers:
       tslib:
         specifier: ^2.6.2
         version: 2.8.1
-    publishDirectory: ./dist
 
   src/angular/packages/ng-bootstrap:
     dependencies:

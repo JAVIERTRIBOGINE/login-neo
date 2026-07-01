@@ -3,7 +3,7 @@ import { inject, Injectable } from '@angular/core';
 import { EventManager } from '@proteo/event-bus';
 import { Subject, timeout } from 'rxjs';
 
-import { AuthStepConfirmation } from './auth-manager.models';
+import { AuthStepConfirmation } from './oauth-manager.models';
 import {
   SAML_MANAGER_EVENTS,
   SamlManagerConfig,

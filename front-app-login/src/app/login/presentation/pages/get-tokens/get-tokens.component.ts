@@ -1,16 +1,17 @@
 import { CommonModule } from '@angular/common';
 import { CUSTOM_ELEMENTS_SCHEMA, Component, OnInit, WritableSignal, inject, signal } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import {  TokensRequest, TokensResponse, AuthorizationTokens } from '@proteo/types';
+import { TokensResponse, AuthorizationTokens } from '@proteo/types';
 import { PublishService } from '@app/login/application/services/publish.service';
 import {  setAuthorization, storedTokens } from '@proteo/data-manager';
 import { LoginDataService } from '@app/login/application/services/login-data.service';
 import { LOGIN_EVENTS } from '@app/login/domain/constants/event.enum';
-import { END_SESSION_FN, GET_TOKENS_FN, REVOKE_FN } from '@app/login/domain/constants/global.constants';
+import { END_SESSION_FN, REVOKE_FN } from '@app/login/domain/constants/global.constants';
 import { getTokensEndpoint } from '@app/login/application/services/oauth-endpoints';
 import { SamlRuntimeConfigService } from '@app/saml-flow/application/services/saml-runtime-config.service';
 import { SAML_ROUTE_DATA } from '@app/saml-flow/domain/constants/path.constant';
 import { FlowConfirmationModalService } from '@app/login/application/services/flow-confirmation-modal.service';
+import { OauthManagerService } from '@proteo/auth-manager';
 
 
 @Component({
@@ -44,7 +45,7 @@ export class GetTokensComponent implements OnInit{
     loginDataService!: LoginDataService;
     samlRuntimeConfig = inject(SamlRuntimeConfigService);
     flowConfirmation = inject(FlowConfirmationModalService);
-    getTokens = inject(GET_TOKENS_FN);
+    oauthManager = inject(OauthManagerService);
     storedTokens = storedTokens;
     
     
@@ -81,7 +82,6 @@ export class GetTokensComponent implements OnInit{
       const clientId = authConfig.clientId;
       const redirectUri = authConfig.redirectUri;
       const token_sso = this.loginDataService.successData().tokenId;
-      const params: TokensRequest = {code, state, clientId, redirectUri};  
       const url = getTokensEndpoint();
      
       try {
@@ -89,7 +89,14 @@ export class GetTokensComponent implements OnInit{
           title: 'Paso OAuth: token request',
           description: 'TokensComponent lee code/state de la URL y solicita OIDC/OAuth tokens a PingAM con POST /token.',
         });
-        this.authorizeResponse =  (await this.getTokens(url, token_sso, params)).data as TokensResponse;
+        this.authorizeResponse =  (await this.oauthManager.exchangeAuthorizationCode({
+          tokenUrl: url,
+          tokenId: token_sso,
+          code,
+          state,
+          clientId,
+          redirectUri,
+        })).data as TokensResponse;
         
         /*
          * Los tokens se registran en data-manager para que el resto de la solucion
