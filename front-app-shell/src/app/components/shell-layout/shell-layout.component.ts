@@ -287,6 +287,9 @@ export class ShellLayoutComponent implements OnInit, OnDestroy {
     if (text.includes('fallback transparente completo')) return [];
     if (text.includes('token request')) return this.getTokenRequestCodeSnippets(source);
     if (text.includes('autenticación ok') || text.includes('autenticacion ok')) return this.getOauthSuccessCodeSnippets(source);
+    if (text.includes('adaptador acs local completado')) return this.getAcsAdapterCodeSnippets(source);
+    if (text.includes('validatesamlresponse')) return this.getValidateSamlResponseCodeSnippets(source);
+    if (text.includes('resources ok')) return this.getResourcesOkCodeSnippets(source);
     return [];
   }
 
@@ -1190,6 +1193,170 @@ export enum ROUTE_DATA  {
   form.submit();
 
   return new Promise<DataManagerResponse<T>>(() => undefined);
+}`,
+      },
+    ];
+  }
+
+  private getAcsAdapterCodeSnippets(source: FlowCodeSource): FlowCodeSnippet[] {
+    if (source !== 'micro') return [];
+
+    return [
+      {
+        description: 'La ruta ACS del micro recibe responseId, recupera SAMLResponse y RelayState desde el adaptador local y prepara el siguiente salto.',
+        file: 'front-app-login/src/app/saml-flow/presentation/pages/acs/acs.component.ts',
+        startLine: 38,
+        endLine: 51,
+        language: 'typescript',
+        code: `async ngOnInit(): Promise<void> {
+  const config = buildSamlManagerConfig(await this.runtimeConfig.whenReady());
+  this.netscalerAcsUrl.set(config.endpoints.netscalerAcs);
+  const responseId = this.route.snapshot.queryParamMap.get('responseId');
+  if (!responseId) {
+    this.fail(new Error('Falta responseId en el retorno ACS'));
+    return;
+  }
+
+  const url = \`\${config.endpoints.acsResponse}/\${encodeURIComponent(responseId)}\`;
+  this.http.get<AcsResponse>(url, { withCredentials: true }).subscribe({
+    next: response => void this.forwardSamlResponseToNetScaler(response, config.endpoints.netscalerAcs),
+    error: error => this.fail(error),
+  });
+}`,
+      },
+      {
+        description: 'El step confirma que el adaptador local ya ha entregado el payload SAML al micro; todavia no se ha enviado a NetScaler.',
+        file: 'front-app-login/src/app/saml-flow/presentation/pages/acs/acs.component.ts',
+        startLine: 54,
+        endLine: 58,
+        language: 'typescript',
+        code: `private async forwardSamlResponseToNetScaler(response: AcsResponse, netscalerAcsUrl: string): Promise<void> {
+  await this.flowConfirmation.confirm({
+    title: 'Paso SAML: adaptador ACS local completado',
+    description: 'El navegador ha llegado a /saml/acs?responseId=... y Angular ha recuperado SAMLResponse y RelayState desde el adaptador local. Termina aqui la intervencion del adaptador SAML de la POC.',
+  });`,
+      },
+    ];
+  }
+
+  private getValidateSamlResponseCodeSnippets(source: FlowCodeSource): FlowCodeSnippet[] {
+    if (source !== 'micro') return [];
+
+    return [
+      {
+        description: 'El micro confirma el POST final contra NetScaler y deja listos SAMLResponse y RelayState como campos hidden del formulario.',
+        file: 'front-app-login/src/app/saml-flow/presentation/pages/acs/acs.component.ts',
+        startLine: 60,
+        endLine: 70,
+        language: 'typescript',
+        code: `await this.flowConfirmation.confirm({
+  title: 'Paso SAML: validateSAMLResponse NetScaler',
+  description: \`NEO ha recuperado SAMLResponse y RelayState. Construye un formulario POST hacia \${netscalerAcsUrl}; el navegador lo enviará a NetScaler para validar la aserción y emitir la cookie Citrix.\`,
+});
+
+this.formParams.set({
+  SAMLResponse: response.samlResponse,
+  RelayState: response.relayState,
+});
+this.loading.set(false);`,
+      },
+      {
+        description: 'El template del ACS crea el formulario POST hacia NetScaler; SamlForm lo autoenvia fuera del ciclo de Angular.',
+        file: 'front-app-login/src/app/saml-flow/presentation/pages/acs/acs.component.ts',
+        startLine: 15,
+        endLine: 24,
+        language: 'typescript',
+        code: `template: \`
+  @if (loading()) {
+    <saml-loader></saml-loader>
+  }
+  @if (formParams(); as params) {
+    @if (netscalerAcsUrl(); as action) {
+      <saml-form [action]="action" method="POST" [params]="params"></saml-form>
+    }
+  }
+\`,`,
+      },
+      {
+        description: 'SamlForm serializa los parametros como hidden inputs y ejecuta submit() en microtask para que el navegador navegue a NetScaler.',
+        file: 'front-app-login/src/app/saml-flow/presentation/shared/saml-form.component.ts',
+        startLine: 9,
+        endLine: 28,
+        language: 'typescript',
+        code: `template: \`
+  <form #form [attr.method]="method" [attr.action]="action">
+    @for (field of fields; track field.name) {
+      <input type="hidden" [attr.name]="field.name" [value]="field.value" />
+    }
+    <noscript><button type="submit">Continuar</button></noscript>
+  </form>
+\`,
+})
+export class SamlFormComponent implements AfterViewInit {
+  @Input({ required: true }) action = '';
+  @Input() method: 'GET' | 'POST' = 'POST';
+  @Input() params: Record<string, string> = {};
+  @Input() autoSubmit = true;
+
+  ngAfterViewInit(): void {
+    if (this.autoSubmit) queueMicrotask(() => this.form.nativeElement.submit());
+  }
+}`,
+      },
+    ];
+  }
+
+  private getResourcesOkCodeSnippets(source: FlowCodeSource): FlowCodeSnippet[] {
+    if (source === 'micro') {
+      return [
+        {
+          description: 'Al volver a /saml/resources con cookie Citrix, el micro relanza checkResources y recibe SAML_SUCCESS desde SamlManager.',
+          file: 'front-app-login/src/app/saml-flow/presentation/pages/resources/resources.component.ts',
+          startLine: 37,
+          endLine: 53,
+          language: 'typescript',
+          code: `async ngOnInit(): Promise<void> {
+  this.samlSub = this.samlManager.events$.subscribe(event => this.handleEvent(event));
+  const shellConfig = await this.runtimeConfig.whenReady();
+  this.config = buildSamlManagerConfig(shellConfig);
+  this.samlManager.setConfig({
+    ...this.config,
+    confirmStep: step => this.flowConfirmation.confirm(step),
+  });
+  this.samlManager.checkResources(); // cubre llamadas 1 (primera vez) y 6 (retorno tras NetScaler)
+}
+
+private handleEvent(event: SamlManagerEvent): void {
+  switch (event.type) {
+    case SAML_MANAGER_EVENTS.SAML_SUCCESS:
+      this.loading.set(false);
+      this.oauthManager.completeSamlAuthorization(event.payload);`,
+        },
+      ];
+    }
+
+    return [
+      {
+        description: 'SamlManager registra el 200 OK de /resources y publica SAML_SUCCESS con el payload que usara la shell para pintar el menu.',
+        file: '../front-core-atlas/src/typescript/packages/auth/auth-manager/src/lib/saml-manager.service.ts',
+        startLine: 26,
+        endLine: 44,
+        language: 'typescript',
+        code: `checkResources(): void {
+  this.http.get(this.config.endpoints.resources, { withCredentials: true }).pipe(
+    timeout(10000)
+  ).subscribe({
+    next: response => void this.handleSuccess(response),
+    error: error => void this.handleError(error as HttpErrorResponse | Error),
+  });
+}
+
+private async handleSuccess(response: unknown): Promise<void> {
+  await this.confirm({
+    title: 'Paso SAML: resources OK',
+    description: \`GET \${this.config.endpoints.resources} ha respondido 200 OK.\`,
+  });
+  this.publish({ type: SAML_MANAGER_EVENTS.SAML_SUCCESS, payload: response });
 }`,
       },
     ];
