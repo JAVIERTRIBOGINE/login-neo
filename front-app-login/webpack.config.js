@@ -4,7 +4,19 @@ const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPl
 const mf = require('@angular-architects/module-federation/webpack');
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const path = require('path');
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const fs = require('fs');
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const { execFileSync } = require('child_process');
 const share = mf.share;
+
+const bootstrapChildPath = path.join(__dirname, 'src/bootstrap/bootstrap-child.module.ts');
+if (!fs.existsSync(bootstrapChildPath)) {
+  execFileSync(process.execPath, [path.join(__dirname, 'src/_templates/setup.js'), 'local'], {
+    cwd: __dirname,
+    stdio: 'inherit',
+  });
+}
 
 const sharedMappings = new mf.SharedMappings();
 sharedMappings.register(path.join(__dirname, 'tsconfig.json'), [
