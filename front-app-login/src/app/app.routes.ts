@@ -1,23 +1,15 @@
-import { CanMatchFn, Routes } from '@angular/router';
+import { Routes } from '@angular/router';
 import { ROUTE_DATA } from './login/domain/constants/path.constant';
 import { AuthGuard } from './login/application/guards/login.guard';
 import { SAML_ROUTE_DATA } from './saml-flow/domain/constants/path.constant';
 
-const SKIP_SAML_RESOURCES_ONCE = 'login.skipSamlResourcesOnce';
-
-export const skipSamlResourcesOnce = (): void => {
-  window.sessionStorage.setItem(SKIP_SAML_RESOURCES_ONCE, 'true');
-};
-
-const shouldStartSamlFlow: CanMatchFn = () => {
-  const skipSamlResources = window.sessionStorage.getItem(SKIP_SAML_RESOURCES_ONCE) === 'true';
-  window.sessionStorage.removeItem(SKIP_SAML_RESOURCES_ONCE);
-  return !skipSamlResources;
-};
-
 export const APP_ROUTES: Routes = [
   {
     path: ROUTE_DATA.ROOT,
+    /*
+     * LoginPageComponent actua como layout del MFE. Sus hijos representan las
+     * fases OAuth/PingAM: intento SAML inicial, formulario, authorize y token.
+     */
     loadComponent: () =>
       import('./login/presentation/login-page.component').then(
         (m) => m.LoginPageComponent
@@ -26,13 +18,7 @@ export const APP_ROUTES: Routes = [
       {
         path: '',
         pathMatch: 'full',
-        canMatch: [shouldStartSamlFlow],
         loadComponent: () => import('./saml-flow/presentation/pages/saml-start/saml-start.component').then((c) => c.SamlStartComponent),
-      },
-      {
-        path: '',
-        pathMatch: 'full',
-        loadComponent: () => import('./login/presentation/pages/login/login.component').then((c) => c.LoginComponent),
       },
       {
         path: ROUTE_DATA.LOGIN,
@@ -67,8 +53,12 @@ export const APP_ROUTES: Routes = [
     loadComponent: () => import('./saml-flow/presentation/pages/resources/resources.component').then((c) => c.ResourcesComponent),
   },
   {
+    path: SAML_ROUTE_DATA.AUTHORIZATION_REQUEST,
+    loadComponent: () => import('./saml-flow/presentation/pages/get-authorization-request/get-authorization-request.component').then((c) => c.GetAuthorizationRequestComponent),
+  },
+  {
     path: SAML_ROUTE_DATA.ACS,
-    loadComponent: () => import('./saml-flow/presentation/pages/saml-response/saml-response.component').then((c) => c.SamlResponseComponent),
+    loadComponent: () => import('./saml-flow/presentation/pages/acs/acs.component').then((c) => c.ACSComponent),
   },
   {
     path: '**',

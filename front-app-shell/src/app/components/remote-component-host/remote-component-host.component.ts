@@ -52,6 +52,11 @@ export class RemoteComponentHostComponent implements OnInit, OnDestroy {
     await this.bootstrapLoginChild();
 
     const data = this.route.snapshot.data as RemoteRouteData;
+    /*
+     * La shell no importa el login en build-time: lo carga en runtime desde el
+     * remoteEntry del MFE. La ruta de la shell decide que exposedModule/exportName
+     * se debe pintar en esta pantalla.
+     */
     const remote = await loadRemoteModule({
       type: 'module',
       remoteEntry: 'http://localhost:4500/remoteEntry.js',
@@ -61,6 +66,12 @@ export class RemoteComponentHostComponent implements OnInit, OnDestroy {
     const component = remote[data.exportName] as Type<unknown>;
     this.container.clear();
     this.container.createComponent(component, {
+      /*
+       * Los componentes standalone del MFE necesitan el EnvironmentInjector del
+       * modulo remoto Application. Si se crean con el injector de la shell, los
+       * providers propios del login (router, tokens OAuth, traducciones, config)
+       * pueden no existir en la primera carga.
+       */
       environmentInjector: loginRemoteModuleRef ?? this.environmentInjector,
     });
     this.loading = false;
@@ -75,6 +86,11 @@ export class RemoteComponentHostComponent implements OnInit, OnDestroy {
       return;
     }
 
+    /*
+     * Primero se instancia el modulo Application expuesto por el login. Ese modulo
+     * inicializa la configuracion Proteo y registra providers que luego consumen
+     * AuthorizeComponent/GetTokensComponent aunque entren por lazy routing.
+     */
     const remote = await loadRemoteModule({
       type: 'module',
       remoteEntry: 'http://localhost:4500/remoteEntry.js',

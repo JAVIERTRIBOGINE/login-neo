@@ -24,8 +24,16 @@ export const SHELL_ROUTES: Routes = [
     path: 'saml/acs',
     component: RemoteComponentHostComponent,
     data: {
-      exposedModule: './SamlResponseComponent',
-      exportName: 'SamlResponseComponent',
+      exposedModule: './ACSComponent',
+      exportName: 'ACSComponent',
+    },
+  },
+  {
+    path: 'saml/authorization-request',
+    component: RemoteComponentHostComponent,
+    data: {
+      exposedModule: './GetAuthorizationRequestComponent',
+      exportName: 'GetAuthorizationRequestComponent',
     },
   },
   {

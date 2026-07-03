@@ -2,13 +2,15 @@ import { CommonModule } from '@angular/common';
 import { CUSTOM_ELEMENTS_SCHEMA, Component, OnInit, WritableSignal, inject, signal } from '@angular/core';
 import { ActivatedRoute, Router, RouterOutlet } from '@angular/router';
 import { TranslatePipe } from '@proteo/ng-translate';
-import { AuthorizeRequest, AuthorizeResponse, DataManagerResponse } from '@proteo/types';
 import { PublishService } from '@app/login/application/services/publish.service';
 import { LoginDataService } from '@app/login/application/services/login-data.service';
 import { LOGIN_EVENTS } from '@app/login/domain/constants/event.enum';
 import { HttpErrorResponse } from '@angular/common/http';
 import { ROUTE_DATA } from '@app/login/domain/constants/path.constant';
-import { AUTHORIZE_FN } from '@app/login/domain/constants/global.constants';
+import { FlowConfirmationModalService } from '@app/login/application/services/flow-confirmation-modal.service';
+import { getAuthorizeEndpoint } from '@app/login/application/services/oauth-endpoints';
+import { OauthManagerService } from '@proteo/auth-manager';
+import type { OauthAuthorizeRequest } from '@proteo/auth-manager';
 
 
 
@@ -30,13 +32,12 @@ import { AUTHORIZE_FN } from '@app/login/domain/constants/global.constants';
 export class AuthorizeComponent implements OnInit{
   processing: WritableSignal<boolean>;
   error: WritableSignal<boolean>;
-  conformedRedirectUri: WritableSignal<string> = signal("");
-  authorizeResponse!: DataManagerResponse<AuthorizeResponse>;
   router: Router;
   route: ActivatedRoute
   publishService: PublishService;
   loginDataService: LoginDataService;
-  authorize = inject(AUTHORIZE_FN)
+  flowConfirmation: FlowConfirmationModalService;
+  oauthManager = inject(OauthManagerService);
 
 
   constructor(){
@@ -46,6 +47,7 @@ export class AuthorizeComponent implements OnInit{
     this.route = inject(ActivatedRoute);
     this.publishService = inject(PublishService);
     this.loginDataService = inject(LoginDataService);
+    this.flowConfirmation = inject(FlowConfirmationModalService);
   }
 
   ngOnInit(): void {
@@ -57,24 +59,45 @@ export class AuthorizeComponent implements OnInit{
   async authorizing(){
     const csrf = this.loginDataService.successData().tokenId;
     if (!csrf) {
+      /*
+       * Sin tokenId no hay sesion PingAM validada: se vuelve al formulario para
+       * reconstruir el arbol de autenticacion desde el inicio.
+       */
       this.router.navigate([`../${ROUTE_DATA.LOGIN}`], { relativeTo: this.route });
       return;
     }
 
-    const authorizeParams: AuthorizeRequest =  {
-      clientId:  window.BsAuthorizationConfig.clientID,
-      redirectUri:  window.BsAuthorizationConfig.redirectUri,
-      method: 'post',
+    const authConfig = this.getAuthorizationConfig();
+    if (!authConfig.clientId || !authConfig.redirectUri) {
+      /*
+       * En primera carga remota puede ocurrir que window.BsAuthorizationConfig aun
+       * no exista. Si tampoco hay AUTH_CONFIG inyectada, el flujo no puede pedir
+       * authorization code y se publica error controlado.
+       */
+      this.publishService.publishEvent(LOGIN_EVENTS.ERROR);
+      return;
+    }
+
+    /*
+     * POST /authorize mockeado: usa el tokenId SSO como assertion/csrf para pedir
+     * un authorization code OAuth. PingAM responde 302 Location hacia /token.
+     */
+    const authorizeParams: OauthAuthorizeRequest =  {
+      authorizeUrl: getAuthorizeEndpoint(),
+      clientId:  authConfig.clientId,
+      redirectUri:  authConfig.redirectUri,
       csrf,
     }
-    if (window.BsAuthorizationConfig.scopes) authorizeParams.scope = window.BsAuthorizationConfig.scopes.join(' ')
+    if (authConfig.scopes?.length) authorizeParams.scope = authConfig.scopes.join(' ')
 
     try {
-      this.authorizeResponse = await this.authorize( authorizeParams );
-
       this.processing.set(false);
+      await this.flowConfirmation.confirm({
+        title: 'Paso OAuth: authorize redirect',
+        description: 'Tras credenciales, Angular llama a authorize con params OAuth y csrf/assertion=tokenId. PingAM responde 302 Location /token?code=...&state=....',
+      });
 
-      this.conformUrl(this.authorizeResponse?.url as string)
+      await this.oauthManager.authorize(authorizeParams);
 
     } catch( error  ) {
       const resolvedError = error as unknown as HttpErrorResponse
@@ -95,6 +118,30 @@ export class AuthorizeComponent implements OnInit{
     this.router.navigate( [`../${ROUTE_DATA.GET_TOKENS}` ], { queryParams: qeuryObj, relativeTo: this.route});
 }
 
+private getAuthorizationConfig(): { clientId?: string; redirectUri?: string; scopes?: string[] } {
+   /*
+    * Fallback doble:
+    * - window.BsAuthorizationConfig: formato que genera authorization-utils.
+    * - window.NEO_LOGIN_AUTH_CONFIG: JSON original capturado por Application.
+    * Esto cubre la primera navegacion del MFE, cuando el global puede no estar
+    * preparado todavia pero bootstrap() ya ha leido la configuracion.
+    */
+   const windowConfig = window.BsAuthorizationConfig;
+   const authConfig = window.NEO_LOGIN_AUTH_CONFIG as Record<string, unknown> | undefined;
+
+   const scopes = windowConfig?.scopes ?? authConfig?.['SCOPES'];
+   const configuredRedirectUri = windowConfig?.redirectUri ?? authConfig?.['REDIRECT_URI'] as string | undefined;
+   const shellRedirectUri = (window as Window & { NEO_SHELL?: boolean }).NEO_SHELL
+      ? `${window.location.origin}/${ROUTE_DATA.GET_TOKENS}`
+      : configuredRedirectUri;
+
+   return {
+      clientId: windowConfig?.clientID ?? authConfig?.['CLIENT_ID'] as string | undefined,
+      redirectUri: shellRedirectUri,
+      scopes: Array.isArray(scopes) ? scopes as string[] : undefined,
+   }
+}
+
   
 private getQueryParam(url: string, key: string): string | null {
    const match = url.match(new RegExp(`[?&]${key}=([^&]+)`));
@@ -102,6 +149,3 @@ private getQueryParam(url: string, key: string): string | null {
    }
  }
  
-
-
-

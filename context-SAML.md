@@ -172,15 +172,30 @@ Premisa: SSO Cookie activa en el navegador.
 
 ## 6. Caso alternativo — SSO Cookie inválida o ausente
 
-En la llamada 3, si el navegador llega a PingAM sin SSO Cookie activa o expirada, PingAM no puede resolver la sesión y el flujo se interrumpe. Angular retoma el control en un estado de error.
+En la llamada 3, si el navegador llega a PingAM sin SSO Cookie activa o con la cookie expirada, PingAM no puede resolver la sesión. En este caso **no devuelve un `401` HTTP al navegador**: devuelve una redirección hacia una ruta de la Shell que inicia el fallback OAuth.
+
+Contrato utilizado por la POC:
+
+```http
+HTTP/1.1 303 See Other
+Location: http://localhost:4300/login?samlSso=unauthorized
+```
+
+El navegador sigue automáticamente el `303` y realiza un nuevo `GET` sobre la URL indicada. Angular retoma el control en `/login` y lee `samlSso=unauthorized` como resultado funcional de la comprobación SSO. Por tanto:
+
+- `unauthorized` no es el status HTTP de la respuesta; viaja como parámetro de la URL de retorno.
+- El status HTTP real es `303 See Other`.
+- Si PingAM devolviera un `401` HTTP durante esta navegación, el navegador se detendría en la respuesta de error y no llegaría automáticamente al flujo OAuth.
+- La URL definitiva de retorno debe acordarse con el equipo de PingAM/Apigee y registrarse como ruta válida de la Shell.
 
 ```
-SamlResponseComponent (o ResourcesComponent según el punto de fallo)
-    └── detecta ausencia de SAMLResponse válida
-        └── emite saml:unauthorized → LoginService
-            └── LoginService activa OAuth Flow
-                └── oauth:success → LoginService reactiva SAML Flow
-                    └── flujo SAML completo desde ResourcesComponent
+Navegador → GET /SSORedirect → PingAM
+    └── SSO Cookie ausente/expirada
+        └── 303 Location: /login?samlSso=unauthorized
+            └── Navegador sigue el redirect
+                └── Angular lee samlSso=unauthorized
+                    └── LoginService activa OAuth Flow
+                        └── oauth:success → reactiva SAML Flow
 ```
 
 Los MFEs no se conocen entre sí. La lógica de transición reside exclusivamente en LoginService.
@@ -256,6 +271,7 @@ submitSamlResponse(samlResponse: string, relayState: string): void {
 | Ruta | Componente | Descripción | Registrar en |
 |---|---|---|---|
 | ACS URL de NEO (ej. `/auth/saml/acs`) | `SamlResponseComponent` | Destino del formulario auto-enviado de PingAM | PingAM (ACS URL del IDP) + Shell config |
+| URL fallback SSO → OAuth (local: `http://localhost:4300/login?samlSso=unauthorized`) | `LoginComponent` | Destino del `303` cuando PingAM no encuentra una SSO Cookie activa | PingAM/Apigee + Shell config |
 | ACS URL de NetScaler | — | Destino del POST de la llamada 5 | Configurado en NetScaler SAML SP profile |
 | URL de retorno NetScaler → NEO | `ResourcesComponent` (probable) | Destino tras validación de NetScaler | Configurado en NetScaler — PENDIENTE acordar |
 
@@ -334,6 +350,7 @@ src/app/saml-flow/
 | URL de retorno tras validación en NetScaler | Necesario para saber dónde retoma Angular antes de la llamada 6 |
 | ACS URL de NEO registrada en PingAM IDP profile | Bloquea la llamada 4 — PingAM no sabe dónde enviar el formulario |
 | ACS URL de NEO en config de Shell | Bloquea routing de Angular |
+| URL definitiva de fallback PingAM → login OAuth | Debe resolver una ruta de la Shell y conservar el indicador funcional `samlSso=unauthorized` |
 | FQDN definitivo VS ADC de NEO | Determina SameSite de cookies |
 
 ---

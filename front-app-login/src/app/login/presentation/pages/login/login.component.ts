@@ -15,10 +15,11 @@ import { Subscription } from 'rxjs';
 import { ISuccessOtpRespone } from '@app/login/domain/models/Tree-callback.model';
 import { getAuthenticateEndpoint } from '@app/login/application/services/oauth-endpoints';
 
-// ─── AuthManager (Proteo4) ───────────────────────────────────────────────────
-import { AuthManagerService, AUTH_MANAGER_EVENTS } from '@proteo/auth-manager';
+// ─── OauthManager (Proteo4) ───────────────────────────────────────────────────
+import { OauthManagerService, OAUTH_MANAGER_EVENTS } from '@proteo/auth-manager';
+import { FlowConfirmationModalService } from '@app/login/application/services/flow-confirmation-modal.service';
 
-// ─── Lógica de orquestación desplazada a AuthManager ────────────────────────
+// ─── Lógica de orquestación desplazada a OauthManager ────────────────────────
 // Los imports siguientes quedan comentados: la orquestación de los 4 casos
 // (InitiateAuth, ResumeAuth, KerberosAuth, CredentialsAuth) ya no reside aquí.
 //
@@ -44,7 +45,7 @@ import { AuthManagerService, AUTH_MANAGER_EVENTS } from '@proteo/auth-manager';
   providers: [
     TranslateService,
     MessageService,
-    // ─── Providers desplazados a AuthManager ──────────────────────────────────
+    // ─── Providers desplazados a OauthManager ──────────────────────────────────
     // { provide: InitiateAuthRepository,    useClass: InitiateAuthBackendRepository },
     // { provide: ResumeAuthRepository,      useClass: ResumeAuthBackendRepository },
     // { provide: KerberosAuthRepository,    useClass: KerberosAuthBackendRepository },
@@ -169,24 +170,33 @@ export class LoginComponent implements OnInit, AfterViewInit, OnDestroy {
   private loginTranslation = inject(LoginTranslationService);
   private publishService   = inject(PublishService);
   private loginDataService = inject(LoginDataService);
-  private authManager      = inject(AuthManagerService);
+  private oauthManager      = inject(OauthManagerService);
+  private flowConfirmation = inject(FlowConfirmationModalService);
 
-  private authSub!: Subscription;
+  private oauthSub!: Subscription;
   private credentialListenersAttached = false;
 
-  ngOnInit(): void {
-    this.subscribeToAuthManager();
+  async ngOnInit(): Promise<void> {
+    this.subscribeToOauthManager();
 
-    this.authManager.authenticate({
+    if (this.route.snapshot.queryParamMap.get('samlSso') === 'unauthorized') {
+      await this.flowConfirmation.confirm({
+        title: 'Paso SAML: SSO Unauthorized en PingAM',
+        description: 'Apigee/PingAM no encuentra una SSO Cookie activa. Devuelve el navegador a /login para iniciar el flujo OAuth.',
+      });
+    }
+
+    await this.oauthManager.authenticate({
       endpoints: {
         authenticate: getAuthenticateEndpoint(),
       },
       resumeAuthId: this.route.snapshot.queryParamMap.get('authId') ?? undefined,
       procedence:   this.loginDataService.getProcedence(),
       language:     this.loginTranslation.getLanguage(),
+      confirmStep:  step => this.flowConfirmation.confirm(step),
     });
 
-    // ─── Lógica desplazada a AuthManager ────────────────────────────────────
+    // ─── Lógica desplazada a OauthManager ────────────────────────────────────
     // const authIdFromUrl = this.route.snapshot.queryParamMap.get('authId');
     // if (authIdFromUrl) {
     //   this.currentAuthId.set(authIdFromUrl);
@@ -200,22 +210,22 @@ export class LoginComponent implements OnInit, AfterViewInit, OnDestroy {
     if (this.showCredentialsForm()) this.listenCredentialFields();
   }
 
-  // ─── Responde a los eventos emitidos por AuthManager ────────────────────────
+  // ─── Responde a los eventos emitidos por OauthManager ────────────────────────
 
-  private subscribeToAuthManager(): void {
-    this.authSub = this.authManager.events$.subscribe(event => {
+  private subscribeToOauthManager(): void {
+    this.oauthSub = this.oauthManager.events$.subscribe(event => {
       this.loading.set(false);
 
       switch (event.type) {
 
-        case AUTH_MANAGER_EVENTS.AUTH_SUCCESS:
+        case OAUTH_MANAGER_EVENTS.AUTH_SUCCESS:
           // SSO Cookie establecida — continuar con el OAuth flow
           this.loginDataService.setSuccessData(event.payload as ISuccessOtpRespone);
           console.log("navegación a authorize");
           this.router.navigate([ROUTE_DATA.AUTHORIZE]);
           break;
 
-        case AUTH_MANAGER_EVENTS.REDIRECT_CREDENTIALS:
+        case OAUTH_MANAGER_EVENTS.REDIRECT_CREDENTIALS:
           // Todos los métodos transparentes fallaron — mostrar formulario
           this.usernameValid.set(false);
           this.passwordValid.set(false);
@@ -224,7 +234,7 @@ export class LoginComponent implements OnInit, AfterViewInit, OnDestroy {
           setTimeout(() => this.listenCredentialFields());
           break;
 
-        case AUTH_MANAGER_EVENTS.AUTH_ERROR:
+        case OAUTH_MANAGER_EVENTS.AUTH_ERROR:
           this.publishService.publishEvent(LOGIN_EVENTS.ERROR);
           break;
       }
@@ -239,9 +249,9 @@ export class LoginComponent implements OnInit, AfterViewInit, OnDestroy {
     this.loading.set(true);
     this.showCredentialsForm.set(false);
     this.credentialListenersAttached = false;
-    this.authManager.submitCredentials(username, password);
+    this.oauthManager.submitCredentials(username, password);
 
-    // ─── Lógica desplazada a AuthManager ──────────────────────────────────
+    // ─── Lógica desplazada a OauthManager ──────────────────────────────────
     // this.credentialsAuthUseCase.execute({
     //   authId: this.currentAuthId(),
     //   username,
@@ -252,7 +262,7 @@ export class LoginComponent implements OnInit, AfterViewInit, OnDestroy {
     // });
   }
 
-  // ─── Métodos desplazados a AuthManager ──────────────────────────────────────
+  // ─── Métodos desplazados a OauthManager ──────────────────────────────────────
   // private initiateAuth(): void { ... }
   // private resumeAuth(authId: string): void { ... }
   // private kerberosAuth(authId: string, callbacks: CallbackModel[]): void { ... }
@@ -306,7 +316,7 @@ export class LoginComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.authSub?.unsubscribe();
+    this.oauthSub?.unsubscribe();
     this.loading.set(false);
   }
 }

@@ -12,7 +12,7 @@ import java.util.concurrent.ConcurrentHashMap;
 @Component
 public class PingamSessionStore {
 
-    /** authId -> stage del árbol ("AWAITING_CREDENTIALS", "AUTHENTICATED") */
+    /** authId -> stage del árbol ("AWAITING_ENTRA_ID", "AWAITING_CREDENTIALS", "AUTHENTICATED") */
     public final Map<String, String> authTrees = new ConcurrentHashMap<>();
 
     /** tokenId (emitido en /authenticate, viaja como SSO Cookie y como csrf) -> UPN del usuario */
@@ -23,4 +23,7 @@ public class PingamSessionStore {
 
     /** SSO Cookie value -> tokenId (mismo valor, se mantiene por claridad semántica) */
     public final Map<String, String> ssoCookieToTokenId = new ConcurrentHashMap<>();
+
+    /** responseId -> campos del POST SAML, consumidos una sola vez por la ACS Angular. */
+    public final Map<String, Map<String, String>> samlAcsResponses = new ConcurrentHashMap<>();
 }

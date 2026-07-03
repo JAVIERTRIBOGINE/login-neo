@@ -9,6 +9,7 @@ const shellProxyEndpoints = {
 };
 
 const isLocalShellRuntime = (): boolean =>
+  Boolean((window as Window & { NEO_SHELL?: boolean }).NEO_SHELL) ||
   environment.name === 'local' &&
   ['localhost', '127.0.0.1'].includes(window.location.hostname) &&
   window.location.port === SHELL_LOCAL_PORT;

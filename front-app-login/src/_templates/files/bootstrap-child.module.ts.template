@@ -5,6 +5,15 @@ import { ProteoBootstrapChildService } from '@proteo/ng-bootstrap';
 import { LoggerUtils } from '@proteo/logger-utils';
 import { APP_ROUTES } from '@app/app.routes';
 import AppMessages from '../assets/i18n';
+import { initialize, isAuthInitialized } from '@proteo/authorization-utils';
+import { AuthConfig } from '@proteo/types';
+import { SamlShellConfig } from '@app/saml-flow/domain/models/saml-shell-config.model';
+import { SamlRuntimeConfigService } from '@app/saml-flow/application/services/saml-runtime-config.service';
+
+type LoginBootstrapConfig = {
+  AUTH_CONFIG?: AuthConfig;
+  SAML_CONFIG?: SamlShellConfig;
+};
 
 @NgModule({
   providers: [
@@ -15,12 +24,25 @@ import AppMessages from '../assets/i18n';
 export class Application {
   translateService = inject(TranslateService);
   private bootstrapChild = inject(ProteoBootstrapChildService);
+  private samlRuntimeConfig = inject(SamlRuntimeConfigService);
   
   constructor() {
     this.bootstrapChild.bootstrap({
       HOST: "{{{host}}}",
       CONFIG_BASE_PATH: "{{{configBasePath}}}",
     }).then((conf) => {
+        const loginConf = conf as LoginBootstrapConfig;
+        if (loginConf.AUTH_CONFIG) {
+          window.NEO_LOGIN_AUTH_CONFIG = loginConf.AUTH_CONFIG;
+          if (!isAuthInitialized()) {
+            initialize(loginConf.AUTH_CONFIG);
+          }
+        }
+        if (loginConf.SAML_CONFIG) {
+          this.samlRuntimeConfig.setConfig(loginConf.SAML_CONFIG);
+        } else {
+          this.samlRuntimeConfig.setMissingConfigError();
+        }
         LoggerUtils.getInstance().debug(`[BootstrapChildModule] Configuration loaded: ${JSON.stringify(conf)}`);
     });
     this.translateService.addNamespace('login', AppMessages);
